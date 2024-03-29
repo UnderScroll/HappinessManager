@@ -1,31 +1,53 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class FixedBlock : Block
 {
-    public override bool place(ref Structure structure, uint x, uint y, uint z)
+    public override bool place(ref Structure structure, (uint x, uint y, uint z) position)
     {
-        transform.position = new Vector3(x, y, z);
-        position = (x, y, z);
+        if (structure.cells[position.x, position.y, position.z].type != Cell.Type.Empty)
+            return false;
+
+        transform.position = new Vector3(position.x, position.y, position.z);
+        this.position = position;
 
         Block block = this;
-        structure.cells[x, y, z].block = block;
-
-        structure.cells[x, y, z].type = Cell.Type.Fixed;
-
-        structure.placePreviewBlock(x + 1, y, z);
-        structure.placePreviewBlock(x - 1, y, z);
-        structure.placePreviewBlock(x, y + 1, z);
-        structure.placePreviewBlock(x, y - 1, z);
-        structure.placePreviewBlock(x, y, z + 1);
-        structure.placePreviewBlock(x, y, z - 1);
+        Cell cell = structure.cells[position.x, position.y, position.z];
+        cell.block = block;
+        cell.type = Cell.Type.Full;
+        cell.removable = false;
 
         return true;
     }
 
-    public override bool remove(ref Structure structure, uint x, uint y, uint z)
+    public override List<Cell> getNeighbors(ref Structure structure)
     {
-        throw new System.NotImplementedException();
+        List<Cell> neighbours = new List<Cell>();
+
+        (uint x, uint y, uint z)[] neighbourPositions = {
+            (position.x - 1, position.y, position.z),
+            (position.x + 1, position.y, position.z),
+            (position.x, position.y - 1, position.z), 
+            (position.x, position.y + 1, position.z), 
+            (position.x, position.y, position.z - 1), 
+            (position.x, position.y, position.z + 1) 
+        };
+
+        foreach ((uint x, uint y, uint z) position in neighbourPositions)
+        {
+            if (!structure.isInBounds(position))
+                continue;
+
+            neighbours.Add(structure.cells[position.x, position.y, position.z]);
+        }
+
+        return neighbours;
+    }
+
+    public override bool remove(ref Structure structure)
+    {
+        return false;
     }
 }

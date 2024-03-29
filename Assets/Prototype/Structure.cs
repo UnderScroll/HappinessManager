@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections.Generic;
+using UnityEngine.UIElements;
 
 public class Structure : MonoBehaviour
 {
@@ -8,8 +9,8 @@ public class Structure : MonoBehaviour
     public Cell[,,] cells { get; }
 
     public Structure()
-        :this(1, 1, 1)
-    {}
+        : this(1, 1, 1)
+    { }
 
     public Structure(uint width, uint height, uint depth)
     {
@@ -18,33 +19,120 @@ public class Structure : MonoBehaviour
             for (uint y = 0; y < height; y++)
                 for (uint z = 0; z < depth; z++)
                 {
-                    cells[x, y, z] = new Cell();
+                    cells[x, y, z] = new Cell
+                    {
+                        position = (x, y, z),
+                        type = Cell.Type.Empty
+                    };
                 }
     }
 
-    public bool isInBounds(uint x, uint y, uint z)
+    public bool isInBounds((uint x, uint y, uint z) position)
     {
-        return x >= 0 && x < cells.GetLength(0)
-            && y >= 0 && y < cells.GetLength(1)
-            && z >= 0 && z < cells.GetLength(2);
+        return position.x >= 0 && position.x < cells.GetLength(0)
+            && position.y >= 0 && position.y < cells.GetLength(1)
+            && position.z >= 0 && position.z < cells.GetLength(2);
     }
 
-    public bool placeBlock(Block block, uint x, uint y, uint z)
+    public bool placeBlockAndUpdatePreview(Block block, (uint x, uint y, uint z) position)
     {
-        if (!isInBounds(x, y, z))
+        if (placeBlock(block, position))
+        {
+            Cell[] updatedCells = { cells[position.x, position.y, position.z] };
+            updatePreviewBlocks(updatedCells);
             return false;
+        }
 
-        if (cells[x, y, z].type != Cell.Type.Empty)
+        return false;
+    }
+
+    public bool placeBlock(Block block, (uint x, uint y, uint z) position)
+    {
+        if (!isInBounds(position))
             return false;
-
-        block = Instantiate(block);
 
         Structure structure = this;
-        return block.place(ref structure, x, y, z);
+        block = Instantiate(block);
+        if (block.place(ref structure, position))
+        {
+            return true;
+        }
+
+        Destroy(block);
+        return false;
     }
 
-    public bool placePreviewBlock(uint x, uint y, uint z)
+    public bool removeBlock((uint x, uint y, uint z) position)
     {
-        return placeBlock(previewBlock, x, y, z);
+        Cell cell = cells[position.x, position.y, position.z];
+        Structure structure = this;
+
+        return cell.block.remove(ref structure);
     }
+
+    public bool updatePreviewBlocks(Cell[] updatedCells)
+    {
+        Structure structure = this;
+
+        foreach (Cell updatedCell in updatedCells)
+        {
+            switch (updatedCell.type)
+            {
+                case Cell.Type.Full:
+                    onFullBlockUpdated(updatedCell);
+                    break;
+                case Cell.Type.Empty:
+                    onEmptyCellUpdated(updatedCell);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        return true;
+    }
+    
+    private void onFullBlockUpdated(Cell updatedCell)
+    {
+        Structure structure = this;
+        List<Cell> neighbors = updatedCell.block.getNeighbors(ref structure);
+        foreach (Cell neighbor in neighbors)
+            switch (neighbor.type)
+            {
+                case Cell.Type.Empty:
+                    placePreviewBlock(neighbor.position);
+                    break;
+                case Cell.Type.Preview:
+                    break;
+                default:
+                    break;
+            }
+    }
+
+    private void onEmptyCellUpdated(Cell updatedCell)
+    {
+        Structure structure = this;
+        List<Cell> neighbors = updatedCell.getNeighbors(ref structure);
+        foreach (Cell neighbor in neighbors)
+        {
+            switch (neighbor.type)
+            {
+                case Cell.Type.Full:
+                    placePreviewBlock(updatedCell.position);
+                    break;
+                case Cell.Type.Preview:
+                    PreviewBlock previewBlock = neighbor.block.GetComponent<PreviewBlock>();
+                    if (previewBlock.getNeighbors(ref structure).FindAll(x => x.type == Cell.Type.Full).Count == 0)
+                        removeBlock((previewBlock.position.x, previewBlock.position.y, previewBlock.position.z));
+                    break;
+            }
+        }
+    }
+
+    public bool placePreviewBlock((uint x, uint y, uint z) position)
+    {
+        return placeBlock(previewBlock, position);
+    }
+
+
 }

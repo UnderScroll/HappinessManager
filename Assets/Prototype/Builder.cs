@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
+using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using static BlockList;
@@ -11,7 +12,14 @@ public class Builder : MonoBehaviour
     [SerializeField]
     private PreviewBlock previewBlock;
 
+    private PreviewBlock pointedPreview;
+    private MeshRenderer pointedPreviewRenderer;
+
+
     public BlockList blocks;
+
+    private int previewLayer;
+    private int blockLayer;
 
     void Awake()
     {
@@ -19,8 +27,14 @@ public class Builder : MonoBehaviour
         Structure.previewBlock = previewBlock;
 
         Block block = blocks.getBlock("fixed_block");
-        structure.placeBlock(block, 0, 0, 0);
+        structure.placeBlock(block, (0, 0, 0));
+        Cell[] updatedCells = { structure.cells[0, 0, 0] };
+        structure.updatePreviewBlocks(updatedCells);
 
+        blockLayer = 1 << LayerMask.NameToLayer("Block");
+
+        previewLayer = 1 << LayerMask.NameToLayer("Preview");
+        //previewLayer |= blockLayer;
     }
 
     private void Update()
@@ -29,25 +43,70 @@ public class Builder : MonoBehaviour
         {
             launchSim();
         }
-
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown("escape"))
         {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            resetSim();
+        }
 
-            if (Physics.Raycast(ray, out hit, float.PositiveInfinity, 1 << LayerMask.NameToLayer("Preview")))
-            {
-                GameObject objectHit = hit.collider.gameObject;
-                    PreviewBlock preview = objectHit.GetComponent<PreviewBlock>();
-                    structure.placeBlock(blocks.getBlock("basic_block"), preview.position.x, preview.position.y, preview.position.z);
-                    Destroy(objectHit);
-            }
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(ray, out hit, float.PositiveInfinity, previewLayer))
+        {
+            GameObject objectHit = hit.collider.gameObject;
+            if (objectHit.tag == "Preview")
+                onPreviewBlockPointed(objectHit);
+        }
+        else
+        {
+            if (pointedPreviewRenderer != null)
+                pointedPreviewRenderer.enabled = false;
+            if (pointedPreview != null)
+                pointedPreview = null;
+        }
+
+        if (Physics.Raycast(ray, out hit, float.PositiveInfinity, blockLayer))
+        {
+            GameObject objectHit = hit.collider.gameObject;
+            onBlockPointed(objectHit);
         }
     }
 
-    private bool removeBlock(uint x, uint y, uint z)
+    void onPreviewBlockPointed(GameObject objectHit)
     {
-        if (!structure.isInBounds(x, y, z))
+        if (pointedPreviewRenderer != null)
+            pointedPreviewRenderer.enabled = false;
+
+        pointedPreview = objectHit.GetComponent<PreviewBlock>();
+        pointedPreviewRenderer = objectHit.GetComponent<MeshRenderer>();
+        pointedPreviewRenderer.enabled = true;
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            structure.placeBlock(blocks.getBlock("basic_block"), (pointedPreview.position.x, pointedPreview.position.y, pointedPreview.position.z));
+            Cell[] updatedCells = { structure.cells[pointedPreview.position.x, pointedPreview.position.y, pointedPreview.position.z] };
+            structure.updatePreviewBlocks(updatedCells);
+
+            pointedPreview = null;
+            Destroy(objectHit);
+        }
+    }
+
+    void onBlockPointed(GameObject objectHit)
+    {
+        Block block = objectHit.GetComponent<Block>();
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            Cell[] updatedCells = { structure.cells[block.position.x, block.position.y, block.position.z] };
+            structure.removeBlock(block.position);
+            structure.updatePreviewBlocks(updatedCells);
+        }
+    }
+
+    private bool removeBlock((uint x, uint y, uint z) position)
+    {
+        if (!structure.isInBounds(position))
             return false;
 
         return false;
@@ -60,8 +119,30 @@ public class Builder : MonoBehaviour
             switch (c.type)
             {
                 case Cell.Type.Full:
-                case Cell.Type.Fixed:
                     c.block.GetComponent<Rigidbody>().isKinematic = false;
+                    break;
+                case Cell.Type.Preview:
+                    c.block.GetComponent<Collider>().enabled = false;
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    private void resetSim()
+    {
+        foreach (Cell c in structure.cells)
+        {
+            switch (c.type)
+            {
+                case Cell.Type.Full:
+                    c.block.GetComponent<Rigidbody>().isKinematic = true;
+                    c.block.transform.position = new Vector3(c.block.position.x, c.block.position.y, c.block.position.z);
+                    c.block.transform.rotation = Quaternion.identity;
+                    break;
+                case Cell.Type.Preview:
+                    c.block.GetComponent<Collider>().enabled = true;
                     break;
                 default:
                     break;
