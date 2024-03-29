@@ -34,7 +34,7 @@ public class BasicBlock : Block
         if (structure.cells[position.x, position.y, position.z].type != Cell.Type.Preview)
             return false;
 
-        transform.position = new Vector3(position.x, position.y, position.z);
+        transform.localPosition = new Vector3(position.x, position.y, position.z);
         this.position = position;
 
         Block block = this;

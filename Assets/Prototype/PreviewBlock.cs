@@ -12,7 +12,7 @@ public class PreviewBlock : Block
         if (structure.cells[position.x, position.y, position.z].type != Cell.Type.Empty)
             return false;
 
-        transform.position = new Vector3(position.x, position.y, position.z);
+        transform.localPosition = new Vector3(position.x, position.y, position.z);
         this.position = position;
 
         Block block = this;

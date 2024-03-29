@@ -6,6 +6,9 @@ using UnityEngine.UIElements;
 public class Structure : MonoBehaviour
 {
     static public PreviewBlock previewBlock;
+
+    static public Transform origin;
+
     public Cell[,,] cells { get; }
 
     public Structure()
@@ -52,7 +55,7 @@ public class Structure : MonoBehaviour
             return false;
 
         Structure structure = this;
-        block = Instantiate(block);
+        block = Instantiate(block, origin);
         if (block.place(ref structure, position))
         {
             return true;

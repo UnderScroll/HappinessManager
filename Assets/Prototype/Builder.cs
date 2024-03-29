@@ -15,7 +15,6 @@ public class Builder : MonoBehaviour
     private PreviewBlock pointedPreview;
     private MeshRenderer pointedPreviewRenderer;
 
-
     public BlockList blocks;
 
     private int previewLayer;
@@ -25,6 +24,7 @@ public class Builder : MonoBehaviour
     {
         structure = new Structure(10, 10, 10);
         Structure.previewBlock = previewBlock;
+        Structure.origin = transform;
 
         Block block = blocks.getBlock("fixed_block");
         structure.placeBlock(block, (0, 0, 0));
@@ -34,7 +34,6 @@ public class Builder : MonoBehaviour
         blockLayer = 1 << LayerMask.NameToLayer("Block");
 
         previewLayer = 1 << LayerMask.NameToLayer("Preview");
-        //previewLayer |= blockLayer;
     }
 
     private void Update()
@@ -46,6 +45,16 @@ public class Builder : MonoBehaviour
         if (Input.GetKeyDown("escape"))
         {
             resetSim();
+        }
+
+        if (Input.GetKeyDown("left"))
+        {
+            Debug.Log("Test");
+            Camera.main.transform.RotateAround(Vector3.zero, Vector3.up, -10 * Time.deltaTime);
+        }
+        if (Input.GetKeyDown("right"))
+        {
+            Camera.main.transform.RotateAround(Vector3.zero, Vector3.up, 10 * Time.deltaTime);
         }
 
         RaycastHit hit;
@@ -104,14 +113,6 @@ public class Builder : MonoBehaviour
         }
     }
 
-    private bool removeBlock((uint x, uint y, uint z) position)
-    {
-        if (!structure.isInBounds(position))
-            return false;
-
-        return false;
-    }
-
     private void launchSim()
     {
         foreach (Cell c in structure.cells)
@@ -138,7 +139,7 @@ public class Builder : MonoBehaviour
             {
                 case Cell.Type.Full:
                     c.block.GetComponent<Rigidbody>().isKinematic = true;
-                    c.block.transform.position = new Vector3(c.block.position.x, c.block.position.y, c.block.position.z);
+                    c.block.transform.localPosition = new Vector3(c.block.position.x, c.block.position.y, c.block.position.z);
                     c.block.transform.rotation = Quaternion.identity;
                     break;
                 case Cell.Type.Preview:
