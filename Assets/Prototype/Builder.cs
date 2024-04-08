@@ -16,6 +16,7 @@ public class Builder : MonoBehaviour
     private MeshRenderer pointedPreviewRenderer;
 
     public BlockList blocks;
+    public JointTypes joints;
 
     private int previewLayer;
     private int blockLayer;
@@ -26,14 +27,11 @@ public class Builder : MonoBehaviour
         Structure.previewBlock = previewBlock;
         Structure.origin = transform;
 
-        Block block = blocks.getBlock("fixed_block");
-        structure.placeBlock(block, (0, 0, 0));
-        Cell[] updatedCells = { structure.cells[0, 0, 0] };
-        structure.updatePreviewBlocks(updatedCells);
-
         blockLayer = 1 << LayerMask.NameToLayer("Block");
-
         previewLayer = 1 << LayerMask.NameToLayer("Preview");
+
+        Block block = blocks.getBlock("fixed_block");
+        structure.placeBlockAndUpdatePreview(block, (0, 0, 0), joints.types[0]);
     }
 
     private void Update()
@@ -47,14 +45,9 @@ public class Builder : MonoBehaviour
             resetSim();
         }
 
-        if (Input.GetKeyDown("left"))
+        if (Input.GetKeyDown(KeyCode.Delete))
         {
-            Debug.Log("Test");
-            Camera.main.transform.RotateAround(Vector3.zero, Vector3.up, -10 * Time.deltaTime);
-        }
-        if (Input.GetKeyDown("right"))
-        {
-            Camera.main.transform.RotateAround(Vector3.zero, Vector3.up, 10 * Time.deltaTime);
+            Debug.Log("Used for breakpoints");
         }
 
         RaycastHit hit;
@@ -92,9 +85,10 @@ public class Builder : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            structure.placeBlock(blocks.getBlock("basic_block"), (pointedPreview.position.x, pointedPreview.position.y, pointedPreview.position.z));
-            Cell[] updatedCells = { structure.cells[pointedPreview.position.x, pointedPreview.position.y, pointedPreview.position.z] };
-            structure.updatePreviewBlocks(updatedCells);
+            structure.placeBlockAndUpdatePreview(
+                blocks.getBlock("basic_block"), 
+                (pointedPreview.position.x, pointedPreview.position.y, pointedPreview.position.z), 
+                joints.types[0]);
 
             pointedPreview = null;
             Destroy(objectHit);
@@ -107,9 +101,7 @@ public class Builder : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            Cell[] updatedCells = { structure.cells[block.position.x, block.position.y, block.position.z] };
-            structure.removeBlock(block.position);
-            structure.updatePreviewBlocks(updatedCells);
+            structure.removeBlockAndUpdatePreview(block.position);
         }
     }
 
@@ -138,9 +130,12 @@ public class Builder : MonoBehaviour
             switch (c.type)
             {
                 case Cell.Type.Full:
+                    foreach (Joint joint in c.block.GetComponents<Joint>())
+                        Destroy(joint);
                     c.block.GetComponent<Rigidbody>().isKinematic = true;
                     c.block.transform.localPosition = new Vector3(c.block.position.x, c.block.position.y, c.block.position.z);
                     c.block.transform.rotation = Quaternion.identity;
+                    structure.connectBlockToNeighbors(c.block, joints.types[0]);
                     break;
                 case Cell.Type.Preview:
                     c.block.GetComponent<Collider>().enabled = true;

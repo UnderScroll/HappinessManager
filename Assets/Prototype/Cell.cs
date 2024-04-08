@@ -17,7 +17,7 @@ public class Cell
     public bool removable;
     public (uint x, uint y, uint z) position;
 
-    public List<Cell> getNeighbors(ref Structure structure)
+    public List<Cell> getNeighbors(Structure structure)
     {
         List<Cell> neighbors = new List<Cell>();
 

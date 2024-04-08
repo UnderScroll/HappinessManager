@@ -2,19 +2,24 @@
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static UnityEngine.UI.Image;
 
 abstract public class Block : MonoBehaviour
 {
-    public BlockList blocks;
     public (uint x, uint y, uint z) position;
-
+    public List<Block> connectedBlocks;
     public void Awake()
     {
         GetComponent<Rigidbody>().isKinematic = true;
     }
 
-    public abstract bool place(ref Structure structure, (uint x, uint y, uint z) position);
-    public abstract bool remove(ref Structure structure);
+    private void Start()
+    {
+        connectedBlocks = new List<Block>();
+    }
 
-    public abstract List<Cell> getNeighbors(ref Structure structure);
+    public abstract bool place(Structure structure, (uint x, uint y, uint z) position);
+    public abstract bool remove(Structure structure);
+
+    public abstract List<Cell> getNeighbors(Structure structure);
 }

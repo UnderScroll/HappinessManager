@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class BasicBlock : Block
 {
-    public override List<Cell> getNeighbors(ref Structure structure)
+    public override List<Cell> getNeighbors(Structure structure)
     {
         List<Cell> neighbours = new List<Cell>();
 
@@ -29,7 +29,7 @@ public class BasicBlock : Block
         return neighbours;
     }
 
-    public override bool place(ref Structure structure, (uint x, uint y, uint z) position)
+    public override bool place(Structure structure, (uint x, uint y, uint z) position)
     {
         if (structure.cells[position.x, position.y, position.z].type != Cell.Type.Preview)
             return false;
@@ -47,7 +47,7 @@ public class BasicBlock : Block
         return true;
     }
 
-    public override bool remove(ref Structure structure)
+    public override bool remove(Structure structure)
     {
         Cell cell = structure.cells[position.x, position.y, position.z];
         cell.block = null;

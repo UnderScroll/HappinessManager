@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine.UIElements;
+using Unity.VisualScripting;
 
 public class Structure : MonoBehaviour
 {
@@ -37,46 +38,95 @@ public class Structure : MonoBehaviour
             && position.z >= 0 && position.z < cells.GetLength(2);
     }
 
-    public bool placeBlockAndUpdatePreview(Block block, (uint x, uint y, uint z) position)
+    public bool placeBlockAndUpdatePreview(Block block, (uint x, uint y, uint z) position, JointType jointType)
     {
         if (placeBlock(block, position))
         {
-            Cell[] updatedCells = { cells[position.x, position.y, position.z] };
-            updatePreviewBlocks(updatedCells);
-            return false;
+            Cell updatedCell = cells[position.x, position.y, position.z];
+
+            connectBlockToNeighbors(updatedCell.block, jointType);
+
+            Cell[] updatedCells = { updatedCell };
+            return updatePreviewBlocks(updatedCells);
         }
 
         return false;
     }
 
+    public bool removeBlockAndUpdatePreview((uint x, uint y, uint z) position)
+    {
+        Cell[] updatedCells = { cells[position.x, position.y, position.z] };
+        if (removeBlock(position))
+            return updatePreviewBlocks(updatedCells);
+
+        return false;
+    }
     public bool placeBlock(Block block, (uint x, uint y, uint z) position)
     {
         if (!isInBounds(position))
             return false;
 
-        Structure structure = this;
-        block = Instantiate(block, origin);
-        if (block.place(ref structure, position))
+        Block blockInstance = Instantiate(block, origin);
+        if (!blockInstance.place(this, position))
         {
-            return true;
+            Destroy(blockInstance);
+            return false;
         }
 
-        Destroy(block);
-        return false;
+        return true;
+    }
+
+    public bool connectBlockToNeighbors(Block block, JointType jointType)
+    {
+        List<Cell> neighbors = block.getNeighbors(this);
+        foreach (Cell neighbor in neighbors)
+        {
+            switch (neighbor.type)
+            {
+                case Cell.Type.Full:
+                    connectBlockToNeighbor(block, neighbor.block, jointType);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        return true;
+    }
+
+    bool connectBlockToNeighbor(Block block, Block neighbor, JointType jointType)
+    {
+        Rigidbody blockRb = block.GetComponent<Rigidbody>();
+
+        //Check if neighbor is connected to block
+        Joint[] neighborJoints = neighbor.GetComponents<Joint>();
+
+        foreach (Joint neighborJoint in neighborJoints)
+        {
+            if (blockRb == neighborJoint.connectedBody)
+                return false;
+        }
+
+        FixedJoint joint = block.AddComponent<FixedJoint>();
+        joint.breakForce = jointType.breakForce;
+        joint.breakTorque = jointType.breakTorque;
+        joint.enableCollision = jointType.enableCollsion;
+        joint.enablePreprocessing = false;
+
+        joint.connectedBody = neighbor.GetComponent<Rigidbody>();
+
+        return true;
     }
 
     public bool removeBlock((uint x, uint y, uint z) position)
     {
         Cell cell = cells[position.x, position.y, position.z];
-        Structure structure = this;
 
-        return cell.block.remove(ref structure);
+        return cell.block.remove(this);
     }
 
     public bool updatePreviewBlocks(Cell[] updatedCells)
     {
-        Structure structure = this;
-
         foreach (Cell updatedCell in updatedCells)
         {
             switch (updatedCell.type)
@@ -94,18 +144,15 @@ public class Structure : MonoBehaviour
 
         return true;
     }
-    
+
     private void onFullBlockUpdated(Cell updatedCell)
     {
-        Structure structure = this;
-        List<Cell> neighbors = updatedCell.block.getNeighbors(ref structure);
+        List<Cell> neighbors = updatedCell.block.getNeighbors(this);
         foreach (Cell neighbor in neighbors)
             switch (neighbor.type)
             {
                 case Cell.Type.Empty:
                     placePreviewBlock(neighbor.position);
-                    break;
-                case Cell.Type.Preview:
                     break;
                 default:
                     break;
@@ -114,8 +161,7 @@ public class Structure : MonoBehaviour
 
     private void onEmptyCellUpdated(Cell updatedCell)
     {
-        Structure structure = this;
-        List<Cell> neighbors = updatedCell.getNeighbors(ref structure);
+        List<Cell> neighbors = updatedCell.getNeighbors(this);
         foreach (Cell neighbor in neighbors)
         {
             switch (neighbor.type)
@@ -125,7 +171,7 @@ public class Structure : MonoBehaviour
                     break;
                 case Cell.Type.Preview:
                     PreviewBlock previewBlock = neighbor.block.GetComponent<PreviewBlock>();
-                    if (previewBlock.getNeighbors(ref structure).FindAll(x => x.type == Cell.Type.Full).Count == 0)
+                    if (previewBlock.getNeighbors(this).FindAll(x => x.type == Cell.Type.Full).Count == 0)
                         removeBlock((previewBlock.position.x, previewBlock.position.y, previewBlock.position.z));
                     break;
             }
@@ -136,6 +182,4 @@ public class Structure : MonoBehaviour
     {
         return placeBlock(previewBlock, position);
     }
-
-
 }

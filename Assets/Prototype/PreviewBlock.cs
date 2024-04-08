@@ -7,7 +7,7 @@ public class PreviewBlock : Block
 {
     private new void Awake(){}
 
-    public override bool place(ref Structure structure, (uint x, uint y, uint z) position)
+    public override bool place(Structure structure, (uint x, uint y, uint z) position)
     {
         if (structure.cells[position.x, position.y, position.z].type != Cell.Type.Empty)
             return false;
@@ -17,6 +17,7 @@ public class PreviewBlock : Block
 
         Block block = this;
         Cell cell = structure.cells[position.x, position.y, position.z];
+
         cell.block = block;
         cell.type = Cell.Type.Preview;
         cell.removable = true;
@@ -24,7 +25,7 @@ public class PreviewBlock : Block
         return true;
     }
 
-    public override bool remove(ref Structure structure)
+    public override bool remove(Structure structure)
     {
         Cell cell = structure.cells[position.x, position.y, position.z];
         cell.block = null;
@@ -35,7 +36,7 @@ public class PreviewBlock : Block
         return true;
     }
 
-    public override List<Cell> getNeighbors(ref Structure structure)
+    public override List<Cell> getNeighbors(Structure structure)
     {
         List<Cell> neighbours = new List<Cell>();
 
