@@ -8,10 +8,13 @@ abstract public class Block : MonoBehaviour
 {
     public (uint x, uint y, uint z) position;
     public List<Block> connectedBlocks;
+    public long groupId;
+
     public void Awake()
     {
         GetComponent<Rigidbody>().isKinematic = true;
         connectedBlocks = new List<Block>();
+        groupId = -1;
     }
 
     public abstract bool place(Structure structure, (uint x, uint y, uint z) position);

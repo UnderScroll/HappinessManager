@@ -10,6 +10,7 @@ public class Cell
         Half,
         Full,
         Preview,
+        Employee
     }
 
     public Block block;

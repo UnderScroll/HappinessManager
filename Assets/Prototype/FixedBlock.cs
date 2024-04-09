@@ -7,9 +7,6 @@ public class FixedBlock : Block
 {
     public override bool place(Structure structure, (uint x, uint y, uint z) position)
     {
-        if (structure.cells[position.x, position.y, position.z].type != Cell.Type.Empty)
-            return false;
-
         transform.localPosition = new Vector3(position.x, position.y, position.z);
         this.position = position;
 

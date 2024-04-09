@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   types:
   - name: basic
-    breakForce: Infinity
-    breakTorque: Infinity
+    breakForce: 100
+    breakTorque: 100
     enableCollsion: 0
   - name: strong
     breakForce: 200

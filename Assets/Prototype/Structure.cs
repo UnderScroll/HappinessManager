@@ -125,6 +125,7 @@ public class Structure : MonoBehaviour
                     onFullBlockUpdated(updatedCell);
                     break;
                 case Cell.Type.Empty:
+                case Cell.Type.Employee:
                     onEmptyCellUpdated(updatedCell);
                     break;
                 default:

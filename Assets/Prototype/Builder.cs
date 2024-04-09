@@ -21,6 +21,9 @@ public class Builder : MonoBehaviour
     private int previewLayer;
     private int blockLayer;
 
+    bool buildMode = true;
+    float simulationTime = 0;
+
     void Awake()
     {
         structure = new Structure(10, 10, 10);
@@ -30,8 +33,13 @@ public class Builder : MonoBehaviour
         blockLayer = 1 << LayerMask.NameToLayer("Block");
         previewLayer = 1 << LayerMask.NameToLayer("Preview");
 
-        Block block = blocks.getBlock("fixed_block");
-        structure.placeBlockAndUpdatePreview(block, (0, 0, 0));
+        Block employeeBlock = blocks.getBlock("employee_block");
+        structure.placeBlockAndUpdatePreview(employeeBlock, (5, 3, 2));
+        structure.placeBlockAndUpdatePreview(employeeBlock, (1, 1, 0));
+
+        Block fixedBlock = blocks.getBlock("fixed_block");
+        structure.placeBlockAndUpdatePreview(fixedBlock, (5, 2, 2));
+        structure.placeBlockAndUpdatePreview(fixedBlock, (1, 0, 0));
     }
 
     private void Update()
@@ -48,6 +56,24 @@ public class Builder : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Delete))
         {
             Debug.LogAssertion("Forced breakpoint");
+        }
+
+        if (!buildMode)
+        {
+            simulationTime += Time.deltaTime;
+
+            if (simulationTime > 5)
+                foreach (EmployeeBlock employee in EmployeeBlock.employees)
+                {
+                    if (employee.isDead)
+                    {
+                        Invoke("resetSim", 1);
+                        break;
+                    }
+
+                    employee.GetComponent<MeshRenderer>().material.color = Color.green;
+                }
+            return;
         }
 
         RaycastHit hit;
@@ -107,6 +133,8 @@ public class Builder : MonoBehaviour
 
     private void launchSim()
     {
+        buildMode = false;
+
         foreach (Cell c in structure.cells)
         {
             switch (c.type)
@@ -128,6 +156,10 @@ public class Builder : MonoBehaviour
                     break;
                 case Cell.Type.Preview:
                     c.block.GetComponent<Collider>().enabled = false;
+                    c.block.GetComponent<MeshRenderer>().enabled = false;
+                    break;
+                case Cell.Type.Employee:
+                    c.block.GetComponent<Rigidbody>().isKinematic = false;
                     break;
                 default:
                     break;
@@ -151,9 +183,19 @@ public class Builder : MonoBehaviour
                 case Cell.Type.Preview:
                     c.block.GetComponent<Collider>().enabled = true;
                     break;
+                case Cell.Type.Employee:
+                    c.block.GetComponent<Rigidbody>().isKinematic = true;
+                    c.block.transform.localPosition = new Vector3(c.block.position.x, c.block.position.y, c.block.position.z);
+                    c.block.transform.rotation = Quaternion.identity;
+                    c.block.GetComponent<MeshRenderer>().material.color = Color.blue;
+                    c.block.GetComponent<EmployeeBlock>().isDead = false;
+                    break;
                 default:
                     break;
             }
         }
+
+        buildMode = true;
+        simulationTime = 0;
     }
 }
