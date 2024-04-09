@@ -106,15 +106,18 @@ public class Structure : MonoBehaviour
             if (blockRb == neighborJoint.connectedBody)
                 return false;
         }
+        
+        block.connectedBlocks.Add(neighbor);
 
         FixedJoint joint = block.AddComponent<FixedJoint>();
+
         joint.breakForce = jointType.breakForce;
         joint.breakTorque = jointType.breakTorque;
         joint.enableCollision = jointType.enableCollsion;
         joint.enablePreprocessing = false;
 
         joint.connectedBody = neighbor.GetComponent<Rigidbody>();
-
+        
         return true;
     }
 
@@ -164,18 +167,16 @@ public class Structure : MonoBehaviour
         List<Cell> neighbors = updatedCell.getNeighbors(this);
         foreach (Cell neighbor in neighbors)
         {
-            switch (neighbor.type)
+            if (neighbor.type == Cell.Type.Preview)
             {
-                case Cell.Type.Full:
-                    placePreviewBlock(updatedCell.position);
-                    break;
-                case Cell.Type.Preview:
-                    PreviewBlock previewBlock = neighbor.block.GetComponent<PreviewBlock>();
-                    if (previewBlock.getNeighbors(this).FindAll(x => x.type == Cell.Type.Full).Count == 0)
-                        removeBlock((previewBlock.position.x, previewBlock.position.y, previewBlock.position.z));
-                    break;
+                PreviewBlock previewBlock = neighbor.block.GetComponent<PreviewBlock>();
+                if (previewBlock.getNeighbors(this).FindAll(x => x.type == Cell.Type.Full).Count == 0)
+                    removeBlock((previewBlock.position.x, previewBlock.position.y, previewBlock.position.z));
             }
         }
+
+        if (updatedCell.getNeighbors(this).FindAll(x => x.type == Cell.Type.Full).Count > 0)
+            placePreviewBlock((updatedCell.position.x, updatedCell.position.y, updatedCell.position.z));
     }
 
     public bool placePreviewBlock((uint x, uint y, uint z) position)
