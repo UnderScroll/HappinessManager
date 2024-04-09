@@ -11,10 +11,6 @@ abstract public class Block : MonoBehaviour
     public void Awake()
     {
         GetComponent<Rigidbody>().isKinematic = true;
-    }
-
-    private void Start()
-    {
         connectedBlocks = new List<Block>();
     }
 

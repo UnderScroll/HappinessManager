@@ -38,6 +38,7 @@ public class BasicBlock : Block
         this.position = position;
 
         Block block = this;
+
         Cell cell = structure.cells[position.x, position.y, position.z];
         
         cell.block = block;

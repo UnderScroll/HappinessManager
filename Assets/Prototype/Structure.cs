@@ -38,15 +38,13 @@ public class Structure : MonoBehaviour
             && position.z >= 0 && position.z < cells.GetLength(2);
     }
 
-    public bool placeBlockAndUpdatePreview(Block block, (uint x, uint y, uint z) position, JointType jointType)
+    public bool placeBlockAndUpdatePreview(Block block, (uint x, uint y, uint z) position)
     {
         if (placeBlock(block, position))
         {
             Cell updatedCell = cells[position.x, position.y, position.z];
-
-            connectBlockToNeighbors(updatedCell.block, jointType);
-
             Cell[] updatedCells = { updatedCell };
+
             return updatePreviewBlocks(updatedCells);
         }
 
@@ -76,7 +74,7 @@ public class Structure : MonoBehaviour
         return true;
     }
 
-    public bool connectBlockToNeighbors(Block block, JointType jointType)
+    public bool connectBlockToNeighbors(Block block)
     {
         List<Cell> neighbors = block.getNeighbors(this);
         foreach (Cell neighbor in neighbors)
@@ -84,7 +82,7 @@ public class Structure : MonoBehaviour
             switch (neighbor.type)
             {
                 case Cell.Type.Full:
-                    connectBlockToNeighbor(block, neighbor.block, jointType);
+                    connectBlockToNeighbor(block, neighbor.block);
                     break;
                 default:
                     break;
@@ -94,29 +92,18 @@ public class Structure : MonoBehaviour
         return true;
     }
 
-    bool connectBlockToNeighbor(Block block, Block neighbor, JointType jointType)
+    bool connectBlockToNeighbor(Block block, Block neighbor)
     {
-        Rigidbody blockRb = block.GetComponent<Rigidbody>();
+        //If block is already connected to neighbor, return false
+        if (block.connectedBlocks.Contains(neighbor))
+            return false;
 
-        //Check if neighbor is connected to block
-        Joint[] neighborJoints = neighbor.GetComponents<Joint>();
+        //If neighbor is already connected to block, return false
+        if (neighbor.connectedBlocks.Contains(block))
+            return false;
 
-        foreach (Joint neighborJoint in neighborJoints)
-        {
-            if (blockRb == neighborJoint.connectedBody)
-                return false;
-        }
-        
+        //Add neightbor to block
         block.connectedBlocks.Add(neighbor);
-
-        FixedJoint joint = block.AddComponent<FixedJoint>();
-
-        joint.breakForce = jointType.breakForce;
-        joint.breakTorque = jointType.breakTorque;
-        joint.enableCollision = jointType.enableCollsion;
-        joint.enablePreprocessing = false;
-
-        joint.connectedBody = neighbor.GetComponent<Rigidbody>();
         
         return true;
     }

@@ -31,7 +31,7 @@ public class Builder : MonoBehaviour
         previewLayer = 1 << LayerMask.NameToLayer("Preview");
 
         Block block = blocks.getBlock("fixed_block");
-        structure.placeBlockAndUpdatePreview(block, (0, 0, 0), joints.types[0]);
+        structure.placeBlockAndUpdatePreview(block, (0, 0, 0));
     }
 
     private void Update()
@@ -47,7 +47,7 @@ public class Builder : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Delete))
         {
-            Debug.Log("Used for breakpoints");
+            Debug.LogAssertion("Forced breakpoint");
         }
 
         RaycastHit hit;
@@ -87,9 +87,9 @@ public class Builder : MonoBehaviour
         {
             structure.placeBlockAndUpdatePreview(
                 blocks.getBlock("basic_block"), 
-                (pointedPreview.position.x, pointedPreview.position.y, pointedPreview.position.z), 
-                joints.types[0]);
+                (pointedPreview.position.x, pointedPreview.position.y, pointedPreview.position.z));
 
+            structure.connectBlockToNeighbors(structure.cells[pointedPreview.position.x, pointedPreview.position.y, pointedPreview.position.z].block);
             pointedPreview = null;
             Destroy(objectHit);
         }
@@ -113,6 +113,18 @@ public class Builder : MonoBehaviour
             {
                 case Cell.Type.Full:
                     c.block.GetComponent<Rigidbody>().isKinematic = false;
+                    foreach (Block b in c.block.connectedBlocks)
+                    {
+                        FixedJoint joint = c.block.AddComponent<FixedJoint>();
+                        
+                        joint.breakForce = joints.types[0].breakForce;
+                        joint.breakTorque = joints.types[0].breakForce;
+                        joint.enableCollision = joints.types[0].enableCollsion;
+
+                        joint.enablePreprocessing = false;
+
+                        joint.connectedBody = b.GetComponent<Rigidbody>();
+                    }
                     break;
                 case Cell.Type.Preview:
                     c.block.GetComponent<Collider>().enabled = false;
@@ -130,12 +142,11 @@ public class Builder : MonoBehaviour
             switch (c.type)
             {
                 case Cell.Type.Full:
-                    foreach (Joint joint in c.block.GetComponents<Joint>())
-                        Destroy(joint);
                     c.block.GetComponent<Rigidbody>().isKinematic = true;
                     c.block.transform.localPosition = new Vector3(c.block.position.x, c.block.position.y, c.block.position.z);
                     c.block.transform.rotation = Quaternion.identity;
-                    structure.connectBlockToNeighbors(c.block, joints.types[0]);
+                    foreach (Joint joint in c.block.GetComponents<Joint>())
+                        Destroy(joint);
                     break;
                 case Cell.Type.Preview:
                     c.block.GetComponent<Collider>().enabled = true;
