@@ -34,12 +34,12 @@ public class Builder : MonoBehaviour
         previewLayer = 1 << LayerMask.NameToLayer("Preview");
 
         Block employeeBlock = blocks.getBlock("employee_block");
-        structure.placeBlockAndUpdatePreview(employeeBlock, (5, 3, 2));
-        structure.placeBlockAndUpdatePreview(employeeBlock, (1, 1, 0));
+        structure.placeBlockAndUpdatePreview(employeeBlock, (3, 5, 8));
+        structure.placeBlockAndUpdatePreview(employeeBlock, (8, 9, 1));
 
         Block fixedBlock = blocks.getBlock("fixed_block");
-        structure.placeBlockAndUpdatePreview(fixedBlock, (5, 2, 2));
-        structure.placeBlockAndUpdatePreview(fixedBlock, (1, 0, 0));
+        structure.placeBlockAndUpdatePreview(fixedBlock, (3, 4, 8));
+        structure.placeBlockAndUpdatePreview(fixedBlock, (8, 8, 1));
     }
 
     private void Update()
@@ -60,21 +60,25 @@ public class Builder : MonoBehaviour
 
         if (!buildMode)
         {
-            simulationTime += Time.deltaTime;
+            bool dead = false;
+            foreach (EmployeeBlock employee in EmployeeBlock.employees)
+            {
+                if (employee.isDead)
+                    dead = true;
+            }
+            if (dead)
+                Invoke("resetSim", 1);
+            else
+            {
+                if (simulationTime > 5)
+                    foreach (EmployeeBlock employee in EmployeeBlock.employees)
+                        employee.GetComponent<MeshRenderer>().material.color = Color.green;
+                else
+                    simulationTime += Time.deltaTime;
 
-            if (simulationTime > 5)
-                foreach (EmployeeBlock employee in EmployeeBlock.employees)
-                {
-                    if (employee.isDead)
-                    {
-                        Invoke("resetSim", 1);
-                        break;
-                    }
-
-                    employee.GetComponent<MeshRenderer>().material.color = Color.green;
-                }
-            return;
+            }
         }
+
 
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -112,7 +116,7 @@ public class Builder : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             structure.placeBlockAndUpdatePreview(
-                blocks.getBlock("basic_block"), 
+                blocks.getBlock("basic_block"),
                 (pointedPreview.position.x, pointedPreview.position.y, pointedPreview.position.z));
 
             structure.connectBlockToNeighbors(structure.cells[pointedPreview.position.x, pointedPreview.position.y, pointedPreview.position.z].block);
@@ -144,7 +148,7 @@ public class Builder : MonoBehaviour
                     foreach (Block b in c.block.connectedBlocks)
                     {
                         FixedJoint joint = c.block.AddComponent<FixedJoint>();
-                        
+
                         joint.breakForce = joints.types[0].breakForce;
                         joint.breakTorque = joints.types[0].breakForce;
                         joint.enableCollision = joints.types[0].enableCollsion;
