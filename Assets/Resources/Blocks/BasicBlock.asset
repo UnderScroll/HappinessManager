@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c90a5b9e08c0f84c8ab044b11bb029f, type: 3}
+  m_Name: BasicBlock
+  m_EditorClassIdentifier: 
+  Name: BasicBlock
+  Removable: 1
+  Mass: 1
+  DefaultConnectionType: {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130,
+    type: 2}
+  Block: {fileID: 6317348198501730575, guid: ab1316c6df3d9a5489ae5b5bc46fcff2, type: 3}
+  PreviewCollider: {fileID: 5749741502627939162, guid: 97919408bbf7f3a46b948f901fe8cf71,
+    type: 3}
