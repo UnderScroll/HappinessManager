@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using Yarn.Unity;
+using NaughtyAttributes;
 
 public class TalkingBuddy : MonoBehaviour
 {
@@ -20,11 +21,13 @@ public class TalkingBuddy : MonoBehaviour
     /// BT is for Before Talking
     /// /!\ inclus
     /// </summary>
+    [ShowIf("RandomizeTimeBT")]
     public int minimalTimeBT = 3;
     /// <summary>
     /// BT is for Before Talking
     /// /!\ exclu
     /// </summary>
+    [ShowIf("RandomizeTimeBT")]
     public int maximalTimeBT = 7;
 
     #region Private Attributes
@@ -33,7 +36,7 @@ public class TalkingBuddy : MonoBehaviour
     private Transform dialoguePosition;
     private GameObject actualDialogueObject = null;
     private float actualTime = 0;
-    DialogueRunner dialogueRunner;   
+    DialogueRunner dialogueRunner;
     private float timeBeforeTalking = 3;
     #endregion
 
@@ -42,7 +45,7 @@ public class TalkingBuddy : MonoBehaviour
         dialoguePosition = this.transform;
         RandomizeLine();
         ResetTimer();
-        timeBeforeTalking = Random.Range(minimalTimeBT, maximalTimeBT);
+        InitTimer();
     }
 
     private void Update()
@@ -86,11 +89,18 @@ public class TalkingBuddy : MonoBehaviour
         dialogueRunner.StartDialogue(nextLineToSay);
         isTalking = true;
     }
+    private void InitTimer()
+    {
+        if (!RandomizeTimeBT)
+            timeBeforeTalking = TimeBeforeTalking;
+        else
+            timeBeforeTalking = Random.Range(minimalTimeBT, maximalTimeBT);
+    }
 
     private void StopDialogue()
     {
         Destroy(actualDialogueObject);
-        timeBeforeTalking = Random.Range(minimalTimeBT, maximalTimeBT);
+        InitTimer();
         RandomizeLine();
         isTalking = false;
     }
