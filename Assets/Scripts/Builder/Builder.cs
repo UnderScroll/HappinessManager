@@ -83,8 +83,7 @@ namespace Builder
         {
             Structure = new Structure(new int3(10, 10, 10));
 
-            _blockPreviews = new PreviewBlock[10, 10, 10];
-            _previewLayer = 1 << LayerMask.NameToLayer("Blocks");
+            InitPreviewer();
 
             CellType basicBlock = CellTypes.get()["BasicBlock"];
 

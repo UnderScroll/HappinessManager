@@ -11,7 +11,14 @@ namespace Builder
     public partial class Builder : MonoBehaviour
     {
         private PreviewBlock[,,] _blockPreviews;
-        private int _previewLayer;
+        private int _mainBlockLayer, _subBlocksLayer;
+
+        void InitPreviewer()
+        {
+            _blockPreviews = new PreviewBlock[10, 10, 10];
+            _mainBlockLayer = 1 << LayerMask.NameToLayer("MainBlocks");
+            _subBlocksLayer = 1 << LayerMask.NameToLayer("SubBlocks");
+        }
 
         public void UpdateCell(int3 position)
         {
@@ -37,33 +44,41 @@ namespace Builder
             return CellTypes.get()[Structure.Cells[position.x, position.y, position.z].Type.Name];
         }
 
-        //(Position of cell hit, Position of cell to place hit)
+        //(Position of cell pointed, Position of cell to place)
         public (Option<int3>, Option<int3>) GetPointed(int2 screenPosition)
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (!Physics.Raycast(ray, out hit, float.PositiveInfinity, _previewLayer))
-                return (Option<int3>.None, Option<int3>.None);
+            Option<int3> mainBlock = Option<int3>.None;
+            Option<int3> mainBlockNormal = Option<int3>.None;
+            PreviewBlock previewBlock = null;
 
-            PreviewBlock previewBlock = hit.collider.gameObject.GetComponentInParent<PreviewBlock>();
-            switch (hit.collider.name)
+            if (Physics.Raycast(ray, out hit, float.PositiveInfinity, _mainBlockLayer))
             {
-                case "MainCollider":
-                    int3 cellToPlacePositon = new int3(Convert.ToInt32(hit.normal.x), Convert.ToInt32(hit.normal.y), Convert.ToInt32(hit.normal.z)) + previewBlock.Position;
-
-                    if (!IsInBounds(cellToPlacePositon))
-                        return (Option<int3>.Some(previewBlock.Position), Option<int3>.None);
-                    else
-                        return (Option<int3>.Some(previewBlock.Position), Option<int3>.Some(cellToPlacePositon));
-                case "BottomCollider":
-                    if (previewBlock.Position.y > 0)
-                        return (Option<int3>.Some(previewBlock.Position), Option<int3>.Some(new int3(previewBlock.Position.x, previewBlock.Position.y - 1, previewBlock.Position.z)));
-                    else
-                        return (Option<int3>.None, Option<int3>.None);
-                default:
-                    return (Option<int3>.None, Option<int3>.None);
+                previewBlock = hit.collider.gameObject.GetComponentInParent<PreviewBlock>();
+                mainBlock = Option<int3>.Some(previewBlock.Position);
+                mainBlockNormal = Option<int3>.Some(new int3(Convert.ToInt32(hit.normal.x), Convert.ToInt32(hit.normal.y), Convert.ToInt32(hit.normal.z)));
             }
+
+            Option<int3> subBlock = Option<int3>.None;
+            int3 mainBlockNormalVec;
+            int3 mainBlockPosition;
+            if (mainBlockNormal.IsSome(out mainBlockNormalVec) && mainBlock.IsSome(out mainBlockPosition))
+            {
+                int3 newPosition = mainBlockPosition + mainBlockNormalVec;
+                if (IsInBounds(newPosition))
+                    subBlock = Option<int3>.Some(newPosition);
+            }
+            else if (Physics.Raycast(ray, out hit, float.PositiveInfinity, _subBlocksLayer))
+            {
+                if (previewBlock == null) previewBlock = hit.collider.gameObject.GetComponentInParent<PreviewBlock>();
+                int3 newPosition = new int3(previewBlock.Position.x, previewBlock.Position.y - 1, previewBlock.Position.z);
+                if (IsInBounds(newPosition))
+                    subBlock = Option<int3>.Some(newPosition);
+            }
+            
+            return (mainBlock, subBlock);
         }
     }
 }
