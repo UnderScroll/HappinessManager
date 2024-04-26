@@ -48,6 +48,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Simulator",
+            "id": "b369ee99-c9fc-4586-804f-d6fd5dccaef4",
+            "actions": [
+                {
+                    "name": "Play",
+                    "type": "Button",
+                    "id": "bb2d2d3c-fec1-481f-b76e-09621c4388c2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Reset",
+                    "type": "Button",
+                    "id": "f8bfbc4d-af5b-4c02-b2e2-755143d393f7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1327cf31-a6e6-487b-94e7-3fc7c41ec1f2",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Play",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dee6eafb-cdbf-4527-b8ff-c83ad8415161",
+                    "path": "<Keyboard>/delete",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Reset",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

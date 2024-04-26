@@ -11,13 +11,5 @@ public class CellType : ScriptableObject
     public GameObject Block = null;
     public PreviewBlock PreviewCollider = null;
 
-    public static explicit operator Builder.CellData(CellType cellType)
-    {
-        return new Builder.CellData
-        {
-            Type = cellType,
-        };
-    }
-
-
+    public static explicit operator Builder.CellData(CellType cellType) => new Builder.CellData(cellType);
 }

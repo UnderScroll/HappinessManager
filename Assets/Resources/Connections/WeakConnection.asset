@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c29d93602f82545ba128a40b31d169, type: 3}
   m_Name: WeakConnection
   m_EditorClassIdentifier: 
-  Type: weak_connection
+  Name: Weak
   BreakForce: 100
   BreakTorque: 100
+  EnableCollision: 0
+  EnablePreprocessing: 1

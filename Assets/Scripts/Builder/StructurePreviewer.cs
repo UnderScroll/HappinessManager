@@ -10,6 +10,9 @@ namespace Builder
 {
     public partial class Builder : MonoBehaviour
     {
+        public Transform StructureOrigin { set { _structureOrigin = value; } }
+        private Transform _structureOrigin;
+
         private PreviewBlock[,,] _blockPreviews;
         private int _mainBlockLayer, _subBlocksLayer;
 
@@ -30,7 +33,7 @@ namespace Builder
 
             CellType cellType = getCellType(position);
 
-            PreviewBlock previewBlock = Instantiate(cellType.PreviewCollider, transform);
+            PreviewBlock previewBlock = Instantiate(cellType.PreviewCollider, _structureOrigin);
             previewBlock.Position = position;
             previewBlock.transform.Translate(position.x, position.y, position.z);
 
@@ -41,7 +44,11 @@ namespace Builder
 
         private CellType getCellType(int3 position)
         {
-            return CellTypes.get()[Structure.Cells[position.x, position.y, position.z].Type.Name];
+            CellType cellType;
+            if (CellTypes.get().TryGetValue(Structure.Cells[position.x, position.y, position.z].Type.Name, out cellType))
+                return cellType;
+            else 
+                return null;
         }
 
         //(Position of cell pointed, Position of cell to place)
@@ -79,6 +86,42 @@ namespace Builder
             }
             
             return (mainBlock, subBlock);
+        }
+
+        public void activatePreview()
+        {
+            foreach (PreviewBlock block in _blockPreviews)
+            {
+                if (block == null) continue;
+
+                block.gameObject.SetActive(true);
+            }
+        }
+
+        public void deactivatePreview()
+        {
+            foreach (PreviewBlock block in _blockPreviews)
+            {
+                if (block == null) continue;
+
+                block.gameObject.SetActive(false);
+            }
+        }
+
+        private void OnDrawGizmos()
+        {
+            int3 pointedCellPosition;
+            if (_pointed.pointedCell.IsSome(out pointedCellPosition))
+            {
+                Gizmos.color = Color.blue;
+                Gizmos.DrawWireCube(new Vector3(pointedCellPosition.x, pointedCellPosition.y, pointedCellPosition.z) + _structureOrigin.position, new Vector3(1, 1, 1));
+            }
+            int3 cellToPlacePosition;
+            if (_pointed.cellToPlace.IsSome(out cellToPlacePosition))
+            {
+                Gizmos.color = Color.green;
+                Gizmos.DrawWireCube(new Vector3(cellToPlacePosition.x, cellToPlacePosition.y, cellToPlacePosition.z) + _structureOrigin.position, new Vector3(0.7f, 0.7f, 0.7f));
+            }
         }
     }
 }
