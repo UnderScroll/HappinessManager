@@ -22,6 +22,42 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Play",
+                    "type": "Button",
+                    "id": "7b4148b8-061f-4443-94df-701274929b3a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Reset",
+                    "type": "Button",
+                    "id": "59357d3e-2444-48cd-a4cd-ea17c6e88c99",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RotateDelta",
+                    "type": "Value",
+                    "id": "f16b9ab9-5071-42ab-88eb-9831ff5b7490",
+                    "expectedControlType": "Delta",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "RotateHold",
+                    "type": "Value",
+                    "id": "8a984633-3d44-409b-a7fb-5515b8e871f2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -46,36 +82,10 @@
                     "action": "Remove",
                     "isComposite": false,
                     "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Simulator",
-            "id": "b369ee99-c9fc-4586-804f-d6fd5dccaef4",
-            "actions": [
-                {
-                    "name": "Play",
-                    "type": "Button",
-                    "id": "bb2d2d3c-fec1-481f-b76e-09621c4388c2",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 },
                 {
-                    "name": "Reset",
-                    "type": "Button",
-                    "id": "f8bfbc4d-af5b-4c02-b2e2-755143d393f7",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
                     "name": "",
-                    "id": "1327cf31-a6e6-487b-94e7-3fc7c41ec1f2",
+                    "id": "2da7e05f-ab8e-4d62-bbbb-d128f32bf7a1",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
@@ -86,12 +96,56 @@
                 },
                 {
                     "name": "",
-                    "id": "dee6eafb-cdbf-4527-b8ff-c83ad8415161",
+                    "id": "493366a1-eeaf-46e7-8153-c4ef3aa95a65",
                     "path": "<Keyboard>/delete",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Reset",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Delta",
+                    "id": "e9063b18-3e1d-4695-88e2-35daf4c0ff8a",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateDelta",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "c47ca109-3522-4e1b-b629-5001dfb56b4b",
+                    "path": "<Mouse>/delta/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateDelta",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "37542a50-3e8a-40fe-834f-026555f1c0e6",
+                    "path": "<Mouse>/delta/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateDelta",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "5ac38f4b-2dc5-4257-9604-d6f799b5ffe7",
+                    "path": "<Mouse>/middleButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateHold",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
