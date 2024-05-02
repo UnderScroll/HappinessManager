@@ -17,5 +17,4 @@ namespace Builder
             Cells = new CellData[_size.x, _size.y, _size.z];
         }
     }
-
 }

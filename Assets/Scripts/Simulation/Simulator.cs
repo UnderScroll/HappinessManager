@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 namespace Simulation
 {
@@ -15,7 +13,7 @@ namespace Simulation
 
         Structure _structure;
         GameObject[,,] _instances;
-
+ 
         public void InitializeSimulation(Structure structure)
         {
             _instances = new GameObject[10, 10, 10];
@@ -62,7 +60,10 @@ namespace Simulation
                 //Add north connection
                 ConnectionType connectionType = cellData.GetConnectionType(CellData.Face.North);
                 int3 northBlockPosition = new int3(cellData.position.x, cellData.position.y, cellData.position.z + 1);
-                if (connectionType != null && isInBounds(northBlockPosition))
+                if (connectionType != null 
+                    && isInBounds(northBlockPosition)
+                    && cellData.Type.hasConnection(CellData.Face.North)
+                    && _structure.Cells[northBlockPosition.x, northBlockPosition.y, northBlockPosition.z].Type.hasConnection(CellData.Face.South))
                 {
                     GameObject northBlock = _instances[northBlockPosition.x, northBlockPosition.y, northBlockPosition.z];
                     if (northBlock != null)
@@ -72,7 +73,10 @@ namespace Simulation
                 //Add east connection
                 connectionType = cellData.GetConnectionType(CellData.Face.East);
                 int3 eastBlockPosition = new int3(cellData.position.x + 1, cellData.position.y, cellData.position.z);
-                if (connectionType != null && isInBounds(eastBlockPosition))
+                if (connectionType != null
+                    && isInBounds(eastBlockPosition)
+                    && cellData.Type.hasConnection(CellData.Face.East)
+                    && _structure.Cells[eastBlockPosition.x, eastBlockPosition.y, eastBlockPosition.z].Type.hasConnection(CellData.Face.Bottom))
                 {
                     GameObject eastBlock = _instances[eastBlockPosition.x, eastBlockPosition.y, eastBlockPosition.z];
                     if (eastBlock!= null)
@@ -82,7 +86,10 @@ namespace Simulation
                 //Add top connection
                 connectionType = cellData.GetConnectionType(CellData.Face.Top);
                 int3 topBlockPosition = new int3(cellData.position.x, cellData.position.y + 1, cellData.position.z);
-                if (connectionType != null)
+                if (connectionType != null 
+                    && isInBounds(topBlockPosition)
+                    && cellData.Type.hasConnection(CellData.Face.Top)
+                    && _structure.Cells[topBlockPosition.x, topBlockPosition.y, topBlockPosition.z].Type.hasConnection(CellData.Face.Bottom))
                 {
                     GameObject topBlock = _instances[topBlockPosition.x, topBlockPosition.y, topBlockPosition.z];
                     if (topBlock != null)

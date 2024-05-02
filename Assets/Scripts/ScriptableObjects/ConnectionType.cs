@@ -10,6 +10,17 @@ public class ConnectionType : ScriptableObject
     public bool EnableCollision = false;
     public bool EnablePreprocessing = true;
 
+    public ConnectionType() { }
+
+    public ConnectionType(ConnectionType other)
+    {
+        Name = other.Name;
+        BreakForce = other.BreakForce;
+        BreakTorque = other.BreakTorque;
+        EnableCollision = other.EnableCollision;
+        EnablePreprocessing = other.EnablePreprocessing;
+    }
+
     public bool isStronger(ConnectionType other)
     {
         return other.BreakForce < BreakForce;

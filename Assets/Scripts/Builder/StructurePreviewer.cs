@@ -44,11 +44,7 @@ namespace Builder
 
         private CellType getCellType(int3 position)
         {
-            CellType cellType;
-            if (CellTypes.get().TryGetValue(Structure.Cells[position.x, position.y, position.z].Type.Name, out cellType))
-                return cellType;
-            else 
-                return null;
+            return CellTypes.Get(Structure.Cells[position.x, position.y, position.z].Type.Name);
         }
 
         //(Position of cell pointed, Position of cell to place)
@@ -84,7 +80,10 @@ namespace Builder
                 if (IsInBounds(newPosition))
                     subBlock = Option<int3>.Some(newPosition);
             }
-            
+
+            if (subBlock.IsSome(out int3 subBlockPos) && !mainBlock.IsSome(out int3 _))
+                mainBlock = Option<int3>.Some(subBlockPos + new int3(0, 1, 0));
+
             return (mainBlock, subBlock);
         }
 
@@ -108,6 +107,7 @@ namespace Builder
             }
         }
 
+#if UNITY_EDITOR
         private void OnDrawGizmos()
         {
             int3 pointedCellPosition;
@@ -124,4 +124,5 @@ namespace Builder
             }
         }
     }
+#endif
 }

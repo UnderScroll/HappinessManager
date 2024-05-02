@@ -8,7 +8,12 @@ public class CellTypes : ScriptableObject
     private List<CellType> _types;
     private Dictionary<string, CellType> _dictType;
 
-    public Dictionary<string, CellType> get()
+
+    public List<CellType> Get() => _types;
+    public CellType Get(string key)
+        => get().TryGetValue(key, out CellType cellType) ? cellType : null;
+
+    private Dictionary<string, CellType> get()
     {
         if (_dictType != null) return _dictType;
 
@@ -19,4 +24,7 @@ public class CellTypes : ScriptableObject
         }
         return _dictType;
     }
+
+    public CellType Get(int index)
+        => index < _types.Count ? _types[index] : null;
 }
