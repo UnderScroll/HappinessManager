@@ -5,11 +5,14 @@ using UnityEngine.UI;
 using DG.Tweening;
 using Unity.VisualScripting;
 using TMPro.EditorUtilities;
+using UnityEngine.Events;
 
 public class UI_TabsManager : MonoBehaviour
 {
     [SerializeField] List<Button> Buttons;
     [SerializeField] List<GameObject> Panels;
+
+    public UnityEvent OnPanelSwitch;
 
     int selectedPanel;
 
@@ -18,6 +21,7 @@ public class UI_TabsManager : MonoBehaviour
     void Start()
     {
         selectedPanel = 0;
+        OnPanelSwitch.AddListener(PanelSwitch);
     }
     public void OnClick(int _panel)
     {
@@ -29,6 +33,7 @@ public class UI_TabsManager : MonoBehaviour
         }
     }
 
+    #region Private Methods
     private void UpdatePanels(int _old, int _new)
     {
         HidePanel(_old);
@@ -42,8 +47,17 @@ public class UI_TabsManager : MonoBehaviour
     }
     private void ShowPanel(int _panel)
     {
+        OnPanelSwitch?.Invoke();
         Panels[_panel].transform.DOLocalMoveX(0, 1.0f, true);
         Panels[_panel].transform.DOLocalMoveY(-90, 1.0f, true);
     }
+    #endregion
+
+    #region EVENTS
+    private void PanelSwitch()
+    {
+        Debug.Log("son panels qui bougent");
+    }
+    #endregion
 }
 
