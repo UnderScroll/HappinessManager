@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,6 +13,7 @@ public class CameraController : MonoBehaviour
         _camera = Camera.main;
     }
 
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "This function is called by Unity Input System")]
     private void OnRotateDelta(InputValue value)
     {
         if (_holdRotate)
@@ -24,6 +23,7 @@ public class CameraController : MonoBehaviour
         }
     }
 
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "This function is called by Unity Input System")]
     private void OnRotateHold(InputValue value)
     {
         Cursor.visible = !value.isPressed;

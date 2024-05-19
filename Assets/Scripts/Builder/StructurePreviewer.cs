@@ -1,10 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using Unity.Mathematics;
-using Unity.VisualScripting.FullSerializer.Internal;
 
 namespace Builder
 {
@@ -48,16 +44,15 @@ namespace Builder
         }
 
         //(Position of cell pointed, Position of cell to place)
-        public (Option<int3>, Option<int3>) GetPointed(int2 screenPosition)
+        public (Option<int3>, Option<int3>) GetPointed()
         {
-            RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             Option<int3> mainBlock = Option<int3>.None;
             Option<int3> mainBlockNormal = Option<int3>.None;
             PreviewBlock previewBlock = null;
 
-            if (Physics.Raycast(ray, out hit, float.PositiveInfinity, _mainBlockLayer))
+            if (Physics.Raycast(ray, out RaycastHit hit, float.PositiveInfinity, _mainBlockLayer))
             {
                 previewBlock = hit.collider.gameObject.GetComponentInParent<PreviewBlock>();
                 mainBlock = Option<int3>.Some(previewBlock.Position);
@@ -65,9 +60,7 @@ namespace Builder
             }
 
             Option<int3> subBlock = Option<int3>.None;
-            int3 mainBlockNormalVec;
-            int3 mainBlockPosition;
-            if (mainBlockNormal.IsSome(out mainBlockNormalVec) && mainBlock.IsSome(out mainBlockPosition))
+            if (mainBlockNormal.IsSome(out int3 mainBlockNormalVec) && mainBlock.IsSome(out int3 mainBlockPosition))
             {
                 int3 newPosition = mainBlockPosition + mainBlockNormalVec;
                 if (IsInBounds(newPosition))
@@ -123,6 +116,6 @@ namespace Builder
                 Gizmos.DrawWireCube(new Vector3(cellToPlacePosition.x, cellToPlacePosition.y, cellToPlacePosition.z) + _structureOrigin.position, new Vector3(0.7f, 0.7f, 0.7f));
             }
         }
-    }
 #endif
+    }
 }

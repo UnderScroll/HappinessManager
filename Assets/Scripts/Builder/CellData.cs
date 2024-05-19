@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Unity.Mathematics;
-using Unity.VisualScripting;
-using UnityEngine;
 
 namespace Builder
 {
@@ -21,7 +16,7 @@ namespace Builder
         {
             Type = type;
             for (int i = 0; i < _connections.Length; i++)
-                _connections[i] = Type.DefaultConnectionType;
+               _connections[i] = Type.DefaultConnectionType;
         }
 
         public enum Face
@@ -34,16 +29,18 @@ namespace Builder
             Bottom
         };
 
-        public void updateConnection(Face face, ConnectionType connectionType) => _connections[(int)face] = connectionType;
+        public void UpdateConnection(Face face, ConnectionType connectionType) => _connections[(int)face] = connectionType;
 
         public ConnectionType GetConnectionType(Face face) => _connections[(int)face];
 
         public CellData Clone()
         {
-            CellData clone = new CellData();
-            clone.Type = Type;
-            clone.position = position; 
-            clone._connections = (ConnectionType[])_connections.Clone();
+            CellData clone = new()
+            {
+                Type = Type,
+                position = position,
+                _connections = (ConnectionType[])_connections.Clone()
+            };
 
             return clone;
         }

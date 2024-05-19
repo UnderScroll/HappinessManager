@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,15 +13,14 @@ public class GameManager : MonoBehaviour
     {
         simulator = GetComponent<Simulation.Simulator>();
         builder = GetComponent<Builder.Builder>();
-        
+
         simulator.StructureOrigin = StructureOrigin;
         builder.StructureOrigin = StructureOrigin;
     }
 
-    void OnPlay(InputValue value)
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "This function is called by Unity Input System")]
+    void OnPlay(InputValue _)
     {
-        Debug.Log("OnPlay");
-
         if (!playing)
         {
             builder.deactivatePreview();
@@ -35,16 +32,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void OnReset(InputValue value)
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "This function is called by Unity Input System")]
+    void OnReset(InputValue _)
     {
-        Debug.Log("OnReset");
-
         if (playing)
         {
-            builder.activatePreview();
-            simulator.Reset();
-
-            playing = false;
+            ResetSimulation();
         }
+    }
+
+    public void ResetSimulation()
+    {
+
+        builder.activatePreview();
+        simulator.Reset();
+
+        playing = false;
     }
 }

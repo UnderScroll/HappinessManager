@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UIElements;
 
 [CreateAssetMenu(fileName = "ConnectionType", menuName = "Structure/ConnectionType")]
 public class ConnectionType : ScriptableObject
@@ -21,7 +20,7 @@ public class ConnectionType : ScriptableObject
         EnablePreprocessing = other.EnablePreprocessing;
     }
 
-    public bool isStronger(ConnectionType other)
+    public bool IsStronger(ConnectionType other)
     {
         return other.BreakForce < BreakForce;
     }

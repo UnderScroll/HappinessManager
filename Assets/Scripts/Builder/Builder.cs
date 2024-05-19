@@ -1,11 +1,9 @@
 using UnityEngine;
 using Unity.Mathematics;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 using UnityEngine.Assertions;
 using System.Collections.Generic;
-using System.Reflection;
-using Unity.VisualScripting;
+using System;
 
 namespace Builder
 {
@@ -38,7 +36,7 @@ namespace Builder
 
             Init();
 
-            selectBlock(0);
+            SelectBlock(0);
             if (_selectedBlock == null)
                 Debug.LogError("Failed to select first block, check is CellTypes is null");
         }
@@ -64,14 +62,12 @@ namespace Builder
         }
         void ModifyBlockData(CellData data, int3 position)
         {
-
+            throw new NotImplementedException("The ModifyBlockData function is not implemented yet");
         }
 
         private void Update()
         {
-            int2 mousePos = new int2((int)Input.mousePosition.x, (int)Input.mousePosition.y);
-
-            _pointed = GetPointed(mousePos);
+            _pointed = GetPointed();
         }
 
         private bool IsInBounds(int3 position)
@@ -93,7 +89,7 @@ namespace Builder
 
             for (int i = 0; i < _neighborDeltaPositions.Length; i++)
             {
-                if (!cellData.Type.hasConnection((CellData.Face)i))
+                if (!cellData.Type.HasConnection((CellData.Face)i))
                     continue;
 
                 int3 neighborPosition = _neighborDeltaPositions[i] + cellData.position;
@@ -104,16 +100,16 @@ namespace Builder
                 if (neighborCellData == null)
                     continue;
 
-                if (!neighborCellData.Type.hasConnection((CellData.Face)_inverseFaceOrder[i]))
+                if (!neighborCellData.Type.HasConnection((CellData.Face)_inverseFaceOrder[i]))
                     continue;
 
                 ConnectionType cellConnectionType = cellData.GetConnectionType((CellData.Face)i);
                 ConnectionType neighborConnectionType = cellData.GetConnectionType((CellData.Face)_inverseFaceOrder[i]);
 
-                if (cellConnectionType.isStronger(neighborConnectionType))
-                    neighborCellData.updateConnection((CellData.Face)_inverseFaceOrder[i], cellConnectionType);
+                if (cellConnectionType.IsStronger(neighborConnectionType))
+                    neighborCellData.UpdateConnection((CellData.Face)_inverseFaceOrder[i], cellConnectionType);
                 else
-                    cellData.updateConnection((CellData.Face)i, neighborConnectionType);
+                    cellData.UpdateConnection((CellData.Face)i, neighborConnectionType);
             }
         }
 
@@ -139,11 +135,11 @@ namespace Builder
                 if (neighborCellData == null)
                     continue;
 
-                neighborCellData.updateConnection((CellData.Face)_inverseFaceOrder[i], neighborCellData.Type.DefaultConnectionType);
+                neighborCellData.UpdateConnection((CellData.Face)_inverseFaceOrder[i], neighborCellData.Type.DefaultConnectionType);
             }
         }
 
-        public void OnPlace(InputValue value)
+        public void OnPlace(InputValue _)
         {
             //int3 positionToPlace;
             if (!_pointed.cellToPlace.IsSome(out int3 positionToPlace))
@@ -170,34 +166,37 @@ namespace Builder
             UpdateConnection(positionToRemove);
         }
 
-        public void OnSelectBlock1(InputValue value) => selectBlock(0);
-        public void OnSelectBlock2(InputValue value) => selectBlock(1);
-        public void OnSelectBlock3(InputValue value) => selectBlock(2);
-        public void OnSelectBlock4(InputValue value) => selectBlock(3);
+        public void OnSelectBlock1(InputValue _) => SelectBlock(0);
+        public void OnSelectBlock2(InputValue _) => SelectBlock(1);
+        public void OnSelectBlock3(InputValue _) => SelectBlock(2);
+        public void OnSelectBlock4(InputValue _) => SelectBlock(3);
 
-        private void selectBlock(uint index)
+        private void SelectBlock(uint index)
         {
             if (index < _baseBlocks.Count)
                 _selectedBlock = _baseBlocks[(int)index];
         }
 
-        //Temp function
+        //FIXME: Temporary function - This should call the level loader
         void Init()
         {
             Structure = new Structure(new int3(10, 10, 10));
 
             InitPreviewer();
 
-            selectBlock(0);
+            _selectedBlock = (CellData)CellTypes.Get("InvisibleBlock");
 
-            PlaceBlock(_selectedBlock.Clone(), new int3(0, 0, 0));
-            PlaceBlock(_selectedBlock.Clone(), new int3(7, 3, 2));
-            PlaceBlock(_selectedBlock.Clone(), new int3(7, 2, 2));
-            PlaceBlock(_selectedBlock.Clone(), new int3(7, 1, 2));
-            PlaceBlock(_selectedBlock.Clone(), new int3(7, 0, 2));
-            PlaceBlock(_selectedBlock.Clone(), new int3(7, 3, 3));
-            PlaceBlock(_selectedBlock.Clone(), new int3(7, 3, 4));
-            PlaceBlock(_selectedBlock.Clone(), new int3(3, 1, 3));
+            for (uint x = 0; x < Structure.Cells.GetLength(0); x++)
+                for (uint z = 0; z < Structure.Cells.GetLength(2); z++)
+                    PlaceBlock(_selectedBlock, new int3((int)x, 0, (int)z));
+
+            _selectedBlock = (CellData)CellTypes.Get("EmployeeBlock");
+
+            PlaceBlock(_selectedBlock, new int3(6, 8, 5));
+
+            SelectBlock(0);
+
+            PlaceBlock(_selectedBlock, new int3(2, 0, 2));
         }
     }
 }
