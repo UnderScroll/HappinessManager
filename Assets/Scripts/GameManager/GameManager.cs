@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     {
         if (!playing)
         {
-            builder.deactivatePreview();
+            builder.DeactivatePreview();
 
             simulator.InitializeSimulation(builder.Structure);
             simulator.Launch();
@@ -41,10 +41,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ResetSimulation()
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "This function is called by Unity Input System")]
+    void OnLoadLevel(InputValue _)
     {
 
-        builder.activatePreview();
+    }
+
+    public void ResetSimulation()
+    {
+        builder.ActivatePreview();
         simulator.Reset();
 
         playing = false;

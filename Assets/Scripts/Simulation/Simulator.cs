@@ -27,7 +27,7 @@ namespace Simulation
 
         public void InitializeSimulation(Structure structure)
         {
-            _instances = new GameObject[10, 10, 10];
+            _instances = new GameObject[_structure.Cells.GetLength(0), _structure.Cells.GetLength(1), _structure.Cells.GetLength(2)];
 
             _structure = structure;
 

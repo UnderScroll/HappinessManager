@@ -1,10 +1,15 @@
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 
-public class LevelLoader : MonoBehaviour
+namespace Builder
 {
-    private void Start()
+    public partial class Builder : MonoBehaviour
     {
-        Debug.LogWarning("The LevelLoader is not implemented yet");
+        public void LoadLevel(Structure structure)
+        {
+            Structure = structure;
+            InitPreviewer();
+        }
     }
 }

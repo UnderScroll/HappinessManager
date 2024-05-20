@@ -10,13 +10,15 @@ namespace Builder
         private Transform _structureOrigin;
 
         private PreviewBlock[,,] _blockPreviews;
-        private int _mainBlockLayer, _subBlocksLayer;
+        private int _mainBlockLayer = 1 << LayerMask.NameToLayer("MainBlocks");
+        private int _subBlocksLayer = 1 << LayerMask.NameToLayer("SubBlocks");
 
         void InitPreviewer()
         {
-            _blockPreviews = new PreviewBlock[10, 10, 10];
-            _mainBlockLayer = 1 << LayerMask.NameToLayer("MainBlocks");
-            _subBlocksLayer = 1 << LayerMask.NameToLayer("SubBlocks");
+            foreach (PreviewBlock previewBlokc in _blockPreviews)
+                Destroy(previewBlokc);
+
+            _blockPreviews = new PreviewBlock[Structure.Size.x, Structure.Size.y, Structure.Size.z];
         }
 
         public void UpdateCell(int3 position)
@@ -27,7 +29,7 @@ namespace Builder
             if (Structure.Cells[position.x, position.y, position.z] == null)
                 return;
 
-            CellType cellType = getCellType(position);
+            CellType cellType = GetCellType(position);
 
             PreviewBlock previewBlock = Instantiate(cellType.PreviewCollider, _structureOrigin);
             previewBlock.Position = position;
@@ -38,7 +40,7 @@ namespace Builder
             _blockPreviews[position.x, position.y, position.z] = previewBlock;
         }
 
-        private CellType getCellType(int3 position)
+        private CellType GetCellType(int3 position)
         {
             return CellTypes.Get(Structure.Cells[position.x, position.y, position.z].Type.Name);
         }
@@ -80,7 +82,7 @@ namespace Builder
             return (mainBlock, subBlock);
         }
 
-        public void activatePreview()
+        public void ActivatePreview()
         {
             foreach (PreviewBlock block in _blockPreviews)
             {
@@ -90,7 +92,7 @@ namespace Builder
             }
         }
 
-        public void deactivatePreview()
+        public void DeactivatePreview()
         {
             foreach (PreviewBlock block in _blockPreviews)
             {
