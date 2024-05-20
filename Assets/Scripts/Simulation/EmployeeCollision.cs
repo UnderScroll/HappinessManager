@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class EmployeeCollision : MonoBehaviour
 {
-    public UnityEvent collisionEvent;
+    public static UnityEvent collisionEvent = new();
 
     private void OnCollisionEnter(Collision collision)
     {

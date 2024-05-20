@@ -184,15 +184,13 @@ namespace Builder
 
             InitPreviewer();
 
-            _selectedBlock = (CellData)CellTypes.Get("InvisibleBlock");
-
             for (uint x = 0; x < Structure.Cells.GetLength(0); x++)
                 for (uint z = 0; z < Structure.Cells.GetLength(2); z++)
-                    PlaceBlock(_selectedBlock, new int3((int)x, 0, (int)z));
+                    PlaceBlock((CellData)CellTypes.Get("InvisibleBlock"), new int3((int)x, 0, (int)z));
 
-            _selectedBlock = (CellData)CellTypes.Get("EmployeeBlock");
+            PlaceBlock((CellData)CellTypes.Get("EmployeeBlock"), new int3(6, 8, 5));
 
-            PlaceBlock(_selectedBlock, new int3(6, 8, 5));
+            PlaceBlock((CellData)CellTypes.Get("EmployeeBlock"), new int3(1, 8, 4));
 
             SelectBlock(0);
 

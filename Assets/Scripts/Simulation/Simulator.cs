@@ -31,6 +31,8 @@ namespace Simulation
 
             _structure = structure;
 
+            EmployeeCollision.collisionEvent.AddListener(OnEmployeeGroundCollision);
+
             InstantiateBlocks();
             CreateConnections();
 
@@ -59,9 +61,6 @@ namespace Simulation
 
             instance.transform.Translate(new Vector3(cellData.position.x, cellData.position.y, cellData.position.z));
             _instances[cellData.position.x, cellData.position.y, cellData.position.z] = instance;
-
-            if (cellData.Type.Name == "EmployeeBlock")
-                instance.GetComponent<EmployeeCollision>().collisionEvent.AddListener(OnEmployeeGroundCollision);
 
             return instance;
         }
@@ -168,6 +167,7 @@ namespace Simulation
         {
             timeCounter = 0;
             _isSimulationRunning = false;
+            StopAllCoroutines();
 
             foreach (GameObject instance in _instances)
                 Destroy(instance);
@@ -183,7 +183,7 @@ namespace Simulation
             Debug.Log($"Simulation will reset in {seconds} seconds");
 
             yield return new WaitForSeconds(seconds);
-
+            
             _gameManager.ResetSimulation();
         }
 

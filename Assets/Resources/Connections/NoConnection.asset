@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c29d93602f82545ba128a40b31d169, type: 3}
   m_Name: NoConnection
   m_EditorClassIdentifier: 
-  Name: Default
-  BreakForce: Infinity
-  BreakTorque: Infinity
+  Name: NoConnection
+  BreakForce: 0
+  BreakTorque: 0
   EnableCollision: 0
   EnablePreprocessing: 1

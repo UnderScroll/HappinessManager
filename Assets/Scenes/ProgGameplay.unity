@@ -374,6 +374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274d0c3d2d84cf44b99ed6c4a80d3d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ValidationTime: 10
 --- !u!114 &737254368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,7 +427,7 @@ GameObject:
   - component: {fileID: 1052361901}
   m_Layer: 0
   m_Name: GroundCollider
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
