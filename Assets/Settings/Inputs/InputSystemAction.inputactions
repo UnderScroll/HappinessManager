@@ -94,6 +94,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ReloadLevel",
+                    "type": "Button",
+                    "id": "eb7ef156-e7a6-4c19-b93c-1588455ef222",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LoadNextLevel",
+                    "type": "Button",
+                    "id": "13270661-d786-48b7-888a-8df7d310e47d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LoadPreviousLevel",
+                    "type": "Button",
+                    "id": "5bab439f-d277-4838-9f1e-19fa5ad67c02",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -226,6 +253,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "SelectBlock4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "71bd3cc7-74c6-48ea-8faf-b86ede98aa25",
+                    "path": "<Keyboard>/f6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReloadLevel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "730a9c57-6688-4d65-9153-ca032585725a",
+                    "path": "<Keyboard>/f7",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LoadNextLevel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6b9d4763-58c8-42ae-b87c-5ba26a68e5ff",
+                    "path": "<Keyboard>/f5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LoadPreviousLevel",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

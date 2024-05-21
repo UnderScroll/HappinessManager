@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.Assertions;
 using System.Collections.Generic;
 using System;
+using UnityEngine.PlayerLoop;
 
 namespace Builder
 {
@@ -12,7 +13,7 @@ namespace Builder
         public Structure Structure;
         public CellTypes CellTypes;
         public CellTypes PlacableCellTypes;
-        private List<CellData> _baseBlocks;
+        private List<CellData> _placeableBlocks;
         private CellData _selectedBlock;
 
         private (Option<int3> pointedCell, Option<int3> cellToPlace) _pointed;
@@ -30,15 +31,23 @@ namespace Builder
 
         private void Start()
         {
-            _baseBlocks = new List<CellData>();
+            //Initialize();
+        }
+
+        public void Initialize()
+        {
+            //Initialise the list of placeableBlocks
+            _placeableBlocks = new List<CellData>();
             foreach (CellType cType in PlacableCellTypes.Get())
-                _baseBlocks.Add((CellData)cType);
+                _placeableBlocks.Add((CellData)cType);
 
-            Init();
+            //Initialize the previewer
+            InitializePreviewer();
 
+            //Select the first block in placeableBlocks
             SelectBlock(0);
             if (_selectedBlock == null)
-                Debug.LogError("Failed to select first block, check is CellTypes is null");
+                Debug.LogError("Failed to select first block, check if CellTypes is null or empty");
         }
 
         void PlaceBlock(CellData data, int3 position)
@@ -141,7 +150,6 @@ namespace Builder
 
         public void OnPlace(InputValue _)
         {
-            //int3 positionToPlace;
             if (!_pointed.cellToPlace.IsSome(out int3 positionToPlace))
                 return;
 
@@ -153,7 +161,7 @@ namespace Builder
             return;
         }
 
-        public void OnRemove(InputValue value)
+        public void OnRemove(InputValue _)
         {
             if (!_pointed.pointedCell.IsSome(out int3 positionToRemove))
                 return;
@@ -173,8 +181,8 @@ namespace Builder
 
         private void SelectBlock(uint index)
         {
-            if (index < _baseBlocks.Count)
-                _selectedBlock = _baseBlocks[(int)index];
+            if (index < _placeableBlocks.Count)
+                _selectedBlock = _placeableBlocks[(int)index];
         }
 
         //FIXME: Temporary function - This should call the level loader
@@ -182,7 +190,7 @@ namespace Builder
         {
             Structure = new Structure(new int3(10, 10, 10));
 
-            InitPreviewer();
+            InitializePreviewer();
 
             for (uint x = 0; x < Structure.Cells.GetLength(0); x++)
                 for (uint z = 0; z < Structure.Cells.GetLength(2); z++)

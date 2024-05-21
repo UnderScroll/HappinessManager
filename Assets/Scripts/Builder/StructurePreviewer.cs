@@ -6,25 +6,54 @@ namespace Builder
 {
     public partial class Builder : MonoBehaviour
     {
+        [HideInInspector]
         public Transform StructureOrigin { set { _structureOrigin = value; } }
         private Transform _structureOrigin;
 
-        private PreviewBlock[,,] _blockPreviews;
-        private int _mainBlockLayer = 1 << LayerMask.NameToLayer("MainBlocks");
-        private int _subBlocksLayer = 1 << LayerMask.NameToLayer("SubBlocks");
+        private PreviewBlock[,,] _previewBlocks;
+        private int _mainBlockLayer;
+        private int _subBlocksLayer;
 
-        void InitPreviewer()
+        private void Awake()
         {
-            foreach (PreviewBlock previewBlokc in _blockPreviews)
-                Destroy(previewBlokc);
+            _mainBlockLayer = 1 << LayerMask.NameToLayer("MainBlocks");
+            _subBlocksLayer = 1 << LayerMask.NameToLayer("SubBlocks");
+        }
 
-            _blockPreviews = new PreviewBlock[Structure.Size.x, Structure.Size.y, Structure.Size.z];
+        void InitializePreviewer()
+        {
+            _previewBlocks = new PreviewBlock[Structure.Size.x, Structure.Size.y, Structure.Size.z];
+
+            foreach (CellData cell in Structure.Cells)
+            {
+                if (cell == null)
+                    continue;
+
+                UpdateCell(cell.position);
+            }
+        }
+
+        public void ResetPreviewer()
+        {
+            if (_previewBlocks == null)
+            {
+                Debug.LogWarning("_previewBlocks was null during reset");
+                return;
+            }
+
+            foreach (PreviewBlock previewBlock in _previewBlocks)
+            {
+                if (previewBlock == null)
+                    continue;
+
+                Destroy(previewBlock.gameObject);
+            }
         }
 
         public void UpdateCell(int3 position)
         {
-            if (_blockPreviews[position.x, position.y, position.z] != null)
-                Destroy(_blockPreviews[position.x, position.y, position.z].gameObject);
+            if (_previewBlocks[position.x, position.y, position.z] != null)
+                Destroy(_previewBlocks[position.x, position.y, position.z].gameObject);
 
             if (Structure.Cells[position.x, position.y, position.z] == null)
                 return;
@@ -37,7 +66,7 @@ namespace Builder
 
             Instantiate(cellType.Block, previewBlock.transform);
 
-            _blockPreviews[position.x, position.y, position.z] = previewBlock;
+            _previewBlocks[position.x, position.y, position.z] = previewBlock;
         }
 
         private CellType GetCellType(int3 position)
@@ -84,7 +113,7 @@ namespace Builder
 
         public void ActivatePreview()
         {
-            foreach (PreviewBlock block in _blockPreviews)
+            foreach (PreviewBlock block in _previewBlocks)
             {
                 if (block == null) continue;
 
@@ -94,7 +123,7 @@ namespace Builder
 
         public void DeactivatePreview()
         {
-            foreach (PreviewBlock block in _blockPreviews)
+            foreach (PreviewBlock block in _previewBlocks)
             {
                 if (block == null) continue;
 
@@ -119,5 +148,6 @@ namespace Builder
             }
         }
 #endif
+
     }
 }

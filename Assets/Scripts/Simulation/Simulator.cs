@@ -13,21 +13,23 @@ namespace Simulation
         private Structure _structure;
         private GameObject[,,] _instances;
 
-        private GameManager _gameManager;
+        //private GameManager _gameManager;
         private double timeCounter;
         private bool _isSimulationRunning;
         public double ValidationTime;
+        private bool _isSimulationFailed;
 
         private void Start()
         {
-            _gameManager = GetComponent<GameManager>();
-            if (_gameManager == null)
-                Debug.LogWarning("GameManager wasn't found, this will cause issues");
+            /*
+            if (!TryGetComponent(out _gameManager))
+                Debug.LogError("GameManager wasn't found, this will cause issues");
+            */
         }
 
         public void InitializeSimulation(Structure structure)
         {
-            _instances = new GameObject[_structure.Cells.GetLength(0), _structure.Cells.GetLength(1), _structure.Cells.GetLength(2)];
+            _instances = new GameObject[structure.Size.x, structure.Size.y, structure.Size.z];
 
             _structure = structure;
 
@@ -153,7 +155,7 @@ namespace Simulation
         {
             if (_isSimulationRunning)
             {
-                if (timeCounter > ValidationTime)
+                if (timeCounter > ValidationTime && !_isSimulationFailed)
                 {
                     _isSimulationRunning = false;
                     OnLevelValidated();
@@ -167,7 +169,7 @@ namespace Simulation
         {
             timeCounter = 0;
             _isSimulationRunning = false;
-            StopAllCoroutines();
+            _isSimulationFailed = false;
 
             foreach (GameObject instance in _instances)
                 Destroy(instance);
@@ -178,20 +180,10 @@ namespace Simulation
             Debug.Log("LevelValidated");
         }
 
-        public IEnumerator ResetAfterTime(float seconds)
-        {
-            Debug.Log($"Simulation will reset in {seconds} seconds");
-
-            yield return new WaitForSeconds(seconds);
-            
-            _gameManager.ResetSimulation();
-        }
-
         public void OnEmployeeGroundCollision()
         {
-            Debug.Log("Employee touched grass");
+            _isSimulationFailed = true;
             _isSimulationRunning = false;
-            StartCoroutine(ResetAfterTime(2.0f));
         }
     }
 }
