@@ -11,12 +11,12 @@ public class UI_TabsManager : MonoBehaviour
 {
     [SerializeField] List<Button> Buttons;
     [SerializeField] List<GameObject> Panels;
+    [SerializeField] Vector3 hidePosition;
+    [SerializeField] Vector2 showPosition;
 
     public UnityEvent OnPanelSwitch;
 
     int selectedPanel;
-
-    private Vector3 hidePosition = new Vector3(1080, -1080, 0);
 
     void Start()
     {
@@ -30,7 +30,7 @@ public class UI_TabsManager : MonoBehaviour
             int oldPanel = selectedPanel;
             selectedPanel = _panel;
             UpdatePanels(oldPanel, _panel);
-        }
+        }  
     }
 
     #region Private Methods
@@ -48,8 +48,8 @@ public class UI_TabsManager : MonoBehaviour
     private void ShowPanel(int _panel)
     {
         OnPanelSwitch?.Invoke();
-        Panels[_panel].transform.DOLocalMoveX(0, 1.0f, true);
-        Panels[_panel].transform.DOLocalMoveY(-90, 1.0f, true);
+        Panels[_panel].transform.DOLocalMoveX(showPosition.x, 1.0f, true);
+        Panels[_panel].transform.DOLocalMoveY(showPosition.y, 1.0f, true);
     }
     #endregion
 

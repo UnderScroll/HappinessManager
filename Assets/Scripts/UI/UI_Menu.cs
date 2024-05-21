@@ -18,6 +18,7 @@ public class UI_Menu : MonoBehaviour
     public UnityEvent OnIntroEnded;
 
     [Header("IntroScene")]
+    [SerializeField] bool skipIntro;
     [SerializeField] private RawImage _gameLogo;
     [SerializeField] private RawImage _cnamLogo;
     [SerializeField] private RawImage _magelisLogo;
@@ -80,50 +81,52 @@ public class UI_Menu : MonoBehaviour
         OnApplicationStarted?.Invoke();
 
         // INTRO SCENE
+        if (!skipIntro)
+        {
+            // Wwise
+            yield return new WaitForSeconds(_secondsBeforeFirstLogo);
+            var tweenFadeInWwiseLogo = _wwiseLogo.DOFade(1.0f, _secondsFadeInDurationWwiseLogo).SetEase(_easeFadeInWwiseLogo);
+            yield return tweenFadeInWwiseLogo.WaitForCompletion();
+            yield return new WaitForSeconds(_secondsBeforeFadeOutWwiseLogo);
+            var tweenFadeOutWwiseLogo = _wwiseLogo.DOFade(0.0f, _secondsFadeOutDurationWwiseLogo).SetEase(_easeFadeOutWwiseLogo);
+            yield return tweenFadeOutWwiseLogo.WaitForCompletion();
 
-        // Wwise
-        yield return new WaitForSeconds(_secondsBeforeFirstLogo);
-        var tweenFadeInWwiseLogo = _wwiseLogo.DOFade(1.0f, _secondsFadeInDurationWwiseLogo).SetEase(_easeFadeInWwiseLogo);
-        yield return tweenFadeInWwiseLogo.WaitForCompletion();
-        yield return new WaitForSeconds(_secondsBeforeFadeOutWwiseLogo);
-        var tweenFadeOutWwiseLogo = _wwiseLogo.DOFade(0.0f, _secondsFadeOutDurationWwiseLogo).SetEase(_easeFadeOutWwiseLogo);
-        yield return tweenFadeOutWwiseLogo.WaitForCompletion();
+            yield return new WaitForSeconds(_secondsBetweenLogos);
 
-        yield return new WaitForSeconds(_secondsBetweenLogos);
+            // CNAM AND MAGELIS LOGOS
+            var tweenFadeInCnamLogo = _cnamLogo.DOFade(1.0f, _secondsFadeInDurationCnamLogo).SetEase(_easeFadeInCnamLogo);
+            var tweenFadeInMagelisLogo = _magelisLogo.DOFade(1.0f, _secondsFadeInDurationMagelisLogo).SetEase(_easeFadeInMagelisLogo);
+            yield return tweenFadeInCnamLogo.WaitForCompletion();
+            yield return tweenFadeInMagelisLogo.WaitForCompletion();
+            yield return new WaitForSeconds(_secondsBeforeFadeOutCnamAndMagelisLogo);
+            var tweenFadeOutCnamLogo = _cnamLogo.DOFade(0.0f, _secondsFadeOutDurationCnamLogo).SetEase(_easeFadeOutCnamLogo);
+            var tweenFadeOutMagelisLogo = _magelisLogo.DOFade(0.0f, _secondsFadeOutDurationMagelisLogo).SetEase(_easeFadeOutMagelisLogo);
+            yield return tweenFadeOutCnamLogo.WaitForCompletion();
+            yield return tweenFadeOutMagelisLogo.WaitForCompletion();
 
-        // CNAM AND MAGELIS LOGOS
-        var tweenFadeInCnamLogo = _cnamLogo.DOFade(1.0f, _secondsFadeInDurationCnamLogo).SetEase(_easeFadeInCnamLogo);
-        var tweenFadeInMagelisLogo = _magelisLogo.DOFade(1.0f, _secondsFadeInDurationMagelisLogo).SetEase(_easeFadeInMagelisLogo);
-        yield return tweenFadeInCnamLogo.WaitForCompletion();
-        yield return tweenFadeInMagelisLogo.WaitForCompletion();
-        yield return new WaitForSeconds(_secondsBeforeFadeOutCnamAndMagelisLogo);
-        var tweenFadeOutCnamLogo = _cnamLogo.DOFade(0.0f, _secondsFadeOutDurationCnamLogo).SetEase(_easeFadeOutCnamLogo);
-        var tweenFadeOutMagelisLogo = _magelisLogo.DOFade(0.0f, _secondsFadeOutDurationMagelisLogo).SetEase(_easeFadeOutMagelisLogo);
-        yield return tweenFadeOutCnamLogo.WaitForCompletion();
-        yield return tweenFadeOutMagelisLogo.WaitForCompletion();
+            yield return new WaitForSeconds(_secondsBetweenLogos);
 
-        yield return new WaitForSeconds(_secondsBetweenLogos);
+            // P20 LOGO
+            var tweenFadeInP20Logo = _p20Logo.DOFade(1.0f, _secondsFadeInDurationP20Logo).SetEase(_easeFadeInP20Logo);
+            yield return tweenFadeInP20Logo.WaitForCompletion();
+            yield return new WaitForSeconds(_secondsBeforeFadeOutP20Logo);
+            var tweenFadeOutP20Logo = _p20Logo.DOFade(0.0f, _secondsFadeOutDurationP20Logo).SetEase(_easeFadeOutP20Logo);
+            yield return tweenFadeOutP20Logo.WaitForCompletion();
 
-        // P20 LOGO
-        var tweenFadeInP20Logo = _p20Logo.DOFade(1.0f, _secondsFadeInDurationP20Logo).SetEase(_easeFadeInP20Logo);
-        yield return tweenFadeInP20Logo.WaitForCompletion();
-        yield return new WaitForSeconds(_secondsBeforeFadeOutP20Logo);
-        var tweenFadeOutP20Logo = _p20Logo.DOFade(0.0f, _secondsFadeOutDurationP20Logo).SetEase(_easeFadeOutP20Logo);
-        yield return tweenFadeOutP20Logo.WaitForCompletion();
+            yield return new WaitForSeconds(_secondsBetweenLogos);
 
-        yield return new WaitForSeconds(_secondsBetweenLogos);
+            //GAME LOGO 
+            var tweenFadeInGameLogo = _gameLogo.DOFade(1.0f, _secondsFadeInDurationGameLogo).SetEase(_easeFadeInGameLogo);
+            yield return tweenFadeInGameLogo.WaitForCompletion();
 
-        //GAME LOGO 
-        var tweenFadeInGameLogo = _gameLogo.DOFade(1.0f, _secondsFadeInDurationGameLogo).SetEase(_easeFadeInGameLogo);
-        yield return tweenFadeInGameLogo.WaitForCompletion();
+            yield return new WaitForSeconds(_secondsBeforeFadeOutGameLogo);
 
-        yield return new WaitForSeconds(_secondsBeforeFadeOutGameLogo);
+            var tweenFadeOutGameLogo = _gameLogo.DOFade(0.0f, _secondsFadeOutDurationGameLogo).SetEase(_easeFadeOutGameLogo);
+            yield return tweenFadeOutGameLogo.WaitForCompletion();
 
-        var tweenFadeOutGameLogo = _gameLogo.DOFade(0.0f, _secondsFadeOutDurationGameLogo).SetEase(_easeFadeOutGameLogo);
-        yield return tweenFadeOutGameLogo.WaitForCompletion();
+            yield return new WaitForSeconds(_secondsBeforeStartGame);
 
-        yield return new WaitForSeconds(_secondsBeforeStartGame);
-
+        }
         // END
         imageFade.DOFade(0, 1);
         OnIntroEnded?.Invoke();
