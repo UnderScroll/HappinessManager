@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: HeavyBlock
   Removable: 1
-  Mass: 1
+  Mass: 10
   DefaultConnectionType: {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130,
     type: 2}
-  Block: {fileID: 0}
-  PreviewCollider: {fileID: 0}
+  Block: {fileID: 6317348198501730575, guid: 5fe9cbe36d4a0064fab1c63f850dae64, type: 3}
+  PreviewCollider: {fileID: 5749741502627939162, guid: 97919408bbf7f3a46b948f901fe8cf71,
+    type: 3}
   ConnectionFaces: 63
   ShouldBeSimulated: 1

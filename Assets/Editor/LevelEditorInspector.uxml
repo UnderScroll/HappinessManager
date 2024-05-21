@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:IMGUIContainer name="Structure" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 2px; border-left-width: 0; border-left-color: rgb(70, 70, 70); border-right-color: rgb(70, 70, 70); border-top-color: rgb(70, 70, 70); border-bottom-color: rgb(70, 70, 70); margin-top: 2px; margin-right: 4px; margin-bottom: 0; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px;">
+        <ui:Label tabindex="-1" text="Structure" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Structure" style="-unity-font-style: bold;" />
+        <ui:Vector3IntField label="Size" name="Size" binding-path="StructureSize" />
+    </ui:IMGUIContainer>
+    <ui:IMGUIContainer name="CurrentCell" style="margin-top: 2px; margin-right: 4px; margin-bottom: 2px; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 2px; padding-left: 4px;">
+        <ui:Label tabindex="-1" text="Current Cell" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Structure" style="-unity-font-style: bold;" />
+        <ui:Vector3IntField label="Position" name="Position" binding-path="CurrentCellPosition" />
+    </ui:IMGUIContainer>
+</ui:UXML>
