@@ -4,16 +4,19 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class LevelEditor : MonoBehaviour
+
+public partial class LevelEditor : MonoBehaviour
 {
     public Vector3Int CurrentCellPosition;
     public Vector3Int StructureSize;
     public List<CellType> PlaceableBlocks;
     public CellType CurrentSelectedBlock;
-    public Level level;
+    public string levelName;
     public AlignementLines alignementLines;
 
-    public GameObject CurrentCellPreview;
+    public Level Level;
+
+    public GameObject CurrentCellPreviewInstance;
 
     [Flags]
     public enum AlignementLines
@@ -25,12 +28,12 @@ public class LevelEditor : MonoBehaviour
 
     public void OnDrawGizmos()
     {
-        //Draw alignment lines
-        DrawAlignementLines();
-
         //Draw CurrentCell
         Gizmos.color = Color.white;
-        Gizmos.DrawWireCube(CurrentCellPosition, new Vector3(1f, 1f, 1f));
+        Gizmos.DrawWireMesh(CurrentCellPreviewInstance.GetComponent<MeshFilter>().sharedMesh, CurrentCellPreviewInstance.transform.position, CurrentCellPreviewInstance.transform.rotation, CurrentCellPreviewInstance.transform.localScale);
+
+        //Draw alignment lines
+        DrawAlignementLines();
     }
 
     private void DrawAlignementLines()
@@ -99,12 +102,18 @@ public class LevelEditor : MonoBehaviour
         }
     }
 
+    public void OnCurrenCellPositionChanged()
+    {
+        CurrentCellPreviewInstance.transform.position = CurrentCellPosition;
+    }
+
     public void OnNorthButtonClicked()
     {
         int nextCurrentCellPositionZ = CurrentCellPosition.z + 1;
         if (nextCurrentCellPositionZ < StructureSize.z)
             CurrentCellPosition.z = nextCurrentCellPositionZ;
 
+        OnCurrenCellPositionChanged();
         SceneView.RepaintAll();
     }
 
@@ -114,6 +123,7 @@ public class LevelEditor : MonoBehaviour
         if (nextCurrentCellPositionX < StructureSize.x)
             CurrentCellPosition.x = nextCurrentCellPositionX;
 
+        OnCurrenCellPositionChanged();
         SceneView.RepaintAll();
     }
 
@@ -123,6 +133,7 @@ public class LevelEditor : MonoBehaviour
         if (nextCurrentCellPositionZ >= 0)
             CurrentCellPosition.z = nextCurrentCellPositionZ;
 
+        OnCurrenCellPositionChanged();
         SceneView.RepaintAll();
     }
 
@@ -132,6 +143,7 @@ public class LevelEditor : MonoBehaviour
         if (nextCurrentCellPositionX >= 0)
             CurrentCellPosition.x = nextCurrentCellPositionX;
 
+        OnCurrenCellPositionChanged();
         SceneView.RepaintAll();
     }
 
@@ -141,6 +153,7 @@ public class LevelEditor : MonoBehaviour
         if (nextCurrentCellPositionY < StructureSize.y)
             CurrentCellPosition.y = nextCurrentCellPositionY;
 
+        OnCurrenCellPositionChanged();
         SceneView.RepaintAll();
     }
 
@@ -150,6 +163,32 @@ public class LevelEditor : MonoBehaviour
         if (nextCurrentCellPositionY >= 0)
             CurrentCellPosition.y = nextCurrentCellPositionY;
 
+        OnCurrenCellPositionChanged();
         SceneView.RepaintAll();
+    }
+
+    public void OnSelectedBlockChanged()
+    {
+        if (CurrentCellPreviewInstance != null)
+            DestroyImmediate(CurrentCellPreviewInstance);
+
+        CurrentCellPreviewInstance = Instantiate(CurrentSelectedBlock.Block);
+
+        CurrentCellPreviewInstance.transform.position = CurrentCellPosition;
+    }
+
+    public void OnLevelChanged(Level newLevel)
+    {
+        Load(newLevel);
+    }
+
+    public void OnPlaceBlock()
+    {
+
+    }
+
+    public void OnRemoveBlock()
+    {
+
     }
 }

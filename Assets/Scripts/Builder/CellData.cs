@@ -5,7 +5,7 @@ namespace Builder
     public class CellData
     {
         public CellType Type;
-        public int3 position;
+        public int3 Position;
         private ConnectionType[] _connections = new ConnectionType[6];
 
         public CellData()
@@ -38,7 +38,7 @@ namespace Builder
             CellData clone = new()
             {
                 Type = Type,
-                position = position,
+                Position = Position,
                 _connections = (ConnectionType[])_connections.Clone()
             };
 

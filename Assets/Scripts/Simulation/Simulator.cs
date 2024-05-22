@@ -61,8 +61,8 @@ namespace Simulation
 
             instance.AddComponent<BoxCollider>();
 
-            instance.transform.Translate(new Vector3(cellData.position.x, cellData.position.y, cellData.position.z));
-            _instances[cellData.position.x, cellData.position.y, cellData.position.z] = instance;
+            instance.transform.Translate(new Vector3(cellData.Position.x, cellData.Position.y, cellData.Position.z));
+            _instances[cellData.Position.x, cellData.Position.y, cellData.Position.z] = instance;
 
             return instance;
         }
@@ -73,11 +73,11 @@ namespace Simulation
             {
                 if (cellData == null) continue;
 
-                GameObject blockInstance = _instances[cellData.position.x, cellData.position.y, cellData.position.z];
+                GameObject blockInstance = _instances[cellData.Position.x, cellData.Position.y, cellData.Position.z];
 
                 //Add north connection
                 ConnectionType connectionType = cellData.GetConnectionType(CellData.Face.North);
-                int3 northBlockPosition = new(cellData.position.x, cellData.position.y, cellData.position.z + 1);
+                int3 northBlockPosition = new(cellData.Position.x, cellData.Position.y, cellData.Position.z + 1);
                 if (connectionType != null
                     && IsInBounds(northBlockPosition)
                     && cellData.Type.HasConnection(CellData.Face.North))
@@ -93,7 +93,7 @@ namespace Simulation
 
                 //Add east connection
                 connectionType = cellData.GetConnectionType(CellData.Face.East);
-                int3 eastBlockPosition = new(cellData.position.x + 1, cellData.position.y, cellData.position.z);
+                int3 eastBlockPosition = new(cellData.Position.x + 1, cellData.Position.y, cellData.Position.z);
                 if (connectionType != null
                     && IsInBounds(eastBlockPosition)
                     && cellData.Type.HasConnection(CellData.Face.North))
@@ -109,7 +109,7 @@ namespace Simulation
 
                 //Add top connection
                 connectionType = cellData.GetConnectionType(CellData.Face.Top);
-                int3 topBlockPosition = new(cellData.position.x, cellData.position.y + 1, cellData.position.z);
+                int3 topBlockPosition = new(cellData.Position.x, cellData.Position.y + 1, cellData.Position.z);
                 if (connectionType != null
                     && IsInBounds(topBlockPosition)
                     && cellData.Type.HasConnection(CellData.Face.North))

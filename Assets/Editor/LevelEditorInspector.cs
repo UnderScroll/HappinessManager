@@ -1,4 +1,5 @@
 using UnityEditor;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -8,14 +9,12 @@ public class LevelEditorCustomEditor : Editor
     public VisualTreeAsset XmlInspector;
     private LevelEditor _levelEditor;
 
-    private void OnEnable()
-    {
-        _levelEditor = (LevelEditor)target;
-    }
-
     public override VisualElement CreateInspectorGUI()
     {
+        //Init LevelEditor
         _levelEditor = (LevelEditor)target;
+        if (_levelEditor.Level == null)
+            _levelEditor.Level = CreateInstance<LevelLoader.Level>();
 
         //Create inspector from uxml
         VisualElement inspectorRoot = new();
@@ -35,79 +34,100 @@ public class LevelEditorCustomEditor : Editor
 
         //Restrict Structure size to be [0..INT_MAX] &
         //Restrict CellPosition to be [0..StructureSize] on Structure ChangeEvent
-        structureSizeX.RegisterCallback<ChangeEvent<int>>((evt) =>
+        structureSizeX.RegisterValueChangedCallback((evt) =>
         {
             //Debug.Log("structureSizeX.RegisterCallback<ChangeEvent<int>>");
             structureSizeX.value = evt.newValue > 1 ? evt.newValue : 1;
             if (currentCellPosX.value > (structureSizeX.value - 1))
                 currentCellPosX.value = structureSizeX.value - 1;
         });
-        structureSizeY.RegisterCallback<ChangeEvent<int>>((evt) =>
+        structureSizeY.RegisterValueChangedCallback((evt) =>
         {
             structureSizeY.value = evt.newValue > 1 ? evt.newValue : 1;
             if (currentCellPosY.value > (structureSizeY.value - 1))
                 currentCellPosY.value = structureSizeY.value - 1;
         });
-        structureSizeZ.RegisterCallback<ChangeEvent<int>>((evt) =>
+        structureSizeZ.RegisterValueChangedCallback((evt) =>
         {
             structureSizeZ.value = evt.newValue > 1 ? evt.newValue : 1;
             if (currentCellPosZ.value > (structureSizeZ.value - 1))
                 currentCellPosZ.value = structureSizeZ.value - 1;
         });
 
-        //Restrict CellPosition to be [0..StructureSize] on CurrentCell ChangeEvent
-        currentCellPosX.RegisterCallback<ChangeEvent<int>>((evt) =>
+        //Restrict CellPosition to be [0..StructureSize] on CurrentCell ChangeEvent//
+        currentCellPosX.RegisterValueChangedCallback((evt) =>
         {
+            Transform previewTransform = _levelEditor.CurrentCellPreviewInstance.transform;
+
+            int newValueRestricted = 0;
             if (evt.newValue < 0)
-                currentCellPosX.value = 0;
+                newValueRestricted = 0;
             else if (evt.newValue > (structureSizeX.value - 1))
-                currentCellPosX.value = structureSizeX.value - 1;
+                newValueRestricted = structureSizeX.value - 1;
             else
-                currentCellPosX.value = evt.newValue;
+                newValueRestricted = evt.newValue;
+
+            currentCellPosX.value = newValueRestricted;
+            previewTransform.position = new Vector3(newValueRestricted, previewTransform.position.y, previewTransform.position.z);
         });
-        currentCellPosY.RegisterCallback<ChangeEvent<int>>((evt) =>
+        currentCellPosY.RegisterValueChangedCallback((evt) =>
         {
+            Transform previewTransform = _levelEditor.CurrentCellPreviewInstance.transform;
+
+            int newValueRestricted = 0;
             if (evt.newValue < 0)
-                currentCellPosY.value = 0;
+                newValueRestricted = 0;
             else if (evt.newValue > (structureSizeY.value - 1))
-                currentCellPosY.value = structureSizeY.value - 1;
+                newValueRestricted = structureSizeY.value - 1;
             else
-                currentCellPosY.value = evt.newValue;
+                newValueRestricted = evt.newValue;
+
+            currentCellPosY.value = newValueRestricted;
+            previewTransform.position = new Vector3(previewTransform.position.x, newValueRestricted, previewTransform.position.z);
         });
-        currentCellPosZ.RegisterCallback<ChangeEvent<int>>((evt) =>
+        currentCellPosZ.RegisterValueChangedCallback((evt) =>
         {
+            Transform previewTransform = _levelEditor.CurrentCellPreviewInstance.transform;
+
+            int newValueRestricted = 0;
             if (evt.newValue < 0)
-                currentCellPosZ.value = 0;
+                newValueRestricted = 0;
             else if (evt.newValue > (structureSizeZ.value - 1))
-                currentCellPosZ.value = structureSizeZ.value - 1;
+                newValueRestricted = structureSizeZ.value - 1;
             else
-                currentCellPosZ.value = evt.newValue;
+                newValueRestricted = evt.newValue;
+
+            currentCellPosZ.value = newValueRestricted;
+            previewTransform.position = new Vector3(previewTransform.position.x, previewTransform.position.y, newValueRestricted);
+
         });
 
-        //Button Callback Bindings
+        //Get custom Controller
         VisualElement customController = inspectorRoot.Query("CustomController");
-        //North
-        Button northButton = customController.Query<Button>("North");
+
+        //Control Button Callback Bindings
+        Button northButton = customController.Query<Button>("North");       //North
         northButton.clickable.clicked += _levelEditor.OnNorthButtonClicked;
-        //East
-        Button eastButton = customController.Query<Button>("East");
+        Button eastButton = customController.Query<Button>("East");         //East
         eastButton.clickable.clicked += _levelEditor.OnEastButtonClicked;
-        //South
-        Button southButton = customController.Query<Button>("South");
+        Button southButton = customController.Query<Button>("South");       //South
         southButton.clickable.clicked += _levelEditor.OnSouthButtonClicked;
-        //West
-        Button westButton = customController.Query<Button>("West");
+        Button westButton = customController.Query<Button>("West");         //West
         westButton.clickable.clicked += _levelEditor.OnWestButtonClicked;
-        //Up
-        Button upButton = customController.Query<Button>("Up");
+        Button upButton = customController.Query<Button>("Up");             //Up
         upButton.clickable.clicked += _levelEditor.OnUpButtonClicked;
-        //Down
-        Button downButton = customController.Query<Button>("Down");
+        Button downButton = customController.Query<Button>("Down");         //Down
         downButton.clickable.clicked += _levelEditor.OnDownButtonClicked;
 
-        //Debug.Log("Finished Building Custom Editor");
+        //Block Placement Preview
+        ObjectField blockSelectionField = customController.Query<ObjectField>("CurrentSelectedBlock");
+        blockSelectionField.RegisterValueChangedCallback((evt) =>
+        {
+            _levelEditor.CurrentSelectedBlock = (CellType)evt.newValue;
+            _levelEditor.OnSelectedBlockChanged();
+        });
 
-        // Return the finished Inspector UI.
+        //// Return the finished Inspector UI.
         return inspectorRoot;
     }
 }

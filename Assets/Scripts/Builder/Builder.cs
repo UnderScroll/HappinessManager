@@ -12,7 +12,7 @@ namespace Builder
     {
         public Structure Structure;
         public CellTypes CellTypes;
-        public CellTypes PlacableCellTypes;
+        public CellTypes PlaceableCellTypes;
         private List<CellData> _placeableBlocks;
         private CellData _selectedBlock;
 
@@ -38,7 +38,7 @@ namespace Builder
         {
             //Initialise the list of placeableBlocks
             _placeableBlocks = new List<CellData>();
-            foreach (CellType cType in PlacableCellTypes.Get())
+            foreach (CellType cType in PlaceableCellTypes.Get())
                 _placeableBlocks.Add((CellData)cType);
 
             //Initialize the previewer
@@ -53,7 +53,7 @@ namespace Builder
         void PlaceBlock(CellData data, int3 position)
         {
             Structure.Cells[position.x, position.y, position.z] = data;
-            data.position = position;
+            data.Position = position;
 
             UpdateCell(position);
         }
@@ -101,7 +101,7 @@ namespace Builder
                 if (!cellData.Type.HasConnection((CellData.Face)i))
                     continue;
 
-                int3 neighborPosition = _neighborDeltaPositions[i] + cellData.position;
+                int3 neighborPosition = _neighborDeltaPositions[i] + cellData.Position;
                 if (!IsInBounds(neighborPosition))
                     continue;
 

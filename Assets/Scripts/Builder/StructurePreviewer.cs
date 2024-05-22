@@ -29,7 +29,7 @@ namespace Builder
                 if (cell == null)
                     continue;
 
-                UpdateCell(cell.position);
+                UpdateCell(cell.Position);
             }
         }
 

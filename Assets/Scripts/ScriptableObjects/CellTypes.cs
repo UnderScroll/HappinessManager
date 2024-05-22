@@ -8,7 +8,6 @@ public class CellTypes : ScriptableObject
     private List<CellType> _types;
     private Dictionary<string, CellType> _dictType;
 
-
     public List<CellType> Get() => _types;
     public CellType Get(string key) => GetDictionary().TryGetValue(key, out CellType cellType) ? cellType : null;
 
