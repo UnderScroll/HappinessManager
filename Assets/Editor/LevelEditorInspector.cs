@@ -15,6 +15,8 @@ public class LevelEditorCustomEditor : Editor
 
     public override VisualElement CreateInspectorGUI()
     {
+        _levelEditor = (LevelEditor)target;
+
         //Create inspector from uxml
         VisualElement inspectorRoot = new();
         XmlInspector.CloneTree(inspectorRoot);
@@ -63,7 +65,7 @@ public class LevelEditorCustomEditor : Editor
             else
                 currentCellPosX.value = evt.newValue;
         });
-        currentCellPosX.RegisterCallback<ChangeEvent<int>>((evt) =>
+        currentCellPosY.RegisterCallback<ChangeEvent<int>>((evt) =>
         {
             if (evt.newValue < 0)
                 currentCellPosY.value = 0;
@@ -72,7 +74,7 @@ public class LevelEditorCustomEditor : Editor
             else
                 currentCellPosY.value = evt.newValue;
         });
-        currentCellPosX.RegisterCallback<ChangeEvent<int>>((evt) =>
+        currentCellPosZ.RegisterCallback<ChangeEvent<int>>((evt) =>
         {
             if (evt.newValue < 0)
                 currentCellPosZ.value = 0;
@@ -81,6 +83,29 @@ public class LevelEditorCustomEditor : Editor
             else
                 currentCellPosZ.value = evt.newValue;
         });
+
+        //Button Callback Bindings
+        VisualElement customController = inspectorRoot.Query("CustomController");
+        //North
+        Button northButton = customController.Query<Button>("North");
+        northButton.clickable.clicked += _levelEditor.OnNorthButtonClicked;
+        //East
+        Button eastButton = customController.Query<Button>("East");
+        eastButton.clickable.clicked += _levelEditor.OnEastButtonClicked;
+        //South
+        Button southButton = customController.Query<Button>("South");
+        southButton.clickable.clicked += _levelEditor.OnSouthButtonClicked;
+        //West
+        Button westButton = customController.Query<Button>("West");
+        westButton.clickable.clicked += _levelEditor.OnWestButtonClicked;
+        //Up
+        Button upButton = customController.Query<Button>("Up");
+        upButton.clickable.clicked += _levelEditor.OnUpButtonClicked;
+        //Down
+        Button downButton = customController.Query<Button>("Down");
+        downButton.clickable.clicked += _levelEditor.OnDownButtonClicked;
+
+        //Debug.Log("Finished Building Custom Editor");
 
         // Return the finished Inspector UI.
         return inspectorRoot;

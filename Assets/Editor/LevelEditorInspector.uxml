@@ -1,4 +1,10 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:IMGUIContainer name="Level" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 2px; border-left-width: 0; border-left-color: rgb(70, 70, 70); border-right-color: rgb(70, 70, 70); border-top-color: rgb(70, 70, 70); border-bottom-color: rgb(70, 70, 70); margin-top: 2px; margin-right: 4px; margin-bottom: 0; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px;">
+        <ui:Label tabindex="-1" text="Level" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Level" style="-unity-font-style: bold;" />
+        <uie:ObjectField name="Level" type="LevelLoader.Level, Assembly-CSharp" style="flex-direction: column; padding-top: 2px; padding-right: 4px; padding-bottom: 2px; padding-left: 4px;">
+            <ui:ListView binding-path="PlaceableBlocks" fixed-item-height="22" virtualization-method="DynamicHeight" show-border="true" reorderable="true" horizontal-scrolling="true" show-foldout-header="true" header-title="Placeable Blocks" show-add-remove-footer="true" show-alternating-row-backgrounds="All" name="PlaceableBlocks" />
+        </uie:ObjectField>
+    </ui:IMGUIContainer>
     <ui:IMGUIContainer name="Structure" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 2px; border-left-width: 0; border-left-color: rgb(70, 70, 70); border-right-color: rgb(70, 70, 70); border-top-color: rgb(70, 70, 70); border-bottom-color: rgb(70, 70, 70); margin-top: 2px; margin-right: 4px; margin-bottom: 0; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px;">
         <ui:Label tabindex="-1" text="Structure" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Structure" style="-unity-font-style: bold;" />
         <ui:Vector3IntField label="Size" name="Size" binding-path="StructureSize" />
@@ -6,5 +12,27 @@
     <ui:IMGUIContainer name="CurrentCell" style="margin-top: 2px; margin-right: 4px; margin-bottom: 2px; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 2px; padding-left: 4px;">
         <ui:Label tabindex="-1" text="Current Cell" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Structure" style="-unity-font-style: bold;" />
         <ui:Vector3IntField label="Position" name="Position" binding-path="CurrentCellPosition" />
+        <ui:IMGUIContainer name="CustomController" style="margin-top: 8px; margin-right: 4px; margin-bottom: 2px; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 8px; padding-left: 4px; border-left-color: rgb(70, 70, 70); border-right-color: rgb(70, 70, 70); border-top-color: rgb(70, 70, 70); border-bottom-color: rgb(70, 70, 70); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; align-items: center; align-self: center;">
+            <ui:IMGUIContainer name="CustomControllerDirection" style="flex-direction: row; justify-content: flex-start; margin-top: 2px; margin-right: 4px; margin-bottom: 2px; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 2px; padding-left: 4px; align-items: flex-end; align-self: auto; flex-shrink: 0;">
+                <ui:IMGUIContainer name="West" style="flex-direction: column-reverse;">
+                    <ui:Button text="W" parse-escape-sequences="true" display-tooltip-when-elided="true" name="West" enable-rich-text="true" style="width: 50px; height: 50px; flex-direction: column;" />
+                </ui:IMGUIContainer>
+                <ui:IMGUIContainer name="NorthSouth" style="flex-direction: column; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+                    <ui:Button text="N" parse-escape-sequences="true" display-tooltip-when-elided="true" name="North" style="-unity-text-align: middle-center; width: 50px; height: 50px; flex-direction: column; margin-bottom: 5px;" />
+                    <ui:Button text="S" parse-escape-sequences="true" display-tooltip-when-elided="true" name="South" style="width: 50px; height: 50px;" />
+                </ui:IMGUIContainer>
+                <ui:IMGUIContainer name="East" style="flex-direction: column-reverse;">
+                    <ui:Button text="E" parse-escape-sequences="true" display-tooltip-when-elided="true" name="East" style="flex-direction: row; width: 50px; height: 50px;" />
+                </ui:IMGUIContainer>
+                <ui:IMGUIContainer name="UpDown" style="margin-right: 5px; margin-left: 5px;">
+                    <ui:Button text="U" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Up" style="width: 50px; height: 50px; margin-bottom: 4px;" />
+                    <ui:Button text="D" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Down" focusable="true" style="width: 50px; height: 50px;" />
+                </ui:IMGUIContainer>
+            </ui:IMGUIContainer>
+            <ui:IMGUIContainer name="CustomControllerSelection" style="flex-direction: row; justify-content: center; margin-top: 2px; margin-right: 4px; margin-bottom: 2px; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 2px; padding-left: 4px;">
+                <uie:ObjectField type="CellType, Assembly-CSharp" binding-path="CurrentSelectedBlock" name="CurrentSelectedBlock" />
+            </ui:IMGUIContainer>
+        </ui:IMGUIContainer>
+        <uie:EnumFlagsField label="Draw Alignement Lines" type="UnityEngine.UIElements.UsageHints, UnityEngine.UIElementsModule" value="DynamicTransform" binding-path="alignementLines" />
     </ui:IMGUIContainer>
 </ui:UXML>
