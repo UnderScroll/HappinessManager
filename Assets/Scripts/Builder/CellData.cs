@@ -1,9 +1,13 @@
+using System;
 using Unity.Mathematics;
+using UnityEngine;
 
 namespace Builder
 {
+    [Serializable]
     public class CellData
     {
+        [SerializeReference]
         public CellType Type;
         public int3 Position;
         private ConnectionType[] _connections = new ConnectionType[6];

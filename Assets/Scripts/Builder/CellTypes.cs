@@ -1,15 +1,36 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "CellTypes", menuName = "Structure/CellTypes")]
-public class CellTypes : ScriptableObject
+[Serializable]
+public class CellTypes
 {
     [SerializeField]
     private List<CellType> _types;
     private Dictionary<string, CellType> _dictType;
 
+    public CellTypes() => _types = new();
+
     public List<CellType> Get() => _types;
-    public CellType Get(string key) => GetDictionary().TryGetValue(key, out CellType cellType) ? cellType : null;
+
+    public CellType this[int index]
+    {
+        get { return _types[index]; }
+        set {
+            GetDictionary().Remove(_types[index].Name);
+            _types[index] = value;
+            GetDictionary().Add(_types[index].Name, value);
+        }
+    }
+    public CellType this[string key]
+    {
+        get { return GetDictionary()[key]; }
+        set
+        {
+            GetDictionary().Add(value.Name, value);
+            _types.Add(value);
+        }
+    }
 
     private Dictionary<string, CellType> GetDictionary()
     {

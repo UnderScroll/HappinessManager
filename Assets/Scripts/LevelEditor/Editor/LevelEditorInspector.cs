@@ -1,3 +1,4 @@
+using LevelLoader;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -13,18 +14,34 @@ public class LevelEditorCustomEditor : Editor
     {
         //Init LevelEditor
         _levelEditor = (LevelEditor)target;
-        if (_levelEditor.Level == null)
-            _levelEditor.Level = CreateInstance<LevelLoader.Level>();
 
         //Create inspector from uxml
         VisualElement inspectorRoot = new();
         XmlInspector.CloneTree(inspectorRoot);
 
-        //Get Structure size IntegerFields
-        VisualElement structureContainer = inspectorRoot.Query<IMGUIContainer>("Structure");
-        IntegerField structureSizeX = structureContainer.Query<IntegerField>("unity-x-input");
-        IntegerField structureSizeY = structureContainer.Query<IntegerField>("unity-y-input");
-        IntegerField structureSizeZ = structureContainer.Query<IntegerField>("unity-z-input");
+        //Get Level size IntegerFields
+        VisualElement levelContainer = inspectorRoot.Query<IMGUIContainer>("Level");
+        IntegerField structureSizeX = levelContainer.Query<IntegerField>("unity-x-input");
+        IntegerField structureSizeY = levelContainer.Query<IntegerField>("unity-y-input");
+        IntegerField structureSizeZ = levelContainer.Query<IntegerField>("unity-z-input");
+
+        //LevelSelection Bindings
+        ObjectField levelSelectionField = levelContainer.Query<ObjectField>("Level");
+        Label levelSelectionStatusLable = levelContainer.Query<Label>("LevelSelectionStatus");
+        levelSelectionField.RegisterValueChangedCallback((evt) =>
+        {
+            if (evt.newValue == null) {
+                levelSelectionStatusLable.text = "No level Selected";
+                _levelEditor.UnloadLevel();
+                return;
+            }
+            
+            levelSelectionStatusLable.text = "";
+            _levelEditor.Level = (Level)evt.newValue;
+            _levelEditor.OnLevelChanged();
+        });
+        if (_levelEditor.Level == null)
+            levelSelectionStatusLable.text = "No level Selected";
 
         //Get CurrentCell position IntegerFields
         VisualElement currentCellContainer = inspectorRoot.Query<IMGUIContainer>("CurrentCell");
@@ -119,13 +136,20 @@ public class LevelEditorCustomEditor : Editor
         Button downButton = customController.Query<Button>("Down");         //Down
         downButton.clickable.clicked += _levelEditor.OnDownButtonClicked;
 
-        //Block Placement Preview
+        //Current Block Preview
         ObjectField blockSelectionField = customController.Query<ObjectField>("CurrentSelectedBlock");
         blockSelectionField.RegisterValueChangedCallback((evt) =>
         {
             _levelEditor.CurrentSelectedBlock = (CellType)evt.newValue;
             _levelEditor.OnSelectedBlockChanged();
         });
+
+        //Block Placement Callback bindings
+        Button placeButton = customController.Query<Button>("Place"); //Place
+        placeButton.clickable.clicked += _levelEditor.OnPlaceBlock;
+
+        Button removeButton = customController.Query<Button>("Remove"); //Remove
+        removeButton.clickable.clicked += _levelEditor.OnRemoveBlock;
 
         //// Return the finished Inspector UI.
         return inspectorRoot;

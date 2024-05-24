@@ -45,7 +45,7 @@ namespace Simulation
         {
             foreach (CellData cellData in _structure.Cells)
             {
-                if (cellData == null) continue;
+                if (cellData == null || cellData.Type == null) continue;
                 if (!cellData.Type.ShouldBeSimulated) continue;
 
                 InstanciateBlock(cellData);
@@ -130,9 +130,9 @@ namespace Simulation
             return position.x >= 0
                 && position.y >= 0
                 && position.z >= 0
-                && position.x < _structure.Cells.GetLength(0)
-                && position.y < _structure.Cells.GetLength(1)
-                && position.z < _structure.Cells.GetLength(2);
+                && position.x < _structure.Size.x
+                && position.y < _structure.Size.y
+                && position.z < _structure.Size.z;
         }
 
         private void AddConnection(GameObject obj, GameObject to, ConnectionType type)

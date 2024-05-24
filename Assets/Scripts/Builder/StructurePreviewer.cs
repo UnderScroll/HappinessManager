@@ -22,9 +22,9 @@ namespace Builder
 
         void InitializePreviewer()
         {
-            _previewBlocks = new PreviewBlock[Structure.Size.x, Structure.Size.y, Structure.Size.z];
+            _previewBlocks = new PreviewBlock[Level.Structure.Size.x, Level.Structure.Size.y, Level.Structure.Size.z];
 
-            foreach (CellData cell in Structure.Cells)
+            foreach (CellData cell in Level.Structure.Cells)
             {
                 if (cell == null)
                     continue;
@@ -55,7 +55,7 @@ namespace Builder
             if (_previewBlocks[position.x, position.y, position.z] != null)
                 Destroy(_previewBlocks[position.x, position.y, position.z].gameObject);
 
-            if (Structure.Cells[position.x, position.y, position.z] == null)
+            if (Level.Structure.Cells[position.x, position.y, position.z] == null)
                 return;
 
             CellType cellType = GetCellType(position);
@@ -71,7 +71,7 @@ namespace Builder
 
         private CellType GetCellType(int3 position)
         {
-            return CellTypes.Get(Structure.Cells[position.x, position.y, position.z].Type.Name);
+            return Level.CellTypes[Level.Structure.Cells[position.x, position.y, position.z].Type.Name];
         }
 
         //(Position of cell pointed, Position of cell to place)

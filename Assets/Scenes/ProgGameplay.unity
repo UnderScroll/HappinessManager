@@ -379,6 +379,11 @@ MonoBehaviour:
   Builder: {fileID: 0}
   Simulator: {fileID: 0}
   LevelLoader: {fileID: 0}
+  cellTypes:
+  - {fileID: 11400000, guid: 26323928fecd21440bbf81af0abd1f74, type: 2}
+  - {fileID: 11400000, guid: bd77142b1d33bbc489551a002b5e5de2, type: 2}
+  - {fileID: 11400000, guid: c605ce3339acc0848ad3b079d2702916, type: 2}
+  - {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
 --- !u!114 &737254369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,8 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ae534817ce5174fb6ddda93a3ad4ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CellTypes: {fileID: 11400000, guid: d7622a1eb40cbe7418f550b0e59139d3, type: 2}
-  PlacableCellTypes: {fileID: 11400000, guid: 07b56dcdd7374c9428c442cb2f520eae, type: 2}
+  Level: {fileID: 0}
 --- !u!114 &737254370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,8 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Levels:
-  - {fileID: 11400000, guid: cb9ee146b4731894c8fcfceeb2e81076, type: 2}
-  - {fileID: 11400000, guid: d18f8c721d9a7c04ab36ce3ed1be0742, type: 2}
+  - {fileID: 11400000, guid: 6843bcbbff9ee954793fc9b0ce2fce31, type: 2}
 --- !u!1 &1052361899
 GameObject:
   m_ObjectHideFlags: 0

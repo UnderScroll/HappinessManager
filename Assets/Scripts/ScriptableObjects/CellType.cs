@@ -2,6 +2,7 @@ using Builder;
 using System;
 using UnityEngine;
 
+[Serializable]
 [CreateAssetMenu(fileName = "CellType", menuName = "Structure/CellType")]
 public class CellType : ScriptableObject
 {

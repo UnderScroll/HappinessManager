@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 
+[Serializable]
 [CreateAssetMenu(fileName = "ConnectionType", menuName = "Structure/ConnectionType")]
 public class ConnectionType : ScriptableObject
 {

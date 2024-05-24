@@ -2,18 +2,15 @@ using UnityEngine;
 using Unity.Mathematics;
 using UnityEngine.InputSystem;
 using UnityEngine.Assertions;
-using System.Collections.Generic;
 using System;
-using UnityEngine.PlayerLoop;
+using LevelLoader;
 
 namespace Builder
 {
     public partial class Builder : MonoBehaviour
     {
-        public Structure Structure;
-        public CellTypes CellTypes;
-        public CellTypes PlaceableCellTypes;
-        private List<CellData> _placeableBlocks;
+        [HideInInspector]
+        public Level Level;
         private CellData _selectedBlock;
 
         private (Option<int3> pointedCell, Option<int3> cellToPlace) _pointed;
@@ -29,18 +26,8 @@ namespace Builder
 
         private readonly int[] _inverseFaceOrder = { 2, 3, 0, 1, 5, 4 };
 
-        private void Start()
-        {
-            //Initialize();
-        }
-
         public void Initialize()
         {
-            //Initialise the list of placeableBlocks
-            _placeableBlocks = new List<CellData>();
-            foreach (CellType cType in PlaceableCellTypes.Get())
-                _placeableBlocks.Add((CellData)cType);
-
             //Initialize the previewer
             InitializePreviewer();
 
@@ -52,7 +39,7 @@ namespace Builder
 
         void PlaceBlock(CellData data, int3 position)
         {
-            Structure.Cells[position.x, position.y, position.z] = data;
+            Level.Structure.Cells[position.x, position.y, position.z] = data;
             data.Position = position;
 
             UpdateCell(position);
@@ -60,11 +47,11 @@ namespace Builder
 
         void RemoveBlock(int3 position)
         {
-            CellData cell = Structure.Cells[position.x, position.y, position.z];
+            CellData cell = Level.Structure.Cells[position.x, position.y, position.z];
 
             if (cell.Type.Removable)
             {
-                Structure.Cells[position.x, position.y, position.z] = null;
+                Level.Structure.Cells[position.x, position.y, position.z] = null;
 
                 UpdateCell(position);
             }
@@ -84,9 +71,9 @@ namespace Builder
             return position.x >= 0
                 && position.y >= 0
                 && position.z >= 0
-                && position.x < Structure.Cells.GetLength(0)
-                && position.y < Structure.Cells.GetLength(1)
-                && position.z < Structure.Cells.GetLength(2);
+                && position.x < Level.Structure.Cells.GetLength(0)
+                && position.y < Level.Structure.Cells.GetLength(1)
+                && position.z < Level.Structure.Cells.GetLength(2);
         }
 
         private void UpdateConnection(CellData cellData)
@@ -105,7 +92,7 @@ namespace Builder
                 if (!IsInBounds(neighborPosition))
                     continue;
 
-                CellData neighborCellData = Structure.Cells[neighborPosition.x, neighborPosition.y, neighborPosition.z];
+                CellData neighborCellData = Level.Structure.Cells[neighborPosition.x, neighborPosition.y, neighborPosition.z];
                 if (neighborCellData == null)
                     continue;
 
@@ -126,7 +113,7 @@ namespace Builder
         {
             Assert.IsTrue(IsInBounds(position));
 
-            CellData cellData = Structure.Cells[position.x, position.y, position.z];
+            CellData cellData = Level.Structure.Cells[position.x, position.y, position.z];
 
             if (cellData != null)
             {
@@ -140,7 +127,7 @@ namespace Builder
                 if (!IsInBounds(neighborPosition))
                     continue;
 
-                CellData neighborCellData = Structure.Cells[neighborPosition.x, neighborPosition.y, neighborPosition.z];
+                CellData neighborCellData = Level.Structure.Cells[neighborPosition.x, neighborPosition.y, neighborPosition.z];
                 if (neighborCellData == null)
                     continue;
 
@@ -153,7 +140,7 @@ namespace Builder
             if (!_pointed.cellToPlace.IsSome(out int3 positionToPlace))
                 return;
 
-            if (Structure.Cells[positionToPlace.x, positionToPlace.y, positionToPlace.z] != null)
+            if (Level.Structure.Cells[positionToPlace.x, positionToPlace.y, positionToPlace.z] != null)
                 return;
 
             PlaceBlock(_selectedBlock.Clone(), positionToPlace);
@@ -181,28 +168,8 @@ namespace Builder
 
         private void SelectBlock(uint index)
         {
-            if (index < _placeableBlocks.Count)
-                _selectedBlock = _placeableBlocks[(int)index];
-        }
-
-        //FIXME: Temporary function - This should call the level loader
-        void Init()
-        {
-            Structure = new Structure(new int3(10, 10, 10));
-
-            InitializePreviewer();
-
-            for (uint x = 0; x < Structure.Cells.GetLength(0); x++)
-                for (uint z = 0; z < Structure.Cells.GetLength(2); z++)
-                    PlaceBlock((CellData)CellTypes.Get("InvisibleBlock"), new int3((int)x, 0, (int)z));
-
-            PlaceBlock((CellData)CellTypes.Get("EmployeeBlock"), new int3(6, 8, 5));
-
-            PlaceBlock((CellData)CellTypes.Get("EmployeeBlock"), new int3(1, 8, 4));
-
-            SelectBlock(0);
-
-            PlaceBlock(_selectedBlock, new int3(2, 0, 2));
+            if (index < Level.PlaceableCellTypes.Get().Count)
+                _selectedBlock = (CellData)Level.PlaceableCellTypes[(int)index];
         }
     }
 }

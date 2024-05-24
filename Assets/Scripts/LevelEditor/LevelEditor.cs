@@ -1,29 +1,37 @@
+using Builder;
 using LevelLoader;
 using System;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEditor;
 using UnityEngine;
 
 
 public partial class LevelEditor : MonoBehaviour
 {
-    public Vector3Int CurrentCellPosition;
-    public Vector3Int StructureSize;
-    public List<CellType> PlaceableBlocks;
-    public CellType CurrentSelectedBlock;
-    public string levelName;
-    public AlignementLines alignementLines;
-
-    public Level Level;
-
-    public GameObject CurrentCellPreviewInstance;
-
     [Flags]
     public enum AlignementLines
     {
         XAxis = 1 << 0,
         YAxis = 1 << 2,
         ZAxis = 1 << 3,
+    }
+
+    ///Custom Editor Bindings///
+    public Vector3Int CurrentCellPosition;
+    public Vector3Int StructureSize;
+    public List<CellType> PlaceableBlocks;
+    public CellType CurrentSelectedBlock;
+    public AlignementLines alignementLines;
+    public Level Level;
+    ////////////////////////////
+
+    public GameObject CurrentCellPreviewInstance;
+
+
+    public void Awake()
+    {
+        GetComponentInChildren<Transform>();
     }
 
     public void OnDrawGizmos()
@@ -59,6 +67,27 @@ public partial class LevelEditor : MonoBehaviour
             Gizmos.DrawLine(beginXD, endXD);
         }
 
+        //Z Axis
+        if (alignementLines.HasFlag(AlignementLines.ZAxis))
+        {
+            Gizmos.color = new Color(0, 0, 1);
+            Vector3 beginZA = new(CurrentCellPosition.x - 0.5f, CurrentCellPosition.y - 0.5f, -0.5f);
+            Vector3 endZA = new(CurrentCellPosition.x - 0.5f, CurrentCellPosition.y - 0.5f, StructureSize.z - 0.5f);
+            Gizmos.DrawLine(beginZA, endZA);
+
+            Vector3 beginZB = new(CurrentCellPosition.x - 0.5f, CurrentCellPosition.y + 0.5f, -0.5f);
+            Vector3 endZB = new(CurrentCellPosition.x - 0.5f, CurrentCellPosition.y + 0.5f, StructureSize.z - 0.5f);
+            Gizmos.DrawLine(beginZB, endZB);
+
+            Vector3 beginZC = new(CurrentCellPosition.x + 0.5f, CurrentCellPosition.y - 0.5f, -0.5f);
+            Vector3 endZC = new(CurrentCellPosition.x + 0.5f, CurrentCellPosition.y - 0.5f, StructureSize.z - 0.5f);
+            Gizmos.DrawLine(beginZC, endZC);
+
+            Vector3 beginZD = new(CurrentCellPosition.x + 0.5f, CurrentCellPosition.y + 0.5f, -0.5f);
+            Vector3 endZD = new(CurrentCellPosition.x + 0.5f, CurrentCellPosition.y + 0.5f, StructureSize.z - 0.5f);
+            Gizmos.DrawLine(beginZD, endZD);
+        }
+
         //Y Axis
         if (alignementLines.HasFlag(AlignementLines.YAxis))
         {
@@ -78,27 +107,6 @@ public partial class LevelEditor : MonoBehaviour
             Vector3 beginYD = new(CurrentCellPosition.x + 0.5f, -0.5f, CurrentCellPosition.z + 0.5f);
             Vector3 endYD = new(CurrentCellPosition.x + 0.5f, StructureSize.y - 0.5f, CurrentCellPosition.z + 0.5f);
             Gizmos.DrawLine(beginYD, endYD);
-        }
-
-        //Y Axis
-        if (alignementLines.HasFlag(AlignementLines.ZAxis))
-        {
-            Gizmos.color = new Color(0, 0, 1);
-            Vector3 beginZA = new(CurrentCellPosition.x - 0.5f, CurrentCellPosition.y - 0.5f, -0.5f);
-            Vector3 endZA = new(CurrentCellPosition.x - 0.5f, CurrentCellPosition.y - 0.5f, StructureSize.z - 0.5f);
-            Gizmos.DrawLine(beginZA, endZA);
-
-            Vector3 beginZB = new(CurrentCellPosition.x - 0.5f, CurrentCellPosition.y + 0.5f, -0.5f);
-            Vector3 endZB = new(CurrentCellPosition.x - 0.5f, CurrentCellPosition.y + 0.5f, StructureSize.z - 0.5f);
-            Gizmos.DrawLine(beginZB, endZB);
-
-            Vector3 beginZC = new(CurrentCellPosition.x + 0.5f, CurrentCellPosition.y - 0.5f, -0.5f);
-            Vector3 endZC = new(CurrentCellPosition.x + 0.5f, CurrentCellPosition.y - 0.5f, StructureSize.z - 0.5f);
-            Gizmos.DrawLine(beginZC, endZC);
-
-            Vector3 beginZD = new(CurrentCellPosition.x + 0.5f, CurrentCellPosition.y + 0.5f, -0.5f);
-            Vector3 endZD = new(CurrentCellPosition.x + 0.5f, CurrentCellPosition.y + 0.5f, StructureSize.z - 0.5f);
-            Gizmos.DrawLine(beginZD, endZD);
         }
     }
 
@@ -177,18 +185,48 @@ public partial class LevelEditor : MonoBehaviour
         CurrentCellPreviewInstance.transform.position = CurrentCellPosition;
     }
 
-    public void OnLevelChanged(Level newLevel)
+    public void OnLevelChanged()
     {
-        Load(newLevel);
+        if (Level == null)
+        {
+            Debug.LogWarning("Trying to load a null Level, creating a new one instead");
+        }
+        else
+        {
+            Debug.Log($"Loading {Level.name} for edition");
+            UnloadLevel();
+            LoadLevel();
+        }
+    }
+
+    public void UnloadLevel()
+    {
+        Reset();
+        StructureSize = new(1, 1, 1);
+        CurrentCellPosition = new(0, 0, 0);
+        OnCurrenCellPositionChanged();
+        PlaceableBlocks = new();
+    }
+
+    public void LoadLevel()
+    {
+        StructureSize = new(Level.Structure.Size.x, Level.Structure.Size.y, Level.Structure.Size.z);
+        CurrentCellPosition = new(0, 0, 0);
+        OnCurrenCellPositionChanged();
+        PlaceableBlocks = Level.PlaceableCellTypes.Get();
+        Initialize();
     }
 
     public void OnPlaceBlock()
     {
-
+        int3 cellPosition = new(CurrentCellPosition.x, CurrentCellPosition.y, CurrentCellPosition.z);
+        Level.Structure.Cells[cellPosition.x, cellPosition.y, cellPosition.z] = new CellData(CurrentSelectedBlock) { Position = cellPosition };
+        UpdateCell(cellPosition);
     }
 
     public void OnRemoveBlock()
     {
-
+        Level.Structure.Cells[CurrentCellPosition.x, CurrentCellPosition.y, CurrentCellPosition.z] = null;
+        UpdateCell(new int3(CurrentCellPosition.x, CurrentCellPosition.y, CurrentCellPosition.z));
     }
 }

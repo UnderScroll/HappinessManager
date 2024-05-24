@@ -1,12 +1,12 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
     <ui:IMGUIContainer name="Level" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 2px; border-left-width: 0; border-left-color: rgb(70, 70, 70); border-right-color: rgb(70, 70, 70); border-top-color: rgb(70, 70, 70); border-bottom-color: rgb(70, 70, 70); margin-top: 2px; margin-right: 4px; margin-bottom: 0; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px;">
         <ui:Label tabindex="-1" text="Level" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" style="-unity-font-style: bold;" />
-        <ui:TextField picking-mode="Ignore" label="Name" value="&lt;Enter a name here&gt;" name="Name" binding-path="levelName" />
-        <ui:ListView binding-path="PlaceableBlocks" fixed-item-height="22" virtualization-method="DynamicHeight" show-border="true" reorderable="true" horizontal-scrolling="true" show-foldout-header="true" header-title="Placeable Blocks" show-add-remove-footer="true" show-alternating-row-backgrounds="All" name="PlaceableBlocks" reorder-mode="Animated" />
-    </ui:IMGUIContainer>
-    <ui:IMGUIContainer name="Structure" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 2px; border-left-width: 0; border-left-color: rgb(70, 70, 70); border-right-color: rgb(70, 70, 70); border-top-color: rgb(70, 70, 70); border-bottom-color: rgb(70, 70, 70); margin-top: 2px; margin-right: 4px; margin-bottom: 0; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px;">
-        <ui:Label tabindex="-1" text="Structure" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" style="-unity-font-style: bold;" />
+        <ui:IMGUIContainer name="LevelSelection" style="flex-direction: row; justify-content: space-between;">
+            <uie:ObjectField label="Level" name="Level" type="LevelLoader.Level, Assembly-CSharp" binding-path="Level" style="flex-direction: row; align-self: stretch; justify-content: space-between; align-items: stretch;" />
+            <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LevelSelectionStatus" style="color: rgb(255, 0, 0); -unity-font-style: bold;" />
+        </ui:IMGUIContainer>
         <ui:Vector3IntField label="Size" name="Size" binding-path="StructureSize" />
+        <ui:ListView binding-path="PlaceableBlocks" fixed-item-height="22" virtualization-method="DynamicHeight" show-border="true" reorderable="true" horizontal-scrolling="true" show-foldout-header="true" header-title="Placeable Blocks" show-add-remove-footer="true" show-alternating-row-backgrounds="All" name="PlaceableBlocks" reorder-mode="Animated" />
     </ui:IMGUIContainer>
     <ui:IMGUIContainer name="CurrentCell" style="margin-top: 2px; margin-right: 4px; margin-bottom: 0; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; border-bottom-width: 2px; border-left-color: rgb(70, 70, 70); border-right-color: rgb(70, 70, 70); border-top-color: rgb(70, 70, 70); border-bottom-color: rgb(70, 70, 70);">
         <ui:Label tabindex="-1" text="Current Cell" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" style="-unity-font-style: bold;" />
@@ -37,13 +37,5 @@
             </ui:IMGUIContainer>
         </ui:IMGUIContainer>
         <uie:EnumFlagsField label="Draw Alignement Lines" type="UnityEngine.UIElements.UsageHints, UnityEngine.UIElementsModule" value="None" binding-path="alignementLines" name="AlignementLines" />
-    </ui:IMGUIContainer>
-    <ui:IMGUIContainer name="Persistance">
-        <ui:Label tabindex="-1" text="Persistance&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" style="-unity-font-style: bold;" />
-        <ui:IMGUIContainer name="Load" style="flex-direction: row; justify-content: space-around;">
-            <ui:Button text="Load" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Load" style="width: 49%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
-            <uie:ObjectField name="LevelSelection" style="width: 49%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
-        </ui:IMGUIContainer>
-        <ui:Button text="Save" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Save" />
     </ui:IMGUIContainer>
 </ui:UXML>
