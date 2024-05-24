@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 [Serializable]
 public class CellTypes
@@ -27,8 +28,11 @@ public class CellTypes
         get { return GetDictionary()[key]; }
         set
         {
-            GetDictionary().Add(value.Name, value);
-            _types.Add(value);
+            if (!TryGetValue(value.Name, out var _))
+            {
+                GetDictionary().Add(value.Name, value);
+                _types.Add(value);
+            }
         }
     }
 
@@ -47,4 +51,22 @@ public class CellTypes
 
     public CellType Get(int index)
         => index < _types.Count ? _types[index] : null;
+
+    public bool TryGetValue(string key, out CellType value)
+    {
+        value = null;
+        if (key == null)
+            return false;
+
+        return GetDictionary().TryGetValue(key, out value);
+    }
+
+    public bool Remove(string key)
+    {
+        bool success = _types.Remove(GetDictionary()[key]);
+        if (success)
+            success = GetDictionary().Remove(key);
+        
+        return success;
+    }
 }

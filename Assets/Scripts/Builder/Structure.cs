@@ -10,7 +10,7 @@ namespace Builder
     public class Structure
     {
         public CellDataVolume Cells;
-        public int3 Size {  get => Cells.Size; }
+        public int3 Size { get => Cells.Size; }
 
         public Structure(int3 size)
         {

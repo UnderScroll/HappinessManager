@@ -1,4 +1,5 @@
 using LevelLoader;
+using Unity.Mathematics;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -53,20 +54,25 @@ public class LevelEditorCustomEditor : Editor
         //Restrict CellPosition to be [0..StructureSize] on Structure ChangeEvent
         structureSizeX.RegisterValueChangedCallback((evt) =>
         {
-            //Debug.Log("structureSizeX.RegisterCallback<ChangeEvent<int>>");
             structureSizeX.value = evt.newValue > 1 ? evt.newValue : 1;
+            if (_levelEditor != null)
+                _levelEditor.OnLevelChangedSize(new int3(structureSizeX.value, structureSizeY.value, structureSizeZ.value));
             if (currentCellPosX.value > (structureSizeX.value - 1))
                 currentCellPosX.value = structureSizeX.value - 1;
         });
         structureSizeY.RegisterValueChangedCallback((evt) =>
         {
             structureSizeY.value = evt.newValue > 1 ? evt.newValue : 1;
+            if (_levelEditor != null)
+                _levelEditor.OnLevelChangedSize(new int3(structureSizeX.value, structureSizeY.value, structureSizeZ.value));
             if (currentCellPosY.value > (structureSizeY.value - 1))
                 currentCellPosY.value = structureSizeY.value - 1;
         });
         structureSizeZ.RegisterValueChangedCallback((evt) =>
         {
             structureSizeZ.value = evt.newValue > 1 ? evt.newValue : 1;
+            if (_levelEditor != null)
+                _levelEditor.OnLevelChangedSize(new int3(structureSizeX.value, structureSizeY.value, structureSizeZ.value));
             if (currentCellPosZ.value > (structureSizeZ.value - 1))
                 currentCellPosZ.value = structureSizeZ.value - 1;
         });

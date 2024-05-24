@@ -28,17 +28,14 @@ public partial class LevelEditor : MonoBehaviour
 
     public GameObject CurrentCellPreviewInstance;
 
-
-    public void Awake()
-    {
-        GetComponentInChildren<Transform>();
-    }
-
     public void OnDrawGizmos()
     {
         //Draw CurrentCell
-        Gizmos.color = Color.white;
-        Gizmos.DrawWireMesh(CurrentCellPreviewInstance.GetComponent<MeshFilter>().sharedMesh, CurrentCellPreviewInstance.transform.position, CurrentCellPreviewInstance.transform.rotation, CurrentCellPreviewInstance.transform.localScale);
+        if (CurrentCellPreviewInstance != null)
+        {
+            Gizmos.color = Color.white;
+            Gizmos.DrawWireMesh(CurrentCellPreviewInstance.GetComponent<MeshFilter>().sharedMesh, CurrentCellPreviewInstance.transform.position, CurrentCellPreviewInstance.transform.rotation, CurrentCellPreviewInstance.transform.localScale);
+        }
 
         //Draw alignment lines
         DrawAlignementLines();
@@ -180,7 +177,10 @@ public partial class LevelEditor : MonoBehaviour
         if (CurrentCellPreviewInstance != null)
             DestroyImmediate(CurrentCellPreviewInstance);
 
-        CurrentCellPreviewInstance = Instantiate(CurrentSelectedBlock.Block);
+        if (CurrentSelectedBlock == null)
+            return;
+
+        CurrentCellPreviewInstance = Instantiate(CurrentSelectedBlock.Block, transform);
 
         CurrentCellPreviewInstance.transform.position = CurrentCellPosition;
     }
@@ -217,16 +217,55 @@ public partial class LevelEditor : MonoBehaviour
         Initialize();
     }
 
+    public void OnLevelChangedSize(int3 newSize)
+    {
+        Reset();
+
+        Structure newStructure = new(newSize);
+        foreach (CellData cellData in Level.Structure.Cells)
+        {
+            if (cellData == null)
+                continue;
+
+            if (!(cellData.Position.x < newSize.x &&
+                cellData.Position.y < newSize.y &&
+                cellData.Position.z < newSize.z))
+                continue;
+
+            newStructure.Cells[cellData.Position.x, cellData.Position.y, cellData.Position.z] = cellData;
+        }
+        UnloadLevel();
+
+        Level.Structure = newStructure;
+
+        LoadLevel();
+
+        Initialize();
+    }
+
     public void OnPlaceBlock()
     {
+        if (CurrentSelectedBlock == null)
+            return;
+
         int3 cellPosition = new(CurrentCellPosition.x, CurrentCellPosition.y, CurrentCellPosition.z);
         Level.Structure.Cells[cellPosition.x, cellPosition.y, cellPosition.z] = new CellData(CurrentSelectedBlock) { Position = cellPosition };
         UpdateCell(cellPosition);
+
+        Level.CellTypes[CurrentSelectedBlock.Name] = CurrentSelectedBlock;
     }
 
     public void OnRemoveBlock()
     {
+        if (Level.Structure.Cells[CurrentCellPosition.x, CurrentCellPosition.y, CurrentCellPosition.z] == null)
+            return;
+
+        CellType removedCellType = Level.Structure.Cells[CurrentCellPosition.x, CurrentCellPosition.y, CurrentCellPosition.z].Type;
+
         Level.Structure.Cells[CurrentCellPosition.x, CurrentCellPosition.y, CurrentCellPosition.z] = null;
         UpdateCell(new int3(CurrentCellPosition.x, CurrentCellPosition.y, CurrentCellPosition.z));
+
+        if (Level.CellTypes.TryGetValue(removedCellType.Name, out _))
+            Level.CellTypes.Remove(removedCellType.Name);
     }
 }

@@ -24,7 +24,7 @@ public partial class LevelEditor : MonoBehaviour
             if (cellData == null)
                 continue;
 
-            GameObject blockInstance = Instantiate(cellData.Type.Block);
+            GameObject blockInstance = Instantiate(cellData.Type.Block, transform);
             blockInstance.transform.position = new (cellData.Position.x, cellData.Position.y, cellData.Position.z);
             previewBlocks[cellData.Position.x, cellData.Position.y, cellData.Position.z] = blockInstance;
         }
@@ -48,7 +48,7 @@ public partial class LevelEditor : MonoBehaviour
             return;
         
 
-        GameObject newInstance = Instantiate(newData.Type.Block);
+        GameObject newInstance = Instantiate(newData.Type.Block, transform);
         newInstance.transform.position = CurrentCellPosition;
         previewBlocks[position.x, position.y, position.z] = newInstance;
     }
