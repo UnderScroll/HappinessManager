@@ -261,14 +261,17 @@ public partial class LevelEditor : MonoBehaviour
 
     public void OnPlaceBlock()
     {
-        if (CurrentSelectedBlock == null)
-            return;
-
         PlaceCell(CurrentSelectedBlock, new(CurrentCellPosition.x, CurrentCellPosition.y, CurrentCellPosition.z));
     }
 
     public void PlaceCell(CellType cellType, int3 position)
     {
+        if (cellType == null)
+        {
+            RemoveBlock(new int3(position.x, position.y, position.z));
+            return;
+        }
+
         Level.Structure.Cells[position.x, position.y, position.z] = new CellData(cellType) { Position = position };
         UpdateCell(position);
 
@@ -277,13 +280,18 @@ public partial class LevelEditor : MonoBehaviour
 
     public void OnRemoveBlock()
     {
-        if (Level.Structure.Cells[CurrentCellPosition.x, CurrentCellPosition.y, CurrentCellPosition.z] == null)
+        RemoveBlock(new int3(CurrentCellPosition.x, CurrentCellPosition.y, CurrentCellPosition.z));
+    }
+
+    public void RemoveBlock(int3 position)
+    {
+        if (Level.Structure.Cells[position.x, position.y, position.z] == null)
             return;
 
-        CellType removedCellType = Level.Structure.Cells[CurrentCellPosition.x, CurrentCellPosition.y, CurrentCellPosition.z].Type;
+        CellType removedCellType = Level.Structure.Cells[position.x, position.y, position.z].Type;
 
-        Level.Structure.Cells[CurrentCellPosition.x, CurrentCellPosition.y, CurrentCellPosition.z] = null;
-        UpdateCell(new int3(CurrentCellPosition.x, CurrentCellPosition.y, CurrentCellPosition.z));
+        Level.Structure.Cells[position.x, position.y, position.z] = null;
+        UpdateCell(new int3(position.x, position.y, position.z));
 
         if (Level.CellTypes.TryGetValue(removedCellType.Name, out _))
             Level.CellTypes.Remove(removedCellType.Name);
