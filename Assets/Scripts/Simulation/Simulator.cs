@@ -45,7 +45,7 @@ namespace Simulation
         {
             foreach (CellData cellData in _structure.Cells)
             {
-                if (cellData == null || cellData.Type == null) continue;
+                if (cellData == null) continue;
                 if (!cellData.Type.ShouldBeSimulated) continue;
 
                 InstanciateBlock(cellData);
@@ -94,10 +94,10 @@ namespace Simulation
                 int3 eastBlockPosition = new(cellData.Position.x + 1, cellData.Position.y, cellData.Position.z);
                 if (connectionType != null
                     && IsInBounds(eastBlockPosition)
-                    && cellData.Type.HasConnection(CellData.Face.North))
+                    && cellData.Type.HasConnection(CellData.Face.East))
                 {
                     if (_structure.Cells[eastBlockPosition.x, eastBlockPosition.y, eastBlockPosition.z] != null
-                        && _structure.Cells[eastBlockPosition.x, eastBlockPosition.y, eastBlockPosition.z].Type.HasConnection(CellData.Face.South))
+                        && _structure.Cells[eastBlockPosition.x, eastBlockPosition.y, eastBlockPosition.z].Type.HasConnection(CellData.Face.West))
                     {
                         GameObject eastBlock = _instances[eastBlockPosition.x, eastBlockPosition.y, eastBlockPosition.z];
                         if (eastBlock != null)
@@ -110,10 +110,10 @@ namespace Simulation
                 int3 topBlockPosition = new(cellData.Position.x, cellData.Position.y + 1, cellData.Position.z);
                 if (connectionType != null
                     && IsInBounds(topBlockPosition)
-                    && cellData.Type.HasConnection(CellData.Face.North))
+                    && cellData.Type.HasConnection(CellData.Face.Top))
                 {
                     if (_structure.Cells[topBlockPosition.x, topBlockPosition.y, topBlockPosition.z] != null
-                        && _structure.Cells[topBlockPosition.x, topBlockPosition.y, topBlockPosition.z].Type.HasConnection(CellData.Face.South))
+                        && _structure.Cells[topBlockPosition.x, topBlockPosition.y, topBlockPosition.z].Type.HasConnection(CellData.Face.Bottom))
                     {
                         GameObject topBlock = _instances[topBlockPosition.x, topBlockPosition.y, topBlockPosition.z];
                         if (topBlock != null)

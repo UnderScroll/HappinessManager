@@ -11,6 +11,12 @@ public partial class LevelEditor : MonoBehaviour
     {
         Reset();
 
+        if (Level == null)
+        {
+            Debug.LogError("Trying preview a level but no level is selected");
+            return;
+        }
+
         if (Level.Structure == null)
         {
             Debug.LogError("Trying preview a level with null structure");
