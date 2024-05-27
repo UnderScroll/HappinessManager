@@ -59,8 +59,6 @@ namespace Simulation
             Rigidbody instanceRb = instance.AddComponent<Rigidbody>();
             instanceRb.mass = cellData.Type.Mass;
 
-            instance.AddComponent<BoxCollider>();
-
             instance.transform.Translate(new Vector3(cellData.Position.x, cellData.Position.y, cellData.Position.z));
             _instances[cellData.Position.x, cellData.Position.y, cellData.Position.z] = instance;
 
