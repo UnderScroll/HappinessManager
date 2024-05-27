@@ -268,4 +268,35 @@ public partial class LevelEditor : MonoBehaviour
         if (Level.CellTypes.TryGetValue(removedCellType.Name, out _))
             Level.CellTypes.Remove(removedCellType.Name);
     }
+
+    public void UpdateCellTypeList()
+    {
+        if (Level == null)
+            return;
+
+        Level.CellTypes = new CellTypes();
+        foreach (CellType cellType in PlaceableBlocks)
+        {
+            if (cellType == null) continue;
+
+            Level.CellTypes[cellType.Name] = cellType;
+        }
+
+        if (Level.Structure == null)
+            return;
+        foreach (CellData cellData in Level.Structure.Cells)
+        {
+            if (cellData == null) continue;
+
+            Level.CellTypes[cellData.Type.Name] = cellData.Type;
+        }
+    }
+
+    public void OnRefreshButtonClicked()
+    {
+        Debug.Log($"Refreshing level {Level.name}");
+        UpdateCellTypeList();
+        UnloadLevel();
+        LoadLevel();
+    }
 }

@@ -157,6 +157,10 @@ public class LevelEditorCustomEditor : Editor
         Button removeButton = customController.Query<Button>("Remove"); //Remove
         removeButton.clickable.clicked += _levelEditor.OnRemoveBlock;
 
+        //Save button bindings
+        Button saveButton = inspectorRoot.Query<Button>("Refresh");
+        saveButton.clickable.clicked += _levelEditor.OnRefreshButtonClicked;
+
         //// Return the finished Inspector UI.
         return inspectorRoot;
     }
