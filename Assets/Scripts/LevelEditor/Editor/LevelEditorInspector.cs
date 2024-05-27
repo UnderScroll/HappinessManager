@@ -172,7 +172,7 @@ public class LevelEditorCustomEditor : Editor
         Button fillButton = utility.Query<Button>("Fill");
         fillButton.clickable.clicked += _levelEditor.OnFillButtonClicked;
 
-        //// Return the finished Inspector UI.
+        // Return the finished Inspector UI.
         return inspectorRoot;
     }
 }

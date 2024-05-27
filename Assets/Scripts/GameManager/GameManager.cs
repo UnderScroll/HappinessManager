@@ -16,8 +16,6 @@ public class GameManager : MonoBehaviour
 
     private bool _playing = false;
 
-    public List<CellType> cellTypes;
-
     private void Awake()
     {
         if (!TryGetComponent(out Simulator))
