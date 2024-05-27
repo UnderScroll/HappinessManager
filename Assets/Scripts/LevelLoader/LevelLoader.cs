@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -22,17 +23,6 @@ namespace LevelLoader
         public void ReloadLevel()
         {
             LoadLevel(_CurrentLevelIndex);
-        }
-
-        private void TempCreateTestLevel()
-        {
-            Level level = ScriptableObject.CreateInstance<Level>();
-            level.CellTypes = new();
-            foreach (CellType celltype in _gameManager.cellTypes)
-                level.CellTypes.Get().Add(celltype);
-            level.CreateTamplateTemp();
-
-            AssetDatabase.CreateAsset(level, "Assets/Resources/Levels/Temp/TempLevel.asset");
         }
 
         public void LoadNextLevel()
@@ -72,7 +62,8 @@ namespace LevelLoader
             
             UnloadCurrentLevel();
 
-            _gameManager.Builder.Level = level;
+            _gameManager.Builder.Level = Instantiate(level);
+
             _gameManager.Builder.Initialize();
         }
 
