@@ -17,13 +17,26 @@ public partial class LevelEditor : MonoBehaviour
         ZAxis = 1 << 3,
     }
 
+    [Flags]
+    public enum FillAxis
+    {
+        XAxis = 1 << 0,
+        YAxis = 1 << 2,
+        ZAxis = 1 << 3,
+    }
+
     ///Custom Editor Bindings///
-    public Vector3Int CurrentCellPosition;
+    //Level
+    public Level Level;
     public Vector3Int StructureSize;
     public List<CellType> PlaceableBlocks;
+    //CurrentCell
+    public Vector3Int CurrentCellPosition;
     public CellType CurrentSelectedBlock;
     public AlignementLines alignementLines;
-    public Level Level;
+    //Utility
+    public FillAxis AxisToFill;
+    public bool DoReplace;
     ////////////////////////////
 
     public GameObject CurrentCellPreviewInstance;
@@ -251,11 +264,15 @@ public partial class LevelEditor : MonoBehaviour
         if (CurrentSelectedBlock == null)
             return;
 
-        int3 cellPosition = new(CurrentCellPosition.x, CurrentCellPosition.y, CurrentCellPosition.z);
-        Level.Structure.Cells[cellPosition.x, cellPosition.y, cellPosition.z] = new CellData(CurrentSelectedBlock) { Position = cellPosition };
-        UpdateCell(cellPosition);
+        PlaceCell(CurrentSelectedBlock, new(CurrentCellPosition.x, CurrentCellPosition.y, CurrentCellPosition.z));
+    }
 
-        Level.CellTypes[CurrentSelectedBlock.Name] = CurrentSelectedBlock;
+    public void PlaceCell(CellType cellType, int3 position)
+    {
+        Level.Structure.Cells[position.x, position.y, position.z] = new CellData(cellType) { Position = position };
+        UpdateCell(position);
+
+        Level.CellTypes[cellType.Name] = cellType;
     }
 
     public void OnRemoveBlock()
@@ -299,6 +316,33 @@ public partial class LevelEditor : MonoBehaviour
     {
         Debug.Log($"Saving level {Level.name}");
         Save();
+    }
+
+    public void OnFillButtonClicked()
+    {
+        Fill();
+    }
+
+    public void Fill()
+    {
+        int xStart = AxisToFill.HasFlag(FillAxis.XAxis) ? 0 : CurrentCellPosition.x;
+        int xEnd = AxisToFill.HasFlag(FillAxis.XAxis) ? StructureSize.x : CurrentCellPosition.x + 1;
+        int yStart = AxisToFill.HasFlag(FillAxis.YAxis) ? 0 : CurrentCellPosition.y;
+        int yEnd = AxisToFill.HasFlag(FillAxis.YAxis) ? StructureSize.y : CurrentCellPosition.y + 1;
+        int zStart = AxisToFill.HasFlag(FillAxis.ZAxis) ? 0 : CurrentCellPosition.z;
+        int zEnd = AxisToFill.HasFlag(FillAxis.ZAxis) ? StructureSize.z : CurrentCellPosition.z + 1;
+
+        for (int x = xStart; x < xEnd; x++)
+            for (int y = yStart; y < yEnd; y++)
+                for (int z = zStart; z < zEnd; z++)
+                {
+                    if (!DoReplace && Level.Structure.Cells[x, y, z] != null)
+                        continue;
+
+                    PlaceCell(CurrentSelectedBlock, new int3(x, y, z));
+                }
+
+        Initialize();
     }
 
     public void Save()

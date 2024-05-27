@@ -38,5 +38,13 @@
         </ui:IMGUIContainer>
         <uie:EnumFlagsField label="Draw Alignement Lines" type="UnityEngine.UIElements.UsageHints, UnityEngine.UIElementsModule" value="None" binding-path="alignementLines" name="AlignementLines" />
     </ui:IMGUIContainer>
+    <ui:IMGUIContainer name="Utility" style="margin-top: 2px; margin-right: 4px; margin-bottom: 0; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; border-bottom-width: 2px; border-left-color: rgb(70, 70, 70); border-right-color: rgb(70, 70, 70); border-top-color: rgb(70, 70, 70); border-bottom-color: rgb(70, 70, 70);">
+        <ui:Label tabindex="-1" text="Utility" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Utility" style="-unity-font-style: bold;" />
+        <ui:IMGUIContainer name="FillTool" style="flex-direction: row; align-self: auto; justify-content: space-between;">
+            <uie:EnumFlagsField label="Axis to Fill" type="UnityEngine.UIElements.UsageHints, UnityEngine.UIElementsModule" value="DynamicTransform" binding-path="AxisToFill" name="FillAxis" style="width: 80%;" />
+            <ui:Button text="Fill" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Fill" style="padding-right: 25px; padding-left: 25px;" />
+            <ui:Toggle name="ReplaceToggle" binding-path="DoReplace" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+        </ui:IMGUIContainer>
+    </ui:IMGUIContainer>
     <ui:Button text="Save" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Save" />
 </ui:UXML>
