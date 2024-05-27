@@ -15,5 +15,7 @@ namespace LevelLoader
         public Structure Structure;
         public CellTypes CellTypes;
         public CellTypes PlaceableCellTypes;
+        public Vector3 WindDirection;
+        public float WindStrength;
     }
 }
