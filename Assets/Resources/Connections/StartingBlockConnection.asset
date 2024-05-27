@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70c29d93602f82545ba128a40b31d169, type: 3}
-  m_Name: WeakConnection
+  m_Name: StartingBlockConnection
   m_EditorClassIdentifier: 
-  Name: Weak
-  BreakForce: 150
-  BreakTorque: 175
+  Name: Default
+  BreakForce: 250
+  BreakTorque: 250
   EnableCollision: 0
   EnablePreprocessing: 1
