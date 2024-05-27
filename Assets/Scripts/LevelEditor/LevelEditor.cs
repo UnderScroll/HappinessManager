@@ -109,6 +109,9 @@ public partial class LevelEditor : MonoBehaviour
 
     public void OnCurrenCellPositionChanged()
     {
+        if (CurrentCellPreviewInstance == null)
+            return;
+
         CurrentCellPreviewInstance.transform.position = CurrentCellPosition;
     }
 
@@ -292,11 +295,18 @@ public partial class LevelEditor : MonoBehaviour
         }
     }
 
-    public void OnRefreshButtonClicked()
+    public void OnSaveButtonClicked()
     {
-        Debug.Log($"Refreshing level {Level.name}");
+        Debug.Log($"Saving level {Level.name}");
+        Save();
+    }
+
+    public void Save()
+    {
         UpdateCellTypeList();
-        UnloadLevel();
-        LoadLevel();
+
+        EditorUtility.SetDirty(Level);
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
     }
 }

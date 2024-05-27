@@ -15,6 +15,12 @@ public class LevelEditorCustomEditor : Editor
     {
         //Init LevelEditor
         _levelEditor = (LevelEditor)target;
+        //Clean editor
+        foreach (Transform child in _levelEditor.GetComponentsInChildren<Transform>())
+            if (child != _levelEditor.transform)
+                DestroyImmediate(child.gameObject);
+        //Initialize
+        _levelEditor.Initialize();
 
         //Create inspector from uxml
         VisualElement inspectorRoot = new();
@@ -158,8 +164,8 @@ public class LevelEditorCustomEditor : Editor
         removeButton.clickable.clicked += _levelEditor.OnRemoveBlock;
 
         //Save button bindings
-        Button saveButton = inspectorRoot.Query<Button>("Refresh");
-        saveButton.clickable.clicked += _levelEditor.OnRefreshButtonClicked;
+        Button saveButton = inspectorRoot.Query<Button>("Save");
+        saveButton.clickable.clicked += _levelEditor.OnSaveButtonClicked;
 
         //// Return the finished Inspector UI.
         return inspectorRoot;

@@ -38,5 +38,5 @@
         </ui:IMGUIContainer>
         <uie:EnumFlagsField label="Draw Alignement Lines" type="UnityEngine.UIElements.UsageHints, UnityEngine.UIElementsModule" value="None" binding-path="alignementLines" name="AlignementLines" />
     </ui:IMGUIContainer>
-    <ui:Button text="Refresh" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Refresh" />
+    <ui:Button text="Save" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Save" />
 </ui:UXML>
