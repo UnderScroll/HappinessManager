@@ -167,6 +167,11 @@ public class LevelEditorCustomEditor : Editor
         Button saveButton = inspectorRoot.Query<Button>("Save");
         saveButton.clickable.clicked += _levelEditor.OnSaveButtonClicked;
 
+        //Utility
+        VisualElement utility = inspectorRoot.Query<VisualElement>("Utility");
+        Button fillButton = utility.Query<Button>("Fill");
+        fillButton.clickable.clicked += _levelEditor.OnFillButtonClicked;
+
         //// Return the finished Inspector UI.
         return inspectorRoot;
     }
