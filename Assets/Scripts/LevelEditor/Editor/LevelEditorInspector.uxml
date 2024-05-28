@@ -8,10 +8,10 @@
         <ui:Vector3IntField label="Size" name="Size" binding-path="StructureSize" />
         <ui:ListView binding-path="PlaceableBlocks" fixed-item-height="22" virtualization-method="DynamicHeight" show-border="true" reorderable="true" horizontal-scrolling="true" show-foldout-header="true" header-title="Placeable Blocks" show-add-remove-footer="true" show-alternating-row-backgrounds="All" name="PlaceableBlocks" reorder-mode="Animated" />
         <ui:IMGUIContainer name="Wind" style="flex-direction: row; margin-top: 2px; margin-right: 4px; margin-bottom: 2px; margin-left: 4px;">
-            <ui:Toggle name="Toggle" binding-path="Level.IsWindEnabled" style="flex-direction: column; align-items: auto; justify-content: flex-start; align-self: flex-start; margin-right: 20px; margin-top: 5px;" />
+            <ui:Toggle name="Toggle" binding-path="IsWindEnabled" style="flex-direction: column; align-items: auto; justify-content: flex-start; align-self: flex-start; margin-right: 20px; margin-top: 5px;" />
             <ui:Foldout text="Wind" name="Wind" style="width: 100%; flex-direction: column; margin-top: 2px; margin-right: 4px; margin-bottom: 2px; margin-left: 4px;">
-                <ui:Vector3Field label="Wind Direction" name="WindDirection" binding-path="Level.WindDirection" />
-                <ui:FloatField label="Strength" value="42,2" name="Strength" binding-path="Level.WindStrength" />
+                <ui:Vector3Field label="Wind Direction" name="WindDirection" binding-path="WindDirection" />
+                <ui:FloatField label="Strength" value="42,2" name="Strength" binding-path="WindStrength" />
             </ui:Foldout>
         </ui:IMGUIContainer>
     </ui:IMGUIContainer>

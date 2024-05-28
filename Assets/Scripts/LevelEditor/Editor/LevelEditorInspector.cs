@@ -203,7 +203,8 @@ public class LevelEditorCustomEditor : Editor
         FloatField windStrength = windFoldout.Query<FloatField>("Strength");
         windStrength.RegisterValueChangedCallback((evt) =>
         {
-            _levelEditor.Level.WindStrength = evt.newValue;
+            if (_levelEditor.Level != null)
+                _levelEditor.Level.WindStrength = evt.newValue;
         });
 
         // Return the finished Inspector UI.
