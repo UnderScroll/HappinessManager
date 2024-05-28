@@ -1,5 +1,4 @@
 using Builder;
-using LevelLoader;
 using System;
 using System.Collections.Generic;
 using Unity.Mathematics;
@@ -272,7 +271,8 @@ public partial class LevelEditor : MonoBehaviour
             return;
         }
 
-        Level.Structure.Cells[position.x, position.y, position.z] = new CellData(cellType) { Position = position };
+        Level.Structure.Cells[position.x, position.y, position.z] = (CellData)cellType;
+        Level.Structure.Cells[position.x, position.y, position.z].Position = position;
         UpdateCell(position);
 
         Level.CellTypes[cellType.Name] = cellType;

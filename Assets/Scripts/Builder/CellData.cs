@@ -10,6 +10,7 @@ namespace Builder
         [SerializeReference]
         public CellType Type;
         public int3 Position;
+        [SerializeField]
         private ConnectionType[] _connections = new ConnectionType[6];
 
         public CellData()
