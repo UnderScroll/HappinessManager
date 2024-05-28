@@ -11,7 +11,8 @@ public class UI_HUD : MonoBehaviour
     [SerializeField] TextMeshProUGUI text_money;
 
     [Header("Construct Menu")]
-    [SerializeField] List<string> blocs;
+    [SerializeField] 
+    public List<CellType> blocs;
     [SerializeField] List<string> decos;
     [SerializeField] List<string> adhesifs;
 
@@ -21,10 +22,14 @@ public class UI_HUD : MonoBehaviour
     [SerializeField] Transform parentTranform;
 
     private GameObject actualMenu;
-
+    private GameManager _gameManager;
 
     private void Start()
     {
+        _gameManager = FindObjectOfType<GameManager>();
+        if (_gameManager == null)
+            Debug.LogError("Failed to find GameManager in UI_HUD");
+
         UpdateMoneyText();
     }
 
@@ -42,8 +47,14 @@ public class UI_HUD : MonoBehaviour
         if (actualMenu == null)
         {
             actualMenu = Instantiate(BlocsDisplayMenuPrefab, parentTranform);
-            foreach (string bloc in blocs)
+            foreach (CellType cellType in blocs)
+            {
+               // cellType.Block;
+               // cellType.Name;
+               // cellType.Price;
+               // cellType.BlockIcon
                 Instantiate(PrefabItem, actualMenu.transform);
+            }
         }
         else
             CloseMenu();
@@ -78,4 +89,11 @@ public class UI_HUD : MonoBehaviour
     }
 
     #endregion
+
+    // region fonctionnement reel
+    // TODO : dans le builder (dans le _gm), fct Select
+    // GameManager.Builder.SelectBlock(indice du bloc de la liste)
+
+    // TODO : afficher ou non le budget et le bon!
+    // dans gamemanager builder level get rule budget limit, si la rule n'existe pas ne pas afficher le budget 
 }

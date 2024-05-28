@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public Simulation.Simulator Simulator;
     [HideInInspector]
     public LevelLoader.LevelLoader LevelLoader;
+    [HideInInspector]
+    public UI_HUD UI_HUD;
 
     private bool _playing = false;
 

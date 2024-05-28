@@ -10,6 +10,9 @@ namespace LevelLoader
         private GameManager _gameManager;
         private uint _CurrentLevelIndex;
 
+        [HideInInspector]
+        public UI_HUD UI_HUD;
+
         private void Awake()
         {
             if (!TryGetComponent(out _gameManager))
@@ -73,6 +76,9 @@ namespace LevelLoader
             {
                 Physics.gravity = new Vector3(0, -9.81f, 0);
             }
+
+            //Load Placeableblocks in HUD
+            UI_HUD.blocs = level.PlaceableCellTypes.Get();
         }
 
         public void UnloadCurrentLevel()
