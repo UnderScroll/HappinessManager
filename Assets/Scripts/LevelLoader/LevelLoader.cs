@@ -1,6 +1,4 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 
 namespace LevelLoader
@@ -65,6 +63,16 @@ namespace LevelLoader
             _gameManager.Builder.Level = Instantiate(level);
 
             _gameManager.Builder.Initialize();
+
+            if (level.WindDirection.magnitude > 0 && level.WindStrength > 0)
+            {
+                level.WindDirection.Normalize();
+                Physics.gravity = new Vector3(0, -9.81f, 0) + level.WindDirection * level.WindStrength;
+            }
+            else
+            {
+                Physics.gravity = new Vector3(0, -9.81f, 0);
+            }
         }
 
         public void UnloadCurrentLevel()

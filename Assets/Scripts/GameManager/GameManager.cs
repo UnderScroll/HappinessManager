@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Diagnostics.CodeAnalysis;
-using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,8 +14,6 @@ public class GameManager : MonoBehaviour
     public LevelLoader.LevelLoader LevelLoader;
 
     private bool _playing = false;
-
-    public List<CellType> cellTypes;
 
     private void Awake()
     {

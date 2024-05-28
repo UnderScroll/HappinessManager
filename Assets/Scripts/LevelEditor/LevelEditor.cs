@@ -1,5 +1,4 @@
 using Builder;
-using LevelLoader;
 using System;
 using System.Collections.Generic;
 using Unity.Mathematics;
@@ -37,6 +36,10 @@ public partial class LevelEditor : MonoBehaviour
     //Utility
     public FillAxis AxisToFill;
     public bool DoReplace;
+    //Additional
+    public bool IsWindEnabled;
+    public Vector3 WindDirection;
+    public float WindStrength;
     ////////////////////////////
 
     public GameObject CurrentCellPreviewInstance;
@@ -220,6 +223,9 @@ public partial class LevelEditor : MonoBehaviour
         Reset();
         StructureSize = new(1, 1, 1);
         CurrentCellPosition = new(0, 0, 0);
+        WindStrength = 0;
+        WindDirection = new(0, 0, 0);
+        IsWindEnabled = false;
         OnCurrenCellPositionChanged();
         PlaceableBlocks = new();
     }
@@ -228,6 +234,9 @@ public partial class LevelEditor : MonoBehaviour
     {
         StructureSize = new(Level.Structure.Size.x, Level.Structure.Size.y, Level.Structure.Size.z);
         CurrentCellPosition = new(0, 0, 0);
+        WindStrength = Level.WindStrength;
+        WindDirection = Level.WindDirection;
+        IsWindEnabled = Level.IsWindEnabled;
         OnCurrenCellPositionChanged();
         PlaceableBlocks = Level.PlaceableCellTypes.Get();
         Initialize();
@@ -272,7 +281,8 @@ public partial class LevelEditor : MonoBehaviour
             return;
         }
 
-        Level.Structure.Cells[position.x, position.y, position.z] = new CellData(cellType) { Position = position };
+        Level.Structure.Cells[position.x, position.y, position.z] = (CellData)cellType;
+        Level.Structure.Cells[position.x, position.y, position.z].Position = position;
         UpdateCell(position);
 
         Level.CellTypes[cellType.Name] = cellType;
@@ -355,6 +365,9 @@ public partial class LevelEditor : MonoBehaviour
 
     public void Save()
     {
+        Level.WindDirection = IsWindEnabled ? WindDirection : Vector3.zero;
+        Level.WindStrength = IsWindEnabled ? WindStrength : 0;
+
         UpdateCellTypeList();
 
         EditorUtility.SetDirty(Level);

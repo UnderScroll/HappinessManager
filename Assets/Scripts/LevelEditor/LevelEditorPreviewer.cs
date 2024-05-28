@@ -1,5 +1,4 @@
 using Builder;
-using LevelLoader;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -10,6 +9,12 @@ public partial class LevelEditor : MonoBehaviour
     public void Initialize()
     {
         Reset();
+
+        if (Level == null)
+        {
+            Debug.LogError("Trying preview a level but no level is selected");
+            return;
+        }
 
         if (Level.Structure == null)
         {

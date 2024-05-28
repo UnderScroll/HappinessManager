@@ -9,6 +9,7 @@ public class CellType : ScriptableObject
     public string Name = "Default";
     public bool Removable = true;
     public float Mass = 1;
+    public float Price = 1;
     public ConnectionType DefaultConnectionType = null;
     public GameObject Block = null;
     public PreviewBlock PreviewCollider = null;

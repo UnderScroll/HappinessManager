@@ -1,4 +1,3 @@
-using LevelLoader;
 using Unity.Mathematics;
 using UnityEditor;
 using UnityEditor.UIElements;
@@ -37,12 +36,13 @@ public class LevelEditorCustomEditor : Editor
         Label levelSelectionStatusLable = levelContainer.Query<Label>("LevelSelectionStatus");
         levelSelectionField.RegisterValueChangedCallback((evt) =>
         {
-            if (evt.newValue == null) {
+            if (evt.newValue == null)
+            {
                 levelSelectionStatusLable.text = "No level Selected";
                 _levelEditor.UnloadLevel();
                 return;
             }
-            
+
             levelSelectionStatusLable.text = "";
             _levelEditor.Level = (Level)evt.newValue;
             _levelEditor.OnLevelChanged();
@@ -172,7 +172,42 @@ public class LevelEditorCustomEditor : Editor
         Button fillButton = utility.Query<Button>("Fill");
         fillButton.clickable.clicked += _levelEditor.OnFillButtonClicked;
 
-        //// Return the finished Inspector UI.
+        //Additional
+        VisualElement additional = inspectorRoot.Query<VisualElement>("Additional");
+
+        //Wind
+        VisualElement windContainer = levelContainer.Query<VisualElement>("Wind");
+        Foldout windFoldout = windContainer.Query<Foldout>("Wind");
+        Toggle windToggle = windContainer.Query<Toggle>("Toggle");
+        windToggle.RegisterValueChangedCallback(evt => { 
+            _levelEditor.Level.IsWindEnabled = evt.newValue;
+            windFoldout.value = evt.newValue;
+            windFoldout.SetEnabled(evt.newValue); 
+        });
+        Vector3Field windDirectionField = windFoldout.Query<Vector3Field>();
+        FloatField windDirectionX = currentCellContainer.Query<FloatField>("unity-x-input");
+        windDirectionX.RegisterValueChangedCallback((evt) =>
+        {
+            _levelEditor.Level.WindDirection.x = evt.newValue;
+        });
+        FloatField windDirectionY = currentCellContainer.Query<FloatField>("unity-y-input");
+        windDirectionY.RegisterValueChangedCallback((evt) =>
+        {
+            _levelEditor.Level.WindDirection.y = evt.newValue;
+        });
+        FloatField windDirectionZ = currentCellContainer.Query<FloatField>("unity-z-input");
+        windDirectionZ.RegisterValueChangedCallback((evt) =>
+        {
+            _levelEditor.Level.WindDirection.z = evt.newValue;
+        });
+        FloatField windStrength = windFoldout.Query<FloatField>("Strength");
+        windStrength.RegisterValueChangedCallback((evt) =>
+        {
+            if (_levelEditor.Level != null)
+                _levelEditor.Level.WindStrength = evt.newValue;
+        });
+
+        // Return the finished Inspector UI.
         return inspectorRoot;
     }
 }
