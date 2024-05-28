@@ -2,11 +2,18 @@
     <ui:IMGUIContainer name="Level" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 2px; border-left-width: 0; border-left-color: rgb(70, 70, 70); border-right-color: rgb(70, 70, 70); border-top-color: rgb(70, 70, 70); border-bottom-color: rgb(70, 70, 70); margin-top: 2px; margin-right: 4px; margin-bottom: 0; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px;">
         <ui:Label tabindex="-1" text="Level" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" style="-unity-font-style: bold;" />
         <ui:IMGUIContainer name="LevelSelection" style="flex-direction: row; justify-content: space-between;">
-            <uie:ObjectField label="Level" name="Level" binding-path="Level" style="flex-direction: row; align-self: stretch; justify-content: space-between; align-items: stretch;" />
+            <uie:ObjectField label="Level" name="Level" binding-path="Level" type="Level, Assembly-CSharp" style="flex-direction: row; align-self: stretch; justify-content: space-between; align-items: stretch;" />
             <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LevelSelectionStatus" style="color: rgb(255, 0, 0); -unity-font-style: bold;" />
         </ui:IMGUIContainer>
         <ui:Vector3IntField label="Size" name="Size" binding-path="StructureSize" />
         <ui:ListView binding-path="PlaceableBlocks" fixed-item-height="22" virtualization-method="DynamicHeight" show-border="true" reorderable="true" horizontal-scrolling="true" show-foldout-header="true" header-title="Placeable Blocks" show-add-remove-footer="true" show-alternating-row-backgrounds="All" name="PlaceableBlocks" reorder-mode="Animated" />
+        <ui:IMGUIContainer name="Wind" style="flex-direction: row; margin-top: 2px; margin-right: 4px; margin-bottom: 2px; margin-left: 4px;">
+            <ui:Toggle name="Toggle" binding-path="Level.IsWindEnabled" style="flex-direction: column; align-items: auto; justify-content: flex-start; align-self: flex-start; margin-right: 20px; margin-top: 5px;" />
+            <ui:Foldout text="Wind" name="Wind" style="width: 100%; flex-direction: column; margin-top: 2px; margin-right: 4px; margin-bottom: 2px; margin-left: 4px;">
+                <ui:Vector3Field label="Wind Direction" name="WindDirection" binding-path="Level.WindDirection" />
+                <ui:FloatField label="Strength" value="42,2" name="Strength" binding-path="Level.WindStrength" />
+            </ui:Foldout>
+        </ui:IMGUIContainer>
     </ui:IMGUIContainer>
     <ui:IMGUIContainer name="CurrentCell" style="margin-top: 2px; margin-right: 4px; margin-bottom: 0; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; border-bottom-width: 2px; border-left-color: rgb(70, 70, 70); border-right-color: rgb(70, 70, 70); border-top-color: rgb(70, 70, 70); border-bottom-color: rgb(70, 70, 70);">
         <ui:Label tabindex="-1" text="Current Cell" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" style="-unity-font-style: bold;" />

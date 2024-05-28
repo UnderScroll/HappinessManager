@@ -9,6 +9,7 @@ public class Level : ScriptableObject
     public Structure Structure;
     public CellTypes CellTypes;
     public CellTypes PlaceableCellTypes;
+    public bool IsWindEnabled;
     public Vector3 WindDirection;
     public float WindStrength;
 }
