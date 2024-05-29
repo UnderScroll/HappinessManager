@@ -252,6 +252,7 @@ GameObject:
   - component: {fileID: 737254369}
   - component: {fileID: 737254368}
   - component: {fileID: 737254370}
+  - component: {fileID: 737254372}
   - component: {fileID: 737254371}
   m_Layer: 0
   m_Name: GameManager
@@ -379,6 +380,7 @@ MonoBehaviour:
   Builder: {fileID: 0}
   Simulator: {fileID: 0}
   LevelLoader: {fileID: 0}
+  RuleManager: {fileID: 0}
   UI_HUD: {fileID: 0}
 --- !u!114 &737254369
 MonoBehaviour:
@@ -393,6 +395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Level: {fileID: 0}
+  SpentMoney: 0
 --- !u!114 &737254370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,8 +421,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76df1a155a5a6d64e9dc3f0866519450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Levels: []
+  Levels:
+  - {fileID: 11400000, guid: b5569a91ddb150344ab37a15aa633ce0, type: 2}
   UI_HUD: {fileID: 0}
+--- !u!114 &737254372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737254362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8872ff62cfd4f4c4080935b846425b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rules: []
 --- !u!1 &1052361899
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -77,6 +78,13 @@ namespace LevelLoader
                 Physics.gravity = new Vector3(0, -9.81f, 0);
             }
 
+
+            _gameManager.RuleManager.Reset();
+            
+            _gameManager.RuleManager.Rules = level.Rules;
+            _gameManager.RuleManager.Initialize();
+
+            _gameManager.RuleManager.Debug_DisplayAllRules();
             //Load Placeableblocks in HUD
             //UI_HUD.blocs = level.PlaceableCellTypes.Get();
         }

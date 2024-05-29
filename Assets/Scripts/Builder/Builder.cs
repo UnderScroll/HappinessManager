@@ -14,6 +14,11 @@ namespace Builder
 
         private (Option<int3> pointedCell, Option<int3> cellToPlace) _pointed;
 
+        [HideInInspector]
+        public float SpentMoney = 0;
+
+        private GameManager _gameManager;
+
         private readonly int3[] _neighborDeltaPositions = {
                 new( 0, 0, 1),
                 new( 1, 0, 0),
@@ -24,6 +29,7 @@ namespace Builder
             };
 
         private readonly int[] _inverseFaceOrder = { 2, 3, 0, 1, 5, 4 };
+
 
         public void Initialize()
         {
@@ -142,8 +148,13 @@ namespace Builder
             if (Level.Structure.Cells[positionToPlace.x, positionToPlace.y, positionToPlace.z] != null)
                 return;
 
+            if (!_gameManager.RuleManager.CanPlaceBlock(_selectedBlock.Type.Price))
+                return;
+
             PlaceBlock(_selectedBlock.Clone(), positionToPlace);
             UpdateConnection(positionToPlace);
+
+            SpentMoney += _selectedBlock.Type.Price;
             return;
         }
 
@@ -155,9 +166,14 @@ namespace Builder
             if (_pointed.cellToPlace.IsSome(out int3 positionToPlace)
                 && (positionToPlace.y == positionToRemove.y - 1))
                     return;
+            
+            CellType removedBlockType = Level.Structure.Cells[positionToRemove.x, positionToRemove.y, positionToRemove.z].Type;
 
             RemoveBlock(positionToRemove);
             UpdateConnection(positionToRemove);
+
+
+            SpentMoney -= removedBlockType.Price;
         }
 
         public void OnSelectBlock1(InputValue _) => SelectBlock(0);

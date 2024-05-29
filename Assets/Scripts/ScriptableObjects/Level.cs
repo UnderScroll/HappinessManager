@@ -1,15 +1,25 @@
 using Builder;
-using System.Collections;
+using System.Collections.Generic;
+using System.Data;
+using UnityEditor;
 using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "Level", menuName = "Structure/Level")]
 public class Level : ScriptableObject
 {
+    //Structure
     public Structure Structure;
+    
+    //Blocks
     public CellTypes CellTypes;
     public CellTypes PlaceableCellTypes;
+    
+    //Wind
     public bool IsWindEnabled;
     public Vector3 WindDirection;
     public float WindStrength;
+
+    //Rules
+    public List<IRule> Rules;
 }
