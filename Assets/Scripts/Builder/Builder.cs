@@ -3,6 +3,7 @@ using Unity.Mathematics;
 using UnityEngine.InputSystem;
 using UnityEngine.Assertions;
 using System;
+using System.Collections.Generic;
 
 namespace Builder
 {
@@ -16,6 +17,8 @@ namespace Builder
 
         [HideInInspector]
         public float SpentMoney = 0;
+        [HideInInspector]
+        public Dictionary<string, uint> BlockPlacedAmount;
 
         private GameManager _gameManager;
 
@@ -40,6 +43,12 @@ namespace Builder
             SelectBlock(0);
             if (_selectedBlock == null)
                 Debug.LogError("Failed to select first block, check if CellTypes is null or empty");
+
+            SpentMoney = 0;
+            BlockPlacedAmount = new();
+
+            foreach (CellType placeableCellType in Level.PlaceableCellTypes.Get())
+                BlockPlacedAmount.Add(placeableCellType.Name, 0);
         }
 
         void PlaceBlock(CellData data, int3 position)
@@ -155,6 +164,8 @@ namespace Builder
             UpdateConnection(positionToPlace);
 
             SpentMoney += _selectedBlock.Type.Price;
+            BlockPlacedAmount[_selectedBlock.Type.Name]++;
+
             return;
         }
 
@@ -174,6 +185,7 @@ namespace Builder
 
 
             SpentMoney -= removedBlockType.Price;
+            BlockPlacedAmount[removedBlockType.Name]--;
         }
 
         public void OnSelectBlock1(InputValue _) => SelectBlock(0);
