@@ -379,11 +379,7 @@ MonoBehaviour:
   Builder: {fileID: 0}
   Simulator: {fileID: 0}
   LevelLoader: {fileID: 0}
-  cellTypes:
-  - {fileID: 11400000, guid: 26323928fecd21440bbf81af0abd1f74, type: 2}
-  - {fileID: 11400000, guid: bd77142b1d33bbc489551a002b5e5de2, type: 2}
-  - {fileID: 11400000, guid: c605ce3339acc0848ad3b079d2702916, type: 2}
-  - {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+  UI_HUD: {fileID: 0}
 --- !u!114 &737254369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,8 +418,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76df1a155a5a6d64e9dc3f0866519450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Levels:
-  - {fileID: 11400000, guid: 8e835ca2fd78d824e94026ec47bd311c, type: 2}
+  Levels: []
+  UI_HUD: {fileID: 0}
 --- !u!1 &1052361899
 GameObject:
   m_ObjectHideFlags: 0

@@ -78,7 +78,7 @@ namespace LevelLoader
             }
 
             //Load Placeableblocks in HUD
-            UI_HUD.blocs = level.PlaceableCellTypes.Get();
+            //UI_HUD.blocs = level.PlaceableCellTypes.Get();
         }
 
         public void UnloadCurrentLevel()
