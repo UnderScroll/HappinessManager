@@ -379,11 +379,6 @@ MonoBehaviour:
   Builder: {fileID: 0}
   Simulator: {fileID: 0}
   LevelLoader: {fileID: 0}
-  cellTypes:
-  - {fileID: 11400000, guid: 26323928fecd21440bbf81af0abd1f74, type: 2}
-  - {fileID: 11400000, guid: bd77142b1d33bbc489551a002b5e5de2, type: 2}
-  - {fileID: 11400000, guid: c605ce3339acc0848ad3b079d2702916, type: 2}
-  - {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
 --- !u!114 &737254369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,6 +422,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f93366b7411e36148a68b5612425eb05, type: 2}
   - {fileID: 11400000, guid: 475aaf3505dc1654083bff04210a68e7, type: 2}
   - {fileID: 11400000, guid: c918fdad716203d48a407fec57e4901a, type: 2}
+  - {fileID: 11400000, guid: a201edd784a732f458f5c40516b88b4f, type: 2}
+  - {fileID: 11400000, guid: 21a873457077aad429face1dace2a646, type: 2}
+  - {fileID: 11400000, guid: e19936f045a91954c902d61c6e4e4682, type: 2}
+  - {fileID: 11400000, guid: 8c1db22f6c5feda4e87b1727be3fa530, type: 2}
 --- !u!1 &1052361899
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,7 +566,7 @@ Transform:
   m_GameObject: {fileID: 1326368930}
   serializedVersion: 2
   m_LocalRotation: {x: 0.31598538, y: 0.3596048, z: -0.13088542, w: 0.8681629}
-  m_LocalPosition: {x: -5, y: 12, z: -5}
+  m_LocalPosition: {x: -5, y: 10, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
