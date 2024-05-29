@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1544644843128643843}
   - component: {fileID: 7291467978762410290}
   - component: {fileID: 5021820424983592157}
-  - component: {fileID: 4206330931458945154}
   - component: {fileID: 8979509324460130109}
   - component: {fileID: 8126701839331769342}
   - component: {fileID: 1832752145399812954}
@@ -68,22 +67,8 @@ MonoBehaviour:
   blockInfo: {fileID: 0}
   blockImg: {fileID: 557879884382135551}
   price: {fileID: 3752479786016412122}
---- !u!114 &4206330931458945154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 782705172975445612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbc8a8e0b84565f40a19333bb96feb85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseImg: {fileID: 0}
-  hoveredImg: {fileID: 0}
-  decalValue: 50
   selected: 0
+  decalOverValue: 50
 --- !u!114 &8979509324460130109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,8 +116,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 4206330931458945154}
-          m_TargetAssemblyTypeName: UI_Hoverable, Assembly-CSharp
+        - m_Target: {fileID: 5021820424983592157}
+          m_TargetAssemblyTypeName: UI_SelectableBlock, Assembly-CSharp
           m_MethodName: MoveUp
           m_Mode: 1
           m_Arguments:
@@ -147,8 +132,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 4206330931458945154}
-          m_TargetAssemblyTypeName: UI_Hoverable, Assembly-CSharp
+        - m_Target: {fileID: 5021820424983592157}
+          m_TargetAssemblyTypeName: UI_SelectableBlock, Assembly-CSharp
           m_MethodName: MoveDown
           m_Mode: 1
           m_Arguments:

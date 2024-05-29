@@ -16,7 +16,6 @@ public class UI_HUD : MonoBehaviour
     [SerializeField]
     public List<CellType> blocks = new List<CellType>();
     [SerializeField] List<string> decos;
-    [SerializeField] List<string> adhesifs;
     [SerializeField] string BlockName = "";
     [SerializeField] string BlockDescription = "";
     private CellType selected;
@@ -35,6 +34,7 @@ public class UI_HUD : MonoBehaviour
         if (_gameManager == null)
             Debug.LogError("Failed to find GameManager in UI_HUD");
         UpdateMoneyText();
+
     }
 
     #region Money
@@ -54,7 +54,8 @@ public class UI_HUD : MonoBehaviour
             foreach (CellType cellType in blocks)
             {
                 GameObject _go = Instantiate(PrefabItem, actualMenu.transform);
-                _go.GetComponent<UI_SelectableBlock>().parentScript = this;
+                _go.name = cellType.Name;
+                _go.GetComponent<UI_SelectableBlock>().ui_hud = this;
                 _go.GetComponent<UI_SelectableBlock>().blockInfo = cellType;
             }
         }
@@ -73,29 +74,30 @@ public class UI_HUD : MonoBehaviour
             CloseMenu();
     }
 
-    public void InitAdhesifsMenu()
-    {
-        if (actualMenu == null)
-        {
-            actualMenu = Instantiate(BlocsDisplayMenuPrefab, parentTranform);
-            foreach (string adhesif in adhesifs)
-                Instantiate(PrefabItem, actualMenu.transform);
-        }
-        else
-            CloseMenu();
-    }
 
     public void CloseMenu()
     {
         Destroy(actualMenu);
     }
+    private void Unselect(CellType _block)
+    {
+        // List of all the selectable blocks to find the one to unselect
+        List<UI_SelectableBlock> list = new();
+        list.AddRange(actualMenu.GetComponentsInChildren<UI_SelectableBlock>());
+        
+        if (list.Count > 0)
+        {
+            foreach (UI_SelectableBlock block in list)
+            {
+                if (block.blockInfo.name == _block.name)
+                    block.MoveDown();
+            }
+        }
 
+    }
     #endregion
 
     #region Fonctionnal functions
-    // region fonctionnement reel
-    // TODO : dans le builder (dans le _gm), fct Select
-    // GameManager.Builder.SelectBlock(indice du bloc de la liste)
 
     // TODO : afficher ou non le budget et le bon!
     // dans gamemanager builder level get rule budget limit, si la rule n'existe pas ne pas afficher le budget 
@@ -106,11 +108,28 @@ public class UI_HUD : MonoBehaviour
         {
             if (blocks[i].name == _block.name)
             {
+                // select new block
                 _gameManager.Builder.SelectBlock((uint)i);
+
+                // Update UI
+                if (selected != null)
+                    Unselect(selected);
+
                 selected = blocks[i];
             }
         }
     }
 
+    public bool IsThisBlockSelected(CellType _block)
+    {
+        if (selected != null)
+        {
+            if (_block.name == selected.name)
+                return true;
+            else
+                return false;
+        }
+        return false;
+    }
     #endregion 
 }

@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -6,13 +7,13 @@ using UnityEngine.UI;
 
 public class UI_SelectableBlock : MonoBehaviour
 {
-    bool selected = false;
-    public UI_HUD parentScript = null;
+    public UI_HUD ui_hud = null;
     public CellType blockInfo = null;
 
     [SerializeField] Image blockImg;
     [SerializeField] TextMeshProUGUI price;
 
+    [SerializeField] int decalOverValue;
     public void Init()
     {
         blockImg.sprite = blockInfo.BlockIcon;
@@ -20,6 +21,24 @@ public class UI_SelectableBlock : MonoBehaviour
     }
     public void OnClick()
     {
-        parentScript.SelectBlock(blockInfo);
+        ui_hud.SelectBlock(blockInfo);
+    }
+
+    private void Start()
+    {
+        ui_hud = FindObjectOfType<UI_HUD>();
+        if (ui_hud == null)
+            Debug.LogError("Failed to get the UI_HUD in UI_Hoverable");
+    }
+
+    // TODO pour les deux prochaines fonctions : avant le décalage, check si le tween est terminé
+    public void MoveUp()
+    {
+        this.transform.DOLocalMoveY(decalOverValue, 0.7f);
+    }
+    public void MoveDown()
+    {
+        if (!ui_hud.IsThisBlockSelected(blockInfo))
+            this.transform.DOLocalMoveY(-decalOverValue, 0.5f);
     }
 }

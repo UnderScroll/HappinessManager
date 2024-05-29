@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
         Builder.StructureOrigin = StructureOrigin;
         UI_HUD = FindObjectOfType<UI_HUD>();
         if (UI_HUD == null)
-            Debug.LogError("dkmdzkqdqz");
+            Debug.LogError("Failed to get the UI_HUD in GameManager");
         else
             LevelLoader.UI_HUD = UI_HUD;
     }
