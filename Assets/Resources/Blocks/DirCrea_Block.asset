@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c90a5b9e08c0f84c8ab044b11bb029f, type: 3}
+  m_Name: DirCrea_Block
+  m_EditorClassIdentifier: 
+  Name: EmployeeBlock
+  Description: 
+  Removable: 0
+  Mass: 1
+  Price: 1
+  DefaultConnectionType: {fileID: 0}
+  Block: {fileID: 5787914380600964139, guid: 0c1d7074462937b42a1ab0ccba473c00, type: 3}
+  BlockIcon: {fileID: 0}
+  PreviewCollider: {fileID: -2534534423112644513, guid: e26ebc9e67c32c242b4899753a36ea73,
+    type: 3}
+  ConnectionFaces: 0
+  ShouldBeSimulated: 1
