@@ -28,6 +28,11 @@ public class GameManager : MonoBehaviour
 
         Simulator.StructureOrigin = StructureOrigin;
         Builder.StructureOrigin = StructureOrigin;
+        UI_HUD = FindObjectOfType<UI_HUD>();
+        if (UI_HUD == null)
+            Debug.LogError("dkmdzkqdqz");
+        else
+            LevelLoader.UI_HUD = UI_HUD;
     }
 
     public void OnPlay(InputValue _)
