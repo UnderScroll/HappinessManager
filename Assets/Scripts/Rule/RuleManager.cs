@@ -20,6 +20,12 @@ public class RuleManager : MonoBehaviour
 
     public void Initialize()
     {
+        if (Rules == null)
+        {
+            Debug.LogError("Rules list was null");
+            return;
+        }
+
         foreach (IRule rule in Rules)
         {
             rule._gameManager = _gameManager;
@@ -27,6 +33,9 @@ public class RuleManager : MonoBehaviour
             if (rule.BaseType == "IBlockRule")
                 _blockRules.Add((IBlockRule)rule);
         }
+
+        Debug.Log("RuleManager Initialized");
+        Debug_DisplayAllRules();
     }
 
     public void Reset()

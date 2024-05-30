@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace LevelLoader
 {
@@ -13,6 +15,8 @@ namespace LevelLoader
 
         [HideInInspector]
         public UI_HUD UI_HUD;
+
+        public string nextFloorname;
 
         private void Awake()
         {
@@ -32,7 +36,14 @@ namespace LevelLoader
             uint nextLevelIndex = _CurrentLevelIndex + 1;
             if (!(nextLevelIndex < Levels.Count))
             {
-                Debug.LogWarning($"Tried to load level {nextLevelIndex} but there is no such level");
+                Debug.LogWarning($"Tried to load level {nextLevelIndex} but there is no such level, trying to load next scene");
+                if (nextFloorname == null || nextFloorname is "")
+                {
+                    Debug.LogWarning($"Tried to load next Floot but there is none");
+                    return;
+                }
+
+                SceneManager.LoadScene(nextFloorname, LoadSceneMode.Single);
                 return;
             }
 
