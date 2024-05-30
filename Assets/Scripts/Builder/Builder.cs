@@ -193,7 +193,7 @@ namespace Builder
         public void OnSelectBlock3(InputValue _) => SelectBlock(2);
         public void OnSelectBlock4(InputValue _) => SelectBlock(3);
 
-        private void SelectBlock(uint index)
+        public void SelectBlock(uint index)
         {
             if (index < Level.PlaceableCellTypes.Get().Count)
                 _selectedBlock = (CellData)Level.PlaceableCellTypes[(int)index];

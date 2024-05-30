@@ -95,7 +95,7 @@ namespace LevelLoader
 
             _gameManager.RuleManager.Debug_DisplayAllRules();
             //Load Placeableblocks in HUD
-            //UI_HUD.blocs = level.PlaceableCellTypes.Get();
+            UI_HUD.blocks = level.PlaceableCellTypes.Get();
         }
 
         public void UnloadCurrentLevel()
