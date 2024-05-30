@@ -130,9 +130,10 @@ public class UI_HUD : MonoBehaviour
                 // Update UI
                 if (_oldSelection != null)
                     Unselect(_oldSelection);
+
+                UpdateBlockDescription();
             }
         }
-        UpdateBlockDescription();
     }
 
     public bool IsThisBlockSelected(CellType _block)
