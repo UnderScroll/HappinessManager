@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
+using UnityEngine.Timeline;
 
 public class UI_HUD : MonoBehaviour
 {
@@ -26,6 +27,9 @@ public class UI_HUD : MonoBehaviour
     [SerializeField] Transform parentTranform;
     [SerializeField] TextMeshProUGUI blockDescription;
 
+    [Header("Notebook Menu")]
+    [SerializeField] GameObject notebook;
+
     private GameObject actualMenu;
     private GameManager _gameManager;
 
@@ -34,6 +38,8 @@ public class UI_HUD : MonoBehaviour
         _gameManager = FindObjectOfType<GameManager>();
         if (_gameManager == null)
             Debug.LogError("Failed to find GameManager in UI_HUD");
+
+        CloseNotebook();
 
         // TODO : init money value from level
         UpdateMoneyText();
@@ -147,5 +153,17 @@ public class UI_HUD : MonoBehaviour
         }
         return false;
     }
-    #endregion 
+    #endregion
+
+    #region
+    public void OpenNotebook()
+    {
+        // TODO : actuellement on peut poser des blocs à travers l'UI pour une raison obscure
+        notebook.SetActive(true);
+    }
+    public void CloseNotebook()
+    {
+        notebook.SetActive(false);
+    }
+    #endregion
 }
