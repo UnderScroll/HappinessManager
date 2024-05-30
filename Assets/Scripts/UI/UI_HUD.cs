@@ -85,6 +85,13 @@ public class UI_HUD : MonoBehaviour
             blockDescription.text = selected.name + " : " + selected.Description;
         }
     }
+    public void TemporaryDescription(CellType _block, bool _active)
+    {
+        if (_active)
+            blockDescription.text = _block.name + " : " + _block.Description;
+        else
+            UpdateBlockDescription();
+    }
     private void Unselect(CellType _block) // ONLY DISPLAY, NO FUNCTIONNAL THING
     {
         // List of all the selectable blocks to find the one to unselect
@@ -96,7 +103,7 @@ public class UI_HUD : MonoBehaviour
             foreach (UI_SelectableBlock block in list)
             {
                 if (block.blockInfo.name == _block.name)
-                    block.MoveDown();
+                    block.Unover();
             }
         }
 
