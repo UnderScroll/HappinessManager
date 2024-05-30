@@ -33,7 +33,6 @@ public class UI_SelectableBlock : MonoBehaviour
             Debug.LogError("Failed to get the UI_HUD in UI_Hoverable");
     }
 
-    // TODO pour les deux prochaines fonctions : avant le décalage, check si le tween est terminé
     public void MoveUp()
     {
         if (!ui_hud.IsThisBlockSelected(blockInfo))
