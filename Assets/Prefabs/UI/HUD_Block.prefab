@@ -63,12 +63,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f6a65e3ef324604099d9d38093e10af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentScript: {fileID: 0}
+  ui_hud: {fileID: 0}
   blockInfo: {fileID: 0}
   blockImg: {fileID: 557879884382135551}
   price: {fileID: 3752479786016412122}
-  selected: 0
-  decalOverValue: 50
+  decalOverValue: 100
+  basePosition: {x: 0, y: 0, z: 0}
 --- !u!114 &8979509324460130109
 MonoBehaviour:
   m_ObjectHideFlags: 0

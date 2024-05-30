@@ -14,10 +14,12 @@ public class UI_SelectableBlock : MonoBehaviour
     [SerializeField] TextMeshProUGUI price;
 
     [SerializeField] int decalOverValue;
+    public Vector3 basePosition;
     public void Init()
     {
         blockImg.sprite = blockInfo.BlockIcon;
         price.text = blockInfo.Price + " $";
+        basePosition = this.gameObject.transform.position;
     }
     public void OnClick()
     {
@@ -34,11 +36,12 @@ public class UI_SelectableBlock : MonoBehaviour
     // TODO pour les deux prochaines fonctions : avant le décalage, check si le tween est terminé
     public void MoveUp()
     {
-        this.transform.DOLocalMoveY(decalOverValue, 0.7f);
+        if (!ui_hud.IsThisBlockSelected(blockInfo))
+            this.gameObject.transform.DOBlendableLocalMoveBy(new Vector3(0,decalOverValue,0), 0.7f);
     }
     public void MoveDown()
     {
         if (!ui_hud.IsThisBlockSelected(blockInfo))
-            this.transform.DOLocalMoveY(-decalOverValue, 0.5f);
+            this.gameObject.transform.DOBlendableLocalMoveBy(new Vector3(0, -decalOverValue, 0), 0.5f);
     }
 }

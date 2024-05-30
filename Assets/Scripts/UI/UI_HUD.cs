@@ -90,7 +90,9 @@ public class UI_HUD : MonoBehaviour
             foreach (UI_SelectableBlock block in list)
             {
                 if (block.blockInfo.name == _block.name)
+                {
                     block.MoveDown();
+                }
             }
         }
 
@@ -108,14 +110,16 @@ public class UI_HUD : MonoBehaviour
         {
             if (blocks[i].name == _block.name)
             {
+                CellType _oldSelection = selected;
+
                 // select new block
                 _gameManager.Builder.SelectBlock((uint)i);
+                selected = blocks[i];
 
                 // Update UI
-                if (selected != null)
-                    Unselect(selected);
+                if (_oldSelection != null)
+                    Unselect(_oldSelection);
 
-                selected = blocks[i];
             }
         }
     }
