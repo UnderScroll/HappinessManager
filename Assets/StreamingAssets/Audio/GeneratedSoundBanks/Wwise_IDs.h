@@ -88,6 +88,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID COLLISION_VELOCITY = 1951144523U;
+        static const AkUniqueID REVERB_DISTANCE = 3583098985U;
         static const AkUniqueID RTPC_MUSIC_BUS = 3432596327U;
         static const AkUniqueID RTPC_SENSITIVITY_FILTER = 1561184313U;
         static const AkUniqueID RTPC_SFX_BUS = 3067876527U;
@@ -106,6 +107,11 @@ namespace AK
         static const AkUniqueID MUSIQUE = 69765534U;
         static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID ROOM_VERB = 821123712U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {

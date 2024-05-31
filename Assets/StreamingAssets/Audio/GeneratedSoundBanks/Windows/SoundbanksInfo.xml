@@ -9,10 +9,16 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{5778E51C-BC90-E028-F304-E7192EBAC0A6}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F096131A-AE1F-3EC8-EB8A-5B98D310AB5C}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<Custom>
+					<Plugin Id="11386286" Name="Delay (Custom)" LibName="Wwise Delay" LibId="6946819"/>
+				</Custom>
+				<ShareSets>
+					<Plugin Id="602546716" Name="Room_Large" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
@@ -24,11 +30,24 @@
 				<Bus Id="1117531639" Name="Amb"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="821123712" Name="Room_Verb">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="11386286"/>
+						</Custom>
+						<ShareSets>
+							<PluginRef Id="602546716"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="1561184313" Name="RTPC_SENSITIVITY_FILTER"/>
 				<GameParameter Id="1951144523" Name="Collision_Velocity"/>
 				<GameParameter Id="3067876527" Name="RTPC_SFX_BUS"/>
 				<GameParameter Id="3432596327" Name="RTPC_MUSIC_BUS"/>
+				<GameParameter Id="3583098985" Name="Reverb_Distance"/>
 			</GameParameters>
 			<SwitchGroups>
 				<SwitchGroup Id="2410351013" Name="MUSIC_GLOBAL_STATE_SWITCH">
@@ -41,7 +60,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{033A852F-D2B8-E5E5-6CE3-3780B0BFC5A2}">
+		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{BFD36604-5F15-6405-EB11-4CA3229A1D66}">
 			<ShortName>HM_Global_SB</ShortName>
 			<Path>HM_Global_SB.bnk</Path>
 			<Media>
@@ -56,6 +75,10 @@
 				<File Id="5243427" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_high_velocity 3.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_high_velocity 3_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="22258212" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sneak transi render 125 [2024-05-31 154615].wav</ShortName>
+					<CachePath>SFX/sneak transi render 125 [2024-05-31 154615]_B02CE968.wem</CachePath>
 				</File>
 				<File Id="24325655" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_high_velocity 5.wav</ShortName>
@@ -429,9 +452,17 @@
 					<ShortName>HM_SFX_SC_Build_soap block remove 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_soap block remove 2_BE5FF748.wem</CachePath>
 				</File>
+				<File Id="622128103" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sneak defeat render v1 125 [2024-05-31 154728].wav</ShortName>
+					<CachePath>SFX/sneak defeat render v1 125 [2024-05-31 154728]_B02CE968.wem</CachePath>
+				</File>
 				<File Id="627881350" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 7.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 7_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="628961501" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sneak core loop render v1 125 2  [2024-05-31 154311].wav</ShortName>
+					<CachePath>SFX/sneak core loop render v1 125 2  [2024-05-31 154311]_B02CE968.wem</CachePath>
 				</File>
 				<File Id="641376820" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Digital Click Negative 07 2.wav</ShortName>
@@ -496,6 +527,10 @@
 				<File Id="753994427" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_items off tab hover 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_items off tab hover 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="762861487" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sneak validate render v1 125 [2024-05-31 154642].wav</ShortName>
+					<CachePath>SFX/sneak validate render v1 125 [2024-05-31 154642]_B02CE968.wem</CachePath>
 				</File>
 				<File Id="770784891" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_OS_UI_item tab hover soap.wav</ShortName>
@@ -636,6 +671,10 @@
 				<File Id="931559138" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 9.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity 9_D70252A0.wem</CachePath>
+				</File>
+				<File Id="936680060" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sneak victory render v1 125 2 [2024-05-31 154655].wav</ShortName>
+					<CachePath>SFX/sneak victory render v1 125 2 [2024-05-31 154655]_B02CE968.wem</CachePath>
 				</File>
 				<File Id="962271348" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Objects, Furniture, Moving Furniture, Table, Bottles Rattle SND1763 3.wav</ShortName>
@@ -938,10 +977,42 @@
 						<ActionSetSwitchEntry GroupId="2410351013" Id="3284755031" Name="Build"/>
 					</ActionSetSwitch>
 				</Event>
-				<Event Id="4148122764" Name="Play_Music_cafeteria" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+				<Event Id="4148122764" Name="Play_Music_cafeteria" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="22258212"/>
+					</MediaRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2410351013" Id="3284755031"/>
+							<MediaRefs>
+								<MediaRef Id="628961501"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2410351013" Id="2716678721"/>
+							<MediaRefs>
+								<MediaRef Id="936680060"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2410351013" Id="1593864692"/>
+							<MediaRefs>
+								<MediaRef Id="622128103"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2410351013" Id="1735831046"/>
+							<MediaRefs>
+								<MediaRef Id="762861487"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
 					<ActionPostEvent>
 						<ActionPostEventEntry Id="177767409" Name="Stop_Music_global"/>
 					</ActionPostEvent>
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="2410351013" Id="3284755031" Name="Build"/>
+					</ActionSetSwitch>
 				</Event>
 				<Event Id="777761339" Name="Play_Music_SetSwitch_build" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetSwitch>
@@ -986,6 +1057,9 @@
 						<MediaRef Id="607203765"/>
 						<MediaRef Id="794457832"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="325789949" Name="Play_Physics_basicToFloor" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.42316666" DurationMax="0.60125">
 					<MediaRefs>
@@ -1011,6 +1085,9 @@
 						<MediaRef Id="969539204"/>
 						<MediaRef Id="999670957"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="1334739297" Name="Play_Physics_concreteToBlock" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.27020833" DurationMax="0.8985208">
 					<MediaRefs>
@@ -1036,6 +1113,9 @@
 						<MediaRef Id="1013447040"/>
 						<MediaRef Id="1060606589"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="52822808" Name="Play_Physics_concreteToFloor" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.49516666" DurationMax="0.89641666">
 					<MediaRefs>
@@ -1061,6 +1141,9 @@
 						<MediaRef Id="1000977322"/>
 						<MediaRef Id="1047804260"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="1746020630" Name="Play_Physics_decoToFloor" DurationType="OneShot" DurationMin="0.51241374" DurationMax="0.64399356">
 					<MediaRefs>
@@ -1124,5 +1207,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{34560CFB-0D2C-0023-96E5-62A2C0A4919B}</FileHash>
+	<FileHash>{0DCA4181-0B40-9F63-83A2-28B9C73E06C3}</FileHash>
 </SoundBanksInfo>

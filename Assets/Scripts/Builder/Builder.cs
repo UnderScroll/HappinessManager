@@ -42,6 +42,7 @@ namespace Builder
             data.Position = position;
 
             UpdateCell(position);
+            AkSoundEngine.PostEvent("Play_Build_basic_block_place", gameObject);
         }
 
         void RemoveBlock(int3 position)
@@ -53,6 +54,7 @@ namespace Builder
                 Level.Structure.Cells[position.x, position.y, position.z] = null;
 
                 UpdateCell(position);
+                AkSoundEngine.PostEvent("Play_Build_basic_block_remove", gameObject);
             }
         }
         void ModifyBlockData(CellData data, int3 position)
