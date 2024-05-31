@@ -5,7 +5,7 @@ using Unity.Mathematics;
 using UnityEditor;
 using UnityEngine;
 
-#if UNITY_EDITOR
+
 public partial class LevelEditor : MonoBehaviour
 {
     [Flags]
@@ -375,5 +375,3 @@ public partial class LevelEditor : MonoBehaviour
         AssetDatabase.Refresh();
     }
 }
-
-#endif

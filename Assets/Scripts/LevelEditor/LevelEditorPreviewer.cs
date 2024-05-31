@@ -2,7 +2,6 @@ using Builder;
 using Unity.Mathematics;
 using UnityEngine;
 
-#if UNITY_EDITOR
 public partial class LevelEditor : MonoBehaviour
 {
     public GameObject[,,] previewBlocks;
@@ -59,4 +58,3 @@ public partial class LevelEditor : MonoBehaviour
         previewBlocks[position.x, position.y, position.z] = newInstance;
     }
 }
-#endif

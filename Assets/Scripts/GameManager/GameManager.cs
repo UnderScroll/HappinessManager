@@ -13,8 +13,6 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public LevelLoader.LevelLoader LevelLoader;
     [HideInInspector]
-    public RuleManager RuleManager;
-    [HideInInspector]
     public UI_HUD UI_HUD;
 
     private bool _playing = false;
@@ -27,8 +25,6 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Failed to get the Builder Component");
         if (!TryGetComponent(out LevelLoader))
             Debug.LogError("Failed to get the LevelLoader Component");
-        if (!TryGetComponent(out RuleManager))
-            Debug.LogError("Failed to get the RuleManager Component");
 
         Simulator.StructureOrigin = StructureOrigin;
         Builder.StructureOrigin = StructureOrigin;

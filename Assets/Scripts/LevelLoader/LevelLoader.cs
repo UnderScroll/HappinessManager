@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace LevelLoader
 {
@@ -13,8 +12,6 @@ namespace LevelLoader
 
         [HideInInspector]
         public UI_HUD UI_HUD;
-
-        public string nextFloorname;
 
         private void Awake()
         {
@@ -34,14 +31,7 @@ namespace LevelLoader
             uint nextLevelIndex = _CurrentLevelIndex + 1;
             if (!(nextLevelIndex < Levels.Count))
             {
-                Debug.LogWarning($"Tried to load level {nextLevelIndex} but there is no such level, trying to load next scene");
-                if (nextFloorname == null || nextFloorname is "")
-                {
-                    Debug.LogWarning($"Tried to load next Floot but there is none");
-                    return;
-                }
-
-                SceneManager.LoadScene(nextFloorname, LoadSceneMode.Single);
+                Debug.LogWarning($"Tried to load level {nextLevelIndex} but there is no such level");
                 return;
             }
 
@@ -87,13 +77,6 @@ namespace LevelLoader
                 Physics.gravity = new Vector3(0, -9.81f, 0);
             }
 
-
-            _gameManager.RuleManager.Reset();
-            
-            _gameManager.RuleManager.Rules = level.Rules;
-            _gameManager.RuleManager.Initialize();
-
-            _gameManager.RuleManager.Debug_DisplayAllRules();
             //Load Placeableblocks in HUD
             UI_HUD.blocks = level.PlaceableCellTypes.Get();
         }
