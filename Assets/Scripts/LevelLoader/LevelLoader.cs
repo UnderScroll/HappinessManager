@@ -58,7 +58,16 @@ namespace LevelLoader
         private void LoadLevel(Level level)
         {
             Debug.Log($"Loading {level.name}");
-
+            if (_CurrentLevelIndex==0)
+            {
+                AkSoundEngine.PostEvent("Play_Music_cafeteria", gameObject);
+            }
+            else
+            {
+                AkSoundEngine.PostEvent("Play_Music_SetSwitch_build", gameObject);
+            }
+            
+            AkSoundEngine.PostEvent("Play_Amb_boss", gameObject);
             _gameManager.ResetSimulation();   
             
             UnloadCurrentLevel();
