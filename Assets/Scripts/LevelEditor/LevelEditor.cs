@@ -47,7 +47,7 @@ public partial class LevelEditor : MonoBehaviour
     public void OnDrawGizmos()
     {
         //Draw CurrentCell
-        if (CurrentCellPreviewInstance != null)
+        if (CurrentCellPreviewInstance != null && CurrentCellPreviewInstance.GetComponent<MeshFilter>() != null)
         {
             Gizmos.color = Color.white;
             Gizmos.DrawWireMesh(CurrentCellPreviewInstance.GetComponent<MeshFilter>().sharedMesh, CurrentCellPreviewInstance.transform.position, CurrentCellPreviewInstance.transform.rotation, CurrentCellPreviewInstance.transform.localScale);

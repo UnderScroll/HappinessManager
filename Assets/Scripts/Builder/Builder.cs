@@ -57,6 +57,7 @@ namespace Builder
             data.Position = position;
 
             UpdateCell(position);
+            AkSoundEngine.PostEvent("Play_Build_basic_block_place", gameObject);
         }
 
         void RemoveBlock(int3 position)
@@ -68,6 +69,7 @@ namespace Builder
                 Level.Structure.Cells[position.x, position.y, position.z] = null;
 
                 UpdateCell(position);
+                AkSoundEngine.PostEvent("Play_Build_basic_block_remove", gameObject);
             }
         }
         void ModifyBlockData(CellData data, int3 position)
@@ -193,7 +195,7 @@ namespace Builder
         public void OnSelectBlock3(InputValue _) => SelectBlock(2);
         public void OnSelectBlock4(InputValue _) => SelectBlock(3);
 
-        private void SelectBlock(uint index)
+        public void SelectBlock(uint index)
         {
             if (index < Level.PlaceableCellTypes.Get().Count)
                 _selectedBlock = (CellData)Level.PlaceableCellTypes[(int)index];

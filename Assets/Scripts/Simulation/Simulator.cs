@@ -146,6 +146,7 @@ namespace Simulation
         public void Launch()
         {
             _isSimulationRunning = true;
+            AkSoundEngine.PostEvent("Play_Music_SetSwitch_validating", gameObject);
         }
 
         private void Update()
@@ -175,12 +176,15 @@ namespace Simulation
         public void OnLevelValidated()
         {
             Debug.Log("LevelValidated");
+            AkSoundEngine.PostEvent("Play_Music_SetSwitch_victory", gameObject);
         }
 
         public void OnEmployeeGroundCollision()
         {
             _isSimulationFailed = true;
             _isSimulationRunning = false;
+            AkSoundEngine.PostEvent("Play_Music_SetSwitch_defeat", gameObject);
+            AkSoundEngine.PostEvent("Stop_Amb_global", gameObject);
         }
     }
 }
