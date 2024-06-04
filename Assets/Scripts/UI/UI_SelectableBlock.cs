@@ -33,20 +33,14 @@ public class UI_SelectableBlock : MonoBehaviour
             Debug.LogError("Failed to get the UI_HUD in UI_Hoverable");
     }
 
-    public void Over()
+    public void MoveUp()
     {
         if (!ui_hud.IsThisBlockSelected(blockInfo))
-        {
-            this.gameObject.transform.DOBlendableLocalMoveBy(new Vector3(0, decalOverValue, 0), 0.7f);
-            ui_hud.TemporaryDescription(blockInfo, true);
-        }
+            this.gameObject.transform.DOBlendableLocalMoveBy(new Vector3(0,decalOverValue,0), 0.7f);
     }
-    public void Unover()
+    public void MoveDown()
     {
         if (!ui_hud.IsThisBlockSelected(blockInfo))
-        {
             this.gameObject.transform.DOBlendableLocalMoveBy(new Vector3(0, -decalOverValue, 0), 0.5f);
-            ui_hud.TemporaryDescription(blockInfo, false);
-        }
     }
 }

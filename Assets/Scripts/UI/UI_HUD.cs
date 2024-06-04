@@ -5,7 +5,6 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
-using UnityEngine.Timeline;
 
 public class UI_HUD : MonoBehaviour
 {
@@ -27,9 +26,6 @@ public class UI_HUD : MonoBehaviour
     [SerializeField] Transform parentTranform;
     [SerializeField] TextMeshProUGUI blockDescription;
 
-    [Header("Notebook Menu")]
-    [SerializeField] GameObject notebook;
-
     private GameObject actualMenu;
     private GameManager _gameManager;
 
@@ -38,8 +34,6 @@ public class UI_HUD : MonoBehaviour
         _gameManager = FindObjectOfType<GameManager>();
         if (_gameManager == null)
             Debug.LogError("Failed to find GameManager in UI_HUD");
-
-        CloseNotebook();
 
         // TODO : init money value from level
         UpdateMoneyText();
@@ -91,13 +85,6 @@ public class UI_HUD : MonoBehaviour
             blockDescription.text = selected.name + " : " + selected.Description;
         }
     }
-    public void TemporaryDescription(CellType _block, bool _active)
-    {
-        if (_active)
-            blockDescription.text = _block.name + " : " + _block.Description;
-        else
-            UpdateBlockDescription();
-    }
     private void Unselect(CellType _block) // ONLY DISPLAY, NO FUNCTIONNAL THING
     {
         // List of all the selectable blocks to find the one to unselect
@@ -109,7 +96,7 @@ public class UI_HUD : MonoBehaviour
             foreach (UI_SelectableBlock block in list)
             {
                 if (block.blockInfo.name == _block.name)
-                    block.Unover();
+                    block.MoveDown();
             }
         }
 
@@ -136,10 +123,9 @@ public class UI_HUD : MonoBehaviour
                 // Update UI
                 if (_oldSelection != null)
                     Unselect(_oldSelection);
-
-                UpdateBlockDescription();
             }
         }
+        UpdateBlockDescription();
     }
 
     public bool IsThisBlockSelected(CellType _block)
@@ -153,17 +139,5 @@ public class UI_HUD : MonoBehaviour
         }
         return false;
     }
-    #endregion
-
-    #region
-    public void OpenNotebook()
-    {
-        // TODO : actuellement on peut poser des blocs à travers l'UI pour une raison obscure
-        notebook.SetActive(true);
-    }
-    public void CloseNotebook()
-    {
-        notebook.SetActive(false);
-    }
-    #endregion
+    #endregion 
 }
