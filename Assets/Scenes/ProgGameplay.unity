@@ -385,6 +385,7 @@ MonoBehaviour:
   Builder: {fileID: 0}
   Simulator: {fileID: 0}
   LevelLoader: {fileID: 0}
+  RuleManager: {fileID: 0}
   UI_HUD: {fileID: 0}
 --- !u!114 &737254369
 MonoBehaviour:
@@ -399,6 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Level: {fileID: 0}
+  SpentMoney: 0
 --- !u!114 &737254370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,8 +427,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Levels:
-  - {fileID: 11400000, guid: 9def0dca4f640dc42a534187f758367a, type: 2}
+  - {fileID: 0}
   UI_HUD: {fileID: 0}
+  nextFloorname: 
 --- !u!1 &1052361899
 GameObject:
   m_ObjectHideFlags: 0

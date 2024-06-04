@@ -1,7 +1,5 @@
 using Builder;
 using System.Collections.Generic;
-using System.Data;
-using UnityEditor;
 using UnityEngine;
 
 
@@ -10,11 +8,11 @@ public class Level : ScriptableObject
 {
     //Structure
     public Structure Structure;
-    
-    //Blocks
+
+    //Cells
     public CellTypes CellTypes;
     public CellTypes PlaceableCellTypes;
-    
+
     //Wind
     public bool IsWindEnabled;
     public Vector3 WindDirection;
