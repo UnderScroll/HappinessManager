@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace LevelLoader
 {
@@ -9,6 +10,11 @@ namespace LevelLoader
 
         private GameManager _gameManager;
         private uint _CurrentLevelIndex;
+
+        [HideInInspector]
+        public UI_HUD UI_HUD;
+
+        public string nextFloorname;
 
         private void Awake()
         {
@@ -28,7 +34,14 @@ namespace LevelLoader
             uint nextLevelIndex = _CurrentLevelIndex + 1;
             if (!(nextLevelIndex < Levels.Count))
             {
-                Debug.LogWarning($"Tried to load level {nextLevelIndex} but there is no such level");
+                Debug.LogWarning($"Tried to load level {nextLevelIndex} but there is no such level, trying to load next scene");
+                if (nextFloorname == null || nextFloorname is "")
+                {
+                    Debug.LogWarning($"Tried to load next Floot but there is none");
+                    return;
+                }
+
+                SceneManager.LoadScene(nextFloorname, LoadSceneMode.Single);
                 return;
             }
 
@@ -55,7 +68,16 @@ namespace LevelLoader
         private void LoadLevel(Level level)
         {
             Debug.Log($"Loading {level.name}");
-
+            if (_CurrentLevelIndex==0)
+            {
+                AkSoundEngine.PostEvent("Play_Music_cafeteria", gameObject);
+            }
+            else
+            {
+                AkSoundEngine.PostEvent("Play_Music_SetSwitch_build", gameObject);
+            }
+            
+            AkSoundEngine.PostEvent("Play_Amb_boss", gameObject);
             _gameManager.ResetSimulation();   
             
             UnloadCurrentLevel();
@@ -73,6 +95,16 @@ namespace LevelLoader
             {
                 Physics.gravity = new Vector3(0, -9.81f, 0);
             }
+
+
+            _gameManager.RuleManager.Reset();
+            
+            _gameManager.RuleManager.Rules = level.Rules;
+            _gameManager.RuleManager.Initialize();
+
+            _gameManager.RuleManager.Debug_DisplayAllRules();
+            //Load Placeableblocks in HUD
+            UI_HUD.blocks = level.PlaceableCellTypes.Get();
         }
 
         public void UnloadCurrentLevel()

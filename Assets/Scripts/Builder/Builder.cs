@@ -3,6 +3,7 @@ using Unity.Mathematics;
 using UnityEngine.InputSystem;
 using UnityEngine.Assertions;
 using System;
+using System.Collections.Generic;
 
 namespace Builder
 {
@@ -13,6 +14,13 @@ namespace Builder
         private CellData _selectedBlock;
 
         private (Option<int3> pointedCell, Option<int3> cellToPlace) _pointed;
+
+        [HideInInspector]
+        public float SpentMoney = 0;
+        [HideInInspector]
+        public Dictionary<string, uint> BlockPlacedAmount;
+
+        private GameManager _gameManager;
 
         private readonly int3[] _neighborDeltaPositions = {
                 new( 0, 0, 1),
@@ -25,6 +33,7 @@ namespace Builder
 
         private readonly int[] _inverseFaceOrder = { 2, 3, 0, 1, 5, 4 };
 
+
         public void Initialize()
         {
             //Initialize the previewer
@@ -34,6 +43,12 @@ namespace Builder
             SelectBlock(0);
             if (_selectedBlock == null)
                 Debug.LogError("Failed to select first block, check if CellTypes is null or empty");
+
+            SpentMoney = 0;
+            BlockPlacedAmount = new();
+
+            foreach (CellType placeableCellType in Level.PlaceableCellTypes.Get())
+                BlockPlacedAmount.Add(placeableCellType.Name, 0);
         }
 
         void PlaceBlock(CellData data, int3 position)
@@ -42,6 +57,7 @@ namespace Builder
             data.Position = position;
 
             UpdateCell(position);
+            AkSoundEngine.PostEvent("Play_Build_basic_block_place", gameObject);
         }
 
         void RemoveBlock(int3 position)
@@ -53,6 +69,7 @@ namespace Builder
                 Level.Structure.Cells[position.x, position.y, position.z] = null;
 
                 UpdateCell(position);
+                AkSoundEngine.PostEvent("Play_Build_basic_block_remove", gameObject);
             }
         }
         void ModifyBlockData(CellData data, int3 position)
@@ -142,8 +159,15 @@ namespace Builder
             if (Level.Structure.Cells[positionToPlace.x, positionToPlace.y, positionToPlace.z] != null)
                 return;
 
+            if (!_gameManager.RuleManager.CanPlaceBlock(_selectedBlock.Type.Price))
+                return;
+
             PlaceBlock(_selectedBlock.Clone(), positionToPlace);
             UpdateConnection(positionToPlace);
+
+            SpentMoney += _selectedBlock.Type.Price;
+            BlockPlacedAmount[_selectedBlock.Type.Name]++;
+
             return;
         }
 
@@ -155,9 +179,15 @@ namespace Builder
             if (_pointed.cellToPlace.IsSome(out int3 positionToPlace)
                 && (positionToPlace.y == positionToRemove.y - 1))
                     return;
+            
+            CellType removedBlockType = Level.Structure.Cells[positionToRemove.x, positionToRemove.y, positionToRemove.z].Type;
 
             RemoveBlock(positionToRemove);
             UpdateConnection(positionToRemove);
+
+
+            SpentMoney -= removedBlockType.Price;
+            BlockPlacedAmount[removedBlockType.Name]--;
         }
 
         public void OnSelectBlock1(InputValue _) => SelectBlock(0);
@@ -165,7 +195,7 @@ namespace Builder
         public void OnSelectBlock3(InputValue _) => SelectBlock(2);
         public void OnSelectBlock4(InputValue _) => SelectBlock(3);
 
-        private void SelectBlock(uint index)
+        public void SelectBlock(uint index)
         {
             if (index < Level.PlaceableCellTypes.Get().Count)
                 _selectedBlock = (CellData)Level.PlaceableCellTypes[(int)index];

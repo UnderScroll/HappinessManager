@@ -12,6 +12,10 @@ public class GameManager : MonoBehaviour
     public Simulation.Simulator Simulator;
     [HideInInspector]
     public LevelLoader.LevelLoader LevelLoader;
+    [HideInInspector]
+    public RuleManager RuleManager;
+    [HideInInspector]
+    public UI_HUD UI_HUD;
 
     private bool _playing = false;
 
@@ -23,9 +27,17 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Failed to get the Builder Component");
         if (!TryGetComponent(out LevelLoader))
             Debug.LogError("Failed to get the LevelLoader Component");
+        if (!TryGetComponent(out RuleManager))
+            Debug.LogError("Failed to get the RuleManager Component");
 
         Simulator.StructureOrigin = StructureOrigin;
         Builder.StructureOrigin = StructureOrigin;
+
+        UI_HUD = FindObjectOfType<UI_HUD>();
+        if (UI_HUD == null)
+            Debug.LogError("Failed to get the UI_HUD in GameManager");
+        else
+            LevelLoader.UI_HUD = UI_HUD;
     }
 
     public void OnPlay(InputValue _)
@@ -41,28 +53,28 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres privés non utilisés", Justification = "OnReset is called by Unity Input System")]
+    [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres privï¿½s non utilisï¿½s", Justification = "OnReset is called by Unity Input System")]
     void OnReset(InputValue _)
     {
         Debug.Log("ResetingLevel");
         ResetSimulation();
     }
 
-    [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres privés non utilisés", Justification = "OnReloadLevel is called by Unity Input System")]
+    [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres privï¿½s non utilisï¿½s", Justification = "OnReloadLevel is called by Unity Input System")]
     void OnReloadLevel(InputValue _)
     {
         Debug.Log("ReloadingLevel");
         LevelLoader.ReloadLevel();
     }
 
-    [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres privés non utilisés", Justification = "OnLoadNextLevel is called by Unity Input System")]
+    [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres privï¿½s non utilisï¿½s", Justification = "OnLoadNextLevel is called by Unity Input System")]
     void OnLoadNextLevel(InputValue _)
     {
         Debug.Log("LoadingNextLevel");
         LevelLoader.LoadNextLevel();
     }
 
-    [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres privés non utilisés", Justification = "OnLoadPreviousLevel is called by Unity Input System")]
+    [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres privï¿½s non utilisï¿½s", Justification = "OnLoadPreviousLevel is called by Unity Input System")]
     void OnLoadPreviousLevel(InputValue _)
     {
         Debug.Log("LoadingPreviousLevel");
