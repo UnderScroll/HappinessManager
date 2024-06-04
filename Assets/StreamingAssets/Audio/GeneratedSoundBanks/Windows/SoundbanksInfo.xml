@@ -9,36 +9,1203 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{986487A9-2683-E47A-8688-3D0FE6FDB954}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F096131A-AE1F-3EC8-EB8A-5B98D310AB5C}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<Custom>
+					<Plugin Id="11386286" Name="Delay (Custom)" LibName="Wwise Delay" LibId="6946819"/>
+				</Custom>
+				<ShareSets>
+					<Plugin Id="602546716" Name="Room_Large" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="69765534" Name="Musique"/>
+				<Bus Id="393239870" Name="SFX"/>
+				<Bus Id="1117531639" Name="Amb"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="821123712" Name="Room_Verb">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="11386286"/>
+						</Custom>
+						<ShareSets>
+							<PluginRef Id="602546716"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
+			<GameParameters>
+				<GameParameter Id="1561184313" Name="RTPC_SENSITIVITY_FILTER"/>
+				<GameParameter Id="1951144523" Name="Collision_Velocity"/>
+				<GameParameter Id="3067876527" Name="RTPC_SFX_BUS"/>
+				<GameParameter Id="3432596327" Name="RTPC_MUSIC_BUS"/>
+				<GameParameter Id="3583098985" Name="Reverb_Distance"/>
+			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="2410351013" Name="MUSIC_GLOBAL_STATE_SWITCH">
+					<Switches>
+						<Switch Id="1593864692" Name="Defeat"/>
+						<Switch Id="1735831046" Name="Validating"/>
+						<Switch Id="2716678721" Name="Victory"/>
+						<Switch Id="3284755031" Name="Build"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2085715797" Type="User" Language="SFX" Hash="{20B336A5-347A-23EF-9D01-01CBAA3B7CA5}">
-			<ShortName>HM_Test_SB</ShortName>
-			<Path>HM_Test_SB.bnk</Path>
+		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{BFD36604-5F15-6405-EB11-4CA3229A1D66}">
+			<ShortName>HM_Global_SB</ShortName>
+			<Path>HM_Global_SB.bnk</Path>
 			<Media>
+				<File Id="1954477" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity 4.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity 4_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="3241458" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 16.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity 16_68B7FA8A.wem</CachePath>
+				</File>
+				<File Id="5243427" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToBlock_high_velocity 3.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_high_velocity 3_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="22258212" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sneak transi render 125 [2024-05-31 154615].wav</ShortName>
+					<CachePath>SFX/sneak transi render 125 [2024-05-31 154615]_B02CE968.wem</CachePath>
+				</File>
+				<File Id="24325655" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToFloor_high_velocity 5.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_high_velocity 5_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="28084777" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_concrete block place.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_concrete block place_CD2105D8.wem</CachePath>
+				</File>
+				<File Id="29977796" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Audio\Digital Click Negative 07.wav</ShortName>
+					<CachePath>SFX/Soundly Audio/Digital Click Negative 07_FC0AB68B.wem</CachePath>
+				</File>
+				<File Id="32584524" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 11.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity 11_89C057A1.wem</CachePath>
+				</File>
+				<File Id="37935797" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToBlock_low_velocity.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_low_velocity_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="50950265" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_OS_UI_toggle_out .wav</ShortName>
+					<CachePath>SFX/HM_SFX_OS_UI_toggle_out _FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="51760018" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PROTO VICTORY CMAJ [2024-05-01 182259].wav</ShortName>
+					<CachePath>SFX/PROTO VICTORY CMAJ [2024-05-01 182259]_B02CE968.wem</CachePath>
+				</File>
+				<File Id="60777002" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToBlock_high_velocity 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_high_velocity 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="68436417" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Audio\Objects, Furniture, Moving Furniture, Table, Bottles Rattle SND1763 1.wav</ShortName>
+					<CachePath>SFX/Soundly Audio/Objects, Furniture, Moving Furniture, Table, Bottles Rattle SND1763 1_3CF8ACEE.wem</CachePath>
+				</File>
+				<File Id="71521605" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_basic block place 4.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_basic block place 4_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="77430694" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 5.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 5_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="79623535" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_offTabHover 1.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_offTabHover 1_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="81236708" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 7.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 7_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="86682777" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity .wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity _FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="95300761" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_concrete block place 5.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_concrete block place 5_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="99661867" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_basic block remove 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_basic block remove 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="106632701" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_Menu_paused.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_Menu_paused_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="113913307" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToBlock_low_velocity 6.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_low_velocity 6_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="116544755" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_concrete block remove 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_concrete block remove 2_0B9ADCC2.wem</CachePath>
+				</File>
+				<File Id="131837971" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_concrete block remove 4.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_concrete block remove 4_7E86D518.wem</CachePath>
+				</File>
+				<File Id="141570635" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_basic block remove .wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_basic block remove _FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="146743345" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_UI_RC_Menu_money spent 3.wav</ShortName>
+					<CachePath>SFX/HM_UI_RC_Menu_money spent 3_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="149496529" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToBlock_high_velocity 3.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_high_velocity 3_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="149617397" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToFloor_high_velocity .wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_high_velocity _FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="152179235" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 6.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity 6_57CCF582.wem</CachePath>
+				</File>
+				<File Id="153520191" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_soap block remove 4.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_soap block remove 4_042A5517.wem</CachePath>
+				</File>
+				<File Id="159526382" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_onBack 1.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_onBack 1_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="164355719" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 5.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity 5_76A802C1.wem</CachePath>
+				</File>
+				<File Id="165050142" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_soap block place 4.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_soap block place 4_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="168779784" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_soap block remove 5.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_soap block remove 5_E1B3B8D5.wem</CachePath>
+				</File>
+				<File Id="173590557" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>title v1.wav</ShortName>
+					<CachePath>SFX/title v1_B02CE968.wem</CachePath>
+				</File>
+				<File Id="208452939" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_tab_onclick 1.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_tab_onclick 1_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="225915335" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_basic block place 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_basic block place 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="231407703" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity 6.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity 6_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="249133521" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_concrete block remove 3.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_concrete block remove 3_ED8F32E5.wem</CachePath>
+				</File>
+				<File Id="259622842" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Audio\Digital Click Negative 07 1.wav</ShortName>
+					<CachePath>SFX/Soundly Audio/Digital Click Negative 07 1_7D48D16B.wem</CachePath>
+				</File>
+				<File Id="272071745" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_concrete block place 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_concrete block place 2_D346F6DB.wem</CachePath>
+				</File>
+				<File Id="274408922" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 14.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity 14_F2898E1B.wem</CachePath>
+				</File>
+				<File Id="275469356" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToFloor_high_velocity 6.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_high_velocity 6_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="279414448" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToFloor_high_velocity 4.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_high_velocity 4_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="280424840" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_OS_UI_item tab hover basic.wav</ShortName>
+					<CachePath>SFX/HM_SFX_OS_UI_item tab hover basic_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="295293615" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 14.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 14_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="298324644" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="299394610" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_concrete block place 4.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_concrete block place 4_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="300895670" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 4.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 4_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="310037684" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 13.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity 13_C72D81A4.wem</CachePath>
+				</File>
+				<File Id="312490870" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToBlock_low_velocity 4.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_low_velocity 4_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="330598536" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_concrete block remove.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_concrete block remove_D4660BF2.wem</CachePath>
+				</File>
+				<File Id="333109650" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 13.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 13_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="355768534" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_soap block remove 6.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_soap block remove 6_F6936C40.wem</CachePath>
+				</File>
+				<File Id="360748004" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 4.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity 4_44A9DE64.wem</CachePath>
+				</File>
+				<File Id="370439774" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_OS_UI_item tab hover heavy.wav</ShortName>
+					<CachePath>SFX/HM_SFX_OS_UI_item tab hover heavy_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="370966626" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToBlock_high_velocity 5.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_high_velocity 5_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="382610479" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_tab_hover _highlighter 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_tab_hover _highlighter 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="393246247" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_basic block place.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_basic block place_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="402174076" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_onBack 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_onBack 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="405181894" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 6.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 6_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="408305723" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 4.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 4_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="413350578" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity .wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity _FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="418850945" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_tab_hover _highlighter 3.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_tab_hover _highlighter 3_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="424006832" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToBlock_high_velocity 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_high_velocity 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="434939420" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_tab_hover _highlighter 1.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_tab_hover _highlighter 1_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="445722997" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 11.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 11_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="446666759" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_soap block place.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_soap block place_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="454019134" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PROTO VALIDATE DMIN [2024-05-01 182249].wav</ShortName>
+					<CachePath>SFX/PROTO VALIDATE DMIN [2024-05-01 182249]_B02CE968.wem</CachePath>
+				</File>
+				<File Id="464768831" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_concrete block place 3.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_concrete block place 3_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="478058483" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToBlock_high_velocity 6.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_high_velocity 6_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="483158435" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 10.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 10_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="485974224" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_UI_RC_Menu_money spent 2.wav</ShortName>
+					<CachePath>SFX/HM_UI_RC_Menu_money spent 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="492168383" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_UI_RC_Menu_select .wav</ShortName>
+					<CachePath>SFX/HM_UI_RC_Menu_select _FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="494964440" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 9.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 9_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="496792122" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToBlock_low_velocity 5.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_low_velocity 5_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="500009155" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="505467737" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_basic block remove 6.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_basic block remove 6_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="513890808" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 10.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 10_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="524533585" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 12.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 12_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="534417975" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_onSettingTabClick 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_onSettingTabClick 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="543340150" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToBlock_low_velocity 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_low_velocity 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="547684093" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 8.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity 8_41634825.wem</CachePath>
+				</File>
+				<File Id="556204492" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_Menu_unpaused 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_Menu_unpaused 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="560646483" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_items off tab hover 1.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_items off tab hover 1_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="570621525" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="570916773" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToBlock_high_velocity 4.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_high_velocity 4_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="579863205" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_basic block remove 5.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_basic block remove 5_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="591683449" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToBlock_high_velocity.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_high_velocity_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="595160945" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_main menu play hover 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_main menu play hover 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="600098633" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_concrete block remove 3.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_concrete block remove 3_87765A96.wem</CachePath>
+				</File>
+				<File Id="601859891" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_toggle in 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_toggle in 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="607203765" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToBlock_high_velocity 4.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_high_velocity 4_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="607376516" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PROTO CORE LOOP cmaj dmin emin [2024-05-01 182231].wav</ShortName>
+					<CachePath>SFX/PROTO CORE LOOP cmaj dmin emin [2024-05-01 182231]_B02CE968.wem</CachePath>
+				</File>
+				<File Id="609837466" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Audio\Empty Office Space Room Tone With Aircon Sfx by Soup_UnderScore Id-708021.wav</ShortName>
+					<CachePath>SFX/Soundly Audio/Empty Office Space Room Tone With Aircon Sfx by Soup_UnderScore Id-708021_7B4D30AC.wem</CachePath>
+				</File>
+				<File Id="611002344" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity 5.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity 5_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="622120537" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_soap block remove 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_soap block remove 2_BE5FF748.wem</CachePath>
+				</File>
+				<File Id="622128103" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sneak defeat render v1 125 [2024-05-31 154728].wav</ShortName>
+					<CachePath>SFX/sneak defeat render v1 125 [2024-05-31 154728]_B02CE968.wem</CachePath>
+				</File>
+				<File Id="627881350" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 7.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 7_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="628961501" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sneak core loop render v1 125 2  [2024-05-31 154311].wav</ShortName>
+					<CachePath>SFX/sneak core loop render v1 125 2  [2024-05-31 154311]_B02CE968.wem</CachePath>
+				</File>
+				<File Id="641376820" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Audio\Digital Click Negative 07 2.wav</ShortName>
+					<CachePath>SFX/Soundly Audio/Digital Click Negative 07 2_7932E522.wem</CachePath>
+				</File>
+				<File Id="649829742" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_onTabHover 1.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_onTabHover 1_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="655260355" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_onTabHover 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_onTabHover 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="669392195" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 9.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 9_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="684619912" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_basic block place 3.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_basic block place 3_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="693355854" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 13.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 13_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="729362103" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_offTabHover 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_offTabHover 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="733807707" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Audio\Objects, Furniture, Moving Furniture, Table, Bottles Rattle SND1763 2.wav</ShortName>
+					<CachePath>SFX/Soundly Audio/Objects, Furniture, Moving Furniture, Table, Bottles Rattle SND1763 2_090F43E4.wem</CachePath>
+				</File>
+				<File Id="736123375" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 8.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 8_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="739761322" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_concrete block remove.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_concrete block remove_A782ED48.wem</CachePath>
+				</File>
+				<File Id="741019026" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_onSettingTabClick 1.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_onSettingTabClick 1_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="747819808" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_basic block remove 4.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_basic block remove 4_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="749112701" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PROTO VALIDATE EMIN [2024-05-01 182252].wav</ShortName>
+					<CachePath>SFX/PROTO VALIDATE EMIN [2024-05-01 182252]_B02CE968.wem</CachePath>
+				</File>
+				<File Id="750784693" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_tab_onclick 3.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_tab_onclick 3_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="751520739" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_toggle in 1.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_toggle in 1_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="753994427" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_items off tab hover 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_items off tab hover 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="762861487" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sneak validate render v1 125 [2024-05-31 154642].wav</ShortName>
+					<CachePath>SFX/sneak validate render v1 125 [2024-05-31 154642]_B02CE968.wem</CachePath>
+				</File>
+				<File Id="770784891" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_OS_UI_item tab hover soap.wav</ShortName>
+					<CachePath>SFX/HM_SFX_OS_UI_item tab hover soap_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="772872031" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_soap block place 3.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_soap block place 3_B5C15E0B.wem</CachePath>
+				</File>
+				<File Id="776349846" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_Menu_unpaused.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_Menu_unpaused_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="782602914" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_main menu play hover 1.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_main menu play hover 1_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="783616519" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 10.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity 10_071568EB.wem</CachePath>
+				</File>
+				<File Id="794457832" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToBlock_low_velocity 3.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_low_velocity 3_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="795055527" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 15.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 15_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="799933830" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PROTO DEFEAT EMIN [2024-05-01 182306].wav</ShortName>
+					<CachePath>SFX/PROTO DEFEAT EMIN [2024-05-01 182306]_B02CE968.wem</CachePath>
+				</File>
+				<File Id="801643773" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 15.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity 15_9EC0A8CC.wem</CachePath>
+				</File>
+				<File Id="808216408" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_concrete block remove 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_concrete block remove 2_A0C09DAD.wem</CachePath>
+				</File>
+				<File Id="809883662" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PROTO TRANSI [2024-05-01 182310].wav</ShortName>
+					<CachePath>SFX/PROTO TRANSI [2024-05-01 182310]_B02CE968.wem</CachePath>
+				</File>
+				<File Id="822291799" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 8.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 8_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="824409619" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_OS_Menu_game startup.wav</ShortName>
+					<CachePath>SFX/HM_SFX_OS_Menu_game startup_B13AC781.wem</CachePath>
+				</File>
+				<File Id="826196519" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_basic block remove 3.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_basic block remove 3_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="830288520" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_soap block remove.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_soap block remove_93D621C3.wem</CachePath>
+				</File>
+				<File Id="838587232" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity 3.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity 3_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="844089229" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_UI_RC_Menu_select 2.wav</ShortName>
+					<CachePath>SFX/HM_UI_RC_Menu_select 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="853175668" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_main menu play hover 3.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_main menu play hover 3_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="853273625" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_items off tab hover 4.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_items off tab hover 4_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="854023824" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 14.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 14_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="858138438" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 3.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 3_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="863046301" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 7.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity 7_22492956.wem</CachePath>
+				</File>
+				<File Id="863752724" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_soap block remove 3.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_soap block remove 3_957D9876.wem</CachePath>
+				</File>
+				<File Id="868919515" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToFloor_high_velocity 3.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_high_velocity 3_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="874899160" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 3.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity 3_A883030C.wem</CachePath>
+				</File>
+				<File Id="880104204" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="886483541" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_Menu_paused 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_Menu_paused 2_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="899413808" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AssetTest.wav</ShortName>
-					<CachePath>SFX/AssetTest_10C4C929.wem</CachePath>
+					<CachePath>SFX/AssetTest_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="900111670" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 11.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 11_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="902669382" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 12.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 12_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="904806863" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_soap block place 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_soap block place 2_5B93C901.wem</CachePath>
+				</File>
+				<File Id="911224313" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 5.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 5_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="922530664" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_tab_onclick 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_tab_onclick 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="923238903" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 6.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 6_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="931559138" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 9.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity 9_D70252A0.wem</CachePath>
+				</File>
+				<File Id="936680060" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sneak victory render v1 125 2 [2024-05-31 154655].wav</ShortName>
+					<CachePath>SFX/sneak victory render v1 125 2 [2024-05-31 154655]_B02CE968.wem</CachePath>
+				</File>
+				<File Id="962271348" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Audio\Objects, Furniture, Moving Furniture, Table, Bottles Rattle SND1763 3.wav</ShortName>
+					<CachePath>SFX/Soundly Audio/Objects, Furniture, Moving Furniture, Table, Bottles Rattle SND1763 3_6C6E2BE3.wem</CachePath>
+				</File>
+				<File Id="968615444" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Audio\Ambience_Restaurant_Pizza_Parlor_Walla_PSEF016 1.wav</ShortName>
+					<CachePath>SFX/Soundly Audio/Ambience_Restaurant_Pizza_Parlor_Walla_PSEF016 1_1BD48871.wem</CachePath>
+				</File>
+				<File Id="969539204" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity_8DBA348F.wem</CachePath>
+				</File>
+				<File Id="971100804" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_concrete block remove 4.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_concrete block remove 4_3ACC45B1.wem</CachePath>
+				</File>
+				<File Id="971963527" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_UI_RC_Menu_money spent.wav</ShortName>
+					<CachePath>SFX/HM_UI_RC_Menu_money spent_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="986575835" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToBlock_high_velocity 6.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_high_velocity 6_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="989727965" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_soap block place 5.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_soap block place 5_8DEF8BE1.wem</CachePath>
+				</File>
+				<File Id="999670957" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity 2_E8307AF3.wem</CachePath>
+				</File>
+				<File Id="1000977322" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToFloor_high_velocity 2.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_high_velocity 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="1007401334" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToBlock_high_velocity 5.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_high_velocity 5_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="1013447040" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 15.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 15_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="1023791989" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Audio\Digital Click Negative 07 3.wav</ShortName>
+					<CachePath>SFX/Soundly Audio/Digital Click Negative 07 3_E047F7A8.wem</CachePath>
+				</File>
+				<File Id="1031247465" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_SC_Build_basic block place 5.wav</ShortName>
+					<CachePath>SFX/HM_SFX_SC_Build_basic block place 5_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="1047804260" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 3.wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 3_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="1060606589" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_BC_Physics_concreteToBlock_high_velocity .wav</ShortName>
+					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_high_velocity _FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="1067963033" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_items off tab hover 3.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_items off tab hover 3_FD4DF9DE.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1990128658" Name="Room_Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
+				<Event Id="4182646214" Name="Play_Amb_boss" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="609837466"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2051152657" Name="Play_Amb_cafeteria" DurationType="OneShot" DurationMin="48.037617" DurationMax="48.037617">
+					<MediaRefs>
+						<MediaRef Id="968615444"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1990128658"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
 				<Event Id="1191715222" Name="Play_AssetTest" DurationType="OneShot" DurationMin="0.76885414" DurationMax="0.76885414">
 					<MediaRefs>
 						<MediaRef Id="899413808"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1414775411" Name="Play_Build_basic_block_place" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.49178016" DurationMax="1.0579422">
+					<MediaRefs>
+						<MediaRef Id="71521605"/>
+						<MediaRef Id="225915335"/>
+						<MediaRef Id="393246247"/>
+						<MediaRef Id="684619912"/>
+						<MediaRef Id="1031247465"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1294229974" Name="Play_Build_basic_block_remove" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.8098084" DurationMax="1.3069167">
+					<MediaRefs>
+						<MediaRef Id="99661867"/>
+						<MediaRef Id="141570635"/>
+						<MediaRef Id="505467737"/>
+						<MediaRef Id="579863205"/>
+						<MediaRef Id="747819808"/>
+						<MediaRef Id="826196519"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="684309162" Name="Play_Build_concrete_block_place" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.6174825" DurationMax="1.1732394">
+					<MediaRefs>
+						<MediaRef Id="28084777"/>
+						<MediaRef Id="95300761"/>
+						<MediaRef Id="272071745"/>
+						<MediaRef Id="299394610"/>
+						<MediaRef Id="464768831"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3541187073" Name="Play_Build_concrete_block_remove" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.3516376" DurationMax="1.8100752">
+					<MediaRefs>
+						<MediaRef Id="116544755"/>
+						<MediaRef Id="131837971"/>
+						<MediaRef Id="600098633"/>
+						<MediaRef Id="739761322"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4184810258" Name="Play_Build_deco_place" DurationType="OneShot" DurationMin="0.51241374" DurationMax="0.64399356">
+					<MediaRefs>
+						<MediaRef Id="68436417"/>
+						<MediaRef Id="733807707"/>
+						<MediaRef Id="962271348"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1719124329" Name="Play_Build_deco_remove" DurationType="OneShot" DurationMin="0.15992637" DurationMax="0.19463855">
+					<MediaRefs>
+						<MediaRef Id="249133521"/>
+						<MediaRef Id="330598536"/>
+						<MediaRef Id="808216408"/>
+						<MediaRef Id="971100804"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2048945389" Name="Play_Build_invisibleblock" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.25479344" DurationMax="0.34085703">
+					<MediaRefs>
+						<MediaRef Id="29977796"/>
+						<MediaRef Id="259622842"/>
+						<MediaRef Id="641376820"/>
+						<MediaRef Id="1023791989"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="112573374" Name="Play_Build_soap_block_place" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.5265518" DurationMax="0.9481875">
+					<MediaRefs>
+						<MediaRef Id="165050142"/>
+						<MediaRef Id="446666759"/>
+						<MediaRef Id="772872031"/>
+						<MediaRef Id="904806863"/>
+						<MediaRef Id="989727965"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2054052469" Name="Play_Build_soap_block_remove" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.23317769" DurationMax="0.45414358">
+					<MediaRefs>
+						<MediaRef Id="153520191"/>
+						<MediaRef Id="168779784"/>
+						<MediaRef Id="355768534"/>
+						<MediaRef Id="622120537"/>
+						<MediaRef Id="830288520"/>
+						<MediaRef Id="863752724"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="977134866" Name="Play_Camera_zoomIn" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2892692845" Name="Play_Camera_zoomOut" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4229810356" Name="Play_Dial_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4229810359" Name="Play_Dial_2" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4229810358" Name="Play_Dial_3" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4229810353" Name="Play_Dial_4" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2953314807" Name="Play_IntroCinematic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="344286550" Name="Play_Main_Menu_Text_Hover" DurationType="OneShot" DurationMin="1.1009375" DurationMax="1.2182292">
+					<MediaRefs>
+						<MediaRef Id="595160945"/>
+						<MediaRef Id="782602914"/>
+						<MediaRef Id="853175668"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2010853862" Name="Play_Menu_game_startup" DurationType="OneShot" DurationMin="10.026013" DurationMax="10.026013">
+					<MediaRefs>
+						<MediaRef Id="824409619"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2959211488" Name="Play_Menu_paused" DurationType="OneShot" DurationMin="1.8350656" DurationMax="2.3484085">
+					<MediaRefs>
+						<MediaRef Id="106632701"/>
+						<MediaRef Id="886483541"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2167056030" Name="Play_Menu_select" DurationType="OneShot" DurationMin="0.38382253" DurationMax="0.45104435">
+					<MediaRefs>
+						<MediaRef Id="492168383"/>
+						<MediaRef Id="844089229"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3715720908" Name="Play_Menu_Settings_Highlighter_Circle" DurationType="OneShot" DurationMin="1.56" DurationMax="1.8056875">
+					<MediaRefs>
+						<MediaRef Id="382610479"/>
+						<MediaRef Id="418850945"/>
+						<MediaRef Id="434939420"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1438678098" Name="Play_Menu_Settings_offTabHover" DurationType="OneShot" DurationMin="1.2684375" DurationMax="1.2880625">
+					<MediaRefs>
+						<MediaRef Id="79623535"/>
+						<MediaRef Id="729362103"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2372258805" Name="Play_Menu_Settings_onListElementHover" DurationType="OneShot" DurationMin="1.0994583" DurationMax="1.1651459">
+					<MediaRefs>
+						<MediaRef Id="560646483"/>
+						<MediaRef Id="753994427"/>
+						<MediaRef Id="853273625"/>
+						<MediaRef Id="1067963033"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="472276738" Name="Play_Menu_Settings_onMenuOpen" DurationType="OneShot" DurationMin="1.7168958" DurationMax="1.7790834">
+					<MediaRefs>
+						<MediaRef Id="534417975"/>
+						<MediaRef Id="741019026"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3244587726" Name="Play_Menu_Settings_onMenuOut" DurationType="OneShot" DurationMin="1.5982083" DurationMax="1.773875">
+					<MediaRefs>
+						<MediaRef Id="159526382"/>
+						<MediaRef Id="402174076"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="483084658" Name="Play_Menu_Settings_onSubMenuClick" DurationType="OneShot" DurationMin="1.5653334" DurationMax="1.7550833">
+					<MediaRefs>
+						<MediaRef Id="208452939"/>
+						<MediaRef Id="750784693"/>
+						<MediaRef Id="922530664"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2540621422" Name="Play_Menu_Settings_onTabHover" DurationType="OneShot" DurationMin="1.3797292" DurationMax="1.3941875">
+					<MediaRefs>
+						<MediaRef Id="649829742"/>
+						<MediaRef Id="655260355"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1187050633" Name="Play_Menu_Settings_toggleIn" DurationType="OneShot" DurationMin="1.29775" DurationMax="1.356375">
+					<MediaRefs>
+						<MediaRef Id="601859891"/>
+						<MediaRef Id="751520739"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4022107688" Name="Play_Menu_Settings_toggleOut" DurationType="OneShot" DurationMin="1.2840834" DurationMax="1.2840834">
+					<MediaRefs>
+						<MediaRef Id="50950265"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2362180565" Name="Play_Menu_unpaused" DurationType="OneShot" DurationMin="1.2093393" DurationMax="1.5004023">
+					<MediaRefs>
+						<MediaRef Id="556204492"/>
+						<MediaRef Id="776349846"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2155613437" Name="Play_Music_boss" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="809883662"/>
+					</MediaRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2410351013" Id="3284755031"/>
+							<MediaRefs>
+								<MediaRef Id="607376516"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2410351013" Id="2716678721"/>
+							<MediaRefs>
+								<MediaRef Id="51760018"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2410351013" Id="1593864692"/>
+							<MediaRefs>
+								<MediaRef Id="799933830"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2410351013" Id="1735831046"/>
+							<MediaRefs>
+								<MediaRef Id="454019134"/>
+								<MediaRef Id="749112701"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="177767409" Name="Stop_Music_global"/>
+					</ActionPostEvent>
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="2410351013" Id="3284755031" Name="Build"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="4148122764" Name="Play_Music_cafeteria" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="22258212"/>
+					</MediaRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2410351013" Id="3284755031"/>
+							<MediaRefs>
+								<MediaRef Id="628961501"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2410351013" Id="2716678721"/>
+							<MediaRefs>
+								<MediaRef Id="936680060"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2410351013" Id="1593864692"/>
+							<MediaRefs>
+								<MediaRef Id="622128103"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2410351013" Id="1735831046"/>
+							<MediaRefs>
+								<MediaRef Id="762861487"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="177767409" Name="Stop_Music_global"/>
+					</ActionPostEvent>
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="2410351013" Id="3284755031" Name="Build"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="777761339" Name="Play_Music_SetSwitch_build" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="2410351013" Id="3284755031" Name="Build"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="2966994080" Name="Play_Music_SetSwitch_defeat" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="2410351013" Id="1593864692" Name="Defeat"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="2139315658" Name="Play_Music_SetSwitch_validating" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="2410351013" Id="1735831046" Name="Validating"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="3857913285" Name="Play_Music_SetSwitch_victory" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="2410351013" Id="2716678721" Name="Victory"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="1121121824" Name="Play_Music_title" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="173590557"/>
+					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="177767409" Name="Stop_Music_global"/>
+					</ActionPostEvent>
+				</Event>
+				<Event Id="1975827420" Name="Play_Physics_basicToBlock" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.13328291" DurationMax="0.31081998">
+					<MediaRefs>
+						<MediaRef Id="37935797"/>
+						<MediaRef Id="60777002"/>
+						<MediaRef Id="113913307"/>
+						<MediaRef Id="149496529"/>
+						<MediaRef Id="312490870"/>
+						<MediaRef Id="370966626"/>
+						<MediaRef Id="478058483"/>
+						<MediaRef Id="496792122"/>
+						<MediaRef Id="543340150"/>
+						<MediaRef Id="591683449"/>
+						<MediaRef Id="607203765"/>
+						<MediaRef Id="794457832"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="325789949" Name="Play_Physics_basicToFloor" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.42316666" DurationMax="0.60125">
+					<MediaRefs>
+						<MediaRef Id="1954477"/>
+						<MediaRef Id="3241458"/>
+						<MediaRef Id="32584524"/>
+						<MediaRef Id="86682777"/>
+						<MediaRef Id="152179235"/>
+						<MediaRef Id="164355719"/>
+						<MediaRef Id="231407703"/>
+						<MediaRef Id="274408922"/>
+						<MediaRef Id="310037684"/>
+						<MediaRef Id="360748004"/>
+						<MediaRef Id="547684093"/>
+						<MediaRef Id="611002344"/>
+						<MediaRef Id="783616519"/>
+						<MediaRef Id="801643773"/>
+						<MediaRef Id="838587232"/>
+						<MediaRef Id="863046301"/>
+						<MediaRef Id="874899160"/>
+						<MediaRef Id="880104204"/>
+						<MediaRef Id="931559138"/>
+						<MediaRef Id="969539204"/>
+						<MediaRef Id="999670957"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="1334739297" Name="Play_Physics_concreteToBlock" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.27020833" DurationMax="0.8985208">
+					<MediaRefs>
+						<MediaRef Id="5243427"/>
+						<MediaRef Id="77430694"/>
+						<MediaRef Id="295293615"/>
+						<MediaRef Id="298324644"/>
+						<MediaRef Id="405181894"/>
+						<MediaRef Id="408305723"/>
+						<MediaRef Id="424006832"/>
+						<MediaRef Id="445722997"/>
+						<MediaRef Id="500009155"/>
+						<MediaRef Id="513890808"/>
+						<MediaRef Id="524533585"/>
+						<MediaRef Id="570916773"/>
+						<MediaRef Id="627881350"/>
+						<MediaRef Id="669392195"/>
+						<MediaRef Id="693355854"/>
+						<MediaRef Id="822291799"/>
+						<MediaRef Id="858138438"/>
+						<MediaRef Id="986575835"/>
+						<MediaRef Id="1007401334"/>
+						<MediaRef Id="1013447040"/>
+						<MediaRef Id="1060606589"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="52822808" Name="Play_Physics_concreteToFloor" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.49516666" DurationMax="0.89641666">
+					<MediaRefs>
+						<MediaRef Id="24325655"/>
+						<MediaRef Id="81236708"/>
+						<MediaRef Id="149617397"/>
+						<MediaRef Id="275469356"/>
+						<MediaRef Id="279414448"/>
+						<MediaRef Id="300895670"/>
+						<MediaRef Id="333109650"/>
+						<MediaRef Id="413350578"/>
+						<MediaRef Id="483158435"/>
+						<MediaRef Id="494964440"/>
+						<MediaRef Id="570621525"/>
+						<MediaRef Id="736123375"/>
+						<MediaRef Id="795055527"/>
+						<MediaRef Id="854023824"/>
+						<MediaRef Id="868919515"/>
+						<MediaRef Id="900111670"/>
+						<MediaRef Id="902669382"/>
+						<MediaRef Id="911224313"/>
+						<MediaRef Id="923238903"/>
+						<MediaRef Id="1000977322"/>
+						<MediaRef Id="1047804260"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="1746020630" Name="Play_Physics_decoToFloor" DurationType="OneShot" DurationMin="0.51241374" DurationMax="0.64399356">
+					<MediaRefs>
+						<MediaRef Id="1954477"/>
+						<MediaRef Id="68436417"/>
+						<MediaRef Id="86682777"/>
+						<MediaRef Id="231407703"/>
+						<MediaRef Id="611002344"/>
+						<MediaRef Id="733807707"/>
+						<MediaRef Id="838587232"/>
+						<MediaRef Id="880104204"/>
+						<MediaRef Id="962271348"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="683962872" Name="Play_Physics_employeeCollision" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="604053813" Name="Play_UI_item_offTabHover" DurationType="OneShot" DurationMin="1.0994583" DurationMax="1.1651459">
+					<MediaRefs>
+						<MediaRef Id="560646483"/>
+						<MediaRef Id="753994427"/>
+						<MediaRef Id="853273625"/>
+						<MediaRef Id="1067963033"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3464099540" Name="Play_UI_item_onTabHover_basic" DurationType="OneShot" DurationMin="1.6677917" DurationMax="1.6677917">
+					<MediaRefs>
+						<MediaRef Id="280424840"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="987150631" Name="Play_UI_item_onTabHover_heavy" DurationType="OneShot" DurationMin="1.5971875" DurationMax="1.5971875">
+					<MediaRefs>
+						<MediaRef Id="370439774"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3866376427" Name="Play_UI_item_onTabHover_soap" DurationType="OneShot" DurationMin="1.5103542" DurationMax="1.5103542">
+					<MediaRefs>
+						<MediaRef Id="770784891"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="681896400" Name="Play_UI_money_spent" DurationType="OneShot" DurationMin="1.0178332" DurationMax="1.4123439">
+					<MediaRefs>
+						<MediaRef Id="146743345"/>
+						<MediaRef Id="485974224"/>
+						<MediaRef Id="971963527"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1375364434" Name="Stop_Amb_global" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="177767409" Name="Stop_Music_global" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="1951144523" Name="Collision_Velocity"/>
+			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="2410351013" Name="MUSIC_GLOBAL_STATE_SWITCH">
+					<Switches>
+						<Switch Id="1593864692" Name="Defeat"/>
+						<Switch Id="1735831046" Name="Validating"/>
+						<Switch Id="2716678721" Name="Victory"/>
+						<Switch Id="3284755031" Name="Build"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{926646F2-FA13-CFEE-7DE6-2A9C4308B234}</FileHash>
+	<FileHash>{0DCA4181-0B40-9F63-83A2-28B9C73E06C3}</FileHash>
 </SoundBanksInfo>

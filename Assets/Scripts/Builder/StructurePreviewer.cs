@@ -18,6 +18,9 @@ namespace Builder
         {
             _mainBlockLayer = 1 << LayerMask.NameToLayer("MainBlocks");
             _subBlocksLayer = 1 << LayerMask.NameToLayer("SubBlocks");
+
+            if (!TryGetComponent(out _gameManager))
+                Debug.LogError("Failed to get the GameManager component from Builder");
         }
 
         void InitializePreviewer()
