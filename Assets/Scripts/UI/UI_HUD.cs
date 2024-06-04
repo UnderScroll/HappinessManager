@@ -164,12 +164,25 @@ public class UI_HUD : MonoBehaviour
     {
         GameObject _go = Instantiate(EndLevelMenuPrefab, this.gameObject.transform);
         endLevelPanel = _go.GetComponent<UI_EndLevelPanel>();
+        endLevelPanel.ui_hud = this;
 
         if (endLevelPanel != null)
         {
             endLevelPanel.win = _victory;
             endLevelPanel.Init();
         }
+    }
+    public void CloseEndLevelPanel()
+    {
+        Destroy(endLevelPanel.gameObject);
+    }
+    public void NextLevel()
+    {
+        // next level
+    }
+    public void RestartLevel()
+    {
+        // restart level
     }
     #endregion
 
