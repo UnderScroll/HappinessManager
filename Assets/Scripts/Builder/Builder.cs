@@ -57,7 +57,6 @@ namespace Builder
             data.Position = position;
 
             UpdateCell(position);
-            AkSoundEngine.PostEvent("Play_Build_basic_block_place", gameObject);
         }
 
         void RemoveBlock(int3 position)
@@ -69,7 +68,6 @@ namespace Builder
                 Level.Structure.Cells[position.x, position.y, position.z] = null;
 
                 UpdateCell(position);
-                AkSoundEngine.PostEvent("Play_Build_basic_block_remove", gameObject);
             }
         }
         void ModifyBlockData(CellData data, int3 position)
@@ -168,6 +166,12 @@ namespace Builder
             SpentMoney += _selectedBlock.Type.Price;
             BlockPlacedAmount[_selectedBlock.Type.Name]++;
 
+            PreviewBlock blockInstance = _previewBlocks[positionToPlace.x, positionToPlace.y, positionToPlace.z]; //Get block in scene
+            if (!blockInstance.TryGetComponent(out BlockSoundPlayer soundPlayer)) //Try to get the script
+                Debug.LogWarning("NoSoundPlayer"); //If not warn
+            else //If script present => play sound
+                soundPlayer.PlayBasicBlockPlace();
+
             return;
         }
 
@@ -181,10 +185,15 @@ namespace Builder
                     return;
             
             CellType removedBlockType = Level.Structure.Cells[positionToRemove.x, positionToRemove.y, positionToRemove.z].Type;
+            
+            PreviewBlock blockInstance = _previewBlocks[positionToRemove.x, positionToRemove.y, positionToRemove.z]; //Get block in scene
+            if (!blockInstance.TryGetComponent(out BlockSoundPlayer soundPlayer)) //Try to get the script
+                Debug.LogWarning("NoSoundPlayer"); //If not warn
+            else //If script present => play sound
+                soundPlayer.PlayBasicBlockRemove();
 
             RemoveBlock(positionToRemove);
             UpdateConnection(positionToRemove);
-
 
             SpentMoney -= removedBlockType.Price;
             BlockPlacedAmount[removedBlockType.Name]--;

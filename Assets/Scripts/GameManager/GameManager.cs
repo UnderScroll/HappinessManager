@@ -15,9 +15,13 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public RuleManager RuleManager;
     [HideInInspector]
+    public SoundManager SoundManager;
+    [HideInInspector]
     public UI_HUD UI_HUD;
 
     private bool _playing = false;
+
+    public string FloorName = "";
 
     private void Awake()
     {
@@ -29,6 +33,8 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Failed to get the LevelLoader Component");
         if (!TryGetComponent(out RuleManager))
             Debug.LogError("Failed to get the RuleManager Component");
+        if (!TryGetComponent(out SoundManager))
+            Debug.LogError("Failed to get the SoundManager Component");
 
         Simulator.StructureOrigin = StructureOrigin;
         Builder.StructureOrigin = StructureOrigin;
@@ -49,6 +55,8 @@ public class GameManager : MonoBehaviour
             Simulator.InitializeSimulation(Builder.Level.Structure);
             Simulator.Launch();
 
+            SoundManager.PlayOnLaunchingSimulation();
+
             _playing = true;
         }
     }
@@ -58,6 +66,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("ResetingLevel");
         ResetSimulation();
+        SoundManager.PlayOnBuilding();
     }
 
     [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres priv�s non utilis�s", Justification = "OnReloadLevel is called by Unity Input System")]
@@ -65,6 +74,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("ReloadingLevel");
         LevelLoader.ReloadLevel();
+        SoundManager.PlayOnBuilding();
     }
 
     [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres priv�s non utilis�s", Justification = "OnLoadNextLevel is called by Unity Input System")]
@@ -72,6 +82,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("LoadingNextLevel");
         LevelLoader.LoadNextLevel();
+        SoundManager.PlayOnBuilding();
     }
 
     [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres priv�s non utilis�s", Justification = "OnLoadPreviousLevel is called by Unity Input System")]
@@ -79,6 +90,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("LoadingPreviousLevel");
         LevelLoader.LoadPreviousLevel();
+        SoundManager.PlayOnBuilding();
     }
 
     public void PlaySimulation()

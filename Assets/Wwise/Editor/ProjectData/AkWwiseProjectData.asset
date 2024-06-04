@@ -218,7 +218,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a2847257a7000f4e81d18dd3626acf80
     GuidInternal: 
-    m_lastTime: -8584841035567667778
+    m_lastTime: -8584841015130245286
     List: []
   - PhysicalPath: Events\WU_HM_Events.wwu
     PathAndIcons:
@@ -231,7 +231,7 @@ MonoBehaviour:
     ParentPath: Events\WU_HM_Events
     guid: a44afb18422e3e4bbc589ac1581aef04
     GuidInternal: 
-    m_lastTime: -8584841033761998178
+    m_lastTime: -8584841014153845375
     List:
     - name: Amb
       guid: 45ce627f733a4f4d90717e8757beb9ba
@@ -1858,6 +1858,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.5305569
       minDuration: 0.5305569
+    - name: Play_boss_dial_intro
+      guid: 30a5f2c7caa5214c9788427bbcdc6467
+      id: 709531481
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Other
+        ObjectType: 4
+        guid: b8ca664edf85494a8eec7b380252e0bc
+      - ElementName: Play_boss_dial_intro
+        ObjectType: 3
+        guid: 30a5f2c7caa5214c9788427bbcdc6467
+      Path: Events\WU_HM_Events\Other\Play_boss_dial_intro
+      maxAttenuation: 0
+      maxDuration: 13.0755205
+      minDuration: 13.0755205
     - name: Play_Build_basic_block_place
       guid: 134e898f2c5a7b4699aa7159b2a40e44
       id: 1414775411
@@ -2065,6 +2085,26 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: 0.45414358
       minDuration: 0.23317769
+    - name: Play_cafeteria_dial_Intro
+      guid: 3eca51a88a56df4481df961b44969317
+      id: 3535484390
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Other
+        ObjectType: 4
+        guid: b8ca664edf85494a8eec7b380252e0bc
+      - ElementName: Play_cafeteria_dial_Intro
+        ObjectType: 3
+        guid: 3eca51a88a56df4481df961b44969317
+      Path: Events\WU_HM_Events\Other\Play_cafeteria_dial_Intro
+      maxAttenuation: 0
+      maxDuration: 40.044834
+      minDuration: 40.044834
     - name: Play_Camera_zoomIn
       guid: 9697dd237fedaf45a6bdf2bce05d78bf
       id: 977134866
@@ -2681,8 +2721,8 @@ MonoBehaviour:
         guid: 6ad3360ceb4c0f43867638d7535a6c19
       Path: Events\WU_HM_Events\Gameplay\Physics\Play_Physics_employeeCollision
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 2.1842813
+      minDuration: 0.51241374
     - name: Play_UI_item_offTabHover
       guid: e2ae4133a7970844b34830519499e63b
       id: 604053813
@@ -3132,7 +3172,7 @@ MonoBehaviour:
     m_lastTime: -8584901339025742451
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0200000005000000070000000a0000000b000000120000003700000065000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

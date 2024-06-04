@@ -64,6 +64,7 @@ namespace AK
         static const AkUniqueID PLAY_BARK_STAGIAIRE_PENSIF = 3745766036U;
         static const AkUniqueID PLAY_BARK_STAGIAIRE_PEUR = 2187196553U;
         static const AkUniqueID PLAY_BARK_STAGIAIRE_TRISTE = 1334838302U;
+        static const AkUniqueID PLAY_BOSS_DIAL_INTRO = 709531481U;
         static const AkUniqueID PLAY_BUILD_BASIC_BLOCK_PLACE = 1414775411U;
         static const AkUniqueID PLAY_BUILD_BASIC_BLOCK_REMOVE = 1294229974U;
         static const AkUniqueID PLAY_BUILD_CONCRETE_BLOCK_PLACE = 684309162U;
@@ -73,6 +74,7 @@ namespace AK
         static const AkUniqueID PLAY_BUILD_INVISIBLEBLOCK = 2048945389U;
         static const AkUniqueID PLAY_BUILD_SOAP_BLOCK_PLACE = 112573374U;
         static const AkUniqueID PLAY_BUILD_SOAP_BLOCK_REMOVE = 2054052469U;
+        static const AkUniqueID PLAY_CAFETERIA_DIAL_INTRO = 3535484390U;
         static const AkUniqueID PLAY_CAMERA_ZOOMIN = 977134866U;
         static const AkUniqueID PLAY_CAMERA_ZOOMOUT = 2892692845U;
         static const AkUniqueID PLAY_INTROCINEMATIC = 2953314807U;

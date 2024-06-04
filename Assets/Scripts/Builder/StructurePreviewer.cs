@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 
 namespace Builder
 {
@@ -66,6 +67,10 @@ namespace Builder
             PreviewBlock previewBlock = Instantiate(cellType.PreviewCollider, _structureOrigin);
             previewBlock.Position = position;
             previewBlock.transform.Translate(position.x, position.y, position.z);
+
+            BlockSoundPlayer blockSoundPlayer = previewBlock.AddComponent<BlockSoundPlayer>();
+            blockSoundPlayer.BlockName = cellType.Name;
+            blockSoundPlayer.Initialize();
 
             Instantiate(cellType.Block, previewBlock.transform);
 

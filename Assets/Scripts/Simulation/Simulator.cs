@@ -12,7 +12,7 @@ namespace Simulation
         private Structure _structure;
         private GameObject[,,] _instances;
 
-        //private GameManager _gameManager;
+        private GameManager _gameManager;
         private double timeCounter;
         private bool _isSimulationRunning;
         public double ValidationTime;
@@ -20,10 +20,8 @@ namespace Simulation
 
         private void Start()
         {
-            /*
             if (!TryGetComponent(out _gameManager))
                 Debug.LogError("GameManager wasn't found, this will cause issues");
-            */
         }
 
         public void InitializeSimulation(Structure structure)
@@ -176,15 +174,14 @@ namespace Simulation
         public void OnLevelValidated()
         {
             Debug.Log("LevelValidated");
-            AkSoundEngine.PostEvent("Play_Music_SetSwitch_victory", gameObject);
+            _gameManager.SoundManager.PlayOnLevelValidated();
         }
 
         public void OnEmployeeGroundCollision()
         {
             _isSimulationFailed = true;
             _isSimulationRunning = false;
-            AkSoundEngine.PostEvent("Play_Music_SetSwitch_defeat", gameObject);
-            AkSoundEngine.PostEvent("Stop_Amb_global", gameObject);
+            _gameManager.SoundManager.PlayOnLevelFailed();
         }
     }
 }
