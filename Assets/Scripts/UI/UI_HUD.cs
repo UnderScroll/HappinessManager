@@ -178,11 +178,11 @@ public class UI_HUD : MonoBehaviour
     }
     public void NextLevel()
     {
-        // next level
+        _gameManager.LevelLoader.LoadNextLevel();
     }
     public void RestartLevel()
     {
-        // restart level
+        _gameManager.LevelLoader.ReloadLevel();
     }
     #endregion
 
