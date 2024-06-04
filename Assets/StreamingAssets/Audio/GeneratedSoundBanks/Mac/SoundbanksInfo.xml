@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{C598DA44-F07A-7751-001B-E488C58DC2BD}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{43DD3C7C-9B99-B18B-DFA0-5329659AD446}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -25,9 +25,10 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
-				<Bus Id="69765534" Name="Musique"/>
+				<Bus Id="69765534" Name="MUSIQUE"/>
 				<Bus Id="393239870" Name="SFX"/>
-				<Bus Id="1117531639" Name="Amb"/>
+				<Bus Id="2981377429" Name="AMBIANCE"/>
+				<Bus Id="3370469991" Name="VOIX"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 			<AuxBusses>
@@ -60,7 +61,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{BFD36604-5F15-6405-EB11-4CA3229A1D66}">
+		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{ED4407EB-7D99-6458-41FA-4393DA4B8720}">
 			<ShortName>HM_Global_SB</ShortName>
 			<Path>HM_Global_SB.bnk</Path>
 			<Media>
@@ -84,6 +85,10 @@
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_high_velocity 5.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_high_velocity 5_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="26833914" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dir Créa Agacé-001.wav</ShortName>
+					<CachePath>SFX/Dir Créa Agacé-001_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="28084777" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_concrete block place.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_concrete block place_CD2105D8.wem</CachePath>
@@ -100,6 +105,10 @@
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_low_velocity.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_low_velocity_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="43553209" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233 4.wav</ShortName>
+					<CachePath>SFX/Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233 4_A4E31563.wem</CachePath>
+				</File>
 				<File Id="50950265" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_OS_UI_toggle_out .wav</ShortName>
 					<CachePath>SFX/HM_SFX_OS_UI_toggle_out _FD4DF9DE.wem</CachePath>
@@ -108,9 +117,17 @@
 					<ShortName>PROTO VICTORY CMAJ [2024-05-01 182259].wav</ShortName>
 					<CachePath>SFX/PROTO VICTORY CMAJ [2024-05-01 182259]_B02CE968.wem</CachePath>
 				</File>
+				<File Id="57191958" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss Déterminé 9.wav</ShortName>
+					<CachePath>SFX/Boss Déterminé 9_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="60777002" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_high_velocity 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_high_velocity 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="67845509" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Community Manager Excitée-001.wav</ShortName>
+					<CachePath>SFX/Community Manager Excitée-001_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="68436417" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Objects, Furniture, Moving Furniture, Table, Bottles Rattle SND1763 1.wav</ShortName>
@@ -119,6 +136,10 @@
 				<File Id="71521605" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_basic block place 4.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_basic block place 4_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="73944066" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Community Manager Déterminée-002.wav</ShortName>
+					<CachePath>SFX/Community Manager Déterminée-002_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="77430694" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 5.wav</ShortName>
@@ -136,6 +157,10 @@
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity .wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity _FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="89773760" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233 1.wav</ShortName>
+					<CachePath>SFX/Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233 1_887654BC.wem</CachePath>
+				</File>
 				<File Id="95300761" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_concrete block place 5.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_concrete block place 5_FD4DF9DE.wem</CachePath>
@@ -144,9 +169,17 @@
 					<ShortName>HM_SFX_SC_Build_basic block remove 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_basic block remove 2_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="102701038" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Hereuse-003.wav</ShortName>
+					<CachePath>SFX/Comptable Hereuse-003_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="106632701" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_Menu_paused.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_Menu_paused_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="111884437" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dir Créa Hereux-001.wav</ShortName>
+					<CachePath>SFX/Dir Créa Hereux-001_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="113913307" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_low_velocity 6.wav</ShortName>
@@ -160,9 +193,21 @@
 					<ShortName>HM_SFX_SC_Build_concrete block remove 4.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_concrete block remove 4_7E86D518.wem</CachePath>
 				</File>
+				<File Id="138705726" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss hereux 1.wav</ShortName>
+					<CachePath>SFX/Boss hereux 1_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="141570635" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_basic block remove .wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_basic block remove _FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="142951727" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Community Manager Nerveux-002.wav</ShortName>
+					<CachePath>SFX/Community Manager Nerveux-002_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="144105267" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Employé Triste Pensif-001.wav</ShortName>
+					<CachePath>SFX/Employé Triste Pensif-001_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="146743345" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_UI_RC_Menu_money spent 3.wav</ShortName>
@@ -188,6 +233,10 @@
 					<ShortName>HM_SFX_RC_UI_onBack 1.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_onBack 1_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="159921655" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Déterminée-002.wav</ShortName>
+					<CachePath>SFX/Comptable Déterminée-002_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="164355719" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 5.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity 5_76A802C1.wem</CachePath>
@@ -200,13 +249,33 @@
 					<ShortName>HM_SFX_SC_Build_soap block remove 5.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_soap block remove 5_E1B3B8D5.wem</CachePath>
 				</File>
+				<File Id="171144445" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss Surpris 10.wav</ShortName>
+					<CachePath>SFX/Boss Surpris 10_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="173590557" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>title v1.wav</ShortName>
 					<CachePath>SFX/title v1_B02CE968.wem</CachePath>
 				</File>
+				<File Id="174172311" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Hereuse-001.wav</ShortName>
+					<CachePath>SFX/Comptable Hereuse-001_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="198814301" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Hereuse-002.wav</ShortName>
+					<CachePath>SFX/Comptable Hereuse-002_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="208452939" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_tab_onclick 1.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_tab_onclick 1_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="222916998" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Employé Triste Hereux-003.wav</ShortName>
+					<CachePath>SFX/Employé Triste Hereux-003_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="224132917" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dir Créa Fier-001.wav</ShortName>
+					<CachePath>SFX/Dir Créa Fier-001_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="225915335" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_basic block place 2.wav</ShortName>
@@ -216,13 +285,45 @@
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity 6.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity 6_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="233212238" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 01 SND46234 5.wav</ShortName>
+					<CachePath>SFX/Toys, Misc, Rubber Duck, Whistling, Squeak 01 SND46234 5_69054E5C.wem</CachePath>
+				</File>
+				<File Id="235538765" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dir Créa Fier-002.wav</ShortName>
+					<CachePath>SFX/Dir Créa Fier-002_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="237990611" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Employé Triste Confus-002.wav</ShortName>
+					<CachePath>SFX/Employé Triste Confus-002_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="245320377" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dir Créa Excité-002.wav</ShortName>
+					<CachePath>SFX/Dir Créa Excité-002_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="249133521" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_concrete block remove 3.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_concrete block remove 3_ED8F32E5.wem</CachePath>
 				</File>
+				<File Id="256102878" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Agacée-005.wav</ShortName>
+					<CachePath>SFX/Comptable Agacée-005_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="257576684" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Agacée-002.wav</ShortName>
+					<CachePath>SFX/Comptable Agacée-002_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="259622842" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Digital Click Negative 07 1.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Digital Click Negative 07 1_7D48D16B.wem</CachePath>
+				</File>
+				<File Id="260431742" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dir Créa Dégouté.wav</ShortName>
+					<CachePath>SFX/Dir Créa Dégouté_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="270210916" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 01 SND46234 1.wav</ShortName>
+					<CachePath>SFX/Toys, Misc, Rubber Duck, Whistling, Squeak 01 SND46234 1_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="272071745" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_concrete block place 2.wav</ShortName>
@@ -243,6 +344,10 @@
 				<File Id="280424840" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_OS_UI_item tab hover basic.wav</ShortName>
 					<CachePath>SFX/HM_SFX_OS_UI_item tab hover basic_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="285633154" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Surprise-001.wav</ShortName>
+					<CachePath>SFX/Comptable Surprise-001_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="295293615" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 14.wav</ShortName>
@@ -268,13 +373,33 @@
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_low_velocity 4.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_low_velocity 4_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="327908177" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Employé Triste Fatigué -003.wav</ShortName>
+					<CachePath>SFX/Employé Triste Fatigué -003_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="330598536" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_concrete block remove.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_concrete block remove_D4660BF2.wem</CachePath>
 				</File>
+				<File Id="331710125" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Special Kiki 2.wav</ShortName>
+					<CachePath>SFX/Comptable Special Kiki 2_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="333109650" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 13.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 13_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="333375607" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dir Créa Déterminé-001.wav</ShortName>
+					<CachePath>SFX/Dir Créa Déterminé-001_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="348800255" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Employé Triste Fatigué -002.wav</ShortName>
+					<CachePath>SFX/Employé Triste Fatigué -002_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="351801259" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Hilare.wav</ShortName>
+					<CachePath>SFX/Comptable Hilare_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="355768534" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_soap block remove 6.wav</ShortName>
@@ -283,6 +408,10 @@
 				<File Id="360748004" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 4.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity 4_44A9DE64.wem</CachePath>
+				</File>
+				<File Id="367256306" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Employé Triste Triste-003.wav</ShortName>
+					<CachePath>SFX/Employé Triste Triste-003_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="370439774" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_OS_UI_item tab hover heavy.wav</ShortName>
@@ -296,9 +425,25 @@
 					<ShortName>HM_SFX_RC_UI_tab_hover _highlighter 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_tab_hover _highlighter 2_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="389484077" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Community Manager Degout-001.wav</ShortName>
+					<CachePath>SFX/Community Manager Degout-001_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="389809314" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Employé Triste Confus-001.wav</ShortName>
+					<CachePath>SFX/Employé Triste Confus-001_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="390402863" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Community Manager Déterminée-001.wav</ShortName>
+					<CachePath>SFX/Community Manager Déterminée-001_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="393246247" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_basic block place.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_basic block place_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="401662905" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Community Manager Fiere-001.wav</ShortName>
+					<CachePath>SFX/Community Manager Fiere-001_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="402174076" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_onBack 2.wav</ShortName>
@@ -308,9 +453,21 @@
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 6.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 6_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="406864568" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Community Manager Confuse-002.wav</ShortName>
+					<CachePath>SFX/Community Manager Confuse-002_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="408305723" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 4.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 4_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="409703046" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Employé Triste Pensif-004.wav</ShortName>
+					<CachePath>SFX/Employé Triste Pensif-004_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="412783045" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Suspicieuse-003.wav</ShortName>
+					<CachePath>SFX/Comptable Suspicieuse-003_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="413350578" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity .wav</ShortName>
@@ -320,6 +477,10 @@
 					<ShortName>HM_SFX_RC_UI_tab_hover _highlighter 3.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_tab_hover _highlighter 3_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="420491024" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 01 SND46234 3.wav</ShortName>
+					<CachePath>SFX/Toys, Misc, Rubber Duck, Whistling, Squeak 01 SND46234 3_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="424006832" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_high_velocity 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_high_velocity 2_FD4DF9DE.wem</CachePath>
@@ -327,6 +488,14 @@
 				<File Id="434939420" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_tab_hover _highlighter 1.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_tab_hover _highlighter 1_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="437164094" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Hereuse-005.wav</ShortName>
+					<CachePath>SFX/Comptable Hereuse-005_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="440060209" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Calme-001.wav</ShortName>
+					<CachePath>SFX/Comptable Calme-001_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="445722997" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 11.wav</ShortName>
@@ -340,9 +509,17 @@
 					<ShortName>PROTO VALIDATE DMIN [2024-05-01 182249].wav</ShortName>
 					<CachePath>SFX/PROTO VALIDATE DMIN [2024-05-01 182249]_B02CE968.wem</CachePath>
 				</File>
+				<File Id="455906566" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Employé Triste Triste-004.wav</ShortName>
+					<CachePath>SFX/Employé Triste Triste-004_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="464768831" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_concrete block place 3.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_concrete block place 3_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="473874225" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dir Créa Hereux-003.wav</ShortName>
+					<CachePath>SFX/Dir Créa Hereux-003_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="478058483" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_high_velocity 6.wav</ShortName>
@@ -376,6 +553,10 @@
 					<ShortName>HM_SFX_SC_Build_basic block remove 6.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_basic block remove 6_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="508950208" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Employé Triste Hereux-001.wav</ShortName>
+					<CachePath>SFX/Employé Triste Hereux-001_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="513890808" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 10.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 10_FD4DF9DE.wem</CachePath>
@@ -383,6 +564,10 @@
 				<File Id="524533585" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 12.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 12_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="527095067" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233 5.wav</ShortName>
+					<CachePath>SFX/Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233 5_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="534417975" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_onSettingTabClick 2.wav</ShortName>
@@ -404,6 +589,10 @@
 					<ShortName>HM_SFX_RC_UI_items off tab hover 1.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_items off tab hover 1_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="565962083" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Community Manager Agacé-001.wav</ShortName>
+					<CachePath>SFX/Community Manager Agacé-001_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="570621525" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 2_FD4DF9DE.wem</CachePath>
@@ -412,9 +601,21 @@
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_high_velocity 4.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_high_velocity 4_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="572998712" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Community Manager Agacé-003.wav</ShortName>
+					<CachePath>SFX/Community Manager Agacé-003_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="573769041" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Suspicieuse-002.wav</ShortName>
+					<CachePath>SFX/Comptable Suspicieuse-002_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="579863205" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_basic block remove 5.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_basic block remove 5_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="582296536" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Agacée-003.wav</ShortName>
+					<CachePath>SFX/Comptable Agacée-003_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="591683449" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_high_velocity.wav</ShortName>
@@ -448,6 +649,10 @@
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity 5.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity 5_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="620280135" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Employé Triste Triste-001.wav</ShortName>
+					<CachePath>SFX/Employé Triste Triste-001_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="622120537" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_soap block remove 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_soap block remove 2_BE5FF748.wem</CachePath>
@@ -455,6 +660,10 @@
 				<File Id="622128103" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sneak defeat render v1 125 [2024-05-31 154728].wav</ShortName>
 					<CachePath>SFX/sneak defeat render v1 125 [2024-05-31 154728]_B02CE968.wem</CachePath>
+				</File>
+				<File Id="626305289" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Déterminée-001.wav</ShortName>
+					<CachePath>SFX/Comptable Déterminée-001_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="627881350" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 7.wav</ShortName>
@@ -464,13 +673,25 @@
 					<ShortName>sneak core loop render v1 125 2  [2024-05-31 154311].wav</ShortName>
 					<CachePath>SFX/sneak core loop render v1 125 2  [2024-05-31 154311]_B02CE968.wem</CachePath>
 				</File>
+				<File Id="633122800" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss Excité 5.wav</ShortName>
+					<CachePath>SFX/Boss Excité 5_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="641376820" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Digital Click Negative 07 2.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Digital Click Negative 07 2_7932E522.wem</CachePath>
 				</File>
+				<File Id="641984613" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233 2.wav</ShortName>
+					<CachePath>SFX/Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233 2_6E153776.wem</CachePath>
+				</File>
 				<File Id="649829742" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_onTabHover 1.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_onTabHover 1_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="651936224" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Surprise-003.wav</ShortName>
+					<CachePath>SFX/Comptable Surprise-003_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="655260355" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_onTabHover 2.wav</ShortName>
@@ -484,13 +705,49 @@
 					<ShortName>HM_SFX_SC_Build_basic block place 3.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_basic block place 3_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="689639882" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Community Manager Confuse-003.wav</ShortName>
+					<CachePath>SFX/Community Manager Confuse-003_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="693355854" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 13.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 13_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="701638250" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Special Kiki.wav</ShortName>
+					<CachePath>SFX/Comptable Special Kiki_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="707156560" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss Déterminé 6.wav</ShortName>
+					<CachePath>SFX/Boss Déterminé 6_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="707441225" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss Excité 4.wav</ShortName>
+					<CachePath>SFX/Boss Excité 4_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="709490544" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Employé Triste Hereux-002.wav</ShortName>
+					<CachePath>SFX/Employé Triste Hereux-002_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="710150507" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Community Manager Excitée-003.wav</ShortName>
+					<CachePath>SFX/Community Manager Excitée-003_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="710475532" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dir Créa Agacé-002.wav</ShortName>
+					<CachePath>SFX/Dir Créa Agacé-002_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="722070604" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Employé Triste Triste-002.wav</ShortName>
+					<CachePath>SFX/Employé Triste Triste-002_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="729362103" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_offTabHover 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_offTabHover 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="731841251" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Suspicieuse-004.wav</ShortName>
+					<CachePath>SFX/Comptable Suspicieuse-004_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="733807707" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Objects, Furniture, Moving Furniture, Table, Bottles Rattle SND1763 2.wav</ShortName>
@@ -520,9 +777,17 @@
 					<ShortName>HM_SFX_RC_UI_tab_onclick 3.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_tab_onclick 3_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="751449316" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Community Manager Degout-002.wav</ShortName>
+					<CachePath>SFX/Community Manager Degout-002_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="751520739" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_toggle in 1.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_toggle in 1_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="752485749" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Employé Triste Pensif-002.wav</ShortName>
+					<CachePath>SFX/Employé Triste Pensif-002_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="753994427" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_items off tab hover 2.wav</ShortName>
@@ -531,6 +796,10 @@
 				<File Id="762861487" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sneak validate render v1 125 [2024-05-31 154642].wav</ShortName>
 					<CachePath>SFX/sneak validate render v1 125 [2024-05-31 154642]_B02CE968.wem</CachePath>
+				</File>
+				<File Id="767138760" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Agacée-004.wav</ShortName>
+					<CachePath>SFX/Comptable Agacée-004_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="770784891" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_OS_UI_item tab hover soap.wav</ShortName>
@@ -544,6 +813,10 @@
 					<ShortName>HM_SFX_RC_Menu_unpaused.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_Menu_unpaused_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="777721951" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Employé Triste Fatigué -001.wav</ShortName>
+					<CachePath>SFX/Employé Triste Fatigué -001_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="782602914" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_main menu play hover 1.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_main menu play hover 1_FD4DF9DE.wem</CachePath>
@@ -552,9 +825,17 @@
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 10.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity 10_071568EB.wem</CachePath>
 				</File>
+				<File Id="787703407" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss Déterminé 3.wav</ShortName>
+					<CachePath>SFX/Boss Déterminé 3_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="794457832" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_low_velocity 3.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_low_velocity 3_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="794503708" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Déterminée-003.wav</ShortName>
+					<CachePath>SFX/Comptable Déterminée-003_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="795055527" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 15.wav</ShortName>
@@ -568,6 +849,10 @@
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 15.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity 15_9EC0A8CC.wem</CachePath>
 				</File>
+				<File Id="804693145" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Community Manager Fiere-002.wav</ShortName>
+					<CachePath>SFX/Community Manager Fiere-002_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="808216408" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_concrete block remove 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_concrete block remove 2_A0C09DAD.wem</CachePath>
@@ -575,6 +860,10 @@
 				<File Id="809883662" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PROTO TRANSI [2024-05-01 182310].wav</ShortName>
 					<CachePath>SFX/PROTO TRANSI [2024-05-01 182310]_B02CE968.wem</CachePath>
+				</File>
+				<File Id="814650744" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Community Manager Nerveux-001.wav</ShortName>
+					<CachePath>SFX/Community Manager Nerveux-001_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="822291799" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 8.wav</ShortName>
@@ -596,6 +885,10 @@
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity 3.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity 3_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="842359761" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Calme-002.wav</ShortName>
+					<CachePath>SFX/Comptable Calme-002_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="844089229" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_UI_RC_Menu_select 2.wav</ShortName>
 					<CachePath>SFX/HM_UI_RC_Menu_select 2_FD4DF9DE.wem</CachePath>
@@ -612,9 +905,17 @@
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 14.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 14_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="854530010" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Agacée-001.wav</ShortName>
+					<CachePath>SFX/Comptable Agacée-001_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="858138438" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 3.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 3_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="861105441" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Community Manager Calme-002.wav</ShortName>
+					<CachePath>SFX/Community Manager Calme-002_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="863046301" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 7.wav</ShortName>
@@ -632,13 +933,33 @@
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 3.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity 3_A883030C.wem</CachePath>
 				</File>
+				<File Id="879798648" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233 3.wav</ShortName>
+					<CachePath>SFX/Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233 3_A49D9728.wem</CachePath>
+				</File>
 				<File Id="880104204" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity 2_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="884312695" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233.wav</ShortName>
+					<CachePath>SFX/Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233_1130DF65.wem</CachePath>
+				</File>
 				<File Id="886483541" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_Menu_paused 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_Menu_paused 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="891704891" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss Pensif 2.wav</ShortName>
+					<CachePath>SFX/Boss Pensif 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="892606534" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Community Manager Confuse-001.wav</ShortName>
+					<CachePath>SFX/Community Manager Confuse-001_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="896411199" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss Excité 8.wav</ShortName>
+					<CachePath>SFX/Boss Excité 8_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="899413808" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AssetTest.wav</ShortName>
@@ -656,9 +977,21 @@
 					<ShortName>HM_SFX_SC_Build_soap block place 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_soap block place 2_5B93C901.wem</CachePath>
 				</File>
+				<File Id="907730314" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dir Créa Fier-003.wav</ShortName>
+					<CachePath>SFX/Dir Créa Fier-003_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="911224313" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 5.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 5_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="920013695" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Suspicieuse-001.wav</ShortName>
+					<CachePath>SFX/Comptable Suspicieuse-001_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="920703846" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Déterminée-005.wav</ShortName>
+					<CachePath>SFX/Comptable Déterminée-005_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="922530664" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_tab_onclick 2.wav</ShortName>
@@ -668,6 +1001,18 @@
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 6.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 6_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="927520393" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>CINEMATIQUE INTRO.wav</ShortName>
+					<CachePath>SFX/CINEMATIQUE INTRO_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="928286559" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Employé Triste Pensif-003.wav</ShortName>
+					<CachePath>SFX/Employé Triste Pensif-003_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="931070412" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Community Manager Calme-001.wav</ShortName>
+					<CachePath>SFX/Community Manager Calme-001_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="931559138" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 9.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity 9_D70252A0.wem</CachePath>
@@ -676,9 +1021,17 @@
 					<ShortName>sneak victory render v1 125 2 [2024-05-31 154655].wav</ShortName>
 					<CachePath>SFX/sneak victory render v1 125 2 [2024-05-31 154655]_B02CE968.wem</CachePath>
 				</File>
+				<File Id="959465428" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Community Manager Agacé-002.wav</ShortName>
+					<CachePath>SFX/Community Manager Agacé-002_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="962271348" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Objects, Furniture, Moving Furniture, Table, Bottles Rattle SND1763 3.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Objects, Furniture, Moving Furniture, Table, Bottles Rattle SND1763 3_6C6E2BE3.wem</CachePath>
+				</File>
+				<File Id="962823174" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Hereuse-004.wav</ShortName>
+					<CachePath>SFX/Comptable Hereuse-004_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="968615444" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Ambience_Restaurant_Pizza_Parlor_Walla_PSEF016 1.wav</ShortName>
@@ -696,6 +1049,18 @@
 					<ShortName>HM_UI_RC_Menu_money spent.wav</ShortName>
 					<CachePath>SFX/HM_UI_RC_Menu_money spent_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="974396332" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dir Créa Déterminé-002.wav</ShortName>
+					<CachePath>SFX/Dir Créa Déterminé-002_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="975559797" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Community Manager Excitée-002.wav</ShortName>
+					<CachePath>SFX/Community Manager Excitée-002_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="976507546" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dir Créa Hereux-002.wav</ShortName>
+					<CachePath>SFX/Dir Créa Hereux-002_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="986575835" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_high_velocity 6.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_high_velocity 6_FD4DF9DE.wem</CachePath>
@@ -712,9 +1077,17 @@
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_high_velocity 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_high_velocity 2_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="1001779967" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 01 SND46234.wav</ShortName>
+					<CachePath>SFX/Toys, Misc, Rubber Duck, Whistling, Squeak 01 SND46234_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="1007401334" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_high_velocity 5.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_high_velocity 5_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="1011778745" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Surprise-002.wav</ShortName>
+					<CachePath>SFX/Comptable Surprise-002_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="1013447040" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 15.wav</ShortName>
@@ -727,6 +1100,18 @@
 				<File Id="1031247465" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_basic block place 5.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_basic block place 5_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="1041993043" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Déterminée-004.wav</ShortName>
+					<CachePath>SFX/Comptable Déterminée-004_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="1042015096" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dir Créa Excité-001.wav</ShortName>
+					<CachePath>SFX/Dir Créa Excité-001_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="1045455280" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dir Créa Confus.wav</ShortName>
+					<CachePath>SFX/Dir Créa Confus_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="1047804260" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 3.wav</ShortName>
@@ -765,6 +1150,294 @@
 				<Event Id="1191715222" Name="Play_AssetTest" DurationType="OneShot" DurationMin="0.76885414" DurationMax="0.76885414">
 					<MediaRefs>
 						<MediaRef Id="899413808"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="762871940" Name="Play_Bark_Boss_1" DurationType="OneShot" DurationMin="2.94825" DurationMax="2.94825">
+					<MediaRefs>
+						<MediaRef Id="138705726"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="762871943" Name="Play_Bark_Boss_2" DurationType="OneShot" DurationMin="3.4585" DurationMax="3.4585">
+					<MediaRefs>
+						<MediaRef Id="891704891"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="762871942" Name="Play_Bark_Boss_3" DurationType="OneShot" DurationMin="3.96875" DurationMax="3.96875">
+					<MediaRefs>
+						<MediaRef Id="787703407"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="762871937" Name="Play_Bark_Boss_4" DurationType="OneShot" DurationMin="4.4115" DurationMax="4.4115">
+					<MediaRefs>
+						<MediaRef Id="707441225"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="762871936" Name="Play_Bark_Boss_5" DurationType="OneShot" DurationMin="2.3104374" DurationMax="2.3104374">
+					<MediaRefs>
+						<MediaRef Id="633122800"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="762871939" Name="Play_Bark_Boss_6" DurationType="OneShot" DurationMin="2.635146" DurationMax="2.635146">
+					<MediaRefs>
+						<MediaRef Id="707156560"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="762871938" Name="Play_Bark_Boss_7" DurationType="OneShot" DurationMin="2.7047083" DurationMax="2.7047083">
+					<MediaRefs>
+						<MediaRef Id="896411199"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="762871949" Name="Play_Bark_Boss_8" DurationType="OneShot" DurationMin="2.438" DurationMax="2.438">
+					<MediaRefs>
+						<MediaRef Id="57191958"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="762871948" Name="Play_Bark_Boss_9" DurationType="OneShot" DurationMin="2.9014583" DurationMax="2.9014583">
+					<MediaRefs>
+						<MediaRef Id="171144445"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3198856803" Name="Play_Bark_CM_agace" DurationType="OneShot" DurationMin="1.8376875" DurationMax="2.180875">
+					<MediaRefs>
+						<MediaRef Id="565962083"/>
+						<MediaRef Id="572998712"/>
+						<MediaRef Id="959465428"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="77500316" Name="Play_Bark_CM_calme" DurationType="OneShot" DurationMin="1.54375" DurationMax="1.62325">
+					<MediaRefs>
+						<MediaRef Id="861105441"/>
+						<MediaRef Id="931070412"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2090504804" Name="Play_Bark_CM_confus" DurationType="OneShot" DurationMin="1.303625" DurationMax="1.476625">
+					<MediaRefs>
+						<MediaRef Id="406864568"/>
+						<MediaRef Id="689639882"/>
+						<MediaRef Id="892606534"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="13495039" Name="Play_Bark_CM_degoute" DurationType="OneShot" DurationMin="2.0809374" DurationMax="2.1096041">
+					<MediaRefs>
+						<MediaRef Id="389484077"/>
+						<MediaRef Id="751449316"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3251376937" Name="Play_Bark_CM_determine" DurationType="OneShot" DurationMin="1.2668542" DurationMax="2.1084583">
+					<MediaRefs>
+						<MediaRef Id="73944066"/>
+						<MediaRef Id="390402863"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="520407892" Name="Play_Bark_CM_excite" DurationType="OneShot" DurationMin="2.189771" DurationMax="2.2950625">
+					<MediaRefs>
+						<MediaRef Id="67845509"/>
+						<MediaRef Id="710150507"/>
+						<MediaRef Id="975559797"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2212292508" Name="Play_Bark_CM_fier" DurationType="OneShot" DurationMin="2.0072708" DurationMax="2.6744375">
+					<MediaRefs>
+						<MediaRef Id="401662905"/>
+						<MediaRef Id="804693145"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3481665945" Name="Play_Bark_CM_nerveux" DurationType="OneShot" DurationMin="1.8293333" DurationMax="1.8801666">
+					<MediaRefs>
+						<MediaRef Id="142951727"/>
+						<MediaRef Id="814650744"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2511529134" Name="Play_Bark_Comptable_agace" DurationType="OneShot" DurationMin="1.413375" DurationMax="2.5211875">
+					<MediaRefs>
+						<MediaRef Id="256102878"/>
+						<MediaRef Id="257576684"/>
+						<MediaRef Id="582296536"/>
+						<MediaRef Id="767138760"/>
+						<MediaRef Id="854530010"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2088940705" Name="Play_Bark_Comptable_calme" DurationType="OneShot" DurationMin="1.6888958" DurationMax="1.787">
+					<MediaRefs>
+						<MediaRef Id="440060209"/>
+						<MediaRef Id="842359761"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="699640404" Name="Play_Bark_Comptable_determine" DurationType="OneShot" DurationMin="1.3955834" DurationMax="2.6388543">
+					<MediaRefs>
+						<MediaRef Id="159921655"/>
+						<MediaRef Id="626305289"/>
+						<MediaRef Id="794503708"/>
+						<MediaRef Id="920703846"/>
+						<MediaRef Id="1041993043"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2375551732" Name="Play_Bark_Comptable_hereux" DurationType="OneShot" DurationMin="2.1119375" DurationMax="2.8352292">
+					<MediaRefs>
+						<MediaRef Id="102701038"/>
+						<MediaRef Id="174172311"/>
+						<MediaRef Id="198814301"/>
+						<MediaRef Id="437164094"/>
+						<MediaRef Id="962823174"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2816101254" Name="Play_Bark_Comptable_hilare" DurationType="OneShot" DurationMin="4.028021" DurationMax="4.028021">
+					<MediaRefs>
+						<MediaRef Id="351801259"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2664492310" Name="Play_Bark_Comptable_kiki1" DurationType="OneShot" DurationMin="4.3750415" DurationMax="4.3750415">
+					<MediaRefs>
+						<MediaRef Id="701638250"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2664492309" Name="Play_Bark_Comptable_kiki2" DurationType="OneShot" DurationMin="3.382729" DurationMax="3.382729">
+					<MediaRefs>
+						<MediaRef Id="331710125"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2498486908" Name="Play_Bark_Comptable_surprise" DurationType="OneShot" DurationMin="1.50675" DurationMax="2.903625">
+					<MediaRefs>
+						<MediaRef Id="285633154"/>
+						<MediaRef Id="651936224"/>
+						<MediaRef Id="1011778745"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4016825455" Name="Play_Bark_Comptable_suspicieuse" DurationType="OneShot" DurationMin="1.18925" DurationMax="1.7508334">
+					<MediaRefs>
+						<MediaRef Id="412783045"/>
+						<MediaRef Id="573769041"/>
+						<MediaRef Id="731841251"/>
+						<MediaRef Id="920013695"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1330272201" Name="Play_Bark_DirCrea_agace" DurationType="OneShot" DurationMin="1.4796458" DurationMax="1.8176042">
+					<MediaRefs>
+						<MediaRef Id="26833914"/>
+						<MediaRef Id="710475532"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2601504602" Name="Play_Bark_DirCrea_confus" DurationType="OneShot" DurationMin="1.4068959" DurationMax="1.4068959">
+					<MediaRefs>
+						<MediaRef Id="1045455280"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1454193997" Name="Play_Bark_DirCrea_degoute" DurationType="OneShot" DurationMin="2.3000624" DurationMax="2.3000624">
+					<MediaRefs>
+						<MediaRef Id="260431742"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3044684783" Name="Play_Bark_DirCrea_determine" DurationType="OneShot" DurationMin="1.8813125" DurationMax="1.8935626">
+					<MediaRefs>
+						<MediaRef Id="333375607"/>
+						<MediaRef Id="974396332"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1017959114" Name="Play_Bark_DirCrea_excite" DurationType="OneShot" DurationMin="1.91625" DurationMax="2.3000624">
+					<MediaRefs>
+						<MediaRef Id="245320377"/>
+						<MediaRef Id="260431742"/>
+						<MediaRef Id="1042015096"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3033943326" Name="Play_Bark_DirCrea_fier" DurationType="OneShot" DurationMin="1.48075" DurationMax="1.8697083">
+					<MediaRefs>
+						<MediaRef Id="224132917"/>
+						<MediaRef Id="235538765"/>
+						<MediaRef Id="907730314"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2886070633" Name="Play_Bark_DirCrea_hereux" DurationType="OneShot" DurationMin="1.611" DurationMax="2.014125">
+					<MediaRefs>
+						<MediaRef Id="111884437"/>
+						<MediaRef Id="473874225"/>
+						<MediaRef Id="976507546"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3656892293" Name="Play_Bark_EmpTriste_confus" DurationType="OneShot" DurationMin="1.4305209" DurationMax="1.9837084">
+					<MediaRefs>
+						<MediaRef Id="237990611"/>
+						<MediaRef Id="389809314"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="777501338" Name="Play_Bark_EmpTriste_fatigue" DurationType="OneShot" DurationMin="1.565125" DurationMax="2.6275418">
+					<MediaRefs>
+						<MediaRef Id="327908177"/>
+						<MediaRef Id="348800255"/>
+						<MediaRef Id="777721951"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3598901970" Name="Play_Bark_EmpTriste_hereux" DurationType="OneShot" DurationMin="1.389125" DurationMax="1.7083334">
+					<MediaRefs>
+						<MediaRef Id="222916998"/>
+						<MediaRef Id="508950208"/>
+						<MediaRef Id="709490544"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="950719014" Name="Play_Bark_EmpTriste_pensif" DurationType="OneShot" DurationMin="1.37675" DurationMax="1.729375">
+					<MediaRefs>
+						<MediaRef Id="144105267"/>
+						<MediaRef Id="409703046"/>
+						<MediaRef Id="752485749"/>
+						<MediaRef Id="928286559"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1833842380" Name="Play_Bark_EmpTriste_triste" DurationType="OneShot" DurationMin="1.9992917" DurationMax="2.5506666">
+					<MediaRefs>
+						<MediaRef Id="367256306"/>
+						<MediaRef Id="455906566"/>
+						<MediaRef Id="620280135"/>
+						<MediaRef Id="722070604"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3143318226" Name="Play_Bark_Stagiaire_agace" DurationType="OneShot" DurationMin="0.4218241" DurationMax="0.4218241">
+					<MediaRefs>
+						<MediaRef Id="527095067"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1622480643" Name="Play_Bark_Stagiaire_confus" DurationType="OneShot" DurationMin="0.4925424" DurationMax="0.4925424">
+					<MediaRefs>
+						<MediaRef Id="1001779967"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4105615984" Name="Play_Bark_Stagiaire_determine" DurationType="OneShot" DurationMin="0.1326832" DurationMax="0.1326832">
+					<MediaRefs>
+						<MediaRef Id="89773760"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2099422295" Name="Play_Bark_Stagiaire_excite" DurationType="OneShot" DurationMin="0.24659784" DurationMax="0.24659784">
+					<MediaRefs>
+						<MediaRef Id="879798648"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2200791864" Name="Play_Bark_Stagiaire_hereux" DurationType="OneShot" DurationMin="0.27136102" DurationMax="0.27136102">
+					<MediaRefs>
+						<MediaRef Id="641984613"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3923390038" Name="Play_Bark_Stagiaire_intimide" DurationType="OneShot" DurationMin="0.5010392" DurationMax="0.5010392">
+					<MediaRefs>
+						<MediaRef Id="43553209"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2748407164" Name="Play_Bark_Stagiaire_nerveux" DurationType="OneShot" DurationMin="0.56635416" DurationMax="0.56635416">
+					<MediaRefs>
+						<MediaRef Id="270210916"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3745766036" Name="Play_Bark_Stagiaire_pensif" DurationType="OneShot" DurationMin="0.34978506" DurationMax="0.34978506">
+					<MediaRefs>
+						<MediaRef Id="233212238"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2187196553" Name="Play_Bark_Stagiaire_peur" DurationType="OneShot" DurationMin="0.6394095" DurationMax="0.6394095">
+					<MediaRefs>
+						<MediaRef Id="420491024"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1334838302" Name="Play_Bark_Stagiaire_triste" DurationType="OneShot" DurationMin="0.5305569" DurationMax="0.5305569">
+					<MediaRefs>
+						<MediaRef Id="884312695"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1414775411" Name="Play_Build_basic_block_place" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.49178016" DurationMax="1.0579422">
@@ -847,11 +1520,11 @@
 				</Event>
 				<Event Id="977134866" Name="Play_Camera_zoomIn" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2892692845" Name="Play_Camera_zoomOut" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="4229810356" Name="Play_Dial_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="4229810359" Name="Play_Dial_2" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="4229810358" Name="Play_Dial_3" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="4229810353" Name="Play_Dial_4" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2953314807" Name="Play_IntroCinematic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2953314807" Name="Play_IntroCinematic" DurationType="OneShot" DurationMin="52.59931" DurationMax="52.59931">
+					<MediaRefs>
+						<MediaRef Id="927520393"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="344286550" Name="Play_Main_Menu_Text_Hover" DurationType="OneShot" DurationMin="1.1009375" DurationMax="1.2182292">
 					<MediaRefs>
 						<MediaRef Id="595160945"/>
@@ -1207,5 +1880,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2AA9FF19-6E91-EAF0-43CB-6BBF018B80DE}</FileHash>
+	<FileHash>{BA019FB4-362E-8743-7021-554B4B766412}</FileHash>
 </SoundBanksInfo>
