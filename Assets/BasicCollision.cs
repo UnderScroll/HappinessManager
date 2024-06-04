@@ -7,7 +7,7 @@ public class BasicCollision : MonoBehaviour
         float collisionForce = collision.impulse.magnitude;
         if (collisionForce > 3)
         {
-            Debug.Log(collisionForce);
+            //Debug.Log(collisionForce);
             AkSoundEngine.SetRTPCValue("Collision_Velocity", collisionForce);
             if (collision.gameObject.CompareTag("block"))
             {
