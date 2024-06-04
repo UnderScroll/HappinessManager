@@ -38,10 +38,12 @@ public class TalkingBuddy : MonoBehaviour
     private float actualTime = 0;
     DialogueRunner dialogueRunner;
     private float timeBeforeTalking = 3;
+    GameManager _gmRef;
     #endregion
 
     private void Start()
     {
+        _gmRef = GetComponent<GameManager>();
         dialoguePosition = this.transform;
         RandomizeLine();
         ResetTimer();
