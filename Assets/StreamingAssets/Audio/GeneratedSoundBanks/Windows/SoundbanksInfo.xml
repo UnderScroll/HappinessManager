@@ -61,7 +61,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{AB31C653-9CCD-A613-2693-4268FC7C88D6}">
+		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{2CBB5A69-F4A9-9E33-3BA1-0A272E30CBD1}">
 			<ShortName>HM_Global_SB</ShortName>
 			<Path>HM_Global_SB.bnk</Path>
 			<Media>
@@ -1173,6 +1173,7 @@
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="1990128658" Name="Room_Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2995775460" Name="Room_Small" LibName="Wwise RoomVerb" LibId="7733251"/>
 				</ShareSets>
 			</Plugins>
 			<Events>
@@ -1200,46 +1201,91 @@
 					<MediaRefs>
 						<MediaRef Id="138705726"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="762871943" Name="Play_Bark_Boss_2" DurationType="OneShot" DurationMin="3.4585" DurationMax="3.4585">
 					<MediaRefs>
 						<MediaRef Id="891704891"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="762871942" Name="Play_Bark_Boss_3" DurationType="OneShot" DurationMin="3.96875" DurationMax="3.96875">
 					<MediaRefs>
 						<MediaRef Id="787703407"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="762871937" Name="Play_Bark_Boss_4" DurationType="OneShot" DurationMin="4.4115" DurationMax="4.4115">
 					<MediaRefs>
 						<MediaRef Id="707441225"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="762871936" Name="Play_Bark_Boss_5" DurationType="OneShot" DurationMin="2.3104374" DurationMax="2.3104374">
 					<MediaRefs>
 						<MediaRef Id="633122800"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="762871939" Name="Play_Bark_Boss_6" DurationType="OneShot" DurationMin="2.635146" DurationMax="2.635146">
 					<MediaRefs>
 						<MediaRef Id="707156560"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="762871938" Name="Play_Bark_Boss_7" DurationType="OneShot" DurationMin="2.7047083" DurationMax="2.7047083">
 					<MediaRefs>
 						<MediaRef Id="896411199"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="762871949" Name="Play_Bark_Boss_8" DurationType="OneShot" DurationMin="2.438" DurationMax="2.438">
 					<MediaRefs>
 						<MediaRef Id="57191958"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="762871948" Name="Play_Bark_Boss_9" DurationType="OneShot" DurationMin="2.9014583" DurationMax="2.9014583">
 					<MediaRefs>
 						<MediaRef Id="171144445"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="3198856803" Name="Play_Bark_CM_agace" DurationType="OneShot" DurationMin="1.8376875" DurationMax="2.180875">
 					<MediaRefs>
@@ -1247,12 +1293,22 @@
 						<MediaRef Id="572998712"/>
 						<MediaRef Id="959465428"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="77500316" Name="Play_Bark_CM_calme" DurationType="OneShot" DurationMin="1.54375" DurationMax="1.62325">
 					<MediaRefs>
 						<MediaRef Id="861105441"/>
 						<MediaRef Id="931070412"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="2090504804" Name="Play_Bark_CM_confus" DurationType="OneShot" DurationMin="1.303625" DurationMax="1.476625">
 					<MediaRefs>
@@ -1260,18 +1316,33 @@
 						<MediaRef Id="689639882"/>
 						<MediaRef Id="892606534"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="13495039" Name="Play_Bark_CM_degoute" DurationType="OneShot" DurationMin="2.0809374" DurationMax="2.1096041">
 					<MediaRefs>
 						<MediaRef Id="389484077"/>
 						<MediaRef Id="751449316"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="3251376937" Name="Play_Bark_CM_determine" DurationType="OneShot" DurationMin="1.2668542" DurationMax="2.1084583">
 					<MediaRefs>
 						<MediaRef Id="73944066"/>
 						<MediaRef Id="390402863"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="520407892" Name="Play_Bark_CM_excite" DurationType="OneShot" DurationMin="2.189771" DurationMax="2.2950625">
 					<MediaRefs>
@@ -1279,18 +1350,33 @@
 						<MediaRef Id="710150507"/>
 						<MediaRef Id="975559797"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="2212292508" Name="Play_Bark_CM_fier" DurationType="OneShot" DurationMin="2.0072708" DurationMax="2.6744375">
 					<MediaRefs>
 						<MediaRef Id="401662905"/>
 						<MediaRef Id="804693145"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="3481665945" Name="Play_Bark_CM_nerveux" DurationType="OneShot" DurationMin="1.8293333" DurationMax="1.8801666">
 					<MediaRefs>
 						<MediaRef Id="142951727"/>
 						<MediaRef Id="814650744"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="2511529134" Name="Play_Bark_Comptable_agace" DurationType="OneShot" DurationMin="1.413375" DurationMax="2.5211875">
 					<MediaRefs>
@@ -1300,12 +1386,22 @@
 						<MediaRef Id="767138760"/>
 						<MediaRef Id="854530010"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="2088940705" Name="Play_Bark_Comptable_calme" DurationType="OneShot" DurationMin="1.6888958" DurationMax="1.787">
 					<MediaRefs>
 						<MediaRef Id="440060209"/>
 						<MediaRef Id="842359761"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="699640404" Name="Play_Bark_Comptable_determine" DurationType="OneShot" DurationMin="1.3955834" DurationMax="2.6388543">
 					<MediaRefs>
@@ -1315,6 +1411,11 @@
 						<MediaRef Id="920703846"/>
 						<MediaRef Id="1041993043"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="2375551732" Name="Play_Bark_Comptable_hereux" DurationType="OneShot" DurationMin="2.1119375" DurationMax="2.8352292">
 					<MediaRefs>
@@ -1324,21 +1425,41 @@
 						<MediaRef Id="437164094"/>
 						<MediaRef Id="962823174"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="2664492310" Name="Play_Bark_Comptable_kiki1" DurationType="OneShot" DurationMin="4.3750415" DurationMax="4.3750415">
 					<MediaRefs>
 						<MediaRef Id="701638250"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="2664492309" Name="Play_Bark_Comptable_kiki2" DurationType="OneShot" DurationMin="3.382729" DurationMax="3.382729">
 					<MediaRefs>
 						<MediaRef Id="331710125"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="2664492308" Name="Play_Bark_Comptable_kiki3" DurationType="OneShot" DurationMin="3.8011458" DurationMax="3.8011458">
 					<MediaRefs>
 						<MediaRef Id="1003324277"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="2498486908" Name="Play_Bark_Comptable_surprise" DurationType="OneShot" DurationMin="1.50675" DurationMax="2.903625">
 					<MediaRefs>
@@ -1346,6 +1467,11 @@
 						<MediaRef Id="651936224"/>
 						<MediaRef Id="1011778745"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="4016825455" Name="Play_Bark_Comptable_suspicieuse" DurationType="OneShot" DurationMin="1.18925" DurationMax="1.7508334">
 					<MediaRefs>
@@ -1354,6 +1480,11 @@
 						<MediaRef Id="731841251"/>
 						<MediaRef Id="920013695"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="3777215715" Name="Play_Bark_Debut_Etage_Boss1" DurationType="OneShot" DurationMin="5.5036373" DurationMax="5.5036373">
 					<MediaRefs>
@@ -1410,22 +1541,42 @@
 						<MediaRef Id="26833914"/>
 						<MediaRef Id="710475532"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="2601504602" Name="Play_Bark_DirCrea_confus" DurationType="OneShot" DurationMin="1.4068959" DurationMax="1.4068959">
 					<MediaRefs>
 						<MediaRef Id="1045455280"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="1454193997" Name="Play_Bark_DirCrea_degoute" DurationType="OneShot" DurationMin="2.3000624" DurationMax="2.3000624">
 					<MediaRefs>
 						<MediaRef Id="260431742"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="3044684783" Name="Play_Bark_DirCrea_determine" DurationType="OneShot" DurationMin="1.8813125" DurationMax="1.8935626">
 					<MediaRefs>
 						<MediaRef Id="333375607"/>
 						<MediaRef Id="974396332"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="1017959114" Name="Play_Bark_DirCrea_excite" DurationType="OneShot" DurationMin="1.91625" DurationMax="2.3000624">
 					<MediaRefs>
@@ -1433,6 +1584,11 @@
 						<MediaRef Id="260431742"/>
 						<MediaRef Id="1042015096"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="3033943326" Name="Play_Bark_DirCrea_fier" DurationType="OneShot" DurationMin="1.48075" DurationMax="1.8697083">
 					<MediaRefs>
@@ -1440,6 +1596,11 @@
 						<MediaRef Id="235538765"/>
 						<MediaRef Id="907730314"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="2886070633" Name="Play_Bark_DirCrea_hereux" DurationType="OneShot" DurationMin="1.611" DurationMax="2.014125">
 					<MediaRefs>
@@ -1447,12 +1608,22 @@
 						<MediaRef Id="473874225"/>
 						<MediaRef Id="976507546"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="3656892293" Name="Play_Bark_EmpTriste_confus" DurationType="OneShot" DurationMin="1.4305209" DurationMax="1.9837084">
 					<MediaRefs>
 						<MediaRef Id="237990611"/>
 						<MediaRef Id="389809314"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="777501338" Name="Play_Bark_EmpTriste_fatigue" DurationType="OneShot" DurationMin="1.565125" DurationMax="2.6275418">
 					<MediaRefs>
@@ -1460,6 +1631,11 @@
 						<MediaRef Id="348800255"/>
 						<MediaRef Id="777721951"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="3598901970" Name="Play_Bark_EmpTriste_hereux" DurationType="OneShot" DurationMin="1.389125" DurationMax="1.7083334">
 					<MediaRefs>
@@ -1467,6 +1643,11 @@
 						<MediaRef Id="508950208"/>
 						<MediaRef Id="709490544"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="950719014" Name="Play_Bark_EmpTriste_pensif" DurationType="OneShot" DurationMin="1.37675" DurationMax="1.729375">
 					<MediaRefs>
@@ -1475,6 +1656,11 @@
 						<MediaRef Id="752485749"/>
 						<MediaRef Id="928286559"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="1833842380" Name="Play_Bark_EmpTriste_triste" DurationType="OneShot" DurationMin="1.9992917" DurationMax="2.5506666">
 					<MediaRefs>
@@ -1483,56 +1669,111 @@
 						<MediaRef Id="620280135"/>
 						<MediaRef Id="722070604"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="3143318226" Name="Play_Bark_Stagiaire_agace" DurationType="OneShot" DurationMin="0.4218241" DurationMax="0.4218241">
 					<MediaRefs>
 						<MediaRef Id="527095067"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="1622480643" Name="Play_Bark_Stagiaire_confus" DurationType="OneShot" DurationMin="0.4925424" DurationMax="0.4925424">
 					<MediaRefs>
 						<MediaRef Id="1001779967"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="4105615984" Name="Play_Bark_Stagiaire_determine" DurationType="OneShot" DurationMin="0.1326832" DurationMax="0.1326832">
 					<MediaRefs>
 						<MediaRef Id="89773760"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="2099422295" Name="Play_Bark_Stagiaire_excite" DurationType="OneShot" DurationMin="0.24659784" DurationMax="0.24659784">
 					<MediaRefs>
 						<MediaRef Id="879798648"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="2200791864" Name="Play_Bark_Stagiaire_hereux" DurationType="OneShot" DurationMin="0.27136102" DurationMax="0.27136102">
 					<MediaRefs>
 						<MediaRef Id="641984613"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="3923390038" Name="Play_Bark_Stagiaire_intimide" DurationType="OneShot" DurationMin="0.5010392" DurationMax="0.5010392">
 					<MediaRefs>
 						<MediaRef Id="43553209"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="2748407164" Name="Play_Bark_Stagiaire_nerveux" DurationType="OneShot" DurationMin="0.56635416" DurationMax="0.56635416">
 					<MediaRefs>
 						<MediaRef Id="270210916"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="3745766036" Name="Play_Bark_Stagiaire_pensif" DurationType="OneShot" DurationMin="0.34978506" DurationMax="0.34978506">
 					<MediaRefs>
 						<MediaRef Id="233212238"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="2187196553" Name="Play_Bark_Stagiaire_peur" DurationType="OneShot" DurationMin="0.6394095" DurationMax="0.6394095">
 					<MediaRefs>
 						<MediaRef Id="420491024"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="1334838302" Name="Play_Bark_Stagiaire_triste" DurationType="OneShot" DurationMin="0.5305569" DurationMax="0.5305569">
 					<MediaRefs>
 						<MediaRef Id="884312695"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="709531481" Name="Play_boss_dial_intro" DurationType="OneShot" DurationMin="5.5036373" DurationMax="5.5036373">
 					<MediaRefs>
@@ -1990,5 +2231,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{51230CC7-A462-2C85-C4E3-4F4AE94BFCEE}</FileHash>
+	<FileHash>{4797BB65-5A27-9144-740A-2B7B6DCED308}</FileHash>
 </SoundBanksInfo>
