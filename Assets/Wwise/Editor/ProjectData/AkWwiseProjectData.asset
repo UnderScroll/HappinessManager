@@ -190,7 +190,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\WU_HM_SoundBanks
     guid: d527a65720db2546b7a23303c255c21b
     GuidInternal: 
-    m_lastTime: -8584840162742410185
+    m_lastTime: -8584840090529272384
     List:
     - name: HM_Global_SB
       guid: e1c12577d86f0c41a82a7bdcdb4ef626
@@ -231,7 +231,7 @@ MonoBehaviour:
     ParentPath: Events\WU_HM_Events
     guid: a44afb18422e3e4bbc589ac1581aef04
     GuidInternal: 
-    m_lastTime: -8584840146948945416
+    m_lastTime: -8584840092892937502
     List:
     - name: Amb
       guid: 45ce627f733a4f4d90717e8757beb9ba
@@ -408,6 +408,29 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: boss
+      guid: 30e587db573c5e4fae3c5280ddf203d3
+      id: 1560169506
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Debuts Etages
+        ObjectType: 4
+        guid: daa5b9fa6b0c58419e60ba7cf5e06bf8
+      - ElementName: boss
+        ObjectType: 4
+        guid: 30e587db573c5e4fae3c5280ddf203d3
+      Path: Events\WU_HM_Events\Dialogue\Debuts Etages\boss
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Build
       guid: 511e938f68373342bc75ac0f26d1f3d2
       id: 3284755031
@@ -428,6 +451,29 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: cafeteria
+      guid: f645db419d3906489559f1efc4852b30
+      id: 1108116845
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Debuts Etages
+        ObjectType: 4
+        guid: daa5b9fa6b0c58419e60ba7cf5e06bf8
+      - ElementName: cafeteria
+        ObjectType: 4
+        guid: f645db419d3906489559f1efc4852b30
+      Path: Events\WU_HM_Events\Dialogue\Debuts Etages\cafeteria
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Camera
       guid: 9d5b07d89dc90d4790d3997d77f7a4d3
       id: 306800208
@@ -442,6 +488,26 @@ MonoBehaviour:
         ObjectType: 4
         guid: 9d5b07d89dc90d4790d3997d77f7a4d3
       Path: Events\WU_HM_Events\Camera
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Debuts Etages
+      guid: daa5b9fa6b0c58419e60ba7cf5e06bf8
+      id: 2815545147
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Debuts Etages
+        ObjectType: 4
+        guid: daa5b9fa6b0c58419e60ba7cf5e06bf8
+      Path: Events\WU_HM_Events\Dialogue\Debuts Etages
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1286,6 +1352,266 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.7508334
       minDuration: 1.18925
+    - name: Play_Bark_Debut_Etage_Boss1
+      guid: ab00b82c52923141a7b80a72f1e6367a
+      id: 3777215715
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Debuts Etages
+        ObjectType: 4
+        guid: daa5b9fa6b0c58419e60ba7cf5e06bf8
+      - ElementName: boss
+        ObjectType: 4
+        guid: 30e587db573c5e4fae3c5280ddf203d3
+      - ElementName: Play_Bark_Debut_Etage_Boss1
+        ObjectType: 3
+        guid: ab00b82c52923141a7b80a72f1e6367a
+      Path: Events\WU_HM_Events\Dialogue\Debuts Etages\boss\Play_Bark_Debut_Etage_Boss1
+      maxAttenuation: 0
+      maxDuration: 5.5036373
+      minDuration: 5.5036373
+    - name: Play_Bark_Debut_Etage_Boss2
+      guid: 754fb2d4ce621645a67c768acb36e71f
+      id: 3777215712
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Debuts Etages
+        ObjectType: 4
+        guid: daa5b9fa6b0c58419e60ba7cf5e06bf8
+      - ElementName: boss
+        ObjectType: 4
+        guid: 30e587db573c5e4fae3c5280ddf203d3
+      - ElementName: Play_Bark_Debut_Etage_Boss2
+        ObjectType: 3
+        guid: 754fb2d4ce621645a67c768acb36e71f
+      Path: Events\WU_HM_Events\Dialogue\Debuts Etages\boss\Play_Bark_Debut_Etage_Boss2
+      maxAttenuation: 0
+      maxDuration: 6.403383
+      minDuration: 6.403383
+    - name: Play_Bark_Debut_Etage_Boss3
+      guid: 7a530fe18bb99844a764d0a7707388fa
+      id: 3777215713
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Debuts Etages
+        ObjectType: 4
+        guid: daa5b9fa6b0c58419e60ba7cf5e06bf8
+      - ElementName: boss
+        ObjectType: 4
+        guid: 30e587db573c5e4fae3c5280ddf203d3
+      - ElementName: Play_Bark_Debut_Etage_Boss3
+        ObjectType: 3
+        guid: 7a530fe18bb99844a764d0a7707388fa
+      Path: Events\WU_HM_Events\Dialogue\Debuts Etages\boss\Play_Bark_Debut_Etage_Boss3
+      maxAttenuation: 0
+      maxDuration: 0.81795037
+      minDuration: 0.81795037
+    - name: Play_Bark_Debut_Etage_Cafeteria1
+      guid: f3f14bc237ff4e4b9809200967ba2896
+      id: 3791513938
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Debuts Etages
+        ObjectType: 4
+        guid: daa5b9fa6b0c58419e60ba7cf5e06bf8
+      - ElementName: cafeteria
+        ObjectType: 4
+        guid: f645db419d3906489559f1efc4852b30
+      - ElementName: Play_Bark_Debut_Etage_Cafeteria1
+        ObjectType: 3
+        guid: f3f14bc237ff4e4b9809200967ba2896
+      Path: Events\WU_HM_Events\Dialogue\Debuts Etages\cafeteria\Play_Bark_Debut_Etage_Cafeteria1
+      maxAttenuation: 0
+      maxDuration: 6.0836654
+      minDuration: 6.0836654
+    - name: Play_Bark_Debut_Etage_Cafeteria2
+      guid: a61177f1a0410d49af2d6bc0202bc577
+      id: 3791513937
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Debuts Etages
+        ObjectType: 4
+        guid: daa5b9fa6b0c58419e60ba7cf5e06bf8
+      - ElementName: cafeteria
+        ObjectType: 4
+        guid: f645db419d3906489559f1efc4852b30
+      - ElementName: Play_Bark_Debut_Etage_Cafeteria2
+        ObjectType: 3
+        guid: a61177f1a0410d49af2d6bc0202bc577
+      Path: Events\WU_HM_Events\Dialogue\Debuts Etages\cafeteria\Play_Bark_Debut_Etage_Cafeteria2
+      maxAttenuation: 0
+      maxDuration: 10.44959
+      minDuration: 10.44959
+    - name: Play_Bark_Debut_Etage_Cafeteria3
+      guid: c37db78cfca5414cb76c11db0a12095a
+      id: 3791513936
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Debuts Etages
+        ObjectType: 4
+        guid: daa5b9fa6b0c58419e60ba7cf5e06bf8
+      - ElementName: cafeteria
+        ObjectType: 4
+        guid: f645db419d3906489559f1efc4852b30
+      - ElementName: Play_Bark_Debut_Etage_Cafeteria3
+        ObjectType: 3
+        guid: c37db78cfca5414cb76c11db0a12095a
+      Path: Events\WU_HM_Events\Dialogue\Debuts Etages\cafeteria\Play_Bark_Debut_Etage_Cafeteria3
+      maxAttenuation: 0
+      maxDuration: 10.44959
+      minDuration: 10.44959
+    - name: Play_Bark_Debut_Etage_Cafeteria4
+      guid: b07df68cba23af4cb9714e9c2ab35407
+      id: 3791513943
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Debuts Etages
+        ObjectType: 4
+        guid: daa5b9fa6b0c58419e60ba7cf5e06bf8
+      - ElementName: cafeteria
+        ObjectType: 4
+        guid: f645db419d3906489559f1efc4852b30
+      - ElementName: Play_Bark_Debut_Etage_Cafeteria4
+        ObjectType: 3
+        guid: b07df68cba23af4cb9714e9c2ab35407
+      Path: Events\WU_HM_Events\Dialogue\Debuts Etages\cafeteria\Play_Bark_Debut_Etage_Cafeteria4
+      maxAttenuation: 0
+      maxDuration: 3.5786266
+      minDuration: 3.5786266
+    - name: Play_Bark_Debut_Etage_Cafeteria5
+      guid: 4d4ce3cbde6021429c58394c85847db4
+      id: 3791513942
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Debuts Etages
+        ObjectType: 4
+        guid: daa5b9fa6b0c58419e60ba7cf5e06bf8
+      - ElementName: cafeteria
+        ObjectType: 4
+        guid: f645db419d3906489559f1efc4852b30
+      - ElementName: Play_Bark_Debut_Etage_Cafeteria5
+        ObjectType: 3
+        guid: 4d4ce3cbde6021429c58394c85847db4
+      Path: Events\WU_HM_Events\Dialogue\Debuts Etages\cafeteria\Play_Bark_Debut_Etage_Cafeteria5
+      maxAttenuation: 0
+      maxDuration: 2.1498137
+      minDuration: 2.1498137
+    - name: Play_Bark_Debut_Etage_Cafeteria6
+      guid: 6a6387dbcf14634a94a2694f93fbe834
+      id: 3791513941
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Debuts Etages
+        ObjectType: 4
+        guid: daa5b9fa6b0c58419e60ba7cf5e06bf8
+      - ElementName: cafeteria
+        ObjectType: 4
+        guid: f645db419d3906489559f1efc4852b30
+      - ElementName: Play_Bark_Debut_Etage_Cafeteria6
+        ObjectType: 3
+        guid: 6a6387dbcf14634a94a2694f93fbe834
+      Path: Events\WU_HM_Events\Dialogue\Debuts Etages\cafeteria\Play_Bark_Debut_Etage_Cafeteria6
+      maxAttenuation: 0
+      maxDuration: 4.481815
+      minDuration: 4.481815
+    - name: Play_Bark_Debut_Etage_Cafeteria7
+      guid: 04a53ccdeff24642b01c669078f24119
+      id: 3791513940
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Debuts Etages
+        ObjectType: 4
+        guid: daa5b9fa6b0c58419e60ba7cf5e06bf8
+      - ElementName: cafeteria
+        ObjectType: 4
+        guid: f645db419d3906489559f1efc4852b30
+      - ElementName: Play_Bark_Debut_Etage_Cafeteria7
+        ObjectType: 3
+        guid: 04a53ccdeff24642b01c669078f24119
+      Path: Events\WU_HM_Events\Dialogue\Debuts Etages\cafeteria\Play_Bark_Debut_Etage_Cafeteria7
+      maxAttenuation: 0
+      maxDuration: 8.271317
+      minDuration: 8.271317
     - name: Play_Bark_DirCrea_agace
       guid: 2cb7e6b1a09f834a9a6d9fd847884d12
       id: 1330272201
@@ -1876,8 +2202,8 @@ MonoBehaviour:
         guid: 30a5f2c7caa5214c9788427bbcdc6467
       Path: Events\WU_HM_Events\Other\Play_boss_dial_intro
       maxAttenuation: 0
-      maxDuration: 13.0755205
-      minDuration: 13.0755205
+      maxDuration: 5.5036373
+      minDuration: 5.5036373
     - name: Play_Build_basic_block_place
       guid: 134e898f2c5a7b4699aa7159b2a40e44
       id: 1414775411
@@ -2103,8 +2429,8 @@ MonoBehaviour:
         guid: 3eca51a88a56df4481df961b44969317
       Path: Events\WU_HM_Events\Other\Play_cafeteria_dial_Intro
       maxAttenuation: 0
-      maxDuration: 40.044834
-      minDuration: 40.044834
+      maxDuration: 6.0836654
+      minDuration: 6.0836654
     - name: Play_Camera_zoomIn
       guid: 9697dd237fedaf45a6bdf2bce05d78bf
       id: 977134866
@@ -3171,9 +3497,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584901339025742451
     List: []
-  ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
-  AutoSyncSelection: 0
+  ExpandedFileSystemItemIds: 9200000094000000
+  ExpandedWaapiItemIds: 02000000040000000600000007000000080000000a00000010000000
+  AutoSyncSelection: 1
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 
