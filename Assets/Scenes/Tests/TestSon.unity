@@ -344,6 +344,7 @@ GameObject:
   - component: {fileID: 737254370}
   - component: {fileID: 737254372}
   - component: {fileID: 737254371}
+  - component: {fileID: 737254373}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -471,7 +472,9 @@ MonoBehaviour:
   Simulator: {fileID: 0}
   LevelLoader: {fileID: 0}
   RuleManager: {fileID: 0}
+  SoundManager: {fileID: 0}
   UI_HUD: {fileID: 0}
+  FloorName: BossFloor
 --- !u!114 &737254369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,6 +544,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rules: []
+--- !u!114 &737254373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737254362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf5e2a0798a2ae4bbc0a0621de6a9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1052361899
 GameObject:
   m_ObjectHideFlags: 0
