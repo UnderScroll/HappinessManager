@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Yarn.Unity;
 using NaughtyAttributes;
+using System.Collections.Generic;
 
 public class TalkingBuddy : MonoBehaviour
 {
@@ -178,13 +179,15 @@ public class TalkingBuddy : MonoBehaviour
     /// </summary>
     private void PlayDialogueSound()
     {
+        IEnumerable<string> tags = dialogueRunner.GetTagsForNode(dialogueRunner.CurrentNodeName);
+
         if (Character == Characters.Boss)
         {
-
+            AkSoundEngine.PostEvent(tags.ToString(), gameObject);
         }
         else
         {
-
+            AkSoundEngine.PostEvent(tags.ToString(), gameObject);
         }
     }
     #endregion
