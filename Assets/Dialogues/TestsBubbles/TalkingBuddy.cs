@@ -5,14 +5,31 @@ using UnityEngine;
 using UnityEngine.Events;
 using Yarn.Unity;
 using NaughtyAttributes;
+using UnityEditor.SceneManagement;
 
 public class TalkingBuddy : MonoBehaviour
 {
-    UnityEvent OnTalking;
+    public enum Characters
+    {
+        Boss,
+        CommunityManager,
+        Comptable,
+        DirCrea,
+        EmployéTriste,
+        Stagiaire
+    };
+
+    UnityEvent OnTalking = new UnityEvent();
     [SerializeField] GameObject dialogueViewPrefab;
-    [SerializeField] Canvas canvas;
+
     [Header("Dialogues Infos")]
-    [SerializeField] List<string> linesNames;
+    [SerializeField] YarnProject yarnProject;
+    [SerializeField] Characters Character;
+    [SerializeField] int NbLinesStage1;
+    [SerializeField] int NbLinesStage2;
+    [SerializeField] int NbLinesStage3;
+    [SerializeField] int NbLinesStage4;
+    [SerializeField] int NbLinesStage5;
 
     [Header("Settings Timer Before Talking")]
     public int TimeBeforeTalking = 5;
@@ -31,8 +48,6 @@ public class TalkingBuddy : MonoBehaviour
     [ShowIf("RandomizeTimeBT")]
     public int maximalTimeBT = 7;
 
-    bool isBoss = false;
-
     #region Private Attributes
     private string nextLineToSay = "";
     private bool isTalking = false;
@@ -41,14 +56,19 @@ public class TalkingBuddy : MonoBehaviour
     private float actualTime = 0;
     DialogueRunner dialogueRunner;
     private float timeBeforeTalking = 3;
+    private GameManager _gameManager;
+    private string Line;
     #endregion
 
     private void Start()
     {
         dialoguePosition = this.transform;
-        canvas.worldCamera = Camera.main;
+        _gameManager = FindObjectOfType<GameManager>();
+        if (_gameManager == null) { Debug.LogError("TalkingBuddy.cs : GameManager not found!"); }
         OnTalking.AddListener(PlayDialogueSound);
 
+        // INIT LINES
+        InitLines(_gameManager.CurrentStage);
 
         RandomizeLine();
         ResetTimer();
@@ -83,7 +103,27 @@ public class TalkingBuddy : MonoBehaviour
     }
     private void RandomizeLine()
     {
-        nextLineToSay = linesNames[Random.Range(0, linesNames.Count)];
+        int max = 0;
+        switch(_gameManager.CurrentStage)
+        {
+            case GameManager.Stage.Stage1:
+                max = NbLinesStage1;
+                break;
+                case GameManager.Stage.Stage2:
+                max = NbLinesStage2;
+                break;
+                case GameManager.Stage.Stage3:
+                max = NbLinesStage3;
+                break;
+                case GameManager.Stage.Stage4:
+                max= NbLinesStage4;
+                break;
+                case GameManager.Stage.Stage5:
+                max = NbLinesStage5;
+                break;
+        }
+        string lineNb = "bark" + Random.Range(0, max).ToString();
+        nextLineToSay = Line + lineNb;
     }
     private void InitDialogue()
     {
@@ -91,6 +131,7 @@ public class TalkingBuddy : MonoBehaviour
         actualDialogueObject = Instantiate(dialogueViewPrefab, dialoguePosition);
         actualDialogueObject.transform.parent = this.transform;
         dialogueRunner = actualDialogueObject.GetComponent<DialogueRunner>();
+        dialogueRunner.SetProject(yarnProject);
 
         // Init Dialogue
         dialogueRunner.StartDialogue(nextLineToSay);
@@ -112,15 +153,38 @@ public class TalkingBuddy : MonoBehaviour
         RandomizeLine();
         isTalking = false;
     }
+    private string GetCharaName()
+    {
+        switch (Character)
+        {
+            case Characters.Boss:
+                return "Boss";
+            case Characters.CommunityManager:
+                return "CM";
+            case Characters.Comptable:
+                return "Comptable";
+            case Characters.EmployéTriste:
+                return "ET";
+            case Characters.Stagiaire:
+                return "Stagiaire";
+        }
+        return "NoCharaFound";
+    }
+    private void InitLines(GameManager.Stage _stage)
+    {
+        Debug.Log("stage = " + _stage);
+        Line = GetCharaName() + _stage.ToString();
+        Debug.Log(Line);
+    }
 
     /// <summary>
     /// SOUND EVENT !
     /// </summary>
     private void PlayDialogueSound()
     {
-        if (isBoss)
+        if (Character == Characters.Boss)
         {
-            
+
         }
         else
         {

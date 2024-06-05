@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public UI_HUD UI_HUD;
 
+    public enum Stage { Stage1, Stage2, Stage3, Stage4, Stage5 };
+
+    [SerializeField] public Stage CurrentStage;
+
     private bool _playing = false;
 
     private void Awake()
