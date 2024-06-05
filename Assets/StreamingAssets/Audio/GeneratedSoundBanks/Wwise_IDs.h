@@ -37,9 +37,9 @@ namespace AK
         static const AkUniqueID PLAY_BARK_COMPTABLE_CALME = 2088940705U;
         static const AkUniqueID PLAY_BARK_COMPTABLE_DETERMINE = 699640404U;
         static const AkUniqueID PLAY_BARK_COMPTABLE_HEREUX = 2375551732U;
-        static const AkUniqueID PLAY_BARK_COMPTABLE_HILARE = 2816101254U;
         static const AkUniqueID PLAY_BARK_COMPTABLE_KIKI1 = 2664492310U;
         static const AkUniqueID PLAY_BARK_COMPTABLE_KIKI2 = 2664492309U;
+        static const AkUniqueID PLAY_BARK_COMPTABLE_KIKI3 = 2664492308U;
         static const AkUniqueID PLAY_BARK_COMPTABLE_SURPRISE = 2498486908U;
         static const AkUniqueID PLAY_BARK_COMPTABLE_SUSPICIEUSE = 4016825455U;
         static const AkUniqueID PLAY_BARK_DIRCREA_AGACE = 1330272201U;
