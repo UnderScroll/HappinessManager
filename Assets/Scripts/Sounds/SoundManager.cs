@@ -15,8 +15,14 @@ public class SoundManager : MonoBehaviour
 
         switch (_gameManager.FloorName)
         {
-            case "BossFloor": //GameManager Floor Name
+            case "Floor_1": //GameManager Floor Name
                 _floorWwiseName = "boss";
+                break;
+            case "Floor_2": //GameManager Floor Name
+                _floorWwiseName = "cafeteria";
+                break;
+            case "Floor_3": //GameManager Floor Name
+                _floorWwiseName = "cafeteria";
                 break;
             default:
                 Debug.LogError($"No sound for floor {_gameManager.FloorName}");

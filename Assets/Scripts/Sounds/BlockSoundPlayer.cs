@@ -17,13 +17,13 @@ public class BlockSoundPlayer : MonoBehaviour
             case "BasicBlock": //Scriptable object name (Resources/Blocks)
                 blockName = "basic_block"; //Name in Wwise event
                 break;
-            default:
-                Debug.LogError($"No sound for {BlockName}");
+            case "ConcreteBlock":
+                blockName = "concrete_block";
+                break;
+            case "SoapBlock":
+                blockName = "soap_block";
                 break;
         }
-
-        if (blockName == "")
-            Debug.LogError("Failed to get block name, or is not implemented yet");
 
         _eventName = $"Play_Build_{blockName}";
     }
