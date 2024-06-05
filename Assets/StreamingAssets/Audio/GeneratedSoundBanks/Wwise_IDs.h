@@ -101,6 +101,7 @@ namespace AK
         static const AkUniqueID PLAY_MENU_SETTINGS_ONTABHOVER = 2540621422U;
         static const AkUniqueID PLAY_MENU_SETTINGS_TOGGLEIN = 1187050633U;
         static const AkUniqueID PLAY_MENU_SETTINGS_TOGGLEOUT = 4022107688U;
+        static const AkUniqueID PLAY_MENU_UI_DIALOGUE_SKIP = 1603835309U;
         static const AkUniqueID PLAY_MENU_UNPAUSED = 2362180565U;
         static const AkUniqueID PLAY_MUSIC_BOSS = 2155613437U;
         static const AkUniqueID PLAY_MUSIC_CAFETERIA = 4148122764U;
@@ -115,6 +116,7 @@ namespace AK
         static const AkUniqueID PLAY_PHYSICS_CONCRETETOFLOOR = 52822808U;
         static const AkUniqueID PLAY_PHYSICS_DECOTOFLOOR = 1746020630U;
         static const AkUniqueID PLAY_PHYSICS_EMPLOYEECOLLISION = 683962872U;
+        static const AkUniqueID PLAY_UI_DIALOGUEBUBBLE = 1018177731U;
         static const AkUniqueID PLAY_UI_ITEM_OFFTABHOVER = 604053813U;
         static const AkUniqueID PLAY_UI_ITEM_ONTABHOVER_BASIC = 3464099540U;
         static const AkUniqueID PLAY_UI_ITEM_ONTABHOVER_HEAVY = 987150631U;

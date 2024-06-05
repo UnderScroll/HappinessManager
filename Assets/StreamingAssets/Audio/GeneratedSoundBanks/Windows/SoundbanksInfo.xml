@@ -61,7 +61,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{2CBB5A69-F4A9-9E33-3BA1-0A272E30CBD1}">
+		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{B28C1A1B-90B4-155D-0D10-ED28D2873E69}">
 			<ShortName>HM_Global_SB</ShortName>
 			<Path>HM_Global_SB.bnk</Path>
 			<Media>
@@ -172,6 +172,10 @@
 				<File Id="102701038" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Comptable Hereuse-003.wav</ShortName>
 					<CachePath>SFX/Comptable Hereuse-003_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="103992052" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>cafeteria dialogue intro.wav</ShortName>
+					<CachePath>SFX/cafeteria dialogue intro_29A727F4.wem</CachePath>
 				</File>
 				<File Id="106632701" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_Menu_paused.wav</ShortName>
@@ -513,6 +517,10 @@
 					<ShortName>HM_SFX_SC_Build_soap block place.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_soap block place_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="447691927" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_UI_SC_Menu_dialogue bubble 4.wav</ShortName>
+					<CachePath>SFX/HM_UI_SC_Menu_dialogue bubble 4_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="454019134" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PROTO VALIDATE DMIN [2024-05-01 182249].wav</ShortName>
 					<CachePath>SFX/PROTO VALIDATE DMIN [2024-05-01 182249]_B02CE968.wem</CachePath>
@@ -524,6 +532,10 @@
 				<File Id="464768831" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_concrete block place 3.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_concrete block place 3_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="472166245" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_UI_SC_Menu_dialogue bubble.wav</ShortName>
+					<CachePath>SFX/HM_UI_SC_Menu_dialogue bubble_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="473874225" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dir Créa Hereux-003.wav</ShortName>
@@ -933,6 +945,10 @@
 					<ShortName>Comptable Agacée-001.wav</ShortName>
 					<CachePath>SFX/Comptable Agacée-001_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="857625880" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_UI_SC_Menu_dialogue bubble 6.wav</ShortName>
+					<CachePath>SFX/HM_UI_SC_Menu_dialogue bubble 6_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="858138438" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 3.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 3_FD4DF9DE.wem</CachePath>
@@ -996,6 +1012,10 @@
 				<File Id="902669382" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 12.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 12_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="904041334" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_UI_SC_Menu_dialogue bubble 5.wav</ShortName>
+					<CachePath>SFX/HM_UI_SC_Menu_dialogue bubble 5_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="904806863" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_soap block place 2.wav</ShortName>
@@ -1197,7 +1217,7 @@
 						<MediaRef Id="899413808"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="762871940" Name="Play_Bark_Boss_1" DurationType="OneShot" DurationMin="2.94825" DurationMax="2.94825">
+				<Event Id="762871940" Name="Play_Bark_Boss_1" DurationType="OneShot" DurationMin="3.14825" DurationMax="3.14825">
 					<MediaRefs>
 						<MediaRef Id="138705726"/>
 					</MediaRefs>
@@ -1207,7 +1227,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="762871943" Name="Play_Bark_Boss_2" DurationType="OneShot" DurationMin="3.4585" DurationMax="3.4585">
+				<Event Id="762871943" Name="Play_Bark_Boss_2" DurationType="OneShot" DurationMin="3.6585" DurationMax="3.6585">
 					<MediaRefs>
 						<MediaRef Id="891704891"/>
 					</MediaRefs>
@@ -1217,7 +1237,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="762871942" Name="Play_Bark_Boss_3" DurationType="OneShot" DurationMin="3.96875" DurationMax="3.96875">
+				<Event Id="762871942" Name="Play_Bark_Boss_3" DurationType="OneShot" DurationMin="4.16875" DurationMax="4.16875">
 					<MediaRefs>
 						<MediaRef Id="787703407"/>
 					</MediaRefs>
@@ -1227,7 +1247,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="762871937" Name="Play_Bark_Boss_4" DurationType="OneShot" DurationMin="4.4115" DurationMax="4.4115">
+				<Event Id="762871937" Name="Play_Bark_Boss_4" DurationType="OneShot" DurationMin="4.6115" DurationMax="4.6115">
 					<MediaRefs>
 						<MediaRef Id="707441225"/>
 					</MediaRefs>
@@ -1237,7 +1257,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="762871936" Name="Play_Bark_Boss_5" DurationType="OneShot" DurationMin="2.3104374" DurationMax="2.3104374">
+				<Event Id="762871936" Name="Play_Bark_Boss_5" DurationType="OneShot" DurationMin="2.5104375" DurationMax="2.5104375">
 					<MediaRefs>
 						<MediaRef Id="633122800"/>
 					</MediaRefs>
@@ -1247,7 +1267,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="762871939" Name="Play_Bark_Boss_6" DurationType="OneShot" DurationMin="2.635146" DurationMax="2.635146">
+				<Event Id="762871939" Name="Play_Bark_Boss_6" DurationType="OneShot" DurationMin="2.835146" DurationMax="2.835146">
 					<MediaRefs>
 						<MediaRef Id="707156560"/>
 					</MediaRefs>
@@ -1257,7 +1277,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="762871938" Name="Play_Bark_Boss_7" DurationType="OneShot" DurationMin="2.7047083" DurationMax="2.7047083">
+				<Event Id="762871938" Name="Play_Bark_Boss_7" DurationType="OneShot" DurationMin="2.9047084" DurationMax="2.9047084">
 					<MediaRefs>
 						<MediaRef Id="896411199"/>
 					</MediaRefs>
@@ -1267,7 +1287,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="762871949" Name="Play_Bark_Boss_8" DurationType="OneShot" DurationMin="2.438" DurationMax="2.438">
+				<Event Id="762871949" Name="Play_Bark_Boss_8" DurationType="OneShot" DurationMin="2.638" DurationMax="2.638">
 					<MediaRefs>
 						<MediaRef Id="57191958"/>
 					</MediaRefs>
@@ -1277,7 +1297,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="762871948" Name="Play_Bark_Boss_9" DurationType="OneShot" DurationMin="2.9014583" DurationMax="2.9014583">
+				<Event Id="762871948" Name="Play_Bark_Boss_9" DurationType="OneShot" DurationMin="3.1014583" DurationMax="3.1014583">
 					<MediaRefs>
 						<MediaRef Id="171144445"/>
 					</MediaRefs>
@@ -1287,7 +1307,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3198856803" Name="Play_Bark_CM_agace" DurationType="OneShot" DurationMin="1.8376875" DurationMax="2.180875">
+				<Event Id="3198856803" Name="Play_Bark_CM_agace" DurationType="OneShot" DurationMin="2.0376875" DurationMax="2.380875">
 					<MediaRefs>
 						<MediaRef Id="565962083"/>
 						<MediaRef Id="572998712"/>
@@ -1299,7 +1319,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="77500316" Name="Play_Bark_CM_calme" DurationType="OneShot" DurationMin="1.54375" DurationMax="1.62325">
+				<Event Id="77500316" Name="Play_Bark_CM_calme" DurationType="OneShot" DurationMin="1.7437501" DurationMax="1.82325">
 					<MediaRefs>
 						<MediaRef Id="861105441"/>
 						<MediaRef Id="931070412"/>
@@ -1310,7 +1330,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2090504804" Name="Play_Bark_CM_confus" DurationType="OneShot" DurationMin="1.303625" DurationMax="1.476625">
+				<Event Id="2090504804" Name="Play_Bark_CM_confus" DurationType="OneShot" DurationMin="1.503625" DurationMax="1.676625">
 					<MediaRefs>
 						<MediaRef Id="406864568"/>
 						<MediaRef Id="689639882"/>
@@ -1322,7 +1342,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="13495039" Name="Play_Bark_CM_degoute" DurationType="OneShot" DurationMin="2.0809374" DurationMax="2.1096041">
+				<Event Id="13495039" Name="Play_Bark_CM_degoute" DurationType="OneShot" DurationMin="2.2809374" DurationMax="2.3096042">
 					<MediaRefs>
 						<MediaRef Id="389484077"/>
 						<MediaRef Id="751449316"/>
@@ -1333,7 +1353,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3251376937" Name="Play_Bark_CM_determine" DurationType="OneShot" DurationMin="1.2668542" DurationMax="2.1084583">
+				<Event Id="3251376937" Name="Play_Bark_CM_determine" DurationType="OneShot" DurationMin="1.4668542" DurationMax="2.3084583">
 					<MediaRefs>
 						<MediaRef Id="73944066"/>
 						<MediaRef Id="390402863"/>
@@ -1344,7 +1364,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="520407892" Name="Play_Bark_CM_excite" DurationType="OneShot" DurationMin="2.189771" DurationMax="2.2950625">
+				<Event Id="520407892" Name="Play_Bark_CM_excite" DurationType="OneShot" DurationMin="2.389771" DurationMax="2.4950626">
 					<MediaRefs>
 						<MediaRef Id="67845509"/>
 						<MediaRef Id="710150507"/>
@@ -1356,7 +1376,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2212292508" Name="Play_Bark_CM_fier" DurationType="OneShot" DurationMin="2.0072708" DurationMax="2.6744375">
+				<Event Id="2212292508" Name="Play_Bark_CM_fier" DurationType="OneShot" DurationMin="2.2072709" DurationMax="2.8744376">
 					<MediaRefs>
 						<MediaRef Id="401662905"/>
 						<MediaRef Id="804693145"/>
@@ -1367,7 +1387,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3481665945" Name="Play_Bark_CM_nerveux" DurationType="OneShot" DurationMin="1.8293333" DurationMax="1.8801666">
+				<Event Id="3481665945" Name="Play_Bark_CM_nerveux" DurationType="OneShot" DurationMin="2.0293334" DurationMax="2.0801666">
 					<MediaRefs>
 						<MediaRef Id="142951727"/>
 						<MediaRef Id="814650744"/>
@@ -1378,7 +1398,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2511529134" Name="Play_Bark_Comptable_agace" DurationType="OneShot" DurationMin="1.413375" DurationMax="2.5211875">
+				<Event Id="2511529134" Name="Play_Bark_Comptable_agace" DurationType="OneShot" DurationMin="1.6133751" DurationMax="2.7211876">
 					<MediaRefs>
 						<MediaRef Id="256102878"/>
 						<MediaRef Id="257576684"/>
@@ -1392,7 +1412,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2088940705" Name="Play_Bark_Comptable_calme" DurationType="OneShot" DurationMin="1.6888958" DurationMax="1.787">
+				<Event Id="2088940705" Name="Play_Bark_Comptable_calme" DurationType="OneShot" DurationMin="1.8888959" DurationMax="1.987">
 					<MediaRefs>
 						<MediaRef Id="440060209"/>
 						<MediaRef Id="842359761"/>
@@ -1403,7 +1423,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="699640404" Name="Play_Bark_Comptable_determine" DurationType="OneShot" DurationMin="1.3955834" DurationMax="2.6388543">
+				<Event Id="699640404" Name="Play_Bark_Comptable_determine" DurationType="OneShot" DurationMin="1.5955834" DurationMax="2.8388543">
 					<MediaRefs>
 						<MediaRef Id="159921655"/>
 						<MediaRef Id="626305289"/>
@@ -1417,7 +1437,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2375551732" Name="Play_Bark_Comptable_hereux" DurationType="OneShot" DurationMin="2.1119375" DurationMax="2.8352292">
+				<Event Id="2375551732" Name="Play_Bark_Comptable_hereux" DurationType="OneShot" DurationMin="2.3119376" DurationMax="3.0352292">
 					<MediaRefs>
 						<MediaRef Id="102701038"/>
 						<MediaRef Id="174172311"/>
@@ -1431,7 +1451,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2664492310" Name="Play_Bark_Comptable_kiki1" DurationType="OneShot" DurationMin="4.3750415" DurationMax="4.3750415">
+				<Event Id="2664492310" Name="Play_Bark_Comptable_kiki1" DurationType="OneShot" DurationMin="4.5750413" DurationMax="4.5750413">
 					<MediaRefs>
 						<MediaRef Id="701638250"/>
 					</MediaRefs>
@@ -1441,7 +1461,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2664492309" Name="Play_Bark_Comptable_kiki2" DurationType="OneShot" DurationMin="3.382729" DurationMax="3.382729">
+				<Event Id="2664492309" Name="Play_Bark_Comptable_kiki2" DurationType="OneShot" DurationMin="3.582729" DurationMax="3.582729">
 					<MediaRefs>
 						<MediaRef Id="331710125"/>
 					</MediaRefs>
@@ -1451,7 +1471,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2664492308" Name="Play_Bark_Comptable_kiki3" DurationType="OneShot" DurationMin="3.8011458" DurationMax="3.8011458">
+				<Event Id="2664492308" Name="Play_Bark_Comptable_kiki3" DurationType="OneShot" DurationMin="4.001146" DurationMax="4.001146">
 					<MediaRefs>
 						<MediaRef Id="1003324277"/>
 					</MediaRefs>
@@ -1461,7 +1481,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2498486908" Name="Play_Bark_Comptable_surprise" DurationType="OneShot" DurationMin="1.50675" DurationMax="2.903625">
+				<Event Id="2498486908" Name="Play_Bark_Comptable_surprise" DurationType="OneShot" DurationMin="1.70675" DurationMax="3.103625">
 					<MediaRefs>
 						<MediaRef Id="285633154"/>
 						<MediaRef Id="651936224"/>
@@ -1473,7 +1493,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="4016825455" Name="Play_Bark_Comptable_suspicieuse" DurationType="OneShot" DurationMin="1.18925" DurationMax="1.7508334">
+				<Event Id="4016825455" Name="Play_Bark_Comptable_suspicieuse" DurationType="OneShot" DurationMin="1.38925" DurationMax="1.9508334">
 					<MediaRefs>
 						<MediaRef Id="412783045"/>
 						<MediaRef Id="573769041"/>
@@ -1486,57 +1506,87 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3777215715" Name="Play_Bark_Debut_Etage_Boss1" DurationType="OneShot" DurationMin="5.5036373" DurationMax="5.5036373">
+				<Event Id="3777215715" Name="Play_Bark_Debut_Etage_Boss1" DurationType="OneShot" DurationMin="5.603637" DurationMax="5.603637">
 					<MediaRefs>
 						<MediaRef Id="773273863"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
-				<Event Id="3777215712" Name="Play_Bark_Debut_Etage_Boss2" DurationType="OneShot" DurationMin="6.403383" DurationMax="6.403383">
+				<Event Id="3777215712" Name="Play_Bark_Debut_Etage_Boss2" DurationType="OneShot" DurationMin="6.5033827" DurationMax="6.5033827">
 					<MediaRefs>
 						<MediaRef Id="1002356538"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
-				<Event Id="3777215713" Name="Play_Bark_Debut_Etage_Boss3" DurationType="OneShot" DurationMin="0.81795037" DurationMax="0.81795037">
+				<Event Id="3777215713" Name="Play_Bark_Debut_Etage_Boss3" DurationType="OneShot" DurationMin="0.9179504" DurationMax="0.9179504">
 					<MediaRefs>
 						<MediaRef Id="1033037167"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
-				<Event Id="3791513938" Name="Play_Bark_Debut_Etage_Cafeteria1" DurationType="OneShot" DurationMin="6.0836654" DurationMax="6.0836654">
+				<Event Id="3791513938" Name="Play_Bark_Debut_Etage_Cafeteria1" DurationType="OneShot" DurationMin="6.283665" DurationMax="6.283665">
 					<MediaRefs>
 						<MediaRef Id="490283109"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
-				<Event Id="3791513937" Name="Play_Bark_Debut_Etage_Cafeteria2" DurationType="OneShot" DurationMin="10.44959" DurationMax="10.44959">
+				<Event Id="3791513937" Name="Play_Bark_Debut_Etage_Cafeteria2" DurationType="OneShot" DurationMin="10.54959" DurationMax="10.54959">
 					<MediaRefs>
 						<MediaRef Id="988396783"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
-				<Event Id="3791513936" Name="Play_Bark_Debut_Etage_Cafeteria3" DurationType="OneShot" DurationMin="10.44959" DurationMax="10.44959">
-					<MediaRefs>
-						<MediaRef Id="988396783"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="3791513943" Name="Play_Bark_Debut_Etage_Cafeteria4" DurationType="OneShot" DurationMin="3.5786266" DurationMax="3.5786266">
+				<Event Id="3791513936" Name="Play_Bark_Debut_Etage_Cafeteria3" DurationType="OneShot" DurationMin="3.6786265" DurationMax="3.6786265">
 					<MediaRefs>
 						<MediaRef Id="956383554"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
-				<Event Id="3791513942" Name="Play_Bark_Debut_Etage_Cafeteria5" DurationType="OneShot" DurationMin="2.1498137" DurationMax="2.1498137">
+				<Event Id="3791513943" Name="Play_Bark_Debut_Etage_Cafeteria4" DurationType="OneShot" DurationMin="5.9331617" DurationMax="5.9331617">
+					<MediaRefs>
+						<MediaRef Id="103992052"/>
+					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
+				</Event>
+				<Event Id="3791513942" Name="Play_Bark_Debut_Etage_Cafeteria5" DurationType="OneShot" DurationMin="2.2498136" DurationMax="2.2498136">
 					<MediaRefs>
 						<MediaRef Id="316584167"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
-				<Event Id="3791513941" Name="Play_Bark_Debut_Etage_Cafeteria6" DurationType="OneShot" DurationMin="4.481815" DurationMax="4.481815">
+				<Event Id="3791513941" Name="Play_Bark_Debut_Etage_Cafeteria6" DurationType="OneShot" DurationMin="4.581815" DurationMax="4.581815">
 					<MediaRefs>
 						<MediaRef Id="716286971"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
-				<Event Id="3791513940" Name="Play_Bark_Debut_Etage_Cafeteria7" DurationType="OneShot" DurationMin="8.271317" DurationMax="8.271317">
+				<Event Id="3791513940" Name="Play_Bark_Debut_Etage_Cafeteria7" DurationType="OneShot" DurationMin="8.371317" DurationMax="8.371317">
 					<MediaRefs>
 						<MediaRef Id="780594721"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
-				<Event Id="1330272201" Name="Play_Bark_DirCrea_agace" DurationType="OneShot" DurationMin="1.4796458" DurationMax="1.8176042">
+				<Event Id="1330272201" Name="Play_Bark_DirCrea_agace" DurationType="OneShot" DurationMin="1.6796459" DurationMax="2.017604">
 					<MediaRefs>
 						<MediaRef Id="26833914"/>
 						<MediaRef Id="710475532"/>
@@ -1547,7 +1597,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2601504602" Name="Play_Bark_DirCrea_confus" DurationType="OneShot" DurationMin="1.4068959" DurationMax="1.4068959">
+				<Event Id="2601504602" Name="Play_Bark_DirCrea_confus" DurationType="OneShot" DurationMin="1.6068959" DurationMax="1.6068959">
 					<MediaRefs>
 						<MediaRef Id="1045455280"/>
 					</MediaRefs>
@@ -1557,7 +1607,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="1454193997" Name="Play_Bark_DirCrea_degoute" DurationType="OneShot" DurationMin="2.3000624" DurationMax="2.3000624">
+				<Event Id="1454193997" Name="Play_Bark_DirCrea_degoute" DurationType="OneShot" DurationMin="2.5000625" DurationMax="2.5000625">
 					<MediaRefs>
 						<MediaRef Id="260431742"/>
 					</MediaRefs>
@@ -1567,7 +1617,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3044684783" Name="Play_Bark_DirCrea_determine" DurationType="OneShot" DurationMin="1.8813125" DurationMax="1.8935626">
+				<Event Id="3044684783" Name="Play_Bark_DirCrea_determine" DurationType="OneShot" DurationMin="2.0813124" DurationMax="2.0935626">
 					<MediaRefs>
 						<MediaRef Id="333375607"/>
 						<MediaRef Id="974396332"/>
@@ -1578,7 +1628,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="1017959114" Name="Play_Bark_DirCrea_excite" DurationType="OneShot" DurationMin="1.91625" DurationMax="2.3000624">
+				<Event Id="1017959114" Name="Play_Bark_DirCrea_excite" DurationType="OneShot" DurationMin="2.11625" DurationMax="2.5000625">
 					<MediaRefs>
 						<MediaRef Id="245320377"/>
 						<MediaRef Id="260431742"/>
@@ -1590,7 +1640,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3033943326" Name="Play_Bark_DirCrea_fier" DurationType="OneShot" DurationMin="1.48075" DurationMax="1.8697083">
+				<Event Id="3033943326" Name="Play_Bark_DirCrea_fier" DurationType="OneShot" DurationMin="1.68075" DurationMax="2.0697083">
 					<MediaRefs>
 						<MediaRef Id="224132917"/>
 						<MediaRef Id="235538765"/>
@@ -1602,7 +1652,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2886070633" Name="Play_Bark_DirCrea_hereux" DurationType="OneShot" DurationMin="1.611" DurationMax="2.014125">
+				<Event Id="2886070633" Name="Play_Bark_DirCrea_hereux" DurationType="OneShot" DurationMin="1.811" DurationMax="2.2141252">
 					<MediaRefs>
 						<MediaRef Id="111884437"/>
 						<MediaRef Id="473874225"/>
@@ -1614,7 +1664,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3656892293" Name="Play_Bark_EmpTriste_confus" DurationType="OneShot" DurationMin="1.4305209" DurationMax="1.9837084">
+				<Event Id="3656892293" Name="Play_Bark_EmpTriste_confus" DurationType="OneShot" DurationMin="1.6305209" DurationMax="2.1837084">
 					<MediaRefs>
 						<MediaRef Id="237990611"/>
 						<MediaRef Id="389809314"/>
@@ -1625,7 +1675,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="777501338" Name="Play_Bark_EmpTriste_fatigue" DurationType="OneShot" DurationMin="1.565125" DurationMax="2.6275418">
+				<Event Id="777501338" Name="Play_Bark_EmpTriste_fatigue" DurationType="OneShot" DurationMin="1.765125" DurationMax="2.8275418">
 					<MediaRefs>
 						<MediaRef Id="327908177"/>
 						<MediaRef Id="348800255"/>
@@ -1637,7 +1687,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3598901970" Name="Play_Bark_EmpTriste_hereux" DurationType="OneShot" DurationMin="1.389125" DurationMax="1.7083334">
+				<Event Id="3598901970" Name="Play_Bark_EmpTriste_hereux" DurationType="OneShot" DurationMin="1.589125" DurationMax="1.9083334">
 					<MediaRefs>
 						<MediaRef Id="222916998"/>
 						<MediaRef Id="508950208"/>
@@ -1649,7 +1699,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="950719014" Name="Play_Bark_EmpTriste_pensif" DurationType="OneShot" DurationMin="1.37675" DurationMax="1.729375">
+				<Event Id="950719014" Name="Play_Bark_EmpTriste_pensif" DurationType="OneShot" DurationMin="1.57675" DurationMax="1.929375">
 					<MediaRefs>
 						<MediaRef Id="144105267"/>
 						<MediaRef Id="409703046"/>
@@ -1662,7 +1712,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="1833842380" Name="Play_Bark_EmpTriste_triste" DurationType="OneShot" DurationMin="1.9992917" DurationMax="2.5506666">
+				<Event Id="1833842380" Name="Play_Bark_EmpTriste_triste" DurationType="OneShot" DurationMin="2.1992917" DurationMax="2.7506666">
 					<MediaRefs>
 						<MediaRef Id="367256306"/>
 						<MediaRef Id="455906566"/>
@@ -1675,7 +1725,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3143318226" Name="Play_Bark_Stagiaire_agace" DurationType="OneShot" DurationMin="0.4218241" DurationMax="0.4218241">
+				<Event Id="3143318226" Name="Play_Bark_Stagiaire_agace" DurationType="OneShot" DurationMin="0.6218241" DurationMax="0.6218241">
 					<MediaRefs>
 						<MediaRef Id="527095067"/>
 					</MediaRefs>
@@ -1685,7 +1735,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="1622480643" Name="Play_Bark_Stagiaire_confus" DurationType="OneShot" DurationMin="0.4925424" DurationMax="0.4925424">
+				<Event Id="1622480643" Name="Play_Bark_Stagiaire_confus" DurationType="OneShot" DurationMin="0.6925424" DurationMax="0.6925424">
 					<MediaRefs>
 						<MediaRef Id="1001779967"/>
 					</MediaRefs>
@@ -1695,7 +1745,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="4105615984" Name="Play_Bark_Stagiaire_determine" DurationType="OneShot" DurationMin="0.1326832" DurationMax="0.1326832">
+				<Event Id="4105615984" Name="Play_Bark_Stagiaire_determine" DurationType="OneShot" DurationMin="0.3326832" DurationMax="0.3326832">
 					<MediaRefs>
 						<MediaRef Id="89773760"/>
 					</MediaRefs>
@@ -1705,7 +1755,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2099422295" Name="Play_Bark_Stagiaire_excite" DurationType="OneShot" DurationMin="0.24659784" DurationMax="0.24659784">
+				<Event Id="2099422295" Name="Play_Bark_Stagiaire_excite" DurationType="OneShot" DurationMin="0.44659784" DurationMax="0.44659784">
 					<MediaRefs>
 						<MediaRef Id="879798648"/>
 					</MediaRefs>
@@ -1715,7 +1765,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2200791864" Name="Play_Bark_Stagiaire_hereux" DurationType="OneShot" DurationMin="0.27136102" DurationMax="0.27136102">
+				<Event Id="2200791864" Name="Play_Bark_Stagiaire_hereux" DurationType="OneShot" DurationMin="0.47136104" DurationMax="0.47136104">
 					<MediaRefs>
 						<MediaRef Id="641984613"/>
 					</MediaRefs>
@@ -1725,7 +1775,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3923390038" Name="Play_Bark_Stagiaire_intimide" DurationType="OneShot" DurationMin="0.5010392" DurationMax="0.5010392">
+				<Event Id="3923390038" Name="Play_Bark_Stagiaire_intimide" DurationType="OneShot" DurationMin="0.7010392" DurationMax="0.7010392">
 					<MediaRefs>
 						<MediaRef Id="43553209"/>
 					</MediaRefs>
@@ -1735,7 +1785,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2748407164" Name="Play_Bark_Stagiaire_nerveux" DurationType="OneShot" DurationMin="0.56635416" DurationMax="0.56635416">
+				<Event Id="2748407164" Name="Play_Bark_Stagiaire_nerveux" DurationType="OneShot" DurationMin="0.76635414" DurationMax="0.76635414">
 					<MediaRefs>
 						<MediaRef Id="270210916"/>
 					</MediaRefs>
@@ -1745,7 +1795,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3745766036" Name="Play_Bark_Stagiaire_pensif" DurationType="OneShot" DurationMin="0.34978506" DurationMax="0.34978506">
+				<Event Id="3745766036" Name="Play_Bark_Stagiaire_pensif" DurationType="OneShot" DurationMin="0.5497851" DurationMax="0.5497851">
 					<MediaRefs>
 						<MediaRef Id="233212238"/>
 					</MediaRefs>
@@ -1755,7 +1805,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2187196553" Name="Play_Bark_Stagiaire_peur" DurationType="OneShot" DurationMin="0.6394095" DurationMax="0.6394095">
+				<Event Id="2187196553" Name="Play_Bark_Stagiaire_peur" DurationType="OneShot" DurationMin="0.8394095" DurationMax="0.8394095">
 					<MediaRefs>
 						<MediaRef Id="420491024"/>
 					</MediaRefs>
@@ -1765,7 +1815,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="1334838302" Name="Play_Bark_Stagiaire_triste" DurationType="OneShot" DurationMin="0.5305569" DurationMax="0.5305569">
+				<Event Id="1334838302" Name="Play_Bark_Stagiaire_triste" DurationType="OneShot" DurationMin="0.7305569" DurationMax="0.7305569">
 					<MediaRefs>
 						<MediaRef Id="884312695"/>
 					</MediaRefs>
@@ -1949,6 +1999,12 @@
 				<Event Id="4022107688" Name="Play_Menu_Settings_toggleOut" DurationType="OneShot" DurationMin="1.2840834" DurationMax="1.2840834">
 					<MediaRefs>
 						<MediaRef Id="50950265"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip" DurationType="OneShot" DurationMin="1.190042" DurationMax="1.4791374">
+					<MediaRefs>
+						<MediaRef Id="601859891"/>
+						<MediaRef Id="751520739"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2362180565" Name="Play_Menu_unpaused" DurationType="OneShot" DurationMin="1.2093393" DurationMax="1.5004023">
@@ -2183,6 +2239,14 @@
 						<MediaRef Id="433390949"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1018177731" Name="Play_UI_DialogueBubble" DurationType="OneShot" DurationMin="0.151125" DurationMax="0.16539583">
+					<MediaRefs>
+						<MediaRef Id="447691927"/>
+						<MediaRef Id="472166245"/>
+						<MediaRef Id="857625880"/>
+						<MediaRef Id="904041334"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="604053813" Name="Play_UI_item_offTabHover" DurationType="OneShot" DurationMin="1.0994583" DurationMax="1.1651459">
 					<MediaRefs>
 						<MediaRef Id="560646483"/>
@@ -2231,5 +2295,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4797BB65-5A27-9144-740A-2B7B6DCED308}</FileHash>
+	<FileHash>{EE633D91-273A-E70B-7BB9-FF2B01EFBC15}</FileHash>
 </SoundBanksInfo>

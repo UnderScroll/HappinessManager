@@ -184,7 +184,7 @@ public class TalkingBuddy : MonoBehaviour
         IEnumerable<string> tags = dialogueRunner.GetTagsForNode(dialogueRunner.CurrentNodeName);
 
         AkSoundEngine.PostEvent(tags.First(), gameObject);
-        Debug.Log(tags);
+        AkSoundEngine.PostEvent("Play_UI_DialogueBubble", gameObject);
     }
     #endregion
 }
