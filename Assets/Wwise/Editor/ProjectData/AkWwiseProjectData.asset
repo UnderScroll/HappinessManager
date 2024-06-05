@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: c2d0754eea2b554ead038a4e85dfb0da
     GuidInternal: 
-    m_lastTime: -8584841035567769952
+    m_lastTime: -8584840129452367618
     List:
     - name: AMBIANCE
       guid: 7e303c6a36077045a549d2b2c039cff3
@@ -190,7 +190,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\WU_HM_SoundBanks
     guid: d527a65720db2546b7a23303c255c21b
     GuidInternal: 
-    m_lastTime: -8584841033761881380
+    m_lastTime: -8584840162742410185
     List:
     - name: HM_Global_SB
       guid: e1c12577d86f0c41a82a7bdcdb4ef626
@@ -231,7 +231,7 @@ MonoBehaviour:
     ParentPath: Events\WU_HM_Events
     guid: a44afb18422e3e4bbc589ac1581aef04
     GuidInternal: 
-    m_lastTime: -8584841014153845375
+    m_lastTime: -8584840146948945416
     List:
     - name: Amb
       guid: 45ce627f733a4f4d90717e8757beb9ba
@@ -1156,32 +1156,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2.8352292
       minDuration: 2.1119375
-    - name: Play_Bark_Comptable_hilare
-      guid: 08b029be948dfc44a190744863ed8534
-      id: 2816101254
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: WU_HM_Events
-        ObjectType: 12
-        guid: a44afb18422e3e4bbc589ac1581aef04
-      - ElementName: Dialogue
-        ObjectType: 4
-        guid: 161e325a25629146956980c8ab3dcb9a
-      - ElementName: Barks
-        ObjectType: 4
-        guid: 04d490f6c937b14c83a9121e39b48bc6
-      - ElementName: Barks Comptable
-        ObjectType: 4
-        guid: 68d2bbb605d2744eb06f5a44e7847bf5
-      - ElementName: Play_Bark_Comptable_hilare
-        ObjectType: 3
-        guid: 08b029be948dfc44a190744863ed8534
-      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Comptable\Play_Bark_Comptable_hilare
-      maxAttenuation: 0
-      maxDuration: 4.028021
-      minDuration: 4.028021
     - name: Play_Bark_Comptable_kiki1
       guid: 19ac67c5e0e4214da6436d0fdd601c8f
       id: 2664492310
@@ -1234,6 +1208,32 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 3.382729
       minDuration: 3.382729
+    - name: Play_Bark_Comptable_kiki3
+      guid: 08b029be948dfc44a190744863ed8534
+      id: 2664492308
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Comptable
+        ObjectType: 4
+        guid: 68d2bbb605d2744eb06f5a44e7847bf5
+      - ElementName: Play_Bark_Comptable_kiki3
+        ObjectType: 3
+        guid: 08b029be948dfc44a190744863ed8534
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Comptable\Play_Bark_Comptable_kiki3
+      maxAttenuation: 0
+      maxDuration: 3.8011458
+      minDuration: 3.8011458
     - name: Play_Bark_Comptable_surprise
       guid: 589856a857564f4988b9eb2f56e06b41
       id: 2498486908
@@ -2721,8 +2721,8 @@ MonoBehaviour:
         guid: 6ad3360ceb4c0f43867638d7535a6c19
       Path: Events\WU_HM_Events\Gameplay\Physics\Play_Physics_employeeCollision
       maxAttenuation: 0
-      maxDuration: 2.1842813
-      minDuration: 0.51241374
+      maxDuration: 1.3495514
+      minDuration: 1.0677407
     - name: Play_UI_item_offTabHover
       guid: e2ae4133a7970844b34830519499e63b
       id: 604053813

@@ -23,6 +23,9 @@ public class BlockSoundPlayer : MonoBehaviour
             case "SoapBlock":
                 blockName = "soap_block";
                 break;
+            case "Decoration": //Scriptable object name (Resources/Blocks)
+                blockName = "deco"; //Name in Wwise event
+                break;
         }
 
         _eventName = $"Play_Build_{blockName}";
