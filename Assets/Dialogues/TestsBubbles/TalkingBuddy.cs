@@ -122,7 +122,7 @@ public class TalkingBuddy : MonoBehaviour
                 max = NbLinesStage5;
                 break;
         }
-        string lineNb = "bark" + Random.Range(0, max).ToString();
+        string lineNb = "bark" + Random.Range(1, max).ToString();
         nextLineToSay = Line + lineNb;
     }
     private void InitDialogue()
