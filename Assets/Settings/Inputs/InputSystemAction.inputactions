@@ -121,6 +121,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ToggleMode",
+                    "type": "Button",
+                    "id": "4230f626-84fb-4bf1-825c-f47fb9019806",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -171,7 +180,7 @@
                 {
                     "name": "Delta",
                     "id": "e9063b18-3e1d-4695-88e2-35daf4c0ff8a",
-                    "path": "1DAxis",
+                    "path": "2DVector(mode=2)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -180,8 +189,30 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
+                    "name": "Up",
                     "id": "c47ca109-3522-4e1b-b629-5001dfb56b4b",
+                    "path": "<Mouse>/delta/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateDelta",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Down",
+                    "id": "37542a50-3e8a-40fe-834f-026555f1c0e6",
+                    "path": "<Mouse>/delta/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateDelta",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Left",
+                    "id": "dc31748d-278a-4805-be3e-c4003d6ef1ee",
                     "path": "<Mouse>/delta/left",
                     "interactions": "",
                     "processors": "",
@@ -191,8 +222,8 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "positive",
-                    "id": "37542a50-3e8a-40fe-834f-026555f1c0e6",
+                    "name": "Right",
+                    "id": "51035d93-cbe2-4465-b557-278d2c1b5e4e",
                     "path": "<Mouse>/delta/right",
                     "interactions": "",
                     "processors": "",
@@ -286,6 +317,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "LoadPreviousLevel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e3cbebbc-19f1-48ca-8c72-2f66e97fc5a0",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleMode",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -72,7 +72,6 @@ namespace LevelLoader
             if (_CurrentLevelIndex==0) //If loading the first level of the floor, play music and ambiance
                 _gameManager.SoundManager.PLayOnFirstLevelLoaded();
             
-            //AkSoundEngine.PostEvent("Play_Amb_boss", gameObject);
             _gameManager.ResetSimulation();   
             
             UnloadCurrentLevel();
