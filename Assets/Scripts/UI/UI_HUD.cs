@@ -27,6 +27,10 @@ public class UI_HUD : MonoBehaviour
     [SerializeField] Transform parentTranform;
     [SerializeField] TextMeshProUGUI blockDescription;
 
+    [Header("EndLevel Menu")]
+    [SerializeField] GameObject EndLevelMenuPrefab;
+    private UI_EndLevelPanel endLevelPanel = null;
+
     [Header("Notebook Menu")]
     [SerializeField] GameObject notebook;
 
@@ -152,6 +156,33 @@ public class UI_HUD : MonoBehaviour
                 return false;
         }
         return false;
+    }
+    #endregion
+
+    #region EndLevel
+    public void DisplayEndLevelPanel(bool _victory)
+    {
+        GameObject _go = Instantiate(EndLevelMenuPrefab, this.gameObject.transform);
+        endLevelPanel = _go.GetComponent<UI_EndLevelPanel>();
+        endLevelPanel.ui_hud = this;
+
+        if (endLevelPanel != null)
+        {
+            endLevelPanel.win = _victory;
+            endLevelPanel.Init();
+        }
+    }
+    public void CloseEndLevelPanel()
+    {
+        Destroy(endLevelPanel.gameObject);
+    }
+    public void NextLevel()
+    {
+        _gameManager.LevelLoader.LoadNextLevel();
+    }
+    public void RestartLevel()
+    {
+        _gameManager.LevelLoader.ReloadLevel();
     }
     #endregion
 
