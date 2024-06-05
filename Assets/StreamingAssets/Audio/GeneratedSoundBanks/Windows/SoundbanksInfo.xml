@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{BB9C380F-0D95-662E-6F27-7BB0B30A4AAD}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B078C1B4-0695-5FC0-42B9-FB047C9DC688}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -61,7 +61,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{D8C9D66A-A2FE-C5FE-18B9-6CF7C6EEE66C}">
+		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{CC02098E-C6D0-DB28-1C6D-7D0336625992}">
 			<ShortName>HM_Global_SB</ShortName>
 			<Path>HM_Global_SB.bnk</Path>
 			<Media>
@@ -307,7 +307,7 @@
 				</File>
 				<File Id="253625658" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Musical, Percussion, Drum Beat Endings, Crash, Long SND62467.wav</ShortName>
-					<CachePath>SFX/Musical, Percussion, Drum Beat Endings, Crash, Long SND62467_FD4DF9DE.wem</CachePath>
+					<CachePath>SFX/Musical, Percussion, Drum Beat Endings, Crash, Long SND62467_49F44B03.wem</CachePath>
 				</File>
 				<File Id="256102878" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Comptable Agacée-005.wav</ShortName>
@@ -401,10 +401,6 @@
 					<ShortName>Employé Triste Fatigué -002.wav</ShortName>
 					<CachePath>SFX/Employé Triste Fatigué -002_FD4DF9DE.wem</CachePath>
 				</File>
-				<File Id="351801259" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Comptable Hilare.wav</ShortName>
-					<CachePath>SFX/Comptable Hilare_FD4DF9DE.wem</CachePath>
-				</File>
 				<File Id="355768534" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_soap block remove 6.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_soap block remove 6_F6936C40.wem</CachePath>
@@ -491,7 +487,7 @@
 				</File>
 				<File Id="433390949" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Musical, Percussion, Drum Beat Endings, Kick, Cymbal, Crash 03 SND62701 1.wav</ShortName>
-					<CachePath>SFX/Musical, Percussion, Drum Beat Endings, Kick, Cymbal, Crash 03 SND62701 1_FD4DF9DE.wem</CachePath>
+					<CachePath>SFX/Musical, Percussion, Drum Beat Endings, Kick, Cymbal, Crash 03 SND62701 1_9861D2F7.wem</CachePath>
 				</File>
 				<File Id="434939420" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_tab_hover _highlighter 1.wav</ShortName>
@@ -1093,6 +1089,10 @@
 					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 01 SND46234.wav</ShortName>
 					<CachePath>SFX/Toys, Misc, Rubber Duck, Whistling, Squeak 01 SND46234_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="1003324277" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Comptable Special Kiki 3.wav</ShortName>
+					<CachePath>SFX/Comptable Special Kiki 3_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="1007401334" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_high_velocity 5.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_high_velocity 5_FD4DF9DE.wem</CachePath>
@@ -1297,11 +1297,6 @@
 						<MediaRef Id="962823174"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2816101254" Name="Play_Bark_Comptable_hilare" DurationType="OneShot" DurationMin="4.028021" DurationMax="4.028021">
-					<MediaRefs>
-						<MediaRef Id="351801259"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="2664492310" Name="Play_Bark_Comptable_kiki1" DurationType="OneShot" DurationMin="4.3750415" DurationMax="4.3750415">
 					<MediaRefs>
 						<MediaRef Id="701638250"/>
@@ -1310,6 +1305,11 @@
 				<Event Id="2664492309" Name="Play_Bark_Comptable_kiki2" DurationType="OneShot" DurationMin="3.382729" DurationMax="3.382729">
 					<MediaRefs>
 						<MediaRef Id="331710125"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2664492308" Name="Play_Bark_Comptable_kiki3" DurationType="OneShot" DurationMin="3.8011458" DurationMax="3.8011458">
+					<MediaRefs>
+						<MediaRef Id="1003324277"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2498486908" Name="Play_Bark_Comptable_surprise" DurationType="OneShot" DurationMin="1.50675" DurationMax="2.903625">
@@ -1640,6 +1640,43 @@
 				</Event>
 				<Event Id="2155613437" Name="Play_Music_boss" DurationType="Infinite">
 					<MediaRefs>
+						<MediaRef Id="22258212"/>
+					</MediaRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2410351013" Id="3284755031"/>
+							<MediaRefs>
+								<MediaRef Id="628961501"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2410351013" Id="2716678721"/>
+							<MediaRefs>
+								<MediaRef Id="936680060"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2410351013" Id="1593864692"/>
+							<MediaRefs>
+								<MediaRef Id="622128103"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2410351013" Id="1735831046"/>
+							<MediaRefs>
+								<MediaRef Id="762861487"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="177767409" Name="Stop_Music_global"/>
+					</ActionPostEvent>
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="2410351013" Id="3284755031" Name="Build"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="4148122764" Name="Play_Music_cafeteria" DurationType="Infinite">
+					<MediaRefs>
 						<MediaRef Id="809883662"/>
 					</MediaRefs>
 					<SwitchContainers>
@@ -1666,43 +1703,7 @@
 							<MediaRefs>
 								<MediaRef Id="454019134"/>
 								<MediaRef Id="749112701"/>
-							</MediaRefs>
-						</SwitchContainer>
-					</SwitchContainers>
-					<ActionPostEvent>
-						<ActionPostEventEntry Id="177767409" Name="Stop_Music_global"/>
-					</ActionPostEvent>
-					<ActionSetSwitch>
-						<ActionSetSwitchEntry GroupId="2410351013" Id="3284755031" Name="Build"/>
-					</ActionSetSwitch>
-				</Event>
-				<Event Id="4148122764" Name="Play_Music_cafeteria" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="22258212"/>
-					</MediaRefs>
-					<SwitchContainers>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="2410351013" Id="3284755031"/>
-							<MediaRefs>
-								<MediaRef Id="628961501"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="2410351013" Id="2716678721"/>
-							<MediaRefs>
-								<MediaRef Id="936680060"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="2410351013" Id="1593864692"/>
-							<MediaRefs>
-								<MediaRef Id="622128103"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="2410351013" Id="1735831046"/>
-							<MediaRefs>
-								<MediaRef Id="762861487"/>
+								<MediaRef Id="809883662"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -1857,19 +1858,10 @@
 						<MediaRef Id="962271348"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="683962872" Name="Play_Physics_employeeCollision" DurationType="OneShot" DurationMin="0.51241374" DurationMax="2.1842813">
+				<Event Id="683962872" Name="Play_Physics_employeeCollision" DurationType="OneShot" DurationMin="1.0677407" DurationMax="1.3495514">
 					<MediaRefs>
-						<MediaRef Id="1954477"/>
-						<MediaRef Id="68436417"/>
-						<MediaRef Id="86682777"/>
-						<MediaRef Id="231407703"/>
 						<MediaRef Id="253625658"/>
 						<MediaRef Id="433390949"/>
-						<MediaRef Id="611002344"/>
-						<MediaRef Id="733807707"/>
-						<MediaRef Id="838587232"/>
-						<MediaRef Id="880104204"/>
-						<MediaRef Id="962271348"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="604053813" Name="Play_UI_item_offTabHover" DurationType="OneShot" DurationMin="1.0994583" DurationMax="1.1651459">
@@ -1920,5 +1912,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8FC2302F-C674-16FA-D81D-382C62B8CBD9}</FileHash>
+	<FileHash>{BD1DA928-E39D-02A9-566E-60F0FB410AEB}</FileHash>
 </SoundBanksInfo>
