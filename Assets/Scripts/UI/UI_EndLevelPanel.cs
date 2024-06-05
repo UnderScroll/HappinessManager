@@ -26,7 +26,7 @@ public class UI_EndLevelPanel : MonoBehaviour
         if (ui_hud != null)
         {
             restartLevel.onClick.AddListener(ui_hud.RestartLevel);
-            restartLevel.onClick.AddListener(ui_hud.NextLevel);
+            nextLevel.onClick.AddListener(ui_hud.NextLevel);
         }
     }
 }
