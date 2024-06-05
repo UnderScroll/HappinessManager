@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 727764307702962975}
@@ -155,7 +155,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 9162049670382813305}
@@ -175,7 +175,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueViewPrefab: {fileID: 2238583932324294741, guid: 1a4768423e38e594fabb93cc30e3bbe5,
     type: 3}
-  canvas: {fileID: 0}
   yarnProject: {fileID: 7545569452688597077, guid: ce564fe40a6f74a418f2e7dee35109a4,
     type: 3}
   Character: 5
