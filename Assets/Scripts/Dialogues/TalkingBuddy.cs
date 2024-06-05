@@ -103,21 +103,21 @@ public class TalkingBuddy : MonoBehaviour
     private void RandomizeLine()
     {
         int max = 0;
-        switch(_gameManager.CurrentStage)
+        switch (_gameManager.CurrentStage)
         {
             case GameManager.Stage.Stage1:
                 max = NbLinesStage1;
                 break;
-                case GameManager.Stage.Stage2:
+            case GameManager.Stage.Stage2:
                 max = NbLinesStage2;
                 break;
-                case GameManager.Stage.Stage3:
+            case GameManager.Stage.Stage3:
                 max = NbLinesStage3;
                 break;
-                case GameManager.Stage.Stage4:
-                max= NbLinesStage4;
+            case GameManager.Stage.Stage4:
+                max = NbLinesStage4;
                 break;
-                case GameManager.Stage.Stage5:
+            case GameManager.Stage.Stage5:
                 max = NbLinesStage5;
                 break;
         }
@@ -182,16 +182,9 @@ public class TalkingBuddy : MonoBehaviour
     private void PlayDialogueSound()
     {
         IEnumerable<string> tags = dialogueRunner.GetTagsForNode(dialogueRunner.CurrentNodeName);
-        if (Character == Characters.Boss)
-        {
-            AkSoundEngine.PostEvent(tags.First(), gameObject);
-            Debug.Log(tags);
-        }
-        else
-        {
-            AkSoundEngine.PostEvent(tags.First(), gameObject);
-            Debug.Log(tags);
-        }
+
+        AkSoundEngine.PostEvent(tags.First(), gameObject);
+        Debug.Log(tags);
     }
     #endregion
 }

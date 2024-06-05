@@ -878,6 +878,7 @@ GameObject:
   - component: {fileID: 539447801612510649}
   - component: {fileID: 4408550122434379649}
   - component: {fileID: 8479159334477214236}
+  - component: {fileID: 1756670144538920069}
   m_Layer: 0
   m_Name: Dialogue_System_PREFAB
   m_TagString: Untagged
@@ -925,7 +926,19 @@ MonoBehaviour:
   verboseLogging: 1
   onNodeStart:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1756670144538920069}
+        m_TargetAssemblyTypeName: IntroDialogues, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onNodeComplete:
     m_PersistentCalls:
       m_Calls: []
@@ -952,6 +965,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showDebug: 0
   debugTextView: {fileID: 0}
+--- !u!114 &1756670144538920069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5721236351659893127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26bcd3827816fa34f8608ce56d4bc87a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6892118002975238384
 GameObject:
   m_ObjectHideFlags: 0
