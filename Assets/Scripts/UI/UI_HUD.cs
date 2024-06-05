@@ -189,10 +189,17 @@ public class UI_HUD : MonoBehaviour
     public void NextLevel()
     {
         _gameManager.LevelLoader.LoadNextLevel();
+        _gameManager.SoundManager.PlayOnBuilding();
+
+        //TMP FOR PLAYTESTING
+        _gameManager.UI_HUD.UpdateLevelName(_gameManager.Builder.Level.name);
+        CloseEndLevelPanel();
     }
     public void RestartLevel()
     {
         _gameManager.LevelLoader.ReloadLevel();
+        _gameManager.SoundManager.PlayOnBuilding();
+        CloseEndLevelPanel();
     }
     #endregion
 
