@@ -381,7 +381,9 @@ MonoBehaviour:
   Simulator: {fileID: 0}
   LevelLoader: {fileID: 0}
   RuleManager: {fileID: 0}
+  SoundManager: {fileID: 0}
   UI_HUD: {fileID: 0}
+  FloorName: 
 --- !u!114 &737254369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,6 +411,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 50
+  maxPitchAngle: 80
+  minPitchAngle: -20
 --- !u!114 &737254371
 MonoBehaviour:
   m_ObjectHideFlags: 0
