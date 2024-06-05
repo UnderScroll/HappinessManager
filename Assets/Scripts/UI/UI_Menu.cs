@@ -71,6 +71,8 @@ public class UI_Menu : MonoBehaviour
 
     private IEnumerator Start()
     {
+        Debug.developerConsoleVisible = true;
+
 
         // Binding events
         OnApplicationStarted.AddListener(OnApplicationStart);

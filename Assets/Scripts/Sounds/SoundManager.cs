@@ -10,7 +10,7 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        if (!TryGetComponent(out _gameManager))
+        if (!TryGetComponent(out _gameManager)) 
             Debug.LogError("Failed to get GameManager in SoundManager");
 
         switch (_gameManager.FloorName)

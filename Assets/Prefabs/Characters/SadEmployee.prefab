@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4900488408197695142}
+  - component: {fileID: 2687778008344581049}
   m_Layer: 0
   m_Name: SadEmployee
   m_TagString: Untagged
@@ -32,6 +33,32 @@ Transform:
   - {fileID: 526313652939607811}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2687778008344581049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729581769014990990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd023f3677246784da2293176af11ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueViewPrefab: {fileID: 2238583932324294741, guid: 1a4768423e38e594fabb93cc30e3bbe5,
+    type: 3}
+  yarnProject: {fileID: 7545569452688597077, guid: aaa0ac8b7fe8e449d93dec132f2153fd,
+    type: 3}
+  Character: 4
+  NbLinesStage1: 0
+  NbLinesStage2: 9
+  NbLinesStage3: 8
+  NbLinesStage4: 0
+  NbLinesStage5: 0
+  TimeBeforeTalking: 5
+  RandomizeTimeBT: 0
+  minimalTimeBT: 3
+  maximalTimeBT: 7
 --- !u!1 &5854030077122737879
 GameObject:
   m_ObjectHideFlags: 0

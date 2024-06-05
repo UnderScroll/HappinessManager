@@ -137,6 +137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 727764307702962975}
+  - component: {fileID: 4383583865233315339}
   m_Layer: 0
   m_Name: Stagiaire
   m_TagString: Untagged
@@ -160,3 +161,30 @@ Transform:
   - {fileID: 9162049670382813305}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4383583865233315339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8404514242365604220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd023f3677246784da2293176af11ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueViewPrefab: {fileID: 2238583932324294741, guid: 1a4768423e38e594fabb93cc30e3bbe5,
+    type: 3}
+  canvas: {fileID: 0}
+  yarnProject: {fileID: 7545569452688597077, guid: ce564fe40a6f74a418f2e7dee35109a4,
+    type: 3}
+  Character: 5
+  NbLinesStage1: 0
+  NbLinesStage2: 8
+  NbLinesStage3: 9
+  NbLinesStage4: 7
+  NbLinesStage5: 11
+  TimeBeforeTalking: 5
+  RandomizeTimeBT: 0
+  minimalTimeBT: 3
+  maximalTimeBT: 7
