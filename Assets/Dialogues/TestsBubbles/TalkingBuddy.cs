@@ -8,8 +8,9 @@ using NaughtyAttributes;
 
 public class TalkingBuddy : MonoBehaviour
 {
+    UnityEvent OnTalking;
     [SerializeField] GameObject dialogueViewPrefab;
-
+    [SerializeField] Canvas canvas;
     [Header("Dialogues Infos")]
     [SerializeField] List<string> linesNames;
 
@@ -30,6 +31,8 @@ public class TalkingBuddy : MonoBehaviour
     [ShowIf("RandomizeTimeBT")]
     public int maximalTimeBT = 7;
 
+    bool isBoss = false;
+
     #region Private Attributes
     private string nextLineToSay = "";
     private bool isTalking = false;
@@ -38,13 +41,15 @@ public class TalkingBuddy : MonoBehaviour
     private float actualTime = 0;
     DialogueRunner dialogueRunner;
     private float timeBeforeTalking = 3;
-    GameManager _gmRef;
     #endregion
 
     private void Start()
     {
-        _gmRef = GetComponent<GameManager>();
         dialoguePosition = this.transform;
+        canvas.worldCamera = Camera.main;
+        OnTalking.AddListener(PlayDialogueSound);
+
+
         RandomizeLine();
         ResetTimer();
         InitTimer();
@@ -90,6 +95,7 @@ public class TalkingBuddy : MonoBehaviour
         // Init Dialogue
         dialogueRunner.StartDialogue(nextLineToSay);
         isTalking = true;
+        OnTalking?.Invoke();
     }
     private void InitTimer()
     {
@@ -105,6 +111,21 @@ public class TalkingBuddy : MonoBehaviour
         InitTimer();
         RandomizeLine();
         isTalking = false;
+    }
+
+    /// <summary>
+    /// SOUND EVENT !
+    /// </summary>
+    private void PlayDialogueSound()
+    {
+        if (isBoss)
+        {
+            
+        }
+        else
+        {
+
+        }
     }
     #endregion
 }
