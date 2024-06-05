@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: BasicBlock
   m_EditorClassIdentifier: 
   Name: BasicBlock
+  Description: Un bloc de bois, tout ce qu'il y a de plus standard
   Removable: 1
   Mass: 1
+  Price: 1
   DefaultConnectionType: {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130,
     type: 2}
   Block: {fileID: 6317348198501730575, guid: ab1316c6df3d9a5489ae5b5bc46fcff2, type: 3}
+  BlockIcon: {fileID: 0}
   PreviewCollider: {fileID: 5749741502627939162, guid: 97919408bbf7f3a46b948f901fe8cf71,
     type: 3}
   ConnectionFaces: -1
+  ShouldBeSimulated: 1
