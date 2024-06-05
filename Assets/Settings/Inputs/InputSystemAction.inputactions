@@ -24,24 +24,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Play",
-                    "type": "Button",
-                    "id": "7b4148b8-061f-4443-94df-701274929b3a",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Reset",
-                    "type": "Button",
-                    "id": "59357d3e-2444-48cd-a4cd-ea17c6e88c99",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "RotateDelta",
                     "type": "Value",
                     "id": "f16b9ab9-5071-42ab-88eb-9831ff5b7490",
@@ -152,28 +134,6 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Remove",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2da7e05f-ab8e-4d62-bbbb-d128f32bf7a1",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Play",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "493366a1-eeaf-46e7-8153-c4ef3aa95a65",
-                    "path": "<Keyboard>/delete",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Reset",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -291,6 +251,17 @@
                     "name": "",
                     "id": "71bd3cc7-74c6-48ea-8faf-b86ede98aa25",
                     "path": "<Keyboard>/f6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReloadLevel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3f047622-70f8-4b1c-a0a2-52ab628fd412",
+                    "path": "<Keyboard>/delete",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
