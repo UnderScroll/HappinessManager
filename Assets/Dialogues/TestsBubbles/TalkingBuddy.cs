@@ -3,6 +3,8 @@ using UnityEngine.Events;
 using Yarn.Unity;
 using NaughtyAttributes;
 using System.Collections.Generic;
+using UnityEngine.Rendering;
+using System.Linq;
 
 public class TalkingBuddy : MonoBehaviour
 {
@@ -180,14 +182,15 @@ public class TalkingBuddy : MonoBehaviour
     private void PlayDialogueSound()
     {
         IEnumerable<string> tags = dialogueRunner.GetTagsForNode(dialogueRunner.CurrentNodeName);
-
         if (Character == Characters.Boss)
         {
-            AkSoundEngine.PostEvent(tags.ToString(), gameObject);
+            AkSoundEngine.PostEvent(tags.First(), gameObject);
+            Debug.Log(tags);
         }
         else
         {
-            AkSoundEngine.PostEvent(tags.ToString(), gameObject);
+            AkSoundEngine.PostEvent(tags.First(), gameObject);
+            Debug.Log(tags);
         }
     }
     #endregion
