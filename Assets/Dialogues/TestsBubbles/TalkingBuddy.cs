@@ -1,11 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using Yarn.Unity;
 using NaughtyAttributes;
-using UnityEditor.SceneManagement;
 
 public class TalkingBuddy : MonoBehaviour
 {
