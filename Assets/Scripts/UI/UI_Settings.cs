@@ -63,10 +63,10 @@ public class UI_Settings : MonoBehaviour
     #region Private Methods
     private void DefaultSoundValues()
     {
-        AkSoundEngine.SetRTPCValue("RTPC_MUSIC_BUS", startVolume, gameObject);
-        AkSoundEngine.SetRTPCValue("RTPC_SFX_BUS", startVolume, gameObject);
-        AkSoundEngine.SetRTPCValue("RTPC_DIALOGUE_BUS", startVolume, gameObject);
-        AkSoundEngine.SetRTPCValue("RTPC_SENSITIVITY_FILTER", 0, gameObject);
+        rtpcMUSIC.SetGlobalValue(startVolume);
+        rtpcSFX.SetGlobalValue(startVolume);
+        rtpcDIALOGUE.SetGlobalValue(startVolume);
+        rtpcSENSITIVITY.SetGlobalValue(0);
 
         UpdateUIMusic(startVolume);
         UpdateUISFX(startVolume);
