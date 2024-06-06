@@ -30,13 +30,11 @@ public class UI_TabButton : MonoBehaviour, ISelectHandler, IDeselectHandler
     {
         Selected = true;
         UpdateColors();
-        Debug.Log("select");
     }
     public void OnDeselect(BaseEventData eventData)
     {
         Selected = false;
         UpdateColors();
-        Debug.Log("deselect");
     }
 
     private void UpdateColors()

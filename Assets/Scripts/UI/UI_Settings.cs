@@ -7,9 +7,11 @@ public class UI_Settings : MonoBehaviour
     [Header("SoundsSettings")]
     [SerializeField] TextMeshProUGUI musicText;
     [SerializeField] TextMeshProUGUI sfxText;
+    [SerializeField] TextMeshProUGUI dialogueText;
     [SerializeField][Range(0f, 1f)] float startVolume = 1f;
     [SerializeField] Slider musicSlider;
     [SerializeField] Slider sfxSlider;
+    [SerializeField] Slider dialoguesSlider;
     [SerializeField] Toggle sensitivityFilter;
 
     private void Start()
@@ -17,6 +19,7 @@ public class UI_Settings : MonoBehaviour
         DefaultSoundValues();
         musicSlider.onValueChanged.AddListener(ChangeMusicVolume);
         sfxSlider.onValueChanged.AddListener(ChangeSFXVolume);
+        dialoguesSlider.onValueChanged.AddListener(ChangeDialoguesVolume);
     }
 
     public void ChangeMusicVolume(float _newValue)
@@ -28,6 +31,11 @@ public class UI_Settings : MonoBehaviour
     {
         AkSoundEngine.SetRTPCValue("RTPC_SFX_BUS", _newValue, gameObject);
         UpdateUISFX(_newValue);
+    }
+    public void ChangeDialoguesVolume(float _newValue)
+    {
+        AkSoundEngine.SetRTPCValue("RTPC_DIALOGUE_BUS", _newValue, gameObject);
+        UpdateUIDialogue(_newValue);
     }
     public void SwitchSensitivityFilter()
     {
@@ -45,13 +53,17 @@ public class UI_Settings : MonoBehaviour
     {
         AkSoundEngine.SetRTPCValue("RTPC_MUSIC_BUS", startVolume, gameObject);
         AkSoundEngine.SetRTPCValue("RTPC_SFX_BUS", startVolume, gameObject);
-        AkSoundEngine.SetRTPCValue("RTPC_SENSITIVITY_FILTER", 1, gameObject);
+        AkSoundEngine.SetRTPCValue("RTPC_DIALOGUE_BUS", startVolume, gameObject);
+        AkSoundEngine.SetRTPCValue("RTPC_SENSITIVITY_FILTER", 0, gameObject);
+
         UpdateUIMusic(startVolume);
         UpdateUISFX(startVolume);
+        UpdateUIDialogue(startVolume);
         sensitivityFilter.isOn = false;
 
         musicSlider.value = startVolume;
         sfxSlider.value = startVolume;
+        dialoguesSlider.value = startVolume;
     }
     private void UpdateUIMusic(float _value)
     {
@@ -62,6 +74,11 @@ public class UI_Settings : MonoBehaviour
     {
         float valueToPrint = _value * 100;
         sfxText.text = valueToPrint.ToString("F1") + "%";
+    }
+    private void UpdateUIDialogue(float _value)
+    {
+        float valueToPrint = _value * 100;
+        dialogueText.text = valueToPrint.ToString("F1") + "%";
     }
     #endregion
 }
