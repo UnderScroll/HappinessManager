@@ -1,0 +1,2662 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3f14ee189a18f14f932f9c6e8524282, type: 3}
+  m_Name: Floor4Lvl3
+  m_EditorClassIdentifier: 
+  Structure:
+    Cells:
+      _cells:
+      - rid: 978415913593733120
+      - rid: 978415913593733121
+      - rid: 978415913593733122
+      - rid: 978415913593733123
+      - rid: 978415913593733124
+      - rid: 978415913593733125
+      - rid: 978415913593733126
+      - rid: 978415913593733127
+      - rid: 978415913593733128
+      - rid: 978415913593733129
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: 978415913593733130
+      - rid: 978415913593733131
+      - rid: 978415913593733132
+      - rid: 978415913593733133
+      - rid: 978415913593733134
+      - rid: 978415913593733135
+      - rid: 978415913593733136
+      - rid: 978415913593733137
+      - rid: 978415913593733138
+      - rid: 978415913593733139
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: 978415913593733140
+      - rid: 978415913593733141
+      - rid: 978415913593733142
+      - rid: 978415913593733143
+      - rid: 978415913593733144
+      - rid: 978415913593733145
+      - rid: 978415913593733146
+      - rid: 978415913593733147
+      - rid: 978415913593733148
+      - rid: 978415913593733149
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: 978415913593733150
+      - rid: 978415913593733151
+      - rid: 978415913593733152
+      - rid: 978415913593733153
+      - rid: 978415913593733154
+      - rid: 978415913593733155
+      - rid: 978415913593733156
+      - rid: 978415913593733157
+      - rid: 978415913593733158
+      - rid: 978415913593733159
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: 978415913593733160
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: 978415913593733161
+      - rid: 978415913593733162
+      - rid: 978415913593733163
+      - rid: 978415913593733164
+      - rid: 978415913593733165
+      - rid: 978415913593733166
+      - rid: 978415913593733167
+      - rid: 978415913593733168
+      - rid: 978415913593733169
+      - rid: 978415913593733170
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: 978415913593733171
+      - rid: 978415913593733172
+      - rid: 978415913593733173
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: 978415913593733174
+      - rid: 978415913593733175
+      - rid: 978415913593733176
+      - rid: 978415913593733177
+      - rid: 978415913593733178
+      - rid: 978415913593733179
+      - rid: 978415913593733180
+      - rid: 978415913593733181
+      - rid: 978415913593733182
+      - rid: 978415913593733183
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: 978415913593733184
+      - rid: 978415913593733185
+      - rid: 978415913593733186
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: 978415913593733187
+      - rid: 978415913593733188
+      - rid: 978415913593733189
+      - rid: 978415913593733190
+      - rid: 978415913593733191
+      - rid: 978415913593733192
+      - rid: 978415913593733193
+      - rid: 978415913593733194
+      - rid: 978415913593733195
+      - rid: 978415913593733196
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: 978415913593733197
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: 978415913593733198
+      - rid: 978415913593733199
+      - rid: 978415913593733200
+      - rid: 978415913593733201
+      - rid: 978415913593733202
+      - rid: 978415913593733203
+      - rid: 978415913593733204
+      - rid: 978415913593733205
+      - rid: 978415913593733206
+      - rid: 978415913593733207
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: 978415913593733208
+      - rid: 978415913593733209
+      - rid: 978415913593733210
+      - rid: 978415913593733211
+      - rid: 978415913593733212
+      - rid: 978415913593733213
+      - rid: 978415913593733214
+      - rid: 978415913593733215
+      - rid: 978415913593733216
+      - rid: 978415913593733217
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: 978415913593733218
+      - rid: 978415913593733219
+      - rid: 978415913593733220
+      - rid: 978415913593733221
+      - rid: 978415913593733222
+      - rid: 978415913593733223
+      - rid: 978415913593733224
+      - rid: 978415913593733225
+      - rid: 978415913593733226
+      - rid: 978415913593733227
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      - rid: -2
+      Size:
+        x: 10
+        y: 10
+        z: 10
+  CellTypes:
+    _types:
+    - {fileID: 11400000, guid: 26323928fecd21440bbf81af0abd1f74, type: 2}
+    - {fileID: 11400000, guid: c605ce3339acc0848ad3b079d2702916, type: 2}
+    - {fileID: 11400000, guid: d9a05ac1dc066214dbf3cd85af3dd533, type: 2}
+    - {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+    - {fileID: 11400000, guid: cd54712c99a7ed14bbfc3768e1ac9abd, type: 2}
+    - {fileID: 11400000, guid: bd77142b1d33bbc489551a002b5e5de2, type: 2}
+  PlaceableCellTypes:
+    _types:
+    - {fileID: 11400000, guid: 26323928fecd21440bbf81af0abd1f74, type: 2}
+    - {fileID: 11400000, guid: c605ce3339acc0848ad3b079d2702916, type: 2}
+    - {fileID: 11400000, guid: d9a05ac1dc066214dbf3cd85af3dd533, type: 2}
+  IsWindEnabled: 1
+  WindDirection: {x: 0, y: 0, z: -1}
+  WindStrength: 4.6
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 978415913593733120
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 0
+          y: 0
+          z: 0
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733121
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 0
+          y: 0
+          z: 1
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733122
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 0
+          y: 0
+          z: 2
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733123
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 0
+          y: 0
+          z: 3
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733124
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 0
+          y: 0
+          z: 4
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733125
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 0
+          y: 0
+          z: 5
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733126
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 0
+          y: 0
+          z: 6
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733127
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 0
+          y: 0
+          z: 7
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733128
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 0
+          y: 0
+          z: 8
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733129
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 0
+          y: 0
+          z: 9
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733130
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 1
+          y: 0
+          z: 0
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733131
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 1
+          y: 0
+          z: 1
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733132
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 1
+          y: 0
+          z: 2
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733133
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 1
+          y: 0
+          z: 3
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733134
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 1
+          y: 0
+          z: 4
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733135
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 1
+          y: 0
+          z: 5
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733136
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 1
+          y: 0
+          z: 6
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733137
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: cd54712c99a7ed14bbfc3768e1ac9abd, type: 2}
+        Position:
+          x: 1
+          y: 0
+          z: 7
+        _connections:
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+    - rid: 978415913593733138
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 1
+          y: 0
+          z: 8
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733139
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 1
+          y: 0
+          z: 9
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733140
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 2
+          y: 0
+          z: 0
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733141
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 2
+          y: 0
+          z: 1
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733142
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 2
+          y: 0
+          z: 2
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733143
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 2
+          y: 0
+          z: 3
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733144
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 2
+          y: 0
+          z: 4
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733145
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 2
+          y: 0
+          z: 5
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733146
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 2
+          y: 0
+          z: 6
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733147
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 2
+          y: 0
+          z: 7
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733148
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 2
+          y: 0
+          z: 8
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733149
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 2
+          y: 0
+          z: 9
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733150
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 3
+          y: 0
+          z: 0
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733151
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 3
+          y: 0
+          z: 1
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733152
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 3
+          y: 0
+          z: 2
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733153
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 3
+          y: 0
+          z: 3
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733154
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 3
+          y: 0
+          z: 4
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733155
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 3
+          y: 0
+          z: 5
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733156
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 3
+          y: 0
+          z: 6
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733157
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 3
+          y: 0
+          z: 7
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733158
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 3
+          y: 0
+          z: 8
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733159
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 3
+          y: 0
+          z: 9
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733160
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: bd77142b1d33bbc489551a002b5e5de2, type: 2}
+        Position:
+          x: 3
+          y: 6
+          z: 6
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733161
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 4
+          y: 0
+          z: 0
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733162
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 4
+          y: 0
+          z: 1
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733163
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: cd54712c99a7ed14bbfc3768e1ac9abd, type: 2}
+        Position:
+          x: 4
+          y: 0
+          z: 2
+        _connections:
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+    - rid: 978415913593733164
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 4
+          y: 0
+          z: 3
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733165
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 4
+          y: 0
+          z: 4
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733166
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 4
+          y: 0
+          z: 5
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733167
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 4
+          y: 0
+          z: 6
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733168
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 4
+          y: 0
+          z: 7
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733169
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 4
+          y: 0
+          z: 8
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733170
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 4
+          y: 0
+          z: 9
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733171
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: bd77142b1d33bbc489551a002b5e5de2, type: 2}
+        Position:
+          x: 4
+          y: 6
+          z: 4
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733172
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: bd77142b1d33bbc489551a002b5e5de2, type: 2}
+        Position:
+          x: 4
+          y: 6
+          z: 5
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733173
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: bd77142b1d33bbc489551a002b5e5de2, type: 2}
+        Position:
+          x: 4
+          y: 6
+          z: 6
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733174
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 5
+          y: 0
+          z: 0
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733175
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 5
+          y: 0
+          z: 1
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733176
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: cd54712c99a7ed14bbfc3768e1ac9abd, type: 2}
+        Position:
+          x: 5
+          y: 0
+          z: 2
+        _connections:
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+    - rid: 978415913593733177
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 5
+          y: 0
+          z: 3
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733178
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 5
+          y: 0
+          z: 4
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733179
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 5
+          y: 0
+          z: 5
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733180
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 5
+          y: 0
+          z: 6
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733181
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 5
+          y: 0
+          z: 7
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733182
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 5
+          y: 0
+          z: 8
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733183
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 5
+          y: 0
+          z: 9
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733184
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: bd77142b1d33bbc489551a002b5e5de2, type: 2}
+        Position:
+          x: 5
+          y: 6
+          z: 4
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733185
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: bd77142b1d33bbc489551a002b5e5de2, type: 2}
+        Position:
+          x: 5
+          y: 6
+          z: 5
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733186
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: bd77142b1d33bbc489551a002b5e5de2, type: 2}
+        Position:
+          x: 5
+          y: 6
+          z: 6
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733187
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 6
+          y: 0
+          z: 0
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733188
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 6
+          y: 0
+          z: 1
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733189
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 6
+          y: 0
+          z: 2
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733190
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 6
+          y: 0
+          z: 3
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733191
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 6
+          y: 0
+          z: 4
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733192
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 6
+          y: 0
+          z: 5
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733193
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 6
+          y: 0
+          z: 6
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733194
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 6
+          y: 0
+          z: 7
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733195
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 6
+          y: 0
+          z: 8
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733196
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 6
+          y: 0
+          z: 9
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733197
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: bd77142b1d33bbc489551a002b5e5de2, type: 2}
+        Position:
+          x: 6
+          y: 6
+          z: 6
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733198
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 7
+          y: 0
+          z: 0
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733199
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 7
+          y: 0
+          z: 1
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733200
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 7
+          y: 0
+          z: 2
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733201
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 7
+          y: 0
+          z: 3
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733202
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 7
+          y: 0
+          z: 4
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733203
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 7
+          y: 0
+          z: 5
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733204
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 7
+          y: 0
+          z: 6
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733205
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 7
+          y: 0
+          z: 7
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733206
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 7
+          y: 0
+          z: 8
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733207
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 7
+          y: 0
+          z: 9
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733208
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 8
+          y: 0
+          z: 0
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733209
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 8
+          y: 0
+          z: 1
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733210
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 8
+          y: 0
+          z: 2
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733211
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 8
+          y: 0
+          z: 3
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733212
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 8
+          y: 0
+          z: 4
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733213
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 8
+          y: 0
+          z: 5
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733214
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 8
+          y: 0
+          z: 6
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733215
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: cd54712c99a7ed14bbfc3768e1ac9abd, type: 2}
+        Position:
+          x: 8
+          y: 0
+          z: 7
+        _connections:
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+        - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
+    - rid: 978415913593733216
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 8
+          y: 0
+          z: 8
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733217
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 8
+          y: 0
+          z: 9
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733218
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 9
+          y: 0
+          z: 0
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733219
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 9
+          y: 0
+          z: 1
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733220
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 9
+          y: 0
+          z: 2
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733221
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 9
+          y: 0
+          z: 3
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733222
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 9
+          y: 0
+          z: 4
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733223
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 9
+          y: 0
+          z: 5
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733224
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 9
+          y: 0
+          z: 6
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733225
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 9
+          y: 0
+          z: 7
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733226
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 9
+          y: 0
+          z: 8
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978415913593733227
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
+        Position:
+          x: 9
+          y: 0
+          z: 9
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}

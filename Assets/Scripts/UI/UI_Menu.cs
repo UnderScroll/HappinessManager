@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UI_Menu : MonoBehaviour
@@ -70,6 +71,8 @@ public class UI_Menu : MonoBehaviour
 
     private IEnumerator Start()
     {
+        Debug.developerConsoleVisible = true;
+
 
         // Binding events
         OnApplicationStarted.AddListener(OnApplicationStart);
@@ -134,8 +137,9 @@ public class UI_Menu : MonoBehaviour
 
     public void StartGame()
     {
-        Debug.Log("load scene");
+        SceneManager.LoadScene("Floor_1", LoadSceneMode.Single);
     }
+
     public void QuitGame()
     {
         OnQuittingGame?.Invoke();

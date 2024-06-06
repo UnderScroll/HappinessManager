@@ -252,6 +252,7 @@ GameObject:
   - component: {fileID: 737254369}
   - component: {fileID: 737254368}
   - component: {fileID: 737254370}
+  - component: {fileID: 737254372}
   - component: {fileID: 737254371}
   m_Layer: 0
   m_Name: GameManager
@@ -379,7 +380,10 @@ MonoBehaviour:
   Builder: {fileID: 0}
   Simulator: {fileID: 0}
   LevelLoader: {fileID: 0}
+  RuleManager: {fileID: 0}
+  SoundManager: {fileID: 0}
   UI_HUD: {fileID: 0}
+  FloorName: 
 --- !u!114 &737254369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,6 +397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Level: {fileID: 0}
+  SpentMoney: 0
 --- !u!114 &737254370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,6 +411,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 50
+  maxPitchAngle: 80
+  minPitchAngle: -20
 --- !u!114 &737254371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,6 +428,20 @@ MonoBehaviour:
   Levels:
   - {fileID: 11400000, guid: 8e835ca2fd78d824e94026ec47bd311c, type: 2}
   UI_HUD: {fileID: 0}
+  nextFloorname: 
+--- !u!114 &737254372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737254362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8872ff62cfd4f4c4080935b846425b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rules: []
 --- !u!1001 &757532187
 PrefabInstance:
   m_ObjectHideFlags: 0
