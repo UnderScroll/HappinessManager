@@ -138,6 +138,7 @@ public class UI_Menu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("Floor_1", LoadSceneMode.Single);
+        AkSoundEngine.PostEvent("Stop_Music_Global", gameObject);
     }
 
     public void QuitGame()
@@ -167,6 +168,7 @@ public class UI_Menu : MonoBehaviour
     {
         Debug.Log("son lancement de l'appli");
         imageFade.DOFade(1, 1);
+        AkSoundEngine.PostEvent("Play_Menu_Settings_onMenuOpen", gameObject);
     }
     private void ButtonClicked()
     {
@@ -175,10 +177,13 @@ public class UI_Menu : MonoBehaviour
     private void QuittingGame()
     {
         Debug.Log("son jeu qui se ferme");
+        AkSoundEngine.PostEvent("Play_Menu_Paused", gameObject);
     }
     private void IntroEnded()
     {
         Debug.Log("son intro finie start jeu");
+        AkSoundEngine.PostEvent("Play_Music_Title", gameObject);
+
     }
     #endregion
 

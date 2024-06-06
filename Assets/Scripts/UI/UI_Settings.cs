@@ -25,6 +25,7 @@ public class UI_Settings : MonoBehaviour
     [SerializeField] Slider sfxSlider;
     [SerializeField] Slider dialoguesSlider;
     [SerializeField] Toggle sensitivityFilter;
+    [SerializeField] private AK.Wwise.RTPC rtpc = null;
 
     private void Start()
     {
