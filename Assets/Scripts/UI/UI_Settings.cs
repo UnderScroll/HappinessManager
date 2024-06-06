@@ -1,9 +1,21 @@
+using AK.Wwise;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 public class UI_Settings : MonoBehaviour
 {
+    [Header("RTPCs")]
+    [SerializeField]
+    private AK.Wwise.RTPC rtpcMUSIC = null;
+    [SerializeField]
+    private AK.Wwise.RTPC rtpcSFX = null;
+    [SerializeField]
+    private AK.Wwise.RTPC rtpcDIALOGUE = null;
+    [SerializeField]
+    private AK.Wwise.RTPC rtpcSENSITIVITY = null;
+
     [Header("SoundsSettings")]
     [SerializeField] TextMeshProUGUI musicText;
     [SerializeField] TextMeshProUGUI sfxText;
@@ -24,25 +36,25 @@ public class UI_Settings : MonoBehaviour
 
     public void ChangeMusicVolume(float _newValue)
     {
-        AkSoundEngine.SetRTPCValue("RTPC_MUSIC_BUS", _newValue, gameObject);
+        rtpcMUSIC.SetGlobalValue(_newValue);
         UpdateUIMusic(_newValue);
     }
     public void ChangeSFXVolume(float _newValue)
     {
-        AkSoundEngine.SetRTPCValue("RTPC_SFX_BUS", _newValue, gameObject);
+        rtpcSFX.SetGlobalValue(_newValue);
         UpdateUISFX(_newValue);
     }
     public void ChangeDialoguesVolume(float _newValue)
     {
-        AkSoundEngine.SetRTPCValue("RTPC_DIALOGUE_BUS", _newValue, gameObject);
+        rtpcDIALOGUE.SetGlobalValue(_newValue);
         UpdateUIDialogue(_newValue);
     }
     public void SwitchSensitivityFilter()
     {
         if (sensitivityFilter.isOn)
-            AkSoundEngine.SetRTPCValue("RTPC_SENSITIVITY_FILTER", 1, gameObject);
+            rtpcSENSITIVITY.SetGlobalValue(1);
         else
-            AkSoundEngine.SetRTPCValue("RTPC_SENSITIVITY_FILTER", 0, gameObject);
+            rtpcSENSITIVITY.SetGlobalValue(0);
     }
     public void RestoreToDefault()
     {
