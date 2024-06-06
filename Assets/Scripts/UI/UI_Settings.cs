@@ -2,7 +2,6 @@ using AK.Wwise;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEngine.Rendering.DebugUI;
 
 public class UI_Settings : MonoBehaviour
 {
@@ -24,9 +23,7 @@ public class UI_Settings : MonoBehaviour
     [SerializeField] Slider musicSlider;
     [SerializeField] Slider sfxSlider;
     [SerializeField] Slider dialoguesSlider;
-    [SerializeField] Toggle sensitivityFilter;
-    [SerializeField] private AK.Wwise.RTPC rtpc = null;
-
+    [SerializeField] UI_ONOFFButton SensitivityFilter;
     private void Start()
     {
         DefaultSoundValues();
@@ -50,9 +47,9 @@ public class UI_Settings : MonoBehaviour
         rtpcDIALOGUE.SetGlobalValue(_newValue);
         UpdateUIDialogue(_newValue);
     }
-    public void SwitchSensitivityFilter()
+    public void SwitchSensitivityFilter(bool _on)
     {
-        if (sensitivityFilter.isOn)
+        if (_on)
             rtpcSENSITIVITY.SetGlobalValue(1);
         else
             rtpcSENSITIVITY.SetGlobalValue(0);
@@ -72,7 +69,7 @@ public class UI_Settings : MonoBehaviour
         UpdateUIMusic(startVolume);
         UpdateUISFX(startVolume);
         UpdateUIDialogue(startVolume);
-        sensitivityFilter.isOn = false;
+        SensitivityFilter.Move(false);
 
         musicSlider.value = startVolume;
         sfxSlider.value = startVolume;
