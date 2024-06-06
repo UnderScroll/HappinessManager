@@ -7,7 +7,7 @@ public class UI_Settings : MonoBehaviour
     [Header("SoundsSettings")]
     [SerializeField] TextMeshProUGUI musicText;
     [SerializeField] TextMeshProUGUI sfxText;
-    [SerializeField][Range(0f, 1f)] float startVolume = 0.5f;
+    [SerializeField][Range(0f, 1f)] float startVolume = 1f;
     [SerializeField] Slider musicSlider;
     [SerializeField] Slider sfxSlider;
     [SerializeField] Toggle sensitivityFilter;
@@ -15,6 +15,8 @@ public class UI_Settings : MonoBehaviour
     private void Start()
     {
         DefaultSoundValues();
+        musicSlider.onValueChanged.AddListener(ChangeMusicVolume);
+        sfxSlider.onValueChanged.AddListener(ChangeSFXVolume);
     }
 
     public void ChangeMusicVolume(float _newValue)
