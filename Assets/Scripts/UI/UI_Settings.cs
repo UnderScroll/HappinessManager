@@ -32,10 +32,9 @@ public class UI_Settings : MonoBehaviour
     public void SwitchSensitivityFilter()
     {
         if (sensitivityFilter.isOn)
-            AkSoundEngine.SetRTPCValue("RTPC_SENSITIVITY_FILTER", 0, gameObject);
-        else
             AkSoundEngine.SetRTPCValue("RTPC_SENSITIVITY_FILTER", 1, gameObject);
-
+        else
+            AkSoundEngine.SetRTPCValue("RTPC_SENSITIVITY_FILTER", 0, gameObject);
     }
     public void RestoreToDefault()
     {
