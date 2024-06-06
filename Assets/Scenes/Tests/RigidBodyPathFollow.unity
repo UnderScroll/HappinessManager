@@ -717,7 +717,6 @@ GameObject:
   - component: {fileID: 9162049669316719076}
   - component: {fileID: 5810839041037270359}
   - component: {fileID: 1888933250641365154}
-  - component: {fileID: 9162049669316719077}
   m_Layer: 0
   m_Name: 0001.png0001
   m_TagString: Untagged
@@ -785,7 +784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b451f3cd0650241b5654e795852abb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StandForce: 500
+  StandForce: 1000
 --- !u!136 &8404514243446403301
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -867,29 +866,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 727764308819929730}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &9162049669316719077
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5962312482546195211}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 5
-  m_Height: 18
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
