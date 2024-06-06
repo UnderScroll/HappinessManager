@@ -24,6 +24,7 @@ public class UI_Settings : MonoBehaviour
     [SerializeField] Slider sfxSlider;
     [SerializeField] Slider dialoguesSlider;
     [SerializeField] UI_ONOFFButton SensitivityFilter;
+
     private void Start()
     {
         DefaultSoundValues();
@@ -31,7 +32,16 @@ public class UI_Settings : MonoBehaviour
         sfxSlider.onValueChanged.AddListener(ChangeSFXVolume);
         dialoguesSlider.onValueChanged.AddListener(ChangeDialoguesVolume);
     }
-
+    #region Graphics
+    public void SetFullscreen(bool _on)
+    {
+        if (_on)
+            Screen.SetResolution(1920, 1080, true);
+        else
+            Screen.SetResolution(1920, 1080, false);
+    }
+    #endregion
+    #region Sound
     public void ChangeMusicVolume(float _newValue)
     {
         rtpcMUSIC.SetGlobalValue(_newValue);
@@ -58,6 +68,7 @@ public class UI_Settings : MonoBehaviour
     {
         DefaultSoundValues();
     }
+    #endregion
     #region Private Methods
     private void DefaultSoundValues()
     {
