@@ -40,6 +40,10 @@ public class UI_Settings : MonoBehaviour
         else
             Screen.SetResolution(1920, 1080, false);
     }
+    public void HighContrastMode(bool _on)
+    {
+        // set up high contrast mode
+    }
     #endregion
     #region Sound
     public void ChangeMusicVolume(float _newValue)
