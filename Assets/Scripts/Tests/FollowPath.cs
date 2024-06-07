@@ -72,6 +72,8 @@ public class FollowPath : MonoBehaviour
 
         if (new Vector3(_Rigidbody.velocity.x, 0, _Rigidbody.velocity.z).magnitude < maxVelocity)
             _Rigidbody.AddForce(new Vector3(_FollowDirection.x, 0, _FollowDirection.z) * FollowForce);
+        else
+            _Rigidbody.velocity = Vector3.Normalize(new Vector3(_Rigidbody.velocity.x, 0, _Rigidbody.velocity.z)) * maxVelocity + new Vector3(0, _Rigidbody.velocity.z, 0);
 
         if (Breakable)
         {

@@ -53,7 +53,6 @@ public partial class LevelEditor : MonoBehaviour
         if (newData == null)
             return;
         
-
         GameObject newInstance = Instantiate(newData.Type.Block, transform);
         newInstance.transform.position = CurrentCellPosition;
         previewBlocks[position.x, position.y, position.z] = newInstance;

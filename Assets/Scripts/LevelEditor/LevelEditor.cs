@@ -40,6 +40,20 @@ public partial class LevelEditor : MonoBehaviour
     public bool IsWindEnabled;
     public Vector3 WindDirection;
     public float WindStrength;
+    //Employee Editor
+    public EmployeeCellData EmployeeCellData;
+    public bool HasFollowPath;
+    public List<Vector3> Waypoints;
+
+    public FollowPath.Mode Mode;
+    public float FollowForce;
+    public float MaxVelocity;
+    public float Radius;
+
+    public bool Breakable;
+    public float BreakThreshold;
+
+    public float StandForce;
     ////////////////////////////
 
     public GameObject CurrentCellPreviewInstance;
@@ -55,6 +69,15 @@ public partial class LevelEditor : MonoBehaviour
 
         //Draw alignment lines
         DrawAlignementLines();
+
+        foreach (CellData cellData in Level.Structure.Cells)
+        {
+            if (cellData == null || !cellData.Type.IsEmployee)
+                continue;
+
+            if ()
+                Gizmos.DrawSphere(new Vector3(cellData.Position.x, cellData.Position.y, cellData.Position.z), 1);
+        }
     }
 
     private void DrawAlignementLines()

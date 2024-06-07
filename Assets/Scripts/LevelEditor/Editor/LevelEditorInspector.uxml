@@ -53,5 +53,30 @@
             <ui:Toggle name="ReplaceToggle" binding-path="DoReplace" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
         </ui:IMGUIContainer>
     </ui:IMGUIContainer>
+    <ui:IMGUIContainer name="EmployeeEditor" style="margin-top: 2px; margin-right: 4px; margin-bottom: 0; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; border-bottom-width: 2px; border-left-color: rgb(70, 70, 70); border-right-color: rgb(70, 70, 70); border-top-color: rgb(70, 70, 70); border-bottom-color: rgb(70, 70, 70);">
+        <ui:Foldout value="true" picking-mode="Ignore" focusable="true" text="Employee Editor" name="Foldout" style="-unity-font-style: bold;">
+            <ui:IMGUIContainer name="FollowPath" style="flex-direction: row; margin-top: 2px; margin-right: 4px; margin-bottom: 2px; margin-left: 4px; -unity-font-style: bold; border-left-color: rgb(70, 70, 70); border-right-color: rgb(70, 70, 70); border-top-color: rgb(70, 70, 70); border-bottom-color: rgb(70, 70, 70); border-bottom-width: 2px; padding-top: 2px; padding-right: 4px; padding-left: 4px; padding-bottom: 2px; left: -37px;">
+                <ui:Toggle name="Toggle" binding-path="HasFollowPath" style="flex-direction: column; align-items: auto; justify-content: flex-start; align-self: flex-start; margin-right: 15px; margin-top: 2px; margin-bottom: 0; margin-left: 0; -unity-font-style: bold;" />
+                <ui:Foldout text="Follow Path" name="FollowPath" style="width: 100%; -unity-font-style: bold;">
+                    <ui:IMGUIContainer name="Follow" style="margin-top: 2px; margin-right: 4px; margin-left: 4px; border-left-color: rgb(70, 70, 70); border-right-color: rgb(70, 70, 70); border-top-color: rgb(70, 70, 70); border-bottom-color: rgb(70, 70, 70); padding-top: 2px; padding-right: 4px; padding-left: 4px; border-bottom-width: 2px;">
+                        <ui:Label tabindex="-1" text="Follow" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Follow" style="-unity-font-style: bold;" />
+                        <ui:ListView binding-path="Waypoints" view-data-key="Waypoints" show-border="true" reorderable="true" horizontal-scrolling="true" show-foldout-header="true" show-add-remove-footer="true" header-title="Waypoints" reorder-mode="Animated" name="Waypoints" style="-unity-font-style: normal;" />
+                        <ui:EnumField label="Mode" type="UnityEngine.TextAlignment, UnityEngine.TextRenderingModule" value="Center" name="Mode" binding-path="Mode" style="-unity-font-style: normal;" />
+                        <ui:FloatField label="Follow Force" value="42,2" binding-path="FollowForce" name="FollowForce" style="-unity-font-style: normal;" />
+                        <ui:FloatField label="Max Velocity" value="0" name="MaxVelocity" binding-path="MaxVelocity" style="-unity-font-style: normal;" />
+                        <ui:FloatField label="Radius" value="0" binding-path="Radius" name="Radius" style="-unity-font-style: normal;" />
+                    </ui:IMGUIContainer>
+                    <ui:IMGUIContainer name="Break" style="margin-top: 2px; margin-right: 4px; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-left: 4px;">
+                        <ui:Label tabindex="-1" text="Break" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Break" style="-unity-font-style: bold;" />
+                        <ui:Toggle label="Breakable" binding-path="Breakable" name="Breakable" style="-unity-font-style: normal;" />
+                        <ui:FloatField label="Break Threshold" value="0" name="BreakThreshold" binding-path="BreakThreshold" style="-unity-font-style: normal;" />
+                    </ui:IMGUIContainer>
+                </ui:Foldout>
+            </ui:IMGUIContainer>
+            <ui:Foldout text="Force Stand" name="ForceStand" style="width: 100%; -unity-font-style: bold;">
+                <ui:FloatField label="Float Field" value="42,2" binding-path="StandForce" />
+            </ui:Foldout>
+        </ui:Foldout>
+    </ui:IMGUIContainer>
     <ui:Button text="Save" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Save" />
 </ui:UXML>

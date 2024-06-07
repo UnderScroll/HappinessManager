@@ -22,7 +22,6 @@ public class CellType : ScriptableObject
     public static explicit operator CellData(CellType cellType) => new(cellType);
     public static explicit operator EmployeeCellData(CellType cellType) => new(cellType);
 
-
     public bool HasConnection(CellData.Face face) => ((int)ConnectionFaces & (1 << (int)face)) != 0;
 
     [Flags]
