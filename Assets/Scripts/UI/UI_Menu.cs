@@ -12,11 +12,9 @@ using UnityEngine.UI;
 public class UI_Menu : MonoBehaviour
 {
     [SerializeField] Image imageFade;
-    [SerializeField] Image splashScreen;
-    public UnityEvent OnButtonClicked;
-    public UnityEvent OnApplicationStarted;
-    public UnityEvent OnQuittingGame;
-    public UnityEvent OnIntroEnded;
+    UnityEvent OnApplicationStarted;
+    UnityEvent OnQuittingGame;
+    UnityEvent OnIntroEnded;
 
     [Header("IntroScene")]
     [SerializeField] bool skipIntro;
@@ -76,7 +74,6 @@ public class UI_Menu : MonoBehaviour
 
         // Binding events
         OnApplicationStarted.AddListener(OnApplicationStart);
-        OnButtonClicked.AddListener(ButtonClicked);
         OnQuittingGame.AddListener(QuittingGame);
         OnIntroEnded.AddListener(IntroEnded);
 
@@ -166,22 +163,15 @@ public class UI_Menu : MonoBehaviour
     #region EVENTS
     private void OnApplicationStart()
     {
-        Debug.Log("son lancement de l'appli");
         imageFade.DOFade(1, 1);
         AkSoundEngine.PostEvent("Play_Menu_Settings_onMenuOpen", gameObject);
     }
-    private void ButtonClicked()
-    {
-        Debug.Log("son button clicked");
-    }
     private void QuittingGame()
     {
-        Debug.Log("son jeu qui se ferme");
         AkSoundEngine.PostEvent("Play_Menu_Paused", gameObject);
     }
     private void IntroEnded()
     {
-        Debug.Log("son intro finie start jeu");
         AkSoundEngine.PostEvent("Play_Music_Title", gameObject);
 
     }
