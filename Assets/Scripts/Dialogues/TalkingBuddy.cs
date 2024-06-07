@@ -166,12 +166,13 @@ public class TalkingBuddy : MonoBehaviour
                 return "ET";
             case Characters.Stagiaire:
                 return "Stagiaire";
+            case Characters.DirCrea:
+                    return "DirCrea";
         }
         return "NoCharaFound";
     }
     private void InitLines(GameManager.Stage _stage)
     {
-        Debug.Log("stage = " + _stage);
         Line = GetCharaName() + _stage.ToString();
         Debug.Log(Line);
     }
@@ -182,9 +183,11 @@ public class TalkingBuddy : MonoBehaviour
     private void PlayDialogueSound()
     {
         IEnumerable<string> tags = dialogueRunner.GetTagsForNode(dialogueRunner.CurrentNodeName);
-
-        AkSoundEngine.PostEvent(tags.First(), gameObject);
-        AkSoundEngine.PostEvent("Play_UI_DialogueBubble", gameObject);
+        if (tags.First() != null)
+        {
+            AkSoundEngine.PostEvent(tags.First(), gameObject);
+            AkSoundEngine.PostEvent("Play_UI_DialogueBubble", gameObject);
+        }
     }
     #endregion
 }

@@ -7,6 +7,7 @@ public class UI_Notebook : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI stageName;
     [SerializeField] TextMeshProUGUI stageDescription;
+    [SerializeField] List<GameObject> infoPanels;
 
     private GameManager _gameManager;
 
@@ -15,10 +16,10 @@ public class UI_Notebook : MonoBehaviour
         _gameManager = FindObjectOfType<GameManager>();
         if (_gameManager != null)
         {
-            InitLevelName();
+            Init();
         }
     }
-    private void InitLevelName()
+    private void Init()
     {
         switch (_gameManager.CurrentStage)
         {
@@ -28,6 +29,8 @@ public class UI_Notebook : MonoBehaviour
                     "\nJ’aime commencer fort avec mes nouveaux collaborateurs, c’est comme un rite de passage." +
                     "Ma Comptable et moi-même avons besoin de travailler côte à côte, je veux que tu construises une structure qui relie nos bureaux. " +
                     "À toi de jouer !\"\t\t\t";
+                if (infoPanels[0] != null)
+                    infoPanels[0].SetActive(true);
                 break;
             case GameManager.Stage.Stage2:
                 stageName.text = "FLOOR 2 : CAFETARIA";
@@ -36,6 +39,8 @@ public class UI_Notebook : MonoBehaviour
                     "Car un collaborateur heureux est un collaborateur efficace ! \r\nÇa me tient énormément à cœur tu sais qu’ils puissent se relaxer ensemble, ça améliore grandement l’aspect collaboratif. " +
                     "Bref, assez discuté ! Je t’invite à regarder ton prochain projet : on a une petite problématique de fuite… Comme tu peux le voir, il y a de la mousse partout et ça devient dangereux ! " +
                     "Je te laisse trouver une solution, ça serait dommage de fermer la cafétéria pour si peu.";
+                if (infoPanels[1] != null)
+                    infoPanels[1].SetActive(true);
                 break;
             case GameManager.Stage.Stage3:
                 stageName.text = "FLOOR 3 : CO-WORKING FLOOR";
@@ -44,6 +49,8 @@ public class UI_Notebook : MonoBehaviour
                     "Comme tu peux le voir, on mesure aujourd’hui la régulation et la gouvernance des dynamiques intra-démographiques au sein d’un même bureau !" +
                     " …On dirait que ce n’est pas très parlant pour toi ? Ne t’en préoccupe pas, tu n’es qu’un Happiness Manager après tout ! " +
                     "Anyway, au travail ! J’ai une RH en arrêts travail répétés à virer et une remplaçante à lui trouver. Et toi, un espace à designer ! »";
+                if (infoPanels[2] != null)
+                    infoPanels[2].SetActive(true);
                 break;
             case GameManager.Stage.Stage4:
                 stageName.text = "FLOOR 4 : TEAMBUILDING SPACE";
@@ -52,6 +59,8 @@ public class UI_Notebook : MonoBehaviour
                     "Des comptables et des employés, ça se recrute en un claquement de doigt ! Chez WorkBuddies on a besoin d’employés fidèles qui fit notre culture d’entreprise, pas de paresseux. " +
                     "Assez discutaillé, c’est une mission de crise que je te confie aujourd’hui. Avec les employés restants, j’aimerais que tu mettes au goût des pratiques actuelles notre espace de team building ! " +
                     "Avec ces pertes récentes, c’est important qu’ils se sentent valorisés et irremplaçables. »";
+                if (infoPanels[3] != null)
+                    infoPanels[3].SetActive(true);
                 break;
             case GameManager.Stage.Stage5:
                 stageName.text = "FLOOR 5 : INTERNS OFFICE";
@@ -59,6 +68,8 @@ public class UI_Notebook : MonoBehaviour
                     "C’est comme ça qu’on me remercie ! « Pousse-les à être meilleurs » qu’on m’a dit, « tu verras tu seras récompensé » Tu parles ! Travailler ça n’intéresse plus personne, la satisfaction de l’effort est mort et cette entreprise avec ! " +
                     "Je suis terriblement déçu, c’est une trahison sans nom ! Dans ces conditions tu comprendras que je ne peux pas continuer ta période d’essai, nous allons devoir nous séparer ici… " +
                     "Hop hop hop, pas si vite ! Avant que tu fasses tes affaires, j’ai une dernière tâche à te confier. On a plus vraiment de budget mais je compte sur toi pour refaire à neuf le cagib- je veux dire le bureau des stagiaires !";
+                if (infoPanels[4] != null)
+                    infoPanels[4].SetActive(true);
                 break;
             default:
                 stageName.text = "STAGE ??? : UNKNOWN STAGE ???";
