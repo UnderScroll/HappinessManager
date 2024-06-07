@@ -134,8 +134,11 @@ public class UI_Menu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Floor_1", LoadSceneMode.Single);
         AkSoundEngine.PostEvent("Stop_Music_Global", gameObject);
+        AkSoundEngine.PostEvent("Play_Menu_select", gameObject);
+        
+        SceneManager.LoadScene("Floor_1", LoadSceneMode.Single);
+        
     }
 
     public void QuitGame()
@@ -164,7 +167,7 @@ public class UI_Menu : MonoBehaviour
     private void OnApplicationStart()
     {
         imageFade.DOFade(1, 1);
-        AkSoundEngine.PostEvent("Play_Menu_Settings_onMenuOpen", gameObject);
+        AkSoundEngine.PostEvent("Play_Menu_Settings_onSubMenuClick", gameObject);
     }
     private void QuittingGame()
     {

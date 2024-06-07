@@ -1,4 +1,5 @@
 using AK.Wwise;
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -55,18 +56,40 @@ public class UI_Settings : MonoBehaviour
     {
         rtpcSFX.SetGlobalValue(_newValue);
         UpdateUISFX(_newValue);
+
+        //play sound to check new volume
+        float SFXTriggerValue = _newValue * 100;
+        int SFXTriggerValueInt = Convert.ToInt32(SFXTriggerValue);
+        if (SFXTriggerValueInt % 15 == 0)
+        {
+            Debug.Log(SFXTriggerValueInt);
+            AkSoundEngine.PostEvent("Play_Menu_SliderSFX", gameObject);
+        }
     }
     public void ChangeDialoguesVolume(float _newValue)
     {
         rtpcDIALOGUE.SetGlobalValue(_newValue);
         UpdateUIDialogue(_newValue);
+
+        //play sound to check new volume
+        float DialogueTriggerValue = _newValue * 100;
+        int DialogueTriggerValueInt = Convert.ToInt32(DialogueTriggerValue);
+        if (DialogueTriggerValueInt % 25 == 0)
+        {
+            AkSoundEngine.PostEvent("Play_Menu_SliderDialogues", gameObject);
+        }
     }
     public void SwitchSensitivityFilter(bool _on)
     {
         if (_on)
+        {
             rtpcSENSITIVITY.SetGlobalValue(1);
+        }
         else
+        {
             rtpcSENSITIVITY.SetGlobalValue(0);
+        }
+           
     }
     public void RestoreToDefault()
     {

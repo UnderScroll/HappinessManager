@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Yarn.Compiler;
 
 public class UI_SelectableBlock : MonoBehaviour
 {
@@ -47,6 +48,7 @@ public class UI_SelectableBlock : MonoBehaviour
         {
             this.gameObject.transform.DOBlendableLocalMoveBy(new Vector3(0, -decalOverValue, 0), 0.5f);
             ui_hud.TemporaryDescription(blockInfo, false);
+            AkSoundEngine.PostEvent("Play_UI_item_offTabHover", gameObject);
         }
     }
 }
