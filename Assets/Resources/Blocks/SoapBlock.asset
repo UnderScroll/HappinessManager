@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: SoapBlock
   m_EditorClassIdentifier: 
   Name: SoapBlock
+  Description: "Un bloc de mousse, plus l\xE9ger mais tr\xE8s fragile"
   Removable: 1
   Mass: 0.4
   Price: 1
   DefaultConnectionType: {fileID: 11400000, guid: 77ab90cac4834b04881f5ec7432f09b5,
     type: 2}
-  Block: {fileID: 6317348198501730575, guid: 74388d797e7304846ad4a581c9ea714a, type: 3}
+  Block: {fileID: 8593878182635124824, guid: 74388d797e7304846ad4a581c9ea714a, type: 3}
+  BlockIcon: {fileID: 0}
   PreviewCollider: {fileID: 5749741502627939162, guid: 97919408bbf7f3a46b948f901fe8cf71,
     type: 3}
   ConnectionFaces: 63

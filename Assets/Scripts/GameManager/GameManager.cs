@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Diagnostics.CodeAnalysis;
+using LevelLoader;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class GameManager : MonoBehaviour
     public SoundManager SoundManager;
     [HideInInspector]
     public UI_HUD UI_HUD;
+
+    public enum Stage { Stage1, Stage2, Stage3, Stage4, Stage5 };
+
+    [SerializeField] public Stage CurrentStage;
 
     private bool _playing = false;
 
@@ -52,6 +57,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("ReloadingLevel");
         LevelLoader.ReloadLevel();
         SoundManager.PlayOnBuilding();
+
+        //TMP FOR PLAYTESTING
+        UI_HUD.UpdateLevelName(Builder.Level.name);
     }
 
     [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres priv�s non utilis�s", Justification = "OnLoadNextLevel is called by Unity Input System")]
@@ -60,6 +68,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("LoadingNextLevel");
         LevelLoader.LoadNextLevel();
         SoundManager.PlayOnBuilding();
+
+        //TMP FOR PLAYTESTING
+        UI_HUD.UpdateLevelName(Builder.Level.name);
     }
 
     [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres priv�s non utilis�s", Justification = "OnLoadPreviousLevel is called by Unity Input System")]
@@ -68,6 +79,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("LoadingPreviousLevel");
         LevelLoader.LoadPreviousLevel();
         SoundManager.PlayOnBuilding();
+
+        //TMP FOR PLAYTESTING
+        UI_HUD.UpdateLevelName(Builder.Level.name);
     }
 
     [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres priv�s non utilis�s", Justification = "OnToggleMode is called by Unity Input System")]

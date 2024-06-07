@@ -175,6 +175,8 @@ namespace Simulation
         {
             Debug.Log("LevelValidated");
             _gameManager.SoundManager.PlayOnLevelValidated();
+
+            _gameManager.UI_HUD.DisplayEndLevelPanel(true);
         }
 
         public void OnEmployeeGroundCollision()

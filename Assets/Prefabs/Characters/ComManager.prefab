@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1278767500713713068}
+  - component: {fileID: 3791786828457168945}
   m_Layer: 0
   m_Name: ComManager
   m_TagString: Untagged
@@ -32,6 +33,32 @@ Transform:
   - {fileID: 8274655997389340546}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3791786828457168945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3564978471223879737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd023f3677246784da2293176af11ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueViewPrefab: {fileID: 2238583932324294741, guid: 1a4768423e38e594fabb93cc30e3bbe5,
+    type: 3}
+  yarnProject: {fileID: 7545569452688597077, guid: db1cf709385db4f8e819381604b24834,
+    type: 3}
+  Character: 1
+  NbLinesStage1: 0
+  NbLinesStage2: 0
+  NbLinesStage3: 0
+  NbLinesStage4: 0
+  NbLinesStage5: 0
+  TimeBeforeTalking: 5
+  RandomizeTimeBT: 0
+  minimalTimeBT: 3
+  maximalTimeBT: 7
 --- !u!1 &4400154782166236621
 GameObject:
   m_ObjectHideFlags: 0
