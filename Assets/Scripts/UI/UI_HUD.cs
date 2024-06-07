@@ -36,6 +36,7 @@ public class UI_HUD : MonoBehaviour
 
     [Header("Notebook Menu")]
     [SerializeField] GameObject notebook;
+    [SerializeField] UI_Notebook ui_notebook;
 
     private GameObject actualMenu;
     private GameManager _gameManager;
@@ -126,6 +127,13 @@ public class UI_HUD : MonoBehaviour
                     block.Unover();
             }
         }
+
+    }
+    #endregion
+
+    #region Notebook
+    private void InitNotebook()
+    {
 
     }
     #endregion

@@ -11,7 +11,7 @@ public class UI_TabsManager : MonoBehaviour
     [SerializeField] Vector3 hidePosition;
     [SerializeField] Vector2 showPosition;
 
-    UnityEvent OnPanelSwitch;
+    public UnityEvent OnPanelSwitch;
 
     int selectedPanel;
 
