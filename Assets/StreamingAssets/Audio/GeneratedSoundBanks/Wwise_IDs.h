@@ -101,6 +101,8 @@ namespace AK
         static const AkUniqueID PLAY_MENU_SETTINGS_ONTABHOVER = 2540621422U;
         static const AkUniqueID PLAY_MENU_SETTINGS_TOGGLEIN = 1187050633U;
         static const AkUniqueID PLAY_MENU_SETTINGS_TOGGLEOUT = 4022107688U;
+        static const AkUniqueID PLAY_MENU_SLIDERDIALOGUES = 3879871422U;
+        static const AkUniqueID PLAY_MENU_SLIDERSFX = 301191870U;
         static const AkUniqueID PLAY_MENU_UI_DIALOGUE_SKIP = 1603835309U;
         static const AkUniqueID PLAY_MENU_UNPAUSED = 2362180565U;
         static const AkUniqueID PLAY_MUSIC_BOSS = 2155613437U;

@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: c2d0754eea2b554ead038a4e85dfb0da
     GuidInternal: 
-    m_lastTime: -8584839237696986519
+    m_lastTime: -8584839070154339470
     List:
     - name: AMBIANCE
       guid: 7e303c6a36077045a549d2b2c039cff3
@@ -218,7 +218,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a2847257a7000f4e81d18dd3626acf80
     GuidInternal: 
-    m_lastTime: -8584840020298641646
+    m_lastTime: -8584839196373791499
     List: []
   - PhysicalPath: Events\WU_HM_Events.wwu
     PathAndIcons:
@@ -231,7 +231,7 @@ MonoBehaviour:
     ParentPath: Events\WU_HM_Events
     guid: a44afb18422e3e4bbc589ac1581aef04
     GuidInternal: 
-    m_lastTime: -8584839250652799362
+    m_lastTime: -8584839091396695936
     List:
     - name: Amb
       guid: 45ce627f733a4f4d90717e8757beb9ba
@@ -2751,6 +2751,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.2840834
       minDuration: 1.2840834
+    - name: Play_Menu_SliderDialogues
+      guid: 2a960e20042e9b4ebf25f4a583957d57
+      id: 3879871422
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Menu
+        ObjectType: 4
+        guid: 7c3b937848a465498b4d802019cfeba7
+      - ElementName: Play_Menu_SliderDialogues
+        ObjectType: 3
+        guid: 2a960e20042e9b4ebf25f4a583957d57
+      Path: Events\WU_HM_Events\Menu\Play_Menu_SliderDialogues
+      maxAttenuation: 0
+      maxDuration: 4.4115
+      minDuration: 2.3104374
+    - name: Play_Menu_SliderSFX
+      guid: 827ab9ad7d624744850fb587dacdae75
+      id: 301191870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Menu
+        ObjectType: 4
+        guid: 7c3b937848a465498b4d802019cfeba7
+      - ElementName: Play_Menu_SliderSFX
+        ObjectType: 3
+        guid: 827ab9ad7d624744850fb587dacdae75
+      Path: Events\WU_HM_Events\Menu\Play_Menu_SliderSFX
+      maxAttenuation: 0
+      maxDuration: 0.16407259
+      minDuration: 0.1186371
     - name: Play_Menu_UI_Dialogue_Skip
       guid: 2d134876c2d18b498f9800f597a33e01
       id: 1603835309
@@ -2769,8 +2809,8 @@ MonoBehaviour:
         guid: 2d134876c2d18b498f9800f597a33e01
       Path: Events\WU_HM_Events\Menu\Play_Menu_UI_Dialogue_Skip
       maxAttenuation: 0
-      maxDuration: 1.4791374
-      minDuration: 1.190042
+      maxDuration: 1.3284883
+      minDuration: 1.0095642
     - name: Play_Menu_unpaused
       guid: 0d9fc46df000e94db7c767266554e263
       id: 2362180565

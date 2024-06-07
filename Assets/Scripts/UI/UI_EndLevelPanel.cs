@@ -27,6 +27,7 @@ public class UI_EndLevelPanel : MonoBehaviour
         {
             restartLevel.onClick.AddListener(ui_hud.RestartLevel);
             nextLevel.onClick.AddListener(ui_hud.NextLevel);
+            AkSoundEngine.PostEvent("Play_Menu_Settings_toggleIn", gameObject);
         }
     }
 }

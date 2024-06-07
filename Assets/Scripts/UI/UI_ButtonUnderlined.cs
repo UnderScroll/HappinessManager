@@ -26,11 +26,14 @@ public class UI_ButtonUnderlined : MonoBehaviour
     {
         this.transform.DOScale(1.2f, 0.5f);
         // sound
+        AkSoundEngine.PostEvent("Play_Main_Menu_Text_Hover", gameObject);
+
     }
     private void UnPop()
     {
         this.transform.DOScale(1.0f, 0.5f);
         // sound
+        
 
     }
 }

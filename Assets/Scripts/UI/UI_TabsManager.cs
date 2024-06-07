@@ -27,6 +27,7 @@ public class UI_TabsManager : MonoBehaviour
             int oldPanel = selectedPanel;
             selectedPanel = _panel;
             UpdatePanels(oldPanel, _panel);
+            AkSoundEngine.PostEvent("Play_Menu_Settings_onSubMenuClick", gameObject);
         }  
     }
 

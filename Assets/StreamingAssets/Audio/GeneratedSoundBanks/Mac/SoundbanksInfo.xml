@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{57C58992-7C5C-02E6-B065-791A0997E798}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{47CF0A3E-0F8C-D5F3-B4E1-0B16C3CB0A53}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -54,6 +54,7 @@
 				<GameParameter Id="1561184313" Name="RTPC_SENSITIVITY_FILTER"/>
 				<GameParameter Id="1951144523" Name="Collision_Velocity"/>
 				<GameParameter Id="3067876527" Name="RTPC_SFX_BUS"/>
+				<GameParameter Id="3182657878" Name="RTPC_DIALOGUE_BUS"/>
 				<GameParameter Id="3432596327" Name="RTPC_MUSIC_BUS"/>
 				<GameParameter Id="3583098985" Name="Reverb_Distance"/>
 			</GameParameters>
@@ -68,7 +69,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{B5B451A5-CF42-0B06-C9B5-C3961031D618}">
+		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{177EFED7-CA21-6DF5-C465-B745E6A3B86A}">
 			<ShortName>HM_Global_SB</ShortName>
 			<Path>HM_Global_SB.bnk</Path>
 			<Media>
@@ -500,6 +501,10 @@
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_high_velocity 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_high_velocity 2_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="430785787" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mechanical, Click, Miniature Button, Multiple Pushes SND6560 1.wav</ShortName>
+					<CachePath>SFX/Mechanical, Click, Miniature Button, Multiple Pushes SND6560 1_706C986C.wem</CachePath>
+				</File>
 				<File Id="433390949" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Musical, Percussion, Drum Beat Endings, Kick, Cymbal, Crash 03 SND62701 1.wav</ShortName>
 					<CachePath>SFX/Musical, Percussion, Drum Beat Endings, Kick, Cymbal, Crash 03 SND62701 1_9861D2F7.wem</CachePath>
@@ -620,6 +625,10 @@
 					<ShortName>HM_SFX_RC_UI_items off tab hover 1.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_items off tab hover 1_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="565920909" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mechanical, Click, Miniature Button, Multiple Pushes SND6560 1.wav</ShortName>
+					<CachePath>SFX/Mechanical, Click, Miniature Button, Multiple Pushes SND6560 1_DA582D88.wem</CachePath>
+				</File>
 				<File Id="565962083" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Community Manager Agacé-001.wav</ShortName>
 					<CachePath>SFX/Community Manager Agacé-001_FD4DF9DE.wem</CachePath>
@@ -651,10 +660,6 @@
 				<File Id="591683449" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_high_velocity.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_high_velocity_FD4DF9DE.wem</CachePath>
-				</File>
-				<File Id="595160945" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>HM_SFX_RC_UI_main menu play hover 2.wav</ShortName>
-					<CachePath>SFX/HM_SFX_RC_UI_main menu play hover 2_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="600098633" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_concrete block remove 3.wav</ShortName>
@@ -796,6 +801,10 @@
 					<ShortName>HM_SFX_SC_Build_concrete block remove.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_concrete block remove_A782ED48.wem</CachePath>
 				</File>
+				<File Id="740826150" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mechanical, Click, Miniature Button, Multiple Pushes SND6560 1.wav</ShortName>
+					<CachePath>SFX/Mechanical, Click, Miniature Button, Multiple Pushes SND6560 1_101C1B73.wem</CachePath>
+				</File>
 				<File Id="741019026" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_onSettingTabClick 1.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_onSettingTabClick 1_FD4DF9DE.wem</CachePath>
@@ -848,6 +857,10 @@
 					<ShortName>bureau du boss dialogue intro.wav</ShortName>
 					<CachePath>SFX/bureau du boss dialogue intro_69AC08A7.wem</CachePath>
 				</File>
+				<File Id="775253970" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_main menu play hover 3-glued.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_main menu play hover 3-glued_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="776349846" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_Menu_unpaused.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_Menu_unpaused_FD4DF9DE.wem</CachePath>
@@ -859,10 +872,6 @@
 				<File Id="780594721" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cafeteria dialogue intro.wav</ShortName>
 					<CachePath>SFX/cafeteria dialogue intro_AA51507E.wem</CachePath>
-				</File>
-				<File Id="782602914" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>HM_SFX_RC_UI_main menu play hover 1.wav</ShortName>
-					<CachePath>SFX/HM_SFX_RC_UI_main menu play hover 1_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="783616519" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity 10.wav</ShortName>
@@ -935,10 +944,6 @@
 				<File Id="844089229" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_UI_RC_Menu_select 2.wav</ShortName>
 					<CachePath>SFX/HM_UI_RC_Menu_select 2_FD4DF9DE.wem</CachePath>
-				</File>
-				<File Id="853175668" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>HM_SFX_RC_UI_main menu play hover 3.wav</ShortName>
-					<CachePath>SFX/HM_SFX_RC_UI_main menu play hover 3_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="853273625" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_items off tab hover 4.wav</ShortName>
@@ -1016,6 +1021,10 @@
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 11.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 11_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="902224108" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_main menu play hover 2-glued.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_main menu play hover 2-glued_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="902669382" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 12.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 12_FD4DF9DE.wem</CachePath>
@@ -1035,6 +1044,10 @@
 				<File Id="911224313" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 5.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 5_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="916271838" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mechanical, Click, Miniature Button, Multiple Pushes SND6560 1.wav</ShortName>
+					<CachePath>SFX/Mechanical, Click, Miniature Button, Multiple Pushes SND6560 1_E570BB78.wem</CachePath>
 				</File>
 				<File Id="920013695" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Comptable Suspicieuse-001.wav</ShortName>
@@ -1079,6 +1092,10 @@
 				<File Id="959465428" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Community Manager Agacé-002.wav</ShortName>
 					<CachePath>SFX/Community Manager Agacé-002_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="961604570" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HM_SFX_RC_UI_main menu play hover 2-glued-01.wav</ShortName>
+					<CachePath>SFX/HM_SFX_RC_UI_main menu play hover 2-glued-01_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="962271348" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Objects, Furniture, Moving Furniture, Table, Bottles Rattle SND1763 3.wav</ShortName>
@@ -1929,9 +1946,9 @@
 				</Event>
 				<Event Id="344286550" Name="Play_Main_Menu_Text_Hover" DurationType="OneShot" DurationMin="1.1009375" DurationMax="1.2182292">
 					<MediaRefs>
-						<MediaRef Id="595160945"/>
-						<MediaRef Id="782602914"/>
-						<MediaRef Id="853175668"/>
+						<MediaRef Id="775253970"/>
+						<MediaRef Id="902224108"/>
+						<MediaRef Id="961604570"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2010853862" Name="Play_Menu_game_startup" DurationType="OneShot" DurationMin="10.026013" DurationMax="10.026013">
@@ -2008,10 +2025,32 @@
 						<MediaRef Id="50950265"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip" DurationType="OneShot" DurationMin="1.190042" DurationMax="1.4791374">
+				<Event Id="3879871422" Name="Play_Menu_SliderDialogues" DurationType="OneShot" DurationMin="2.3104374" DurationMax="4.4115">
 					<MediaRefs>
-						<MediaRef Id="601859891"/>
-						<MediaRef Id="751520739"/>
+						<MediaRef Id="57191958"/>
+						<MediaRef Id="138705726"/>
+						<MediaRef Id="171144445"/>
+						<MediaRef Id="633122800"/>
+						<MediaRef Id="707156560"/>
+						<MediaRef Id="707441225"/>
+						<MediaRef Id="787703407"/>
+						<MediaRef Id="891704891"/>
+						<MediaRef Id="896411199"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="301191870" Name="Play_Menu_SliderSFX" DurationType="OneShot" DurationMin="0.1186371" DurationMax="0.16407259">
+					<MediaRefs>
+						<MediaRef Id="430785787"/>
+						<MediaRef Id="565920909"/>
+						<MediaRef Id="740826150"/>
+						<MediaRef Id="916271838"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip" DurationType="OneShot" DurationMin="1.0095642" DurationMax="1.3284883">
+					<MediaRefs>
+						<MediaRef Id="775253970"/>
+						<MediaRef Id="902224108"/>
+						<MediaRef Id="961604570"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2362180565" Name="Play_Menu_unpaused" DurationType="OneShot" DurationMin="1.2093393" DurationMax="1.5004023">
@@ -2284,11 +2323,15 @@
 						<MediaRef Id="971963527"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3886903300" Name="SetRTPC_SENSITITITY_FILTER_0" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3886903301" Name="SetRTPC_SENSITITITY_FILTER_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1375364434" Name="Stop_Amb_global" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="177767409" Name="Stop_Music_global" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="1951144523" Name="Collision_Velocity"/>
+				<GameParameter Id="3067876527" Name="RTPC_SFX_BUS"/>
+				<GameParameter Id="3182657878" Name="RTPC_DIALOGUE_BUS"/>
 			</GameParameters>
 			<SwitchGroups>
 				<SwitchGroup Id="2410351013" Name="MUSIC_GLOBAL_STATE_SWITCH">
@@ -2302,5 +2345,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{DE6E0F9F-E8DE-3CA5-67B8-63A78C95F26A}</FileHash>
+	<FileHash>{E23E3FBD-62C5-E255-29B4-402BDBC24481}</FileHash>
 </SoundBanksInfo>
