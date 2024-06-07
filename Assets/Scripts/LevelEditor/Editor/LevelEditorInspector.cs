@@ -14,12 +14,14 @@ public class LevelEditorCustomEditor : Editor
     {
         //Init LevelEditor
         _levelEditor = (LevelEditor)target;
-        //Clean editor
-        foreach (Transform child in _levelEditor.GetComponentsInChildren<Transform>())
-            if (child != _levelEditor.transform)
-                DestroyImmediate(child.gameObject);
+
+        //Clean leftover
+        int childCount = _levelEditor.transform.childCount;
+        for (uint i = 0; i < childCount; i++)
+            DestroyImmediate(_levelEditor.transform.GetChild(0).gameObject);
+
         //Initialize
-        _levelEditor.Initialize();
+        //_levelEditor.Initialize();
 
         //Create inspector from uxml
         VisualElement inspectorRoot = new();
@@ -179,10 +181,11 @@ public class LevelEditorCustomEditor : Editor
         VisualElement windContainer = levelContainer.Query<VisualElement>("Wind");
         Foldout windFoldout = windContainer.Query<Foldout>("Wind");
         Toggle windToggle = windContainer.Query<Toggle>("Toggle");
-        windToggle.RegisterValueChangedCallback(evt => { 
+        windToggle.RegisterValueChangedCallback(evt =>
+        {
             _levelEditor.Level.IsWindEnabled = evt.newValue;
             windFoldout.value = evt.newValue;
-            windFoldout.SetEnabled(evt.newValue); 
+            windFoldout.SetEnabled(evt.newValue);
         });
         Vector3Field windDirectionField = windFoldout.Query<Vector3Field>();
         FloatField windDirectionX = currentCellContainer.Query<FloatField>("unity-x-input");
@@ -206,6 +209,9 @@ public class LevelEditorCustomEditor : Editor
             if (_levelEditor.Level != null)
                 _levelEditor.Level.WindStrength = evt.newValue;
         });
+
+        windFoldout.value = _levelEditor.IsWindEnabled;
+        windFoldout.SetEnabled(_levelEditor.IsWindEnabled);
 
         // Return the finished Inspector UI.
         return inspectorRoot;

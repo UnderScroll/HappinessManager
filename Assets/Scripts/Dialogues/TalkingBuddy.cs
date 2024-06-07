@@ -171,9 +171,9 @@ public class TalkingBuddy : MonoBehaviour
     }
     private void InitLines(GameManager.Stage _stage)
     {
-        Debug.Log("stage = " + _stage);
+        //Debug.Log("stage = " + _stage);
         Line = GetCharaName() + _stage.ToString();
-        Debug.Log(Line);
+        //Debug.Log(Line);
     }
 
     /// <summary>
@@ -181,10 +181,12 @@ public class TalkingBuddy : MonoBehaviour
     /// </summary>
     private void PlayDialogueSound()
     {
+        /*
         IEnumerable<string> tags = dialogueRunner.GetTagsForNode(dialogueRunner.CurrentNodeName);
 
         AkSoundEngine.PostEvent(tags.First(), gameObject);
         AkSoundEngine.PostEvent("Play_UI_DialogueBubble", gameObject);
+        */
     }
     #endregion
 }

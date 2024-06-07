@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FollowPath : MonoBehaviour
 {
-    public List<Vector3> waypoints;
+    public List<Vector3> Waypoints;
 
     [HideInInspector]
     public uint CurrentWaypointIndex;
@@ -36,14 +36,15 @@ public class FollowPath : MonoBehaviour
 
     void Awake()
     {
-        if (waypoints == null)
+        if (Waypoints == null)
             Debug.LogError("No waypoints in path");
-        if (waypoints.Count < 2)
+        if (Waypoints.Count < 2)
             Debug.LogError("At least two waypoints are needed to follow a path");
         if (!TryGetComponent(out _Rigidbody))
             Debug.LogError("Failed to get RigidBody component in FollowPath script");
 
         IsBroken = false;
+        _IsGoingForward = true;
     }
 
     void FixedUpdate()
@@ -51,13 +52,13 @@ public class FollowPath : MonoBehaviour
         Vector3 position = transform.position;
 
         //Closest point on path
-        Vector3 pathNormal = waypoints[(int)PreviousWaypointIndex] - waypoints[(int)CurrentWaypointIndex];
+        Vector3 pathNormal = Waypoints[(int)PreviousWaypointIndex] - Waypoints[(int)CurrentWaypointIndex];
         pathNormal.Normalize();
-        _ClosestPointOnPath = Vector3.Project(position - waypoints[(int)PreviousWaypointIndex], pathNormal) + waypoints[(int)PreviousWaypointIndex];
+        _ClosestPointOnPath = Vector3.Project(position - Waypoints[(int)PreviousWaypointIndex], pathNormal) + Waypoints[(int)PreviousWaypointIndex];
 
-        _ClosestNextPointOnPath = Vector3.Project(position - pathNormal - waypoints[(int)PreviousWaypointIndex], pathNormal) + waypoints[(int)PreviousWaypointIndex];
+        _ClosestNextPointOnPath = Vector3.Project(position - pathNormal - Waypoints[(int)PreviousWaypointIndex], pathNormal) + Waypoints[(int)PreviousWaypointIndex];
 
-        _FollowDirection = Vector3.Distance(position, waypoints[(int)CurrentWaypointIndex]) < Vector3.Distance(_ClosestNextPointOnPath, waypoints[(int)CurrentWaypointIndex])  ? waypoints[(int)CurrentWaypointIndex] - position : _ClosestNextPointOnPath - position;
+        _FollowDirection = Vector3.Distance(position, Waypoints[(int)CurrentWaypointIndex]) < Vector3.Distance(_ClosestNextPointOnPath, Waypoints[(int)CurrentWaypointIndex])  ? Waypoints[(int)CurrentWaypointIndex] - position : _ClosestNextPointOnPath - position;
 
         //If arrived at waypoint
         if (_FollowDirection.magnitude < Radius)
@@ -88,10 +89,10 @@ public class FollowPath : MonoBehaviour
         switch (FollowMode)
         {
             case Mode.Loop:
-                return (CurrentWaypointIndex + 1) % (uint)waypoints.Count;
+                return (CurrentWaypointIndex + 1) % (uint)Waypoints.Count;
             case Mode.Single:
                 uint nextIndex = CurrentWaypointIndex + 1;
-                if (CurrentWaypointIndex + 1 < (uint)waypoints.Count)
+                if (CurrentWaypointIndex + 1 < (uint)Waypoints.Count)
                 {
                     return nextIndex;
                 }
@@ -101,7 +102,7 @@ public class FollowPath : MonoBehaviour
                     return CurrentWaypointIndex;
                 }
             case Mode.BackAndForth:
-                if (CurrentWaypointIndex == 0 || CurrentWaypointIndex + 1 == waypoints.Count)
+                if (CurrentWaypointIndex == 0 || CurrentWaypointIndex + 1 == Waypoints.Count)
                     _IsGoingForward = !_IsGoingForward;
                 return _IsGoingForward ? CurrentWaypointIndex + 1 : CurrentWaypointIndex - 1;
         }
@@ -112,24 +113,24 @@ public class FollowPath : MonoBehaviour
 
     private float DistanceToNextWaypoint()
     {
-        return Vector3.Distance(waypoints[(int)CurrentWaypointIndex], transform.position);
+        return Vector3.Distance(Waypoints[(int)CurrentWaypointIndex], transform.position);
     }
 
     private float CurrentPathLength()
     {
-        return Vector3.Distance(waypoints[(int)PreviousWaypointIndex], waypoints[(int)CurrentWaypointIndex]);
+        return Vector3.Distance(Waypoints[(int)PreviousWaypointIndex], Waypoints[(int)CurrentWaypointIndex]);
     }
 
 #if UNITY_EDITOR
     private void OnDrawGizmos()
     {
-        if (waypoints == null || waypoints.Count == 0 || IsBroken)
+        if (Waypoints == null || Waypoints.Count == 0 || IsBroken)
             return;
 
         Gizmos.color = Color.yellow;
-        Gizmos.DrawLineStrip(waypoints.ToArray(), FollowMode == Mode.Loop);
+        Gizmos.DrawLineStrip(Waypoints.ToArray(), FollowMode == Mode.Loop);
 
-        for (uint i = 0; i < waypoints.Count; i++)
+        for (uint i = 0; i < Waypoints.Count; i++)
         {
             if (i == CurrentWaypointIndex)
                 Gizmos.color = Color.cyan;
@@ -138,7 +139,7 @@ public class FollowPath : MonoBehaviour
             else
                 Gizmos.color = Color.red;
 
-            Gizmos.DrawSphere(waypoints[(int)i], 0.1f);
+            Gizmos.DrawSphere(Waypoints[(int)i], 0.1f);
         }
 
         if (_FollowDirection != Vector3.zero && _Rigidbody != null)

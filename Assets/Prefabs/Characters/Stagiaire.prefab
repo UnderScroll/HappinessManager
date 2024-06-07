@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 9162049670382813305}
   - component: {fileID: 5810839042048380106}
   - component: {fileID: 1888933251756308799}
-  - component: {fileID: 5206915545465794093}
   m_Layer: 0
   m_Name: 0001.png0001
   m_TagString: Untagged
@@ -107,27 +106,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!65 &5206915545465794093
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5962312481466985110}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9.1, y: 20.48, z: 6.39}
-  m_Center: {x: 0, y: 0.39, z: 0}
 --- !u!1 &8404514242365604220
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,6 +116,8 @@ GameObject:
   m_Component:
   - component: {fileID: 727764307702962975}
   - component: {fileID: 4383583865233315339}
+  - component: {fileID: 5706619324014812594}
+  - component: {fileID: 5261995605009457822}
   m_Layer: 0
   m_Name: Stagiaire
   m_TagString: Untagged
@@ -187,3 +167,38 @@ MonoBehaviour:
   RandomizeTimeBT: 0
   minimalTimeBT: 3
   maximalTimeBT: 7
+--- !u!114 &5706619324014812594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8404514242365604220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ca6dde24f992843848540097fb14bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &5261995605009457822
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8404514242365604220}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}

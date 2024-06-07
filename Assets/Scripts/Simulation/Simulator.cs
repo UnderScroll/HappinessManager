@@ -59,6 +59,25 @@ namespace Simulation
             instance.transform.Translate(new Vector3(cellData.Position.x, cellData.Position.y, cellData.Position.z));
             _instances[cellData.Position.x, cellData.Position.y, cellData.Position.z] = instance;
 
+            if (cellData.Type.IsEmployee)
+            {
+                EmployeeCellData employeeCell = (EmployeeCellData)cellData;
+                ForceStand forceStand = instance.AddComponent<ForceStand>();
+                forceStand.StandForce = employeeCell.Movement.StandForce;
+                if (employeeCell.Movement.HasFollowPath)
+                {
+                    FollowPath followPath = instance.AddComponent<FollowPath>();
+                    followPath.Breakable = employeeCell.Movement.Breakable;
+                    followPath.BreakThreshold = employeeCell.Movement.BreakThreshold;
+                    followPath.Waypoints = employeeCell.Movement.Waypoints;
+                    followPath.FollowForce = employeeCell.Movement.FollowForce;
+                    followPath.FollowMode = employeeCell.Movement.Mode;
+                    followPath.Radius = employeeCell.Movement.Radius;
+                    followPath.maxVelocity = employeeCell.Movement.MaxVelocity;
+                }
+                Debug.Log(employeeCell);
+            }
+
             return instance;
         }
 

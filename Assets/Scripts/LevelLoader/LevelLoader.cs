@@ -100,7 +100,8 @@ namespace LevelLoader
             _gameManager.SoundManager.PlayOnBuilding();
 
             //Load Placeableblocks in HUD
-            UI_HUD.blocks = level.PlaceableCellTypes.Get();
+            if (UI_HUD != null)
+                UI_HUD.blocks = level.PlaceableCellTypes.Get();
         }
 
         public void UnloadCurrentLevel()

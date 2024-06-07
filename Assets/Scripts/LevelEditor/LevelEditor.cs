@@ -281,7 +281,11 @@ public partial class LevelEditor : MonoBehaviour
             return;
         }
 
-        Level.Structure.Cells[position.x, position.y, position.z] = (CellData)cellType;
+        if (cellType.IsEmployee)
+            Level.Structure.Cells[position.x, position.y, position.z] = (EmployeeCellData)cellType;
+        else
+            Level.Structure.Cells[position.x, position.y, position.z] = (CellData)cellType;
+
         Level.Structure.Cells[position.x, position.y, position.z].Position = position;
         UpdateCell(position);
 
