@@ -133,13 +133,6 @@ public class UI_HUD : MonoBehaviour
     }
     #endregion
 
-    #region Notebook
-    private void InitNotebook()
-    {
-
-    }
-    #endregion
-
     #region Fonctionnal functions
 
     // TODO : afficher ou non le budget et le bon!

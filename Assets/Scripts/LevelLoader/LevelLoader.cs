@@ -9,7 +9,7 @@ namespace LevelLoader
         public List<Level> Levels;
 
         private GameManager _gameManager;
-        private uint _CurrentLevelIndex;
+        public uint _CurrentLevelIndex;
 
         [HideInInspector]
         public UI_HUD UI_HUD;

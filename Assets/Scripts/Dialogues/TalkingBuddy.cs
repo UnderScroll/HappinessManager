@@ -167,7 +167,7 @@ public class TalkingBuddy : MonoBehaviour
             case Characters.Stagiaire:
                 return "Stagiaire";
             case Characters.DirCrea:
-                    return "DirCrea";
+                return "DirCrea";
         }
         return "NoCharaFound";
     }
@@ -183,7 +183,7 @@ public class TalkingBuddy : MonoBehaviour
     private void PlayDialogueSound()
     {
         IEnumerable<string> tags = dialogueRunner.GetTagsForNode(dialogueRunner.CurrentNodeName);
-        if (tags.First() != null)
+        if (tags.Any())
         {
             AkSoundEngine.PostEvent(tags.First(), gameObject);
             AkSoundEngine.PostEvent("Play_UI_DialogueBubble", gameObject);
