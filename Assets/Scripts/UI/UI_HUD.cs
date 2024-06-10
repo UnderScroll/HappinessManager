@@ -199,10 +199,10 @@ public class UI_HUD : MonoBehaviour
         CloseEndLevelPanel();
     }
     public void RestartLevel()
-    {
+    {        
+        CloseEndLevelPanel();
         _gameManager.LevelLoader.ReloadLevel();
         _gameManager.SoundManager.PlayOnBuilding();
-        CloseEndLevelPanel();
     }
     #endregion
 
