@@ -62,13 +62,13 @@ public class FollowPath : MonoBehaviour
 
         _ClosestNextPointOnPath = Vector3.Project(position - pathNormal - OffsetWaypoints[(int)PreviousWaypointIndex], pathNormal) + OffsetWaypoints[(int)PreviousWaypointIndex];
 
-        float distToNextWaypoint = Vector3.Distance(position, OffsetWaypoints[(int)CurrentWaypointIndex]);
-        float distToNextPathpoint = Vector3.Distance(position, _ClosestNextPointOnPath);
-        float nextPathpointTargetDirectionAngle = Vector2.Angle(OffsetWaypoints[(int)CurrentWaypointIndex] - position, OffsetWaypoints[(int)CurrentWaypointIndex] - OffsetWaypoints[(int)PreviousWaypointIndex]);
-        if (distToNextWaypoint < distToNextPathpoint || nextPathpointTargetDirectionAngle > 90)
-            _FollowDirection = OffsetWaypoints[(int)CurrentWaypointIndex] - position;
-        else
-            _FollowDirection = _ClosestNextPointOnPath - position;
+        float distBetweenWaypoints = Vector3.Distance(OffsetWaypoints[(int)CurrentWaypointIndex], OffsetWaypoints[(int)PreviousWaypointIndex]);
+        float distToTargetFromPreviousWaypoint = Vector3.Distance(_ClosestNextPointOnPath, OffsetWaypoints[(int)PreviousWaypointIndex]);
+
+        if (distBetweenWaypoints < distToTargetFromPreviousWaypoint)
+            _ClosestNextPointOnPath = OffsetWaypoints[(int)CurrentWaypointIndex];
+
+        _FollowDirection = _ClosestNextPointOnPath - position;
 
         //If arrived at waypoint
         if (_FollowDirection.magnitude < Radius)
