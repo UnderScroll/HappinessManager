@@ -15,6 +15,9 @@ namespace AK
     {
         static const AkUniqueID PLAY_AMB_BOSS = 4182646214U;
         static const AkUniqueID PLAY_AMB_CAFETERIA = 2051152657U;
+        static const AkUniqueID PLAY_AMB_COWORKING = 3156354880U;
+        static const AkUniqueID PLAY_AMB_INTERN = 1279019685U;
+        static const AkUniqueID PLAY_AMB_TEAMBUILDING = 2904484746U;
         static const AkUniqueID PLAY_ASSETTEST = 1191715222U;
         static const AkUniqueID PLAY_BARK_BOSS_1 = 762871940U;
         static const AkUniqueID PLAY_BARK_BOSS_2 = 762871943U;
@@ -107,10 +110,13 @@ namespace AK
         static const AkUniqueID PLAY_MENU_UNPAUSED = 2362180565U;
         static const AkUniqueID PLAY_MUSIC_BOSS = 2155613437U;
         static const AkUniqueID PLAY_MUSIC_CAFETERIA = 4148122764U;
+        static const AkUniqueID PLAY_MUSIC_COWORKING = 2084975041U;
+        static const AkUniqueID PLAY_MUSIC_INTERN = 205626626U;
         static const AkUniqueID PLAY_MUSIC_SETSWITCH_BUILD = 777761339U;
         static const AkUniqueID PLAY_MUSIC_SETSWITCH_DEFEAT = 2966994080U;
         static const AkUniqueID PLAY_MUSIC_SETSWITCH_VALIDATING = 2139315658U;
         static const AkUniqueID PLAY_MUSIC_SETSWITCH_VICTORY = 3857913285U;
+        static const AkUniqueID PLAY_MUSIC_TEAMBUILDING = 3811133865U;
         static const AkUniqueID PLAY_MUSIC_TITLE = 1121121824U;
         static const AkUniqueID PLAY_PHYSICS_BASICTOBLOCK = 1975827420U;
         static const AkUniqueID PLAY_PHYSICS_BASICTOFLOOR = 325789949U;
@@ -118,17 +124,37 @@ namespace AK
         static const AkUniqueID PLAY_PHYSICS_CONCRETETOFLOOR = 52822808U;
         static const AkUniqueID PLAY_PHYSICS_DECOTOFLOOR = 1746020630U;
         static const AkUniqueID PLAY_PHYSICS_EMPLOYEECOLLISION = 683962872U;
+        static const AkUniqueID PLAY_PHYSICS_SOAPTOBLOCK = 616212401U;
+        static const AkUniqueID PLAY_PHYSICS_SOAPTOFLOOR = 3670736968U;
         static const AkUniqueID PLAY_UI_DIALOGUEBUBBLE = 1018177731U;
         static const AkUniqueID PLAY_UI_ITEM_OFFTABHOVER = 604053813U;
-        static const AkUniqueID PLAY_UI_ITEM_ONTABHOVER_BASIC = 3464099540U;
-        static const AkUniqueID PLAY_UI_ITEM_ONTABHOVER_HEAVY = 987150631U;
-        static const AkUniqueID PLAY_UI_ITEM_ONTABHOVER_SOAP = 3866376427U;
+        static const AkUniqueID PLAY_UI_ITEM_ONTABHOVER_BASICBLOCK = 2849301463U;
+        static const AkUniqueID PLAY_UI_ITEM_ONTABHOVER_CONCRETEBLOCK = 3976616902U;
+        static const AkUniqueID PLAY_UI_ITEM_ONTABHOVER_SOAPBLOCK = 2412542306U;
         static const AkUniqueID PLAY_UI_MONEY_SPENT = 681896400U;
+        static const AkUniqueID PLAY_WIND_GUST = 563870990U;
         static const AkUniqueID SETRTPC_SENSITITITY_FILTER_0 = 3886903300U;
         static const AkUniqueID SETRTPC_SENSITITITY_FILTER_1 = 3886903301U;
         static const AkUniqueID STOP_AMB_GLOBAL = 1375364434U;
         static const AkUniqueID STOP_MUSIC_GLOBAL = 177767409U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace AMBONVALIDATE
+        {
+            static const AkUniqueID GROUP = 3266490866U;
+
+            namespace STATE
+            {
+                static const AkUniqueID BUILD = 3284755031U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID RESULT = 936499202U;
+                static const AkUniqueID VALIDATING = 1735831046U;
+            } // namespace STATE
+        } // namespace AMBONVALIDATE
+
+    } // namespace STATES
 
     namespace SWITCHES
     {
@@ -155,6 +181,7 @@ namespace AK
         static const AkUniqueID RTPC_MUSIC_BUS = 3432596327U;
         static const AkUniqueID RTPC_SENSITIVITY_FILTER = 1561184313U;
         static const AkUniqueID RTPC_SFX_BUS = 3067876527U;
+        static const AkUniqueID WIND_STRENGTH = 1830592977U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

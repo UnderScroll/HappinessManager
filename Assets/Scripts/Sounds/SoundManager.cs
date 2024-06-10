@@ -22,7 +22,13 @@ public class SoundManager : MonoBehaviour
                 _floorWwiseName = "cafeteria";
                 break;
             case "Floor_3": //GameManager Floor Name
-                _floorWwiseName = "cafeteria";
+                _floorWwiseName = "coworking";
+                break;
+            case "Floor_4": //GameManager Floor Name
+                _floorWwiseName = "teambuilding";
+                break;
+            case "Floor_5": //GameManager Floor Name
+                _floorWwiseName = "intern";
                 break;
             default:
                 Debug.LogError($"No sound for floor {_gameManager.FloorName}");
@@ -47,6 +53,7 @@ public class SoundManager : MonoBehaviour
     public void PlayOnBuilding()
     {
         AkSoundEngine.PostEvent($"Play_Music_SetSwitch_build", gameObject);
+        AkSoundEngine.PostEvent("Play_Menu_unpaused", gameObject);
     }
 
     public void PlayOnLevelFailed()

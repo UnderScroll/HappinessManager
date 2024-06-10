@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: c2d0754eea2b554ead038a4e85dfb0da
     GuidInternal: 
-    m_lastTime: -8584839070154339470
+    m_lastTime: -8584835713996380120
     List:
     - name: AMBIANCE
       guid: 7e303c6a36077045a549d2b2c039cff3
@@ -190,7 +190,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\WU_HM_SoundBanks
     guid: d527a65720db2546b7a23303c255c21b
     GuidInternal: 
-    m_lastTime: -8584840020298762671
+    m_lastTime: -8584835719867001427
     List:
     - name: HM_Global_SB
       guid: e1c12577d86f0c41a82a7bdcdb4ef626
@@ -218,7 +218,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a2847257a7000f4e81d18dd3626acf80
     GuidInternal: 
-    m_lastTime: -8584839196373791499
+    m_lastTime: -8584835889285001096
     List: []
   - PhysicalPath: Events\WU_HM_Events.wwu
     PathAndIcons:
@@ -231,7 +231,7 @@ MonoBehaviour:
     ParentPath: Events\WU_HM_Events
     guid: a44afb18422e3e4bbc589ac1581aef04
     GuidInternal: 
-    m_lastTime: -8584839091396695936
+    m_lastTime: -8584835720111720865
     List:
     - name: Amb
       guid: 45ce627f733a4f4d90717e8757beb9ba
@@ -528,6 +528,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: etage
+      guid: 8452581f2145cf48b35b9d59f5a03f20
+      id: 2668588619
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Music
+        ObjectType: 4
+        guid: a7a8dd314392934f8cb4f0898119fc83
+      - ElementName: etage
+        ObjectType: 4
+        guid: 8452581f2145cf48b35b9d59f5a03f20
+      Path: Events\WU_HM_Events\Music\etage
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Gameplay
       guid: 5d684b32f347714587e90834af14b993
       id: 89505537
@@ -617,7 +637,7 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: Play_Amb_boss
-      guid: bd9062d6ab976e43a559dd9a42f24545
+      guid: 9ffca4aaf6d1314390ff618f50f0980c
       id: 4182646214
       PathAndIcons:
       - ElementName: Events
@@ -631,13 +651,13 @@ MonoBehaviour:
         guid: 45ce627f733a4f4d90717e8757beb9ba
       - ElementName: Play_Amb_boss
         ObjectType: 3
-        guid: bd9062d6ab976e43a559dd9a42f24545
+        guid: 9ffca4aaf6d1314390ff618f50f0980c
       Path: Events\WU_HM_Events\Amb\Play_Amb_boss
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
     - name: Play_Amb_cafeteria
-      guid: 6fbad5d603498442a5de2e92686e01de
+      guid: 48e621d8e2170c428f998eccbdf87bb8
       id: 2051152657
       PathAndIcons:
       - ElementName: Events
@@ -651,11 +671,71 @@ MonoBehaviour:
         guid: 45ce627f733a4f4d90717e8757beb9ba
       - ElementName: Play_Amb_cafeteria
         ObjectType: 3
-        guid: 6fbad5d603498442a5de2e92686e01de
+        guid: 48e621d8e2170c428f998eccbdf87bb8
       Path: Events\WU_HM_Events\Amb\Play_Amb_cafeteria
       maxAttenuation: 0
-      maxDuration: 48.037617
-      minDuration: 48.037617
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Amb_coworking
+      guid: f2ab38e950fb2942b2e827664f23893c
+      id: 3156354880
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Amb
+        ObjectType: 4
+        guid: 45ce627f733a4f4d90717e8757beb9ba
+      - ElementName: Play_Amb_coworking
+        ObjectType: 3
+        guid: f2ab38e950fb2942b2e827664f23893c
+      Path: Events\WU_HM_Events\Amb\Play_Amb_coworking
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Amb_intern
+      guid: 5bb137af8395c243850916df3271e7f4
+      id: 1279019685
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Amb
+        ObjectType: 4
+        guid: 45ce627f733a4f4d90717e8757beb9ba
+      - ElementName: Play_Amb_intern
+        ObjectType: 3
+        guid: 5bb137af8395c243850916df3271e7f4
+      Path: Events\WU_HM_Events\Amb\Play_Amb_intern
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Amb_teambuilding
+      guid: 7446e910ba27ef4ab42f78eb7e63f396
+      id: 2904484746
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Amb
+        ObjectType: 4
+        guid: 45ce627f733a4f4d90717e8757beb9ba
+      - ElementName: Play_Amb_teambuilding
+        ObjectType: 3
+        guid: 7446e910ba27ef4ab42f78eb7e63f396
+      Path: Events\WU_HM_Events\Amb\Play_Amb_teambuilding
+      maxAttenuation: 0
+      maxDuration: 126.05966
+      minDuration: 126.05966
     - name: Play_AssetTest
       guid: 49c27aa70799fe4dad38e84168d51b5e
       id: 1191715222
@@ -2225,8 +2305,8 @@ MonoBehaviour:
         guid: 134e898f2c5a7b4699aa7159b2a40e44
       Path: Events\WU_HM_Events\Gameplay\Build\Play_Build_basic_block_place
       maxAttenuation: 100
-      maxDuration: 1.0579422
-      minDuration: 0.49178016
+      maxDuration: 0.97861785
+      minDuration: 0.8653386
     - name: Play_Build_basic_block_remove
       guid: 3fde874d3fb1654bbb41b6bb0f6e7741
       id: 1294229974
@@ -2248,8 +2328,8 @@ MonoBehaviour:
         guid: 3fde874d3fb1654bbb41b6bb0f6e7741
       Path: Events\WU_HM_Events\Gameplay\Build\Play_Build_basic_block_remove
       maxAttenuation: 100
-      maxDuration: 1.3069167
-      minDuration: 0.8098084
+      maxDuration: 1.3352127
+      minDuration: 0.8555668
     - name: Play_Build_concrete_block_place
       guid: 9f6f9a68b4ffdc4f9faf921001c28059
       id: 684309162
@@ -2844,10 +2924,13 @@ MonoBehaviour:
       - ElementName: Music
         ObjectType: 4
         guid: a7a8dd314392934f8cb4f0898119fc83
+      - ElementName: etage
+        ObjectType: 4
+        guid: 8452581f2145cf48b35b9d59f5a03f20
       - ElementName: Play_Music_boss
         ObjectType: 3
         guid: ea2c8565d95a7041ab87ff638526b6a0
-      Path: Events\WU_HM_Events\Music\Play_Music_boss
+      Path: Events\WU_HM_Events\Music\etage\Play_Music_boss
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2864,10 +2947,59 @@ MonoBehaviour:
       - ElementName: Music
         ObjectType: 4
         guid: a7a8dd314392934f8cb4f0898119fc83
+      - ElementName: etage
+        ObjectType: 4
+        guid: 8452581f2145cf48b35b9d59f5a03f20
       - ElementName: Play_Music_cafeteria
         ObjectType: 3
         guid: 4e8fa2298278394ca5bc0a884d02af32
-      Path: Events\WU_HM_Events\Music\Play_Music_cafeteria
+      Path: Events\WU_HM_Events\Music\etage\Play_Music_cafeteria
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Music_coworking
+      guid: 5b7a351a76a8b14c914ac0da978b43ab
+      id: 2084975041
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Music
+        ObjectType: 4
+        guid: a7a8dd314392934f8cb4f0898119fc83
+      - ElementName: etage
+        ObjectType: 4
+        guid: 8452581f2145cf48b35b9d59f5a03f20
+      - ElementName: Play_Music_coworking
+        ObjectType: 3
+        guid: 5b7a351a76a8b14c914ac0da978b43ab
+      Path: Events\WU_HM_Events\Music\etage\Play_Music_coworking
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Music_intern
+      guid: 74b212d356b49c45af1e69e9f7dd91ce
+      id: 205626626
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Music
+        ObjectType: 4
+        guid: a7a8dd314392934f8cb4f0898119fc83
+      - ElementName: etage
+        ObjectType: 4
+        guid: 8452581f2145cf48b35b9d59f5a03f20
+      - ElementName: Play_Music_intern
+        ObjectType: 3
+        guid: 74b212d356b49c45af1e69e9f7dd91ce
+      Path: Events\WU_HM_Events\Music\etage\Play_Music_intern
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2951,6 +3083,29 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_Music_teambuilding
+      guid: 043f61038d3ce94e8630c386620d6414
+      id: 3811133865
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Music
+        ObjectType: 4
+        guid: a7a8dd314392934f8cb4f0898119fc83
+      - ElementName: etage
+        ObjectType: 4
+        guid: 8452581f2145cf48b35b9d59f5a03f20
+      - ElementName: Play_Music_teambuilding
+        ObjectType: 3
+        guid: 043f61038d3ce94e8630c386620d6414
+      Path: Events\WU_HM_Events\Music\etage\Play_Music_teambuilding
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Music_title
       guid: d50e990127e5dc4aa35fd31234abb0c0
       id: 1121121824
@@ -2992,8 +3147,8 @@ MonoBehaviour:
         guid: 8778dada96d0d844973664409ee40ed9
       Path: Events\WU_HM_Events\Gameplay\Physics\Play_Physics_basicToBlock
       maxAttenuation: 100
-      maxDuration: 0.31081998
-      minDuration: 0.13328291
+      maxDuration: 0.5737184
+      minDuration: 0.23484461
     - name: Play_Physics_basicToFloor
       guid: 03d48efa7403c14596c32c2cf63922df
       id: 325789949
@@ -3015,8 +3170,8 @@ MonoBehaviour:
         guid: 03d48efa7403c14596c32c2cf63922df
       Path: Events\WU_HM_Events\Gameplay\Physics\Play_Physics_basicToFloor
       maxAttenuation: 100
-      maxDuration: 0.60125
-      minDuration: 0.42316666
+      maxDuration: 0.6405779
+      minDuration: 0.43473274
     - name: Play_Physics_concreteToBlock
       guid: b42931c4206259468d83d5c13699764c
       id: 1334739297
@@ -3038,8 +3193,8 @@ MonoBehaviour:
         guid: b42931c4206259468d83d5c13699764c
       Path: Events\WU_HM_Events\Gameplay\Physics\Play_Physics_concreteToBlock
       maxAttenuation: 100
-      maxDuration: 0.8985208
-      minDuration: 0.27020833
+      maxDuration: 0.9519497
+      minDuration: 0.25504267
     - name: Play_Physics_concreteToFloor
       guid: a56bece9861c4e48a254290a0f6e14e2
       id: 52822808
@@ -3061,8 +3216,8 @@ MonoBehaviour:
         guid: a56bece9861c4e48a254290a0f6e14e2
       Path: Events\WU_HM_Events\Gameplay\Physics\Play_Physics_concreteToFloor
       maxAttenuation: 100
-      maxDuration: 0.89641666
-      minDuration: 0.49516666
+      maxDuration: 0.94972044
+      minDuration: 0.46737504
     - name: Play_Physics_decoToFloor
       guid: 83061cef43c1cd4ea57733441446ebeb
       id: 1746020630
@@ -3109,6 +3264,52 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.3495514
       minDuration: 1.0677407
+    - name: Play_Physics_soapToBlock
+      guid: 9ceccad9d6c67c4fae61addc6ec40c7b
+      id: 616212401
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Gameplay
+        ObjectType: 4
+        guid: 5d684b32f347714587e90834af14b993
+      - ElementName: Physics
+        ObjectType: 4
+        guid: f07336f7986eb04b9480f9a137b2e66a
+      - ElementName: Play_Physics_soapToBlock
+        ObjectType: 3
+        guid: 9ceccad9d6c67c4fae61addc6ec40c7b
+      Path: Events\WU_HM_Events\Gameplay\Physics\Play_Physics_soapToBlock
+      maxAttenuation: 100
+      maxDuration: 0.76414585
+      minDuration: 0.2275
+    - name: Play_Physics_soapToFloor
+      guid: 1df833dbf5d183469c0c37dcff379cfe
+      id: 3670736968
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Gameplay
+        ObjectType: 4
+        guid: 5d684b32f347714587e90834af14b993
+      - ElementName: Physics
+        ObjectType: 4
+        guid: f07336f7986eb04b9480f9a137b2e66a
+      - ElementName: Play_Physics_soapToFloor
+        ObjectType: 3
+        guid: 1df833dbf5d183469c0c37dcff379cfe
+      Path: Events\WU_HM_Events\Gameplay\Physics\Play_Physics_soapToFloor
+      maxAttenuation: 100
+      maxDuration: 0.8032708
+      minDuration: 0.36839584
     - name: Play_UI_DialogueBubble
       guid: 038419f5c247cd4caba6156f3306a1e1
       id: 1018177731
@@ -3155,9 +3356,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.1651459
       minDuration: 1.0994583
-    - name: Play_UI_item_onTabHover_basic
+    - name: Play_UI_item_onTabHover_BasicBlock
       guid: 876db68237c46141be26f0b2c1c2aef2
-      id: 3464099540
+      id: 2849301463
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -3171,16 +3372,16 @@ MonoBehaviour:
       - ElementName: UI
         ObjectType: 4
         guid: 60e0becdee524d4e85b76661bd57fe6a
-      - ElementName: Play_UI_item_onTabHover_basic
+      - ElementName: Play_UI_item_onTabHover_BasicBlock
         ObjectType: 3
         guid: 876db68237c46141be26f0b2c1c2aef2
-      Path: Events\WU_HM_Events\Menu\UI\Play_UI_item_onTabHover_basic
+      Path: Events\WU_HM_Events\Menu\UI\Play_UI_item_onTabHover_BasicBlock
       maxAttenuation: 0
       maxDuration: 1.6677917
       minDuration: 1.6677917
-    - name: Play_UI_item_onTabHover_heavy
+    - name: Play_UI_item_onTabHover_ConcreteBlock
       guid: 4ad34c7d75d6174e89e3184d16beb0c2
-      id: 987150631
+      id: 3976616902
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -3194,16 +3395,16 @@ MonoBehaviour:
       - ElementName: UI
         ObjectType: 4
         guid: 60e0becdee524d4e85b76661bd57fe6a
-      - ElementName: Play_UI_item_onTabHover_heavy
+      - ElementName: Play_UI_item_onTabHover_ConcreteBlock
         ObjectType: 3
         guid: 4ad34c7d75d6174e89e3184d16beb0c2
-      Path: Events\WU_HM_Events\Menu\UI\Play_UI_item_onTabHover_heavy
+      Path: Events\WU_HM_Events\Menu\UI\Play_UI_item_onTabHover_ConcreteBlock
       maxAttenuation: 0
       maxDuration: 1.5971875
       minDuration: 1.5971875
-    - name: Play_UI_item_onTabHover_soap
+    - name: Play_UI_item_onTabHover_SoapBlock
       guid: ed92a9a934889b429883a6e4ced2c680
-      id: 3866376427
+      id: 2412542306
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -3217,10 +3418,10 @@ MonoBehaviour:
       - ElementName: UI
         ObjectType: 4
         guid: 60e0becdee524d4e85b76661bd57fe6a
-      - ElementName: Play_UI_item_onTabHover_soap
+      - ElementName: Play_UI_item_onTabHover_SoapBlock
         ObjectType: 3
         guid: ed92a9a934889b429883a6e4ced2c680
-      Path: Events\WU_HM_Events\Menu\UI\Play_UI_item_onTabHover_soap
+      Path: Events\WU_HM_Events\Menu\UI\Play_UI_item_onTabHover_SoapBlock
       maxAttenuation: 0
       maxDuration: 1.5103542
       minDuration: 1.5103542
@@ -3247,6 +3448,29 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.4123439
       minDuration: 1.0178332
+    - name: Play_Wind_Gust
+      guid: fcc12d64b2b4f049954ae1c61e2f66f1
+      id: 563870990
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Gameplay
+        ObjectType: 4
+        guid: 5d684b32f347714587e90834af14b993
+      - ElementName: Wind
+        ObjectType: 4
+        guid: adccc03087f61440808f10580bbdaa99
+      - ElementName: Play_Wind_Gust
+        ObjectType: 3
+        guid: fcc12d64b2b4f049954ae1c61e2f66f1
+      Path: Events\WU_HM_Events\Gameplay\Wind\Play_Wind_Gust
+      maxAttenuation: 0
+      maxDuration: 13.389334
+      minDuration: 12.14852
     - name: SetRTPC_SENSITITITY_FILTER_0
       guid: 721a49f24a4b36428265aee2fa622d62
       id: 3886903300
@@ -3347,6 +3571,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Wind
+      guid: adccc03087f61440808f10580bbdaa99
+      id: 1537061107
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Gameplay
+        ObjectType: 4
+        guid: 5d684b32f347714587e90834af14b993
+      - ElementName: Wind
+        ObjectType: 4
+        guid: adccc03087f61440808f10580bbdaa99
+      Path: Events\WU_HM_Events\Gameplay\Wind
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\BUS_RTPC.wwu
     PathAndIcons:
@@ -3428,7 +3672,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 86baa2f915be7d43a5fdec6e8dad3d53
     GuidInternal: 
-    m_lastTime: -8584871366686261546
+    m_lastTime: -8584835776199055297
     List: []
   - PhysicalPath: Game Parameters\WU_HM_RTPC.wwu
     PathAndIcons:
@@ -3441,7 +3685,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\WU_HM_RTPC
     guid: f67b7fb3fbb3ce4e8b51a58d9ad6f242
     GuidInternal: 
-    m_lastTime: -8584844390252516973
+    m_lastTime: -8584835776198954007
     List:
     - name: Collision_Velocity
       guid: 33c42c9a9cc6574d8f5ad1e9e86ce74d
@@ -3471,6 +3715,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: c181a4cd4ad1b54cacbd21b656775e15
       Path: Game Parameters\WU_HM_RTPC\Reverb_Distance
+    - name: Wind_Strength
+      guid: 630f165d23a68f4da3fe29003051406a
+      id: 1830592977
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_RTPC
+        ObjectType: 12
+        guid: f67b7fb3fbb3ce4e8b51a58d9ad6f242
+      - ElementName: Wind_Strength
+        ObjectType: 13
+        guid: 630f165d23a68f4da3fe29003051406a
+      Path: Game Parameters\WU_HM_RTPC\Wind_Strength
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -3496,8 +3754,90 @@ MonoBehaviour:
     ParentPath: States\WU_HM_States
     guid: 52df8ddf05ae374d8f2e7c57a0d71e54
     GuidInternal: 
-    m_lastTime: -8584871362172682930
-    List: []
+    m_lastTime: -8584835754467418939
+    List:
+    - name: AmbOnValidate
+      guid: f667331dde3a6b4bab26f6a835dc5d79
+      id: 3266490866
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_States
+        ObjectType: 12
+        guid: 52df8ddf05ae374d8f2e7c57a0d71e54
+      - ElementName: AmbOnValidate
+        ObjectType: 9
+        guid: f667331dde3a6b4bab26f6a835dc5d79
+      Path: States\WU_HM_States\AmbOnValidate
+      values:
+      - name: Build
+        guid: 85e8ae5fcfcd134a98c276ca792e1ab6
+        id: 3284755031
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: WU_HM_States
+          ObjectType: 12
+          guid: 52df8ddf05ae374d8f2e7c57a0d71e54
+        - ElementName: AmbOnValidate
+          ObjectType: 9
+          guid: f667331dde3a6b4bab26f6a835dc5d79
+        - ElementName: Build
+          ObjectType: 8
+          guid: 85e8ae5fcfcd134a98c276ca792e1ab6
+      - name: None
+        guid: 431a5bc8003cb748ab9a432f9567ac89
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: WU_HM_States
+          ObjectType: 12
+          guid: 52df8ddf05ae374d8f2e7c57a0d71e54
+        - ElementName: AmbOnValidate
+          ObjectType: 9
+          guid: f667331dde3a6b4bab26f6a835dc5d79
+        - ElementName: None
+          ObjectType: 8
+          guid: 431a5bc8003cb748ab9a432f9567ac89
+      - name: Result
+        guid: 5f51d5674249c54387b73f5720e8208c
+        id: 936499202
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: WU_HM_States
+          ObjectType: 12
+          guid: 52df8ddf05ae374d8f2e7c57a0d71e54
+        - ElementName: AmbOnValidate
+          ObjectType: 9
+          guid: f667331dde3a6b4bab26f6a835dc5d79
+        - ElementName: Result
+          ObjectType: 8
+          guid: 5f51d5674249c54387b73f5720e8208c
+      - name: Validating
+        guid: 85c396c3c626d342b32b464ea9d42c82
+        id: 1735831046
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: WU_HM_States
+          ObjectType: 12
+          guid: 52df8ddf05ae374d8f2e7c57a0d71e54
+        - ElementName: AmbOnValidate
+          ObjectType: 9
+          guid: f667331dde3a6b4bab26f6a835dc5d79
+        - ElementName: Validating
+          ObjectType: 8
+          guid: 85c396c3c626d342b32b464ea9d42c82
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -3635,7 +3975,7 @@ MonoBehaviour:
     m_lastTime: -8584901339025742451
     List: []
   ExpandedFileSystemItemIds: a7000000a8000000ae000000
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 020000000400000016000000a7000000a8000000ae000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 1

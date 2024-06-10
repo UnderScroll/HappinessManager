@@ -23,7 +23,7 @@ public class EmployeeCollision : MonoBehaviour
                 AkSoundEngine.SetRTPCValue("Collision_Velocity", collisionForce);
                 IsFirstGroundCollision = false;
             }
-            if (collisionForce > 3)
+            if (collisionForce > 5)
             {
                 
                 AkSoundEngine.PostEvent("Play_Physics_employeeCollision", gameObject);

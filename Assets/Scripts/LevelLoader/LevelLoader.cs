@@ -90,6 +90,10 @@ namespace LevelLoader
                 Physics.gravity = new Vector3(0, -9.81f, 0);
             }
 
+            Debug.Log (level.WindStrength);
+            float ForceVent = level.WindStrength;
+            AkSoundEngine.SetRTPCValue("Wind_Strength",ForceVent,gameObject);
+
             _gameManager.RuleManager.Reset();
             
             _gameManager.RuleManager.Rules = level.Rules;
@@ -101,6 +105,7 @@ namespace LevelLoader
 
             //Load Placeableblocks in HUD
             UI_HUD.blocks = level.PlaceableCellTypes.Get();
+
         }
 
         public void UnloadCurrentLevel()

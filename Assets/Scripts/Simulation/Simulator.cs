@@ -37,6 +37,11 @@ namespace Simulation
 
             EmployeeCollision.collisionEvent.AddListener(OnEmployeeGroundCollision);
 
+            if (_gameManager.Builder.Level.IsWindEnabled)
+            {
+                AkSoundEngine.PostEvent("Play_Wind_Gust", gameObject);
+            }
+
             InstantiateBlocks();
             CreateConnections();
 
@@ -149,7 +154,7 @@ namespace Simulation
         public void Launch()
         {
             _isSimulationRunning = true;
-            AkSoundEngine.PostEvent("Play_Music_SetSwitch_validating", gameObject);
+            
         }
 
         private void Update()
@@ -197,6 +202,7 @@ namespace Simulation
             {
                 _gameManager.SoundManager.PlayOnLevelFailed();
                 _gameManager.UI_HUD.DisplayEndLevelPanel(false);
+                AkSoundEngine.PostEvent("Play_Menu_paused",gameObject);
             }
         }
     }
