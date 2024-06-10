@@ -192,7 +192,7 @@ namespace Simulation
         }
         private void LevelFailed()
         {
-            // Only once
+            // Only once    
             if (!_isSimulationFailed)
             {
                 _gameManager.SoundManager.PlayOnLevelFailed();

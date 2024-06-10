@@ -30,6 +30,8 @@ public class TalkingBuddy : MonoBehaviour
     [SerializeField] int NbLinesStage4;
     [SerializeField] int NbLinesStage5;
 
+    [SerializeField] Color[] charaColors = new Color[6];
+
     [Header("Settings Timer Before Talking")]
     public int TimeBeforeTalking = 5;
 
