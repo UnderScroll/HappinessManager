@@ -159,7 +159,7 @@ namespace Builder
             if (Level.Structure.Cells[positionToPlace.x, positionToPlace.y, positionToPlace.z] != null)
                 return;
 
-            if (!_gameManager.RuleManager.CanPlaceBlock(_selectedBlock.Type.Price))
+            if (!_gameManager.RuleManager.CanPlaceBlock(_selectedBlock.Type))
                 return;
 
             PlaceBlock(_selectedBlock.Clone(), positionToPlace);
