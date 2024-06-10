@@ -68,16 +68,10 @@ namespace LevelLoader
         private void LoadLevel(Level level)
         {
             Debug.Log($"Loading {level.name}");
-            if (_CurrentLevelIndex==0)
-            {
-                AkSoundEngine.PostEvent("Play_Music_cafeteria", gameObject);
-            }
-            else
-            {
-                AkSoundEngine.PostEvent("Play_Music_SetSwitch_build", gameObject);
-            }
+
+            if (_CurrentLevelIndex==0) //If loading the first level of the floor, play music and ambiance
+                _gameManager.SoundManager.PLayOnFirstLevelLoaded();
             
-            AkSoundEngine.PostEvent("Play_Amb_boss", gameObject);
             _gameManager.ResetSimulation();   
             
             UnloadCurrentLevel();
@@ -86,7 +80,7 @@ namespace LevelLoader
 
             _gameManager.Builder.Initialize();
 
-            if (level.WindDirection.magnitude > 0 && level.WindStrength > 0)
+            if (level.IsWindEnabled)
             {
                 level.WindDirection.Normalize();
                 Physics.gravity = new Vector3(0, -9.81f, 0) + level.WindDirection * level.WindStrength;
@@ -96,15 +90,18 @@ namespace LevelLoader
                 Physics.gravity = new Vector3(0, -9.81f, 0);
             }
 
-
             _gameManager.RuleManager.Reset();
             
             _gameManager.RuleManager.Rules = level.Rules;
             _gameManager.RuleManager.Initialize();
 
             _gameManager.RuleManager.Debug_DisplayAllRules();
+
+            _gameManager.SoundManager.PlayOnBuilding();
+
             //Load Placeableblocks in HUD
-            UI_HUD.blocks = level.PlaceableCellTypes.Get();
+            if (UI_HUD != null)
+                UI_HUD.blocks = level.PlaceableCellTypes.Get();
         }
 
         public void UnloadCurrentLevel()

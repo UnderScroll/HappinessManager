@@ -13,6 +13,9 @@ public class UI_HUD : MonoBehaviour
     public int money;
     [SerializeField] TextMeshProUGUI text_money;
 
+    [Header("Temp For PlayTests")]
+    [SerializeField] TextMeshProUGUI levelNameGUI;
+
     [Header("Construct Menu")]
     [SerializeField]
     [HideInInspector]
@@ -49,6 +52,13 @@ public class UI_HUD : MonoBehaviour
         UpdateMoneyText();
         UpdateBlockDescription();
     }
+
+    #region FOR_PLAYTESTS
+    public void UpdateLevelName(string name)
+    {
+        levelNameGUI.text = name.Remove(name.Length - 7) ;
+    }
+    #endregion
 
     #region Money
     private void UpdateMoneyText()
@@ -179,10 +189,17 @@ public class UI_HUD : MonoBehaviour
     public void NextLevel()
     {
         _gameManager.LevelLoader.LoadNextLevel();
+        _gameManager.SoundManager.PlayOnBuilding();
+
+        //TMP FOR PLAYTESTING
+        _gameManager.UI_HUD.UpdateLevelName(_gameManager.Builder.Level.name);
+        CloseEndLevelPanel();
     }
     public void RestartLevel()
     {
         _gameManager.LevelLoader.ReloadLevel();
+        _gameManager.SoundManager.PlayOnBuilding();
+        CloseEndLevelPanel();
     }
     #endregion
 

@@ -1,4 +1,5 @@
 using Builder;
+using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ namespace Simulation
         private Structure _structure;
         private GameObject[,,] _instances;
 
-        //private GameManager _gameManager;
+        private GameManager _gameManager;
         private double timeCounter;
         private bool _isSimulationRunning;
         public double ValidationTime;
@@ -20,10 +21,8 @@ namespace Simulation
 
         private void Start()
         {
-            /*
             if (!TryGetComponent(out _gameManager))
                 Debug.LogError("GameManager wasn't found, this will cause issues");
-            */
         }
 
         public void InitializeSimulation(Structure structure)
@@ -60,6 +59,28 @@ namespace Simulation
 
             instance.transform.Translate(new Vector3(cellData.Position.x, cellData.Position.y, cellData.Position.z));
             _instances[cellData.Position.x, cellData.Position.y, cellData.Position.z] = instance;
+
+            if (cellData.Type.IsEmployee)
+            {
+                EmployeeCellData employeeCell = (EmployeeCellData)cellData;
+                ForceStand forceStand = instance.AddComponent<ForceStand>();
+                forceStand.StandForce = employeeCell.Movement.StandForce;
+                if (employeeCell.Movement.HasFollowPath)
+                {
+                    FollowPath followPath = instance.AddComponent<FollowPath>();
+                    followPath.Breakable = employeeCell.Movement.Breakable;
+                    followPath.BreakThreshold = employeeCell.Movement.BreakThreshold;
+                    followPath.Waypoints = employeeCell.Movement.Waypoints;
+                    followPath.OffsetWaypoints = new List<Vector3>();
+                    foreach (Vector3 waypoint in followPath.Waypoints)
+                        followPath.OffsetWaypoints.Add(waypoint + _structureOrigin.position);
+                    followPath.FollowForce = employeeCell.Movement.FollowForce;
+                    followPath.FollowMode = employeeCell.Movement.Mode;
+                    followPath.Radius = employeeCell.Movement.Radius;
+                    followPath.maxVelocity = employeeCell.Movement.MaxVelocity;
+                }
+                Debug.Log(employeeCell);
+            }
 
             return instance;
         }
@@ -176,15 +197,16 @@ namespace Simulation
         public void OnLevelValidated()
         {
             Debug.Log("LevelValidated");
-            AkSoundEngine.PostEvent("Play_Music_SetSwitch_victory", gameObject);
+            _gameManager.SoundManager.PlayOnLevelValidated();
+
+            _gameManager.UI_HUD.DisplayEndLevelPanel(true);
         }
 
         public void OnEmployeeGroundCollision()
         {
             _isSimulationFailed = true;
             _isSimulationRunning = false;
-            AkSoundEngine.PostEvent("Play_Music_SetSwitch_defeat", gameObject);
-            AkSoundEngine.PostEvent("Stop_Amb_global", gameObject);
+            _gameManager.SoundManager.PlayOnLevelFailed();
         }
     }
 }

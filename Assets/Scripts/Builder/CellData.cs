@@ -11,7 +11,7 @@ namespace Builder
         public CellType Type;
         public int3 Position;
         [SerializeField]
-        private ConnectionType[] _connections = new ConnectionType[6];
+        protected ConnectionType[] _connections = new ConnectionType[6];
 
         public CellData()
         {

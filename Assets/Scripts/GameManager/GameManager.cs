@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Diagnostics.CodeAnalysis;
+using LevelLoader;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,9 +16,17 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public RuleManager RuleManager;
     [HideInInspector]
+    public SoundManager SoundManager;
+    [HideInInspector]
     public UI_HUD UI_HUD;
 
+    public enum Stage { Stage1, Stage2, Stage3, Stage4, Stage5 };
+
+    [SerializeField] public Stage CurrentStage;
+
     private bool _playing = false;
+
+    public string FloorName = "";
 
     private void Awake()
     {
@@ -29,6 +38,8 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Failed to get the LevelLoader Component");
         if (!TryGetComponent(out RuleManager))
             Debug.LogError("Failed to get the RuleManager Component");
+        if (!TryGetComponent(out SoundManager))
+            Debug.LogError("Failed to get the SoundManager Component");
 
         Simulator.StructureOrigin = StructureOrigin;
         Builder.StructureOrigin = StructureOrigin;
@@ -40,31 +51,15 @@ public class GameManager : MonoBehaviour
             LevelLoader.UI_HUD = UI_HUD;
     }
 
-    public void OnPlay(InputValue _)
-    {
-        if (!_playing)
-        {
-            Builder.DeactivatePreview();
-
-            Simulator.InitializeSimulation(Builder.Level.Structure);
-            Simulator.Launch();
-
-            _playing = true;
-        }
-    }
-
-    [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres priv�s non utilis�s", Justification = "OnReset is called by Unity Input System")]
-    void OnReset(InputValue _)
-    {
-        Debug.Log("ResetingLevel");
-        ResetSimulation();
-    }
-
     [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres priv�s non utilis�s", Justification = "OnReloadLevel is called by Unity Input System")]
     void OnReloadLevel(InputValue _)
     {
         Debug.Log("ReloadingLevel");
         LevelLoader.ReloadLevel();
+        SoundManager.PlayOnBuilding();
+
+        //TMP FOR PLAYTESTING
+        UI_HUD.UpdateLevelName(Builder.Level.name);
     }
 
     [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres priv�s non utilis�s", Justification = "OnLoadNextLevel is called by Unity Input System")]
@@ -72,6 +67,10 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("LoadingNextLevel");
         LevelLoader.LoadNextLevel();
+        SoundManager.PlayOnBuilding();
+
+        //TMP FOR PLAYTESTING
+        UI_HUD.UpdateLevelName(Builder.Level.name);
     }
 
     [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres priv�s non utilis�s", Justification = "OnLoadPreviousLevel is called by Unity Input System")]
@@ -79,29 +78,46 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("LoadingPreviousLevel");
         LevelLoader.LoadPreviousLevel();
+        SoundManager.PlayOnBuilding();
+
+        //TMP FOR PLAYTESTING
+        UI_HUD.UpdateLevelName(Builder.Level.name);
     }
 
-    public void PlaySimulation()
+    [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres priv�s non utilis�s", Justification = "OnToggleMode is called by Unity Input System")]
+    void OnToggleMode()
     {
-        if (!_playing)
-        {
-            Builder.DeactivatePreview();
+        if (_playing)
+            ResetSimulation();
+        else
+            PlaySimulation();
+    }
 
-            Simulator.InitializeSimulation(Builder.Level.Structure);
-            Simulator.Launch();
+    private void PlaySimulation()
+    {
+        if (_playing)
+            return;
 
-            _playing = true;
-        }
+        Builder.DeactivatePreview();
+
+        Simulator.InitializeSimulation(Builder.Level.Structure);
+        Simulator.Launch();
+
+        SoundManager.PlayOnLaunchingSimulation();
+
+        _playing = true;
     }
 
     public void ResetSimulation()
     {
-        if (_playing)
-        {
-            Builder.ActivatePreview();
-            Simulator.Reset();
+        if (!_playing)
+            return;
 
-            _playing = false;
-        }
+        Builder.ActivatePreview();
+        Simulator.Reset();
+
+        SoundManager.PlayOnBuilding();
+
+        _playing = false;
     }
 }
