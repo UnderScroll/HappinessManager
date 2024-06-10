@@ -5,6 +5,7 @@ using UnityEngine;
 public class FollowPath : MonoBehaviour
 {
     public List<Vector3> Waypoints;
+    public List<Vector3> OffsetWaypoints;
 
     [HideInInspector]
     public uint CurrentWaypointIndex;
@@ -34,17 +35,20 @@ public class FollowPath : MonoBehaviour
         Single
     }
 
-    void Awake()
+    private void Start()
     {
-        if (Waypoints == null)
-            Debug.LogError("No waypoints in path");
+        if (OffsetWaypoints == null)
+            Debug.LogError("No waypoints in path, or OffsetWaypoints not set");
         if (Waypoints.Count < 2)
             Debug.LogError("At least two waypoints are needed to follow a path");
         if (!TryGetComponent(out _Rigidbody))
             Debug.LogError("Failed to get RigidBody component in FollowPath script");
 
         IsBroken = false;
-        _IsGoingForward = true;
+        _IsGoingForward = false;
+
+        if (!TryGetComponent(out _Rigidbody))
+            Debug.LogError("Failed to get Rigidbody component in FollowPath");
     }
 
     void FixedUpdate()
@@ -52,13 +56,13 @@ public class FollowPath : MonoBehaviour
         Vector3 position = transform.position;
 
         //Closest point on path
-        Vector3 pathNormal = Waypoints[(int)PreviousWaypointIndex] - Waypoints[(int)CurrentWaypointIndex];
+        Vector3 pathNormal = OffsetWaypoints[(int)PreviousWaypointIndex] - OffsetWaypoints[(int)CurrentWaypointIndex];
         pathNormal.Normalize();
-        _ClosestPointOnPath = Vector3.Project(position - Waypoints[(int)PreviousWaypointIndex], pathNormal) + Waypoints[(int)PreviousWaypointIndex];
+        _ClosestPointOnPath = Vector3.Project(position - OffsetWaypoints[(int)PreviousWaypointIndex], pathNormal) + OffsetWaypoints[(int)PreviousWaypointIndex];
 
-        _ClosestNextPointOnPath = Vector3.Project(position - pathNormal - Waypoints[(int)PreviousWaypointIndex], pathNormal) + Waypoints[(int)PreviousWaypointIndex];
+        _ClosestNextPointOnPath = Vector3.Project(position - pathNormal - OffsetWaypoints[(int)PreviousWaypointIndex], pathNormal) + OffsetWaypoints[(int)PreviousWaypointIndex];
 
-        _FollowDirection = Vector3.Distance(position, Waypoints[(int)CurrentWaypointIndex]) < Vector3.Distance(_ClosestNextPointOnPath, Waypoints[(int)CurrentWaypointIndex])  ? Waypoints[(int)CurrentWaypointIndex] - position : _ClosestNextPointOnPath - position;
+        _FollowDirection = Vector3.Distance(position, OffsetWaypoints[(int)CurrentWaypointIndex]) < Vector3.Distance(_ClosestNextPointOnPath, OffsetWaypoints[(int)CurrentWaypointIndex]) ? OffsetWaypoints[(int)CurrentWaypointIndex] - position : _ClosestNextPointOnPath - position;
 
         //If arrived at waypoint
         if (_FollowDirection.magnitude < Radius)
@@ -67,13 +71,11 @@ public class FollowPath : MonoBehaviour
             CurrentWaypointIndex = GetNextPathIndex();
         }
 
-
         _FollowDirection.Normalize();
 
         if (new Vector3(_Rigidbody.velocity.x, 0, _Rigidbody.velocity.z).magnitude < maxVelocity)
             _Rigidbody.AddForce(new Vector3(_FollowDirection.x, 0, _FollowDirection.z) * FollowForce);
-        else
-            _Rigidbody.velocity = Vector3.Normalize(new Vector3(_Rigidbody.velocity.x, 0, _Rigidbody.velocity.z)) * maxVelocity + new Vector3(0, _Rigidbody.velocity.z, 0);
+        _Rigidbody.velocity = Vector3.Normalize(new Vector3(_Rigidbody.velocity.x, 0, _Rigidbody.velocity.z)) * maxVelocity + new Vector3(0, _Rigidbody.velocity.y, 0);
 
         if (Breakable)
         {
@@ -91,10 +93,10 @@ public class FollowPath : MonoBehaviour
         switch (FollowMode)
         {
             case Mode.Loop:
-                return (CurrentWaypointIndex + 1) % (uint)Waypoints.Count;
+                return (CurrentWaypointIndex + 1) % (uint)OffsetWaypoints.Count;
             case Mode.Single:
                 uint nextIndex = CurrentWaypointIndex + 1;
-                if (CurrentWaypointIndex + 1 < (uint)Waypoints.Count)
+                if (CurrentWaypointIndex + 1 < (uint)OffsetWaypoints.Count)
                 {
                     return nextIndex;
                 }
@@ -104,7 +106,7 @@ public class FollowPath : MonoBehaviour
                     return CurrentWaypointIndex;
                 }
             case Mode.BackAndForth:
-                if (CurrentWaypointIndex == 0 || CurrentWaypointIndex + 1 == Waypoints.Count)
+                if (CurrentWaypointIndex == 0 || CurrentWaypointIndex + 1 == OffsetWaypoints.Count)
                     _IsGoingForward = !_IsGoingForward;
                 return _IsGoingForward ? CurrentWaypointIndex + 1 : CurrentWaypointIndex - 1;
         }
@@ -113,26 +115,16 @@ public class FollowPath : MonoBehaviour
         return 0;
     }
 
-    private float DistanceToNextWaypoint()
-    {
-        return Vector3.Distance(Waypoints[(int)CurrentWaypointIndex], transform.position);
-    }
-
-    private float CurrentPathLength()
-    {
-        return Vector3.Distance(Waypoints[(int)PreviousWaypointIndex], Waypoints[(int)CurrentWaypointIndex]);
-    }
-
 #if UNITY_EDITOR
     private void OnDrawGizmos()
     {
-        if (Waypoints == null || Waypoints.Count == 0 || IsBroken)
+        if (OffsetWaypoints == null || OffsetWaypoints.Count == 0 || IsBroken)
             return;
 
         Gizmos.color = Color.yellow;
-        Gizmos.DrawLineStrip(Waypoints.ToArray(), FollowMode == Mode.Loop);
+        Gizmos.DrawLineStrip(OffsetWaypoints.ToArray(), FollowMode == Mode.Loop);
 
-        for (uint i = 0; i < Waypoints.Count; i++)
+        for (uint i = 0; i < OffsetWaypoints.Count; i++)
         {
             if (i == CurrentWaypointIndex)
                 Gizmos.color = Color.cyan;
@@ -141,7 +133,7 @@ public class FollowPath : MonoBehaviour
             else
                 Gizmos.color = Color.red;
 
-            Gizmos.DrawSphere(Waypoints[(int)i], 0.1f);
+            Gizmos.DrawSphere(OffsetWaypoints[(int)i], 0.1f);
         }
 
         if (_FollowDirection != Vector3.zero && _Rigidbody != null)

@@ -1,4 +1,5 @@
 using Builder;
+using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -70,6 +71,9 @@ namespace Simulation
                     followPath.Breakable = employeeCell.Movement.Breakable;
                     followPath.BreakThreshold = employeeCell.Movement.BreakThreshold;
                     followPath.Waypoints = employeeCell.Movement.Waypoints;
+                    followPath.OffsetWaypoints = new List<Vector3>();
+                    foreach (Vector3 waypoint in followPath.Waypoints)
+                        followPath.OffsetWaypoints.Add(waypoint + _structureOrigin.position);
                     followPath.FollowForce = employeeCell.Movement.FollowForce;
                     followPath.FollowMode = employeeCell.Movement.Mode;
                     followPath.Radius = employeeCell.Movement.Radius;

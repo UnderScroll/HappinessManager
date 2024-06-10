@@ -4,17 +4,23 @@ using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static UnityEditor.Searcher.Searcher.AnalyticsEvent;
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(LevelEditor))]
 public class LevelEditorCustomEditor : Editor
 {
     public VisualTreeAsset XmlInspector;
     private LevelEditor _levelEditor;
 
+    public IMGUIContainer EmployeeEditorContainer;
+    public Foldout EmployeeEditorFoldout;
+
     public override VisualElement CreateInspectorGUI()
     {
-        //Init LevelEditor
+        //Get LevelEditor
         _levelEditor = (LevelEditor)target;
+        _levelEditor.Editor = this;
 
         //Clean leftover
         int childCount = _levelEditor.transform.childCount;
@@ -54,8 +60,8 @@ public class LevelEditorCustomEditor : Editor
             levelSelectionStatusLable.text = "No level Selected";
 
         //EmployeeEditor
-        VisualElement employeeEditorContainer = inspectorRoot.Query<IMGUIContainer>("EmployeeEditor");
-        Foldout employeeEditorFoldout = employeeEditorContainer.Query<Foldout>("Foldout");
+        EmployeeEditorContainer = inspectorRoot.Query<IMGUIContainer>("EmployeeEditor");
+        EmployeeEditorFoldout = EmployeeEditorContainer.Query<Foldout>("Foldout");
 
         //Get CurrentCell position IntegerFields
         VisualElement currentCellContainer = inspectorRoot.Query<IMGUIContainer>("CurrentCell");
@@ -106,11 +112,6 @@ public class LevelEditorCustomEditor : Editor
 
             currentCellPosX.value = newValueRestricted;
             previewTransform.position = new Vector3(newValueRestricted, previewTransform.position.y, previewTransform.position.z);
-
-            //Employee Editor
-            CellData currentCell = _levelEditor.Level.Structure.Cells[newValueRestricted, currentCellPosY.value, currentCellPosZ.value];
-            employeeEditorContainer.visible = currentCell != null && currentCell.Type.IsEmployee;
-            employeeEditorFoldout.value = employeeEditorContainer.visible;
         });
         currentCellPosY.RegisterValueChangedCallback((evt) =>
         {
@@ -127,11 +128,6 @@ public class LevelEditorCustomEditor : Editor
 
             currentCellPosY.value = newValueRestricted;
             previewTransform.position = new Vector3(previewTransform.position.x, newValueRestricted, previewTransform.position.z);
-
-            //Employee Editor
-            CellData currentCell = _levelEditor.Level.Structure.Cells[currentCellPosX.value, newValueRestricted, currentCellPosZ.value];
-            employeeEditorContainer.visible = currentCell != null && currentCell.Type.IsEmployee;
-            employeeEditorFoldout.value = employeeEditorContainer.visible;
         });
         currentCellPosZ.RegisterValueChangedCallback((evt) =>
         {
@@ -148,11 +144,6 @@ public class LevelEditorCustomEditor : Editor
 
             currentCellPosZ.value = newValueRestricted;
             previewTransform.position = new Vector3(previewTransform.position.x, previewTransform.position.y, newValueRestricted);
-
-            //Employee Editor
-            CellData currentCell = _levelEditor.Level.Structure.Cells[currentCellPosX.value, currentCellPosY.value, newValueRestricted];
-            employeeEditorContainer.visible = currentCell != null && currentCell.Type.IsEmployee;
-            employeeEditorFoldout.value = employeeEditorContainer.visible;
         });
 
         //Get custom Controller
@@ -160,60 +151,23 @@ public class LevelEditorCustomEditor : Editor
 
         //Control Button Callback Bindings
         Button northButton = customController.Query<Button>("North");       //North
-        northButton.clickable.clicked += () =>
-        {
-            _levelEditor.OnNorthButtonClicked();
-            CellData currentCell = _levelEditor.Level.Structure.Cells[_levelEditor.CurrentCellPosition.x, _levelEditor.CurrentCellPosition.y, _levelEditor.CurrentCellPosition.z];
-            employeeEditorContainer.visible = currentCell != null && currentCell.Type.IsEmployee;
-            employeeEditorFoldout.value = employeeEditorContainer.visible;
-        };
+        northButton.clickable.clicked += _levelEditor.OnNorthButtonClicked;
         Button eastButton = customController.Query<Button>("East");         //East
-        eastButton.clickable.clicked += () =>
-        {
-            _levelEditor.OnEastButtonClicked();
-            CellData currentCell = _levelEditor.Level.Structure.Cells[_levelEditor.CurrentCellPosition.x, _levelEditor.CurrentCellPosition.y, _levelEditor.CurrentCellPosition.z];
-            employeeEditorContainer.visible = currentCell != null && currentCell.Type.IsEmployee;
-            employeeEditorFoldout.value = employeeEditorContainer.visible;
-        };
+        eastButton.clickable.clicked += _levelEditor.OnEastButtonClicked;
         Button southButton = customController.Query<Button>("South");       //South
-        southButton.clickable.clicked += () =>
-        {
-            _levelEditor.OnSouthButtonClicked();
-            CellData currentCell = _levelEditor.Level.Structure.Cells[_levelEditor.CurrentCellPosition.x, _levelEditor.CurrentCellPosition.y, _levelEditor.CurrentCellPosition.z];
-            employeeEditorContainer.visible = currentCell != null && currentCell.Type.IsEmployee;
-            employeeEditorFoldout.value = employeeEditorContainer.visible;
-        };
+        southButton.clickable.clicked += _levelEditor.OnSouthButtonClicked;
         Button westButton = customController.Query<Button>("West");         //West
-        westButton.clickable.clicked += () =>
-        {
-            _levelEditor.OnWestButtonClicked();
-            CellData currentCell = _levelEditor.Level.Structure.Cells[_levelEditor.CurrentCellPosition.x, _levelEditor.CurrentCellPosition.y, _levelEditor.CurrentCellPosition.z];
-            employeeEditorContainer.visible = currentCell != null && currentCell.Type.IsEmployee;
-            employeeEditorFoldout.value = employeeEditorContainer.visible;
-        };
+        westButton.clickable.clicked += _levelEditor.OnWestButtonClicked;
         Button upButton = customController.Query<Button>("Up");             //Up
-        upButton.clickable.clicked += () =>
-        {
-            _levelEditor.OnUpButtonClicked();
-            CellData currentCell = _levelEditor.Level.Structure.Cells[_levelEditor.CurrentCellPosition.x, _levelEditor.CurrentCellPosition.y, _levelEditor.CurrentCellPosition.z];
-            employeeEditorContainer.visible = currentCell != null && currentCell.Type.IsEmployee;
-            employeeEditorFoldout.value = employeeEditorContainer.visible;
-        };
+        upButton.clickable.clicked += _levelEditor.OnUpButtonClicked;
         Button downButton = customController.Query<Button>("Down");         //Down
-        downButton.clickable.clicked += () =>
-        {
-            _levelEditor.OnDownButtonClicked();
-            CellData currentCell = _levelEditor.Level.Structure.Cells[_levelEditor.CurrentCellPosition.x, _levelEditor.CurrentCellPosition.y, _levelEditor.CurrentCellPosition.z];
-            employeeEditorContainer.visible = currentCell != null && currentCell.Type.IsEmployee;
-            employeeEditorFoldout.value = employeeEditorContainer.visible;
-        };
+        downButton.clickable.clicked += _levelEditor.OnDownButtonClicked;
 
         //Current Block Preview
         ObjectField blockSelectionField = customController.Query<ObjectField>("CurrentSelectedBlock");
         blockSelectionField.RegisterValueChangedCallback((evt) =>
         {
             _levelEditor.CurrentSelectedBlock = (CellType)evt.newValue;
-            _levelEditor.OnSelectedBlockChanged();
         });
 
         //Block Placement Callback bindings
@@ -272,19 +226,47 @@ public class LevelEditorCustomEditor : Editor
         windFoldout.SetEnabled(_levelEditor.IsWindEnabled);
 
         //FollowPath
-        VisualElement followPath = employeeEditorContainer.Query<VisualElement>("FollowPath");
+        VisualElement followPath = EmployeeEditorContainer.Query<VisualElement>("FollowPath");
         Toggle followPathToggle = followPath.Query<Toggle>("Toggle");
         Foldout followPathFoldout = followPath.Query<Foldout>("FollowPath");
-        followPathToggle.RegisterValueChangedCallback(evt =>
+        followPathToggle.RegisterValueChangedCallback(_ =>
         {
-            followPathFoldout.value = _levelEditor.HasFollowPath;
-            followPathFoldout.SetEnabled(_levelEditor.HasFollowPath);
+            if (_levelEditor.EmployeeCellData == null)
+            {
+                Debug.LogError("Tried to edit EmployeeData but it was null");
+                return;
+            }
+            _levelEditor.OnEmployeeDataChanged();
+
+            followPathFoldout.value = _levelEditor.EmployeeCellData.Movement.HasFollowPath;
+            followPathFoldout.SetEnabled(_levelEditor.EmployeeCellData.Movement.HasFollowPath);
         });
 
         followPathFoldout.value = _levelEditor.HasFollowPath;
         followPathFoldout.SetEnabled(_levelEditor.HasFollowPath);
 
+        //Follow Path
+        //ListView emplyeeWaypoints = followPath.Query<ListView>("Waypoints");
+        EnumField modeField = followPath.Query<EnumField>("Mode");
+        modeField.RegisterValueChangedCallback((_) => { _levelEditor.OnEmployeeDataChanged(); });
+        FloatField followForceField = followPath.Query<FloatField>("FollowForce");
+        followForceField.RegisterValueChangedCallback((_) => { _levelEditor.OnEmployeeDataChanged(); });
+        FloatField maxVelocityField = followPath.Query<FloatField>("MaxVelocity");
+        maxVelocityField.RegisterValueChangedCallback((_) => { _levelEditor.OnEmployeeDataChanged(); });
+        FloatField radiusField = followPath.Query<FloatField>("Radius");
+        radiusField.RegisterValueChangedCallback((_) => { _levelEditor.OnEmployeeDataChanged(); });
+        VisualElement breakContainer = followPath.Query<VisualElement>("Break");
+        Toggle breakableField = breakContainer.Query<Toggle>("Breakable");
+        breakableField.RegisterValueChangedCallback((_) => { _levelEditor.OnEmployeeDataChanged(); });
+        Toggle breakThresholdField = breakContainer.Query<Toggle>("BreakThreshold");
+        breakThresholdField.RegisterValueChangedCallback((_) => { _levelEditor.OnEmployeeDataChanged(); });
+
+        //Force Stand
+        FloatField standForceField = EmployeeEditorFoldout.Query<FloatField>("StandForce");
+        standForceField.RegisterValueChangedCallback((_) => { _levelEditor.OnEmployeeDataChanged(); });
+
         // Return the finished Inspector UI.
         return inspectorRoot;
     }
 }
+#endif

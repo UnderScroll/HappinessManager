@@ -23,8 +23,6 @@ namespace Builder
                 Breakable = false,
                 Waypoints = new(),
             };
-
-            Movement.Waypoints.Insert(0, new Vector3(Position.x, Position.y, Position.z));
         }
 
         public class MovementData
@@ -43,6 +41,22 @@ namespace Builder
 
             //ForceStand
             public float StandForce;
+
+            public override string ToString()
+            {
+                if (HasFollowPath)
+                    if (Breakable)
+                        return $"({HasFollowPath}, WayPointsCount:{Waypoints.Count}, {Mode}, {FollowForce}, {MaxVelocity}, {Radius}, {Breakable}, {BreakThreshold}, {StandForce})";
+                    else
+                        return $"({HasFollowPath}, WayPointsCount:{Waypoints.Count}, {Mode}, {FollowForce}, {MaxVelocity}, {Radius}, {Breakable}, {StandForce})";
+
+                return $"({HasFollowPath}, {StandForce})";
+            }
+        }
+
+        public override string ToString()
+        {
+            return $"{base.ToString()}, {Movement}";
         }
     }
 

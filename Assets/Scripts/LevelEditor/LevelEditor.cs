@@ -2,6 +2,7 @@ using Builder;
 using System;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -23,6 +24,9 @@ public partial class LevelEditor : MonoBehaviour
         YAxis = 1 << 2,
         ZAxis = 1 << 3,
     }
+
+    //Custom Editor
+    public LevelEditorCustomEditor Editor;
 
     ///Custom Editor Bindings///
     //Level
@@ -75,8 +79,16 @@ public partial class LevelEditor : MonoBehaviour
             if (cellData == null || !cellData.Type.IsEmployee)
                 continue;
 
-            if ()
-                Gizmos.DrawSphere(new Vector3(cellData.Position.x, cellData.Position.y, cellData.Position.z), 1);
+            if (cellData.Type.IsEmployee)
+            {
+                EmployeeCellData employeeCellData = (EmployeeCellData)cellData;
+                Gizmos.color = Color.yellow;
+                foreach (Vector3 waypoint in employeeCellData.Movement.Waypoints)
+                    Gizmos.DrawSphere(waypoint, 0.1f);
+
+
+                Gizmos.DrawLineStrip(employeeCellData.Movement.Waypoints.ToArray(), employeeCellData.Movement.Mode == FollowPath.Mode.Loop);
+            }
         }
     }
 
@@ -148,6 +160,7 @@ public partial class LevelEditor : MonoBehaviour
 
     public void OnCurrenCellPositionChanged()
     {
+        OnCurrentCellChanged();
         if (CurrentCellPreviewInstance == null)
             return;
 
@@ -313,11 +326,13 @@ public partial class LevelEditor : MonoBehaviour
         UpdateCell(position);
 
         Level.CellTypes[cellType.Name] = cellType;
+        OnCurrentCellChanged();
     }
 
     public void OnRemoveBlock()
     {
         RemoveBlock(new int3(CurrentCellPosition.x, CurrentCellPosition.y, CurrentCellPosition.z));
+        OnCurrentCellChanged();
     }
 
     public void RemoveBlock(int3 position)
@@ -332,6 +347,8 @@ public partial class LevelEditor : MonoBehaviour
 
         if (Level.CellTypes.TryGetValue(removedCellType.Name, out _))
             Level.CellTypes.Remove(removedCellType.Name);
+
+        OnCurrentCellChanged();
     }
 
     public void UpdateCellTypeList()
@@ -397,9 +414,85 @@ public partial class LevelEditor : MonoBehaviour
 
         UpdateCellTypeList();
 
+        OnEmployeeDataChanged();
+
         EditorUtility.SetDirty(Level);
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
+    }
+
+    public void OnCurrentCellChanged()
+    {
+        CellData currentCell = Level.Structure.Cells[CurrentCellPosition.x, CurrentCellPosition.y, CurrentCellPosition.z];
+
+        //Update Employee
+
+        //Is current cell an employee
+        if (currentCell == null)
+        {
+            Debug.Log("Null Cell");
+            EmployeeCellData = null;
+            Editor.EmployeeEditorContainer.visible = false;
+            Editor.EmployeeEditorFoldout.value = false;
+            return;
+        }
+        else if (!currentCell.Type.IsEmployee)
+        {
+            Debug.Log($"Normal Cell : {currentCell.Type} - {currentCell.Position}");
+            EmployeeCellData = null;
+            Editor.EmployeeEditorContainer.visible = false;
+            Editor.EmployeeEditorFoldout.value = false;
+            return;
+        }
+
+        EmployeeCellData = (EmployeeCellData)currentCell;
+        Editor.EmployeeEditorContainer.visible = true;
+        Editor.EmployeeEditorFoldout.value = true;
+
+        //Update Editor Bindings with current EmployeeCellData
+        //FollowPath
+        //Follow
+        HasFollowPath = EmployeeCellData.Movement.HasFollowPath;
+        Waypoints.Clear();
+        foreach (Vector3 waypoint in EmployeeCellData.Movement.Waypoints)
+            Waypoints.Add(new Vector3(waypoint.x, waypoint.y, waypoint.z));
+        Mode = EmployeeCellData.Movement.Mode;
+        FollowForce = EmployeeCellData.Movement.FollowForce;
+        MaxVelocity = EmployeeCellData.Movement.MaxVelocity;
+        Radius = EmployeeCellData.Movement.Radius;
+        //Break
+        Breakable = EmployeeCellData.Movement.Breakable;
+        BreakThreshold = EmployeeCellData.Movement.BreakThreshold;
+
+        //Force Stand
+        StandForce = EmployeeCellData.Movement.StandForce;
+
+        Debug.Log($"Employee Cell{EmployeeCellData.Position} : {EmployeeCellData}");
+    }
+
+    public void OnEmployeeDataChanged()
+    {
+        if (EmployeeCellData == null)
+            return;
+
+        //Update Employee
+       
+        //FollowPath
+        //Follow
+        EmployeeCellData.Movement.HasFollowPath = HasFollowPath;
+        EmployeeCellData.Movement.Waypoints.Clear();
+        foreach (Vector3 waypoint in Waypoints)
+            EmployeeCellData.Movement.Waypoints.Add(new Vector3(waypoint.x, waypoint.y, waypoint.z));
+        EmployeeCellData.Movement.Mode = Mode;
+        EmployeeCellData.Movement.FollowForce = FollowForce;
+        EmployeeCellData.Movement.MaxVelocity = MaxVelocity;
+        EmployeeCellData.Movement.Radius = Radius;
+        //Break
+        EmployeeCellData.Movement.Breakable = Breakable;
+        EmployeeCellData.Movement.BreakThreshold= BreakThreshold;
+
+        //Force Stand
+        EmployeeCellData.Movement.StandForce = StandForce;
     }
 }
 

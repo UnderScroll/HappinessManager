@@ -784,7 +784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b451f3cd0650241b5654e795852abb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StandForce: 1000
+  StandForce: 10000
 --- !u!136 &8404514243446403301
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -820,14 +820,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5934936ac75a17740b9f51344ddc87dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {x: 0, y: 0.5, z: 0}
-  - {x: 5, y: 0.5, z: 0}
-  - {x: 5, y: 0.5, z: 5}
-  - {x: -5, y: 1, z: 5}
-  - {x: -5, y: 0.5, z: -5}
-  - {x: 5, y: 0.5, z: -5}
-  - {x: -4, y: 0.5, z: -4}
+  Waypoints:
+  - {x: 5, y: 0, z: 5}
+  - {x: 5, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
   CurrentWaypointIndex: 0
   PreviousWaypointIndex: 0
   FollowMode: 0

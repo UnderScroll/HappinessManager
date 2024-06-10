@@ -1063,7 +1063,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5e0bd0b34ecc114283e709c0610fbc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotationSpeed: 50
+  RotationSpeed: 0.8
+  RotationSpeedMultiplier: 0.9
   maxPitchAngle: 50
   minPitchAngle: -20
 --- !u!114 &737254371

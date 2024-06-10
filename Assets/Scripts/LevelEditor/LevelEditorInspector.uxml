@@ -74,7 +74,7 @@
                 </ui:Foldout>
             </ui:IMGUIContainer>
             <ui:Foldout text="Force Stand" name="ForceStand" style="width: 100%; -unity-font-style: bold;">
-                <ui:FloatField label="Float Field" value="42,2" binding-path="StandForce" />
+                <ui:FloatField label="Stand Force" value="42,2" binding-path="StandForce" name="StandForce" />
             </ui:Foldout>
         </ui:Foldout>
     </ui:IMGUIContainer>
