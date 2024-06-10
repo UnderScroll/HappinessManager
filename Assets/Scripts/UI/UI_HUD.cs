@@ -57,7 +57,7 @@ public class UI_HUD : MonoBehaviour
     #region FOR_PLAYTESTS
     public void UpdateLevelName(string name)
     {
-        levelNameGUI.text = name.Remove(name.Length - 7) ;
+        levelNameGUI.text = name.Remove(name.Length - 7);
     }
     #endregion
 
@@ -65,7 +65,7 @@ public class UI_HUD : MonoBehaviour
     private void UpdateMoneyText()
     {
         text_money.text = money.ToString() + " $";
-        
+
         //AkSoundEngine.PostEvent("Play_UI_money_spent", gameObject);
     }
     #endregion
@@ -138,6 +138,18 @@ public class UI_HUD : MonoBehaviour
     // TODO : afficher ou non le budget et le bon!
     // dans gamemanager builder level get rule budget limit, si la rule n'existe pas ne pas afficher le budget 
 
+    private void InitBudget()
+    {
+        if (_gameManager.RuleManager.Rules.Count>0)
+        {
+            foreach (IRule rule in _gameManager.RuleManager.Rules)
+            {
+                //if (rule == (IBlockRule) BudgetLimit)
+            }
+            // ????????
+        }
+    }
+
     public void SelectBlock(CellType _block)
     {
         for (int i = 0; i < blocks.Count; i++)
@@ -199,14 +211,14 @@ public class UI_HUD : MonoBehaviour
         CloseEndLevelPanel();
     }
     public void RestartLevel()
-    {        
+    {
         CloseEndLevelPanel();
         _gameManager.LevelLoader.ReloadLevel();
         _gameManager.SoundManager.PlayOnBuilding();
     }
     #endregion
 
-    #region
+    #region Notebook
     public void OpenNotebook()
     {
         // TODO : actuellement on peut poser des blocs à travers l'UI pour une raison obscure

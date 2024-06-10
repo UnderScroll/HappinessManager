@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 using Yarn.Unity;
 using NaughtyAttributes;
@@ -29,6 +30,10 @@ public class TalkingBuddy : MonoBehaviour
     [SerializeField] int NbLinesStage3;
     [SerializeField] int NbLinesStage4;
     [SerializeField] int NbLinesStage5;
+
+    [Header("BackgroundColors")]
+    [SerializeField] Color[] charaColors = new Color[6];
+    [SerializeField] Image backgroundColor;
 
     [Header("Settings Timer Before Talking")]
     public int TimeBeforeTalking = 5;
@@ -131,6 +136,9 @@ public class TalkingBuddy : MonoBehaviour
         actualDialogueObject.transform.parent = this.transform;
         dialogueRunner = actualDialogueObject.GetComponent<DialogueRunner>();
         dialogueRunner.SetProject(yarnProject);
+
+        backgroundColor = actualDialogueObject.GetComponentInChildren<Image>();
+        backgroundColor.color = charaColors[(int)Character];
 
         // Init Dialogue
         dialogueRunner.StartDialogue(nextLineToSay);

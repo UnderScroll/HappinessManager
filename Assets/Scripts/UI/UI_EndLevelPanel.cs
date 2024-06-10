@@ -13,6 +13,8 @@ public class UI_EndLevelPanel : MonoBehaviour
 
     [SerializeField] public Button nextLevel;
     [SerializeField] public Button restartLevel;
+    [SerializeField] private GameObject winPanel;
+    [SerializeField] private GameObject losePanel;
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] TextMeshProUGUI levelName;
 
@@ -27,7 +29,7 @@ public class UI_EndLevelPanel : MonoBehaviour
     public void Init()
     {
         string stage = "Floor " + currentStage;
-       // string level = "Level " + (int)_gameManager.LevelLoader._CurrentLevelIndex;
+        // string level = "Level " + (int)_gameManager.LevelLoader._CurrentLevelIndex;
 
         levelName.text = stage + " - " + 0;
 
@@ -35,11 +37,13 @@ public class UI_EndLevelPanel : MonoBehaviour
         {
             text.text = "Oh no !";
             nextLevel.gameObject.SetActive(false);
+            winPanel.SetActive(false);
         }
         else
         {
             text.text = "Congrats !";
             restartLevel.gameObject.SetActive(false);
+            losePanel.SetActive(false);
         }
 
         if (ui_hud != null)
