@@ -53,7 +53,7 @@ public class UI_TabsManager : MonoBehaviour
     #region EVENTS
     private void PanelSwitch()
     {
-        Debug.Log("son panels qui bougent");
+        AkSoundEngine.PostEvent("Play_Menu_Settings_onSubMenuClick", gameObject);
     }
     #endregion
 }

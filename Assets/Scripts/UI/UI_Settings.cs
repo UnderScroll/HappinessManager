@@ -1,56 +1,94 @@
+using AK.Wwise;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UI_Settings : MonoBehaviour
 {
+    [Header("RTPCs")]
+    [SerializeField]
+    private AK.Wwise.RTPC rtpcMUSIC = null;
+    [SerializeField]
+    private AK.Wwise.RTPC rtpcSFX = null;
+    [SerializeField]
+    private AK.Wwise.RTPC rtpcDIALOGUE = null;
+    [SerializeField]
+    private AK.Wwise.RTPC rtpcSENSITIVITY = null;
+
     [Header("SoundsSettings")]
     [SerializeField] TextMeshProUGUI musicText;
     [SerializeField] TextMeshProUGUI sfxText;
-    [SerializeField][Range(0f, 1f)] float startVolume = 0.5f;
+    [SerializeField] TextMeshProUGUI dialogueText;
+    [SerializeField][Range(0f, 1f)] float startVolume = 1f;
     [SerializeField] Slider musicSlider;
     [SerializeField] Slider sfxSlider;
-    [SerializeField] Toggle sensitivityFilter;
+    [SerializeField] Slider dialoguesSlider;
+    [SerializeField] UI_ONOFFButton SensitivityFilter;
 
     private void Start()
     {
         DefaultSoundValues();
+        musicSlider.onValueChanged.AddListener(ChangeMusicVolume);
+        sfxSlider.onValueChanged.AddListener(ChangeSFXVolume);
+        dialoguesSlider.onValueChanged.AddListener(ChangeDialoguesVolume);
     }
-
+    #region Graphics
+    public void SetFullscreen(bool _on)
+    {
+        if (_on)
+            Screen.SetResolution(1920, 1080, true);
+        else
+            Screen.SetResolution(1920, 1080, false);
+    }
+    public void HighContrastMode(bool _on)
+    {
+        // set up high contrast mode
+    }
+    #endregion
+    #region Sound
     public void ChangeMusicVolume(float _newValue)
     {
-        AkSoundEngine.SetRTPCValue("RTPC_MUSIC_BUS", _newValue, gameObject);
+        rtpcMUSIC.SetGlobalValue(_newValue);
         UpdateUIMusic(_newValue);
     }
     public void ChangeSFXVolume(float _newValue)
     {
-        AkSoundEngine.SetRTPCValue("RTPC_SFX_BUS", _newValue, gameObject);
+        rtpcSFX.SetGlobalValue(_newValue);
         UpdateUISFX(_newValue);
     }
-    public void SwitchSensitivityFilter()
+    public void ChangeDialoguesVolume(float _newValue)
     {
-        if (sensitivityFilter.isOn)
-            AkSoundEngine.SetRTPCValue("RTPC_SENSITIVITY_FILTER", 0, gameObject);
+        rtpcDIALOGUE.SetGlobalValue(_newValue);
+        UpdateUIDialogue(_newValue);
+    }
+    public void SwitchSensitivityFilter(bool _on)
+    {
+        if (_on)
+            rtpcSENSITIVITY.SetGlobalValue(1);
         else
-            AkSoundEngine.SetRTPCValue("RTPC_SENSITIVITY_FILTER", 1, gameObject);
-
+            rtpcSENSITIVITY.SetGlobalValue(0);
     }
     public void RestoreToDefault()
     {
         DefaultSoundValues();
     }
+    #endregion
     #region Private Methods
     private void DefaultSoundValues()
     {
-        AkSoundEngine.SetRTPCValue("RTPC_MUSIC_BUS", startVolume, gameObject);
-        AkSoundEngine.SetRTPCValue("RTPC_SFX_BUS", startVolume, gameObject);
-        AkSoundEngine.SetRTPCValue("RTPC_SENSITIVITY_FILTER", 1, gameObject);
+        rtpcMUSIC.SetGlobalValue(startVolume);
+        rtpcSFX.SetGlobalValue(startVolume);
+        rtpcDIALOGUE.SetGlobalValue(startVolume);
+        rtpcSENSITIVITY.SetGlobalValue(0);
+
         UpdateUIMusic(startVolume);
         UpdateUISFX(startVolume);
-        sensitivityFilter.isOn = false;
+        UpdateUIDialogue(startVolume);
+        SensitivityFilter.Move(false);
 
         musicSlider.value = startVolume;
         sfxSlider.value = startVolume;
+        dialoguesSlider.value = startVolume;
     }
     private void UpdateUIMusic(float _value)
     {
@@ -61,6 +99,11 @@ public class UI_Settings : MonoBehaviour
     {
         float valueToPrint = _value * 100;
         sfxText.text = valueToPrint.ToString("F1") + "%";
+    }
+    private void UpdateUIDialogue(float _value)
+    {
+        float valueToPrint = _value * 100;
+        dialogueText.text = valueToPrint.ToString("F1") + "%";
     }
     #endregion
 }

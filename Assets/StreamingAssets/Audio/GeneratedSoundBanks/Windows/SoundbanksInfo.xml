@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B078C1B4-0695-5FC0-42B9-FB047C9DC688}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{76D789F6-C178-EF56-8DEE-21DCD2FA60EE}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -18,6 +18,7 @@
 				</Custom>
 				<ShareSets>
 					<Plugin Id="602546716" Name="Room_Large" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="1960519852" Name="SensitivityFilter" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
@@ -27,9 +28,15 @@
 			<Busses>
 				<Bus Id="69765534" Name="MUSIQUE"/>
 				<Bus Id="393239870" Name="SFX"/>
+				<Bus Id="1669749310" Name="DIALOGUES"/>
 				<Bus Id="2981377429" Name="AMBIANCE"/>
-				<Bus Id="3370469991" Name="VOIX"/>
-				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3803692087" Name="Master Audio Bus">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1960519852"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 			</Busses>
 			<AuxBusses>
 				<AuxBus Id="821123712" Name="Room_Verb">
@@ -47,6 +54,7 @@
 				<GameParameter Id="1561184313" Name="RTPC_SENSITIVITY_FILTER"/>
 				<GameParameter Id="1951144523" Name="Collision_Velocity"/>
 				<GameParameter Id="3067876527" Name="RTPC_SFX_BUS"/>
+				<GameParameter Id="3182657878" Name="RTPC_DIALOGUE_BUS"/>
 				<GameParameter Id="3432596327" Name="RTPC_MUSIC_BUS"/>
 				<GameParameter Id="3583098985" Name="Reverb_Distance"/>
 			</GameParameters>
@@ -61,7 +69,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{B28C1A1B-90B4-155D-0D10-ED28D2873E69}">
+		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{10982146-4E4D-01B4-D08D-45BC8F368432}">
 			<ShortName>HM_Global_SB</ShortName>
 			<Path>HM_Global_SB.bnk</Path>
 			<Media>
@@ -2277,6 +2285,8 @@
 						<MediaRef Id="971963527"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3886903300" Name="SetRTPC_SENSITITITY_FILTER_0" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3886903301" Name="SetRTPC_SENSITITITY_FILTER_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1375364434" Name="Stop_Amb_global" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="177767409" Name="Stop_Music_global" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
@@ -2295,5 +2305,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EE633D91-273A-E70B-7BB9-FF2B01EFBC15}</FileHash>
+	<FileHash>{B451AE75-2B8E-03C4-8E35-D296F70158D1}</FileHash>
 </SoundBanksInfo>
