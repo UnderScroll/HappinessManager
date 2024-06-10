@@ -472,7 +472,7 @@ public partial class LevelEditor : MonoBehaviour
 
     public void OnEmployeeDataChanged()
     {
-        if (EmployeeCellData == null)
+        if (EmployeeCellData == null || EmployeeCellData.Movement == null)
             return;
 
         //Update Employee

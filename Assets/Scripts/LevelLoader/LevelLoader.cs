@@ -80,7 +80,7 @@ namespace LevelLoader
 
             _gameManager.Builder.Initialize();
 
-            if (level.WindDirection.magnitude > 0 && level.WindStrength > 0)
+            if (level.IsWindEnabled)
             {
                 level.WindDirection.Normalize();
                 Physics.gravity = new Vector3(0, -9.81f, 0) + level.WindDirection * level.WindStrength;
