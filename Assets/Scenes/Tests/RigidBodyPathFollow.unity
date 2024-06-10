@@ -626,7 +626,7 @@ Transform:
   m_GameObject: {fileID: 8404514243446403297}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 5, y: 0.5, z: -1}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -824,11 +824,15 @@ MonoBehaviour:
   - {x: 5, y: 0, z: 5}
   - {x: 5, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
+  OffsetWaypoints:
+  - {x: 5, y: 0, z: 5}
+  - {x: 5, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
   CurrentWaypointIndex: 0
   PreviousWaypointIndex: 0
   FollowMode: 0
   FollowForce: 10
-  maxVelocity: 1
+  maxVelocity: 5
   Radius: 0.5
   Breakable: 0
   BreakThreshold: 1

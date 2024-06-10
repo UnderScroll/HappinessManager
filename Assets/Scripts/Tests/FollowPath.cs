@@ -62,7 +62,13 @@ public class FollowPath : MonoBehaviour
 
         _ClosestNextPointOnPath = Vector3.Project(position - pathNormal - OffsetWaypoints[(int)PreviousWaypointIndex], pathNormal) + OffsetWaypoints[(int)PreviousWaypointIndex];
 
-        _FollowDirection = Vector3.Distance(position, OffsetWaypoints[(int)CurrentWaypointIndex]) < Vector3.Distance(_ClosestNextPointOnPath, OffsetWaypoints[(int)CurrentWaypointIndex]) ? OffsetWaypoints[(int)CurrentWaypointIndex] - position : _ClosestNextPointOnPath - position;
+        float distToNextWaypoint = Vector3.Distance(position, OffsetWaypoints[(int)CurrentWaypointIndex]);
+        float distToNextPathpoint = Vector3.Distance(position, _ClosestNextPointOnPath);
+        float nextPathpointTargetDirectionAngle = Vector2.Angle(OffsetWaypoints[(int)CurrentWaypointIndex] - position, OffsetWaypoints[(int)CurrentWaypointIndex] - OffsetWaypoints[(int)PreviousWaypointIndex]);
+        if (distToNextWaypoint < distToNextPathpoint || nextPathpointTargetDirectionAngle > 90)
+            _FollowDirection = OffsetWaypoints[(int)CurrentWaypointIndex] - position;
+        else
+            _FollowDirection = _ClosestNextPointOnPath - position;
 
         //If arrived at waypoint
         if (_FollowDirection.magnitude < Radius)
@@ -72,19 +78,18 @@ public class FollowPath : MonoBehaviour
         }
 
         _FollowDirection.Normalize();
-
-        if (new Vector3(_Rigidbody.velocity.x, 0, _Rigidbody.velocity.z).magnitude < maxVelocity)
-            _Rigidbody.AddForce(new Vector3(_FollowDirection.x, 0, _FollowDirection.z) * FollowForce);
-        _Rigidbody.velocity = Vector3.Normalize(new Vector3(_Rigidbody.velocity.x, 0, _Rigidbody.velocity.z)) * maxVelocity + new Vector3(0, _Rigidbody.velocity.y, 0);
+        
+        //Add force to follow the path
+        _Rigidbody.AddForce(new Vector3(_FollowDirection.x, 0, _FollowDirection.z) * FollowForce);
+        if (new Vector3(_Rigidbody.velocity.x, 0, _Rigidbody.velocity.z).magnitude > maxVelocity) //Clamp velocity
+            _Rigidbody.velocity = Vector3.Normalize(new Vector3(_Rigidbody.velocity.x, 0, _Rigidbody.velocity.z)) * maxVelocity + new Vector3(0, _Rigidbody.velocity.y, 0);
 
         if (Breakable)
         {
             IsBroken = Vector3.Distance(position, _ClosestPointOnPath) > BreakThreshold;
 
             if (IsBroken)
-            {
                 enabled = false;
-            }
         }
     }
 
