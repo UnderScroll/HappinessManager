@@ -23,7 +23,10 @@ namespace LevelLoader
 
             _CurrentLevelIndex = 0;
         }
-
+        private void Start()
+        {
+            UI_HUD.GoToNextFloor += LoadNextFloor;
+        }
         public void ReloadLevel()
         {
             LoadLevel(_CurrentLevelIndex);
@@ -41,14 +44,20 @@ namespace LevelLoader
                     return;
                 }
 
-                SceneManager.LoadScene(nextFloorname, LoadSceneMode.Single);
+                // Coroutine UI Entre les niveaux 
+                // Quand coroutine finie : loadscene
+                UI_HUD.DisplayNextFloorUI?.Invoke();
                 return;
             }
 
             _CurrentLevelIndex++;
             LoadLevel(_CurrentLevelIndex);
         }
-
+        private void LoadNextFloor()
+        {
+            Debug.Log("flqifjhlfqz");
+            SceneManager.LoadScene(nextFloorname, LoadSceneMode.Single);
+        }
         public void LoadPreviousLevel()
         {
             if (_CurrentLevelIndex == 0)
@@ -69,11 +78,11 @@ namespace LevelLoader
         {
             Debug.Log($"Loading {level.name}");
 
-            if (_CurrentLevelIndex==0) //If loading the first level of the floor, play music and ambiance
+            if (_CurrentLevelIndex == 0) //If loading the first level of the floor, play music and ambiance
                 _gameManager.SoundManager.PLayOnFirstLevelLoaded();
-            
-            _gameManager.ResetSimulation();   
-            
+
+            _gameManager.ResetSimulation();
+
             UnloadCurrentLevel();
 
             _gameManager.Builder.Level = Instantiate(level);
@@ -90,12 +99,12 @@ namespace LevelLoader
                 Physics.gravity = new Vector3(0, -9.81f, 0);
             }
 
-            Debug.Log (level.WindStrength);
+            Debug.Log(level.WindStrength);
             float ForceVent = level.WindStrength;
-            AkSoundEngine.SetRTPCValue("Wind_Strength",ForceVent,gameObject);
+            AkSoundEngine.SetRTPCValue("Wind_Strength", ForceVent, gameObject);
 
             _gameManager.RuleManager.Reset();
-            
+
             _gameManager.RuleManager.Rules = level.Rules;
             _gameManager.RuleManager.Initialize();
 

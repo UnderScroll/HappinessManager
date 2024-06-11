@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using UnityEngine.Timeline;
+using System.Threading;
 
 public class UI_HUD : MonoBehaviour
 {
@@ -38,8 +39,16 @@ public class UI_HUD : MonoBehaviour
     [SerializeField] GameObject notebook;
     [SerializeField] UI_Notebook ui_notebook;
 
+    [SerializeField] GameObject BetweenStagesUI;
+
     private GameObject actualMenu;
     private GameManager _gameManager;
+
+    public UnityAction DisplayNextFloorUI;
+    public UnityAction GoToNextFloor;
+
+    private bool flag = false;
+    private float timer = 4f;
 
     private void Start()
     {
@@ -48,10 +57,20 @@ public class UI_HUD : MonoBehaviour
             Debug.LogError("Failed to find GameManager in UI_HUD");
 
         CloseNotebook();
+        DisplayNextFloorUI += DisplayUI;
 
         // TODO : init money value from level
         UpdateMoneyText();
         UpdateBlockDescription();
+    }
+    private void Update()
+    {
+        if (flag)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0f)
+                GoToNextFloor?.Invoke();
+        }
     }
 
     #region FOR_PLAYTESTS
@@ -133,6 +152,14 @@ public class UI_HUD : MonoBehaviour
     }
     #endregion
 
+    #region FloorsUI
+    public void DisplayUI()
+    {
+        BetweenStagesUI.GetComponent<UI_BetweenStages>().Init();
+        flag = true;
+    }
+    #endregion
+
     #region Fonctionnal functions
 
     // TODO : afficher ou non le budget et le bon!
@@ -140,7 +167,7 @@ public class UI_HUD : MonoBehaviour
 
     private void InitBudget()
     {
-        if (_gameManager.RuleManager.Rules.Count>0)
+        if (_gameManager.RuleManager.Rules.Count > 0)
         {
             foreach (IRule rule in _gameManager.RuleManager.Rules)
             {
