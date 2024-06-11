@@ -10,7 +10,7 @@ public class EmployeeMovement : MonoBehaviour
     public FollowPath FollowPath;
     public AlignToCamera AlignToCamera;
 
-    private void Awake()
+    private void Start()
     {
         if (ForceStand == null)
             Debug.LogError("ForceStand not found in EmployeeMovement");
