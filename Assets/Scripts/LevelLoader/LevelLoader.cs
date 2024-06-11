@@ -23,7 +23,10 @@ namespace LevelLoader
 
             CurrentLevelIndex = 0;
         }
-
+        private void Start()
+        {
+            UI_HUD.GoToNextFloor += LoadNextFloor;
+        }
         public void ReloadLevel()
         {
             LoadLevel(CurrentLevelIndex);
@@ -40,8 +43,7 @@ namespace LevelLoader
                     Debug.LogWarning($"Tried to load next Floot but there is none");
                     return;
                 }
-
-                SceneManager.LoadScene(nextFloorname, LoadSceneMode.Single);
+                UI_HUD.DisplayNextFloorUI?.Invoke();
                 return;
             }
 
@@ -69,11 +71,11 @@ namespace LevelLoader
         {
             Debug.Log($"Loading {level.name}");
 
-            if (CurrentLevelIndex==0) //If loading the first level of the floor, play music and ambiance
+            if (CurrentLevelIndex == 0) //If loading the first level of the floor, play music and ambiance
                 _gameManager.SoundManager.PLayOnFirstLevelLoaded();
-            
-            _gameManager.ResetSimulation();   
-            
+
+            _gameManager.ResetSimulation();
+
             UnloadCurrentLevel();
 
             _gameManager.Builder.Level = Instantiate(level);
@@ -91,7 +93,7 @@ namespace LevelLoader
             }
 
             _gameManager.RuleManager.Reset();
-            
+
             _gameManager.RuleManager.Rules = level.Rules;
             _gameManager.RuleManager.Initialize();
 
@@ -107,6 +109,11 @@ namespace LevelLoader
         public void UnloadCurrentLevel()
         {
             _gameManager.Builder.ResetPreviewer();
+        }
+        private void LoadNextFloor()
+        {
+            Debug.Log("flqifjhlfqz");
+            SceneManager.LoadScene(nextFloorname, LoadSceneMode.Single);
         }
     }
 }
