@@ -272,7 +272,7 @@ MonoBehaviour:
       - rid: -2
       - rid: -2
       - rid: -2
-      - rid: 978415913593733341
+      - rid: 978416075948425309
       - rid: -2
       - rid: -2
       - rid: -2
@@ -288,7 +288,7 @@ MonoBehaviour:
       - rid: -2
       - rid: -2
       - rid: -2
-      - rid: 978415913593733342
+      - rid: 978416075948425306
       - rid: -2
       - rid: -2
       - rid: -2
@@ -577,7 +577,7 @@ MonoBehaviour:
       - rid: -2
       - rid: -2
       - rid: -2
-      - rid: 978415913593733354
+      - rid: 978416075948425315
       - rid: -2
       - rid: 978415913593733355
       - rid: 978415913593733356
@@ -641,7 +641,7 @@ MonoBehaviour:
       - rid: -2
       - rid: -2
       - rid: -2
-      - rid: 978415913593733358
+      - rid: 978416075948425312
       - rid: -2
       - rid: -2
       - rid: -2
@@ -1026,7 +1026,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: d9a05ac1dc066214dbf3cd85af3dd533, type: 2}
     - {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
     - {fileID: 11400000, guid: cd54712c99a7ed14bbfc3768e1ac9abd, type: 2}
-    - {fileID: 11400000, guid: bd77142b1d33bbc489551a002b5e5de2, type: 2}
+    - {fileID: 11400000, guid: c2fff1760786fb641a4dfcaf9f9ee00b, type: 2}
+    - {fileID: 11400000, guid: 2357fa008796e02428d8835c8ed041c1, type: 2}
   PlaceableCellTypes:
     _types:
     - {fileID: 11400000, guid: 26323928fecd21440bbf81af0abd1f74, type: 2}
@@ -2691,36 +2692,6 @@ MonoBehaviour:
         - {fileID: 0}
         - {fileID: 0}
         - {fileID: 0}
-    - rid: 978415913593733341
-      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
-      data:
-        Type: {fileID: 11400000, guid: bd77142b1d33bbc489551a002b5e5de2, type: 2}
-        Position:
-          x: 2
-          y: 5
-          z: 7
-        _connections:
-        - {fileID: 0}
-        - {fileID: 0}
-        - {fileID: 0}
-        - {fileID: 0}
-        - {fileID: 0}
-        - {fileID: 0}
-    - rid: 978415913593733342
-      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
-      data:
-        Type: {fileID: 11400000, guid: bd77142b1d33bbc489551a002b5e5de2, type: 2}
-        Position:
-          x: 2
-          y: 7
-          z: 3
-        _connections:
-        - {fileID: 0}
-        - {fileID: 0}
-        - {fileID: 0}
-        - {fileID: 0}
-        - {fileID: 0}
-        - {fileID: 0}
     - rid: 978415913593733343
       type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
       data:
@@ -2886,21 +2857,6 @@ MonoBehaviour:
         - {fileID: 0}
         - {fileID: 0}
         - {fileID: 0}
-    - rid: 978415913593733354
-      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
-      data:
-        Type: {fileID: 11400000, guid: bd77142b1d33bbc489551a002b5e5de2, type: 2}
-        Position:
-          x: 5
-          y: 6
-          z: 2
-        _connections:
-        - {fileID: 0}
-        - {fileID: 0}
-        - {fileID: 0}
-        - {fileID: 0}
-        - {fileID: 0}
-        - {fileID: 0}
     - rid: 978415913593733355
       type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
       data:
@@ -2946,21 +2902,6 @@ MonoBehaviour:
         - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
         - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
         - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
-    - rid: 978415913593733358
-      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
-      data:
-        Type: {fileID: 11400000, guid: bd77142b1d33bbc489551a002b5e5de2, type: 2}
-        Position:
-          x: 6
-          y: 2
-          z: 6
-        _connections:
-        - {fileID: 0}
-        - {fileID: 0}
-        - {fileID: 0}
-        - {fileID: 0}
-        - {fileID: 0}
-        - {fileID: 0}
     - rid: 978415913593733359
       type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
       data:
@@ -3081,3 +3022,119 @@ MonoBehaviour:
         - {fileID: 0}
         - {fileID: 0}
         - {fileID: 0}
+    - rid: 978416075948425306
+      type: {class: EmployeeCellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: c2fff1760786fb641a4dfcaf9f9ee00b, type: 2}
+        Position:
+          x: 2
+          y: 7
+          z: 3
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        Movement:
+          rid: 978416075948425307
+    - rid: 978416075948425307
+      type: {class: EmployeeCellData/MovementData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        HasFollowPath: 0
+        Waypoints: []
+        Mode: 0
+        FollowForce: 0
+        MaxVelocity: 0
+        Radius: 0
+        Breakable: 0
+        BreakThreshold: 0
+        StandForce: 3
+    - rid: 978416075948425309
+      type: {class: EmployeeCellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: c2fff1760786fb641a4dfcaf9f9ee00b, type: 2}
+        Position:
+          x: 2
+          y: 5
+          z: 7
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        Movement:
+          rid: 978416075948425310
+    - rid: 978416075948425310
+      type: {class: EmployeeCellData/MovementData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        HasFollowPath: 0
+        Waypoints: []
+        Mode: 0
+        FollowForce: 0
+        MaxVelocity: 0
+        Radius: 0
+        Breakable: 0
+        BreakThreshold: 0
+        StandForce: 3
+    - rid: 978416075948425312
+      type: {class: EmployeeCellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 2357fa008796e02428d8835c8ed041c1, type: 2}
+        Position:
+          x: 6
+          y: 2
+          z: 6
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        Movement:
+          rid: 978416075948425313
+    - rid: 978416075948425313
+      type: {class: EmployeeCellData/MovementData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        HasFollowPath: 0
+        Waypoints: []
+        Mode: 0
+        FollowForce: 0
+        MaxVelocity: 0
+        Radius: 0
+        Breakable: 0
+        BreakThreshold: 0
+        StandForce: 3
+    - rid: 978416075948425315
+      type: {class: EmployeeCellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 2357fa008796e02428d8835c8ed041c1, type: 2}
+        Position:
+          x: 5
+          y: 6
+          z: 2
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        Movement:
+          rid: 978416075948425316
+    - rid: 978416075948425316
+      type: {class: EmployeeCellData/MovementData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        HasFollowPath: 0
+        Waypoints: []
+        Mode: 0
+        FollowForce: 0
+        MaxVelocity: 0
+        Radius: 0
+        Breakable: 0
+        BreakThreshold: 0
+        StandForce: 3
