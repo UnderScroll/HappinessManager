@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 using UnityEngine.Assertions;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 
 namespace Builder
 {
@@ -33,6 +35,8 @@ namespace Builder
 
         private readonly int[] _inverseFaceOrder = { 2, 3, 0, 1, 5, 4 };
 
+        private GameObject _previewBlock;
+        private MeshRenderer _previewBlockRenderer;
 
         public void Initialize()
         {
@@ -80,6 +84,11 @@ namespace Builder
         private void Update()
         {
             _pointed = GetPointed();
+            if (_previewBlockRenderer != null && _previewBlock != null)
+            {
+                _previewBlockRenderer.enabled = _pointed.cellToPlace.IsSome(out int3 previewPosition);
+                _previewBlock.transform.position = new Vector3(previewPosition.x, previewPosition.y, previewPosition.z) + _structureOrigin.position;
+            }
         }
 
         private bool IsInBounds(int3 position)
@@ -184,10 +193,10 @@ namespace Builder
 
             if (_pointed.cellToPlace.IsSome(out int3 positionToPlace)
                 && (positionToPlace.y == positionToRemove.y - 1))
-                    return;
-            
+                return;
+
             CellType removedBlockType = Level.Structure.Cells[positionToRemove.x, positionToRemove.y, positionToRemove.z].Type;
-            
+
             PreviewBlock blockInstance = _previewBlocks[positionToRemove.x, positionToRemove.y, positionToRemove.z]; //Get block in scene
             if (!blockInstance.TryGetComponent(out BlockSoundPlayer soundPlayer)) //Try to get the script
                 Debug.LogWarning("NoSoundPlayer"); //If not warn
@@ -210,6 +219,21 @@ namespace Builder
         {
             if (index < Level.PlaceableCellTypes.Get().Count)
                 _selectedBlock = (CellData)Level.PlaceableCellTypes[(int)index];
+
+            Destroy(_previewBlock);
+            _previewBlock = Instantiate(_selectedBlock.Type.Block, _structureOrigin);
+            _previewBlockRenderer = _previewBlock.GetComponentInChildren<MeshRenderer>(false);
+            if (_previewBlockRenderer == null)
+            {
+                Debug.LogWarning("Failed to get MeshRenderer of _selectedBlock for preview");
+                return;
+            }
+
+            Material[] previewMaterial = { _previewBlockRenderer.materials[0] };
+
+            _previewBlockRenderer.materials = previewMaterial;
+            _previewBlockRenderer.material.SetFloat("_Transparency_level", 0.5f);
+            _previewBlockRenderer.material.SetInteger("_Dithering", 1);
         }
     }
 }

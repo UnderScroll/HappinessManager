@@ -1027,6 +1027,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: cd54712c99a7ed14bbfc3768e1ac9abd, type: 2}
     - {fileID: 11400000, guid: a0f3c6f727e7ceb41b5073b250cbe1f3, type: 2}
     - {fileID: 11400000, guid: 8895af43bff26354ab76c4829d872b96, type: 2}
+    - {fileID: 11400000, guid: d9a05ac1dc066214dbf3cd85af3dd533, type: 2}
   PlaceableCellTypes:
     _types:
     - {fileID: 11400000, guid: 26323928fecd21440bbf81af0abd1f74, type: 2}
@@ -1036,9 +1037,9 @@ MonoBehaviour:
   WindDirection: {x: 0, y: 0, z: 0}
   WindStrength: 0
   Rules:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: d78f7d77ab153594e9563a998e468bbd, type: 2}
+  - {fileID: 11400000, guid: 4ac8650f4f01d824082ecf285e7d0b81, type: 2}
+  - {fileID: 11400000, guid: 3807406ba9eb18d47b99530be8fad281, type: 2}
   references:
     version: 2
     RefIds:
