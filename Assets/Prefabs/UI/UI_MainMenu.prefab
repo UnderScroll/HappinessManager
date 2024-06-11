@@ -343,7 +343,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageFade: {fileID: 8326005424989332925}
-  splashScreen: {fileID: 0}
   OnButtonClicked:
     m_PersistentCalls:
       m_Calls: []
@@ -356,7 +355,7 @@ MonoBehaviour:
   OnIntroEnded:
     m_PersistentCalls:
       m_Calls: []
-  skipIntro: 1
+  skipIntro: 0
   _gameLogo: {fileID: 5219181896240034175}
   _cnamLogo: {fileID: 7683485092420327736}
   _magelisLogo: {fileID: 7726378549842502818}

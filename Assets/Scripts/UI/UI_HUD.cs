@@ -36,6 +36,7 @@ public class UI_HUD : MonoBehaviour
 
     [Header("Notebook Menu")]
     [SerializeField] GameObject notebook;
+    [SerializeField] UI_Notebook ui_notebook;
 
     private GameObject actualMenu;
     private GameManager _gameManager;
@@ -64,6 +65,8 @@ public class UI_HUD : MonoBehaviour
     private void UpdateMoneyText()
     {
         text_money.text = money.ToString() + " $";
+        
+        //AkSoundEngine.PostEvent("Play_UI_money_spent", gameObject);
     }
     #endregion
 
@@ -196,10 +199,10 @@ public class UI_HUD : MonoBehaviour
         CloseEndLevelPanel();
     }
     public void RestartLevel()
-    {
+    {        
+        CloseEndLevelPanel();
         _gameManager.LevelLoader.ReloadLevel();
         _gameManager.SoundManager.PlayOnBuilding();
-        CloseEndLevelPanel();
     }
     #endregion
 
@@ -208,10 +211,12 @@ public class UI_HUD : MonoBehaviour
     {
         // TODO : actuellement on peut poser des blocs à travers l'UI pour une raison obscure
         notebook.SetActive(true);
+        AkSoundEngine.PostEvent("Play_Menu_Settings_onMenuOpen", gameObject);
     }
     public void CloseNotebook()
     {
         notebook.SetActive(false);
+        AkSoundEngine.PostEvent("Play_Menu_Settings_onMenuOut", gameObject);
     }
     #endregion
 }
