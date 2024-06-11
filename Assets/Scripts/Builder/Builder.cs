@@ -232,7 +232,7 @@ namespace Builder
             Material[] previewMaterial = { _previewBlockRenderer.materials[1] };
 
             _previewBlockRenderer.materials = previewMaterial;
-            _previewBlockRenderer.material.SetFloat("_Transparency_level", 1.1f);
+            _previewBlockRenderer.material.SetFloat("_Transparency_level", 0.95f);
             _previewBlockRenderer.material.SetFloat("_Dithering", 1);
         }
     }

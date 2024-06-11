@@ -56,7 +56,7 @@ public class UI_HUD : MonoBehaviour
     #region FOR_PLAYTESTS
     public void UpdateLevelName(string name)
     {
-        levelNameGUI.text = name.Remove(name.Length - 7) ;
+        levelNameGUI.text = name.Remove(name.Length - 7);
     }
     #endregion
 
@@ -64,6 +64,21 @@ public class UI_HUD : MonoBehaviour
     private void UpdateMoneyText()
     {
         text_money.text = money.ToString() + " $";
+    }
+
+    private float GetSpentMoney()
+    {
+        return _gameManager.Builder.SpentMoney;
+    }
+
+    private float GetBudgetLimit()
+    {
+        BudgetLimit budgetLimitRule = (BudgetLimit)_gameManager.RuleManager.Rules.Find(rule => { return rule.Type == "BudgetLimit"; });
+
+        if (budgetLimitRule == null)
+            return -1f;
+
+        return budgetLimitRule.Budget;
     }
     #endregion
 
@@ -85,6 +100,7 @@ public class UI_HUD : MonoBehaviour
         else
             CloseMenu();
     }
+
     public void InitDecoMenu()
     {
         if (actualMenu == null)
