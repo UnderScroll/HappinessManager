@@ -1,0 +1,82 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:IMGUIContainer name="Level" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 2px; border-left-width: 0; border-left-color: rgb(70, 70, 70); border-right-color: rgb(70, 70, 70); border-top-color: rgb(70, 70, 70); border-bottom-color: rgb(70, 70, 70); margin-top: 2px; margin-right: 4px; margin-bottom: 0; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px;">
+        <ui:Label tabindex="-1" text="Level" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" style="-unity-font-style: bold;" />
+        <ui:IMGUIContainer name="LevelSelection" style="flex-direction: row; justify-content: space-between;">
+            <uie:ObjectField label="Level" name="Level" binding-path="Level" type="Level, Assembly-CSharp" style="flex-direction: row; align-self: stretch; justify-content: space-between; align-items: stretch;" />
+            <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LevelSelectionStatus" style="color: rgb(255, 0, 0); -unity-font-style: bold;" />
+        </ui:IMGUIContainer>
+        <ui:Vector3IntField label="Size" name="Size" binding-path="StructureSize" />
+        <ui:ListView binding-path="PlaceableBlocks" fixed-item-height="22" virtualization-method="DynamicHeight" show-border="true" reorderable="true" horizontal-scrolling="true" show-foldout-header="true" header-title="Placeable Blocks" show-add-remove-footer="true" show-alternating-row-backgrounds="All" name="PlaceableBlocks" reorder-mode="Animated" />
+        <ui:IMGUIContainer name="Wind" style="flex-direction: row; margin-top: 2px; margin-right: 4px; margin-bottom: 2px; margin-left: 4px;">
+            <ui:Toggle name="Toggle" binding-path="IsWindEnabled" style="flex-direction: column; align-items: auto; justify-content: flex-start; align-self: flex-start; margin-right: 20px; margin-top: 5px;" />
+            <ui:Foldout text="Wind" name="Wind" style="width: 100%; flex-direction: column; margin-top: 2px; margin-right: 4px; margin-bottom: 2px; margin-left: 4px;">
+                <ui:Vector3Field label="Wind Direction" name="WindDirection" binding-path="WindDirection" />
+                <ui:FloatField label="Strength" value="42,2" name="Strength" binding-path="WindStrength" />
+            </ui:Foldout>
+        </ui:IMGUIContainer>
+    </ui:IMGUIContainer>
+    <ui:IMGUIContainer name="CurrentCell" style="margin-top: 2px; margin-right: 4px; margin-bottom: 0; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; border-bottom-width: 2px; border-left-color: rgb(70, 70, 70); border-right-color: rgb(70, 70, 70); border-top-color: rgb(70, 70, 70); border-bottom-color: rgb(70, 70, 70);">
+        <ui:Label tabindex="-1" text="Current Cell" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" style="-unity-font-style: bold;" />
+        <ui:Vector3IntField label="Position" name="Position" binding-path="CurrentCellPosition" />
+        <ui:IMGUIContainer name="CustomController" style="margin-top: 8px; margin-right: 4px; margin-bottom: 2px; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 8px; padding-left: 4px; border-left-color: rgb(70, 70, 70); border-right-color: rgb(70, 70, 70); border-top-color: rgb(70, 70, 70); border-bottom-color: rgb(70, 70, 70); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; align-items: center; align-self: center;">
+            <ui:IMGUIContainer name="CustomControllerDirection" style="flex-direction: row; justify-content: flex-start; margin-top: 2px; margin-right: 4px; margin-bottom: 2px; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 2px; padding-left: 4px; align-items: flex-end; align-self: auto; flex-shrink: 0;">
+                <ui:IMGUIContainer name="West" style="flex-direction: column-reverse;">
+                    <ui:Button text="W" parse-escape-sequences="true" display-tooltip-when-elided="true" name="West" enable-rich-text="true" style="width: 50px; height: 50px; flex-direction: column; background-color: rgb(255, 0, 0); -unity-font-style: bold; font-size: 20px; color: rgb(255, 255, 255); -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(200, 200, 200);" />
+                </ui:IMGUIContainer>
+                <ui:IMGUIContainer name="NorthSouth" style="flex-direction: column; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+                    <ui:Button text="N" parse-escape-sequences="true" display-tooltip-when-elided="true" name="North" style="-unity-text-align: middle-center; width: 50px; height: 50px; flex-direction: column; margin-bottom: 5px; background-color: rgb(0, 0, 255); font-size: 20px; -unity-font-style: bold; color: rgb(255, 255, 255); -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(200, 200, 200);" />
+                    <ui:Button text="S" parse-escape-sequences="true" display-tooltip-when-elided="true" name="South" style="width: 50px; height: 50px; background-color: rgb(0, 0, 255); -unity-font-style: bold; font-size: 20px; color: rgb(255, 255, 255); -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(200, 200, 200);" />
+                </ui:IMGUIContainer>
+                <ui:IMGUIContainer name="East" style="flex-direction: column-reverse;">
+                    <ui:Button text="E" parse-escape-sequences="true" display-tooltip-when-elided="true" name="East" style="flex-direction: row; width: 50px; height: 50px; background-color: rgb(255, 0, 0); font-size: 20px; -unity-font-style: bold; color: rgb(255, 255, 255); -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(200, 200, 200);" />
+                </ui:IMGUIContainer>
+                <ui:IMGUIContainer name="UpDown" style="margin-right: 5px; margin-left: 5px;">
+                    <ui:Button text="U" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Up" style="width: 50px; height: 50px; margin-bottom: 4px; background-color: rgb(0, 255, 0); color: rgb(255, 255, 255); font-size: 20px; -unity-font-style: bold; -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(200, 200, 200);" />
+                    <ui:Button text="D" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Down" focusable="true" style="width: 50px; height: 50px; background-color: rgb(0, 255, 0); font-size: 20px; -unity-font-style: bold; color: rgb(255, 255, 255); -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(200, 200, 200);" />
+                </ui:IMGUIContainer>
+            </ui:IMGUIContainer>
+            <ui:IMGUIContainer name="CustomControllerSelection" style="flex-direction: column; justify-content: center; margin-top: 2px; margin-right: 4px; margin-bottom: 2px; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 2px; padding-left: 4px; width: 100%;">
+                <ui:IMGUIContainer name="BlockPlacement" style="flex-direction: row; align-self: center;">
+                    <ui:Button text="Place Block" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Place" style="height: 50px; width: 100px;" />
+                    <ui:Button text="Remove Block" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Remove" style="height: 50px; width: 100px;" />
+                    <uie:ObjectField type="CellType, Assembly-CSharp" binding-path="CurrentSelectedBlock" name="CurrentSelectedBlock" style="white-space: nowrap; width: 100px;" />
+                </ui:IMGUIContainer>
+            </ui:IMGUIContainer>
+        </ui:IMGUIContainer>
+        <uie:EnumFlagsField label="Draw Alignement Lines" type="UnityEngine.UIElements.UsageHints, UnityEngine.UIElementsModule" value="None" binding-path="alignementLines" name="AlignementLines" />
+    </ui:IMGUIContainer>
+    <ui:IMGUIContainer name="Utility" style="margin-top: 2px; margin-right: 4px; margin-bottom: 0; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; border-bottom-width: 2px; border-left-color: rgb(70, 70, 70); border-right-color: rgb(70, 70, 70); border-top-color: rgb(70, 70, 70); border-bottom-color: rgb(70, 70, 70);">
+        <ui:Label tabindex="-1" text="Utility" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Utility" style="-unity-font-style: bold;" />
+        <ui:IMGUIContainer name="FillTool" style="flex-direction: row; align-self: auto; justify-content: space-between;">
+            <uie:EnumFlagsField label="Axis to Fill" type="UnityEngine.UIElements.UsageHints, UnityEngine.UIElementsModule" value="DynamicTransform" binding-path="AxisToFill" name="FillAxis" style="width: 80%;" />
+            <ui:Button text="Fill" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Fill" style="padding-right: 25px; padding-left: 25px;" />
+            <ui:Toggle name="ReplaceToggle" binding-path="DoReplace" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+        </ui:IMGUIContainer>
+    </ui:IMGUIContainer>
+    <ui:IMGUIContainer name="EmployeeEditor" style="margin-top: 2px; margin-right: 4px; margin-bottom: 0; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; border-bottom-width: 2px; border-left-color: rgb(70, 70, 70); border-right-color: rgb(70, 70, 70); border-top-color: rgb(70, 70, 70); border-bottom-color: rgb(70, 70, 70);">
+        <ui:Foldout value="true" picking-mode="Ignore" focusable="true" text="Employee Editor" name="Foldout" style="-unity-font-style: bold;">
+            <ui:IMGUIContainer name="FollowPath" style="flex-direction: row; margin-top: 2px; margin-right: 4px; margin-bottom: 2px; margin-left: 4px; -unity-font-style: bold; border-left-color: rgb(70, 70, 70); border-right-color: rgb(70, 70, 70); border-top-color: rgb(70, 70, 70); border-bottom-color: rgb(70, 70, 70); border-bottom-width: 2px; padding-top: 2px; padding-right: 4px; padding-left: 4px; padding-bottom: 2px; left: -37px;">
+                <ui:Toggle name="Toggle" binding-path="HasFollowPath" style="flex-direction: column; align-items: auto; justify-content: flex-start; align-self: flex-start; margin-right: 15px; margin-top: 2px; margin-bottom: 0; margin-left: 0; -unity-font-style: bold;" />
+                <ui:Foldout text="Follow Path" name="FollowPath" style="width: 100%; -unity-font-style: bold;">
+                    <ui:IMGUIContainer name="Follow" style="margin-top: 2px; margin-right: 4px; margin-left: 4px; border-left-color: rgb(70, 70, 70); border-right-color: rgb(70, 70, 70); border-top-color: rgb(70, 70, 70); border-bottom-color: rgb(70, 70, 70); padding-top: 2px; padding-right: 4px; padding-left: 4px; border-bottom-width: 2px;">
+                        <ui:Label tabindex="-1" text="Follow" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Follow" style="-unity-font-style: bold;" />
+                        <ui:ListView binding-path="Waypoints" view-data-key="Waypoints" show-border="true" reorderable="true" horizontal-scrolling="true" show-foldout-header="true" show-add-remove-footer="true" header-title="Waypoints" reorder-mode="Animated" name="Waypoints" style="-unity-font-style: normal;" />
+                        <ui:EnumField label="Mode" type="UnityEngine.TextAlignment, UnityEngine.TextRenderingModule" value="Center" name="Mode" binding-path="Mode" style="-unity-font-style: normal;" />
+                        <ui:FloatField label="Follow Force" value="42,2" binding-path="FollowForce" name="FollowForce" style="-unity-font-style: normal;" />
+                        <ui:FloatField label="Max Velocity" value="0" name="MaxVelocity" binding-path="MaxVelocity" style="-unity-font-style: normal;" />
+                        <ui:FloatField label="Radius" value="0" binding-path="Radius" name="Radius" style="-unity-font-style: normal;" />
+                    </ui:IMGUIContainer>
+                    <ui:IMGUIContainer name="Break" style="margin-top: 2px; margin-right: 4px; margin-left: 4px; padding-top: 2px; padding-right: 4px; padding-left: 4px;">
+                        <ui:Label tabindex="-1" text="Break" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Break" style="-unity-font-style: bold;" />
+                        <ui:Toggle label="Breakable" binding-path="Breakable" name="Breakable" style="-unity-font-style: normal;" />
+                        <ui:FloatField label="Break Threshold" value="0" name="BreakThreshold" binding-path="BreakThreshold" style="-unity-font-style: normal;" />
+                    </ui:IMGUIContainer>
+                </ui:Foldout>
+            </ui:IMGUIContainer>
+            <ui:Foldout text="Force Stand" name="ForceStand" style="width: 100%; -unity-font-style: bold;">
+                <ui:FloatField label="Stand Force" value="42,2" binding-path="StandForce" name="StandForce" />
+            </ui:Foldout>
+        </ui:Foldout>
+    </ui:IMGUIContainer>
+    <ui:Button text="Save" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Save" />
+</ui:UXML>

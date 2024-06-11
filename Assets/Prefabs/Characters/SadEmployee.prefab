@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4900488408197695142}
   - component: {fileID: 2687778008344581049}
+  - component: {fileID: 6127879864164447715}
+  - component: {fileID: 8111053991781683844}
+  - component: {fileID: 8660804521692800999}
   m_Layer: 0
   m_Name: SadEmployee
   m_TagString: Untagged
@@ -67,6 +70,53 @@ MonoBehaviour:
   RandomizeTimeBT: 1
   minimalTimeBT: 3
   maximalTimeBT: 7
+--- !u!114 &6127879864164447715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729581769014990990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ca6dde24f992843848540097fb14bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8111053991781683844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729581769014990990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed6d6395712d4ac4db86deb344267a0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &8660804521692800999
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729581769014990990}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5854030077122737879
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,7 +128,6 @@ GameObject:
   - component: {fileID: 526313652939607811}
   - component: {fileID: 3453393572106128588}
   - component: {fileID: 5052819229341509830}
-  - component: {fileID: 9152537750585010988}
   m_Layer: 0
   m_Name: 0001.png0001
   m_TagString: Untagged
@@ -95,7 +144,7 @@ Transform:
   m_GameObject: {fileID: 5854030077122737879}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23, y: 1.13, z: 3.6378975}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.06, y: 0.06, z: 0.06}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -174,24 +223,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!65 &9152537750585010988
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5854030077122737879}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9.1, y: 20.48, z: 6.39}
-  m_Center: {x: 0, y: 0.84, z: 0}

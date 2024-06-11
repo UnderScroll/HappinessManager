@@ -87,6 +87,21 @@ public class UI_HUD : MonoBehaviour
 
         //AkSoundEngine.PostEvent("Play_UI_money_spent", gameObject);
     }
+
+    private float GetSpentMoney()
+    {
+        return _gameManager.Builder.SpentMoney;
+    }
+
+    private float GetBudgetLimit()
+    {
+        BudgetLimit budgetLimitRule = (BudgetLimit)_gameManager.RuleManager.Rules.Find(rule => { return rule.Type == "BudgetLimit"; });
+
+        if (budgetLimitRule == null)
+            return -1f;
+
+        return budgetLimitRule.Budget;
+    }
     #endregion
 
     #region Construct Menu Initialisation
@@ -107,6 +122,7 @@ public class UI_HUD : MonoBehaviour
         else
             CloseMenu();
     }
+
     public void InitDecoMenu()
     {
         if (actualMenu == null)

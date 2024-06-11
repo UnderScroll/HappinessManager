@@ -1,4 +1,5 @@
 using Builder;
+using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Events;
@@ -68,6 +69,37 @@ namespace Simulation
 
             instance.transform.Translate(new Vector3(cellData.Position.x, cellData.Position.y, cellData.Position.z));
             _instances[cellData.Position.x, cellData.Position.y, cellData.Position.z] = instance;
+
+            if (cellData.Type.IsEmployee)
+            {
+                EmployeeCellData employeeCell = (EmployeeCellData)cellData;
+
+                //ForceStand
+                ForceStand forceStand = instance.AddComponent<ForceStand>();
+                forceStand.StandForce = employeeCell.Movement.StandForce;
+
+                if (employeeCell.Movement.HasFollowPath)
+                {
+                    //FollowPath
+                    FollowPath followPath = instance.AddComponent<FollowPath>();
+                    followPath.Breakable = employeeCell.Movement.Breakable;
+                    followPath.BreakThreshold = employeeCell.Movement.BreakThreshold;
+                    followPath.Waypoints = employeeCell.Movement.Waypoints;
+                    followPath.OffsetWaypoints = new List<Vector3>();
+                    foreach (Vector3 waypoint in followPath.Waypoints)
+                        followPath.OffsetWaypoints.Add(waypoint + _structureOrigin.position);
+                    followPath.FollowForce = employeeCell.Movement.FollowForce;
+                    followPath.FollowMode = employeeCell.Movement.Mode;
+                    followPath.Radius = employeeCell.Movement.Radius;
+                    followPath.maxVelocity = employeeCell.Movement.MaxVelocity;
+
+                    //EmployeeMovement
+                    EmployeeMovement employeeMovement = instance.AddComponent<EmployeeMovement>();
+                    instance.TryGetComponent(out employeeMovement.AlignToCamera);
+                    employeeMovement.TryGetComponent(out employeeMovement.ForceStand);
+                    employeeMovement.TryGetComponent(out employeeMovement.FollowPath);
+                }
+            }
 
             return instance;
         }

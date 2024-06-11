@@ -9,7 +9,7 @@ namespace LevelLoader
         public List<Level> Levels;
 
         private GameManager _gameManager;
-        public uint _CurrentLevelIndex;
+        public uint CurrentLevelIndex;
 
         [HideInInspector]
         public UI_HUD UI_HUD;
@@ -21,20 +21,17 @@ namespace LevelLoader
             if (!TryGetComponent(out _gameManager))
                 Debug.LogError("Failted to get the Game Manager in LevelLoader");
 
-            _CurrentLevelIndex = 0;
+            CurrentLevelIndex = 0;
         }
-        private void Start()
-        {
-            UI_HUD.GoToNextFloor += LoadNextFloor;
-        }
+
         public void ReloadLevel()
         {
-            LoadLevel(_CurrentLevelIndex);
+            LoadLevel(CurrentLevelIndex);
         }
 
         public void LoadNextLevel()
         {
-            uint nextLevelIndex = _CurrentLevelIndex + 1;
+            uint nextLevelIndex = CurrentLevelIndex + 1;
             if (!(nextLevelIndex < Levels.Count))
             {
                 Debug.LogWarning($"Tried to load level {nextLevelIndex} but there is no such level, trying to load next scene");
@@ -44,29 +41,23 @@ namespace LevelLoader
                     return;
                 }
 
-                // Coroutine UI Entre les niveaux 
-                // Quand coroutine finie : loadscene
-                UI_HUD.DisplayNextFloorUI?.Invoke();
+                SceneManager.LoadScene(nextFloorname, LoadSceneMode.Single);
                 return;
             }
 
-            _CurrentLevelIndex++;
-            LoadLevel(_CurrentLevelIndex);
+            CurrentLevelIndex++;
+            LoadLevel(CurrentLevelIndex);
         }
-        private void LoadNextFloor()
-        {
-            Debug.Log("flqifjhlfqz");
-            SceneManager.LoadScene(nextFloorname, LoadSceneMode.Single);
-        }
+
         public void LoadPreviousLevel()
         {
-            if (_CurrentLevelIndex == 0)
+            if (CurrentLevelIndex == 0)
             {
                 Debug.LogWarning($"Tried to load previous level but there is no such level");
                 return;
             }
 
-            LoadLevel(--_CurrentLevelIndex);
+            LoadLevel(--CurrentLevelIndex);
         }
 
         public void LoadLevel(uint index)
@@ -78,18 +69,18 @@ namespace LevelLoader
         {
             Debug.Log($"Loading {level.name}");
 
-            if (_CurrentLevelIndex == 0) //If loading the first level of the floor, play music and ambiance
+            if (CurrentLevelIndex==0) //If loading the first level of the floor, play music and ambiance
                 _gameManager.SoundManager.PLayOnFirstLevelLoaded();
-
-            _gameManager.ResetSimulation();
-
+            
+            _gameManager.ResetSimulation();   
+            
             UnloadCurrentLevel();
 
             _gameManager.Builder.Level = Instantiate(level);
 
             _gameManager.Builder.Initialize();
 
-            if (level.WindDirection.magnitude > 0 && level.WindStrength > 0)
+            if (level.IsWindEnabled)
             {
                 level.WindDirection.Normalize();
                 Physics.gravity = new Vector3(0, -9.81f, 0) + level.WindDirection * level.WindStrength;
@@ -99,12 +90,8 @@ namespace LevelLoader
                 Physics.gravity = new Vector3(0, -9.81f, 0);
             }
 
-            Debug.Log(level.WindStrength);
-            float ForceVent = level.WindStrength;
-            AkSoundEngine.SetRTPCValue("Wind_Strength", ForceVent, gameObject);
-
             _gameManager.RuleManager.Reset();
-
+            
             _gameManager.RuleManager.Rules = level.Rules;
             _gameManager.RuleManager.Initialize();
 
@@ -113,8 +100,8 @@ namespace LevelLoader
             _gameManager.SoundManager.PlayOnBuilding();
 
             //Load Placeableblocks in HUD
-            UI_HUD.blocks = level.PlaceableCellTypes.Get();
-
+            if (UI_HUD != null)
+                UI_HUD.blocks = level.PlaceableCellTypes.Get();
         }
 
         public void UnloadCurrentLevel()
