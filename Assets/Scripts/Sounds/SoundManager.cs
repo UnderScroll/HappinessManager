@@ -53,16 +53,20 @@ public class SoundManager : MonoBehaviour
     public void PlayOnBuilding()
     {
         AkSoundEngine.PostEvent($"Play_Music_SetSwitch_build", gameObject);
-        AkSoundEngine.PostEvent("Play_Menu_unpaused", gameObject);
+        AkSoundEngine.PostEvent("Play_UI_Restart_Level", gameObject);
     }
 
     public void PlayOnLevelFailed()
     {
         AkSoundEngine.PostEvent("Play_Music_SetSwitch_defeat", gameObject);
+        AkSoundEngine.PostEvent("Play_Menu_paused", gameObject);
+        AkSoundEngine.PostEvent("Play_Menu_Settings_onMenuOpen", gameObject);
     }
 
     public void PlayOnLevelValidated()
     {
         AkSoundEngine.PostEvent("Play_Music_SetSwitch_victory", gameObject);
+        AkSoundEngine.PostEvent("Play_Menu_select", gameObject);
+        AkSoundEngine.PostEvent("Play_Menu_Settings_onMenuOpen", gameObject);
     }
 }

@@ -149,6 +149,7 @@ namespace AK
         static const AkUniqueID PLAY_UI_ITEM_ONTABHOVER_CONCRETEBLOCK = 3976616902U;
         static const AkUniqueID PLAY_UI_ITEM_ONTABHOVER_SOAPBLOCK = 2412542306U;
         static const AkUniqueID PLAY_UI_MONEY_SPENT = 681896400U;
+        static const AkUniqueID PLAY_UI_RESTART_LEVEL = 3917633987U;
         static const AkUniqueID PLAY_WIND_GUST = 563870990U;
         static const AkUniqueID SETRTPC_SENSITITITY_FILTER_0 = 3886903300U;
         static const AkUniqueID SETRTPC_SENSITITITY_FILTER_1 = 3886903301U;

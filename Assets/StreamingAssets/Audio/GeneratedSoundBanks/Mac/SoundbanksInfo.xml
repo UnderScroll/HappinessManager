@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{19BD72C1-F5F9-6C7B-F485-119A10F80A7D}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D1EC7C6D-83C1-392D-1E82-595D5AD67F71}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -80,7 +80,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{2205F69E-863D-6B8E-F9D9-32CCF06F5E46}">
+		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{6DC19546-CF63-DB46-923E-3624A3115E23}">
 			<ShortName>HM_Global_SB</ShortName>
 			<Path>HM_Global_SB.bnk</Path>
 			<Media>
@@ -212,13 +212,17 @@
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity-002.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity-002_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="101966464" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>level restart v2-glued-02.wav</ShortName>
+					<CachePath>SFX/level restart v2-glued-02_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="102701038" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Comptable Hereuse-003.wav</ShortName>
 					<CachePath>SFX/Comptable Hereuse-003_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="106632701" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_Menu_paused.wav</ShortName>
-					<CachePath>SFX/HM_SFX_RC_Menu_paused_FD4DF9DE.wem</CachePath>
+					<CachePath>SFX/HM_SFX_RC_Menu_paused_586349A2.wem</CachePath>
 				</File>
 				<File Id="110014753" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity-008.wav</ShortName>
@@ -496,10 +500,6 @@
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_high_velocity 4.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_high_velocity 4_FD4DF9DE.wem</CachePath>
 				</File>
-				<File Id="280424840" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>HM_SFX_OS_UI_item tab hover basic.wav</ShortName>
-					<CachePath>SFX/HM_SFX_OS_UI_item tab hover basic_FD4DF9DE.wem</CachePath>
-				</File>
 				<File Id="281664511" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WIND GUSTS-001.wav</ShortName>
 					<CachePath>SFX/WIND GUSTS-001_FD4DF9DE.wem</CachePath>
@@ -735,6 +735,10 @@
 				<File Id="447691927" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_UI_SC_Menu_dialogue bubble 4.wav</ShortName>
 					<CachePath>SFX/HM_UI_SC_Menu_dialogue bubble 4_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="453738708" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>level restart v2-glued.wav</ShortName>
+					<CachePath>SFX/level restart v2-glued_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="455558146" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>teambuilding-005.wav</ShortName>
@@ -1008,6 +1012,10 @@
 					<ShortName>HM_SFX_SC_Build_basic block remove-001.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_basic block remove-001_62718570.wem</CachePath>
 				</File>
+				<File Id="668227179" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui tabhover wood-glued.wav</ShortName>
+					<CachePath>SFX/ui tabhover wood-glued_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="669392195" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 9.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 9_FD4DF9DE.wem</CachePath>
@@ -1019,6 +1027,10 @@
 				<File Id="677195793" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>intern transi.wav</ShortName>
 					<CachePath>SFX/intern transi_B02CE968.wem</CachePath>
+				</File>
+				<File Id="677474084" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>level restart v2-glued-01.wav</ShortName>
+					<CachePath>SFX/level restart v2-glued-01_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="683558517" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>boss vdef 125 defeat.wav</ShortName>
@@ -1318,7 +1330,7 @@
 				</File>
 				<File Id="886483541" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_Menu_paused 2.wav</ShortName>
-					<CachePath>SFX/HM_SFX_RC_Menu_paused 2_FD4DF9DE.wem</CachePath>
+					<CachePath>SFX/HM_SFX_RC_Menu_paused 2_699899E6.wem</CachePath>
 				</File>
 				<File Id="891704891" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss Pensif 2.wav</ShortName>
@@ -1351,6 +1363,10 @@
 				<File Id="902669382" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 12.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 12_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="903204610" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>level restart v2-glued-03.wav</ShortName>
+					<CachePath>SFX/level restart v2-glued-03_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="904041334" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_UI_SC_Menu_dialogue bubble 5.wav</ShortName>
@@ -1925,146 +1941,233 @@
 					<MediaRefs>
 						<MediaRef Id="144187464"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="3777215715" Name="Play_Bark_Debut_Etage_Boss1" DurationType="OneShot" DurationMin="6.7379584" DurationMax="6.7379584">
 					<MediaRefs>
 						<MediaRef Id="113865186"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="3777215712" Name="Play_Bark_Debut_Etage_Boss2" DurationType="OneShot" DurationMin="0.98647916" DurationMax="0.98647916">
 					<MediaRefs>
 						<MediaRef Id="387851901"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="3791513939" Name="Play_Bark_Debut_Etage_Cafeteria0" DurationType="OneShot" DurationMin="6.2411456" DurationMax="6.2411456">
 					<MediaRefs>
 						<MediaRef Id="643436153"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="3791513938" Name="Play_Bark_Debut_Etage_Cafeteria1" DurationType="OneShot" DurationMin="10.453542" DurationMax="10.453542">
 					<MediaRefs>
 						<MediaRef Id="143027474"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="3791513937" Name="Play_Bark_Debut_Etage_Cafeteria2" DurationType="OneShot" DurationMin="3.3841875" DurationMax="3.3841875">
 					<MediaRefs>
 						<MediaRef Id="658597203"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="3791513936" Name="Play_Bark_Debut_Etage_Cafeteria3" DurationType="OneShot" DurationMin="5.9169164" DurationMax="5.9169164">
 					<MediaRefs>
 						<MediaRef Id="35796486"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="3791513943" Name="Play_Bark_Debut_Etage_Cafeteria4" DurationType="OneShot" DurationMin="1.6586041" DurationMax="1.6586041">
 					<MediaRefs>
 						<MediaRef Id="475965853"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="3791513942" Name="Play_Bark_Debut_Etage_Cafeteria5" DurationType="OneShot" DurationMin="4.4696455" DurationMax="4.4696455">
 					<MediaRefs>
 						<MediaRef Id="147893075"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="3791513941" Name="Play_Bark_Debut_Etage_Cafeteria6" DurationType="OneShot" DurationMin="8.417438" DurationMax="8.417438">
 					<MediaRefs>
 						<MediaRef Id="947822141"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="213234512" Name="Play_Bark_Debut_Etage_Coworking0" DurationType="OneShot" DurationMin="6.7463126" DurationMax="6.7463126">
 					<MediaRefs>
 						<MediaRef Id="596872952"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="213234513" Name="Play_Bark_Debut_Etage_Coworking1" DurationType="OneShot" DurationMin="8.58323" DurationMax="8.58323">
 					<MediaRefs>
 						<MediaRef Id="19070243"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="213234514" Name="Play_Bark_Debut_Etage_Coworking2" DurationType="OneShot" DurationMin="7.0802917" DurationMax="7.0802917">
 					<MediaRefs>
 						<MediaRef Id="810115726"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="213234515" Name="Play_Bark_Debut_Etage_Coworking3" DurationType="OneShot" DurationMin="5.3614793" DurationMax="5.3614793">
 					<MediaRefs>
 						<MediaRef Id="393348752"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="213234516" Name="Play_Bark_Debut_Etage_Coworking4" DurationType="OneShot" DurationMin="7.5253124" DurationMax="7.5253124">
 					<MediaRefs>
 						<MediaRef Id="22990834"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="3161721327" Name="Play_Bark_Debut_Etage_Intern0" DurationType="OneShot" DurationMin="1.2198542" DurationMax="1.2198542">
 					<MediaRefs>
 						<MediaRef Id="800262024"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="3161721326" Name="Play_Bark_Debut_Etage_Intern1" DurationType="OneShot" DurationMin="6.7725205" DurationMax="6.7725205">
 					<MediaRefs>
 						<MediaRef Id="549173016"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="3161721325" Name="Play_Bark_Debut_Etage_Intern2" DurationType="OneShot" DurationMin="3.6638331" DurationMax="3.6638331">
 					<MediaRefs>
 						<MediaRef Id="1032483637"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="3161721324" Name="Play_Bark_Debut_Etage_Intern3" DurationType="OneShot" DurationMin="4.7593956" DurationMax="4.7593956">
 					<MediaRefs>
 						<MediaRef Id="1044776735"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="3161721323" Name="Play_Bark_Debut_Etage_Intern4" DurationType="OneShot" DurationMin="8.476854" DurationMax="8.476854">
 					<MediaRefs>
 						<MediaRef Id="151326656"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="3161721322" Name="Play_Bark_Debut_Etage_Intern5" DurationType="OneShot" DurationMin="5.7356873" DurationMax="5.7356873">
 					<MediaRefs>
 						<MediaRef Id="642796792"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="3161721321" Name="Play_Bark_Debut_Etage_Intern6" DurationType="OneShot" DurationMin="5.5545416" DurationMax="5.5545416">
 					<MediaRefs>
 						<MediaRef Id="152672913"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="3161721320" Name="Play_Bark_Debut_Etage_Intern7" DurationType="OneShot" DurationMin="6.4631042" DurationMax="6.4631042">
 					<MediaRefs>
 						<MediaRef Id="229625142"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="1073735278" Name="Play_Bark_Debut_Etage_Teambuilding0" DurationType="OneShot" DurationMin="3.4098957" DurationMax="3.4098957">
 					<MediaRefs>
 						<MediaRef Id="318756339"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="1073735279" Name="Play_Bark_Debut_Etage_Teambuilding1" DurationType="OneShot" DurationMin="6.5013747" DurationMax="6.5013747">
 					<MediaRefs>
 						<MediaRef Id="690924011"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="1073735276" Name="Play_Bark_Debut_Etage_Teambuilding2" DurationType="OneShot" DurationMin="4.7850623" DurationMax="4.7850623">
 					<MediaRefs>
 						<MediaRef Id="839769607"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="1073735277" Name="Play_Bark_Debut_Etage_Teambuilding3" DurationType="OneShot" DurationMin="5.6200414" DurationMax="5.6200414">
 					<MediaRefs>
 						<MediaRef Id="252832989"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="1073735274" Name="Play_Bark_Debut_Etage_Teambuilding4" DurationType="OneShot" DurationMin="9.314751" DurationMax="9.314751">
 					<MediaRefs>
 						<MediaRef Id="455558146"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="1073735275" Name="Play_Bark_Debut_Etage_Teambuilding5" DurationType="OneShot" DurationMin="4.7771873" DurationMax="4.7771873">
 					<MediaRefs>
 						<MediaRef Id="795657666"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="1330272201" Name="Play_Bark_DirCrea_agace" DurationType="OneShot" DurationMin="1.6796459" DurationMax="2.017604">
 					<MediaRefs>
@@ -2401,7 +2504,7 @@
 						<MediaRef Id="824409619"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2959211488" Name="Play_Menu_paused" DurationType="OneShot" DurationMin="1.8350656" DurationMax="2.3484085">
+				<Event Id="2959211488" Name="Play_Menu_paused" DurationType="OneShot" DurationMin="1.7723438" DurationMax="2.1905851">
 					<MediaRefs>
 						<MediaRef Id="106632701"/>
 						<MediaRef Id="886483541"/>
@@ -2930,9 +3033,9 @@
 						<MediaRef Id="1067963033"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2849301463" Name="Play_UI_item_onTabHover_BasicBlock" DurationType="OneShot" DurationMin="1.6677917" DurationMax="1.6677917">
+				<Event Id="2849301463" Name="Play_UI_item_onTabHover_BasicBlock" DurationType="OneShot" DurationMin="0.59579164" DurationMax="0.59579164">
 					<MediaRefs>
-						<MediaRef Id="280424840"/>
+						<MediaRef Id="668227179"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3976616902" Name="Play_UI_item_onTabHover_ConcreteBlock" DurationType="OneShot" DurationMin="1.5971875" DurationMax="1.5971875">
@@ -2950,6 +3053,14 @@
 						<MediaRef Id="146743345"/>
 						<MediaRef Id="485974224"/>
 						<MediaRef Id="971963527"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3917633987" Name="Play_UI_Restart_Level" DurationType="OneShot" DurationMin="0.338833" DurationMax="0.5382337">
+					<MediaRefs>
+						<MediaRef Id="101966464"/>
+						<MediaRef Id="453738708"/>
+						<MediaRef Id="677474084"/>
+						<MediaRef Id="903204610"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="563870990" Name="Play_Wind_Gust" DurationType="OneShot" DurationMin="12.14852" DurationMax="13.389334">
@@ -2992,5 +3103,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CB642250-6AE7-FE4A-07E4-6FCA5FD04CF9}</FileHash>
+	<FileHash>{22C31741-9455-2F38-2155-C275F79645CF}</FileHash>
 </SoundBanksInfo>

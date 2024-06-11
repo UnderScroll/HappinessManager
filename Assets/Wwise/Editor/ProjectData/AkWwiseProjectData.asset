@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: c2d0754eea2b554ead038a4e85dfb0da
     GuidInternal: 
-    m_lastTime: -8584835713996380120
+    m_lastTime: -8584834949588060631
     List:
     - name: AMBIANCE
       guid: 7e303c6a36077045a549d2b2c039cff3
@@ -190,7 +190,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\WU_HM_SoundBanks
     guid: d527a65720db2546b7a23303c255c21b
     GuidInternal: 
-    m_lastTime: -8584835100629638339
+    m_lastTime: -8584834964111956897
     List:
     - name: HM_Global_SB
       guid: e1c12577d86f0c41a82a7bdcdb4ef626
@@ -218,7 +218,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a2847257a7000f4e81d18dd3626acf80
     GuidInternal: 
-    m_lastTime: -8584835101448552774
+    m_lastTime: -8584834976070823068
     List: []
   - PhysicalPath: Events\WU_HM_Events.wwu
     PathAndIcons:
@@ -231,7 +231,7 @@ MonoBehaviour:
     ParentPath: Events\WU_HM_Events
     guid: a44afb18422e3e4bbc589ac1581aef04
     GuidInternal: 
-    m_lastTime: -8584835100629509482
+    m_lastTime: -8584834947606369559
     List:
     - name: Amb
       guid: 45ce627f733a4f4d90717e8757beb9ba
@@ -3129,8 +3129,8 @@ MonoBehaviour:
         guid: 443d12c70c682f4fb86613d9e6b1ee69
       Path: Events\WU_HM_Events\Menu\Play_Menu_paused
       maxAttenuation: 0
-      maxDuration: 2.3484085
-      minDuration: 1.8350656
+      maxDuration: 2.1905851
+      minDuration: 1.7723438
     - name: Play_Menu_select
       guid: 939fee28c97ee143822bddbc58c4d5b9
       id: 2167056030
@@ -3877,8 +3877,8 @@ MonoBehaviour:
         guid: 876db68237c46141be26f0b2c1c2aef2
       Path: Events\WU_HM_Events\Menu\UI\Play_UI_item_onTabHover_BasicBlock
       maxAttenuation: 0
-      maxDuration: 1.6677917
-      minDuration: 1.6677917
+      maxDuration: 0.59579164
+      minDuration: 0.59579164
     - name: Play_UI_item_onTabHover_ConcreteBlock
       guid: 4ad34c7d75d6174e89e3184d16beb0c2
       id: 3976616902
@@ -3948,6 +3948,29 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.4123439
       minDuration: 1.0178332
+    - name: Play_UI_Restart_Level
+      guid: 4f3ee0d14e32614ca3e8646992e88ec9
+      id: 3917633987
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Menu
+        ObjectType: 4
+        guid: 7c3b937848a465498b4d802019cfeba7
+      - ElementName: UI
+        ObjectType: 4
+        guid: 60e0becdee524d4e85b76661bd57fe6a
+      - ElementName: Play_UI_Restart_Level
+        ObjectType: 3
+        guid: 4f3ee0d14e32614ca3e8646992e88ec9
+      Path: Events\WU_HM_Events\Menu\UI\Play_UI_Restart_Level
+      maxAttenuation: 0
+      maxDuration: 0.5382337
+      minDuration: 0.338833
     - name: Play_Wind_Gust
       guid: fcc12d64b2b4f049954ae1c61e2f66f1
       id: 563870990
@@ -4497,7 +4520,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584901339025742451
     List: []
-  ExpandedFileSystemItemIds: a7000000a8000000ae000000
+  ExpandedFileSystemItemIds: 02000000a7000000a8000000ae000000
   ExpandedWaapiItemIds: 020000000400000016000000a7000000a8000000ae000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1

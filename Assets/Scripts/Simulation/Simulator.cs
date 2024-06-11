@@ -201,9 +201,9 @@ namespace Simulation
             if (!_isSimulationFailed)
             {
                 _gameManager.SoundManager.PlayOnLevelFailed();
-                _gameManager.UI_HUD.DisplayEndLevelPanel(false);
-                AkSoundEngine.PostEvent("Play_Menu_paused",gameObject);
+                _gameManager.UI_HUD.DisplayEndLevelPanel(false); 
             }
+
         }
     }
 }
