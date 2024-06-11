@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 727764307702962975}
   - component: {fileID: 4383583865233315339}
   - component: {fileID: 5706619324014812594}
+  - component: {fileID: -4537572473096841800}
   - component: {fileID: 5261995605009457822}
   m_Layer: 0
   m_Name: Stagiaire
@@ -177,6 +178,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31ca6dde24f992843848540097fb14bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4537572473096841800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8404514242365604220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed6d6395712d4ac4db86deb344267a0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!136 &5261995605009457822

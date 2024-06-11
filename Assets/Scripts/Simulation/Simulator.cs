@@ -63,10 +63,14 @@ namespace Simulation
             if (cellData.Type.IsEmployee)
             {
                 EmployeeCellData employeeCell = (EmployeeCellData)cellData;
+
+                //ForceStand
                 ForceStand forceStand = instance.AddComponent<ForceStand>();
                 forceStand.StandForce = employeeCell.Movement.StandForce;
+
                 if (employeeCell.Movement.HasFollowPath)
                 {
+                    //FollowPath
                     FollowPath followPath = instance.AddComponent<FollowPath>();
                     followPath.Breakable = employeeCell.Movement.Breakable;
                     followPath.BreakThreshold = employeeCell.Movement.BreakThreshold;
@@ -78,8 +82,14 @@ namespace Simulation
                     followPath.FollowMode = employeeCell.Movement.Mode;
                     followPath.Radius = employeeCell.Movement.Radius;
                     followPath.maxVelocity = employeeCell.Movement.MaxVelocity;
+
+                    //EmployeeMovement
+                    EmployeeMovement employeeMovement = instance.AddComponent<EmployeeMovement>();
+                    instance.TryGetComponent(out employeeMovement.AlignToCamera);
+                    employeeMovement.TryGetComponent(out employeeMovement.ForceStand);
+                    employeeMovement.TryGetComponent(out employeeMovement.FollowPath);
+
                 }
-                Debug.Log(employeeCell);
             }
 
             return instance;

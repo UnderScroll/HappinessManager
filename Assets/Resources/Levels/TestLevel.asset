@@ -1023,11 +1023,11 @@ MonoBehaviour:
     _types:
     - {fileID: 11400000, guid: 26323928fecd21440bbf81af0abd1f74, type: 2}
     - {fileID: 11400000, guid: c605ce3339acc0848ad3b079d2702916, type: 2}
+    - {fileID: 11400000, guid: d9a05ac1dc066214dbf3cd85af3dd533, type: 2}
     - {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
     - {fileID: 11400000, guid: cd54712c99a7ed14bbfc3768e1ac9abd, type: 2}
     - {fileID: 11400000, guid: a0f3c6f727e7ceb41b5073b250cbe1f3, type: 2}
     - {fileID: 11400000, guid: 8895af43bff26354ab76c4829d872b96, type: 2}
-    - {fileID: 11400000, guid: d9a05ac1dc066214dbf3cd85af3dd533, type: 2}
   PlaceableCellTypes:
     _types:
     - {fileID: 11400000, guid: 26323928fecd21440bbf81af0abd1f74, type: 2}
@@ -2558,11 +2558,11 @@ MonoBehaviour:
         - {x: 5, y: 3, z: 4}
         - {x: 5, y: 3, z: 3}
         Mode: 1
-        FollowForce: 40
+        FollowForce: 70
         MaxVelocity: 1.2
         Radius: 0.5
-        Breakable: 0
-        BreakThreshold: 0
+        Breakable: 1
+        BreakThreshold: 1
         StandForce: 300
     - rid: 109639139287367711
       type: {class: EmployeeCellData/MovementData, ns: Builder, asm: Assembly-CSharp}

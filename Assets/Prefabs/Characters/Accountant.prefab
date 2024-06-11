@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7884278403861706715}
   - component: {fileID: 8781019741520655919}
   - component: {fileID: -5015186186648710102}
+  - component: {fileID: 4868148503955336962}
   - component: {fileID: 1297858584007375296}
   m_Layer: 0
   m_Name: Accountant
@@ -71,6 +72,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31ca6dde24f992843848540097fb14bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4868148503955336962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2521658440973385892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed6d6395712d4ac4db86deb344267a0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!136 &1297858584007375296

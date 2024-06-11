@@ -21,6 +21,8 @@ public class EmployeeCollision : MonoBehaviour
                     forceStand.enabled = false;
                 if (TryGetComponent(out FollowPath followPath))
                     followPath.IsBroken = true;
+                if (TryGetComponent(out AlignToCamera alignToCamera))
+                    alignToCamera.enabled = false;
             }
             if (collisionForce > 3)
             {

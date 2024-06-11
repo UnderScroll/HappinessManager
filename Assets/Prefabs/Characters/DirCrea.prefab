@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3902290679973045276}
   - component: {fileID: 38324273098003343}
   - component: {fileID: 4952205577570464156}
+  - component: {fileID: -8804760422908806370}
   - component: {fileID: 4270101805864615229}
   m_Layer: 0
   m_Name: DirCrea
@@ -71,6 +72,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31ca6dde24f992843848540097fb14bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8804760422908806370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5787914380600964139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed6d6395712d4ac4db86deb344267a0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!136 &4270101805864615229

@@ -8,6 +8,7 @@ public class EmployeeMovement : MonoBehaviour
 {
     public ForceStand ForceStand;
     public FollowPath FollowPath;
+    public AlignToCamera AlignToCamera;
 
     private void Awake()
     {
@@ -20,6 +21,9 @@ public class EmployeeMovement : MonoBehaviour
     private void Update()
     {
         if (FollowPath.IsBroken)
+        {
             ForceStand.enabled = false;
+            AlignToCamera.enabled = false;
+        }
     }
 }

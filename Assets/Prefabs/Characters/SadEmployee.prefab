@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4900488408197695142}
   - component: {fileID: 2687778008344581049}
   - component: {fileID: 6127879864164447715}
+  - component: {fileID: 8111053991781683844}
   - component: {fileID: 8660804521692800999}
   m_Layer: 0
   m_Name: SadEmployee
@@ -71,6 +72,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31ca6dde24f992843848540097fb14bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8111053991781683844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729581769014990990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed6d6395712d4ac4db86deb344267a0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!136 &8660804521692800999
