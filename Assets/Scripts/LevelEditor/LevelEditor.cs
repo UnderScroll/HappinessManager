@@ -74,6 +74,9 @@ public partial class LevelEditor : MonoBehaviour
         //Draw alignment lines
         DrawAlignementLines();
 
+        if (Level == null)
+            return;
+
         foreach (CellData cellData in Level.Structure.Cells)
         {
             if (cellData == null || !cellData.Type.IsEmployee)
@@ -262,7 +265,6 @@ public partial class LevelEditor : MonoBehaviour
         WindStrength = 0;
         WindDirection = new(0, 0, 0);
         IsWindEnabled = false;
-        OnCurrenCellPositionChanged();
         PlaceableBlocks = new();
     }
 
@@ -273,7 +275,6 @@ public partial class LevelEditor : MonoBehaviour
         WindStrength = Level.WindStrength;
         WindDirection = Level.WindDirection;
         IsWindEnabled = Level.IsWindEnabled;
-        OnCurrenCellPositionChanged();
         PlaceableBlocks = Level.PlaceableCellTypes.Get();
         Initialize();
     }

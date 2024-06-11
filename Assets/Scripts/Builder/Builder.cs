@@ -229,11 +229,11 @@ namespace Builder
                 return;
             }
 
-            Material[] previewMaterial = { _previewBlockRenderer.materials[0] };
+            Material[] previewMaterial = { _previewBlockRenderer.materials[1] };
 
             _previewBlockRenderer.materials = previewMaterial;
-            _previewBlockRenderer.material.SetFloat("_Transparency_level", 0.5f);
-            _previewBlockRenderer.material.SetInteger("_Dithering", 1);
+            _previewBlockRenderer.material.SetFloat("_Transparency_level", 1.1f);
+            _previewBlockRenderer.material.SetFloat("_Dithering", 1);
         }
     }
 }

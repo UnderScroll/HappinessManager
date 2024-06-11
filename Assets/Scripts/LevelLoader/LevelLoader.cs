@@ -9,7 +9,7 @@ namespace LevelLoader
         public List<Level> Levels;
 
         private GameManager _gameManager;
-        private uint _CurrentLevelIndex;
+        public uint CurrentLevelIndex;
 
         [HideInInspector]
         public UI_HUD UI_HUD;
@@ -21,17 +21,17 @@ namespace LevelLoader
             if (!TryGetComponent(out _gameManager))
                 Debug.LogError("Failted to get the Game Manager in LevelLoader");
 
-            _CurrentLevelIndex = 0;
+            CurrentLevelIndex = 0;
         }
 
         public void ReloadLevel()
         {
-            LoadLevel(_CurrentLevelIndex);
+            LoadLevel(CurrentLevelIndex);
         }
 
         public void LoadNextLevel()
         {
-            uint nextLevelIndex = _CurrentLevelIndex + 1;
+            uint nextLevelIndex = CurrentLevelIndex + 1;
             if (!(nextLevelIndex < Levels.Count))
             {
                 Debug.LogWarning($"Tried to load level {nextLevelIndex} but there is no such level, trying to load next scene");
@@ -45,19 +45,19 @@ namespace LevelLoader
                 return;
             }
 
-            _CurrentLevelIndex++;
-            LoadLevel(_CurrentLevelIndex);
+            CurrentLevelIndex++;
+            LoadLevel(CurrentLevelIndex);
         }
 
         public void LoadPreviousLevel()
         {
-            if (_CurrentLevelIndex == 0)
+            if (CurrentLevelIndex == 0)
             {
                 Debug.LogWarning($"Tried to load previous level but there is no such level");
                 return;
             }
 
-            LoadLevel(--_CurrentLevelIndex);
+            LoadLevel(--CurrentLevelIndex);
         }
 
         public void LoadLevel(uint index)
@@ -69,7 +69,7 @@ namespace LevelLoader
         {
             Debug.Log($"Loading {level.name}");
 
-            if (_CurrentLevelIndex==0) //If loading the first level of the floor, play music and ambiance
+            if (CurrentLevelIndex==0) //If loading the first level of the floor, play music and ambiance
                 _gameManager.SoundManager.PLayOnFirstLevelLoaded();
             
             _gameManager.ResetSimulation();   
