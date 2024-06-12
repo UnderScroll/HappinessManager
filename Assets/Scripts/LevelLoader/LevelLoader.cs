@@ -66,6 +66,7 @@ namespace LevelLoader
         {
             LoadLevel(Levels[(int)index]);
             UI_HUD.ResetConstructMenu();
+            UI_HUD.ReloadBudgetUI();
         }
 
         private void LoadLevel(Level level)
@@ -113,7 +114,6 @@ namespace LevelLoader
         }
         private void LoadNextFloor()
         {
-            Debug.Log("flqifjhlfqz");
             SceneManager.LoadScene(nextFloorname, LoadSceneMode.Single);
         }
     }
