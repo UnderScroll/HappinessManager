@@ -1022,6 +1022,8 @@ MonoBehaviour:
   CellTypes:
     _types:
     - {fileID: 11400000, guid: 26323928fecd21440bbf81af0abd1f74, type: 2}
+    - {fileID: 11400000, guid: c605ce3339acc0848ad3b079d2702916, type: 2}
+    - {fileID: 11400000, guid: d9a05ac1dc066214dbf3cd85af3dd533, type: 2}
     - {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
     - {fileID: 11400000, guid: cd54712c99a7ed14bbfc3768e1ac9abd, type: 2}
     - {fileID: 11400000, guid: 4932cefae2f5d6243ba3303a90c89af8, type: 2}
@@ -1029,8 +1031,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 2357fa008796e02428d8835c8ed041c1, type: 2}
     - {fileID: 11400000, guid: e675ecf6278550442b8048e16f6fc179, type: 2}
     - {fileID: 11400000, guid: 578133f102ae029498d62dc8bcceb5dd, type: 2}
-    - {fileID: 11400000, guid: c605ce3339acc0848ad3b079d2702916, type: 2}
-    - {fileID: 11400000, guid: d9a05ac1dc066214dbf3cd85af3dd533, type: 2}
   PlaceableCellTypes:
     _types:
     - {fileID: 11400000, guid: 26323928fecd21440bbf81af0abd1f74, type: 2}
@@ -2571,7 +2571,7 @@ MonoBehaviour:
         - {x: 5, y: 3, z: 7}
         Mode: 1
         FollowForce: 30
-        MaxVelocity: 1.3
+        MaxVelocity: 0.6
         Radius: 0.2
         Breakable: 1
         BreakThreshold: 0.2
