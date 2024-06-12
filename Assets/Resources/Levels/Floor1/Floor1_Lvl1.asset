@@ -478,7 +478,7 @@ MonoBehaviour:
       - rid: -2
       - rid: -2
       - rid: -2
-      - rid: -2
+      - rid: 978416099915202665
       - rid: -2
       - rid: -2
       - rid: -2
@@ -571,7 +571,7 @@ MonoBehaviour:
       - rid: -2
       - rid: -2
       - rid: -2
-      - rid: -2
+      - rid: 978416099915202666
       - rid: -2
       - rid: -2
       - rid: -2
@@ -2588,6 +2588,36 @@ MonoBehaviour:
           x: 9
           y: 0
           z: 9
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978416099915202665
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 25f7fa0d341b19b408ff87423e1ffb0e, type: 2}
+        Position:
+          x: 4
+          y: 6
+          z: 3
+        _connections:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 978416099915202666
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 25f7fa0d341b19b408ff87423e1ffb0e, type: 2}
+        Position:
+          x: 5
+          y: 5
+          z: 6
         _connections:
         - {fileID: 0}
         - {fileID: 0}
