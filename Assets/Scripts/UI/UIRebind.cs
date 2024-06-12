@@ -52,9 +52,17 @@ public class UIRebind : MonoBehaviour
     [SerializeField]
     private GameObject _overlay;
     [SerializeField]
-    private Image _iconDevice1;
+    private GameObject _iconDevice1;
     [SerializeField]
-    private Image _iconDevice2;
+    private GameObject _iconDevice2;
+
+    [Header("Mouse Icons")]
+    [SerializeField]
+    private Sprite _LMBIcon;
+    [SerializeField]
+    private Sprite _RMBIcon;
+    [SerializeField]
+    private Sprite _MMBIcon;
 
     public void OnEnable()
     {
@@ -111,6 +119,7 @@ public class UIRebind : MonoBehaviour
     public void ResetToDefault()
     {
         ActionRef.action.RemoveBindingOverride(0);
+        UpdateBindingDisplay();
     }
 
     public void UpdateActionLabel()
@@ -120,17 +129,35 @@ public class UIRebind : MonoBehaviour
 
     public void UpdateBindingDisplay()
     {
-        ActionRef.action.GetBindingDisplayString(0, out string deviceLayoutName, out string _);
-        Debug.Log($"Device : {deviceLayoutName}");
+        string displayString = ActionRef.action.GetBindingDisplayString(0, out string deviceLayoutName, out string controlPath);
+        //Debug.Log($"Device : {deviceLayoutName}");
         switch (deviceLayoutName)
         {
             case "Keyboard":
                 _iconDevice1.gameObject.SetActive(false);
                 _iconDevice2.gameObject.SetActive(true);
+                TextMeshProUGUI keyLabel = _iconDevice2.GetComponentInChildren<TextMeshProUGUI>();
+                keyLabel.text = displayString.ToUpper();
                 break;
             case "Mouse":
                 _iconDevice1.gameObject.SetActive(true);
                 _iconDevice2.gameObject.SetActive(false);
+                //Debug.Log(controlPath);
+                switch (controlPath)
+                {
+                    case "leftButton":
+                        _iconDevice1.GetComponent<Image>().sprite = _LMBIcon;
+                        break;
+                    case "rightButton":
+                        _iconDevice1.GetComponent<Image>().sprite = _RMBIcon;
+                        break;
+                    case "middleButton":
+                        _iconDevice1.GetComponent<Image>().sprite = _MMBIcon;
+                        break;
+                    default:
+                        Debug.LogWarning("Control not known");
+                        break;
+                }
                 break;
             default:
                 Debug.LogWarning("Device used not compatible");
