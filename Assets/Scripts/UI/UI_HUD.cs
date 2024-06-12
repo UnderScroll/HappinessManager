@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using UnityEngine.Timeline;
 using System.Threading;
+using Unity.VisualScripting;
 
 public class UI_HUD : MonoBehaviour
 {
@@ -59,7 +60,7 @@ public class UI_HUD : MonoBehaviour
         CloseNotebook();
         DisplayNextFloorUI += DisplayUI;
 
-        // TODO : init money value from level
+        InitBudget();
         UpdateMoneyText();
         UpdateBlockDescription();
     }
@@ -81,11 +82,15 @@ public class UI_HUD : MonoBehaviour
     #endregion
 
     #region Money
-    private void UpdateMoneyText()
+    public void UpdateMoneyText()
     {
-        text_money.text = money.ToString() + " $";
-
-        //AkSoundEngine.PostEvent("Play_UI_money_spent", gameObject);
+        float limit = GetBudgetLimit();
+        if (limit != -1f)
+        {
+            money = (int) (limit - GetSpentMoney());
+            text_money.text = money.ToString() + " $";
+            AkSoundEngine.PostEvent("Play_UI_money_spent", gameObject);
+        }
     }
 
     private float GetSpentMoney()
@@ -102,9 +107,14 @@ public class UI_HUD : MonoBehaviour
 
         return budgetLimitRule.Budget;
     }
+    public void ReloadBudgetUI()
+    {
+        InitBudget();
+        UpdateMoneyText();
+    }
     #endregion
 
-    #region Construct Menu Initialisation
+    #region Construct Menu 
 
     public void InitBlocsMenu()
     {
@@ -118,20 +128,29 @@ public class UI_HUD : MonoBehaviour
                 _go.GetComponent<UI_SelectableBlock>().ui_hud = this;
                 _go.GetComponent<UI_SelectableBlock>().blockInfo = cellType;
             }
+
+            if (selected != null)
+            {
+                List<UI_SelectableBlock> list = new();
+                list.AddRange(actualMenu.GetComponentsInChildren<UI_SelectableBlock>());
+
+                if (list.Count > 0)
+                {
+                    foreach (UI_SelectableBlock block in list)
+                    {
+                        if (IsThisBlockSelected(block.blockInfo))
+                        {
+                            SelectBlock(block.blockInfo);
+                        }
+                    }
+                }
+            }
+
         }
         else
             CloseMenu();
     }
 
-    public void InitDecoMenu()
-    {
-        if (actualMenu == null)
-        {
-            // do the thing
-        }
-        else
-            CloseMenu();
-    }
     private void CloseMenu()
     {
         Destroy(actualMenu);
@@ -166,6 +185,11 @@ public class UI_HUD : MonoBehaviour
         }
 
     }
+
+    public void ResetConstructMenu()
+    { 
+        CloseMenu();
+    }
     #endregion
 
     #region FloorsUI
@@ -178,18 +202,12 @@ public class UI_HUD : MonoBehaviour
 
     #region Fonctionnal functions
 
-    // TODO : afficher ou non le budget et le bon!
-    // dans gamemanager builder level get rule budget limit, si la rule n'existe pas ne pas afficher le budget 
-
     private void InitBudget()
     {
-        if (_gameManager.RuleManager.Rules.Count > 0)
+        float limit = GetBudgetLimit();
+        if (limit != -1f)
         {
-            foreach (IRule rule in _gameManager.RuleManager.Rules)
-            {
-                //if (rule == (IBlockRule) BudgetLimit)
-            }
-            // ????????
+            money = (int)limit;
         }
     }
 
