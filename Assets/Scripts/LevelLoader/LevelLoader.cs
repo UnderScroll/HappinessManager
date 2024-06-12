@@ -7,6 +7,7 @@ namespace LevelLoader
     public class LevelLoader : MonoBehaviour
     {
         public List<Level> Levels;
+        public List<GameObject> AdditionamPrefabs;
 
         private GameManager _gameManager;
         public uint CurrentLevelIndex;
@@ -15,6 +16,8 @@ namespace LevelLoader
         public UI_HUD UI_HUD;
 
         public string nextFloorname;
+
+        private GameObject _additionalPrefabInstance;
 
         private void Awake()
         {
@@ -66,6 +69,7 @@ namespace LevelLoader
         {
             LoadLevel(Levels[(int)index]);
             UI_HUD.ResetConstructMenu();
+            UI_HUD.ReloadBudgetUI();
         }
 
         private void LoadLevel(Level level)
@@ -102,6 +106,13 @@ namespace LevelLoader
 
             _gameManager.SoundManager.PlayOnBuilding();
 
+            //Load Additional Prefab
+            if (_additionalPrefabInstance != null)
+                Destroy(_additionalPrefabInstance);
+
+            if (AdditionamPrefabs[(int)CurrentLevelIndex] != null)
+                _additionalPrefabInstance = Instantiate(AdditionamPrefabs[(int)CurrentLevelIndex]);
+
             //Load Placeableblocks in HUD
             if (UI_HUD != null)
                 UI_HUD.blocks = level.PlaceableCellTypes.Get();
@@ -113,7 +124,6 @@ namespace LevelLoader
         }
         private void LoadNextFloor()
         {
-            Debug.Log("flqifjhlfqz");
             SceneManager.LoadScene(nextFloorname, LoadSceneMode.Single);
         }
     }
