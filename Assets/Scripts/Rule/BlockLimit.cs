@@ -11,7 +11,10 @@ public class BlockLimit : IBlockRule
 
     public override bool CanPlaceBlock(object value)
     {
-        return !(_gameManager.Builder.BlockPlacedAmount[BlockToLimit.Name] + 1 > maxAmount);
+        if (value is CellType && ((CellType)value).Name == BlockToLimit.Name)
+            return !(_gameManager.Builder.BlockPlacedAmount[BlockToLimit.Name] + 1 > maxAmount);
+
+        return true;
     }
 
     public override bool CanRemoveBlock(object value)

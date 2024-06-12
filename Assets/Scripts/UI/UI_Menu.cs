@@ -12,9 +12,9 @@ using UnityEngine.UI;
 public class UI_Menu : MonoBehaviour
 {
     [SerializeField] Image imageFade;
-    UnityEvent OnApplicationStarted;
-    UnityEvent OnQuittingGame;
-    UnityEvent OnIntroEnded;
+    public UnityEvent OnApplicationStarted;
+    public UnityEvent OnQuittingGame;
+    public UnityEvent OnIntroEnded;
 
     [Header("IntroScene")]
     [SerializeField] bool skipIntro;

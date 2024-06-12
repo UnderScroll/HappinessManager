@@ -260,6 +260,7 @@ public class LevelEditorCustomEditor : Editor
         breakableField.RegisterValueChangedCallback((_) => { _levelEditor.OnEmployeeDataChanged(); });
         Toggle breakThresholdField = breakContainer.Query<Toggle>("BreakThreshold");
         breakThresholdField.RegisterValueChangedCallback((_) => { _levelEditor.OnEmployeeDataChanged(); });
+        ListView waypointsListView = followPath.Query<ListView>("Waypoints");
 
         //Force Stand
         FloatField standForceField = EmployeeEditorFoldout.Query<FloatField>("StandForce");

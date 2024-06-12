@@ -182,7 +182,7 @@ public class TalkingBuddy : MonoBehaviour
     private void InitLines(GameManager.Stage _stage)
     {
         Line = GetCharaName() + _stage.ToString();
-        //Debug.Log(Line);
+        Debug.Log(Line);
     }
 
     /// <summary>
@@ -190,7 +190,6 @@ public class TalkingBuddy : MonoBehaviour
     /// </summary>
     private void PlayDialogueSound()
     {
-        /*
         IEnumerable<string> tags = dialogueRunner.GetTagsForNode(dialogueRunner.CurrentNodeName);
         if (tags.Any())
         {

@@ -38,6 +38,11 @@ namespace Simulation
 
             EmployeeCollision.collisionEvent.AddListener(OnEmployeeGroundCollision);
 
+            if (_gameManager.Builder.Level.IsWindEnabled)
+            {
+                AkSoundEngine.PostEvent("Play_Wind_Gust", gameObject);
+            }
+
             InstantiateBlocks();
             CreateConnections();
 
@@ -68,10 +73,14 @@ namespace Simulation
             if (cellData.Type.IsEmployee)
             {
                 EmployeeCellData employeeCell = (EmployeeCellData)cellData;
+
+                //ForceStand
                 ForceStand forceStand = instance.AddComponent<ForceStand>();
                 forceStand.StandForce = employeeCell.Movement.StandForce;
+
                 if (employeeCell.Movement.HasFollowPath)
                 {
+                    //FollowPath
                     FollowPath followPath = instance.AddComponent<FollowPath>();
                     followPath.Breakable = employeeCell.Movement.Breakable;
                     followPath.BreakThreshold = employeeCell.Movement.BreakThreshold;
@@ -83,8 +92,13 @@ namespace Simulation
                     followPath.FollowMode = employeeCell.Movement.Mode;
                     followPath.Radius = employeeCell.Movement.Radius;
                     followPath.maxVelocity = employeeCell.Movement.MaxVelocity;
+
+                    //EmployeeMovement
+                    EmployeeMovement employeeMovement = instance.AddComponent<EmployeeMovement>();
+                    instance.TryGetComponent(out employeeMovement.AlignToCamera);
+                    employeeMovement.TryGetComponent(out employeeMovement.ForceStand);
+                    employeeMovement.TryGetComponent(out employeeMovement.FollowPath);
                 }
-                Debug.Log(employeeCell);
             }
 
             return instance;
@@ -172,7 +186,7 @@ namespace Simulation
         public void Launch()
         {
             _isSimulationRunning = true;
-            AkSoundEngine.PostEvent("Play_Music_SetSwitch_validating", gameObject);
+            
         }
 
         private void Update()
@@ -219,8 +233,9 @@ namespace Simulation
             if (!_isSimulationFailed)
             {
                 _gameManager.SoundManager.PlayOnLevelFailed();
-                _gameManager.UI_HUD.DisplayEndLevelPanel(false);
+                _gameManager.UI_HUD.DisplayEndLevelPanel(false); 
             }
+
         }
     }
 }
