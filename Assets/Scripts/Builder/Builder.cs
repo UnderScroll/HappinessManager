@@ -175,6 +175,7 @@ namespace Builder
             UpdateConnection(positionToPlace);
 
             SpentMoney += _selectedBlock.Type.Price;
+            _gameManager.UI_HUD.UpdateMoneyText();
             BlockPlacedAmount[_selectedBlock.Type.Name]++;
 
             PreviewBlock blockInstance = _previewBlocks[positionToPlace.x, positionToPlace.y, positionToPlace.z]; //Get block in scene
@@ -207,6 +208,7 @@ namespace Builder
             UpdateConnection(positionToRemove);
 
             SpentMoney -= removedBlockType.Price;
+            _gameManager.UI_HUD.UpdateMoneyText();
             BlockPlacedAmount[removedBlockType.Name]--;
         }
 
