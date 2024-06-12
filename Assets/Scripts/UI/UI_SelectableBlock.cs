@@ -16,6 +16,7 @@ public class UI_SelectableBlock : MonoBehaviour
 
     [SerializeField] int decalOverValue;
     public Vector3 basePosition;
+    public string UIBlockWwiseEventName;
     public void Init()
     {
         blockImg.sprite = blockInfo.BlockIcon;
@@ -40,6 +41,10 @@ public class UI_SelectableBlock : MonoBehaviour
         {
             this.gameObject.transform.DOBlendableLocalMoveBy(new Vector3(0, decalOverValue, 0), 0.7f);
             ui_hud.TemporaryDescription(blockInfo, true);
+
+            string getUIBlockName = blockInfo.name;
+            UIBlockWwiseEventName = $"Play_UI_item_onTabHover_{getUIBlockName}";
+            PlaySelectedBlockHoverSound();
         }
     }
     public void Unover()
@@ -50,5 +55,10 @@ public class UI_SelectableBlock : MonoBehaviour
             ui_hud.TemporaryDescription(blockInfo, false);
             AkSoundEngine.PostEvent("Play_UI_item_offTabHover", gameObject);
         }
+    }
+
+    public void PlaySelectedBlockHoverSound()
+    {
+        AkSoundEngine.PostEvent($"{UIBlockWwiseEventName}", gameObject);
     }
 }

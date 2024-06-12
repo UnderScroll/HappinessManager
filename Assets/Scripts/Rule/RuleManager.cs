@@ -43,11 +43,24 @@ public class RuleManager : MonoBehaviour
         _blockRules.Clear();
     }
 
-    public bool CanPlaceBlock(float blockPrice)
+    public bool CanPlaceBlock(CellType cellType)
     {
         foreach (IBlockRule rule in _blockRules)
-            if (!rule.CanPlaceBlock(blockPrice))
-                return false;
+        {
+            switch (rule.Type)
+            {
+                case "BlockLimit":
+                    if (!rule.CanPlaceBlock(cellType))
+                        return false;
+                    break;
+                case "BudgetLimit":
+                    if (!rule.CanPlaceBlock(cellType.Price))
+                        return false;
+                    break;
+                default:
+                    continue;
+            }
+        }
         return true;
     }
 

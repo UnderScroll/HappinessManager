@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: EmployeeBlock
   m_EditorClassIdentifier: 
   Name: EmployeeBlock
+  Description: 
   Removable: 0
   Mass: 1
+  Price: 1
   DefaultConnectionType: {fileID: 0}
   Block: {fileID: 5694698067432415493, guid: 1854b5203ef0a0643a1192cc35b82c2a, type: 3}
+  BlockIcon: {fileID: 0}
   PreviewCollider: {fileID: -2534534423112644513, guid: e26ebc9e67c32c242b4899753a36ea73,
     type: 3}
   ConnectionFaces: 0
   ShouldBeSimulated: 1
+  IsEmployee: 1

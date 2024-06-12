@@ -16,7 +16,7 @@ MonoBehaviour:
   Description: "Un bloc de b\xE9ton, lourd mais plut\xF4t r\xE9sistant !"
   Removable: 1
   Mass: 12
-  Price: 1
+  Price: 15
   DefaultConnectionType: {fileID: 11400000, guid: d53e00e563798164c8f14067cef59b75,
     type: 2}
   Block: {fileID: 192624919341966167, guid: 8178a9edf91e438488196a7dd253fd46, type: 3}
@@ -25,3 +25,4 @@ MonoBehaviour:
     type: 3}
   ConnectionFaces: 63
   ShouldBeSimulated: 1
+  IsEmployee: 0

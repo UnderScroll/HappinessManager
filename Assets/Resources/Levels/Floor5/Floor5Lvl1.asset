@@ -588,7 +588,7 @@ MonoBehaviour:
       - rid: -2
       - rid: -2
       - rid: -2
-      - rid: 978415913593733511
+      - rid: 978416075948425303
       - rid: -2
       - rid: -2
       - rid: -2
@@ -1026,7 +1026,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: d9a05ac1dc066214dbf3cd85af3dd533, type: 2}
     - {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
     - {fileID: 11400000, guid: cd54712c99a7ed14bbfc3768e1ac9abd, type: 2}
-    - {fileID: 11400000, guid: bd77142b1d33bbc489551a002b5e5de2, type: 2}
+    - {fileID: 11400000, guid: 8895af43bff26354ab76c4829d872b96, type: 2}
   PlaceableCellTypes:
     _types:
     - {fileID: 11400000, guid: 26323928fecd21440bbf81af0abd1f74, type: 2}
@@ -1035,6 +1035,7 @@ MonoBehaviour:
   IsWindEnabled: 0
   WindDirection: {x: 0, y: 0, z: 0}
   WindStrength: 0
+  Rules: []
   references:
     version: 2
     RefIds:
@@ -3155,10 +3156,10 @@ MonoBehaviour:
         - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
         - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
         - {fileID: 11400000, guid: 6f61be3faced1e041bf432335373880e, type: 2}
-    - rid: 978415913593733511
-      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+    - rid: 978416075948425303
+      type: {class: EmployeeCellData, ns: Builder, asm: Assembly-CSharp}
       data:
-        Type: {fileID: 11400000, guid: bd77142b1d33bbc489551a002b5e5de2, type: 2}
+        Type: {fileID: 11400000, guid: 8895af43bff26354ab76c4829d872b96, type: 2}
         Position:
           x: 5
           y: 7
@@ -3170,3 +3171,17 @@ MonoBehaviour:
         - {fileID: 0}
         - {fileID: 0}
         - {fileID: 0}
+        Movement:
+          rid: 978416075948425304
+    - rid: 978416075948425304
+      type: {class: EmployeeCellData/MovementData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        HasFollowPath: 0
+        Waypoints: []
+        Mode: 0
+        FollowForce: 0
+        MaxVelocity: 0
+        Radius: 0
+        Breakable: 0
+        BreakThreshold: 0
+        StandForce: 3

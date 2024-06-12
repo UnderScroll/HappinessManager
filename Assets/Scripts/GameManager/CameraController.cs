@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,7 +7,12 @@ public class CameraController : MonoBehaviour
     private bool _holdRotate = false;
     private Camera _camera;
     private Vector2 _lastMousePos;
-    public float RotationSpeed = 10.0f;
+    [Header("Sensitivity")]
+    [Range(0.1f, 1), Tooltip("The value that is set by the player's preference")]
+    public float RotationSpeed = 0.0f;
+    [Range(0, 5)]
+    [Tooltip("Value set by the GD to tweak the range of the player's sensitivity preference")]
+    public float RotationSpeedMultiplier;
     public float maxPitchAngle = 80;
     public float minPitchAngle = -20;
 
@@ -29,11 +35,11 @@ public class CameraController : MonoBehaviour
 
                 if (mouseDelta.y > 0 && cameraEulerXAngle < maxPitchAngle ||
                     mouseDelta.y < 0 && cameraEulerXAngle > minPitchAngle)
-                    _camera.transform.RotateAround(Vector3.zero, _camera.transform.right, mouseDelta.y * Time.deltaTime * RotationSpeed);
+                    _camera.transform.RotateAround(Vector3.zero, _camera.transform.right, mouseDelta.y * RotationSpeed * RotationSpeedMultiplier);
             }
             else
             {
-                _camera.transform.RotateAround(Vector3.zero, Vector3.up, mouseDelta.x * Time.deltaTime * RotationSpeed);
+                _camera.transform.RotateAround(Vector3.zero, Vector3.up, mouseDelta.x * RotationSpeed * RotationSpeedMultiplier);
             }
             Mouse.current.WarpCursorPosition(_lastMousePos);
         }
