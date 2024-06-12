@@ -104,7 +104,7 @@ public class UI_HUD : MonoBehaviour
     }
     #endregion
 
-    #region Construct Menu Initialisation
+    #region Construct Menu 
 
     public void InitBlocsMenu()
     {
@@ -123,15 +123,6 @@ public class UI_HUD : MonoBehaviour
             CloseMenu();
     }
 
-    public void InitDecoMenu()
-    {
-        if (actualMenu == null)
-        {
-            // do the thing
-        }
-        else
-            CloseMenu();
-    }
     private void CloseMenu()
     {
         Destroy(actualMenu);
@@ -165,6 +156,11 @@ public class UI_HUD : MonoBehaviour
             }
         }
 
+    }
+
+    public void ResetConstructMenu()
+    { 
+        CloseMenu();
     }
     #endregion
 
