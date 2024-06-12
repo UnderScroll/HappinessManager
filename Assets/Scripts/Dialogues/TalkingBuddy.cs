@@ -15,7 +15,7 @@ public class TalkingBuddy : MonoBehaviour
         CommunityManager,
         Comptable,
         DirCrea,
-        Employ�Triste,
+        EmployéTriste,
         Stagiaire
     };
 
@@ -170,7 +170,7 @@ public class TalkingBuddy : MonoBehaviour
                 return "CM";
             case Characters.Comptable:
                 return "Comptable";
-            case Characters.Employ�Triste:
+            case Characters.EmployéTriste:
                 return "ET";
             case Characters.Stagiaire:
                 return "Stagiaire";
