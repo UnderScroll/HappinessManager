@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 404370972103490946}
   - component: {fileID: 962120801891734991}
   m_Layer: 0
-  m_Name: InvisibleBlock
+  m_Name: ObstacleBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,8 @@ MeshRenderer:
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials: []
+  m_Materials:
+  - {fileID: 2100000, guid: b9cbc38685ca7ff45bd99594563fa203, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
