@@ -1,9 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using static UnityEngine.InputSystem.InputActionRebindingExtensions;
 
 public class UIRebind : MonoBehaviour
 {
@@ -11,7 +15,8 @@ public class UIRebind : MonoBehaviour
     public string ActionName
     {
         get => _actionName;
-        set {
+        set
+        {
             _actionName = value;
             UpdateActionLabel();
         }
@@ -23,7 +28,7 @@ public class UIRebind : MonoBehaviour
         get => _action;
         set => _action = value;
     }
-    
+
     [HideInInspector]
     public int ActionBindingIndex
     {
@@ -37,23 +42,39 @@ public class UIRebind : MonoBehaviour
     [SerializeField]
     int _actionBindingIndex;
 
+    RebindingOperation _rebindingOperation;
+
     [Header("UI")]
     [SerializeField]
     private string _actionName;
     [SerializeField]
     private TextMeshProUGUI _actionLabel;
     [SerializeField]
-    private Image _overlay;
+    private GameObject _overlay;
     [SerializeField]
     private Image _iconDevice1;
     [SerializeField]
     private Image _iconDevice2;
 
+    public void OnEnable()
+    {
+        UpdateActionLabel();
+        UpdateBindingDisplay();
+    }
+
     public void StartRebind()
     {
+        void Clean()
+        {
+            ActionRef.action.Enable();
+            _rebindingOperation.Dispose();
+            if (_overlay != null)
+                _overlay.SetActive(false);
+        }
+
         //Set up and verifications
         if (_overlay != null)
-            _overlay.enabled = true;
+            _overlay.SetActive(true);
         else
             Debug.LogWarning("No overlay in UIRebind");
 
@@ -69,20 +90,27 @@ public class UIRebind : MonoBehaviour
             return;
         }
 
-        //Rebinding
-        InputActionRebindingExtensions.RebindingOperation rebindOperation =  new();
-        rebindOperation = ActionRef.ToInputAction()
-            .PerformInteractiveRebinding(_actionBindingIndex)
-                .OnComplete(operation =>
-                {
-                    UpdateBindingDisplay();
-                });
+        _rebindingOperation?.Cancel();
+        ActionRef.action.Disable();
+        EventSystem.current.SetSelectedGameObject(null);
 
-        //Clean up
-        if (_overlay != null)
-            _overlay.enabled = false;
+        Debug.Log($"Rebinding...");
 
-        rebindOperation.Dispose();
+        _rebindingOperation = ActionRef.action.PerformInteractiveRebinding()
+            .WithCancelingThrough("<Keyboard>/escape")
+            .OnComplete(operation =>
+            {
+                UpdateBindingDisplay();
+                Clean();
+            })
+            .OnCancel(_ => Clean());
+
+        _rebindingOperation.Start();
+    }
+
+    public void ResetToDefault()
+    {
+        ActionRef.action.RemoveBindingOverride(0);
     }
 
     public void UpdateActionLabel()
@@ -93,7 +121,24 @@ public class UIRebind : MonoBehaviour
     public void UpdateBindingDisplay()
     {
         ActionRef.action.GetBindingDisplayString(0, out string deviceLayoutName, out string _);
+        Debug.Log($"Device : {deviceLayoutName}");
+        switch (deviceLayoutName)
+        {
+            case "Keyboard":
+                _iconDevice1.gameObject.SetActive(false);
+                _iconDevice2.gameObject.SetActive(true);
+                break;
+            case "Mouse":
+                _iconDevice1.gameObject.SetActive(true);
+                _iconDevice2.gameObject.SetActive(false);
+                break;
+            default:
+                Debug.LogWarning("Device used not compatible");
+                break;
+        }
     }
+
+    [Serializable] public class InteractiveRebindEvent : UnityEvent<UIRebind, RebindingOperation> { }
 
 #if UNITY_EDITOR
     protected void OnValidate()
