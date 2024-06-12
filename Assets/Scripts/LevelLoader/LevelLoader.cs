@@ -111,7 +111,7 @@ namespace LevelLoader
                 Destroy(_additionalPrefabInstance);
 
             if (AdditionamPrefabs[(int)CurrentLevelIndex] != null)
-                _additionalPrefabInstance = Instantiate(AdditionamPrefabs[(int)CurrentLevelIndex]);
+                _additionalPrefabInstance = Instantiate(AdditionamPrefabs[(int)CurrentLevelIndex], _gameManager.StructureOrigin);
 
             //Load Placeableblocks in HUD
             if (UI_HUD != null)
