@@ -2,6 +2,7 @@ using Builder;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Simulation
 {
@@ -19,10 +20,14 @@ namespace Simulation
         public double ValidationTime;
         private bool _isSimulationFailed;
 
+        UnityAction OnValidationFailed;
+
         private void Start()
         {
             if (!TryGetComponent(out _gameManager))
                 Debug.LogError("GameManager wasn't found, this will cause issues");
+
+            OnValidationFailed += LevelFailed;
         }
 
         public void InitializeSimulation(Structure structure)
@@ -204,9 +209,18 @@ namespace Simulation
 
         public void OnEmployeeGroundCollision()
         {
+            OnValidationFailed?.Invoke();
             _isSimulationFailed = true;
             _isSimulationRunning = false;
-            _gameManager.SoundManager.PlayOnLevelFailed();
+        }
+        private void LevelFailed()
+        {
+            // Only once    
+            if (!_isSimulationFailed)
+            {
+                _gameManager.SoundManager.PlayOnLevelFailed();
+                _gameManager.UI_HUD.DisplayEndLevelPanel(false);
+            }
         }
     }
 }

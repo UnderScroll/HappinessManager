@@ -1,0 +1,1434 @@
+fileFormatVersion: 2
+guid: 837d3e582c996c9428869d2aadeb0459
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 409
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661cc21f038fd744b87e1fc046323f89
+      internalID: -6337203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_1
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 2048
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bedbc081d0ac284b82064ae81e8f384
+      internalID: 2083528720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_2
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 2048
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3bdc80650eff554a9ad71509a92dabe
+      internalID: 503001616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_3
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 2048
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7694c9a714234984687a49c286e6efaa
+      internalID: -1990885172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_4
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 2048
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ec364a32132c84cb989c60241fc0fe
+      internalID: -847727048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_5
+      rect:
+        serializedVersion: 2
+        x: 2045
+        y: 2048
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a310c34a721bee4ab3700e51f8b52e1
+      internalID: -545502397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_6
+      rect:
+        serializedVersion: 2
+        x: 2454
+        y: 2048
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1041578b1f932614882570da1eaa6790
+      internalID: -698310891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_7
+      rect:
+        serializedVersion: 2
+        x: 2863
+        y: 2048
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34cb6a325c22be44eb65b0775e68c900
+      internalID: 293562321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_8
+      rect:
+        serializedVersion: 2
+        x: 3272
+        y: 2048
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e338395982e1ffb4398ea8e8b07924ae
+      internalID: 1223873642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_9
+      rect:
+        serializedVersion: 2
+        x: 3681
+        y: 2048
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b873f4e78c769c4aafb835264f32e0e
+      internalID: -1817147421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1639
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce645b4a045febb4aabd86acf245c715
+      internalID: -1665859391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_11
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 1639
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8b747d3005628468e19857f07e36f2
+      internalID: -1496072340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_12
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1639
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b0338cc8eae58744a3f3ce7a73b9215
+      internalID: -1755314616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_13
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 1639
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2fe62724a1b4e64b877707dc30854bb
+      internalID: 658855485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_14
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 1639
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c9b4637041b14a4b9b4024554b0a9a2
+      internalID: -1585136564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_15
+      rect:
+        serializedVersion: 2
+        x: 2045
+        y: 1639
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d3e9bdf89e6acc4399efe2b42acdef1
+      internalID: 1744083342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_16
+      rect:
+        serializedVersion: 2
+        x: 2454
+        y: 1639
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d11ae15a148614bb4c8e36e7cce8b5
+      internalID: -2122577906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_17
+      rect:
+        serializedVersion: 2
+        x: 2863
+        y: 1639
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c815e50911ecd71429f620291ad5debf
+      internalID: 728274270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_18
+      rect:
+        serializedVersion: 2
+        x: 3272
+        y: 1639
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 177175895a7a8314ba12b5b7786e00e6
+      internalID: 392124656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_19
+      rect:
+        serializedVersion: 2
+        x: 3681
+        y: 1639
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac9e33a63eb97f4f95acd504fcfbf1f
+      internalID: 1646329429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1230
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f4512abeb80be40a5bb951b98d9d96
+      internalID: -1578813010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_21
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 1230
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5fd69f3c487d4429c1c29391b9f442
+      internalID: 689950891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_22
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1230
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07cb76e64e40e4b4994dc6c63a35d935
+      internalID: 147786266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_23
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 1230
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb03aba470644a04bbc19e1ef00c67c6
+      internalID: -391974127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_24
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 1230
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a217f69f67b3d49b125a7b1e24f8b1
+      internalID: -2141623029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_25
+      rect:
+        serializedVersion: 2
+        x: 2045
+        y: 1230
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1e57efc5ff1753478c4db835cae92e5
+      internalID: 148784415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_26
+      rect:
+        serializedVersion: 2
+        x: 2454
+        y: 1230
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1963592bfdd6c3441aa528dffdd8c980
+      internalID: -777638880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_27
+      rect:
+        serializedVersion: 2
+        x: 2863
+        y: 1230
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d958c5808aa8348bfc140e6f96eeb9
+      internalID: -1812477110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_28
+      rect:
+        serializedVersion: 2
+        x: 3272
+        y: 1230
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32439a0e71f260c46af20b59da4639db
+      internalID: -1603465069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_29
+      rect:
+        serializedVersion: 2
+        x: 3681
+        y: 1230
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab0eed84c9fb4e40a94512bd0d28bd8
+      internalID: 1850932860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 821
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f615e37a17b24fc4f9b492b57de1c3a0
+      internalID: 510114918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_31
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 821
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37c2565a97bf1454bb3fe3aa4c37f5b7
+      internalID: -1000772275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_32
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 821
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0132e390ea3d7164ca9272727fe03630
+      internalID: -459097675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_33
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 821
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5559fd3c0a9babf419a2121987274baf
+      internalID: 1636779716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_34
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 821
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e4f1281cc8795d4db9d226e0c71a697
+      internalID: 214384126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_35
+      rect:
+        serializedVersion: 2
+        x: 2045
+        y: 821
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2161f6b3ce7ce6b42acad9e8380287ed
+      internalID: 2083681407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_36
+      rect:
+        serializedVersion: 2
+        x: 2454
+        y: 821
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a7653469741cd45be7389ab6ea01d9
+      internalID: 1380112429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_37
+      rect:
+        serializedVersion: 2
+        x: 2863
+        y: 821
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb0394e5aedf22343a36870b3306adf5
+      internalID: 1222288794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_38
+      rect:
+        serializedVersion: 2
+        x: 3272
+        y: 821
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b8c02a2083ce840aca0b50ed513c99
+      internalID: 479255659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_39
+      rect:
+        serializedVersion: 2
+        x: 3681
+        y: 821
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 059fdafd6c6a81a4784b942656533b12
+      internalID: -1093156512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 412
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac64b84a0bc2a24e8abb62c21e0498d
+      internalID: -479879750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_41
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 412
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea9298ca572f4240a5d16a3ceaf968e
+      internalID: 318763207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_42
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 412
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36205120ce563c1449dd8071db2cefd2
+      internalID: 1606108674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_43
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 412
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497db768950b5cc42abe90dabf67dbb5
+      internalID: 1015288868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_44
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 412
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c927b27da89f25f45877c2657c3da8e1
+      internalID: -864018456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_45
+      rect:
+        serializedVersion: 2
+        x: 2045
+        y: 412
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 017e23235624c7c4fae3d5fb7a8cbdf5
+      internalID: 1091417377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_46
+      rect:
+        serializedVersion: 2
+        x: 2454
+        y: 412
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72344cd022cb1f540bf3f278be7fb58c
+      internalID: 1510155610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_47
+      rect:
+        serializedVersion: 2
+        x: 2863
+        y: 412
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea040df206173cd4cbbcebb2e1a728ab
+      internalID: -644274044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_48
+      rect:
+        serializedVersion: 2
+        x: 3272
+        y: 412
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c959313950cf5f4ba854536bc6f35ee
+      internalID: 1536820512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_49
+      rect:
+        serializedVersion: 2
+        x: 3681
+        y: 412
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f61a792c990c85d43aa5d1d250e861f2
+      internalID: -2107475688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19e20535844f1a640b4cb6f3cb8ca3a4
+      internalID: 1834447377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_51
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 3
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ebf9092dab29ba4ea61a047e88cfd75
+      internalID: -2135399921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_52
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 3
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e55c61e1b3e8714084d9ddd64d1ccc5
+      internalID: -880621190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_53
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 3
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a742af864bac31844b62eec9ca8b02f8
+      internalID: 1338138014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_54
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 3
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc86eab86e9cd647990db3bf0fcbe81
+      internalID: 2138218461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_55
+      rect:
+        serializedVersion: 2
+        x: 2045
+        y: 3
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f7143192a98564f805e5d487aa6a63
+      internalID: 1257369063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_56
+      rect:
+        serializedVersion: 2
+        x: 2454
+        y: 3
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38902546462b23341a75c3f926528a05
+      internalID: -1706442772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_57
+      rect:
+        serializedVersion: 2
+        x: 2863
+        y: 3
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1787c55f6284d7c4490d9c705b0a1ba7
+      internalID: -1199628038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_58
+      rect:
+        serializedVersion: 2
+        x: 3272
+        y: 3
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196f757ec8190d94daaa18857a48fd7c
+      internalID: -219944745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_ComManager_Death_59
+      rect:
+        serializedVersion: 2
+        x: 3681
+        y: 3
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b948901da71c99f4aba33e91dd137922
+      internalID: -1018985918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SpriteSheet_ComManager_Death_0: -6337203
+      SpriteSheet_ComManager_Death_1: 2083528720
+      SpriteSheet_ComManager_Death_10: -1665859391
+      SpriteSheet_ComManager_Death_11: -1496072340
+      SpriteSheet_ComManager_Death_12: -1755314616
+      SpriteSheet_ComManager_Death_13: 658855485
+      SpriteSheet_ComManager_Death_14: -1585136564
+      SpriteSheet_ComManager_Death_15: 1744083342
+      SpriteSheet_ComManager_Death_16: -2122577906
+      SpriteSheet_ComManager_Death_17: 728274270
+      SpriteSheet_ComManager_Death_18: 392124656
+      SpriteSheet_ComManager_Death_19: 1646329429
+      SpriteSheet_ComManager_Death_2: 503001616
+      SpriteSheet_ComManager_Death_20: -1578813010
+      SpriteSheet_ComManager_Death_21: 689950891
+      SpriteSheet_ComManager_Death_22: 147786266
+      SpriteSheet_ComManager_Death_23: -391974127
+      SpriteSheet_ComManager_Death_24: -2141623029
+      SpriteSheet_ComManager_Death_25: 148784415
+      SpriteSheet_ComManager_Death_26: -777638880
+      SpriteSheet_ComManager_Death_27: -1812477110
+      SpriteSheet_ComManager_Death_28: -1603465069
+      SpriteSheet_ComManager_Death_29: 1850932860
+      SpriteSheet_ComManager_Death_3: -1990885172
+      SpriteSheet_ComManager_Death_30: 510114918
+      SpriteSheet_ComManager_Death_31: -1000772275
+      SpriteSheet_ComManager_Death_32: -459097675
+      SpriteSheet_ComManager_Death_33: 1636779716
+      SpriteSheet_ComManager_Death_34: 214384126
+      SpriteSheet_ComManager_Death_35: 2083681407
+      SpriteSheet_ComManager_Death_36: 1380112429
+      SpriteSheet_ComManager_Death_37: 1222288794
+      SpriteSheet_ComManager_Death_38: 479255659
+      SpriteSheet_ComManager_Death_39: -1093156512
+      SpriteSheet_ComManager_Death_4: -847727048
+      SpriteSheet_ComManager_Death_40: -479879750
+      SpriteSheet_ComManager_Death_41: 318763207
+      SpriteSheet_ComManager_Death_42: 1606108674
+      SpriteSheet_ComManager_Death_43: 1015288868
+      SpriteSheet_ComManager_Death_44: -864018456
+      SpriteSheet_ComManager_Death_45: 1091417377
+      SpriteSheet_ComManager_Death_46: 1510155610
+      SpriteSheet_ComManager_Death_47: -644274044
+      SpriteSheet_ComManager_Death_48: 1536820512
+      SpriteSheet_ComManager_Death_49: -2107475688
+      SpriteSheet_ComManager_Death_5: -545502397
+      SpriteSheet_ComManager_Death_50: 1834447377
+      SpriteSheet_ComManager_Death_51: -2135399921
+      SpriteSheet_ComManager_Death_52: -880621190
+      SpriteSheet_ComManager_Death_53: 1338138014
+      SpriteSheet_ComManager_Death_54: 2138218461
+      SpriteSheet_ComManager_Death_55: 1257369063
+      SpriteSheet_ComManager_Death_56: -1706442772
+      SpriteSheet_ComManager_Death_57: -1199628038
+      SpriteSheet_ComManager_Death_58: -219944745
+      SpriteSheet_ComManager_Death_59: -1018985918
+      SpriteSheet_ComManager_Death_6: -698310891
+      SpriteSheet_ComManager_Death_7: 293562321
+      SpriteSheet_ComManager_Death_8: 1223873642
+      SpriteSheet_ComManager_Death_9: -1817147421
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

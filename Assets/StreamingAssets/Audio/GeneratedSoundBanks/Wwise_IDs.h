@@ -101,6 +101,8 @@ namespace AK
         static const AkUniqueID PLAY_MENU_SETTINGS_ONTABHOVER = 2540621422U;
         static const AkUniqueID PLAY_MENU_SETTINGS_TOGGLEIN = 1187050633U;
         static const AkUniqueID PLAY_MENU_SETTINGS_TOGGLEOUT = 4022107688U;
+        static const AkUniqueID PLAY_MENU_SLIDERDIALOGUES = 3879871422U;
+        static const AkUniqueID PLAY_MENU_SLIDERSFX = 301191870U;
         static const AkUniqueID PLAY_MENU_UI_DIALOGUE_SKIP = 1603835309U;
         static const AkUniqueID PLAY_MENU_UNPAUSED = 2362180565U;
         static const AkUniqueID PLAY_MUSIC_BOSS = 2155613437U;
@@ -122,6 +124,8 @@ namespace AK
         static const AkUniqueID PLAY_UI_ITEM_ONTABHOVER_HEAVY = 987150631U;
         static const AkUniqueID PLAY_UI_ITEM_ONTABHOVER_SOAP = 3866376427U;
         static const AkUniqueID PLAY_UI_MONEY_SPENT = 681896400U;
+        static const AkUniqueID SETRTPC_SENSITITITY_FILTER_0 = 3886903300U;
+        static const AkUniqueID SETRTPC_SENSITITITY_FILTER_1 = 3886903301U;
         static const AkUniqueID STOP_AMB_GLOBAL = 1375364434U;
         static const AkUniqueID STOP_MUSIC_GLOBAL = 177767409U;
     } // namespace EVENTS
@@ -147,6 +151,7 @@ namespace AK
     {
         static const AkUniqueID COLLISION_VELOCITY = 1951144523U;
         static const AkUniqueID REVERB_DISTANCE = 3583098985U;
+        static const AkUniqueID RTPC_DIALOGUE_BUS = 3182657878U;
         static const AkUniqueID RTPC_MUSIC_BUS = 3432596327U;
         static const AkUniqueID RTPC_SENSITIVITY_FILTER = 1561184313U;
         static const AkUniqueID RTPC_SFX_BUS = 3067876527U;
@@ -161,10 +166,10 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID AMBIANCE = 2981377429U;
+        static const AkUniqueID DIALOGUES = 1669749310U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIQUE = 69765534U;
         static const AkUniqueID SFX = 393239870U;
-        static const AkUniqueID VOIX = 3370469991U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 using Yarn.Unity;
 using NaughtyAttributes;
@@ -14,7 +15,7 @@ public class TalkingBuddy : MonoBehaviour
         CommunityManager,
         Comptable,
         DirCrea,
-        EmployéTriste,
+        Employï¿½Triste,
         Stagiaire
     };
 
@@ -29,6 +30,10 @@ public class TalkingBuddy : MonoBehaviour
     [SerializeField] int NbLinesStage3;
     [SerializeField] int NbLinesStage4;
     [SerializeField] int NbLinesStage5;
+
+    [Header("BackgroundColors")]
+    [SerializeField] Color[] charaColors = new Color[6];
+    [SerializeField] Image backgroundColor;
 
     [Header("Settings Timer Before Talking")]
     public int TimeBeforeTalking = 5;
@@ -132,6 +137,9 @@ public class TalkingBuddy : MonoBehaviour
         dialogueRunner = actualDialogueObject.GetComponent<DialogueRunner>();
         dialogueRunner.SetProject(yarnProject);
 
+        backgroundColor = actualDialogueObject.GetComponentInChildren<Image>();
+        backgroundColor.color = charaColors[(int)Character];
+
         // Init Dialogue
         dialogueRunner.StartDialogue(nextLineToSay);
         isTalking = true;
@@ -162,16 +170,17 @@ public class TalkingBuddy : MonoBehaviour
                 return "CM";
             case Characters.Comptable:
                 return "Comptable";
-            case Characters.EmployéTriste:
+            case Characters.Employï¿½Triste:
                 return "ET";
             case Characters.Stagiaire:
                 return "Stagiaire";
+            case Characters.DirCrea:
+                return "DirCrea";
         }
         return "NoCharaFound";
     }
     private void InitLines(GameManager.Stage _stage)
     {
-        //Debug.Log("stage = " + _stage);
         Line = GetCharaName() + _stage.ToString();
         //Debug.Log(Line);
     }
@@ -183,10 +192,11 @@ public class TalkingBuddy : MonoBehaviour
     {
         /*
         IEnumerable<string> tags = dialogueRunner.GetTagsForNode(dialogueRunner.CurrentNodeName);
-
-        AkSoundEngine.PostEvent(tags.First(), gameObject);
-        AkSoundEngine.PostEvent("Play_UI_DialogueBubble", gameObject);
-        */
+        if (tags.Any())
+        {
+            AkSoundEngine.PostEvent(tags.First(), gameObject);
+            AkSoundEngine.PostEvent("Play_UI_DialogueBubble", gameObject);
+        }
     }
     #endregion
 }
