@@ -66,7 +66,6 @@ namespace LevelLoader
         {
             LoadLevel(Levels[(int)index]);
             UI_HUD.ResetConstructMenu();
-            // faire lacher le bloc selectionné au joueur
         }
 
         private void LoadLevel(Level level)

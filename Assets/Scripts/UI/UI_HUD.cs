@@ -118,6 +118,24 @@ public class UI_HUD : MonoBehaviour
                 _go.GetComponent<UI_SelectableBlock>().ui_hud = this;
                 _go.GetComponent<UI_SelectableBlock>().blockInfo = cellType;
             }
+
+            if (selected != null)
+            {
+                List<UI_SelectableBlock> list = new();
+                list.AddRange(actualMenu.GetComponentsInChildren<UI_SelectableBlock>());
+
+                if (list.Count > 0)
+                {
+                    foreach (UI_SelectableBlock block in list)
+                    {
+                        if (IsThisBlockSelected(block.blockInfo))
+                        {
+                            SelectBlock(block.blockInfo);
+                        }
+                    }
+                }
+            }
+
         }
         else
             CloseMenu();
