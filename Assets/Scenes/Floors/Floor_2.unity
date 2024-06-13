@@ -516,6 +516,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3439882745487599132, guid: 96513db3616cdb9488e055ccc54a90b1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3815519971327199370, guid: 96513db3616cdb9488e055ccc54a90b1,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1239,6 +1244,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e19936f045a91954c902d61c6e4e4682, type: 2}
   - {fileID: 11400000, guid: 8c1db22f6c5feda4e87b1727be3fa530, type: 2}
   - {fileID: 11400000, guid: 8c1db22f6c5feda4e87b1727be3fa530, type: 2}
+  AdditionamPrefabs: []
+  SkyBoxMat: []
   CurrentLevelIndex: 0
   UI_HUD: {fileID: 0}
   nextFloorname: Floor_3

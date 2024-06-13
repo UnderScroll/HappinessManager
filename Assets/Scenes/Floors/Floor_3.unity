@@ -681,6 +681,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b29a003ca716745438d0e79d714c303c, type: 2}
   - {fileID: 11400000, guid: eb0f5baec87b5a941a7d986260b282bd, type: 2}
   - {fileID: 11400000, guid: 727dc18a479970d4fa5a7944bd47eeb0, type: 2}
+  AdditionamPrefabs: []
+  SkyBoxMat: []
   CurrentLevelIndex: 0
   UI_HUD: {fileID: 0}
   nextFloorname: Floor_4
@@ -1549,6 +1551,11 @@ PrefabInstance:
     - target: {fileID: 6378383697714578796, guid: 96513db3616cdb9488e055ccc54a90b1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6727688438287736340, guid: 96513db3616cdb9488e055ccc54a90b1,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6918469455742268048, guid: 96513db3616cdb9488e055ccc54a90b1,
