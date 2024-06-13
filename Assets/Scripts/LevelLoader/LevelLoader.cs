@@ -7,6 +7,8 @@ namespace LevelLoader
     public class LevelLoader : MonoBehaviour
     {
         public List<Level> Levels;
+        public List<GameObject> AdditionamPrefabs;
+        public List<Material> SkyBoxMat;
 
         private GameManager _gameManager;
         public uint CurrentLevelIndex;
@@ -15,6 +17,8 @@ namespace LevelLoader
         public UI_HUD UI_HUD;
 
         public string nextFloorname;
+
+        private GameObject _additionalPrefabInstance;
 
         private void Awake()
         {
@@ -102,6 +106,19 @@ namespace LevelLoader
             _gameManager.RuleManager.Debug_DisplayAllRules();
 
             _gameManager.SoundManager.PlayOnBuilding();
+
+            //Load Additional Prefab
+            if (_additionalPrefabInstance != null)
+                Destroy(_additionalPrefabInstance);
+
+            if (AdditionamPrefabs.Count > (int)CurrentLevelIndex && AdditionamPrefabs[(int)CurrentLevelIndex] != null)
+                _additionalPrefabInstance = Instantiate(AdditionamPrefabs[(int)CurrentLevelIndex], Camera.main.transform);
+
+            if (SkyBoxMat.Count > (int)CurrentLevelIndex && SkyBoxMat[(int)CurrentLevelIndex] != null)
+            {
+                RenderSettings.skybox = SkyBoxMat[(int)CurrentLevelIndex];
+                DynamicGI.UpdateEnvironment();
+            }
 
             //Load Placeableblocks in HUD
             if (UI_HUD != null)
