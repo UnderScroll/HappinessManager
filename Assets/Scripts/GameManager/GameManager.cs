@@ -84,8 +84,6 @@ public class GameManager : MonoBehaviour
         //TMP FOR PLAYTESTING
         UI_HUD.UpdateLevelName(Builder.Level.name);
     }
-
-    [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres priv�s non utilis�s", Justification = "OnToggleMode is called by Unity Input System")]
     public void OnToggleMode()
     {
         if (Playing)

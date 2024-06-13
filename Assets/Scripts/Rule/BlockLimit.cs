@@ -21,4 +21,9 @@ public class BlockLimit : IBlockRule
     {
         return true;
     }
+
+    public override bool Validate()
+    {
+        return _gameManager.Builder.BlockPlacedAmount[BlockToLimit.Name] <= maxAmount;
+    }
 }

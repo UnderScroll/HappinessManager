@@ -7,4 +7,6 @@ public abstract class IRule : ScriptableObject
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Styles d'affectation de noms", Justification = "This property has protected getter")]
     public GameManager _gameManager { protected get; set; }
+
+    public abstract bool Validate();
 }

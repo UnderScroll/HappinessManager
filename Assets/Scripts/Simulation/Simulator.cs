@@ -46,6 +46,10 @@ namespace Simulation
             InstantiateBlocks();
             CreateConnections();
 
+            List<IRule> unvalidatedRules = _gameManager.RuleManager.ValidateAllRules();
+            if (unvalidatedRules.Count > 0)
+                OnValidationFailed?.Invoke();
+
             Launch();
         }
 
@@ -216,7 +220,6 @@ namespace Simulation
         {
             Debug.Log("LevelValidated");
             _gameManager.SoundManager.PlayOnLevelValidated();
-
             StartCoroutine(_gameManager.UI_HUD.DisplayEndLevelPanel(true));
         }
 
@@ -226,13 +229,14 @@ namespace Simulation
             _isSimulationFailed = true;
             _isSimulationRunning = false;
         }
+
         private void LevelFailed()
         {
             // Only once    
             if (!_isSimulationFailed)
             {
                 _gameManager.SoundManager.PlayOnLevelFailed();
-                StartCoroutine(_gameManager.UI_HUD.DisplayEndLevelPanel(false)); 
+                StartCoroutine(_gameManager.UI_HUD.DisplayEndLevelPanel(false));
             }
 
         }

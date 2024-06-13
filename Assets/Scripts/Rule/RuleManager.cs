@@ -72,6 +72,19 @@ public class RuleManager : MonoBehaviour
         return true;
     }
 
+    public List<IRule> ValidateAllRules()
+    {
+        List<IRule> unvalidatedRules = new List<IRule>();
+
+        foreach (IRule rule in Rules)
+        {
+            if (!rule.Validate())
+                unvalidatedRules.Add(rule);
+        }
+
+        return unvalidatedRules;
+    }
+
     public void Debug_DisplayAllRules()
     {
         foreach (IRule rule in Rules)
