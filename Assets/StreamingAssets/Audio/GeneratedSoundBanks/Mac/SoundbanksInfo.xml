@@ -87,7 +87,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{ADBEA900-000D-9627-B249-67F6E42355B1}">
+		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{BAB4557C-FBAA-CE35-69E1-CE9BDA8D0B2C}">
 			<ShortName>HM_Global_SB</ShortName>
 			<Path>HM_Global_SB.bnk</Path>
 			<Media>
@@ -1997,6 +1997,7 @@
 					</MediaRefs>
 					<ActionPostEvent>
 						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+						<ActionPostEventEntry Id="4182646214" Name="Play_Amb_boss"/>
 					</ActionPostEvent>
 				</Event>
 				<Event Id="3777215715" Name="Play_Bark_Debut_Etage_Boss1" DurationType="OneShot" DurationMin="6.7379584" DurationMax="6.7379584">
@@ -2021,6 +2022,7 @@
 					</MediaRefs>
 					<ActionPostEvent>
 						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+						<ActionPostEventEntry Id="2051152657" Name="Play_Amb_cafeteria"/>
 					</ActionPostEvent>
 				</Event>
 				<Event Id="3791513938" Name="Play_Bark_Debut_Etage_Cafeteria1" DurationType="OneShot" DurationMin="10.453542" DurationMax="10.453542">
@@ -2077,6 +2079,7 @@
 					</MediaRefs>
 					<ActionPostEvent>
 						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+						<ActionPostEventEntry Id="3156354880" Name="Play_Amb_coworking"/>
 					</ActionPostEvent>
 				</Event>
 				<Event Id="213234513" Name="Play_Bark_Debut_Etage_Coworking1" DurationType="OneShot" DurationMin="8.58323" DurationMax="8.58323">
@@ -2116,6 +2119,7 @@
 						<MediaRef Id="800262024"/>
 					</MediaRefs>
 					<ActionPostEvent>
+						<ActionPostEventEntry Id="1279019685" Name="Play_Amb_intern"/>
 						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
 					</ActionPostEvent>
 				</Event>
@@ -2181,6 +2185,7 @@
 					</MediaRefs>
 					<ActionPostEvent>
 						<ActionPostEventEntry Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip"/>
+						<ActionPostEventEntry Id="2904484746" Name="Play_Amb_teambuilding"/>
 					</ActionPostEvent>
 				</Event>
 				<Event Id="1073735279" Name="Play_Bark_Debut_Etage_Teambuilding1" DurationType="OneShot" DurationMin="6.5013747" DurationMax="6.5013747">
@@ -2574,6 +2579,10 @@
 						<MediaRef Id="577888440"/>
 						<MediaRef Id="1047103891"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="177767409" Name="Stop_Music_global"/>
+						<ActionPostEventEntry Id="1375364434" Name="Stop_Amb_global"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="821832571" Name="Play_ElevatorFrom_cafeteria" DurationType="OneShot" DurationMin="8.5683365" DurationMax="9.005322">
 					<MediaRefs>
@@ -2581,6 +2590,10 @@
 						<MediaRef Id="245188296"/>
 						<MediaRef Id="548407932"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="177767409" Name="Stop_Music_global"/>
+						<ActionPostEventEntry Id="1375364434" Name="Stop_Amb_global"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="2400032206" Name="Play_ElevatorFrom_coworking" DurationType="OneShot" DurationMin="8.734979" DurationMax="9.091337">
 					<MediaRefs>
@@ -2588,6 +2601,10 @@
 						<MediaRef Id="548407932"/>
 						<MediaRef Id="866168184"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="177767409" Name="Stop_Music_global"/>
+						<ActionPostEventEntry Id="1375364434" Name="Stop_Amb_global"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="2577528824" Name="Play_ElevatorFrom_teambuilding" DurationType="OneShot" DurationMin="8.644967" DurationMax="9.091337">
 					<MediaRefs>
@@ -2595,6 +2612,10 @@
 						<MediaRef Id="822300244"/>
 						<MediaRef Id="866168184"/>
 					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="177767409" Name="Stop_Music_global"/>
+						<ActionPostEventEntry Id="1375364434" Name="Stop_Amb_global"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="2953314807" Name="Play_IntroCinematic" DurationType="OneShot" DurationMin="52.60323" DurationMax="52.60323">
 					<MediaRefs>
@@ -3239,5 +3260,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{99AA491F-342D-AD1A-872E-33CC1919A680}</FileHash>
+	<FileHash>{2221C7AF-A209-7A9C-4591-16900EB906AB}</FileHash>
 </SoundBanksInfo>
