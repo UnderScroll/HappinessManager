@@ -29,7 +29,7 @@ public class UI_EndLevelPanel : MonoBehaviour
     public void Init()
     {
         string stage = "Floor " + currentStage;
-        // string level = "Level " + (int)_gameManager.LevelLoader._CurrentLevelIndex;
+       // string level = "Level " + _gameManager.LevelLoader.CurrentLevelIndex;
 
         levelName.text = stage + " - " + 0;
 
