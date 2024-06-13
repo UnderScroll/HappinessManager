@@ -30,5 +30,7 @@ public class UI_BetweenStages : MonoBehaviour
                 floors[i].SetSprite(UI_SpriteSwap.State.Normal);
         }
         background.DOMove(Vector3.zero, 0.2f);
+
+        _gameManager.SoundManager.PlayOnElevatorEnter();
     }
 }

@@ -1,11 +1,21 @@
 State Group	ID	Name			Wwise Object Path	Notes
+	2269821903	IsUnfocused			\WU_HM_States\IsUnfocused	
 	3266490866	AmbOnValidate			\WU_HM_States\AmbOnValidate	
 
 State	ID	Name	State Group			Notes
+	748895195	None	IsUnfocused			
+	782826392	Default	IsUnfocused			
+	3517500819	Unfocused	IsUnfocused			
 	748895195	None	AmbOnValidate			
 	936499202	Result	AmbOnValidate			
 	1735831046	Validating	AmbOnValidate			
 	3284755031	Build	AmbOnValidate			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	472019560	Unfocused	IsUnfocused	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\GAME CONTROLLED\MUSIQUE		
+	473498964	Unfocused	IsUnfocused	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\GAME CONTROLLED\SFX		
+	824278804	Unfocused	IsUnfocused	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\GAME CONTROLLED\DIALOGUES		
+	980330863	Unfocused	IsUnfocused	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMBIANCE		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1561184313	RTPC_SENSITIVITY_FILTER			\BUS_RTPC\RTPC_SENSITIVITY_FILTER	

@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D1EC7C6D-83C1-392D-1E82-595D5AD67F71}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{264A8C80-F26D-D676-45C2-FD0AC02D6933}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -60,6 +60,13 @@
 				<GameParameter Id="3583098985" Name="Reverb_Distance"/>
 			</GameParameters>
 			<StateGroups>
+				<StateGroup Id="2269821903" Name="IsUnfocused">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="782826392" Name="Default"/>
+						<State Id="3517500819" Name="Unfocused"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="3266490866" Name="AmbOnValidate">
 					<States>
 						<State Id="748895195" Name="None"/>
@@ -80,13 +87,13 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{6DC19546-CF63-DB46-923E-3624A3115E23}">
+		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{ADBEA900-000D-9627-B249-67F6E42355B1}">
 			<ShortName>HM_Global_SB</ShortName>
 			<Path>HM_Global_SB.bnk</Path>
 			<Media>
 				<File Id="1954477" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity 4.wav</ShortName>
-					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity 4_FD4DF9DE.wem</CachePath>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity 4_E1408C29.wem</CachePath>
 				</File>
 				<File Id="5243427" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_high_velocity 3.wav</ShortName>
@@ -182,7 +189,7 @@
 				</File>
 				<File Id="86682777" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity .wav</ShortName>
-					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity _FD4DF9DE.wem</CachePath>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity _EA34C064.wem</CachePath>
 				</File>
 				<File Id="87157902" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_soapToBlock_high_velocity - stem-005.wav</ShortName>
@@ -368,6 +375,10 @@
 					<ShortName>boss vdef 125 victory.wav</ShortName>
 					<CachePath>SFX/boss vdef 125 victory_B02CE968.wem</CachePath>
 				</File>
+				<File Id="188475665" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>door open -002.wav</ShortName>
+					<CachePath>SFX/door open -002_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="198814301" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Comptable Hereuse-002.wav</ShortName>
 					<CachePath>SFX/Comptable Hereuse-002_FD4DF9DE.wem</CachePath>
@@ -402,7 +413,7 @@
 				</File>
 				<File Id="231407703" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity 6.wav</ShortName>
-					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity 6_FD4DF9DE.wem</CachePath>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity 6_1B1B7844.wem</CachePath>
 				</File>
 				<File Id="233212238" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 01 SND46234 5.wav</ShortName>
@@ -419,6 +430,10 @@
 				<File Id="237990611" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Employé Triste Confus-002.wav</ShortName>
 					<CachePath>SFX/Employé Triste Confus-002_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="245188296" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>elevator to coworking.wav</ShortName>
+					<CachePath>SFX/elevator to coworking_4A9B6B3F.wem</CachePath>
 				</File>
 				<File Id="245320377" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dir Créa Excité-002.wav</ShortName>
@@ -520,6 +535,10 @@
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 2_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="299316334" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>system dial-glued.wav</ShortName>
+					<CachePath>SFX/system dial-glued_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="299394610" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_concrete block place 4.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_concrete block place 4_FD4DF9DE.wem</CachePath>
@@ -539,6 +558,10 @@
 				<File Id="318756339" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>teambuilding-001.wav</ShortName>
 					<CachePath>SFX/teambuilding-001_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="322908601" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>system out-glued.wav</ShortName>
+					<CachePath>SFX/system out-glued_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="326583449" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity-001.wav</ShortName>
@@ -812,6 +835,10 @@
 					<ShortName>HM_SFX_SC_Build_basic block place-003.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_basic block place-003_97A57FBA.wem</CachePath>
 				</File>
+				<File Id="522792161" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>system In -glued.wav</ShortName>
+					<CachePath>SFX/system In -glued_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="523465638" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_basic block remove-005.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_basic block remove-005_CB241E25.wem</CachePath>
@@ -851,6 +878,14 @@
 				<File Id="542701352" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>transi pizz 115 vdef .wav</ShortName>
 					<CachePath>SFX/transi pizz 115 vdef _B02CE968.wem</CachePath>
+				</File>
+				<File Id="545271398" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>elevator to intern.wav</ShortName>
+					<CachePath>SFX/elevator to intern_2F831F71.wem</CachePath>
+				</File>
+				<File Id="548407932" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>swoosh floor trans-glued.wav</ShortName>
+					<CachePath>SFX/swoosh floor trans-glued_EB67BD97.wem</CachePath>
 				</File>
 				<File Id="549173016" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>intern-002.wav</ShortName>
@@ -900,6 +935,10 @@
 					<ShortName>Comptable Suspicieuse-002.wav</ShortName>
 					<CachePath>SFX/Comptable Suspicieuse-002_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="577888440" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>door open -001.wav</ShortName>
+					<CachePath>SFX/door open -001_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="579392776" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity-013.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity-013_FD4DF9DE.wem</CachePath>
@@ -919,10 +958,6 @@
 				<File Id="601859891" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_toggle in 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_toggle in 2_FD4DF9DE.wem</CachePath>
-				</File>
-				<File Id="611002344" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity 5.wav</ShortName>
-					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity 5_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="612836791" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>victory drum 2 120.wav</ShortName>
@@ -999,6 +1034,10 @@
 				<File Id="655260355" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_onTabHover 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_onTabHover 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="656253909" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>CINEMATIQUE V2.wav</ShortName>
+					<CachePath>SFX/CINEMATIQUE V2_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="658597203" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cafeteria-003.wav</ShortName>
@@ -1148,6 +1187,10 @@
 					<ShortName>Employé Triste Pensif-002.wav</ShortName>
 					<CachePath>SFX/Employé Triste Pensif-002_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="752645010" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Plastic_Chair_Knock_Over_PSEF230 2.wav</ShortName>
+					<CachePath>SFX/Plastic_Chair_Knock_Over_PSEF230 2_222E1402.wem</CachePath>
+				</File>
 				<File Id="753994427" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_items off tab hover 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_items off tab hover 2_FD4DF9DE.wem</CachePath>
@@ -1232,6 +1275,10 @@
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 8.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 8_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="822300244" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>elevator to teambuilding.wav</ShortName>
+					<CachePath>SFX/elevator to teambuilding_9DC61408.wem</CachePath>
+				</File>
 				<File Id="824409619" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_OS_Menu_game startup.wav</ShortName>
 					<CachePath>SFX/HM_SFX_OS_Menu_game startup_B13AC781.wem</CachePath>
@@ -1246,7 +1293,7 @@
 				</File>
 				<File Id="838587232" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity 3.wav</ShortName>
-					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity 3_FD4DF9DE.wem</CachePath>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity 3_9321A653.wem</CachePath>
 				</File>
 				<File Id="839769607" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>teambuilding-003.wav</ShortName>
@@ -1296,6 +1343,10 @@
 					<ShortName>HM_SFX_SC_Build_soap block remove 3.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_soap block remove 3_957D9876.wem</CachePath>
 				</File>
+				<File Id="866168184" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>door open -004.wav</ShortName>
+					<CachePath>SFX/door open -004_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="868885266" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>teambuilding validate 103 .wav</ShortName>
 					<CachePath>SFX/teambuilding validate 103 _B02CE968.wem</CachePath>
@@ -1322,7 +1373,7 @@
 				</File>
 				<File Id="880104204" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity 2.wav</ShortName>
-					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity 2_FD4DF9DE.wem</CachePath>
+					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity 2_325712FE.wem</CachePath>
 				</File>
 				<File Id="884312695" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233.wav</ShortName>
@@ -1407,10 +1458,6 @@
 				<File Id="926438548" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB Vdef intern linear.wav</ShortName>
 					<CachePath>SFX/AMB Vdef intern linear_B02CE968.wem</CachePath>
-				</File>
-				<File Id="927520393" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>CINEMATIQUE INTRO.wav</ShortName>
-					<CachePath>SFX/CINEMATIQUE INTRO_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="928286559" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Employé Triste Pensif-003.wav</ShortName>
@@ -1564,6 +1611,10 @@
 					<ShortName>Dir Créa Confus.wav</ShortName>
 					<CachePath>SFX/Dir Créa Confus_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="1047103891" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>elevator to cafeteria.wav</ShortName>
+					<CachePath>SFX/elevator to cafeteria_BA85FA62.wem</CachePath>
+				</File>
 				<File Id="1047230668" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_high_velocity-005.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_high_velocity-005_FD4DF9DE.wem</CachePath>
@@ -1598,6 +1649,9 @@
 				</File>
 			</Media>
 			<Plugins>
+				<Custom>
+					<Plugin Id="779429216" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+				</Custom>
 				<ShareSets>
 					<Plugin Id="2995775460" Name="Room_Small" LibName="Wwise RoomVerb" LibId="7733251"/>
 				</ShareSets>
@@ -2487,9 +2541,64 @@
 				</Event>
 				<Event Id="977134866" Name="Play_Camera_zoomIn" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2892692845" Name="Play_Camera_zoomOut" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2953314807" Name="Play_IntroCinematic" DurationType="OneShot" DurationMin="52.59931" DurationMax="52.59931">
+				<Event Id="2309087724" Name="Play_ElevatorDing_boss" DurationType="OneShot" DurationMin="3.2122917" DurationMax="3.2122917">
 					<MediaRefs>
-						<MediaRef Id="927520393"/>
+						<MediaRef Id="577888440"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3473637879" Name="Play_ElevatorDing_cafeteria" MaxAttenuation="100" DurationType="OneShot" DurationMin="4.5683365" DurationMax="5.0053225">
+					<MediaRefs>
+						<MediaRef Id="188475665"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2422508594" Name="Play_ElevatorDing_coworking" MaxAttenuation="100" DurationType="OneShot" DurationMin="3.644967" DurationMax="4.0913377">
+					<MediaRefs>
+						<MediaRef Id="866168184"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1596801780" Name="Play_ElevatorDing_null" DurationType="OneShot" DurationMin="1" DurationMax="1">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="779429216"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="304971692" Name="Play_ElevatorDing_teambuilding" MaxAttenuation="100" DurationType="OneShot" DurationMin="3.644967" DurationMax="4.0913377">
+					<MediaRefs>
+						<MediaRef Id="866168184"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2232247952" Name="Play_ElevatorFrom_boss" DurationType="OneShot" DurationMin="8.812292" DurationMax="8.812292">
+					<MediaRefs>
+						<MediaRef Id="548407932"/>
+						<MediaRef Id="577888440"/>
+						<MediaRef Id="1047103891"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="821832571" Name="Play_ElevatorFrom_cafeteria" DurationType="OneShot" DurationMin="8.5683365" DurationMax="9.005322">
+					<MediaRefs>
+						<MediaRef Id="188475665"/>
+						<MediaRef Id="245188296"/>
+						<MediaRef Id="548407932"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2400032206" Name="Play_ElevatorFrom_coworking" DurationType="OneShot" DurationMin="8.734979" DurationMax="9.091337">
+					<MediaRefs>
+						<MediaRef Id="545271398"/>
+						<MediaRef Id="548407932"/>
+						<MediaRef Id="866168184"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2577528824" Name="Play_ElevatorFrom_teambuilding" DurationType="OneShot" DurationMin="8.644967" DurationMax="9.091337">
+					<MediaRefs>
+						<MediaRef Id="548407932"/>
+						<MediaRef Id="822300244"/>
+						<MediaRef Id="866168184"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2953314807" Name="Play_IntroCinematic" DurationType="OneShot" DurationMin="52.60323" DurationMax="52.60323">
+					<MediaRefs>
+						<MediaRef Id="656253909"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="344286550" Name="Play_Main_Menu_Text_Hover" DurationType="OneShot" DurationMin="1.1009375" DurationMax="1.2182292">
@@ -2595,6 +2704,27 @@
 						<MediaRef Id="740826150"/>
 						<MediaRef Id="916271838"/>
 					</MediaRefs>
+				</Event>
+				<Event Id="2947356865" Name="Play_Menu_System_in" DurationType="OneShot" DurationMin="0.3995625" DurationMax="0.3995625">
+					<MediaRefs>
+						<MediaRef Id="522792161"/>
+					</MediaRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="2269821903" Id="3517500819" Name="Unfocused"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="4017523383" Name="Play_Menu_System_next" DurationType="OneShot" DurationMin="0.26533332" DurationMax="0.26533332">
+					<MediaRefs>
+						<MediaRef Id="299316334"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1668914112" Name="Play_Menu_System_out" DurationType="OneShot" DurationMin="0.24191667" DurationMax="0.24191667">
+					<MediaRefs>
+						<MediaRef Id="322908601"/>
+					</MediaRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="2269821903" Id="782826392" Name="Default"/>
+					</ActionSetState>
 				</Event>
 				<Event Id="1603835309" Name="Play_Menu_UI_Dialogue_Skip" DurationType="OneShot" DurationMin="1.0095642" DurationMax="1.3284883">
 					<MediaRefs>
@@ -2970,20 +3100,19 @@
 						<AuxBusRef Id="821123712" Name="Room_Verb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="1746020630" Name="Play_Physics_decoToFloor" DurationType="OneShot" DurationMin="0.51241374" DurationMax="0.64399356">
+				<Event Id="1746020630" Name="Play_Physics_decoToFloor" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.4488476" DurationMax="1.1083266">
 					<MediaRefs>
 						<MediaRef Id="1954477"/>
 						<MediaRef Id="68436417"/>
 						<MediaRef Id="86682777"/>
 						<MediaRef Id="231407703"/>
-						<MediaRef Id="611002344"/>
 						<MediaRef Id="733807707"/>
+						<MediaRef Id="752645010"/>
 						<MediaRef Id="838587232"/>
 						<MediaRef Id="880104204"/>
-						<MediaRef Id="962271348"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="683962872" Name="Play_Physics_employeeCollision" DurationType="OneShot" DurationMin="1.0677407" DurationMax="1.3495514">
+				<Event Id="683962872" Name="Play_Physics_employeeCollision" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.0677407" DurationMax="1.3495514">
 					<MediaRefs>
 						<MediaRef Id="253625658"/>
 						<MediaRef Id="433390949"/>
@@ -3082,6 +3211,13 @@
 				<GameParameter Id="3182657878" Name="RTPC_DIALOGUE_BUS"/>
 			</GameParameters>
 			<StateGroups>
+				<StateGroup Id="2269821903" Name="IsUnfocused">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="782826392" Name="Default"/>
+						<State Id="3517500819" Name="Unfocused"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="3266490866" Name="AmbOnValidate">
 					<States>
 						<State Id="748895195" Name="None"/>
@@ -3103,5 +3239,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{22C31741-9455-2F38-2155-C275F79645CF}</FileHash>
+	<FileHash>{99AA491F-342D-AD1A-872E-33CC1919A680}</FileHash>
 </SoundBanksInfo>

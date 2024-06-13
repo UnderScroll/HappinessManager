@@ -107,6 +107,15 @@ namespace AK
         static const AkUniqueID PLAY_BUILD_SOAP_BLOCK_REMOVE = 2054052469U;
         static const AkUniqueID PLAY_CAMERA_ZOOMIN = 977134866U;
         static const AkUniqueID PLAY_CAMERA_ZOOMOUT = 2892692845U;
+        static const AkUniqueID PLAY_ELEVATORDING_BOSS = 2309087724U;
+        static const AkUniqueID PLAY_ELEVATORDING_CAFETERIA = 3473637879U;
+        static const AkUniqueID PLAY_ELEVATORDING_COWORKING = 2422508594U;
+        static const AkUniqueID PLAY_ELEVATORDING_NULL = 1596801780U;
+        static const AkUniqueID PLAY_ELEVATORDING_TEAMBUILDING = 304971692U;
+        static const AkUniqueID PLAY_ELEVATORFROM_BOSS = 2232247952U;
+        static const AkUniqueID PLAY_ELEVATORFROM_CAFETERIA = 821832571U;
+        static const AkUniqueID PLAY_ELEVATORFROM_COWORKING = 2400032206U;
+        static const AkUniqueID PLAY_ELEVATORFROM_TEAMBUILDING = 2577528824U;
         static const AkUniqueID PLAY_INTROCINEMATIC = 2953314807U;
         static const AkUniqueID PLAY_MAIN_MENU_TEXT_HOVER = 344286550U;
         static const AkUniqueID PLAY_MENU_GAME_STARTUP = 2010853862U;
@@ -123,6 +132,9 @@ namespace AK
         static const AkUniqueID PLAY_MENU_SETTINGS_TOGGLEOUT = 4022107688U;
         static const AkUniqueID PLAY_MENU_SLIDERDIALOGUES = 3879871422U;
         static const AkUniqueID PLAY_MENU_SLIDERSFX = 301191870U;
+        static const AkUniqueID PLAY_MENU_SYSTEM_IN = 2947356865U;
+        static const AkUniqueID PLAY_MENU_SYSTEM_NEXT = 4017523383U;
+        static const AkUniqueID PLAY_MENU_SYSTEM_OUT = 1668914112U;
         static const AkUniqueID PLAY_MENU_UI_DIALOGUE_SKIP = 1603835309U;
         static const AkUniqueID PLAY_MENU_UNPAUSED = 2362180565U;
         static const AkUniqueID PLAY_MUSIC_BOSS = 2155613437U;
@@ -171,6 +183,18 @@ namespace AK
                 static const AkUniqueID VALIDATING = 1735831046U;
             } // namespace STATE
         } // namespace AMBONVALIDATE
+
+        namespace ISUNFOCUSED
+        {
+            static const AkUniqueID GROUP = 2269821903U;
+
+            namespace STATE
+            {
+                static const AkUniqueID DEFAULT = 782826392U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID UNFOCUSED = 3517500819U;
+            } // namespace STATE
+        } // namespace ISUNFOCUSED
 
     } // namespace STATES
 
