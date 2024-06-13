@@ -88,9 +88,9 @@ namespace Builder
             {
                 bool isPointingCell = _pointed.cellToPlace.IsSome(out int3 previewPosition);
                 bool isCellPointedEmpty = Level.Structure.Cells[previewPosition.x, previewPosition.y, previewPosition.z] == null;
-                bool hasRuleManagerAllowed = _gameManager.RuleManager.CanPlaceBlock(_selectedBlock.Type);
+                //bool hasRuleManagerAllowed = _gameManager.RuleManager.CanPlaceBlock(_selectedBlock.Type);
 
-                _previewBlockRenderer.enabled = isPointingCell && isCellPointedEmpty && hasRuleManagerAllowed;
+                _previewBlockRenderer.enabled = isPointingCell && isCellPointedEmpty;
                 _previewBlock.transform.position = new Vector3(previewPosition.x, previewPosition.y, previewPosition.z) + _structureOrigin.position;
             }
         }
@@ -172,8 +172,10 @@ namespace Builder
             if (Level.Structure.Cells[positionToPlace.x, positionToPlace.y, positionToPlace.z] != null)
                 return;
 
+            /*
             if (!_gameManager.RuleManager.CanPlaceBlock(_selectedBlock.Type))
                 return;
+            */
 
             PlaceBlock(_selectedBlock.Clone(), positionToPlace);
             UpdateConnection(positionToPlace);

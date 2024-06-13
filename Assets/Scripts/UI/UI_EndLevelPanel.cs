@@ -35,11 +35,6 @@ public class UI_EndLevelPanel : MonoBehaviour
     }
     public void Init()
     {
-       //string stage = "Floor " + currentStage;
-       //string level = "Level " + currentLevel;
-       //
-       //levelName.text = stage + " - " + level;
-
         if (!win)
         {
             text.text = "Oh no !";
