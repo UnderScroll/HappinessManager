@@ -274,7 +274,8 @@ public class UI_HUD : MonoBehaviour
     public void RestartLevel()
     {
         CloseEndLevelPanel();
-        _gameManager.LevelLoader.ReloadLevel();
+        // _gameManager.LevelLoader.ReloadLevel();
+        _gameManager.OnToggleMode();
         _gameManager.SoundManager.PlayOnBuilding();
     }
     #endregion

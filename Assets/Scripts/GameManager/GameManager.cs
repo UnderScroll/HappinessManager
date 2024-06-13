@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
     }
 
     [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres priv�s non utilis�s", Justification = "OnToggleMode is called by Unity Input System")]
-    void OnToggleMode()
+    public void OnToggleMode()
     {
         if (_playing)
             ResetSimulation();
