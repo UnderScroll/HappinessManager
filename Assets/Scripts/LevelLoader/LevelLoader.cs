@@ -111,10 +111,10 @@ namespace LevelLoader
             if (_additionalPrefabInstance != null)
                 Destroy(_additionalPrefabInstance);
 
-            if (AdditionamPrefabs[(int)CurrentLevelIndex] != null)
+            if (AdditionamPrefabs.Count > (int)CurrentLevelIndex && AdditionamPrefabs[(int)CurrentLevelIndex] != null)
                 _additionalPrefabInstance = Instantiate(AdditionamPrefabs[(int)CurrentLevelIndex], Camera.main.transform);
 
-            if (SkyBoxMat[(int)CurrentLevelIndex] != null)
+            if (SkyBoxMat.Count > (int)CurrentLevelIndex && SkyBoxMat[(int)CurrentLevelIndex] != null)
             {
                 RenderSettings.skybox = SkyBoxMat[(int)CurrentLevelIndex];
                 DynamicGI.UpdateEnvironment();
