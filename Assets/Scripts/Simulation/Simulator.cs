@@ -186,7 +186,6 @@ namespace Simulation
         public void Launch()
         {
             _isSimulationRunning = true;
-            
         }
 
         private void Update()
@@ -218,7 +217,7 @@ namespace Simulation
             Debug.Log("LevelValidated");
             _gameManager.SoundManager.PlayOnLevelValidated();
 
-            _gameManager.UI_HUD.DisplayEndLevelPanel(true);
+            StartCoroutine(_gameManager.UI_HUD.DisplayEndLevelPanel(true));
         }
 
         public void OnEmployeeGroundCollision()
@@ -233,7 +232,7 @@ namespace Simulation
             if (!_isSimulationFailed)
             {
                 _gameManager.SoundManager.PlayOnLevelFailed();
-                _gameManager.UI_HUD.DisplayEndLevelPanel(false); 
+                StartCoroutine(_gameManager.UI_HUD.DisplayEndLevelPanel(false)); 
             }
 
         }
