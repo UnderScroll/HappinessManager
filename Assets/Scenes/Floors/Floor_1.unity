@@ -977,6 +977,7 @@ MonoBehaviour:
   SoundManager: {fileID: 0}
   UI_HUD: {fileID: 0}
   CurrentStage: 0
+  Playing: 0
   FloorName: Floor_1
 --- !u!114 &737254369
 MonoBehaviour:
@@ -1031,6 +1032,9 @@ MonoBehaviour:
   CurrentLevelIndex: 0
   UI_HUD: {fileID: 0}
   nextFloorname: Floor_2
+  OnLoadLevel:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &737254372
 MonoBehaviour:
   m_ObjectHideFlags: 0
