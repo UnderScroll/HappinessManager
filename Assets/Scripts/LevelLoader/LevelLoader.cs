@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 namespace LevelLoader
@@ -19,6 +20,8 @@ namespace LevelLoader
         public string nextFloorname;
 
         private GameObject _additionalPrefabInstance;
+
+        public UnityEvent<string> OnLoadLevel;
 
         private void Awake()
         {
@@ -76,6 +79,7 @@ namespace LevelLoader
         private void LoadLevel(Level level)
         {
             Debug.Log($"Loading {level.name}");
+            OnLoadLevel?.Invoke(level.name);
 
             if (CurrentLevelIndex == 0) //If loading the first level of the floor, play music and ambiance
                 _gameManager.SoundManager.PLayOnFirstLevelLoaded();
