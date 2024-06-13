@@ -20,18 +20,25 @@ public class UI_EndLevelPanel : MonoBehaviour
 
     private GameManager _gameManager;
     private int currentStage = 0;
+    private string currentLevel = "0";
     private void Start()
     {
         _gameManager = FindObjectOfType<GameManager>();
         if (_gameManager == null) { Debug.LogError("EndLevel Panel : no gamemanager found"); }
         currentStage = (int)_gameManager.CurrentStage + 1;
+        currentLevel = _gameManager.LevelLoader.Levels[(int)_gameManager.LevelLoader.CurrentLevelIndex].name;
+        currentLevel = currentLevel.Substring(currentLevel.Length - 1);
+        string stage = "Floor " + currentStage;
+        string level = "Level " + currentLevel;
+
+        levelName.text = stage + " - " + level;
     }
     public void Init()
     {
-        string stage = "Floor " + currentStage;
-       // string level = "Level " + _gameManager.LevelLoader.CurrentLevelIndex;
-
-        levelName.text = stage + " - " + 0;
+       //string stage = "Floor " + currentStage;
+       //string level = "Level " + currentLevel;
+       //
+       //levelName.text = stage + " - " + level;
 
         if (!win)
         {
