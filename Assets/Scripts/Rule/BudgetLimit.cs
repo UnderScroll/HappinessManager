@@ -17,5 +17,8 @@ public class BudgetLimit : IBlockRule
         return true;
     }
 
-
+    public override bool Validate()
+    {
+        return _gameManager.Builder.SpentMoney <= Budget;
+    }
 }

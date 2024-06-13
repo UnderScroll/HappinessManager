@@ -86,7 +86,11 @@ namespace Builder
             _pointed = GetPointed();
             if (_previewBlockRenderer != null && _previewBlock != null)
             {
-                _previewBlockRenderer.enabled = _pointed.cellToPlace.IsSome(out int3 previewPosition);
+                bool isPointingCell = _pointed.cellToPlace.IsSome(out int3 previewPosition);
+                bool isCellPointedEmpty = Level.Structure.Cells[previewPosition.x, previewPosition.y, previewPosition.z] == null;
+                //bool hasRuleManagerAllowed = _gameManager.RuleManager.CanPlaceBlock(_selectedBlock.Type);
+
+                _previewBlockRenderer.enabled = isPointingCell && isCellPointedEmpty;
                 _previewBlock.transform.position = new Vector3(previewPosition.x, previewPosition.y, previewPosition.z) + _structureOrigin.position;
             }
         }
@@ -168,8 +172,10 @@ namespace Builder
             if (Level.Structure.Cells[positionToPlace.x, positionToPlace.y, positionToPlace.z] != null)
                 return;
 
+            /*
             if (!_gameManager.RuleManager.CanPlaceBlock(_selectedBlock.Type))
                 return;
+            */
 
             PlaceBlock(_selectedBlock.Clone(), positionToPlace);
             UpdateConnection(positionToPlace);
@@ -223,6 +229,7 @@ namespace Builder
                 _selectedBlock = (CellData)Level.PlaceableCellTypes[(int)index];
 
             Destroy(_previewBlock);
+
             _previewBlock = Instantiate(_selectedBlock.Type.Block, _structureOrigin);
             _previewBlockRenderer = _previewBlock.GetComponentInChildren<MeshRenderer>(false);
             if (_previewBlockRenderer == null)
@@ -234,8 +241,9 @@ namespace Builder
             Material[] previewMaterial = { _previewBlockRenderer.materials[1] };
 
             _previewBlockRenderer.materials = previewMaterial;
-            _previewBlockRenderer.material.SetFloat("_Transparency_level", 0.95f);
+            _previewBlockRenderer.material.SetFloat("_Transparency_level", 1.1f);
             _previewBlockRenderer.material.SetFloat("_Dithering", 1);
+            _previewBlockRenderer.material.SetFloat("_PreviewBlock", 1);
         }
     }
 }
