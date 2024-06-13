@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{264A8C80-F26D-D676-45C2-FD0AC02D6933}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{8453C246-6467-E853-62FA-0C1C54C96037}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -18,6 +18,7 @@
 				</Custom>
 				<ShareSets>
 					<Plugin Id="602546716" Name="Room_Large" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="1706684651" Name="Plate_Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="1960519852" Name="SensitivityFilter" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</ShareSets>
 				<AudioDevices>
@@ -46,6 +47,7 @@
 						</Custom>
 						<ShareSets>
 							<PluginRef Id="602546716"/>
+							<PluginRef Id="1706684651"/>
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
@@ -87,7 +89,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{BAB4557C-FBAA-CE35-69E1-CE9BDA8D0B2C}">
+		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{2C32DFB7-8151-8279-0A86-B5C7F0DA0852}">
 			<ShortName>HM_Global_SB</ShortName>
 			<Path>HM_Global_SB.bnk</Path>
 			<Media>
@@ -1194,6 +1196,10 @@
 				<File Id="753994427" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_items off tab hover 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_items off tab hover 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="756356273" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>transi coworking 109 vdef.wav</ShortName>
+					<CachePath>SFX/transi coworking 109 vdef_B02CE968.wem</CachePath>
 				</File>
 				<File Id="766763811" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_soapToBlock_high_velocity - stem-007.wav</ShortName>
@@ -2845,6 +2851,9 @@
 					</ActionSetSwitch>
 				</Event>
 				<Event Id="2084975041" Name="Play_Music_coworking" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="756356273"/>
+					</MediaRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="2410351013" Id="3284755031"/>
@@ -3260,5 +3269,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2221C7AF-A209-7A9C-4591-16900EB906AB}</FileHash>
+	<FileHash>{05BB7E8D-BA91-6C87-C7D9-72FA5F0CC6A9}</FileHash>
 </SoundBanksInfo>

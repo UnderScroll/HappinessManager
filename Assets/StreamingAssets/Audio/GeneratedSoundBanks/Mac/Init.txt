@@ -22,7 +22,6 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	3067876527	RTPC_SFX_BUS			\BUS_RTPC\RTPC_SFX_BUS	
 	3182657878	RTPC_DIALOGUE_BUS			\BUS_RTPC\RTPC_DIALOGUE_BUS	
 	3432596327	RTPC_MUSIC_BUS			\BUS_RTPC\RTPC_MUSIC_BUS	
-	3583098985	Reverb_Distance			\WU_HM_RTPC\Reverb_Distance	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	69765534	MUSIQUE			\Default Work Unit\Master Audio Bus\GAME CONTROLLED\MUSIQUE	
@@ -37,6 +36,7 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 Effect plug-ins	ID	Name	Type				Notes
 	11386286	Delay (Custom)	Wwise Delay			
 	602546716	Room_Large	Wwise RoomVerb			
+	1706684651	Plate_Medium	Wwise RoomVerb			
 	1960519852	SensitivityFilter	Wwise Parametric EQ			
 
 Audio Devices	ID	Name	Type				Notes

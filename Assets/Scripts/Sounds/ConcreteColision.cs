@@ -4,8 +4,8 @@ public class ConcreteCollision : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        float collisionForce = collision.impulse.magnitude;
-        if (collisionForce > 1)
+        float collisionForce = collision.impulse.magnitude * 2;
+        if (collisionForce > 2)
         {
             //Debug.Log(collisionForce);
             AkSoundEngine.SetRTPCValue("Collision_Velocity", collisionForce);

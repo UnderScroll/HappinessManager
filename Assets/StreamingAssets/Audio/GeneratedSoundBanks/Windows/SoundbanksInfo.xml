@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{2A00B85A-A351-F142-67C5-3243E65FD203}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{FCC44837-8B9D-921C-C4D8-C49E7E3F961C}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -18,6 +18,7 @@
 				</Custom>
 				<ShareSets>
 					<Plugin Id="602546716" Name="Room_Large" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="1706684651" Name="Plate_Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="1960519852" Name="SensitivityFilter" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</ShareSets>
 				<AudioDevices>
@@ -46,6 +47,7 @@
 						</Custom>
 						<ShareSets>
 							<PluginRef Id="602546716"/>
+							<PluginRef Id="1706684651"/>
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
@@ -87,7 +89,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{B6DB2D84-C7C5-DEED-1699-FB765EC5DC13}">
+		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{2C32DFB7-8151-8279-0A86-B5C7F0DA0852}">
 			<ShortName>HM_Global_SB</ShortName>
 			<Path>HM_Global_SB.bnk</Path>
 			<Media>
@@ -433,7 +435,7 @@
 				</File>
 				<File Id="245188296" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>elevator to coworking.wav</ShortName>
-					<CachePath>SFX/elevator to coworking_87C4FD17.wem</CachePath>
+					<CachePath>SFX/elevator to coworking_4A9B6B3F.wem</CachePath>
 				</File>
 				<File Id="245320377" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dir Créa Excité-002.wav</ShortName>
@@ -881,11 +883,11 @@
 				</File>
 				<File Id="545271398" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>elevator to intern.wav</ShortName>
-					<CachePath>SFX/elevator to intern_495A8C26.wem</CachePath>
+					<CachePath>SFX/elevator to intern_2F831F71.wem</CachePath>
 				</File>
 				<File Id="548407932" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>swoosh floor trans-glued.wav</ShortName>
-					<CachePath>SFX/swoosh floor trans-glued_16561820.wem</CachePath>
+					<CachePath>SFX/swoosh floor trans-glued_EB67BD97.wem</CachePath>
 				</File>
 				<File Id="549173016" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>intern-002.wav</ShortName>
@@ -1281,7 +1283,7 @@
 				</File>
 				<File Id="822300244" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>elevator to teambuilding.wav</ShortName>
-					<CachePath>SFX/elevator to teambuilding_2F1D90BE.wem</CachePath>
+					<CachePath>SFX/elevator to teambuilding_9DC61408.wem</CachePath>
 				</File>
 				<File Id="824409619" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_OS_Menu_game startup.wav</ShortName>
@@ -3267,5 +3269,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{DCBDE9AB-290C-5336-5A93-422091AB1D11}</FileHash>
+	<FileHash>{5E185F70-B3CA-F565-A24A-7FC0B629B41B}</FileHash>
 </SoundBanksInfo>
