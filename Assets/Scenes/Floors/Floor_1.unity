@@ -798,6 +798,55 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96513db3616cdb9488e055ccc54a90b1, type: 3}
+--- !u!1 &522483204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 522483206}
+  - component: {fileID: 522483205}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &522483205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522483204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 11d361b8252d27e45a492cc7b5031ddb, type: 2}
+--- !u!4 &522483206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522483204}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.93988, y: -6.0028048, z: 1.3441302}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &732280267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,7 +1076,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c918fdad716203d48a407fec57e4901a, type: 2}
   AdditionamPrefabs:
   - {fileID: 8558560405232904939, guid: 071fb465072246d489c555dc17a95bc6, type: 3}
-  SkyBoxMat: []
+  - {fileID: 1436279987352481631, guid: 6afdbdd08c0232647a69c34b0871a62a, type: 3}
+  - {fileID: 1436279987352481631, guid: 6afdbdd08c0232647a69c34b0871a62a, type: 3}
+  - {fileID: 3673806027231941178, guid: 79d52581a8a86fa4c8842b8fd51fe03d, type: 3}
+  SkyBoxMat:
+  - {fileID: 2100000, guid: 1a5d3f83d028fb642ba572e2a990c839, type: 2}
   CurrentLevelIndex: 0
   UI_HUD: {fileID: 0}
   nextFloorname: Floor_2
@@ -2102,3 +2155,4 @@ SceneRoots:
   - {fileID: 779546200}
   - {fileID: 1667214931}
   - {fileID: 1357684432}
+  - {fileID: 522483206}
