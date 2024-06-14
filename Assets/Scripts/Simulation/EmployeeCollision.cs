@@ -24,7 +24,7 @@ public class EmployeeCollision : MonoBehaviour
                 if (TryGetComponent(out AlignToCamera alignToCamera))
                     alignToCamera.enabled = false;
             }
-            if (collisionForce > 5)
+            if (collisionForce > 3)
             {
                 AkSoundEngine.PostEvent("Play_Physics_employeeCollision", gameObject);
                 Debug.Log(collisionForce);

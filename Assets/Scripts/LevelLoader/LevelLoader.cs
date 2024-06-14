@@ -82,7 +82,7 @@ namespace LevelLoader
             OnLoadLevel?.Invoke(level.name);
 
             if (CurrentLevelIndex == 0) //If loading the first level of the floor, play music and ambiance
-                _gameManager.SoundManager.PLayOnFirstLevelLoaded();
+                _gameManager.SoundManager.PlayOnFirstLevelLoaded();
 
             _gameManager.ResetSimulation();
 
