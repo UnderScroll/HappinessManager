@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using TMPro;
 
 public class UI_BetweenStages : MonoBehaviour
 {
     [SerializeField] List<UI_SpriteSwap> floors;
     [SerializeField] RectTransform background;
+    [SerializeField] TextMeshProUGUI text;
+    [SerializeField] public List<string> lines;
 
     private GameManager _gameManager;
     private void Start()
@@ -19,6 +22,9 @@ public class UI_BetweenStages : MonoBehaviour
         GameManager.Stage currentFloor = _gameManager.CurrentStage + 1;
 
         Debug.Log(currentFloor + " : " + (int)currentFloor);
+        string line = lines[Random.Range(0, lines.Count)];
+
+        text.text = "Tip : " + line;
 
         for (int i = 0; i < floors.Count; i++)
         {
