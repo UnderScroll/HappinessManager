@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{FCC44837-8B9D-921C-C4D8-C49E7E3F961C}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6693C2BB-E1A5-D322-7FD4-3D32077930C1}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -56,6 +56,7 @@
 				<GameParameter Id="1561184313" Name="RTPC_SENSITIVITY_FILTER"/>
 				<GameParameter Id="1830592977" Name="Wind_Strength"/>
 				<GameParameter Id="1951144523" Name="Collision_Velocity"/>
+				<GameParameter Id="2940890671" Name="playbackspeedtest"/>
 				<GameParameter Id="3067876527" Name="RTPC_SFX_BUS"/>
 				<GameParameter Id="3182657878" Name="RTPC_DIALOGUE_BUS"/>
 				<GameParameter Id="3432596327" Name="RTPC_MUSIC_BUS"/>
@@ -89,7 +90,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{2C32DFB7-8151-8279-0A86-B5C7F0DA0852}">
+		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{C0D393F7-38A9-43AF-3152-31CEF2A067E9}">
 			<ShortName>HM_Global_SB</ShortName>
 			<Path>HM_Global_SB.bnk</Path>
 			<Media>
@@ -100,6 +101,10 @@
 				<File Id="5243427" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_high_velocity 3.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_high_velocity 3_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="18866702" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Cloth, Movement, Jacket, Thick, Rapid Actions, Slow Walk SND50901.wav</ShortName>
+					<CachePath>SFX/Cloth, Movement, Jacket, Thick, Rapid Actions, Slow Walk SND50901_161A5F76.wem</CachePath>
 				</File>
 				<File Id="19070243" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>coworking-002.wav</ShortName>
@@ -125,9 +130,21 @@
 					<ShortName>Soundly Audio\Digital Click Negative 07.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Digital Click Negative 07_FC0AB68B.wem</CachePath>
 				</File>
+				<File Id="30817620" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps Parquet  by Yuval Id-205747.wav</ShortName>
+					<CachePath>SFX/Footsteps Parquet  by Yuval Id-205747_0474B18D.wem</CachePath>
+				</File>
+				<File Id="34827037" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire confus je me suis trompe de bureau.wav</ShortName>
+					<CachePath>SFX/Stagiaire confus je me suis trompe de bureau_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="35796486" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cafeteria-004.wav</ShortName>
 					<CachePath>SFX/cafeteria-004_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="36338727" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire confus je me trompe.wav</ShortName>
+					<CachePath>SFX/Stagiaire confus je me trompe_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="38529753" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_low_velocity-001.wav</ShortName>
@@ -137,9 +154,9 @@
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_high_velocity-006.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_high_velocity-006_FD4DF9DE.wem</CachePath>
 				</File>
-				<File Id="43553209" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233 4.wav</ShortName>
-					<CachePath>SFX/Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233 4_A4E31563.wem</CachePath>
+				<File Id="48228603" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire confus a quelle heure la pause.wav</ShortName>
+					<CachePath>SFX/Stagiaire confus a quelle heure la pause_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="50950265" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_OS_UI_toggle_out .wav</ShortName>
@@ -152,6 +169,10 @@
 				<File Id="57689873" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_low_velocity-014.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_low_velocity-014_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="64726708" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lottie Small Dog Growling Barking And Playing 3 by thaighaudio Id-478107.wav</ShortName>
+					<CachePath>SFX/Lottie Small Dog Growling Barking And Playing 3 by thaighaudio Id-478107_3C4AFAC4.wem</CachePath>
 				</File>
 				<File Id="67845509" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Community Manager Excitée-001.wav</ShortName>
@@ -197,10 +218,6 @@
 					<ShortName>HM_SFX_BC_Physics_soapToBlock_high_velocity - stem-005.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_soapToBlock_high_velocity - stem-005_FD4DF9DE.wem</CachePath>
 				</File>
-				<File Id="89773760" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233 1.wav</ShortName>
-					<CachePath>SFX/Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233 1_887654BC.wem</CachePath>
-				</File>
 				<File Id="91035806" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_basic block place-004.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_basic block place-004_776C35E9.wem</CachePath>
@@ -221,6 +238,10 @@
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity-002.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity-002_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="100994493" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lottie Small Dog Growling Barking And Playing 3 by thaighaudio Id-478107.wav</ShortName>
+					<CachePath>SFX/Lottie Small Dog Growling Barking And Playing 3 by thaighaudio Id-478107_5389BBC9.wem</CachePath>
+				</File>
 				<File Id="101966464" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>level restart v2-glued-02.wav</ShortName>
 					<CachePath>SFX/level restart v2-glued-02_FD4DF9DE.wem</CachePath>
@@ -232,6 +253,10 @@
 				<File Id="106632701" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_Menu_paused.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_Menu_paused_586349A2.wem</CachePath>
+				</File>
+				<File Id="106721312" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire last_peur attaque.wav</ShortName>
+					<CachePath>SFX/Stagiaire last_peur attaque_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="110014753" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity-008.wav</ShortName>
@@ -257,9 +282,17 @@
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity-004.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity-004_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="126198670" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire confus jspcequejedoifair.wav</ShortName>
+					<CachePath>SFX/Stagiaire confus jspcequejedoifair_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="127519377" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>intern validate vdef 120.wav</ShortName>
 					<CachePath>SFX/intern validate vdef 120_B02CE968.wem</CachePath>
+				</File>
+				<File Id="130472013" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108_F2A69C03.wem</CachePath>
 				</File>
 				<File Id="131837971" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_concrete block remove 4.wav</ShortName>
@@ -325,6 +358,10 @@
 					<ShortName>HM_SFX_SC_Build_basic block remove-002.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_basic block remove-002_D606A7EC.wem</CachePath>
 				</File>
+				<File Id="152436930" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire last_agace patron_fache.wav</ShortName>
+					<CachePath>SFX/Stagiaire last_agace patron_fache_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="152459739" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>intern defeat vdef 120.wav</ShortName>
 					<CachePath>SFX/intern defeat vdef 120_B02CE968.wem</CachePath>
@@ -340,6 +377,10 @@
 				<File Id="156730440" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_low_velocity-011.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_low_velocity-011_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="158978694" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire confus onmariendit-001.wav</ShortName>
+					<CachePath>SFX/Stagiaire confus onmariendit-001_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="159526382" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_onBack 1.wav</ShortName>
@@ -373,6 +414,14 @@
 					<ShortName>Comptable Hereuse-001.wav</ShortName>
 					<CachePath>SFX/Comptable Hereuse-001_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="174480921" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BT SQUEAK Elephant Single 2.wav</ShortName>
+					<CachePath>SFX/BT SQUEAK Elephant Single 2_6F13532F.wem</CachePath>
+				</File>
+				<File Id="175532850" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Cloth, Movement, Jacket, Thick, Rapid Actions, Slow Walk SND50901.wav</ShortName>
+					<CachePath>SFX/Cloth, Movement, Jacket, Thick, Rapid Actions, Slow Walk SND50901_370EE91D.wem</CachePath>
+				</File>
 				<File Id="180885341" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>boss vdef 125 victory.wav</ShortName>
 					<CachePath>SFX/boss vdef 125 victory_B02CE968.wem</CachePath>
@@ -385,6 +434,10 @@
 					<ShortName>Comptable Hereuse-002.wav</ShortName>
 					<CachePath>SFX/Comptable Hereuse-002_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="200899023" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lottie Small Dog Growling Barking And Playing 3 by thaighaudio Id-478107.wav</ShortName>
+					<CachePath>SFX/Lottie Small Dog Growling Barking And Playing 3 by thaighaudio Id-478107_1DE062D1.wem</CachePath>
+				</File>
 				<File Id="203206526" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity-007.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity-007_FD4DF9DE.wem</CachePath>
@@ -393,9 +446,17 @@
 					<ShortName>HM_SFX_RC_UI_tab_onclick 1.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_tab_onclick 1_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="209995248" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps Parquet  by Yuval Id-205747.wav</ShortName>
+					<CachePath>SFX/Footsteps Parquet  by Yuval Id-205747_490D03A5.wem</CachePath>
+				</File>
 				<File Id="212615330" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_soapTofloor_high_velocity-007.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_soapTofloor_high_velocity-007_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="214974603" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps Parquet  by Yuval Id-205747.wav</ShortName>
+					<CachePath>SFX/Footsteps Parquet  by Yuval Id-205747_9D2C502A.wem</CachePath>
 				</File>
 				<File Id="222916998" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Employé Triste Hereux-003.wav</ShortName>
@@ -417,9 +478,13 @@
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity 6.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity 6_1B1B7844.wem</CachePath>
 				</File>
-				<File Id="233212238" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 01 SND46234 5.wav</ShortName>
-					<CachePath>SFX/Toys, Misc, Rubber Duck, Whistling, Squeak 01 SND46234 5_69054E5C.wem</CachePath>
+				<File Id="233687355" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire excite trop content.wav</ShortName>
+					<CachePath>SFX/Stagiaire excite trop content_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="235028206" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire hereux huh huh huh.wav</ShortName>
+					<CachePath>SFX/Stagiaire hereux huh huh huh_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="235321306" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB Vdef cafeteria linear.wav</ShortName>
@@ -445,6 +510,10 @@
 					<ShortName>HM_SFX_SC_Build_concrete block remove 3.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_concrete block remove 3_ED8F32E5.wem</CachePath>
 				</File>
+				<File Id="249599184" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire excite wow.wav</ShortName>
+					<CachePath>SFX/Stagiaire excite wow_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="250122384" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity-009.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity-009_FD4DF9DE.wem</CachePath>
@@ -452,6 +521,10 @@
 				<File Id="250831996" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB Vdef teambuilding linear.wav</ShortName>
 					<CachePath>SFX/AMB Vdef teambuilding linear_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="251207352" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire nerveux ah bon.wav</ShortName>
+					<CachePath>SFX/Stagiaire nerveux ah bon_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="252308151" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>drum loop victory 109 2.wav</ShortName>
@@ -489,9 +562,13 @@
 					<ShortName>Dir Créa Dégouté.wav</ShortName>
 					<CachePath>SFX/Dir Créa Dégouté_FD4DF9DE.wem</CachePath>
 				</File>
-				<File Id="270210916" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 01 SND46234 1.wav</ShortName>
-					<CachePath>SFX/Toys, Misc, Rubber Duck, Whistling, Squeak 01 SND46234 1_FD4DF9DE.wem</CachePath>
+				<File Id="261450567" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lottie Small Dog Growling Barking And Playing 3 by thaighaudio Id-478107.wav</ShortName>
+					<CachePath>SFX/Lottie Small Dog Growling Barking And Playing 3 by thaighaudio Id-478107_2AF65BE5.wem</CachePath>
+				</File>
+				<File Id="261981201" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire last_triste humide.wav</ShortName>
+					<CachePath>SFX/Stagiaire last_triste humide_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="270294760" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>coworking validating 109 vdef.wav</ShortName>
@@ -557,6 +634,10 @@
 					<ShortName>HM_SFX_SC_Build_basic block place-005.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_basic block place-005_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="316317559" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108_D98BD982.wem</CachePath>
+				</File>
 				<File Id="318756339" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>teambuilding-001.wav</ShortName>
 					<CachePath>SFX/teambuilding-001_FD4DF9DE.wem</CachePath>
@@ -565,9 +646,17 @@
 					<ShortName>system out-glued.wav</ShortName>
 					<CachePath>SFX/system out-glued_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="325426731" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire excite tous ensembles.wav</ShortName>
+					<CachePath>SFX/Stagiaire excite tous ensembles_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="326583449" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity-001.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity-001_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="327748888" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire determine au max.wav</ShortName>
+					<CachePath>SFX/Stagiaire determine au max_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="327908177" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Employé Triste Fatigué -003.wav</ShortName>
@@ -593,6 +682,10 @@
 					<ShortName>TRANSI BOSS 125 VDEF.wav</ShortName>
 					<CachePath>SFX/TRANSI BOSS 125 VDEF_B02CE968.wem</CachePath>
 				</File>
+				<File Id="346664737" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire nerveux 01-240614_0926.wav</ShortName>
+					<CachePath>SFX/Stagiaire nerveux 01-240614_0926_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="348800255" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Employé Triste Fatigué -002.wav</ShortName>
 					<CachePath>SFX/Employé Triste Fatigué -002_FD4DF9DE.wem</CachePath>
@@ -617,9 +710,17 @@
 					<ShortName>HM_SFX_OS_UI_item tab hover heavy.wav</ShortName>
 					<CachePath>SFX/HM_SFX_OS_UI_item tab hover heavy_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="374694297" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire nerveux un cafe.wav</ShortName>
+					<CachePath>SFX/Stagiaire nerveux un cafe_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="380089854" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>teambuilding validate 2 103.wav</ShortName>
 					<CachePath>SFX/teambuilding validate 2 103_B02CE968.wem</CachePath>
+				</File>
+				<File Id="380397323" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire hereux wow.wav</ShortName>
+					<CachePath>SFX/Stagiaire hereux wow_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="382610479" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_tab_hover _highlighter 2.wav</ShortName>
@@ -641,9 +742,21 @@
 					<ShortName>Community Manager Déterminée-001.wav</ShortName>
 					<CachePath>SFX/Community Manager Déterminée-001_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="390778144" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BT SQUEAK Elephant Single.wav</ShortName>
+					<CachePath>SFX/BT SQUEAK Elephant Single_91289519.wem</CachePath>
+				</File>
 				<File Id="393348752" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>coworking-004.wav</ShortName>
 					<CachePath>SFX/coworking-004_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="397090791" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire excite waa.wav</ShortName>
+					<CachePath>SFX/Stagiaire excite waa_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="399643629" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire last_agace pas_gratuit.wav</ShortName>
+					<CachePath>SFX/Stagiaire last_agace pas_gratuit_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="400134679" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>victory drum 1 120.wav</ShortName>
@@ -693,6 +806,10 @@
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity .wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity _FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="413768567" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire hereux super.wav</ShortName>
+					<CachePath>SFX/Stagiaire hereux super_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="413798542" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity-010.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity-010_FD4DF9DE.wem</CachePath>
@@ -705,13 +822,17 @@
 					<ShortName>HM_SFX_RC_UI_tab_hover _highlighter 3.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_tab_hover _highlighter 3_FD4DF9DE.wem</CachePath>
 				</File>
-				<File Id="420491024" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 01 SND46234 3.wav</ShortName>
-					<CachePath>SFX/Toys, Misc, Rubber Duck, Whistling, Squeak 01 SND46234 3_FD4DF9DE.wem</CachePath>
+				<File Id="422348573" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire confus ou les cafe.wav</ShortName>
+					<CachePath>SFX/Stagiaire confus ou les cafe_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="423796928" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>boss vdef 125 validate.wav</ShortName>
 					<CachePath>SFX/boss vdef 125 validate_B02CE968.wem</CachePath>
+				</File>
+				<File Id="423975173" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire hereux trop bien.wav</ShortName>
+					<CachePath>SFX/Stagiaire hereux trop bien_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="424006832" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_high_velocity 2.wav</ShortName>
@@ -724,6 +845,10 @@
 				<File Id="430786688" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_low_velocity-016.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_low_velocity-016_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="431932342" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire determine stage formateur.wav</ShortName>
+					<CachePath>SFX/Stagiaire determine stage formateur_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="433390949" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Musical, Percussion, Drum Beat Endings, Kick, Cymbal, Crash 03 SND62701 1.wav</ShortName>
@@ -749,6 +874,10 @@
 					<ShortName>Comptable Calme-001.wav</ShortName>
 					<CachePath>SFX/Comptable Calme-001_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="444055126" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire hereux disruptif.wav</ShortName>
+					<CachePath>SFX/Stagiaire hereux disruptif_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="445722997" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 11.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 11_FD4DF9DE.wem</CachePath>
@@ -760,6 +889,10 @@
 				<File Id="447691927" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_UI_SC_Menu_dialogue bubble 4.wav</ShortName>
 					<CachePath>SFX/HM_UI_SC_Menu_dialogue bubble 4_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="447847873" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108_9BE71D78.wem</CachePath>
 				</File>
 				<File Id="453738708" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>level restart v2-glued.wav</ShortName>
@@ -781,6 +914,10 @@
 					<ShortName>HM_SFX_SC_Build_concrete block place 3.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_concrete block place 3_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="466035394" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Cloth, Movement, Jacket, Thick, Rapid Actions, Slow Walk SND50901.wav</ShortName>
+					<CachePath>SFX/Cloth, Movement, Jacket, Thick, Rapid Actions, Slow Walk SND50901_7F3606E6.wem</CachePath>
+				</File>
 				<File Id="471441177" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_soapTofloor_high_velocity - stem-005.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_soapTofloor_high_velocity - stem-005_FD4DF9DE.wem</CachePath>
@@ -792,6 +929,10 @@
 				<File Id="473874225" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dir Créa Hereux-003.wav</ShortName>
 					<CachePath>SFX/Dir Créa Hereux-003_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="475000448" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lottie Small Dog Growling Barking And Playing 3 by thaighaudio Id-478107.wav</ShortName>
+					<CachePath>SFX/Lottie Small Dog Growling Barking And Playing 3 by thaighaudio Id-478107_7B032508.wem</CachePath>
 				</File>
 				<File Id="475965853" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cafeteria-005.wav</ShortName>
@@ -809,9 +950,17 @@
 					<ShortName>HM_UI_RC_Menu_money spent 2.wav</ShortName>
 					<CachePath>SFX/HM_UI_RC_Menu_money spent 2_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="487385422" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BT SQUEAK Elephant Single 4.wav</ShortName>
+					<CachePath>SFX/BT SQUEAK Elephant Single 4_B49E2471.wem</CachePath>
+				</File>
 				<File Id="492168383" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_UI_RC_Menu_select .wav</ShortName>
 					<CachePath>SFX/HM_UI_RC_Menu_select _FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="493142960" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BT SQUEAK Elephant Single 3.wav</ShortName>
+					<CachePath>SFX/BT SQUEAK Elephant Single 3_0AFCFE40.wem</CachePath>
 				</File>
 				<File Id="494964440" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 9.wav</ShortName>
@@ -825,9 +974,17 @@
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="506954753" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire determine todoliks.wav</ShortName>
+					<CachePath>SFX/Stagiaire determine todoliks_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="508950208" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Employé Triste Hereux-001.wav</ShortName>
 					<CachePath>SFX/Employé Triste Hereux-001_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="511037211" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108_CE84DB8E.wem</CachePath>
 				</File>
 				<File Id="513890808" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 10.wav</ShortName>
@@ -849,9 +1006,9 @@
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 12.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToBlock_low_velocity 12_FD4DF9DE.wem</CachePath>
 				</File>
-				<File Id="527095067" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233 5.wav</ShortName>
-					<CachePath>SFX/Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233 5_FD4DF9DE.wem</CachePath>
+				<File Id="525631804" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire last_nerveux plus_budget.wav</ShortName>
+					<CachePath>SFX/Stagiaire last_nerveux plus_budget_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="528186170" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_soapToBlock_high_velocity - stem-006.wav</ShortName>
@@ -860,6 +1017,14 @@
 				<File Id="528441021" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_high_velocity-003.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_high_velocity-003_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="529930328" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps Parquet  by Yuval Id-205747.wav</ShortName>
+					<CachePath>SFX/Footsteps Parquet  by Yuval Id-205747_A3E9B997.wem</CachePath>
+				</File>
+				<File Id="533994232" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Cloth, Movement, Jacket, Thick, Rapid Actions, Slow Walk SND50901.wav</ShortName>
+					<CachePath>SFX/Cloth, Movement, Jacket, Thick, Rapid Actions, Slow Walk SND50901_4BB9C5C3.wem</CachePath>
 				</File>
 				<File Id="534417975" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_onSettingTabClick 2.wav</ShortName>
@@ -873,13 +1038,29 @@
 					<ShortName>teambuilding defeat 103.wav</ShortName>
 					<CachePath>SFX/teambuilding defeat 103_B02CE968.wem</CachePath>
 				</File>
+				<File Id="540518981" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BT SQUEAK Elephant Single 4.wav</ShortName>
+					<CachePath>SFX/BT SQUEAK Elephant Single 4_CB06B3DA.wem</CachePath>
+				</File>
 				<File Id="541278496" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>defeat cafeteria 115 vdef 2 .wav</ShortName>
 					<CachePath>SFX/defeat cafeteria 115 vdef 2 _B02CE968.wem</CachePath>
 				</File>
+				<File Id="541595339" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire determine lesgo la team.wav</ShortName>
+					<CachePath>SFX/Stagiaire determine lesgo la team_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="542520874" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BT SQUEAK Elephant Single 2.wav</ShortName>
+					<CachePath>SFX/BT SQUEAK Elephant Single 2_019D7DA2.wem</CachePath>
+				</File>
 				<File Id="542701352" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>transi pizz 115 vdef .wav</ShortName>
 					<CachePath>SFX/transi pizz 115 vdef _B02CE968.wem</CachePath>
+				</File>
+				<File Id="543280465" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire last_agace ca_suffit.wav</ShortName>
+					<CachePath>SFX/Stagiaire last_agace ca_suffit_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="545271398" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>elevator to intern.wav</ShortName>
@@ -900,6 +1081,10 @@
 				<File Id="556204492" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_Menu_unpaused 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_Menu_unpaused 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="559535232" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire hereux woaw.wav</ShortName>
+					<CachePath>SFX/Stagiaire hereux woaw_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="560646483" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_items off tab hover 1.wav</ShortName>
@@ -937,6 +1122,10 @@
 					<ShortName>Comptable Suspicieuse-002.wav</ShortName>
 					<CachePath>SFX/Comptable Suspicieuse-002_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="576713141" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire last_agace lache_rapport.wav</ShortName>
+					<CachePath>SFX/Stagiaire last_agace lache_rapport_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="577888440" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>door open -001.wav</ShortName>
 					<CachePath>SFX/door open -001_FD4DF9DE.wem</CachePath>
@@ -945,9 +1134,17 @@
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity-013.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity-013_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="581079941" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire last_nerveux ou_maitre_stage.wav</ShortName>
+					<CachePath>SFX/Stagiaire last_nerveux ou_maitre_stage_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="582296536" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Comptable Agacée-003.wav</ShortName>
 					<CachePath>SFX/Comptable Agacée-003_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="588169220" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire last_peur ew.wav</ShortName>
+					<CachePath>SFX/Stagiaire last_peur ew_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="596872952" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>coworking-001.wav</ShortName>
@@ -960,6 +1157,10 @@
 				<File Id="601859891" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_toggle in 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_toggle in 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="601958213" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108_352BBAC2.wem</CachePath>
 				</File>
 				<File Id="612836791" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>victory drum 2 120.wav</ShortName>
@@ -1000,10 +1201,6 @@
 				<File Id="641376820" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Digital Click Negative 07 2.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Digital Click Negative 07 2_7932E522.wem</CachePath>
-				</File>
-				<File Id="641984613" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233 2.wav</ShortName>
-					<CachePath>SFX/Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233 2_6E153776.wem</CachePath>
 				</File>
 				<File Id="642796792" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>intern-006.wav</ShortName>
@@ -1073,9 +1270,17 @@
 					<ShortName>level restart v2-glued-01.wav</ShortName>
 					<CachePath>SFX/level restart v2-glued-01_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="680048010" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire determine exponentiel.wav</ShortName>
+					<CachePath>SFX/Stagiaire determine exponentiel_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="683558517" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>boss vdef 125 defeat.wav</ShortName>
 					<CachePath>SFX/boss vdef 125 defeat_B02CE968.wem</CachePath>
+				</File>
+				<File Id="687143762" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BT SQUEAK Elephant Single.wav</ShortName>
+					<CachePath>SFX/BT SQUEAK Elephant Single_CF54E829.wem</CachePath>
 				</File>
 				<File Id="689639882" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Community Manager Confuse-003.wav</ShortName>
@@ -1133,6 +1338,10 @@
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity-005.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity-005_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="720738858" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108_0BF6BDA7.wem</CachePath>
+				</File>
 				<File Id="722070604" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Employé Triste Triste-002.wav</ShortName>
 					<CachePath>SFX/Employé Triste Triste-002_FD4DF9DE.wem</CachePath>
@@ -1173,6 +1382,10 @@
 					<ShortName>HM_SFX_RC_UI_onSettingTabClick 1.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_onSettingTabClick 1_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="743321307" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps Parquet  by Yuval Id-205747.wav</ShortName>
+					<CachePath>SFX/Footsteps Parquet  by Yuval Id-205747_4D435C42.wem</CachePath>
+				</File>
 				<File Id="750784693" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_tab_onclick 3.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_tab_onclick 3_FD4DF9DE.wem</CachePath>
@@ -1196,6 +1409,10 @@
 				<File Id="753994427" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_items off tab hover 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_items off tab hover 2_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="755892889" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Cloth, Movement, Jacket, Thick, Rapid Actions, Slow Walk SND50901.wav</ShortName>
+					<CachePath>SFX/Cloth, Movement, Jacket, Thick, Rapid Actions, Slow Walk SND50901_6AC3B569.wem</CachePath>
 				</File>
 				<File Id="756356273" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>transi coworking 109 vdef.wav</ShortName>
@@ -1229,9 +1446,17 @@
 					<ShortName>Employé Triste Fatigué -001.wav</ShortName>
 					<CachePath>SFX/Employé Triste Fatigué -001_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="778738765" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire nerveux ah ok.wav</ShortName>
+					<CachePath>SFX/Stagiaire nerveux ah ok_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="787703407" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss Déterminé 3.wav</ShortName>
 					<CachePath>SFX/Boss Déterminé 3_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="790607317" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108_9E993766.wem</CachePath>
 				</File>
 				<File Id="791263737" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>victory drum 3 125.wav</ShortName>
@@ -1249,9 +1474,17 @@
 					<ShortName>teambuilding-006.wav</ShortName>
 					<CachePath>SFX/teambuilding-006_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="796641353" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps Parquet  by Yuval Id-205747.wav</ShortName>
+					<CachePath>SFX/Footsteps Parquet  by Yuval Id-205747_E9A329F0.wem</CachePath>
+				</File>
 				<File Id="800262024" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>intern-001.wav</ShortName>
 					<CachePath>SFX/intern-001_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="804393689" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire confus brainstorm def.wav</ShortName>
+					<CachePath>SFX/Stagiaire confus brainstorm def_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="804693145" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Community Manager Fiere-002.wav</ShortName>
@@ -1273,9 +1506,21 @@
 					<ShortName>intern core loop vdef 120.wav</ShortName>
 					<CachePath>SFX/intern core loop vdef 120_B02CE968.wem</CachePath>
 				</File>
+				<File Id="814443491" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire last_triste triste_autres.wav</ShortName>
+					<CachePath>SFX/Stagiaire last_triste triste_autres_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="814650744" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Community Manager Nerveux-001.wav</ShortName>
 					<CachePath>SFX/Community Manager Nerveux-001_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="816826686" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire last_triste seconde_maison1.wav</ShortName>
+					<CachePath>SFX/Stagiaire last_triste seconde_maison1_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="818889496" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire nerveux euuh ouais.wav</ShortName>
+					<CachePath>SFX/Stagiaire nerveux euuh ouais_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="822291799" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 8.wav</ShortName>
@@ -1349,6 +1594,10 @@
 					<ShortName>HM_SFX_SC_Build_soap block remove 3.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_soap block remove 3_957D9876.wem</CachePath>
 				</File>
+				<File Id="865497983" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire determine ouais.wav</ShortName>
+					<CachePath>SFX/Stagiaire determine ouais_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="866168184" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>door open -004.wav</ShortName>
 					<CachePath>SFX/door open -004_FD4DF9DE.wem</CachePath>
@@ -1365,6 +1614,14 @@
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity-004.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity-004_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="871245188" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lottie Small Dog Growling Barking And Playing 3 by thaighaudio Id-478107.wav</ShortName>
+					<CachePath>SFX/Lottie Small Dog Growling Barking And Playing 3 by thaighaudio Id-478107_A6918380.wem</CachePath>
+				</File>
+				<File Id="872036947" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire excite gasp.wav</ShortName>
+					<CachePath>SFX/Stagiaire excite gasp_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="877816137" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_soapToBlock_high_velocity - stem-003.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_soapToBlock_high_velocity - stem-003_FD4DF9DE.wem</CachePath>
@@ -1373,17 +1630,13 @@
 					<ShortName>victory drum 1 115.wav</ShortName>
 					<CachePath>SFX/victory drum 1 115_B02CE968.wem</CachePath>
 				</File>
-				<File Id="879798648" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233 3.wav</ShortName>
-					<CachePath>SFX/Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233 3_A49D9728.wem</CachePath>
-				</File>
 				<File Id="880104204" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity 2_325712FE.wem</CachePath>
 				</File>
-				<File Id="884312695" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233.wav</ShortName>
-					<CachePath>SFX/Toys, Misc, Rubber Duck, Whistling, Squeak 02 SND46233_1130DF65.wem</CachePath>
+				<File Id="881952021" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire confus euuh-001.wav</ShortName>
+					<CachePath>SFX/Stagiaire confus euuh-001_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="886483541" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_Menu_paused 2.wav</ShortName>
@@ -1408,6 +1661,14 @@
 				<File Id="900111670" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 11.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 11_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="900398700" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire excite c_fou.wav</ShortName>
+					<CachePath>SFX/Stagiaire excite c_fou_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="900640463" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108_4EE5DF49.wem</CachePath>
 				</File>
 				<File Id="901114068" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_high_velocity-002.wav</ShortName>
@@ -1449,6 +1710,14 @@
 					<ShortName>Comptable Suspicieuse-001.wav</ShortName>
 					<CachePath>SFX/Comptable Suspicieuse-001_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="920419232" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lottie Small Dog Growling Barking And Playing 3 by thaighaudio Id-478107.wav</ShortName>
+					<CachePath>SFX/Lottie Small Dog Growling Barking And Playing 3 by thaighaudio Id-478107_3D5F7BC1.wem</CachePath>
+				</File>
+				<File Id="920630412" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps Parquet  by Yuval Id-205747.wav</ShortName>
+					<CachePath>SFX/Footsteps Parquet  by Yuval Id-205747_BBE8E322.wem</CachePath>
+				</File>
 				<File Id="920703846" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Comptable Déterminée-005.wav</ShortName>
 					<CachePath>SFX/Comptable Déterminée-005_FD4DF9DE.wem</CachePath>
@@ -1460,6 +1729,18 @@
 				<File Id="923238903" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 6.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_low_velocity 6_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="925041730" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire excite kik win.wav</ShortName>
+					<CachePath>SFX/Stagiaire excite kik win_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="925067162" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Cloth, Movement, Jacket, Thick, Rapid Actions, Slow Walk SND50901.wav</ShortName>
+					<CachePath>SFX/Cloth, Movement, Jacket, Thick, Rapid Actions, Slow Walk SND50901_DCA0D19D.wem</CachePath>
+				</File>
+				<File Id="925563546" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire nerveux je dois faire quoi.wav</ShortName>
+					<CachePath>SFX/Stagiaire nerveux je dois faire quoi_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="926438548" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB Vdef intern linear.wav</ShortName>
@@ -1481,6 +1762,10 @@
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity-003.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity-003_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="942720768" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108_12C66012.wem</CachePath>
+				</File>
 				<File Id="947822141" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cafeteria-007.wav</ShortName>
 					<CachePath>SFX/cafeteria-007_FD4DF9DE.wem</CachePath>
@@ -1500,6 +1785,10 @@
 				<File Id="962823174" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Comptable Hereuse-004.wav</ShortName>
 					<CachePath>SFX/Comptable Hereuse-004_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="967556649" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108_985ECD3C.wem</CachePath>
 				</File>
 				<File Id="971100804" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_concrete block remove 4.wav</ShortName>
@@ -1537,6 +1826,14 @@
 					<ShortName>HM_SFX_SC_Build_soap block place 5.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_soap block place 5_8DEF8BE1.wem</CachePath>
 				</File>
+				<File Id="991039829" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BT SQUEAK Elephant Single 3.wav</ShortName>
+					<CachePath>SFX/BT SQUEAK Elephant Single 3_9A3BC6DC.wem</CachePath>
+				</File>
+				<File Id="991874719" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108_83CBB03B.wem</CachePath>
+				</File>
 				<File Id="992458082" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_low_velocity-006.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_low_velocity-006_FD4DF9DE.wem</CachePath>
@@ -1544,6 +1841,14 @@
 				<File Id="993978464" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_low_velocity-002.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_low_velocity-002_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="996086724" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire hereux lalala.wav</ShortName>
+					<CachePath>SFX/Stagiaire hereux lalala_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="999488688" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps Parquet  by Yuval Id-205747.wav</ShortName>
+					<CachePath>SFX/Footsteps Parquet  by Yuval Id-205747_9304DE86.wem</CachePath>
 				</File>
 				<File Id="1000322580" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_soapTofloor_high_velocity - stem-002.wav</ShortName>
@@ -1556,10 +1861,6 @@
 				<File Id="1000977322" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_high_velocity 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_concreteToFloor_high_velocity 2_FD4DF9DE.wem</CachePath>
-				</File>
-				<File Id="1001779967" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Toys, Misc, Rubber Duck, Whistling, Squeak 01 SND46234.wav</ShortName>
-					<CachePath>SFX/Toys, Misc, Rubber Duck, Whistling, Squeak 01 SND46234_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="1003324277" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Comptable Special Kiki 3.wav</ShortName>
@@ -1636,6 +1937,14 @@
 				<File Id="1057729458" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_soapTofloor_high_velocity - stem-004.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_soapTofloor_high_velocity - stem-004_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="1057897322" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stagiaire confus  euuh.wav</ShortName>
+					<CachePath>SFX/Stagiaire confus  euuh_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="1059659361" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lottie Small Dog Growling Barking And Playing 3 by thaighaudio Id-478107.wav</ShortName>
+					<CachePath>SFX/Lottie Small Dog Growling Barking And Playing 3 by thaighaudio Id-478107_77E70215.wem</CachePath>
 				</File>
 				<File Id="1060606589" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_high_velocity .wav</ShortName>
@@ -2373,106 +2682,16 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3143318226" Name="Play_Bark_Stagiaire_agace" DurationType="OneShot" DurationMin="0.6218241" DurationMax="0.6218241">
-					<MediaRefs>
-						<MediaRef Id="527095067"/>
-					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="2995775460"/>
-						</ShareSets>
-					</PluginRefs>
-				</Event>
-				<Event Id="1622480643" Name="Play_Bark_Stagiaire_confus" DurationType="OneShot" DurationMin="0.6925424" DurationMax="0.6925424">
-					<MediaRefs>
-						<MediaRef Id="1001779967"/>
-					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="2995775460"/>
-						</ShareSets>
-					</PluginRefs>
-				</Event>
-				<Event Id="4105615984" Name="Play_Bark_Stagiaire_determine" DurationType="OneShot" DurationMin="0.3326832" DurationMax="0.3326832">
-					<MediaRefs>
-						<MediaRef Id="89773760"/>
-					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="2995775460"/>
-						</ShareSets>
-					</PluginRefs>
-				</Event>
-				<Event Id="2099422295" Name="Play_Bark_Stagiaire_excite" DurationType="OneShot" DurationMin="0.44659784" DurationMax="0.44659784">
-					<MediaRefs>
-						<MediaRef Id="879798648"/>
-					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="2995775460"/>
-						</ShareSets>
-					</PluginRefs>
-				</Event>
-				<Event Id="2200791864" Name="Play_Bark_Stagiaire_hereux" DurationType="OneShot" DurationMin="0.47136104" DurationMax="0.47136104">
-					<MediaRefs>
-						<MediaRef Id="641984613"/>
-					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="2995775460"/>
-						</ShareSets>
-					</PluginRefs>
-				</Event>
-				<Event Id="3923390038" Name="Play_Bark_Stagiaire_intimide" DurationType="OneShot" DurationMin="0.7010392" DurationMax="0.7010392">
-					<MediaRefs>
-						<MediaRef Id="43553209"/>
-					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="2995775460"/>
-						</ShareSets>
-					</PluginRefs>
-				</Event>
-				<Event Id="2748407164" Name="Play_Bark_Stagiaire_nerveux" DurationType="OneShot" DurationMin="0.76635414" DurationMax="0.76635414">
-					<MediaRefs>
-						<MediaRef Id="270210916"/>
-					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="2995775460"/>
-						</ShareSets>
-					</PluginRefs>
-				</Event>
-				<Event Id="3745766036" Name="Play_Bark_Stagiaire_pensif" DurationType="OneShot" DurationMin="0.5497851" DurationMax="0.5497851">
-					<MediaRefs>
-						<MediaRef Id="233212238"/>
-					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="2995775460"/>
-						</ShareSets>
-					</PluginRefs>
-				</Event>
-				<Event Id="2187196553" Name="Play_Bark_Stagiaire_peur" DurationType="OneShot" DurationMin="0.8394095" DurationMax="0.8394095">
-					<MediaRefs>
-						<MediaRef Id="420491024"/>
-					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="2995775460"/>
-						</ShareSets>
-					</PluginRefs>
-				</Event>
-				<Event Id="1334838302" Name="Play_Bark_Stagiaire_triste" DurationType="OneShot" DurationMin="0.7305569" DurationMax="0.7305569">
-					<MediaRefs>
-						<MediaRef Id="884312695"/>
-					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="2995775460"/>
-						</ShareSets>
-					</PluginRefs>
-				</Event>
+				<Event Id="3143318226" Name="Play_Bark_Stagiaire_agace" DurationType="OneShot" DurationMin="0.6218241" DurationMax="0.6218241"/>
+				<Event Id="1622480643" Name="Play_Bark_Stagiaire_confus" DurationType="OneShot" DurationMin="0.6925424" DurationMax="0.6925424"/>
+				<Event Id="4105615984" Name="Play_Bark_Stagiaire_determine" DurationType="OneShot" DurationMin="0.3326832" DurationMax="0.3326832"/>
+				<Event Id="2099422295" Name="Play_Bark_Stagiaire_excite" DurationType="OneShot" DurationMin="0.44659784" DurationMax="0.44659784"/>
+				<Event Id="2200791864" Name="Play_Bark_Stagiaire_hereux" DurationType="OneShot" DurationMin="0.47136104" DurationMax="0.47136104"/>
+				<Event Id="3923390038" Name="Play_Bark_Stagiaire_intimide" DurationType="OneShot" DurationMin="0.7010392" DurationMax="0.7010392"/>
+				<Event Id="2748407164" Name="Play_Bark_Stagiaire_nerveux" DurationType="OneShot" DurationMin="0.76635414" DurationMax="0.76635414"/>
+				<Event Id="3745766036" Name="Play_Bark_Stagiaire_pensif" DurationType="OneShot" DurationMin="0.5497851" DurationMax="0.5497851"/>
+				<Event Id="2187196553" Name="Play_Bark_Stagiaire_peur" DurationType="OneShot" DurationMin="0.8394095" DurationMax="0.8394095"/>
+				<Event Id="1334838302" Name="Play_Bark_Stagiaire_triste" DurationType="OneShot" DurationMin="0.7305569" DurationMax="0.7305569"/>
 				<Event Id="1414775411" Name="Play_Build_basic_block_place" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.8653386" DurationMax="0.97861785">
 					<MediaRefs>
 						<MediaRef Id="91035806"/>
@@ -2552,6 +2771,106 @@
 				</Event>
 				<Event Id="977134866" Name="Play_Camera_zoomIn" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2892692845" Name="Play_Camera_zoomOut" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="230557658" Name="Play_CMCloth" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.61857766" DurationMax="1.0587194">
+					<MediaRefs>
+						<MediaRef Id="18866702"/>
+						<MediaRef Id="175532850"/>
+						<MediaRef Id="466035394"/>
+						<MediaRef Id="533994232"/>
+						<MediaRef Id="925067162"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="435935388" Name="Play_CMStep" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.31243753" DurationMax="0.4604343">
+					<MediaRefs>
+						<MediaRef Id="130472013"/>
+						<MediaRef Id="316317559"/>
+						<MediaRef Id="447847873"/>
+						<MediaRef Id="511037211"/>
+						<MediaRef Id="601958213"/>
+						<MediaRef Id="720738858"/>
+						<MediaRef Id="790607317"/>
+						<MediaRef Id="900640463"/>
+						<MediaRef Id="942720768"/>
+						<MediaRef Id="967556649"/>
+						<MediaRef Id="991874719"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="250699691" Name="Play_ComptableCloth" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.83048534" DurationMax="1.4214075">
+					<MediaRefs>
+						<MediaRef Id="18866702"/>
+						<MediaRef Id="175532850"/>
+						<MediaRef Id="466035394"/>
+						<MediaRef Id="533994232"/>
+						<MediaRef Id="925067162"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="2159415333" Name="Play_ComptableKiki" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.5828274" DurationMax="1.7484823">
+					<MediaRefs>
+						<MediaRef Id="64726708"/>
+						<MediaRef Id="100994493"/>
+						<MediaRef Id="200899023"/>
+						<MediaRef Id="261450567"/>
+						<MediaRef Id="475000448"/>
+						<MediaRef Id="871245188"/>
+						<MediaRef Id="920419232"/>
+						<MediaRef Id="1059659361"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="733008735" Name="Play_ComptableStep" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.21166481" DurationMax="0.23812293">
+					<MediaRefs>
+						<MediaRef Id="30817620"/>
+						<MediaRef Id="209995248"/>
+						<MediaRef Id="214974603"/>
+						<MediaRef Id="529930328"/>
+						<MediaRef Id="743321307"/>
+						<MediaRef Id="796641353"/>
+						<MediaRef Id="920630412"/>
+						<MediaRef Id="999488688"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="1491209843" Name="Play_DirCreCloth" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.61857766" DurationMax="1.0587194">
+					<MediaRefs>
+						<MediaRef Id="18866702"/>
+						<MediaRef Id="175532850"/>
+						<MediaRef Id="466035394"/>
+						<MediaRef Id="533994232"/>
+						<MediaRef Id="755892889"/>
+						<MediaRef Id="925067162"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="570825895" Name="Play_DirCreStep" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.3045716" DurationMax="0.34264305">
+					<MediaRefs>
+						<MediaRef Id="30817620"/>
+						<MediaRef Id="209995248"/>
+						<MediaRef Id="214974603"/>
+						<MediaRef Id="529930328"/>
+						<MediaRef Id="743321307"/>
+						<MediaRef Id="796641353"/>
+						<MediaRef Id="920630412"/>
+						<MediaRef Id="999488688"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
+				</Event>
 				<Event Id="2309087724" Name="Play_ElevatorDing_boss" DurationType="OneShot" DurationMin="3.2122917" DurationMax="3.2122917">
 					<MediaRefs>
 						<MediaRef Id="577888440"/>
@@ -2622,6 +2941,34 @@
 						<ActionPostEventEntry Id="177767409" Name="Stop_Music_global"/>
 						<ActionPostEventEntry Id="1375364434" Name="Stop_Amb_global"/>
 					</ActionPostEvent>
+				</Event>
+				<Event Id="3149711587" Name="Play_ETCloth" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.74847525" DurationMax="1.2810441">
+					<MediaRefs>
+						<MediaRef Id="18866702"/>
+						<MediaRef Id="175532850"/>
+						<MediaRef Id="466035394"/>
+						<MediaRef Id="533994232"/>
+						<MediaRef Id="755892889"/>
+						<MediaRef Id="925067162"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="3221138295" Name="Play_ETStep" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.856497" DurationMax="0.96355915">
+					<MediaRefs>
+						<MediaRef Id="30817620"/>
+						<MediaRef Id="209995248"/>
+						<MediaRef Id="214974603"/>
+						<MediaRef Id="529930328"/>
+						<MediaRef Id="743321307"/>
+						<MediaRef Id="796641353"/>
+						<MediaRef Id="920630412"/>
+						<MediaRef Id="999488688"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="2953314807" Name="Play_IntroCinematic" DurationType="OneShot" DurationMin="52.60323" DurationMax="52.60323">
 					<MediaRefs>
@@ -3176,6 +3523,504 @@
 						<AuxBusRef Id="821123712" Name="Room_Verb"/>
 					</AuxBusRefs>
 				</Event>
+				<Event Id="16999481" Name="Play_StagCloth" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.30750746" DurationMax="0.5263108">
+					<MediaRefs>
+						<MediaRef Id="18866702"/>
+						<MediaRef Id="175532850"/>
+						<MediaRef Id="466035394"/>
+						<MediaRef Id="533994232"/>
+						<MediaRef Id="925067162"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="985589949" Name="Play_Stagiaire_confus__euuh" DurationType="OneShot" DurationMin="1.4580625" DurationMax="1.4580625">
+					<MediaRefs>
+						<MediaRef Id="1057897322"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="339424822" Name="Play_Stagiaire_confus_a_quelle_heure_la_pause" DurationType="OneShot" DurationMin="1.685" DurationMax="1.685">
+					<MediaRefs>
+						<MediaRef Id="48228603"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="1503450842" Name="Play_Stagiaire_confus_brainstorm_def" DurationType="OneShot" DurationMin="3.9344583" DurationMax="3.9344583">
+					<MediaRefs>
+						<MediaRef Id="804393689"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="1165927480" Name="Play_Stagiaire_confus_euuh" DurationType="OneShot" DurationMin="1.2219583" DurationMax="1.2219583">
+					<MediaRefs>
+						<MediaRef Id="881952021"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="1713606377" Name="Play_Stagiaire_confus_je_me_suis_trompe_de_bureau" DurationType="OneShot" DurationMin="2.6647916" DurationMax="2.6647916">
+					<MediaRefs>
+						<MediaRef Id="34827037"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="1570939941" Name="Play_Stagiaire_confus_je_me_trompe" DurationType="OneShot" DurationMin="1.7990834" DurationMax="1.7990834">
+					<MediaRefs>
+						<MediaRef Id="36338727"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="435273166" Name="Play_Stagiaire_confus_jspcequejedoifair" DurationType="OneShot" DurationMin="1.6259583" DurationMax="1.6259583">
+					<MediaRefs>
+						<MediaRef Id="126198670"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2409097469" Name="Play_Stagiaire_confus_onmariendit" DurationType="OneShot" DurationMin="1.36625" DurationMax="1.36625">
+					<MediaRefs>
+						<MediaRef Id="158978694"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2042617620" Name="Play_Stagiaire_confus_ou_les_cafe" DurationType="OneShot" DurationMin="2.2030833" DurationMax="2.2030833">
+					<MediaRefs>
+						<MediaRef Id="422348573"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2596372923" Name="Play_Stagiaire_determine_au_max" DurationType="OneShot" DurationMin="1.6287084" DurationMax="1.6287084">
+					<MediaRefs>
+						<MediaRef Id="327748888"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="137418355" Name="Play_Stagiaire_determine_exponentiel" DurationType="OneShot" DurationMin="1.6448125" DurationMax="1.6448125">
+					<MediaRefs>
+						<MediaRef Id="680048010"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2131124562" Name="Play_Stagiaire_determine_lesgo_la_team" DurationType="OneShot" DurationMin="1.4998542" DurationMax="1.4998542">
+					<MediaRefs>
+						<MediaRef Id="541595339"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="4011872747" Name="Play_Stagiaire_determine_ouais" DurationType="OneShot" DurationMin="0.69210416" DurationMax="0.69210416">
+					<MediaRefs>
+						<MediaRef Id="865497983"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2141855194" Name="Play_Stagiaire_determine_stage_formateur" DurationType="OneShot" DurationMin="1.6843958" DurationMax="1.6843958">
+					<MediaRefs>
+						<MediaRef Id="431932342"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="4247221897" Name="Play_Stagiaire_determine_todoliks" DurationType="OneShot" DurationMin="1.80875" DurationMax="1.80875">
+					<MediaRefs>
+						<MediaRef Id="506954753"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="74702239" Name="Play_Stagiaire_excite_c_fou" DurationType="OneShot" DurationMin="1.6548125" DurationMax="1.6548125">
+					<MediaRefs>
+						<MediaRef Id="900398700"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="3133463756" Name="Play_Stagiaire_excite_gasp" DurationType="OneShot" DurationMin="0.96914583" DurationMax="0.96914583">
+					<MediaRefs>
+						<MediaRef Id="872036947"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2454818291" Name="Play_Stagiaire_excite_kik_win" DurationType="OneShot" DurationMin="2.289646" DurationMax="2.289646">
+					<MediaRefs>
+						<MediaRef Id="925041730"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2114624783" Name="Play_Stagiaire_excite_tous_ensembles" DurationType="OneShot" DurationMin="1.4528126" DurationMax="1.4528126">
+					<MediaRefs>
+						<MediaRef Id="325426731"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2408497112" Name="Play_Stagiaire_excite_trop_content" DurationType="OneShot" DurationMin="1.1353959" DurationMax="1.1353959">
+					<MediaRefs>
+						<MediaRef Id="233687355"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2923189174" Name="Play_Stagiaire_excite_waa" DurationType="OneShot" DurationMin="1.2219583" DurationMax="1.2219583">
+					<MediaRefs>
+						<MediaRef Id="397090791"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2755413102" Name="Play_Stagiaire_excite_wow" DurationType="OneShot" DurationMin="1.56825" DurationMax="1.56825">
+					<MediaRefs>
+						<MediaRef Id="249599184"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2537033034" Name="Play_Stagiaire_hereux_disruptif" DurationType="OneShot" DurationMin="1.2373126" DurationMax="1.2373126">
+					<MediaRefs>
+						<MediaRef Id="444055126"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="826670115" Name="Play_Stagiaire_hereux_huh_huh_huh" DurationType="OneShot" DurationMin="1.8903333" DurationMax="1.8903333">
+					<MediaRefs>
+						<MediaRef Id="235028206"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2769011657" Name="Play_Stagiaire_hereux_lalala" DurationType="OneShot" DurationMin="1.8452709" DurationMax="1.8452709">
+					<MediaRefs>
+						<MediaRef Id="996086724"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="792783221" Name="Play_Stagiaire_hereux_super" DurationType="OneShot" DurationMin="1.4306042" DurationMax="1.4306042">
+					<MediaRefs>
+						<MediaRef Id="413768567"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="3353467044" Name="Play_Stagiaire_hereux_trop_bien" DurationType="OneShot" DurationMin="0.9280625" DurationMax="0.9280625">
+					<MediaRefs>
+						<MediaRef Id="423975173"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2918429526" Name="Play_Stagiaire_hereux_woaw" DurationType="OneShot" DurationMin="1.005375" DurationMax="1.005375">
+					<MediaRefs>
+						<MediaRef Id="559535232"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="188627181" Name="Play_Stagiaire_hereux_wow" DurationType="OneShot" DurationMin="0.9184167" DurationMax="0.9184167">
+					<MediaRefs>
+						<MediaRef Id="380397323"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="166222797" Name="Play_Stagiaire_last_agace_ca_suffit" DurationType="OneShot" DurationMin="0.39964584" DurationMax="0.39964584">
+					<MediaRefs>
+						<MediaRef Id="543280465"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2765539345" Name="Play_Stagiaire_last_agace_lache_rapport" DurationType="OneShot" DurationMin="1.776" DurationMax="1.776">
+					<MediaRefs>
+						<MediaRef Id="576713141"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="3000787334" Name="Play_Stagiaire_last_agace_pas_gratuit" DurationType="OneShot" DurationMin="1.4297292" DurationMax="1.4297292">
+					<MediaRefs>
+						<MediaRef Id="399643629"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="3696075021" Name="Play_Stagiaire_last_agace_patron_fache" DurationType="OneShot" DurationMin="1.2919792" DurationMax="1.2919792">
+					<MediaRefs>
+						<MediaRef Id="152436930"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="1996426809" Name="Play_Stagiaire_last_nerveux_ou_maitre_stage" DurationType="OneShot" DurationMin="2.604771" DurationMax="2.604771">
+					<MediaRefs>
+						<MediaRef Id="581079941"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2313180587" Name="Play_Stagiaire_last_nerveux_plus_budget" DurationType="OneShot" DurationMin="1.3839583" DurationMax="1.3839583">
+					<MediaRefs>
+						<MediaRef Id="525631804"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="4076253175" Name="Play_Stagiaire_last_peur_attaque" DurationType="OneShot" DurationMin="1.9247708" DurationMax="1.9247708">
+					<MediaRefs>
+						<MediaRef Id="106721312"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="1406801866" Name="Play_Stagiaire_last_peur_ew" DurationType="OneShot" DurationMin="1.5257292" DurationMax="1.5257292">
+					<MediaRefs>
+						<MediaRef Id="588169220"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2494573805" Name="Play_Stagiaire_last_triste_humide" DurationType="OneShot" DurationMin="0.9280625" DurationMax="0.9280625">
+					<MediaRefs>
+						<MediaRef Id="261981201"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="3540939447" Name="Play_Stagiaire_last_triste_seconde_maison1" DurationType="OneShot" DurationMin="0.9860625" DurationMax="0.9860625">
+					<MediaRefs>
+						<MediaRef Id="816826686"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="3452631203" Name="Play_Stagiaire_last_triste_triste_autres" DurationType="OneShot" DurationMin="1.5272292" DurationMax="1.5272292">
+					<MediaRefs>
+						<MediaRef Id="814443491"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="954583833" Name="Play_Stagiaire_nerveux_ah_bon" DurationType="OneShot" DurationMin="1.0720834" DurationMax="1.0720834">
+					<MediaRefs>
+						<MediaRef Id="251207352"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="565302570" Name="Play_Stagiaire_nerveux_ah_ok" DurationType="OneShot" DurationMin="1.9257292" DurationMax="1.9257292">
+					<MediaRefs>
+						<MediaRef Id="778738765"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2522131127" Name="Play_Stagiaire_nerveux_euuh" DurationType="OneShot" DurationMin="1.3085417" DurationMax="1.3085417">
+					<MediaRefs>
+						<MediaRef Id="346664737"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="1171760355" Name="Play_Stagiaire_nerveux_euuh_ouais" DurationType="OneShot" DurationMin="2.3585" DurationMax="2.3585">
+					<MediaRefs>
+						<MediaRef Id="818889496"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="3133411902" Name="Play_Stagiaire_nerveux_je_dois_faire_quoi" DurationType="OneShot" DurationMin="2.6938958" DurationMax="2.6938958">
+					<MediaRefs>
+						<MediaRef Id="925563546"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2517133309" Name="Play_Stagiaire_nerveux_un_cafe" DurationType="OneShot" DurationMin="1.1402084" DurationMax="1.1402084">
+					<MediaRefs>
+						<MediaRef Id="374694297"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="3064295941" Name="Play_StagStep" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.14079224" DurationMax="0.6366268">
+					<MediaRefs>
+						<MediaRef Id="130472013"/>
+						<MediaRef Id="174480921"/>
+						<MediaRef Id="316317559"/>
+						<MediaRef Id="390778144"/>
+						<MediaRef Id="447847873"/>
+						<MediaRef Id="487385422"/>
+						<MediaRef Id="493142960"/>
+						<MediaRef Id="511037211"/>
+						<MediaRef Id="540518981"/>
+						<MediaRef Id="542520874"/>
+						<MediaRef Id="601958213"/>
+						<MediaRef Id="687143762"/>
+						<MediaRef Id="720738858"/>
+						<MediaRef Id="790607317"/>
+						<MediaRef Id="900640463"/>
+						<MediaRef Id="942720768"/>
+						<MediaRef Id="967556649"/>
+						<MediaRef Id="991039829"/>
+						<MediaRef Id="991874719"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
+				</Event>
 				<Event Id="1018177731" Name="Play_UI_DialogueBubble" DurationType="OneShot" DurationMin="0.151125" DurationMax="0.16539583">
 					<MediaRefs>
 						<MediaRef Id="447691927"/>
@@ -3237,6 +4082,7 @@
 			<GameParameters>
 				<GameParameter Id="1830592977" Name="Wind_Strength"/>
 				<GameParameter Id="1951144523" Name="Collision_Velocity"/>
+				<GameParameter Id="2940890671" Name="playbackspeedtest"/>
 				<GameParameter Id="3067876527" Name="RTPC_SFX_BUS"/>
 				<GameParameter Id="3182657878" Name="RTPC_DIALOGUE_BUS"/>
 			</GameParameters>
@@ -3269,5 +4115,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5E185F70-B3CA-F565-A24A-7FC0B629B41B}</FileHash>
+	<FileHash>{29451A68-F6EE-8A57-E121-C5428BC3292E}</FileHash>
 </SoundBanksInfo>

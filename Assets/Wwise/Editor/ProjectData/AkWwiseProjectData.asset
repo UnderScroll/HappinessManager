@@ -190,7 +190,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\WU_HM_SoundBanks
     guid: d527a65720db2546b7a23303c255c21b
     GuidInternal: 
-    m_lastTime: -8584832977437159105
+    m_lastTime: -8584832238373814088
     List:
     - name: HM_Global_SB
       guid: e1c12577d86f0c41a82a7bdcdb4ef626
@@ -218,7 +218,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a2847257a7000f4e81d18dd3626acf80
     GuidInternal: 
-    m_lastTime: -8584833041454507530
+    m_lastTime: -8584832318470514493
     List: []
   - PhysicalPath: Events\WU_HM_Events.wwu
     PathAndIcons:
@@ -231,7 +231,7 @@ MonoBehaviour:
     ParentPath: Events\WU_HM_Events
     guid: a44afb18422e3e4bbc589ac1581aef04
     GuidInternal: 
-    m_lastTime: -8584832957341163520
+    m_lastTime: -8584832238373687970
     List:
     - name: Amb
       guid: 45ce627f733a4f4d90717e8757beb9ba
@@ -247,6 +247,23 @@ MonoBehaviour:
         ObjectType: 4
         guid: 45ce627f733a4f4d90717e8757beb9ba
       Path: Events\WU_HM_Events\Amb
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Animations
+      guid: c10b1dbc4732d94cbd44fef6aa44db2c
+      id: 2087567908
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Animations
+        ObjectType: 4
+        guid: c10b1dbc4732d94cbd44fef6aa44db2c
+      Path: Events\WU_HM_Events\Animations
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -385,9 +402,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Barks Stagiaire PH
+    - name: Barks Stagiaire
       guid: e61cec463c4af54bac7fc23c635889d7
-      id: 2025037355
+      id: 759901785
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -401,10 +418,10 @@ MonoBehaviour:
       - ElementName: Barks
         ObjectType: 4
         guid: 04d490f6c937b14c83a9121e39b48bc6
-      - ElementName: Barks Stagiaire PH
+      - ElementName: Barks Stagiaire
         ObjectType: 4
         guid: e61cec463c4af54bac7fc23c635889d7
-      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire PH
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2560,13 +2577,16 @@ MonoBehaviour:
       - ElementName: Barks
         ObjectType: 4
         guid: 04d490f6c937b14c83a9121e39b48bc6
-      - ElementName: Barks Stagiaire PH
+      - ElementName: Barks Stagiaire
         ObjectType: 4
         guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV1
+        ObjectType: 4
+        guid: 632bebf937270a4a9f3bec077a7d03b4
       - ElementName: Play_Bark_Stagiaire_agace
         ObjectType: 3
         guid: c078bf11206b7b4fa8a174427e8dffc1
-      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire PH\Play_Bark_Stagiaire_agace
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV1\Play_Bark_Stagiaire_agace
       maxAttenuation: 0
       maxDuration: 0.6218241
       minDuration: 0.6218241
@@ -2586,13 +2606,16 @@ MonoBehaviour:
       - ElementName: Barks
         ObjectType: 4
         guid: 04d490f6c937b14c83a9121e39b48bc6
-      - ElementName: Barks Stagiaire PH
+      - ElementName: Barks Stagiaire
         ObjectType: 4
         guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV1
+        ObjectType: 4
+        guid: 632bebf937270a4a9f3bec077a7d03b4
       - ElementName: Play_Bark_Stagiaire_confus
         ObjectType: 3
         guid: 3ca6237c44f9664ab06a22db035275bd
-      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire PH\Play_Bark_Stagiaire_confus
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV1\Play_Bark_Stagiaire_confus
       maxAttenuation: 0
       maxDuration: 0.6925424
       minDuration: 0.6925424
@@ -2612,13 +2635,16 @@ MonoBehaviour:
       - ElementName: Barks
         ObjectType: 4
         guid: 04d490f6c937b14c83a9121e39b48bc6
-      - ElementName: Barks Stagiaire PH
+      - ElementName: Barks Stagiaire
         ObjectType: 4
         guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV1
+        ObjectType: 4
+        guid: 632bebf937270a4a9f3bec077a7d03b4
       - ElementName: Play_Bark_Stagiaire_determine
         ObjectType: 3
         guid: c52b320d2b3604479f8e91c73c7b9d7d
-      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire PH\Play_Bark_Stagiaire_determine
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV1\Play_Bark_Stagiaire_determine
       maxAttenuation: 0
       maxDuration: 0.3326832
       minDuration: 0.3326832
@@ -2638,13 +2664,16 @@ MonoBehaviour:
       - ElementName: Barks
         ObjectType: 4
         guid: 04d490f6c937b14c83a9121e39b48bc6
-      - ElementName: Barks Stagiaire PH
+      - ElementName: Barks Stagiaire
         ObjectType: 4
         guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV1
+        ObjectType: 4
+        guid: 632bebf937270a4a9f3bec077a7d03b4
       - ElementName: Play_Bark_Stagiaire_excite
         ObjectType: 3
         guid: 7d06526d766584468d39f9d386674790
-      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire PH\Play_Bark_Stagiaire_excite
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV1\Play_Bark_Stagiaire_excite
       maxAttenuation: 0
       maxDuration: 0.44659784
       minDuration: 0.44659784
@@ -2664,13 +2693,16 @@ MonoBehaviour:
       - ElementName: Barks
         ObjectType: 4
         guid: 04d490f6c937b14c83a9121e39b48bc6
-      - ElementName: Barks Stagiaire PH
+      - ElementName: Barks Stagiaire
         ObjectType: 4
         guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV1
+        ObjectType: 4
+        guid: 632bebf937270a4a9f3bec077a7d03b4
       - ElementName: Play_Bark_Stagiaire_hereux
         ObjectType: 3
         guid: fe5546505b106c4eb1786d205a23efc7
-      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire PH\Play_Bark_Stagiaire_hereux
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV1\Play_Bark_Stagiaire_hereux
       maxAttenuation: 0
       maxDuration: 0.47136104
       minDuration: 0.47136104
@@ -2690,13 +2722,16 @@ MonoBehaviour:
       - ElementName: Barks
         ObjectType: 4
         guid: 04d490f6c937b14c83a9121e39b48bc6
-      - ElementName: Barks Stagiaire PH
+      - ElementName: Barks Stagiaire
         ObjectType: 4
         guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV1
+        ObjectType: 4
+        guid: 632bebf937270a4a9f3bec077a7d03b4
       - ElementName: Play_Bark_Stagiaire_intimide
         ObjectType: 3
         guid: 93b966359d584f4bbeac671d037f1386
-      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire PH\Play_Bark_Stagiaire_intimide
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV1\Play_Bark_Stagiaire_intimide
       maxAttenuation: 0
       maxDuration: 0.7010392
       minDuration: 0.7010392
@@ -2716,13 +2751,16 @@ MonoBehaviour:
       - ElementName: Barks
         ObjectType: 4
         guid: 04d490f6c937b14c83a9121e39b48bc6
-      - ElementName: Barks Stagiaire PH
+      - ElementName: Barks Stagiaire
         ObjectType: 4
         guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV1
+        ObjectType: 4
+        guid: 632bebf937270a4a9f3bec077a7d03b4
       - ElementName: Play_Bark_Stagiaire_nerveux
         ObjectType: 3
         guid: dfe3793a2a2fac4b9cd8258860849b5e
-      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire PH\Play_Bark_Stagiaire_nerveux
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV1\Play_Bark_Stagiaire_nerveux
       maxAttenuation: 0
       maxDuration: 0.76635414
       minDuration: 0.76635414
@@ -2742,13 +2780,16 @@ MonoBehaviour:
       - ElementName: Barks
         ObjectType: 4
         guid: 04d490f6c937b14c83a9121e39b48bc6
-      - ElementName: Barks Stagiaire PH
+      - ElementName: Barks Stagiaire
         ObjectType: 4
         guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV1
+        ObjectType: 4
+        guid: 632bebf937270a4a9f3bec077a7d03b4
       - ElementName: Play_Bark_Stagiaire_pensif
         ObjectType: 3
         guid: 5f95c8b0bc3e174b885fef8db44f2e46
-      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire PH\Play_Bark_Stagiaire_pensif
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV1\Play_Bark_Stagiaire_pensif
       maxAttenuation: 0
       maxDuration: 0.5497851
       minDuration: 0.5497851
@@ -2768,13 +2809,16 @@ MonoBehaviour:
       - ElementName: Barks
         ObjectType: 4
         guid: 04d490f6c937b14c83a9121e39b48bc6
-      - ElementName: Barks Stagiaire PH
+      - ElementName: Barks Stagiaire
         ObjectType: 4
         guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV1
+        ObjectType: 4
+        guid: 632bebf937270a4a9f3bec077a7d03b4
       - ElementName: Play_Bark_Stagiaire_peur
         ObjectType: 3
         guid: 892bf2b850af054ca9370fdf6b99cd35
-      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire PH\Play_Bark_Stagiaire_peur
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV1\Play_Bark_Stagiaire_peur
       maxAttenuation: 0
       maxDuration: 0.8394095
       minDuration: 0.8394095
@@ -2794,13 +2838,16 @@ MonoBehaviour:
       - ElementName: Barks
         ObjectType: 4
         guid: 04d490f6c937b14c83a9121e39b48bc6
-      - ElementName: Barks Stagiaire PH
+      - ElementName: Barks Stagiaire
         ObjectType: 4
         guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV1
+        ObjectType: 4
+        guid: 632bebf937270a4a9f3bec077a7d03b4
       - ElementName: Play_Bark_Stagiaire_triste
         ObjectType: 3
         guid: 8286768bf87cda44b65c6e9d72cab11e
-      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire PH\Play_Bark_Stagiaire_triste
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV1\Play_Bark_Stagiaire_triste
       maxAttenuation: 0
       maxDuration: 0.7305569
       minDuration: 0.7305569
@@ -3051,6 +3098,146 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_CMCloth
+      guid: d504c6602aeb6d49b073fee56273f878
+      id: 230557658
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Animations
+        ObjectType: 4
+        guid: c10b1dbc4732d94cbd44fef6aa44db2c
+      - ElementName: Play_CMCloth
+        ObjectType: 3
+        guid: d504c6602aeb6d49b073fee56273f878
+      Path: Events\WU_HM_Events\Animations\Play_CMCloth
+      maxAttenuation: 100
+      maxDuration: 1.0587194
+      minDuration: 0.61857766
+    - name: Play_CMStep
+      guid: a286bcfb203cc740a9b4d0683ec7e4df
+      id: 435935388
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Animations
+        ObjectType: 4
+        guid: c10b1dbc4732d94cbd44fef6aa44db2c
+      - ElementName: Play_CMStep
+        ObjectType: 3
+        guid: a286bcfb203cc740a9b4d0683ec7e4df
+      Path: Events\WU_HM_Events\Animations\Play_CMStep
+      maxAttenuation: 100
+      maxDuration: 0.4604343
+      minDuration: 0.31243753
+    - name: Play_ComptableCloth
+      guid: deacacc2bf56b3458e215b5b10ee92cb
+      id: 250699691
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Animations
+        ObjectType: 4
+        guid: c10b1dbc4732d94cbd44fef6aa44db2c
+      - ElementName: Play_ComptableCloth
+        ObjectType: 3
+        guid: deacacc2bf56b3458e215b5b10ee92cb
+      Path: Events\WU_HM_Events\Animations\Play_ComptableCloth
+      maxAttenuation: 100
+      maxDuration: 1.4214075
+      minDuration: 0.83048534
+    - name: Play_ComptableKiki
+      guid: c39c8c7655471c45b28d4acfa6d48a02
+      id: 2159415333
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Animations
+        ObjectType: 4
+        guid: c10b1dbc4732d94cbd44fef6aa44db2c
+      - ElementName: Play_ComptableKiki
+        ObjectType: 3
+        guid: c39c8c7655471c45b28d4acfa6d48a02
+      Path: Events\WU_HM_Events\Animations\Play_ComptableKiki
+      maxAttenuation: 100
+      maxDuration: 1.7484823
+      minDuration: 0.5828274
+    - name: Play_ComptableStep
+      guid: 3870ef925f4e444f9839f110883e684b
+      id: 733008735
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Animations
+        ObjectType: 4
+        guid: c10b1dbc4732d94cbd44fef6aa44db2c
+      - ElementName: Play_ComptableStep
+        ObjectType: 3
+        guid: 3870ef925f4e444f9839f110883e684b
+      Path: Events\WU_HM_Events\Animations\Play_ComptableStep
+      maxAttenuation: 100
+      maxDuration: 0.23812293
+      minDuration: 0.21166481
+    - name: Play_DirCreCloth
+      guid: 32935df69e18ac4f9b55c0cc9b63e07d
+      id: 1491209843
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Animations
+        ObjectType: 4
+        guid: c10b1dbc4732d94cbd44fef6aa44db2c
+      - ElementName: Play_DirCreCloth
+        ObjectType: 3
+        guid: 32935df69e18ac4f9b55c0cc9b63e07d
+      Path: Events\WU_HM_Events\Animations\Play_DirCreCloth
+      maxAttenuation: 100
+      maxDuration: 1.0587194
+      minDuration: 0.61857766
+    - name: Play_DirCreStep
+      guid: 3379efe50c297c4eb971f45a4102d36d
+      id: 570825895
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Animations
+        ObjectType: 4
+        guid: c10b1dbc4732d94cbd44fef6aa44db2c
+      - ElementName: Play_DirCreStep
+        ObjectType: 3
+        guid: 3379efe50c297c4eb971f45a4102d36d
+      Path: Events\WU_HM_Events\Animations\Play_DirCreStep
+      maxAttenuation: 100
+      maxDuration: 0.34264305
+      minDuration: 0.3045716
     - name: Play_ElevatorDing_boss
       guid: d81fb9d90a92494daaaaf2b84433b94f
       id: 2309087724
@@ -3231,6 +3418,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 9.091337
       minDuration: 8.644967
+    - name: Play_ETCloth
+      guid: 76a60733bb633249a731560a81a10615
+      id: 3149711587
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Animations
+        ObjectType: 4
+        guid: c10b1dbc4732d94cbd44fef6aa44db2c
+      - ElementName: Play_ETCloth
+        ObjectType: 3
+        guid: 76a60733bb633249a731560a81a10615
+      Path: Events\WU_HM_Events\Animations\Play_ETCloth
+      maxAttenuation: 100
+      maxDuration: 1.2810441
+      minDuration: 0.74847525
+    - name: Play_ETStep
+      guid: edbfb8822adb0d48804c0a18b653b2e3
+      id: 3221138295
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Animations
+        ObjectType: 4
+        guid: c10b1dbc4732d94cbd44fef6aa44db2c
+      - ElementName: Play_ETStep
+        ObjectType: 3
+        guid: edbfb8822adb0d48804c0a18b653b2e3
+      Path: Events\WU_HM_Events\Animations\Play_ETStep
+      maxAttenuation: 100
+      maxDuration: 0.96355915
+      minDuration: 0.856497
     - name: Play_IntroCinematic
       guid: d3c18f58028cad4fa324eca4addb2bd8
       id: 2953314807
@@ -4050,6 +4277,1380 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: 0.8032708
       minDuration: 0.36839584
+    - name: Play_StagCloth
+      guid: 7e16b9043dcfcf4893db268fd87e2aa5
+      id: 16999481
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Animations
+        ObjectType: 4
+        guid: c10b1dbc4732d94cbd44fef6aa44db2c
+      - ElementName: Play_StagCloth
+        ObjectType: 3
+        guid: 7e16b9043dcfcf4893db268fd87e2aa5
+      Path: Events\WU_HM_Events\Animations\Play_StagCloth
+      maxAttenuation: 100
+      maxDuration: 0.5263108
+      minDuration: 0.30750746
+    - name: Play_Stagiaire_confus__euuh
+      guid: 7964b30443dd7a4692b44081e74eef06
+      id: 985589949
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_confus__euuh
+        ObjectType: 3
+        guid: 7964b30443dd7a4692b44081e74eef06
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_confus__euuh
+      maxAttenuation: 0
+      maxDuration: 1.4580625
+      minDuration: 1.4580625
+    - name: Play_Stagiaire_confus_a_quelle_heure_la_pause
+      guid: 9831ad2c1e036946b6d455ce1433feaa
+      id: 339424822
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_confus_a_quelle_heure_la_pause
+        ObjectType: 3
+        guid: 9831ad2c1e036946b6d455ce1433feaa
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_confus_a_quelle_heure_la_pause
+      maxAttenuation: 0
+      maxDuration: 1.685
+      minDuration: 1.685
+    - name: Play_Stagiaire_confus_brainstorm_def
+      guid: 757906bb143bd34da708b6add8bb3436
+      id: 1503450842
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_confus_brainstorm_def
+        ObjectType: 3
+        guid: 757906bb143bd34da708b6add8bb3436
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_confus_brainstorm_def
+      maxAttenuation: 0
+      maxDuration: 3.9344583
+      minDuration: 3.9344583
+    - name: Play_Stagiaire_confus_euuh
+      guid: e4584b9b5ec8c74887ddcabb660166db
+      id: 1165927480
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_confus_euuh
+        ObjectType: 3
+        guid: e4584b9b5ec8c74887ddcabb660166db
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_confus_euuh
+      maxAttenuation: 0
+      maxDuration: 1.2219583
+      minDuration: 1.2219583
+    - name: Play_Stagiaire_confus_je_me_suis_trompe_de_bureau
+      guid: 8fad8b7c310d264b9ae4ccef917dad7a
+      id: 1713606377
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_confus_je_me_suis_trompe_de_bureau
+        ObjectType: 3
+        guid: 8fad8b7c310d264b9ae4ccef917dad7a
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_confus_je_me_suis_trompe_de_bureau
+      maxAttenuation: 0
+      maxDuration: 2.6647916
+      minDuration: 2.6647916
+    - name: Play_Stagiaire_confus_je_me_trompe
+      guid: 05de80926545e642a63494f678f97719
+      id: 1570939941
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_confus_je_me_trompe
+        ObjectType: 3
+        guid: 05de80926545e642a63494f678f97719
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_confus_je_me_trompe
+      maxAttenuation: 0
+      maxDuration: 1.7990834
+      minDuration: 1.7990834
+    - name: Play_Stagiaire_confus_jspcequejedoifair
+      guid: 9a1054c2088291488f1c6615c4e08452
+      id: 435273166
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_confus_jspcequejedoifair
+        ObjectType: 3
+        guid: 9a1054c2088291488f1c6615c4e08452
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_confus_jspcequejedoifair
+      maxAttenuation: 0
+      maxDuration: 1.6259583
+      minDuration: 1.6259583
+    - name: Play_Stagiaire_confus_onmariendit
+      guid: 8d7211f4c5edf040a93632548b968d5d
+      id: 2409097469
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_confus_onmariendit
+        ObjectType: 3
+        guid: 8d7211f4c5edf040a93632548b968d5d
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_confus_onmariendit
+      maxAttenuation: 0
+      maxDuration: 1.36625
+      minDuration: 1.36625
+    - name: Play_Stagiaire_confus_ou_les_cafe
+      guid: cc6e762857c81b41b1e5f99dd4558acc
+      id: 2042617620
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_confus_ou_les_cafe
+        ObjectType: 3
+        guid: cc6e762857c81b41b1e5f99dd4558acc
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_confus_ou_les_cafe
+      maxAttenuation: 0
+      maxDuration: 2.2030833
+      minDuration: 2.2030833
+    - name: Play_Stagiaire_determine_au_max
+      guid: ca1d9507afd3854ba59a7dbf9016ac1b
+      id: 2596372923
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_determine_au_max
+        ObjectType: 3
+        guid: ca1d9507afd3854ba59a7dbf9016ac1b
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_determine_au_max
+      maxAttenuation: 0
+      maxDuration: 1.6287084
+      minDuration: 1.6287084
+    - name: Play_Stagiaire_determine_exponentiel
+      guid: 9104f0f5b8b26647b16608b505002cd3
+      id: 137418355
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_determine_exponentiel
+        ObjectType: 3
+        guid: 9104f0f5b8b26647b16608b505002cd3
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_determine_exponentiel
+      maxAttenuation: 0
+      maxDuration: 1.6448125
+      minDuration: 1.6448125
+    - name: Play_Stagiaire_determine_lesgo_la_team
+      guid: 5c77b20f66cb8c418a4db0ee5eb09739
+      id: 2131124562
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_determine_lesgo_la_team
+        ObjectType: 3
+        guid: 5c77b20f66cb8c418a4db0ee5eb09739
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_determine_lesgo_la_team
+      maxAttenuation: 0
+      maxDuration: 1.4998542
+      minDuration: 1.4998542
+    - name: Play_Stagiaire_determine_ouais
+      guid: 30314de18091ee44a9625d2d839633e6
+      id: 4011872747
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_determine_ouais
+        ObjectType: 3
+        guid: 30314de18091ee44a9625d2d839633e6
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_determine_ouais
+      maxAttenuation: 0
+      maxDuration: 0.69210416
+      minDuration: 0.69210416
+    - name: Play_Stagiaire_determine_stage_formateur
+      guid: ff7b38d394cf9f4b9f6a2c8e29ad3757
+      id: 2141855194
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_determine_stage_formateur
+        ObjectType: 3
+        guid: ff7b38d394cf9f4b9f6a2c8e29ad3757
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_determine_stage_formateur
+      maxAttenuation: 0
+      maxDuration: 1.6843958
+      minDuration: 1.6843958
+    - name: Play_Stagiaire_determine_todoliks
+      guid: efe981db907bf74caca38124f299a65a
+      id: 4247221897
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_determine_todoliks
+        ObjectType: 3
+        guid: efe981db907bf74caca38124f299a65a
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_determine_todoliks
+      maxAttenuation: 0
+      maxDuration: 1.80875
+      minDuration: 1.80875
+    - name: Play_Stagiaire_excite_c_fou
+      guid: f0ae54924e13c448af42542e5db74405
+      id: 74702239
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_excite_c_fou
+        ObjectType: 3
+        guid: f0ae54924e13c448af42542e5db74405
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_excite_c_fou
+      maxAttenuation: 0
+      maxDuration: 1.6548125
+      minDuration: 1.6548125
+    - name: Play_Stagiaire_excite_gasp
+      guid: 975837b76f6b764a9955ad221d2974f1
+      id: 3133463756
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_excite_gasp
+        ObjectType: 3
+        guid: 975837b76f6b764a9955ad221d2974f1
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_excite_gasp
+      maxAttenuation: 0
+      maxDuration: 0.96914583
+      minDuration: 0.96914583
+    - name: Play_Stagiaire_excite_kik_win
+      guid: abdf059bcbdec74bb148dfaf0b7811e9
+      id: 2454818291
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_excite_kik_win
+        ObjectType: 3
+        guid: abdf059bcbdec74bb148dfaf0b7811e9
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_excite_kik_win
+      maxAttenuation: 0
+      maxDuration: 2.289646
+      minDuration: 2.289646
+    - name: Play_Stagiaire_excite_tous_ensembles
+      guid: eb659f0093a99b48b330923fee9cd2e9
+      id: 2114624783
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_excite_tous_ensembles
+        ObjectType: 3
+        guid: eb659f0093a99b48b330923fee9cd2e9
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_excite_tous_ensembles
+      maxAttenuation: 0
+      maxDuration: 1.4528126
+      minDuration: 1.4528126
+    - name: Play_Stagiaire_excite_trop_content
+      guid: 9618cd1925dc68408dd16de4b7f74c0f
+      id: 2408497112
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_excite_trop_content
+        ObjectType: 3
+        guid: 9618cd1925dc68408dd16de4b7f74c0f
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_excite_trop_content
+      maxAttenuation: 0
+      maxDuration: 1.1353959
+      minDuration: 1.1353959
+    - name: Play_Stagiaire_excite_waa
+      guid: d8a994834e6b2846a0e5ac223ad420c3
+      id: 2923189174
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_excite_waa
+        ObjectType: 3
+        guid: d8a994834e6b2846a0e5ac223ad420c3
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_excite_waa
+      maxAttenuation: 0
+      maxDuration: 1.2219583
+      minDuration: 1.2219583
+    - name: Play_Stagiaire_excite_wow
+      guid: e442aa8e2ecaed4fbcb288a5d99a22e9
+      id: 2755413102
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_excite_wow
+        ObjectType: 3
+        guid: e442aa8e2ecaed4fbcb288a5d99a22e9
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_excite_wow
+      maxAttenuation: 0
+      maxDuration: 1.56825
+      minDuration: 1.56825
+    - name: Play_Stagiaire_hereux_disruptif
+      guid: c14bd2173c9536498cdf1786925ac9a6
+      id: 2537033034
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_hereux_disruptif
+        ObjectType: 3
+        guid: c14bd2173c9536498cdf1786925ac9a6
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_hereux_disruptif
+      maxAttenuation: 0
+      maxDuration: 1.2373126
+      minDuration: 1.2373126
+    - name: Play_Stagiaire_hereux_huh_huh_huh
+      guid: b0ecfd915cc4334f9c161ed17e506401
+      id: 826670115
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_hereux_huh_huh_huh
+        ObjectType: 3
+        guid: b0ecfd915cc4334f9c161ed17e506401
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_hereux_huh_huh_huh
+      maxAttenuation: 0
+      maxDuration: 1.8903333
+      minDuration: 1.8903333
+    - name: Play_Stagiaire_hereux_lalala
+      guid: 37017e155a868f46b01d01a14d97a634
+      id: 2769011657
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_hereux_lalala
+        ObjectType: 3
+        guid: 37017e155a868f46b01d01a14d97a634
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_hereux_lalala
+      maxAttenuation: 0
+      maxDuration: 1.8452709
+      minDuration: 1.8452709
+    - name: Play_Stagiaire_hereux_super
+      guid: ab4c33d9f2421e4fadc6644efeb5e413
+      id: 792783221
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_hereux_super
+        ObjectType: 3
+        guid: ab4c33d9f2421e4fadc6644efeb5e413
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_hereux_super
+      maxAttenuation: 0
+      maxDuration: 1.4306042
+      minDuration: 1.4306042
+    - name: Play_Stagiaire_hereux_trop_bien
+      guid: 8ff752c686ec6a4994dd41b70bfdedc4
+      id: 3353467044
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_hereux_trop_bien
+        ObjectType: 3
+        guid: 8ff752c686ec6a4994dd41b70bfdedc4
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_hereux_trop_bien
+      maxAttenuation: 0
+      maxDuration: 0.9280625
+      minDuration: 0.9280625
+    - name: Play_Stagiaire_hereux_woaw
+      guid: 7d07d8e4f40ae94fbfada1b605a61dcb
+      id: 2918429526
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_hereux_woaw
+        ObjectType: 3
+        guid: 7d07d8e4f40ae94fbfada1b605a61dcb
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_hereux_woaw
+      maxAttenuation: 0
+      maxDuration: 1.005375
+      minDuration: 1.005375
+    - name: Play_Stagiaire_hereux_wow
+      guid: 4847e1c6c14a5543beb2df9717c72524
+      id: 188627181
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_hereux_wow
+        ObjectType: 3
+        guid: 4847e1c6c14a5543beb2df9717c72524
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_hereux_wow
+      maxAttenuation: 0
+      maxDuration: 0.9184167
+      minDuration: 0.9184167
+    - name: Play_Stagiaire_last_agace_ca_suffit
+      guid: 6098dd97f356654588ddb17b7f878acd
+      id: 166222797
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_last_agace_ca_suffit
+        ObjectType: 3
+        guid: 6098dd97f356654588ddb17b7f878acd
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_last_agace_ca_suffit
+      maxAttenuation: 0
+      maxDuration: 0.39964584
+      minDuration: 0.39964584
+    - name: Play_Stagiaire_last_agace_lache_rapport
+      guid: 99613e40595ecb408c1cba468158fdf5
+      id: 2765539345
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_last_agace_lache_rapport
+        ObjectType: 3
+        guid: 99613e40595ecb408c1cba468158fdf5
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_last_agace_lache_rapport
+      maxAttenuation: 0
+      maxDuration: 1.776
+      minDuration: 1.776
+    - name: Play_Stagiaire_last_agace_pas_gratuit
+      guid: 7165511cc76d90438b0b900ac3a5a055
+      id: 3000787334
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_last_agace_pas_gratuit
+        ObjectType: 3
+        guid: 7165511cc76d90438b0b900ac3a5a055
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_last_agace_pas_gratuit
+      maxAttenuation: 0
+      maxDuration: 1.4297292
+      minDuration: 1.4297292
+    - name: Play_Stagiaire_last_agace_patron_fache
+      guid: 4cc9bc3ab1adf34ba489db3461b913f8
+      id: 3696075021
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_last_agace_patron_fache
+        ObjectType: 3
+        guid: 4cc9bc3ab1adf34ba489db3461b913f8
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_last_agace_patron_fache
+      maxAttenuation: 0
+      maxDuration: 1.2919792
+      minDuration: 1.2919792
+    - name: Play_Stagiaire_last_nerveux_ou_maitre_stage
+      guid: 2c8f4a8da7b8bc49bde27a83f4c5da44
+      id: 1996426809
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_last_nerveux_ou_maitre_stage
+        ObjectType: 3
+        guid: 2c8f4a8da7b8bc49bde27a83f4c5da44
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_last_nerveux_ou_maitre_stage
+      maxAttenuation: 0
+      maxDuration: 2.604771
+      minDuration: 2.604771
+    - name: Play_Stagiaire_last_nerveux_plus_budget
+      guid: 62deb2f9eeceae4cb3934cd4e067138c
+      id: 2313180587
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_last_nerveux_plus_budget
+        ObjectType: 3
+        guid: 62deb2f9eeceae4cb3934cd4e067138c
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_last_nerveux_plus_budget
+      maxAttenuation: 0
+      maxDuration: 1.3839583
+      minDuration: 1.3839583
+    - name: Play_Stagiaire_last_peur_attaque
+      guid: 513531e107df624e900724bf96fff0ae
+      id: 4076253175
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_last_peur_attaque
+        ObjectType: 3
+        guid: 513531e107df624e900724bf96fff0ae
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_last_peur_attaque
+      maxAttenuation: 0
+      maxDuration: 1.9247708
+      minDuration: 1.9247708
+    - name: Play_Stagiaire_last_peur_ew
+      guid: 27c6400882789045ade8c76dd1293960
+      id: 1406801866
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_last_peur_ew
+        ObjectType: 3
+        guid: 27c6400882789045ade8c76dd1293960
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_last_peur_ew
+      maxAttenuation: 0
+      maxDuration: 1.5257292
+      minDuration: 1.5257292
+    - name: Play_Stagiaire_last_triste_humide
+      guid: 33fa4b2357d7ff45b5843ab00a366aa1
+      id: 2494573805
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_last_triste_humide
+        ObjectType: 3
+        guid: 33fa4b2357d7ff45b5843ab00a366aa1
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_last_triste_humide
+      maxAttenuation: 0
+      maxDuration: 0.9280625
+      minDuration: 0.9280625
+    - name: Play_Stagiaire_last_triste_seconde_maison1
+      guid: b50e582ea8c9fd44aedcd5d5bf633d62
+      id: 3540939447
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_last_triste_seconde_maison1
+        ObjectType: 3
+        guid: b50e582ea8c9fd44aedcd5d5bf633d62
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_last_triste_seconde_maison1
+      maxAttenuation: 0
+      maxDuration: 0.9860625
+      minDuration: 0.9860625
+    - name: Play_Stagiaire_last_triste_triste_autres
+      guid: 671dd1f958ea2346bb953ae0c2df4f02
+      id: 3452631203
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_last_triste_triste_autres
+        ObjectType: 3
+        guid: 671dd1f958ea2346bb953ae0c2df4f02
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_last_triste_triste_autres
+      maxAttenuation: 0
+      maxDuration: 1.5272292
+      minDuration: 1.5272292
+    - name: Play_Stagiaire_nerveux_ah_bon
+      guid: 55411d4156a81c4fa53155bce72efcb8
+      id: 954583833
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_nerveux_ah_bon
+        ObjectType: 3
+        guid: 55411d4156a81c4fa53155bce72efcb8
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_nerveux_ah_bon
+      maxAttenuation: 0
+      maxDuration: 1.0720834
+      minDuration: 1.0720834
+    - name: Play_Stagiaire_nerveux_ah_ok
+      guid: 63ae9a5ad1f4cb49bb305958a21c1085
+      id: 565302570
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_nerveux_ah_ok
+        ObjectType: 3
+        guid: 63ae9a5ad1f4cb49bb305958a21c1085
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_nerveux_ah_ok
+      maxAttenuation: 0
+      maxDuration: 1.9257292
+      minDuration: 1.9257292
+    - name: Play_Stagiaire_nerveux_euuh
+      guid: 1274cdba69fdde48ba1f57208387b811
+      id: 2522131127
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_nerveux_euuh
+        ObjectType: 3
+        guid: 1274cdba69fdde48ba1f57208387b811
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_nerveux_euuh
+      maxAttenuation: 0
+      maxDuration: 1.3085417
+      minDuration: 1.3085417
+    - name: Play_Stagiaire_nerveux_euuh_ouais
+      guid: dc67ebecbba1f24ca63b78f764ad4ca2
+      id: 1171760355
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_nerveux_euuh_ouais
+        ObjectType: 3
+        guid: dc67ebecbba1f24ca63b78f764ad4ca2
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_nerveux_euuh_ouais
+      maxAttenuation: 0
+      maxDuration: 2.3585
+      minDuration: 2.3585
+    - name: Play_Stagiaire_nerveux_je_dois_faire_quoi
+      guid: dd47cd1233b4944093ce172255f234e6
+      id: 3133411902
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_nerveux_je_dois_faire_quoi
+        ObjectType: 3
+        guid: dd47cd1233b4944093ce172255f234e6
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_nerveux_je_dois_faire_quoi
+      maxAttenuation: 0
+      maxDuration: 2.6938958
+      minDuration: 2.6938958
+    - name: Play_Stagiaire_nerveux_un_cafe
+      guid: 31dd7a88df2f6940bd7cae2004d7ea50
+      id: 2517133309
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      - ElementName: Play_Stagiaire_nerveux_un_cafe
+        ObjectType: 3
+        guid: 31dd7a88df2f6940bd7cae2004d7ea50
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2\Play_Stagiaire_nerveux_un_cafe
+      maxAttenuation: 0
+      maxDuration: 1.1402084
+      minDuration: 1.1402084
+    - name: Play_StagStep
+      guid: 32f5b96913a55b449b6214ec384f2c6d
+      id: 3064295941
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Animations
+        ObjectType: 4
+        guid: c10b1dbc4732d94cbd44fef6aa44db2c
+      - ElementName: Play_StagStep
+        ObjectType: 3
+        guid: 32f5b96913a55b449b6214ec384f2c6d
+      Path: Events\WU_HM_Events\Animations\Play_StagStep
+      maxAttenuation: 100
+      maxDuration: 0.6366268
+      minDuration: 0.14079224
     - name: Play_UI_DialogueBubble
       guid: 038419f5c247cd4caba6156f3306a1e1
       id: 1018177731
@@ -4274,6 +5875,58 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: StagV1
+      guid: 632bebf937270a4a9f3bec077a7d03b4
+      id: 1221949247
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV1
+        ObjectType: 4
+        guid: 632bebf937270a4a9f3bec077a7d03b4
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: StagV2
+      guid: 807206c3f9a8ff45a62f42356e709543
+      id: 1221949244
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 161e325a25629146956980c8ab3dcb9a
+      - ElementName: Barks
+        ObjectType: 4
+        guid: 04d490f6c937b14c83a9121e39b48bc6
+      - ElementName: Barks Stagiaire
+        ObjectType: 4
+        guid: e61cec463c4af54bac7fc23c635889d7
+      - ElementName: StagV2
+        ObjectType: 4
+        guid: 807206c3f9a8ff45a62f42356e709543
+      Path: Events\WU_HM_Events\Dialogue\Barks\Barks Stagiaire\StagV2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_Amb_global
       guid: 93c541b4cac18046868832964ca17539
       id: 1375364434
@@ -4458,8 +6111,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 86baa2f915be7d43a5fdec6e8dad3d53
     GuidInternal: 
-    m_lastTime: -8584835776199055297
-    List: []
+    m_lastTime: -8584832895531291693
+    List:
+    - name: playbackspeedtest
+      guid: 8d0930295c4cb84f8374c211917d9add
+      id: 2940890671
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 86baa2f915be7d43a5fdec6e8dad3d53
+      - ElementName: playbackspeedtest
+        ObjectType: 13
+        guid: 8d0930295c4cb84f8374c211917d9add
+      Path: Game Parameters\Default Work Unit\playbackspeedtest
   - PhysicalPath: Game Parameters\WU_HM_RTPC.wwu
     PathAndIcons:
     - ElementName: Game Parameters
@@ -4827,8 +6494,8 @@ MonoBehaviour:
     m_lastTime: -8584901339025742451
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 02000000080000001d000000
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 1
+  currentDataSource: 0
   CurrentPluginConfig: 
