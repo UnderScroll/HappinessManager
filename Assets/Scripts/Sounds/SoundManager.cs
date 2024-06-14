@@ -39,10 +39,10 @@ public class SoundManager : MonoBehaviour
             Debug.LogError("Failed to get floor name, or is not implemented yet");
     }
 
-    public void PLayOnFirstLevelLoaded()
+    public void PlayOnFirstLevelLoaded()
     {
         AkSoundEngine.PostEvent($"Play_Music_{_floorWwiseName}", gameObject);
-        AkSoundEngine.PostEvent($"Play_Amb_{_floorWwiseName}", gameObject);
+        //AkSoundEngine.PostEvent($"Play_Amb_{_floorWwiseName}", gameObject);
     }
 
     public void PlayOnLaunchingSimulation()
@@ -68,5 +68,9 @@ public class SoundManager : MonoBehaviour
         AkSoundEngine.PostEvent("Play_Music_SetSwitch_victory", gameObject);
         AkSoundEngine.PostEvent("Play_Menu_select", gameObject);
         AkSoundEngine.PostEvent("Play_Menu_Settings_onMenuOpen", gameObject);
+    }
+    public void PlayOnElevatorEnter()
+    {
+        AkSoundEngine.PostEvent($"Play_ElevatorFrom_{_floorWwiseName}", gameObject);
     }
 }

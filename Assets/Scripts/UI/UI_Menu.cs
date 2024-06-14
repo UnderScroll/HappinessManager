@@ -1,6 +1,7 @@
 using DG.Tweening;
 using DG.Tweening.Core.Easing;
 using NaughtyAttributes;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,6 +9,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class UI_Menu : MonoBehaviour
 {
@@ -15,6 +17,8 @@ public class UI_Menu : MonoBehaviour
     public UnityEvent OnApplicationStarted;
     public UnityEvent OnQuittingGame;
     public UnityEvent OnIntroEnded;
+
+    [SerializeField] VideoPlayer vPlayer;
 
     [Header("IntroScene")]
     [SerializeField] bool skipIntro;
@@ -70,7 +74,7 @@ public class UI_Menu : MonoBehaviour
     private IEnumerator Start()
     {
         Debug.developerConsoleVisible = true;
-
+        vPlayer.loopPointReached += Play;
 
         // Binding events
         OnApplicationStarted.AddListener(OnApplicationStart);
@@ -136,9 +140,12 @@ public class UI_Menu : MonoBehaviour
     {
         AkSoundEngine.PostEvent("Stop_Music_Global", gameObject);
         AkSoundEngine.PostEvent("Play_Menu_select", gameObject);
-        
+        // son vidéo
+        vPlayer.Play();
+    }
+    private void Play(VideoPlayer vp)
+    { 
         SceneManager.LoadScene("Floor_1", LoadSceneMode.Single);
-        
     }
 
     public void QuitGame()
