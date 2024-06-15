@@ -105,6 +105,8 @@ namespace AK
         static const AkUniqueID PLAY_BUILD_INVISIBLEBLOCK = 2048945389U;
         static const AkUniqueID PLAY_BUILD_SOAP_BLOCK_PLACE = 112573374U;
         static const AkUniqueID PLAY_BUILD_SOAP_BLOCK_REMOVE = 2054052469U;
+        static const AkUniqueID PLAY_CAMERA_ROTNEGATIVE = 404643336U;
+        static const AkUniqueID PLAY_CAMERA_ROTPOSITIVE = 2461310560U;
         static const AkUniqueID PLAY_CAMERA_ZOOMIN = 977134866U;
         static const AkUniqueID PLAY_CAMERA_ZOOMOUT = 2892692845U;
         static const AkUniqueID PLAY_CMCLOTH = 230557658U;
@@ -220,10 +222,12 @@ namespace AK
         static const AkUniqueID PLAY_UI_MONEY_SPENT = 681896400U;
         static const AkUniqueID PLAY_UI_RESTART_LEVEL = 3917633987U;
         static const AkUniqueID PLAY_WIND_GUST = 563870990U;
+        static const AkUniqueID RESET_RTPC_TAPESTOP = 3587632891U;
         static const AkUniqueID SETRTPC_SENSITITITY_FILTER_0 = 3886903300U;
         static const AkUniqueID SETRTPC_SENSITITITY_FILTER_1 = 3886903301U;
         static const AkUniqueID STOP_AMB_GLOBAL = 1375364434U;
         static const AkUniqueID STOP_MUSIC_GLOBAL = 177767409U;
+        static const AkUniqueID STOP_MUSIC_GLOBAL_ELEVATOR = 3458393874U;
     } // namespace EVENTS
 
     namespace STATES
@@ -274,9 +278,11 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID BUILD_IN_ELEVATION = 3180815027U;
+        static const AkUniqueID BUILT_IN_DISTANCE = 1399990923U;
         static const AkUniqueID COLLISION_VELOCITY = 1951144523U;
+        static const AkUniqueID MUSIC_TAPESTOP = 1693237381U;
         static const AkUniqueID PLAYBACKSPEEDTEST = 2940890671U;
-        static const AkUniqueID REVERB_DISTANCE = 3583098985U;
         static const AkUniqueID RTPC_DIALOGUE_BUS = 3182657878U;
         static const AkUniqueID RTPC_MUSIC_BUS = 3432596327U;
         static const AkUniqueID RTPC_SENSITIVITY_FILTER = 1561184313U;
