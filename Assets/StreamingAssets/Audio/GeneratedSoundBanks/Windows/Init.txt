@@ -18,6 +18,7 @@ Custom State	ID	Name	State Group	Owner		Notes
 	980330863	Unfocused	IsUnfocused	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMBIANCE		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	174332405	RTPC_UNFOCUSED			\WU_HM_RTPC\RTPC_UNFOCUSED	
 	1561184313	RTPC_SENSITIVITY_FILTER			\BUS_RTPC\RTPC_SENSITIVITY_FILTER	
 	3067876527	RTPC_SFX_BUS			\BUS_RTPC\RTPC_SFX_BUS	
 	3182657878	RTPC_DIALOGUE_BUS			\BUS_RTPC\RTPC_DIALOGUE_BUS	
@@ -38,6 +39,8 @@ Effect plug-ins	ID	Name	Type				Notes
 	602546716	Room_Large	Wwise RoomVerb			
 	1706684651	Plate_Medium	Wwise RoomVerb			
 	1960519852	SensitivityFilter	Wwise Parametric EQ			
+	2171127646	Hall_Conversation	Wwise RoomVerb			
+	3435419520	New_Guitar_Distortion	Wwise Guitar Distortion			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

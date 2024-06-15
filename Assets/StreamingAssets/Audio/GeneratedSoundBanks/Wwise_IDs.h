@@ -281,6 +281,7 @@ namespace AK
         static const AkUniqueID RTPC_MUSIC_BUS = 3432596327U;
         static const AkUniqueID RTPC_SENSITIVITY_FILTER = 1561184313U;
         static const AkUniqueID RTPC_SFX_BUS = 3067876527U;
+        static const AkUniqueID RTPC_UNFOCUSED = 174332405U;
         static const AkUniqueID WIND_STRENGTH = 1830592977U;
     } // namespace GAME_PARAMETERS
 

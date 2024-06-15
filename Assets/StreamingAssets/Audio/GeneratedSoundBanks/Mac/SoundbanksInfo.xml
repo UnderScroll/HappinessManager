@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{198E89A9-8F37-608F-D1CC-6C307A3B4187}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{5B0D6A4E-E9CA-331F-31C3-B86B475182D2}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -20,6 +20,8 @@
 					<Plugin Id="602546716" Name="Room_Large" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="1706684651" Name="Plate_Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="1960519852" Name="SensitivityFilter" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="2171127646" Name="Hall_Conversation" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="3435419520" Name="New_Guitar_Distortion" LibName="Wwise Guitar Distortion" LibId="8257539"/>
 				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
@@ -27,7 +29,14 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
-				<Bus Id="69765534" Name="MUSIQUE"/>
+				<Bus Id="69765534" Name="MUSIQUE">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2171127646"/>
+							<PluginRef Id="3435419520"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="393239870" Name="SFX"/>
 				<Bus Id="1669749310" Name="DIALOGUES"/>
 				<Bus Id="2981377429" Name="AMBIANCE"/>
@@ -53,6 +62,7 @@
 				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
+				<GameParameter Id="174332405" Name="RTPC_UNFOCUSED"/>
 				<GameParameter Id="1561184313" Name="RTPC_SENSITIVITY_FILTER"/>
 				<GameParameter Id="1830592977" Name="Wind_Strength"/>
 				<GameParameter Id="1951144523" Name="Collision_Velocity"/>
@@ -90,10 +100,14 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{C0D393F7-38A9-43AF-3152-31CEF2A067E9}">
+		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{BC6C3F2F-3918-42DC-DD30-D2854576C4C2}">
 			<ShortName>HM_Global_SB</ShortName>
 			<Path>HM_Global_SB.bnk</Path>
 			<Media>
+				<File Id="1371871" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>a quelle heure la pause-glued-01.wav</ShortName>
+					<CachePath>SFX/a quelle heure la pause-glued-01_FD4DF9DE.wem</CachePath>
+				</File>
 				<File Id="1954477" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity 4.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity 4_E1408C29.wem</CachePath>
@@ -153,10 +167,6 @@
 				<File Id="40743141" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_high_velocity-006.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_high_velocity-006_FD4DF9DE.wem</CachePath>
-				</File>
-				<File Id="48228603" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Stagiaire confus a quelle heure la pause.wav</ShortName>
-					<CachePath>SFX/Stagiaire confus a quelle heure la pause_FD4DF9DE.wem</CachePath>
 				</File>
 				<File Id="50950265" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_OS_UI_toggle_out .wav</ShortName>
@@ -2813,7 +2823,7 @@
 						<AuxBusRef Id="821123712" Name="Room_Verb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="2159415333" Name="Play_ComptableKiki" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.5828274" DurationMax="1.7484823">
+				<Event Id="2159415333" Name="Play_ComptableKiki" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.45992613" DurationMax="1.3797785">
 					<MediaRefs>
 						<MediaRef Id="64726708"/>
 						<MediaRef Id="100994493"/>
@@ -3545,9 +3555,9 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="339424822" Name="Play_Stagiaire_confus_a_quelle_heure_la_pause" DurationType="OneShot" DurationMin="1.685" DurationMax="1.685">
+				<Event Id="339424822" Name="Play_Stagiaire_confus_a_quelle_heure_la_pause" DurationType="OneShot" DurationMin="2.2322676" DurationMax="2.2322676">
 					<MediaRefs>
-						<MediaRef Id="48228603"/>
+						<MediaRef Id="1371871"/>
 					</MediaRefs>
 					<PluginRefs>
 						<ShareSets>
@@ -4115,5 +4125,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4DBDB421-9A2A-C5A2-265A-D26342992290}</FileHash>
+	<FileHash>{81784ACF-1474-30BF-3B85-BDC0A24BE8BE}</FileHash>
 </SoundBanksInfo>
