@@ -107,6 +107,8 @@ namespace AK
         static const AkUniqueID PLAY_BUILD_SOAP_BLOCK_REMOVE = 2054052469U;
         static const AkUniqueID PLAY_CAMERA_ROTNEGATIVE = 404643336U;
         static const AkUniqueID PLAY_CAMERA_ROTPOSITIVE = 2461310560U;
+        static const AkUniqueID PLAY_CAMERA_TILTNEGATIVE = 20003366U;
+        static const AkUniqueID PLAY_CAMERA_TILTPOSITIVE = 2893301078U;
         static const AkUniqueID PLAY_CAMERA_ZOOMIN = 977134866U;
         static const AkUniqueID PLAY_CAMERA_ZOOMOUT = 2892692845U;
         static const AkUniqueID PLAY_CMCLOTH = 230557658U;

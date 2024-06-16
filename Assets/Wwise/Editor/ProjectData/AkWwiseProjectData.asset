@@ -231,7 +231,7 @@ MonoBehaviour:
     ParentPath: Events\WU_HM_Events
     guid: a44afb18422e3e4bbc589ac1581aef04
     GuidInternal: 
-    m_lastTime: -8584831372152540468
+    m_lastTime: -8584830565329884482
     List:
     - name: Amb
       guid: 45ce627f733a4f4d90717e8757beb9ba
@@ -3076,8 +3076,8 @@ MonoBehaviour:
         guid: dbad321a347d114ead186d87c602639d
       Path: Events\WU_HM_Events\Camera\Play_Camera_RotNegative
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.4060683
+      minDuration: 0.013613859
     - name: Play_Camera_RotPositive
       guid: efbd8fb3b8dcc14db9c160e10d0a19f7
       id: 2461310560
@@ -3096,8 +3096,48 @@ MonoBehaviour:
         guid: efbd8fb3b8dcc14db9c160e10d0a19f7
       Path: Events\WU_HM_Events\Camera\Play_Camera_RotPositive
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.2240536
+      minDuration: 0.013208358
+    - name: Play_Camera_TiltNegative
+      guid: 72500b1981f7dc42b88d4c1e6eb28960
+      id: 20003366
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Camera
+        ObjectType: 4
+        guid: 9d5b07d89dc90d4790d3997d77f7a4d3
+      - ElementName: Play_Camera_TiltNegative
+        ObjectType: 3
+        guid: 72500b1981f7dc42b88d4c1e6eb28960
+      Path: Events\WU_HM_Events\Camera\Play_Camera_TiltNegative
+      maxAttenuation: 0
+      maxDuration: 1.6339155
+      minDuration: 0.036968954
+    - name: Play_Camera_TiltPositive
+      guid: c69f7947ae668741894e4acce9801761
+      id: 2893301078
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Camera
+        ObjectType: 4
+        guid: 9d5b07d89dc90d4790d3997d77f7a4d3
+      - ElementName: Play_Camera_TiltPositive
+        ObjectType: 3
+        guid: c69f7947ae668741894e4acce9801761
+      Path: Events\WU_HM_Events\Camera\Play_Camera_TiltPositive
+      maxAttenuation: 0
+      maxDuration: 1.6339155
+      minDuration: 0.036968954
     - name: Play_Camera_zoomIn
       guid: 9697dd237fedaf45a6bdf2bce05d78bf
       id: 977134866
@@ -3856,8 +3896,8 @@ MonoBehaviour:
         guid: 849e85b53c7d2446874753a1d13a6141
       Path: Events\WU_HM_Events\Menu\Play_Menu_System_next
       maxAttenuation: 0
-      maxDuration: 0.26533332
-      minDuration: 0.26533332
+      maxDuration: 0.95029825
+      minDuration: 0.7221644
     - name: Play_Menu_System_out
       guid: cf3993e92520954098bdce7064562e34
       id: 1668914112
@@ -5893,8 +5933,8 @@ MonoBehaviour:
         guid: 09fe6b46eb31064fa2b51542347b2e74
       Path: Events\WU_HM_Events\Music\Reset_RTPC_TapeStop
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: SetRTPC_SENSITITITY_FILTER_0
       guid: 721a49f24a4b36428265aee2fa622d62
       id: 3886903300
@@ -6045,8 +6085,8 @@ MonoBehaviour:
         guid: ab63c19311ba5544bdf26ae672719454
       Path: Events\WU_HM_Events\Music\Stop_Music_global_elevator
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Teambuilding
       guid: c86cb70ad176a94ba75c52332f4ee126
       id: 3727325742
@@ -6616,8 +6656,8 @@ MonoBehaviour:
     m_lastTime: -8584901339025742451
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 020000000400000014000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 
