@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{5B0D6A4E-E9CA-331F-31C3-B86B475182D2}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{C5A65684-CBBC-EC21-F47E-09B424DE2615}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -18,6 +18,7 @@
 				</Custom>
 				<ShareSets>
 					<Plugin Id="602546716" Name="Room_Large" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="1232017842" Name="LR_Slap_with_CrossFeed" LibName="Wwise Stereo Delay" LibId="8847363"/>
 					<Plugin Id="1706684651" Name="Plate_Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="1960519852" Name="SensitivityFilter" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="2171127646" Name="Hall_Conversation" LibName="Wwise RoomVerb" LibId="7733251"/>
@@ -32,6 +33,7 @@
 				<Bus Id="69765534" Name="MUSIQUE">
 					<PluginRefs>
 						<ShareSets>
+							<PluginRef Id="1232017842"/>
 							<PluginRef Id="2171127646"/>
 							<PluginRef Id="3435419520"/>
 						</ShareSets>
@@ -63,14 +65,16 @@
 			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="174332405" Name="RTPC_UNFOCUSED"/>
+				<GameParameter Id="1399990923" Name="Built_In_Distance"/>
 				<GameParameter Id="1561184313" Name="RTPC_SENSITIVITY_FILTER"/>
+				<GameParameter Id="1693237381" Name="Music_TapeStop"/>
 				<GameParameter Id="1830592977" Name="Wind_Strength"/>
 				<GameParameter Id="1951144523" Name="Collision_Velocity"/>
 				<GameParameter Id="2940890671" Name="playbackspeedtest"/>
 				<GameParameter Id="3067876527" Name="RTPC_SFX_BUS"/>
+				<GameParameter Id="3180815027" Name="Build_In_Elevation"/>
 				<GameParameter Id="3182657878" Name="RTPC_DIALOGUE_BUS"/>
 				<GameParameter Id="3432596327" Name="RTPC_MUSIC_BUS"/>
-				<GameParameter Id="3583098985" Name="Reverb_Distance"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="2269821903" Name="IsUnfocused">
@@ -100,7 +104,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{BC6C3F2F-3918-42DC-DD30-D2854576C4C2}">
+		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{87D31743-E507-CEEC-2612-6D5A0056BC61}">
 			<ShortName>HM_Global_SB</ShortName>
 			<Path>HM_Global_SB.bnk</Path>
 			<Media>
@@ -127,6 +131,10 @@
 				<File Id="22990834" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>coworking-005.wav</ShortName>
 					<CachePath>SFX/coworking-005_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="24296599" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mechanical, Click, Blender, Control Dial Turn 04 SND24659.wav</ShortName>
+					<CachePath>SFX/Mechanical, Click, Blender, Control Dial Turn 04 SND24659_CBA9FC5D.wem</CachePath>
 				</File>
 				<File Id="24325655" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_high_velocity 5.wav</ShortName>
@@ -163,6 +171,10 @@
 				<File Id="38529753" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_low_velocity-001.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_low_velocity-001_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="38669255" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mechanical, Click, Blender, Control Dial Turn 04 SND24659.wav</ShortName>
+					<CachePath>SFX/Mechanical, Click, Blender, Control Dial Turn 04 SND24659_80A6B78F.wem</CachePath>
 				</File>
 				<File Id="40743141" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_high_velocity-006.wav</ShortName>
@@ -207,6 +219,10 @@
 				<File Id="79623535" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_offTabHover 1.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_offTabHover 1_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="80007952" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mechanical, Click, Blender, Control Dial Turn 04 SND24659.wav</ShortName>
+					<CachePath>SFX/Mechanical, Click, Blender, Control Dial Turn 04 SND24659_692ADC1B.wem</CachePath>
 				</File>
 				<File Id="81236708" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToFloor_low_velocity 7.wav</ShortName>
@@ -288,6 +304,10 @@
 					<ShortName>HM_SFX_SC_Build_concrete block remove 2.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_concrete block remove 2_0B9ADCC2.wem</CachePath>
 				</File>
+				<File Id="122494432" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mechanical, Click, Blender, Control Dial Turn 04 SND24659.wav</ShortName>
+					<CachePath>SFX/Mechanical, Click, Blender, Control Dial Turn 04 SND24659_C63E30B6.wem</CachePath>
+				</File>
 				<File Id="123219491" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity-004.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity-004_FD4DF9DE.wem</CachePath>
@@ -311,6 +331,10 @@
 				<File Id="133900896" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_low_velocity-014.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_low_velocity-014_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="136412570" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mechanical, Click, Blender, Control Dial Turn 04 SND24659.wav</ShortName>
+					<CachePath>SFX/Mechanical, Click, Blender, Control Dial Turn 04 SND24659_4FDC3C38.wem</CachePath>
 				</File>
 				<File Id="138705726" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss hereux 1.wav</ShortName>
@@ -452,6 +476,10 @@
 					<ShortName>HM_SFX_BC_Physics_basicToFloor_high_velocity-007.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToFloor_high_velocity-007_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="203581641" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mechanical, Click, Blender, Control Dial Turn 04 SND24659.wav</ShortName>
+					<CachePath>SFX/Mechanical, Click, Blender, Control Dial Turn 04 SND24659_AFF3B1A8.wem</CachePath>
+				</File>
 				<File Id="208452939" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_tab_onclick 1.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_tab_onclick 1_FD4DF9DE.wem</CachePath>
@@ -467,6 +495,10 @@
 				<File Id="214974603" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps Parquet  by Yuval Id-205747.wav</ShortName>
 					<CachePath>SFX/Footsteps Parquet  by Yuval Id-205747_9D2C502A.wem</CachePath>
+				</File>
+				<File Id="221999318" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mechanical, Click, Blender, Control Dial Turn 04 SND24659.wav</ShortName>
+					<CachePath>SFX/Mechanical, Click, Blender, Control Dial Turn 04 SND24659_8D1D3040.wem</CachePath>
 				</File>
 				<File Id="222916998" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Employé Triste Hereux-003.wav</ShortName>
@@ -567,6 +599,10 @@
 				<File Id="259622842" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Digital Click Negative 07 1.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Digital Click Negative 07 1_7D48D16B.wem</CachePath>
+				</File>
+				<File Id="259769895" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mechanical, Click, Blender, Control Dial Turn 04 SND24659.wav</ShortName>
+					<CachePath>SFX/Mechanical, Click, Blender, Control Dial Turn 04 SND24659_0D778D48.wem</CachePath>
 				</File>
 				<File Id="260431742" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dir Créa Dégouté.wav</ShortName>
@@ -720,6 +756,10 @@
 					<ShortName>HM_SFX_OS_UI_item tab hover heavy.wav</ShortName>
 					<CachePath>SFX/HM_SFX_OS_UI_item tab hover heavy_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="371401760" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mechanical, Click, Blender, Control Dial Turn 04 SND24659.wav</ShortName>
+					<CachePath>SFX/Mechanical, Click, Blender, Control Dial Turn 04 SND24659_69317BCA.wem</CachePath>
+				</File>
 				<File Id="374694297" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Stagiaire nerveux un cafe.wav</ShortName>
 					<CachePath>SFX/Stagiaire nerveux un cafe_FD4DF9DE.wem</CachePath>
@@ -828,6 +868,10 @@
 					<ShortName>HM_SFX_BC_Physics_basicToBlock_low_velocity-015.wav</ShortName>
 					<CachePath>SFX/HM_SFX_BC_Physics_basicToBlock_low_velocity-015_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="417854453" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mechanical, Click, Blender, Control Dial Turn 04 SND24659.wav</ShortName>
+					<CachePath>SFX/Mechanical, Click, Blender, Control Dial Turn 04 SND24659_7D12F7B2.wem</CachePath>
+				</File>
 				<File Id="418850945" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_RC_UI_tab_hover _highlighter 3.wav</ShortName>
 					<CachePath>SFX/HM_SFX_RC_UI_tab_hover _highlighter 3_FD4DF9DE.wem</CachePath>
@@ -920,6 +964,10 @@
 					<ShortName>coworking defeat 109 vdef.wav</ShortName>
 					<CachePath>SFX/coworking defeat 109 vdef_B02CE968.wem</CachePath>
 				</File>
+				<File Id="463204625" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mechanical, Click, Blender, Control Dial Turn 04 SND24659.wav</ShortName>
+					<CachePath>SFX/Mechanical, Click, Blender, Control Dial Turn 04 SND24659_1ABA6AA9.wem</CachePath>
+				</File>
 				<File Id="464768831" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_concrete block place 3.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_concrete block place 3_FD4DF9DE.wem</CachePath>
@@ -1011,6 +1059,10 @@
 				<File Id="523465638" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_SC_Build_basic block remove-005.wav</ShortName>
 					<CachePath>SFX/HM_SFX_SC_Build_basic block remove-005_CB241E25.wem</CachePath>
+				</File>
+				<File Id="523638217" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mechanical, Click, Blender, Control Dial Turn 04 SND24659.wav</ShortName>
+					<CachePath>SFX/Mechanical, Click, Blender, Control Dial Turn 04 SND24659_D6B72B34.wem</CachePath>
 				</File>
 				<File Id="524533585" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HM_SFX_BC_Physics_concreteToBlock_low_velocity 12.wav</ShortName>
@@ -1612,6 +1664,10 @@
 					<ShortName>door open -004.wav</ShortName>
 					<CachePath>SFX/door open -004_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="868746286" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mechanical, Click, Blender, Control Dial Turn 04 SND24659.wav</ShortName>
+					<CachePath>SFX/Mechanical, Click, Blender, Control Dial Turn 04 SND24659_EE138B88.wem</CachePath>
+				</File>
 				<File Id="868885266" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>teambuilding validate 103 .wav</ShortName>
 					<CachePath>SFX/teambuilding validate 103 _B02CE968.wem</CachePath>
@@ -1895,6 +1951,10 @@
 				<File Id="1021558814" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>victory cafeteria 115 vdef 3 .wav</ShortName>
 					<CachePath>SFX/victory cafeteria 115 vdef 3 _B02CE968.wem</CachePath>
+				</File>
+				<File Id="1023264174" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mechanical, Click, Blender, Control Dial Turn 04 SND24659.wav</ShortName>
+					<CachePath>SFX/Mechanical, Click, Blender, Control Dial Turn 04 SND24659_E082941C.wem</CachePath>
 				</File>
 				<File Id="1023791989" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Digital Click Negative 07 3.wav</ShortName>
@@ -2710,6 +2770,9 @@
 						<MediaRef Id="645987854"/>
 						<MediaRef Id="692697951"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="1294229974" Name="Play_Build_basic_block_remove" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.8555668" DurationMax="1.3352127">
 					<MediaRefs>
@@ -2719,6 +2782,9 @@
 						<MediaRef Id="660753688"/>
 						<MediaRef Id="1000593584"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="684309162" Name="Play_Build_concrete_block_place" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.6174825" DurationMax="1.1732394">
 					<MediaRefs>
@@ -2728,6 +2794,9 @@
 						<MediaRef Id="299394610"/>
 						<MediaRef Id="464768831"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="3541187073" Name="Play_Build_concrete_block_remove" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.3516376" DurationMax="1.8100752">
 					<MediaRefs>
@@ -2736,6 +2805,9 @@
 						<MediaRef Id="600098633"/>
 						<MediaRef Id="739761322"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="4184810258" Name="Play_Build_deco_place" DurationType="OneShot" DurationMin="0.51241374" DurationMax="0.64399356">
 					<MediaRefs>
@@ -2759,6 +2831,9 @@
 						<MediaRef Id="641376820"/>
 						<MediaRef Id="1023791989"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="112573374" Name="Play_Build_soap_block_place" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.5265518" DurationMax="0.9481875">
 					<MediaRefs>
@@ -2768,6 +2843,9 @@
 						<MediaRef Id="904806863"/>
 						<MediaRef Id="989727965"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="2054052469" Name="Play_Build_soap_block_remove" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.23317769" DurationMax="0.45414358">
 					<MediaRefs>
@@ -2777,6 +2855,31 @@
 						<MediaRef Id="622120537"/>
 						<MediaRef Id="830288520"/>
 						<MediaRef Id="863752724"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="821123712" Name="Room_Verb"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="404643336" Name="Play_Camera_RotNegative" DurationType="OneShot" DurationMin="0.0109942015" DurationMax="0.016491298">
+					<MediaRefs>
+						<MediaRef Id="122494432"/>
+						<MediaRef Id="221999318"/>
+						<MediaRef Id="259769895"/>
+						<MediaRef Id="417854453"/>
+						<MediaRef Id="463204625"/>
+						<MediaRef Id="523638217"/>
+						<MediaRef Id="1023264174"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2461310560" Name="Play_Camera_RotPositive" DurationType="OneShot" DurationMin="0.009725096" DurationMax="0.01404736">
+					<MediaRefs>
+						<MediaRef Id="24296599"/>
+						<MediaRef Id="38669255"/>
+						<MediaRef Id="80007952"/>
+						<MediaRef Id="136412570"/>
+						<MediaRef Id="203581641"/>
+						<MediaRef Id="371401760"/>
+						<MediaRef Id="868746286"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="977134866" Name="Play_Camera_zoomIn" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -2915,8 +3018,8 @@
 						<MediaRef Id="1047103891"/>
 					</MediaRefs>
 					<ActionPostEvent>
-						<ActionPostEventEntry Id="177767409" Name="Stop_Music_global"/>
 						<ActionPostEventEntry Id="1375364434" Name="Stop_Amb_global"/>
+						<ActionPostEventEntry Id="3458393874" Name="Stop_Music_global_elevator"/>
 					</ActionPostEvent>
 				</Event>
 				<Event Id="821832571" Name="Play_ElevatorFrom_cafeteria" DurationType="OneShot" DurationMin="8.5683365" DurationMax="9.005322">
@@ -2926,8 +3029,8 @@
 						<MediaRef Id="548407932"/>
 					</MediaRefs>
 					<ActionPostEvent>
-						<ActionPostEventEntry Id="177767409" Name="Stop_Music_global"/>
 						<ActionPostEventEntry Id="1375364434" Name="Stop_Amb_global"/>
+						<ActionPostEventEntry Id="3458393874" Name="Stop_Music_global_elevator"/>
 					</ActionPostEvent>
 				</Event>
 				<Event Id="2400032206" Name="Play_ElevatorFrom_coworking" DurationType="OneShot" DurationMin="8.734979" DurationMax="9.091337">
@@ -2937,8 +3040,8 @@
 						<MediaRef Id="866168184"/>
 					</MediaRefs>
 					<ActionPostEvent>
-						<ActionPostEventEntry Id="177767409" Name="Stop_Music_global"/>
 						<ActionPostEventEntry Id="1375364434" Name="Stop_Amb_global"/>
+						<ActionPostEventEntry Id="3458393874" Name="Stop_Music_global_elevator"/>
 					</ActionPostEvent>
 				</Event>
 				<Event Id="2577528824" Name="Play_ElevatorFrom_teambuilding" DurationType="OneShot" DurationMin="8.644967" DurationMax="9.091337">
@@ -2948,8 +3051,8 @@
 						<MediaRef Id="866168184"/>
 					</MediaRefs>
 					<ActionPostEvent>
-						<ActionPostEventEntry Id="177767409" Name="Stop_Music_global"/>
 						<ActionPostEventEntry Id="1375364434" Name="Stop_Amb_global"/>
+						<ActionPostEventEntry Id="3458393874" Name="Stop_Music_global_elevator"/>
 					</ActionPostEvent>
 				</Event>
 				<Event Id="3149711587" Name="Play_ETCloth" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.74847525" DurationMax="1.2810441">
@@ -3097,9 +3200,12 @@
 						<ActionSetStateEntry GroupId="2269821903" Id="3517500819" Name="Unfocused"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="4017523383" Name="Play_Menu_System_next" DurationType="OneShot" DurationMin="0.26533332" DurationMax="0.26533332">
+				<Event Id="4017523383" Name="Play_Menu_System_next" DurationType="OneShot" DurationMin="0.7221644" DurationMax="0.95029825">
 					<MediaRefs>
 						<MediaRef Id="299316334"/>
+						<MediaRef Id="775253970"/>
+						<MediaRef Id="902224108"/>
+						<MediaRef Id="961604570"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1668914112" Name="Play_Menu_System_out" DurationType="OneShot" DurationMin="0.24191667" DurationMax="0.24191667">
@@ -3159,6 +3265,7 @@
 					</SwitchContainers>
 					<ActionPostEvent>
 						<ActionPostEventEntry Id="177767409" Name="Stop_Music_global"/>
+						<ActionPostEventEntry Id="3587632891" Name="Reset_RTPC_TapeStop"/>
 					</ActionPostEvent>
 					<ActionSetSwitch>
 						<ActionSetSwitchEntry GroupId="2410351013" Id="3284755031" Name="Build"/>
@@ -3202,6 +3309,7 @@
 					</SwitchContainers>
 					<ActionPostEvent>
 						<ActionPostEventEntry Id="177767409" Name="Stop_Music_global"/>
+						<ActionPostEventEntry Id="3587632891" Name="Reset_RTPC_TapeStop"/>
 					</ActionPostEvent>
 					<ActionSetSwitch>
 						<ActionSetSwitchEntry GroupId="2410351013" Id="3284755031" Name="Build"/>
@@ -3243,6 +3351,7 @@
 					</SwitchContainers>
 					<ActionPostEvent>
 						<ActionPostEventEntry Id="177767409" Name="Stop_Music_global"/>
+						<ActionPostEventEntry Id="3587632891" Name="Reset_RTPC_TapeStop"/>
 					</ActionPostEvent>
 					<ActionSetSwitch>
 						<ActionSetSwitchEntry GroupId="2410351013" Id="3284755031" Name="Build"/>
@@ -3285,6 +3394,7 @@
 					</SwitchContainers>
 					<ActionPostEvent>
 						<ActionPostEventEntry Id="177767409" Name="Stop_Music_global"/>
+						<ActionPostEventEntry Id="3587632891" Name="Reset_RTPC_TapeStop"/>
 					</ActionPostEvent>
 					<ActionSetSwitch>
 						<ActionSetSwitchEntry GroupId="2410351013" Id="3284755031" Name="Build"/>
@@ -3360,6 +3470,7 @@
 					</SwitchContainers>
 					<ActionPostEvent>
 						<ActionPostEventEntry Id="177767409" Name="Stop_Music_global"/>
+						<ActionPostEventEntry Id="3587632891" Name="Reset_RTPC_TapeStop"/>
 					</ActionPostEvent>
 					<ActionSetSwitch>
 						<ActionSetSwitchEntry GroupId="2410351013" Id="3284755031" Name="Build"/>
@@ -3545,7 +3656,7 @@
 						<AuxBusRef Id="821123712" Name="Room_Verb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="985589949" Name="Play_Stagiaire_confus__euuh" DurationType="OneShot" DurationMin="1.4580625" DurationMax="1.4580625">
+				<Event Id="985589949" Name="Play_Stagiaire_confus__euuh" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.4580625" DurationMax="1.4580625">
 					<MediaRefs>
 						<MediaRef Id="1057897322"/>
 					</MediaRefs>
@@ -3555,7 +3666,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="339424822" Name="Play_Stagiaire_confus_a_quelle_heure_la_pause" DurationType="OneShot" DurationMin="2.2322676" DurationMax="2.2322676">
+				<Event Id="339424822" Name="Play_Stagiaire_confus_a_quelle_heure_la_pause" MaxAttenuation="100" DurationType="OneShot" DurationMin="2.2322676" DurationMax="2.2322676">
 					<MediaRefs>
 						<MediaRef Id="1371871"/>
 					</MediaRefs>
@@ -3565,7 +3676,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="1503450842" Name="Play_Stagiaire_confus_brainstorm_def" DurationType="OneShot" DurationMin="3.9344583" DurationMax="3.9344583">
+				<Event Id="1503450842" Name="Play_Stagiaire_confus_brainstorm_def" MaxAttenuation="100" DurationType="OneShot" DurationMin="3.9344583" DurationMax="3.9344583">
 					<MediaRefs>
 						<MediaRef Id="804393689"/>
 					</MediaRefs>
@@ -3575,7 +3686,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="1165927480" Name="Play_Stagiaire_confus_euuh" DurationType="OneShot" DurationMin="1.2219583" DurationMax="1.2219583">
+				<Event Id="1165927480" Name="Play_Stagiaire_confus_euuh" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.2219583" DurationMax="1.2219583">
 					<MediaRefs>
 						<MediaRef Id="881952021"/>
 					</MediaRefs>
@@ -3585,7 +3696,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="1713606377" Name="Play_Stagiaire_confus_je_me_suis_trompe_de_bureau" DurationType="OneShot" DurationMin="2.6647916" DurationMax="2.6647916">
+				<Event Id="1713606377" Name="Play_Stagiaire_confus_je_me_suis_trompe_de_bureau" MaxAttenuation="100" DurationType="OneShot" DurationMin="2.6647916" DurationMax="2.6647916">
 					<MediaRefs>
 						<MediaRef Id="34827037"/>
 					</MediaRefs>
@@ -3595,7 +3706,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="1570939941" Name="Play_Stagiaire_confus_je_me_trompe" DurationType="OneShot" DurationMin="1.7990834" DurationMax="1.7990834">
+				<Event Id="1570939941" Name="Play_Stagiaire_confus_je_me_trompe" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.7990834" DurationMax="1.7990834">
 					<MediaRefs>
 						<MediaRef Id="36338727"/>
 					</MediaRefs>
@@ -3605,7 +3716,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="435273166" Name="Play_Stagiaire_confus_jspcequejedoifair" DurationType="OneShot" DurationMin="1.6259583" DurationMax="1.6259583">
+				<Event Id="435273166" Name="Play_Stagiaire_confus_jspcequejedoifair" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.6259583" DurationMax="1.6259583">
 					<MediaRefs>
 						<MediaRef Id="126198670"/>
 					</MediaRefs>
@@ -3615,7 +3726,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2409097469" Name="Play_Stagiaire_confus_onmariendit" DurationType="OneShot" DurationMin="1.36625" DurationMax="1.36625">
+				<Event Id="2409097469" Name="Play_Stagiaire_confus_onmariendit" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.36625" DurationMax="1.36625">
 					<MediaRefs>
 						<MediaRef Id="158978694"/>
 					</MediaRefs>
@@ -3625,7 +3736,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2042617620" Name="Play_Stagiaire_confus_ou_les_cafe" DurationType="OneShot" DurationMin="2.2030833" DurationMax="2.2030833">
+				<Event Id="2042617620" Name="Play_Stagiaire_confus_ou_les_cafe" MaxAttenuation="100" DurationType="OneShot" DurationMin="2.2030833" DurationMax="2.2030833">
 					<MediaRefs>
 						<MediaRef Id="422348573"/>
 					</MediaRefs>
@@ -3635,7 +3746,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2596372923" Name="Play_Stagiaire_determine_au_max" DurationType="OneShot" DurationMin="1.6287084" DurationMax="1.6287084">
+				<Event Id="2596372923" Name="Play_Stagiaire_determine_au_max" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.6287084" DurationMax="1.6287084">
 					<MediaRefs>
 						<MediaRef Id="327748888"/>
 					</MediaRefs>
@@ -3645,7 +3756,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="137418355" Name="Play_Stagiaire_determine_exponentiel" DurationType="OneShot" DurationMin="1.6448125" DurationMax="1.6448125">
+				<Event Id="137418355" Name="Play_Stagiaire_determine_exponentiel" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.6448125" DurationMax="1.6448125">
 					<MediaRefs>
 						<MediaRef Id="680048010"/>
 					</MediaRefs>
@@ -3655,7 +3766,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2131124562" Name="Play_Stagiaire_determine_lesgo_la_team" DurationType="OneShot" DurationMin="1.4998542" DurationMax="1.4998542">
+				<Event Id="2131124562" Name="Play_Stagiaire_determine_lesgo_la_team" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.4998542" DurationMax="1.4998542">
 					<MediaRefs>
 						<MediaRef Id="541595339"/>
 					</MediaRefs>
@@ -3665,7 +3776,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="4011872747" Name="Play_Stagiaire_determine_ouais" DurationType="OneShot" DurationMin="0.69210416" DurationMax="0.69210416">
+				<Event Id="4011872747" Name="Play_Stagiaire_determine_ouais" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.69210416" DurationMax="0.69210416">
 					<MediaRefs>
 						<MediaRef Id="865497983"/>
 					</MediaRefs>
@@ -3675,7 +3786,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2141855194" Name="Play_Stagiaire_determine_stage_formateur" DurationType="OneShot" DurationMin="1.6843958" DurationMax="1.6843958">
+				<Event Id="2141855194" Name="Play_Stagiaire_determine_stage_formateur" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.6843958" DurationMax="1.6843958">
 					<MediaRefs>
 						<MediaRef Id="431932342"/>
 					</MediaRefs>
@@ -3685,7 +3796,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="4247221897" Name="Play_Stagiaire_determine_todoliks" DurationType="OneShot" DurationMin="1.80875" DurationMax="1.80875">
+				<Event Id="4247221897" Name="Play_Stagiaire_determine_todoliks" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.80875" DurationMax="1.80875">
 					<MediaRefs>
 						<MediaRef Id="506954753"/>
 					</MediaRefs>
@@ -3695,7 +3806,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="74702239" Name="Play_Stagiaire_excite_c_fou" DurationType="OneShot" DurationMin="1.6548125" DurationMax="1.6548125">
+				<Event Id="74702239" Name="Play_Stagiaire_excite_c_fou" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.6548125" DurationMax="1.6548125">
 					<MediaRefs>
 						<MediaRef Id="900398700"/>
 					</MediaRefs>
@@ -3705,7 +3816,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3133463756" Name="Play_Stagiaire_excite_gasp" DurationType="OneShot" DurationMin="0.96914583" DurationMax="0.96914583">
+				<Event Id="3133463756" Name="Play_Stagiaire_excite_gasp" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.96914583" DurationMax="0.96914583">
 					<MediaRefs>
 						<MediaRef Id="872036947"/>
 					</MediaRefs>
@@ -3715,7 +3826,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2454818291" Name="Play_Stagiaire_excite_kik_win" DurationType="OneShot" DurationMin="2.289646" DurationMax="2.289646">
+				<Event Id="2454818291" Name="Play_Stagiaire_excite_kik_win" MaxAttenuation="100" DurationType="OneShot" DurationMin="2.289646" DurationMax="2.289646">
 					<MediaRefs>
 						<MediaRef Id="925041730"/>
 					</MediaRefs>
@@ -3725,7 +3836,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2114624783" Name="Play_Stagiaire_excite_tous_ensembles" DurationType="OneShot" DurationMin="1.4528126" DurationMax="1.4528126">
+				<Event Id="2114624783" Name="Play_Stagiaire_excite_tous_ensembles" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.4528126" DurationMax="1.4528126">
 					<MediaRefs>
 						<MediaRef Id="325426731"/>
 					</MediaRefs>
@@ -3735,7 +3846,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2408497112" Name="Play_Stagiaire_excite_trop_content" DurationType="OneShot" DurationMin="1.1353959" DurationMax="1.1353959">
+				<Event Id="2408497112" Name="Play_Stagiaire_excite_trop_content" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.1353959" DurationMax="1.1353959">
 					<MediaRefs>
 						<MediaRef Id="233687355"/>
 					</MediaRefs>
@@ -3745,7 +3856,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2923189174" Name="Play_Stagiaire_excite_waa" DurationType="OneShot" DurationMin="1.2219583" DurationMax="1.2219583">
+				<Event Id="2923189174" Name="Play_Stagiaire_excite_waa" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.2219583" DurationMax="1.2219583">
 					<MediaRefs>
 						<MediaRef Id="397090791"/>
 					</MediaRefs>
@@ -3755,7 +3866,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2755413102" Name="Play_Stagiaire_excite_wow" DurationType="OneShot" DurationMin="1.56825" DurationMax="1.56825">
+				<Event Id="2755413102" Name="Play_Stagiaire_excite_wow" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.56825" DurationMax="1.56825">
 					<MediaRefs>
 						<MediaRef Id="249599184"/>
 					</MediaRefs>
@@ -3765,7 +3876,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2537033034" Name="Play_Stagiaire_hereux_disruptif" DurationType="OneShot" DurationMin="1.2373126" DurationMax="1.2373126">
+				<Event Id="2537033034" Name="Play_Stagiaire_hereux_disruptif" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.2373126" DurationMax="1.2373126">
 					<MediaRefs>
 						<MediaRef Id="444055126"/>
 					</MediaRefs>
@@ -3775,7 +3886,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="826670115" Name="Play_Stagiaire_hereux_huh_huh_huh" DurationType="OneShot" DurationMin="1.8903333" DurationMax="1.8903333">
+				<Event Id="826670115" Name="Play_Stagiaire_hereux_huh_huh_huh" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.8903333" DurationMax="1.8903333">
 					<MediaRefs>
 						<MediaRef Id="235028206"/>
 					</MediaRefs>
@@ -3785,7 +3896,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2769011657" Name="Play_Stagiaire_hereux_lalala" DurationType="OneShot" DurationMin="1.8452709" DurationMax="1.8452709">
+				<Event Id="2769011657" Name="Play_Stagiaire_hereux_lalala" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.8452709" DurationMax="1.8452709">
 					<MediaRefs>
 						<MediaRef Id="996086724"/>
 					</MediaRefs>
@@ -3795,7 +3906,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="792783221" Name="Play_Stagiaire_hereux_super" DurationType="OneShot" DurationMin="1.4306042" DurationMax="1.4306042">
+				<Event Id="792783221" Name="Play_Stagiaire_hereux_super" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.4306042" DurationMax="1.4306042">
 					<MediaRefs>
 						<MediaRef Id="413768567"/>
 					</MediaRefs>
@@ -3805,7 +3916,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3353467044" Name="Play_Stagiaire_hereux_trop_bien" DurationType="OneShot" DurationMin="0.9280625" DurationMax="0.9280625">
+				<Event Id="3353467044" Name="Play_Stagiaire_hereux_trop_bien" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.9280625" DurationMax="0.9280625">
 					<MediaRefs>
 						<MediaRef Id="423975173"/>
 					</MediaRefs>
@@ -3815,7 +3926,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2918429526" Name="Play_Stagiaire_hereux_woaw" DurationType="OneShot" DurationMin="1.005375" DurationMax="1.005375">
+				<Event Id="2918429526" Name="Play_Stagiaire_hereux_woaw" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.005375" DurationMax="1.005375">
 					<MediaRefs>
 						<MediaRef Id="559535232"/>
 					</MediaRefs>
@@ -3825,7 +3936,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="188627181" Name="Play_Stagiaire_hereux_wow" DurationType="OneShot" DurationMin="0.9184167" DurationMax="0.9184167">
+				<Event Id="188627181" Name="Play_Stagiaire_hereux_wow" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.9184167" DurationMax="0.9184167">
 					<MediaRefs>
 						<MediaRef Id="380397323"/>
 					</MediaRefs>
@@ -3835,7 +3946,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="166222797" Name="Play_Stagiaire_last_agace_ca_suffit" DurationType="OneShot" DurationMin="0.39964584" DurationMax="0.39964584">
+				<Event Id="166222797" Name="Play_Stagiaire_last_agace_ca_suffit" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.39964584" DurationMax="0.39964584">
 					<MediaRefs>
 						<MediaRef Id="543280465"/>
 					</MediaRefs>
@@ -3845,7 +3956,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2765539345" Name="Play_Stagiaire_last_agace_lache_rapport" DurationType="OneShot" DurationMin="1.776" DurationMax="1.776">
+				<Event Id="2765539345" Name="Play_Stagiaire_last_agace_lache_rapport" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.776" DurationMax="1.776">
 					<MediaRefs>
 						<MediaRef Id="576713141"/>
 					</MediaRefs>
@@ -3855,7 +3966,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3000787334" Name="Play_Stagiaire_last_agace_pas_gratuit" DurationType="OneShot" DurationMin="1.4297292" DurationMax="1.4297292">
+				<Event Id="3000787334" Name="Play_Stagiaire_last_agace_pas_gratuit" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.4297292" DurationMax="1.4297292">
 					<MediaRefs>
 						<MediaRef Id="399643629"/>
 					</MediaRefs>
@@ -3865,7 +3976,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3696075021" Name="Play_Stagiaire_last_agace_patron_fache" DurationType="OneShot" DurationMin="1.2919792" DurationMax="1.2919792">
+				<Event Id="3696075021" Name="Play_Stagiaire_last_agace_patron_fache" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.2919792" DurationMax="1.2919792">
 					<MediaRefs>
 						<MediaRef Id="152436930"/>
 					</MediaRefs>
@@ -3875,7 +3986,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="1996426809" Name="Play_Stagiaire_last_nerveux_ou_maitre_stage" DurationType="OneShot" DurationMin="2.604771" DurationMax="2.604771">
+				<Event Id="1996426809" Name="Play_Stagiaire_last_nerveux_ou_maitre_stage" MaxAttenuation="100" DurationType="OneShot" DurationMin="2.604771" DurationMax="2.604771">
 					<MediaRefs>
 						<MediaRef Id="581079941"/>
 					</MediaRefs>
@@ -3885,7 +3996,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2313180587" Name="Play_Stagiaire_last_nerveux_plus_budget" DurationType="OneShot" DurationMin="1.3839583" DurationMax="1.3839583">
+				<Event Id="2313180587" Name="Play_Stagiaire_last_nerveux_plus_budget" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.3839583" DurationMax="1.3839583">
 					<MediaRefs>
 						<MediaRef Id="525631804"/>
 					</MediaRefs>
@@ -3895,7 +4006,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="4076253175" Name="Play_Stagiaire_last_peur_attaque" DurationType="OneShot" DurationMin="1.9247708" DurationMax="1.9247708">
+				<Event Id="4076253175" Name="Play_Stagiaire_last_peur_attaque" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.9247708" DurationMax="1.9247708">
 					<MediaRefs>
 						<MediaRef Id="106721312"/>
 					</MediaRefs>
@@ -3905,7 +4016,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="1406801866" Name="Play_Stagiaire_last_peur_ew" DurationType="OneShot" DurationMin="1.5257292" DurationMax="1.5257292">
+				<Event Id="1406801866" Name="Play_Stagiaire_last_peur_ew" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.5257292" DurationMax="1.5257292">
 					<MediaRefs>
 						<MediaRef Id="588169220"/>
 					</MediaRefs>
@@ -3915,7 +4026,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2494573805" Name="Play_Stagiaire_last_triste_humide" DurationType="OneShot" DurationMin="0.9280625" DurationMax="0.9280625">
+				<Event Id="2494573805" Name="Play_Stagiaire_last_triste_humide" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.9280625" DurationMax="0.9280625">
 					<MediaRefs>
 						<MediaRef Id="261981201"/>
 					</MediaRefs>
@@ -3925,7 +4036,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3540939447" Name="Play_Stagiaire_last_triste_seconde_maison1" DurationType="OneShot" DurationMin="0.9860625" DurationMax="0.9860625">
+				<Event Id="3540939447" Name="Play_Stagiaire_last_triste_seconde_maison1" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.9860625" DurationMax="0.9860625">
 					<MediaRefs>
 						<MediaRef Id="816826686"/>
 					</MediaRefs>
@@ -3935,7 +4046,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3452631203" Name="Play_Stagiaire_last_triste_triste_autres" DurationType="OneShot" DurationMin="1.5272292" DurationMax="1.5272292">
+				<Event Id="3452631203" Name="Play_Stagiaire_last_triste_triste_autres" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.5272292" DurationMax="1.5272292">
 					<MediaRefs>
 						<MediaRef Id="814443491"/>
 					</MediaRefs>
@@ -3945,7 +4056,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="954583833" Name="Play_Stagiaire_nerveux_ah_bon" DurationType="OneShot" DurationMin="1.0720834" DurationMax="1.0720834">
+				<Event Id="954583833" Name="Play_Stagiaire_nerveux_ah_bon" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.0720834" DurationMax="1.0720834">
 					<MediaRefs>
 						<MediaRef Id="251207352"/>
 					</MediaRefs>
@@ -3955,7 +4066,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="565302570" Name="Play_Stagiaire_nerveux_ah_ok" DurationType="OneShot" DurationMin="1.9257292" DurationMax="1.9257292">
+				<Event Id="565302570" Name="Play_Stagiaire_nerveux_ah_ok" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.9257292" DurationMax="1.9257292">
 					<MediaRefs>
 						<MediaRef Id="778738765"/>
 					</MediaRefs>
@@ -3965,7 +4076,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2522131127" Name="Play_Stagiaire_nerveux_euuh" DurationType="OneShot" DurationMin="1.3085417" DurationMax="1.3085417">
+				<Event Id="2522131127" Name="Play_Stagiaire_nerveux_euuh" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.3085417" DurationMax="1.3085417">
 					<MediaRefs>
 						<MediaRef Id="346664737"/>
 					</MediaRefs>
@@ -3975,7 +4086,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="1171760355" Name="Play_Stagiaire_nerveux_euuh_ouais" DurationType="OneShot" DurationMin="2.3585" DurationMax="2.3585">
+				<Event Id="1171760355" Name="Play_Stagiaire_nerveux_euuh_ouais" MaxAttenuation="100" DurationType="OneShot" DurationMin="2.3585" DurationMax="2.3585">
 					<MediaRefs>
 						<MediaRef Id="818889496"/>
 					</MediaRefs>
@@ -3985,7 +4096,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3133411902" Name="Play_Stagiaire_nerveux_je_dois_faire_quoi" DurationType="OneShot" DurationMin="2.6938958" DurationMax="2.6938958">
+				<Event Id="3133411902" Name="Play_Stagiaire_nerveux_je_dois_faire_quoi" MaxAttenuation="100" DurationType="OneShot" DurationMin="2.6938958" DurationMax="2.6938958">
 					<MediaRefs>
 						<MediaRef Id="925563546"/>
 					</MediaRefs>
@@ -3995,7 +4106,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2517133309" Name="Play_Stagiaire_nerveux_un_cafe" DurationType="OneShot" DurationMin="1.1402084" DurationMax="1.1402084">
+				<Event Id="2517133309" Name="Play_Stagiaire_nerveux_un_cafe" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.1402084" DurationMax="1.1402084">
 					<MediaRefs>
 						<MediaRef Id="374694297"/>
 					</MediaRefs>
@@ -4084,16 +4195,20 @@
 						<MediaRef Id="704479363"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3587632891" Name="Reset_RTPC_TapeStop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3886903300" Name="SetRTPC_SENSITITITY_FILTER_0" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3886903301" Name="SetRTPC_SENSITITITY_FILTER_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1375364434" Name="Stop_Amb_global" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="177767409" Name="Stop_Music_global" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3458393874" Name="Stop_Music_global_elevator" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
+				<GameParameter Id="1399990923" Name="Built_In_Distance"/>
+				<GameParameter Id="1693237381" Name="Music_TapeStop"/>
 				<GameParameter Id="1830592977" Name="Wind_Strength"/>
 				<GameParameter Id="1951144523" Name="Collision_Velocity"/>
-				<GameParameter Id="2940890671" Name="playbackspeedtest"/>
 				<GameParameter Id="3067876527" Name="RTPC_SFX_BUS"/>
+				<GameParameter Id="3180815027" Name="Build_In_Elevation"/>
 				<GameParameter Id="3182657878" Name="RTPC_DIALOGUE_BUS"/>
 			</GameParameters>
 			<StateGroups>
@@ -4125,5 +4240,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{81784ACF-1474-30BF-3B85-BDC0A24BE8BE}</FileHash>
+	<FileHash>{9E10BD9B-FCD4-F578-52A1-805EE4FC6AEA}</FileHash>
 </SoundBanksInfo>

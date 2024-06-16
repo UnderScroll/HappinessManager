@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: c2d0754eea2b554ead038a4e85dfb0da
     GuidInternal: 
-    m_lastTime: -8584832074880783861
+    m_lastTime: -8584831404090458462
     List:
     - name: AMBIANCE
       guid: 7e303c6a36077045a549d2b2c039cff3
@@ -190,7 +190,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\WU_HM_SoundBanks
     guid: d527a65720db2546b7a23303c255c21b
     GuidInternal: 
-    m_lastTime: -8584832238373814088
+    m_lastTime: -8584831343036267589
     List:
     - name: HM_Global_SB
       guid: e1c12577d86f0c41a82a7bdcdb4ef626
@@ -231,7 +231,7 @@ MonoBehaviour:
     ParentPath: Events\WU_HM_Events
     guid: a44afb18422e3e4bbc589ac1581aef04
     GuidInternal: 
-    m_lastTime: -8584832088943862507
+    m_lastTime: -8584831372152540468
     List:
     - name: Amb
       guid: 45ce627f733a4f4d90717e8757beb9ba
@@ -3058,6 +3058,46 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: 0.45414358
       minDuration: 0.23317769
+    - name: Play_Camera_RotNegative
+      guid: dbad321a347d114ead186d87c602639d
+      id: 404643336
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Camera
+        ObjectType: 4
+        guid: 9d5b07d89dc90d4790d3997d77f7a4d3
+      - ElementName: Play_Camera_RotNegative
+        ObjectType: 3
+        guid: dbad321a347d114ead186d87c602639d
+      Path: Events\WU_HM_Events\Camera\Play_Camera_RotNegative
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Camera_RotPositive
+      guid: efbd8fb3b8dcc14db9c160e10d0a19f7
+      id: 2461310560
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Camera
+        ObjectType: 4
+        guid: 9d5b07d89dc90d4790d3997d77f7a4d3
+      - ElementName: Play_Camera_RotPositive
+        ObjectType: 3
+        guid: efbd8fb3b8dcc14db9c160e10d0a19f7
+      Path: Events\WU_HM_Events\Camera\Play_Camera_RotPositive
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Camera_zoomIn
       guid: 9697dd237fedaf45a6bdf2bce05d78bf
       id: 977134866
@@ -5835,6 +5875,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 13.389334
       minDuration: 12.14852
+    - name: Reset_RTPC_TapeStop
+      guid: 09fe6b46eb31064fa2b51542347b2e74
+      id: 3587632891
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Music
+        ObjectType: 4
+        guid: a7a8dd314392934f8cb4f0898119fc83
+      - ElementName: Reset_RTPC_TapeStop
+        ObjectType: 3
+        guid: 09fe6b46eb31064fa2b51542347b2e74
+      Path: Events\WU_HM_Events\Music\Reset_RTPC_TapeStop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: SetRTPC_SENSITITITY_FILTER_0
       guid: 721a49f24a4b36428265aee2fa622d62
       id: 3886903300
@@ -5967,6 +6027,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_Music_global_elevator
+      guid: ab63c19311ba5544bdf26ae672719454
+      id: 3458393874
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_Events
+        ObjectType: 12
+        guid: a44afb18422e3e4bbc589ac1581aef04
+      - ElementName: Music
+        ObjectType: 4
+        guid: a7a8dd314392934f8cb4f0898119fc83
+      - ElementName: Stop_Music_global_elevator
+        ObjectType: 3
+        guid: ab63c19311ba5544bdf26ae672719454
+      Path: Events\WU_HM_Events\Music\Stop_Music_global_elevator
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Teambuilding
       guid: c86cb70ad176a94ba75c52332f4ee126
       id: 3727325742
@@ -6111,7 +6191,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 86baa2f915be7d43a5fdec6e8dad3d53
     GuidInternal: 
-    m_lastTime: -8584832193423560656
+    m_lastTime: -8584831395524169036
     List:
     - name: playbackspeedtest
       guid: 8d0930295c4cb84f8374c211917d9add
@@ -6138,8 +6218,36 @@ MonoBehaviour:
     ParentPath: Game Parameters\WU_HM_RTPC
     guid: f67b7fb3fbb3ce4e8b51a58d9ad6f242
     GuidInternal: 
-    m_lastTime: -8584832193422957799
+    m_lastTime: -8584831395524308296
     List:
+    - name: Build_In_Elevation
+      guid: e2e545366449624498816df3e5df4cb2
+      id: 3180815027
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_RTPC
+        ObjectType: 12
+        guid: f67b7fb3fbb3ce4e8b51a58d9ad6f242
+      - ElementName: Build_In_Elevation
+        ObjectType: 13
+        guid: e2e545366449624498816df3e5df4cb2
+      Path: Game Parameters\WU_HM_RTPC\Build_In_Elevation
+    - name: Built_In_Distance
+      guid: c181a4cd4ad1b54cacbd21b656775e15
+      id: 1399990923
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: WU_HM_RTPC
+        ObjectType: 12
+        guid: f67b7fb3fbb3ce4e8b51a58d9ad6f242
+      - ElementName: Built_In_Distance
+        ObjectType: 13
+        guid: c181a4cd4ad1b54cacbd21b656775e15
+      Path: Game Parameters\WU_HM_RTPC\Built_In_Distance
     - name: Collision_Velocity
       guid: 33c42c9a9cc6574d8f5ad1e9e86ce74d
       id: 1951144523
@@ -6154,9 +6262,9 @@ MonoBehaviour:
         ObjectType: 13
         guid: 33c42c9a9cc6574d8f5ad1e9e86ce74d
       Path: Game Parameters\WU_HM_RTPC\Collision_Velocity
-    - name: Reverb_Distance
-      guid: c181a4cd4ad1b54cacbd21b656775e15
-      id: 3583098985
+    - name: Music_TapeStop
+      guid: 15edf22b8f54c844bdd2f258917cf94d
+      id: 1693237381
       PathAndIcons:
       - ElementName: Game Parameters
         ObjectType: 5
@@ -6164,10 +6272,10 @@ MonoBehaviour:
       - ElementName: WU_HM_RTPC
         ObjectType: 12
         guid: f67b7fb3fbb3ce4e8b51a58d9ad6f242
-      - ElementName: Reverb_Distance
+      - ElementName: Music_TapeStop
         ObjectType: 13
-        guid: c181a4cd4ad1b54cacbd21b656775e15
-      Path: Game Parameters\WU_HM_RTPC\Reverb_Distance
+        guid: 15edf22b8f54c844bdd2f258917cf94d
+      Path: Game Parameters\WU_HM_RTPC\Music_TapeStop
     - name: RTPC_UNFOCUSED
       guid: 1f96fb301f4fe14c8b5601e895d007e4
       id: 174332405
@@ -6221,7 +6329,7 @@ MonoBehaviour:
     ParentPath: States\WU_HM_States
     guid: 52df8ddf05ae374d8f2e7c57a0d71e54
     GuidInternal: 
-    m_lastTime: -8584832079069657654
+    m_lastTime: -8584831389188430044
     List:
     - name: AmbOnValidate
       guid: f667331dde3a6b4bab26f6a835dc5d79
