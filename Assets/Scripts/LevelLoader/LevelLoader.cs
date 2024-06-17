@@ -17,7 +17,7 @@ namespace LevelLoader
         [HideInInspector]
         public UI_HUD UI_HUD;
 
-        public string nextFloorname;
+        public string nextFloorName;
 
         private GameObject _additionalPrefabInstance;
 
@@ -45,11 +45,13 @@ namespace LevelLoader
             if (!(nextLevelIndex < Levels.Count))
             {
                 Debug.LogWarning($"Tried to load level {nextLevelIndex} but there is no such level, trying to load next scene");
-                if (nextFloorname == null || nextFloorname is "")
+                if (nextFloorName == null || nextFloorName is "")
                 {
-                    Debug.LogWarning($"Tried to load next Floot but there is none");
+                    Debug.LogWarning($"Tried to load next Floor but there is none");
                     return;
                 }
+                if (nextFloorName == "MainMenu")
+                    _gameManager.OnLastLevelSucces.Invoke();
                 UI_HUD.DisplayNextFloorUI?.Invoke();
                 return;
             }
@@ -135,7 +137,7 @@ namespace LevelLoader
         }
         private void LoadNextFloor()
         {
-            SceneManager.LoadScene(nextFloorname, LoadSceneMode.Single);
+            SceneManager.LoadScene(nextFloorName, LoadSceneMode.Single);
         }
     }
 }

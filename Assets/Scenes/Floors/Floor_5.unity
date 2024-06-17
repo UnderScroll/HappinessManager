@@ -631,6 +631,21 @@ MonoBehaviour:
   RuleManager: {fileID: 0}
   SoundManager: {fileID: 0}
   UI_HUD: {fileID: 0}
+  OnLastLevelSucces:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 737254368}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: TestCallback
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   CurrentStage: 4
   Playing: 0
   FloorName: Floor_5
@@ -682,7 +697,7 @@ MonoBehaviour:
   SkyBoxMat: []
   CurrentLevelIndex: 0
   UI_HUD: {fileID: 0}
-  nextFloorname: MainMenu
+  nextFloorName: MainMenu
   OnLoadLevel:
     m_PersistentCalls:
       m_Calls: []
