@@ -52,6 +52,9 @@ public class TalkingBuddy : MonoBehaviour
     [ShowIf("RandomizeTimeBT")]
     public int maximalTimeBT = 7;
 
+    [SerializeField]
+    public float displayTime = 3.5f;
+
     #region Private Attributes
     private string nextLineToSay = "";
     private bool isTalking = false;
@@ -84,7 +87,7 @@ public class TalkingBuddy : MonoBehaviour
         actualTime += Time.deltaTime;
         if (isTalking)
         {
-            if (actualTime > timeBeforeTalking)
+            if (actualTime > displayTime)
             {
                 StopDialogue();
                 ResetTimer();

@@ -24,7 +24,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] public Stage CurrentStage;
 
-    private bool _playing = false;
+    [HideInInspector]
+    public bool Playing = false;
 
     public string FloorName = "";
 
@@ -83,19 +84,22 @@ public class GameManager : MonoBehaviour
         //TMP FOR PLAYTESTING
         UI_HUD.UpdateLevelName(Builder.Level.name);
     }
-
-    [SuppressMessage("CodeQuality", "IDE0051:Supprimer les membres priv�s non utilis�s", Justification = "OnToggleMode is called by Unity Input System")]
-    void OnToggleMode()
+    public void OnToggleMode()
     {
-        if (_playing)
+        if (Playing)
+        {
             ResetSimulation();
+            UI_HUD.CloseEndLevelPanel();
+        }
         else
+        {
             PlaySimulation();
+        }
     }
 
     private void PlaySimulation()
     {
-        if (_playing)
+        if (Playing)
             return;
 
         Builder.DeactivatePreview();
@@ -105,12 +109,12 @@ public class GameManager : MonoBehaviour
 
         SoundManager.PlayOnLaunchingSimulation();
 
-        _playing = true;
+        Playing = true;
     }
 
     public void ResetSimulation()
     {
-        if (!_playing)
+        if (!Playing)
             return;
 
         Builder.ActivatePreview();
@@ -118,6 +122,6 @@ public class GameManager : MonoBehaviour
 
         SoundManager.PlayOnBuilding();
 
-        _playing = false;
+        Playing = false;
     }
 }

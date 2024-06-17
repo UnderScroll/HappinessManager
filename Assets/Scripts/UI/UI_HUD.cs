@@ -246,22 +246,29 @@ public class UI_HUD : MonoBehaviour
     #endregion
 
     #region EndLevel
-    public void DisplayEndLevelPanel(bool _victory)
+    public IEnumerator DisplayEndLevelPanel(bool _victory)
     {
-        GameObject _go = Instantiate(EndLevelMenuPrefab, this.gameObject.transform);
-        endLevelPanel = _go.GetComponent<UI_EndLevelPanel>();
-        endLevelPanel.ui_hud = this;
+        yield return new WaitForSeconds(1);
 
-        if (endLevelPanel != null)
+        if (_gameManager.Playing)
         {
-            endLevelPanel.win = _victory;
-            endLevelPanel.Init();
+            GameObject _go = Instantiate(EndLevelMenuPrefab, this.gameObject.transform);
+            endLevelPanel = _go.GetComponent<UI_EndLevelPanel>();
+            endLevelPanel.ui_hud = this;
+
+            if (endLevelPanel != null)
+            {
+                endLevelPanel.win = _victory;
+                endLevelPanel.Init();
+            }
         }
     }
     public void CloseEndLevelPanel()
     {
-        Destroy(endLevelPanel.gameObject);
+        if (endLevelPanel != null)
+            Destroy(endLevelPanel.gameObject);
     }
+
     public void NextLevel()
     {
         _gameManager.LevelLoader.LoadNextLevel();
@@ -274,7 +281,8 @@ public class UI_HUD : MonoBehaviour
     public void RestartLevel()
     {
         CloseEndLevelPanel();
-        _gameManager.LevelLoader.ReloadLevel();
+        // _gameManager.LevelLoader.ReloadLevel();
+        _gameManager.OnToggleMode();
         _gameManager.SoundManager.PlayOnBuilding();
     }
     #endregion

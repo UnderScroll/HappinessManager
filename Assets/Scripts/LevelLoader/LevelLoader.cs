@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 namespace LevelLoader
@@ -8,6 +9,7 @@ namespace LevelLoader
     {
         public List<Level> Levels;
         public List<GameObject> AdditionamPrefabs;
+        public List<Material> SkyBoxMat;
 
         private GameManager _gameManager;
         public uint CurrentLevelIndex;
@@ -18,6 +20,8 @@ namespace LevelLoader
         public string nextFloorname;
 
         private GameObject _additionalPrefabInstance;
+
+        public UnityEvent<string> OnLoadLevel;
 
         private void Awake()
         {
@@ -75,9 +79,10 @@ namespace LevelLoader
         private void LoadLevel(Level level)
         {
             Debug.Log($"Loading {level.name}");
+            OnLoadLevel?.Invoke(level.name);
 
             if (CurrentLevelIndex == 0) //If loading the first level of the floor, play music and ambiance
-                _gameManager.SoundManager.PLayOnFirstLevelLoaded();
+                _gameManager.SoundManager.PlayOnFirstLevelLoaded();
 
             _gameManager.ResetSimulation();
 
@@ -110,8 +115,14 @@ namespace LevelLoader
             if (_additionalPrefabInstance != null)
                 Destroy(_additionalPrefabInstance);
 
-            if (AdditionamPrefabs[(int)CurrentLevelIndex] != null)
-                _additionalPrefabInstance = Instantiate(AdditionamPrefabs[(int)CurrentLevelIndex]);
+            if (AdditionamPrefabs.Count > (int)CurrentLevelIndex && AdditionamPrefabs[(int)CurrentLevelIndex] != null)
+                _additionalPrefabInstance = Instantiate(AdditionamPrefabs[(int)CurrentLevelIndex], Camera.main.transform);
+
+            if (SkyBoxMat.Count > (int)CurrentLevelIndex && SkyBoxMat[(int)CurrentLevelIndex] != null)
+            {
+                RenderSettings.skybox = SkyBoxMat[(int)CurrentLevelIndex];
+                DynamicGI.UpdateEnvironment();
+            }
 
             //Load Placeableblocks in HUD
             if (UI_HUD != null)
