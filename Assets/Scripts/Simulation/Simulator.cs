@@ -225,9 +225,12 @@ namespace Simulation
 
         public void OnEmployeeGroundCollision()
         {
-            OnValidationFailed?.Invoke();
-            _isSimulationFailed = true;
-            _isSimulationRunning = false;
+            if (_isSimulationRunning)
+            {
+                OnValidationFailed?.Invoke();
+                _isSimulationFailed = true;
+                _isSimulationRunning = false;
+            }
         }
 
         private void LevelFailed()
