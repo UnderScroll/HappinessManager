@@ -54,7 +54,8 @@ namespace LevelLoader
                 }
                 if (nextFloorName == "MainMenu")
                     _gameManager.OnLastLevelSucces.Invoke();
-                UI_HUD.DisplayNextFloorUI?.Invoke();
+                else
+                    UI_HUD.DisplayNextFloorUI?.Invoke();
                 return;
             }
 

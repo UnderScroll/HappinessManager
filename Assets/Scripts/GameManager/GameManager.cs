@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 using System.Diagnostics.CodeAnalysis;
 using LevelLoader;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -129,8 +130,8 @@ public class GameManager : MonoBehaviour
         Playing = false;
     }
 
-    public void TestCallback()
+    public void LoadMainMenu()
     {
-        Debug.Log("TestCallback");
+        SceneManager.LoadScene("MainMenu");
     }
 }
