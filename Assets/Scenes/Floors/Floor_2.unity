@@ -1194,6 +1194,9 @@ MonoBehaviour:
   RuleManager: {fileID: 0}
   SoundManager: {fileID: 0}
   UI_HUD: {fileID: 0}
+  OnLastLevelSucces:
+    m_PersistentCalls:
+      m_Calls: []
   CurrentStage: 1
   Playing: 0
   FloorName: Floor_2
@@ -1249,11 +1252,12 @@ MonoBehaviour:
   - {fileID: 5079184815430864552, guid: d01492411be918a4fa1b745f88234374, type: 3}
   - {fileID: 5079184815430864552, guid: d01492411be918a4fa1b745f88234374, type: 3}
   - {fileID: 4840319724555756287, guid: 7d4542e1a9480fb498411aa1f8bd7bef, type: 3}
+  AdditionamStructurePrefabs: []
   SkyBoxMat:
   - {fileID: 2100000, guid: 7f4a37f1e1dccf24c9f01d5cfcabf9d7, type: 2}
   CurrentLevelIndex: 0
   UI_HUD: {fileID: 0}
-  nextFloorname: Floor_3
+  nextFloorName: Floor_3
   OnLoadLevel:
     m_PersistentCalls:
       m_Calls: []
