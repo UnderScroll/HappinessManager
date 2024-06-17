@@ -9,6 +9,7 @@ namespace LevelLoader
     {
         public List<Level> Levels;
         public List<GameObject> AdditionamPrefabs;
+        public List<GameObject> AdditionamStructurePrefabs;
         public List<Material> SkyBoxMat;
 
         private GameManager _gameManager;
@@ -20,6 +21,7 @@ namespace LevelLoader
         public string nextFloorName;
 
         private GameObject _additionalPrefabInstance;
+        private GameObject _additionalStructurePrefabInstance;
 
         public UnityEvent<string> OnLoadLevel;
 
@@ -117,8 +119,14 @@ namespace LevelLoader
             if (_additionalPrefabInstance != null)
                 Destroy(_additionalPrefabInstance);
 
+            if (_additionalStructurePrefabInstance != null)
+                Destroy(_additionalStructurePrefabInstance);
+
             if (AdditionamPrefabs.Count > (int)CurrentLevelIndex && AdditionamPrefabs[(int)CurrentLevelIndex] != null)
                 _additionalPrefabInstance = Instantiate(AdditionamPrefabs[(int)CurrentLevelIndex], Camera.main.transform);
+
+            if (AdditionamStructurePrefabs.Count > (int)CurrentLevelIndex && AdditionamStructurePrefabs[(int)CurrentLevelIndex] != null)
+                _additionalStructurePrefabInstance = Instantiate(AdditionamStructurePrefabs[(int)CurrentLevelIndex], _gameManager.StructureOrigin);
 
             if (SkyBoxMat.Count > (int)CurrentLevelIndex && SkyBoxMat[(int)CurrentLevelIndex] != null)
             {
