@@ -161,7 +161,12 @@ namespace Simulation
                     {
                         GameObject topBlock = _instances[topBlockPosition.x, topBlockPosition.y, topBlockPosition.z];
                         if (topBlock != null)
-                            AddConnection(blockInstance, topBlock, connectionType);
+                        {
+                            if (_structure.Cells[topBlockPosition.x, topBlockPosition.y, topBlockPosition.z].Type.IsEmployee)
+                                AddSwivelConnection(blockInstance, topBlock, connectionType);
+                            else
+                                AddConnection(blockInstance, topBlock, connectionType);
+                        }
                     }
                 }
             }
@@ -188,7 +193,25 @@ namespace Simulation
             joint.connectedBody = to.GetComponent<Rigidbody>();
         }
 
-        public void Launch()
+        private void AddSwivelConnection(GameObject obj, GameObject to, ConnectionType type)
+        {
+            ConfigurableJoint configurableJoint = obj.AddComponent<ConfigurableJoint>();
+
+            configurableJoint.breakForce = type.BreakForce;
+            configurableJoint.breakTorque = type.BreakTorque;
+            configurableJoint.enableCollision = type.EnableCollision;
+            configurableJoint.enablePreprocessing = type.EnablePreprocessing;
+
+            configurableJoint.xMotion = ConfigurableJointMotion.Locked;
+            configurableJoint.yMotion = ConfigurableJointMotion.Locked;
+            configurableJoint.zMotion = ConfigurableJointMotion.Locked;
+            configurableJoint.angularXMotion = ConfigurableJointMotion.Locked;
+            configurableJoint.angularZMotion = ConfigurableJointMotion.Locked;
+
+            configurableJoint.connectedBody = to.GetComponent<Rigidbody>();
+        }
+
+            public void Launch()
         {
             _isSimulationRunning = true;
         }
