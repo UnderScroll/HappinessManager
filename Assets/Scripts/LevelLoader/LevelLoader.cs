@@ -117,6 +117,22 @@ namespace LevelLoader
             _gameManager.SoundManager.PlayOnBuilding();
 
             //Load Additional Prefab
+            LoadAdditionalPrefabs();
+
+            //Load mats
+            if (SkyBoxMat.Count > (int)CurrentLevelIndex && SkyBoxMat[(int)CurrentLevelIndex] != null)
+            {
+                RenderSettings.skybox = SkyBoxMat[(int)CurrentLevelIndex];
+                DynamicGI.UpdateEnvironment();
+            }
+
+            //Load Placeableblocks in HUD
+            if (UI_HUD != null)
+                UI_HUD.blocks = level.PlaceableCellTypes.Get();
+        }
+
+        public void LoadAdditionalPrefabs()
+        {
             if (_additionalPrefabInstance != null)
                 Destroy(_additionalPrefabInstance);
 
@@ -128,16 +144,6 @@ namespace LevelLoader
 
             if (AdditionamStructurePrefabs.Count > (int)CurrentLevelIndex && AdditionamStructurePrefabs[(int)CurrentLevelIndex] != null)
                 _additionalStructurePrefabInstance = Instantiate(AdditionamStructurePrefabs[(int)CurrentLevelIndex], _gameManager.StructureOrigin);
-
-            if (SkyBoxMat.Count > (int)CurrentLevelIndex && SkyBoxMat[(int)CurrentLevelIndex] != null)
-            {
-                RenderSettings.skybox = SkyBoxMat[(int)CurrentLevelIndex];
-                DynamicGI.UpdateEnvironment();
-            }
-
-            //Load Placeableblocks in HUD
-            if (UI_HUD != null)
-                UI_HUD.blocks = level.PlaceableCellTypes.Get();
         }
 
         public void UnloadCurrentLevel()
