@@ -246,4 +246,34 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.36666667
+    functionName: ClothCM
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.68333334
+    functionName: StepCM
+    data: 
+    objectReferenceParameter: {fileID: 5404440702029119810, guid: 63a618cbea2acea41b3e34b90d57c351,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.3166667
+    functionName: ClothCM
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.7333333
+    functionName: StepCM
+    data: 
+    objectReferenceParameter: {fileID: 5404440702029119810, guid: 63a618cbea2acea41b3e34b90d57c351,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

@@ -277,7 +277,7 @@ MonoBehaviour:
       - rid: -2
       - rid: -2
       - rid: -2
-      - rid: -2
+      - rid: 978416144627531788
       - rid: -2
       - rid: -2
       - rid: -2
@@ -377,7 +377,7 @@ MonoBehaviour:
       - rid: -2
       - rid: -2
       - rid: -2
-      - rid: -2
+      - rid: 978416144627531789
       - rid: -2
       - rid: -2
       - rid: -2
@@ -477,7 +477,7 @@ MonoBehaviour:
       - rid: -2
       - rid: -2
       - rid: -2
-      - rid: -2
+      - rid: 978416144627531790
       - rid: -2
       - rid: -2
       - rid: -2
@@ -640,8 +640,8 @@ MonoBehaviour:
       - rid: -2
       - rid: -2
       - rid: 978416072769929224
-      - rid: -2
-      - rid: -2
+      - rid: 978416144627531792
+      - rid: 978416144627531793
       - rid: -2
       - rid: -2
       - rid: -2
@@ -1028,9 +1028,13 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1b3ccf2e6ed8ab146ae7a02c2751caba, type: 2}
     - {fileID: 11400000, guid: cd54712c99a7ed14bbfc3768e1ac9abd, type: 2}
     - {fileID: 11400000, guid: 8895af43bff26354ab76c4829d872b96, type: 2}
+    - {fileID: 11400000, guid: 40442a7bc1563bc4eac3c6c66210337f, type: 2}
     - {fileID: 11400000, guid: c2fff1760786fb641a4dfcaf9f9ee00b, type: 2}
+    - {fileID: 11400000, guid: 71d5184808412c448ad222cc68bbb3ca, type: 2}
     - {fileID: 11400000, guid: afe30fd347a674547b3648e4dca20321, type: 2}
     - {fileID: 11400000, guid: a0f3c6f727e7ceb41b5073b250cbe1f3, type: 2}
+    - {fileID: 11400000, guid: aefd6bdf297ed574da457b7061f6fbce, type: 2}
+    - {fileID: 11400000, guid: 67060d28c7cf34848940fb2a8db9ef78, type: 2}
   PlaceableCellTypes:
     _types:
     - {fileID: 11400000, guid: 26323928fecd21440bbf81af0abd1f74, type: 2}
@@ -2800,6 +2804,81 @@ MonoBehaviour:
         - {fileID: 0}
         - {fileID: 0}
         - {fileID: 0}
+    - rid: 978416144627531788
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 40442a7bc1563bc4eac3c6c66210337f, type: 2}
+        Position:
+          x: 2
+          y: 6
+          z: 2
+        _connections:
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+    - rid: 978416144627531789
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 71d5184808412c448ad222cc68bbb3ca, type: 2}
+        Position:
+          x: 3
+          y: 6
+          z: 2
+        _connections:
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+    - rid: 978416144627531790
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 71d5184808412c448ad222cc68bbb3ca, type: 2}
+        Position:
+          x: 4
+          y: 6
+          z: 2
+        _connections:
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+    - rid: 978416144627531792
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: aefd6bdf297ed574da457b7061f6fbce, type: 2}
+        Position:
+          x: 6
+          y: 2
+          z: 5
+        _connections:
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+    - rid: 978416144627531793
+      type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
+      data:
+        Type: {fileID: 11400000, guid: 67060d28c7cf34848940fb2a8db9ef78, type: 2}
+        Position:
+          x: 6
+          y: 2
+          z: 6
+        _connections:
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
+        - {fileID: 11400000, guid: 7a950e9309af6ed45b0ca5273692b130, type: 2}
     - rid: 3645964735317803129
       type: {class: CellData, ns: Builder, asm: Assembly-CSharp}
       data:

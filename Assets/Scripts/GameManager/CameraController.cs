@@ -1,4 +1,4 @@
-using NaughtyAttributes;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,6 +15,8 @@ public class CameraController : MonoBehaviour
     public float RotationSpeedMultiplier;
     public float maxPitchAngle = 80;
     public float minPitchAngle = -20;
+    private SoundManager _soundManager;
+    private GameManager _gameManager;
 
     private void Start()
     {
@@ -36,10 +38,29 @@ public class CameraController : MonoBehaviour
                 if (mouseDelta.y > 0 && cameraEulerXAngle < maxPitchAngle ||
                     mouseDelta.y < 0 && cameraEulerXAngle > minPitchAngle)
                     _camera.transform.RotateAround(Vector3.zero, _camera.transform.right, mouseDelta.y * RotationSpeed * RotationSpeedMultiplier);
+
+                //managing camera tilt sound
+                if (mouseDelta.y > 0)
+                {
+                        PlayCameraTiltPos();
+                }
+                if (mouseDelta.y < 0)
+                {
+                        PlayCameraTiltNegative();
+                }
             }
             else
             {
                 _camera.transform.RotateAround(Vector3.zero, Vector3.up, mouseDelta.x * RotationSpeed * RotationSpeedMultiplier);
+                
+                if (mouseDelta.x > 0)
+                {
+                        PlayCameraRotatePos();
+                }
+                if (mouseDelta.x < 0)
+                {
+                        PlayCameraRotateNegative();
+                }
             }
             Mouse.current.WarpCursorPosition(_lastMousePos);
         }
@@ -51,5 +72,21 @@ public class CameraController : MonoBehaviour
         Cursor.visible = !value.isPressed;
         _lastMousePos = Mouse.current.position.value;
         _holdRotate = value.isPressed;
+    }
+    public void PlayCameraRotatePos()
+    {
+        AkSoundEngine.PostEvent("Play_Camera_RotPositive", gameObject);
+    }
+    public void PlayCameraRotateNegative()
+    {
+        AkSoundEngine.PostEvent("Play_Camera_RotNegative", gameObject);
+    }
+    public void PlayCameraTiltPos()
+    {
+        AkSoundEngine.PostEvent("Play_Camera_TiltPositive", gameObject);
+    }
+    public void PlayCameraTiltNegative()
+    {
+        AkSoundEngine.PostEvent("Play_Camera_TiltNegative", gameObject);
     }
 }

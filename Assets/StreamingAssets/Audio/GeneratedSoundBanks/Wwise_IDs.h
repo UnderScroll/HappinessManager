@@ -105,8 +105,19 @@ namespace AK
         static const AkUniqueID PLAY_BUILD_INVISIBLEBLOCK = 2048945389U;
         static const AkUniqueID PLAY_BUILD_SOAP_BLOCK_PLACE = 112573374U;
         static const AkUniqueID PLAY_BUILD_SOAP_BLOCK_REMOVE = 2054052469U;
+        static const AkUniqueID PLAY_CAMERA_ROTNEGATIVE = 404643336U;
+        static const AkUniqueID PLAY_CAMERA_ROTPOSITIVE = 2461310560U;
+        static const AkUniqueID PLAY_CAMERA_TILTNEGATIVE = 20003366U;
+        static const AkUniqueID PLAY_CAMERA_TILTPOSITIVE = 2893301078U;
         static const AkUniqueID PLAY_CAMERA_ZOOMIN = 977134866U;
         static const AkUniqueID PLAY_CAMERA_ZOOMOUT = 2892692845U;
+        static const AkUniqueID PLAY_CMCLOTH = 230557658U;
+        static const AkUniqueID PLAY_CMSTEP = 435935388U;
+        static const AkUniqueID PLAY_COMPTABLECLOTH = 250699691U;
+        static const AkUniqueID PLAY_COMPTABLEKIKI = 2159415333U;
+        static const AkUniqueID PLAY_COMPTABLESTEP = 733008735U;
+        static const AkUniqueID PLAY_DIRCRECLOTH = 1491209843U;
+        static const AkUniqueID PLAY_DIRCRESTEP = 570825895U;
         static const AkUniqueID PLAY_ELEVATORDING_BOSS = 2309087724U;
         static const AkUniqueID PLAY_ELEVATORDING_CAFETERIA = 3473637879U;
         static const AkUniqueID PLAY_ELEVATORDING_COWORKING = 2422508594U;
@@ -116,6 +127,8 @@ namespace AK
         static const AkUniqueID PLAY_ELEVATORFROM_CAFETERIA = 821832571U;
         static const AkUniqueID PLAY_ELEVATORFROM_COWORKING = 2400032206U;
         static const AkUniqueID PLAY_ELEVATORFROM_TEAMBUILDING = 2577528824U;
+        static const AkUniqueID PLAY_ETCLOTH = 3149711587U;
+        static const AkUniqueID PLAY_ETSTEP = 3221138295U;
         static const AkUniqueID PLAY_INTROCINEMATIC = 2953314807U;
         static const AkUniqueID PLAY_MAIN_MENU_TEXT_HOVER = 344286550U;
         static const AkUniqueID PLAY_MENU_GAME_STARTUP = 2010853862U;
@@ -155,6 +168,54 @@ namespace AK
         static const AkUniqueID PLAY_PHYSICS_EMPLOYEECOLLISION = 683962872U;
         static const AkUniqueID PLAY_PHYSICS_SOAPTOBLOCK = 616212401U;
         static const AkUniqueID PLAY_PHYSICS_SOAPTOFLOOR = 3670736968U;
+        static const AkUniqueID PLAY_STAGCLOTH = 16999481U;
+        static const AkUniqueID PLAY_STAGIAIRE_CONFUS__EUUH = 985589949U;
+        static const AkUniqueID PLAY_STAGIAIRE_CONFUS_A_QUELLE_HEURE_LA_PAUSE = 339424822U;
+        static const AkUniqueID PLAY_STAGIAIRE_CONFUS_BRAINSTORM_DEF = 1503450842U;
+        static const AkUniqueID PLAY_STAGIAIRE_CONFUS_EUUH = 1165927480U;
+        static const AkUniqueID PLAY_STAGIAIRE_CONFUS_JE_ME_SUIS_TROMPE_DE_BUREAU = 1713606377U;
+        static const AkUniqueID PLAY_STAGIAIRE_CONFUS_JE_ME_TROMPE = 1570939941U;
+        static const AkUniqueID PLAY_STAGIAIRE_CONFUS_JSPCEQUEJEDOIFAIR = 435273166U;
+        static const AkUniqueID PLAY_STAGIAIRE_CONFUS_ONMARIENDIT = 2409097469U;
+        static const AkUniqueID PLAY_STAGIAIRE_CONFUS_OU_LES_CAFE = 2042617620U;
+        static const AkUniqueID PLAY_STAGIAIRE_DETERMINE_AU_MAX = 2596372923U;
+        static const AkUniqueID PLAY_STAGIAIRE_DETERMINE_EXPONENTIEL = 137418355U;
+        static const AkUniqueID PLAY_STAGIAIRE_DETERMINE_LESGO_LA_TEAM = 2131124562U;
+        static const AkUniqueID PLAY_STAGIAIRE_DETERMINE_OUAIS = 4011872747U;
+        static const AkUniqueID PLAY_STAGIAIRE_DETERMINE_STAGE_FORMATEUR = 2141855194U;
+        static const AkUniqueID PLAY_STAGIAIRE_DETERMINE_TODOLIKS = 4247221897U;
+        static const AkUniqueID PLAY_STAGIAIRE_EXCITE_C_FOU = 74702239U;
+        static const AkUniqueID PLAY_STAGIAIRE_EXCITE_GASP = 3133463756U;
+        static const AkUniqueID PLAY_STAGIAIRE_EXCITE_KIK_WIN = 2454818291U;
+        static const AkUniqueID PLAY_STAGIAIRE_EXCITE_TOUS_ENSEMBLES = 2114624783U;
+        static const AkUniqueID PLAY_STAGIAIRE_EXCITE_TROP_CONTENT = 2408497112U;
+        static const AkUniqueID PLAY_STAGIAIRE_EXCITE_WAA = 2923189174U;
+        static const AkUniqueID PLAY_STAGIAIRE_EXCITE_WOW = 2755413102U;
+        static const AkUniqueID PLAY_STAGIAIRE_HEREUX_DISRUPTIF = 2537033034U;
+        static const AkUniqueID PLAY_STAGIAIRE_HEREUX_HUH_HUH_HUH = 826670115U;
+        static const AkUniqueID PLAY_STAGIAIRE_HEREUX_LALALA = 2769011657U;
+        static const AkUniqueID PLAY_STAGIAIRE_HEREUX_SUPER = 792783221U;
+        static const AkUniqueID PLAY_STAGIAIRE_HEREUX_TROP_BIEN = 3353467044U;
+        static const AkUniqueID PLAY_STAGIAIRE_HEREUX_WOAW = 2918429526U;
+        static const AkUniqueID PLAY_STAGIAIRE_HEREUX_WOW = 188627181U;
+        static const AkUniqueID PLAY_STAGIAIRE_LAST_AGACE_CA_SUFFIT = 166222797U;
+        static const AkUniqueID PLAY_STAGIAIRE_LAST_AGACE_LACHE_RAPPORT = 2765539345U;
+        static const AkUniqueID PLAY_STAGIAIRE_LAST_AGACE_PAS_GRATUIT = 3000787334U;
+        static const AkUniqueID PLAY_STAGIAIRE_LAST_AGACE_PATRON_FACHE = 3696075021U;
+        static const AkUniqueID PLAY_STAGIAIRE_LAST_NERVEUX_OU_MAITRE_STAGE = 1996426809U;
+        static const AkUniqueID PLAY_STAGIAIRE_LAST_NERVEUX_PLUS_BUDGET = 2313180587U;
+        static const AkUniqueID PLAY_STAGIAIRE_LAST_PEUR_ATTAQUE = 4076253175U;
+        static const AkUniqueID PLAY_STAGIAIRE_LAST_PEUR_EW = 1406801866U;
+        static const AkUniqueID PLAY_STAGIAIRE_LAST_TRISTE_HUMIDE = 2494573805U;
+        static const AkUniqueID PLAY_STAGIAIRE_LAST_TRISTE_SECONDE_MAISON1 = 3540939447U;
+        static const AkUniqueID PLAY_STAGIAIRE_LAST_TRISTE_TRISTE_AUTRES = 3452631203U;
+        static const AkUniqueID PLAY_STAGIAIRE_NERVEUX_AH_BON = 954583833U;
+        static const AkUniqueID PLAY_STAGIAIRE_NERVEUX_AH_OK = 565302570U;
+        static const AkUniqueID PLAY_STAGIAIRE_NERVEUX_EUUH = 2522131127U;
+        static const AkUniqueID PLAY_STAGIAIRE_NERVEUX_EUUH_OUAIS = 1171760355U;
+        static const AkUniqueID PLAY_STAGIAIRE_NERVEUX_JE_DOIS_FAIRE_QUOI = 3133411902U;
+        static const AkUniqueID PLAY_STAGIAIRE_NERVEUX_UN_CAFE = 2517133309U;
+        static const AkUniqueID PLAY_STAGSTEP = 3064295941U;
         static const AkUniqueID PLAY_UI_DIALOGUEBUBBLE = 1018177731U;
         static const AkUniqueID PLAY_UI_ITEM_OFFTABHOVER = 604053813U;
         static const AkUniqueID PLAY_UI_ITEM_ONTABHOVER_BASICBLOCK = 2849301463U;
@@ -163,10 +224,12 @@ namespace AK
         static const AkUniqueID PLAY_UI_MONEY_SPENT = 681896400U;
         static const AkUniqueID PLAY_UI_RESTART_LEVEL = 3917633987U;
         static const AkUniqueID PLAY_WIND_GUST = 563870990U;
+        static const AkUniqueID RESET_RTPC_TAPESTOP = 3587632891U;
         static const AkUniqueID SETRTPC_SENSITITITY_FILTER_0 = 3886903300U;
         static const AkUniqueID SETRTPC_SENSITITITY_FILTER_1 = 3886903301U;
         static const AkUniqueID STOP_AMB_GLOBAL = 1375364434U;
         static const AkUniqueID STOP_MUSIC_GLOBAL = 177767409U;
+        static const AkUniqueID STOP_MUSIC_GLOBAL_ELEVATOR = 3458393874U;
     } // namespace EVENTS
 
     namespace STATES
@@ -217,12 +280,16 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID BUILD_IN_ELEVATION = 3180815027U;
+        static const AkUniqueID BUILT_IN_DISTANCE = 1399990923U;
         static const AkUniqueID COLLISION_VELOCITY = 1951144523U;
-        static const AkUniqueID REVERB_DISTANCE = 3583098985U;
+        static const AkUniqueID MUSIC_TAPESTOP = 1693237381U;
+        static const AkUniqueID PLAYBACKSPEEDTEST = 2940890671U;
         static const AkUniqueID RTPC_DIALOGUE_BUS = 3182657878U;
         static const AkUniqueID RTPC_MUSIC_BUS = 3432596327U;
         static const AkUniqueID RTPC_SENSITIVITY_FILTER = 1561184313U;
         static const AkUniqueID RTPC_SFX_BUS = 3067876527U;
+        static const AkUniqueID RTPC_UNFOCUSED = 174332405U;
         static const AkUniqueID WIND_STRENGTH = 1830592977U;
     } // namespace GAME_PARAMETERS
 
