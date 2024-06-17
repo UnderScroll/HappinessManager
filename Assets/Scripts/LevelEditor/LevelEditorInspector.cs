@@ -1,10 +1,10 @@
-using Builder;
 using Unity.Mathematics;
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEditor.UIElements;
+#endif
 using UnityEngine;
 using UnityEngine.UIElements;
-using static UnityEditor.Searcher.Searcher.AnalyticsEvent;
 
 #if UNITY_EDITOR
 [CustomEditor(typeof(LevelEditor))]

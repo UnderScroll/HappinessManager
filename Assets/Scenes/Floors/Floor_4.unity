@@ -766,6 +766,9 @@ MonoBehaviour:
   RuleManager: {fileID: 0}
   SoundManager: {fileID: 0}
   UI_HUD: {fileID: 0}
+  OnLastLevelSucces:
+    m_PersistentCalls:
+      m_Calls: []
   CurrentStage: 3
   Playing: 0
   FloorName: Floor_4
@@ -795,8 +798,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5e0bd0b34ecc114283e709c0610fbc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotationSpeed: 50
-  RotationSpeedMultiplier: 0
+  RotationSpeed: 0.2
+  RotationSpeedMultiplier: 0.4
   maxPitchAngle: 42
   minPitchAngle: -15
 --- !u!114 &737254371
@@ -821,6 +824,7 @@ MonoBehaviour:
   - {fileID: 8558560405232904939, guid: d7ebb63046aeeb54d90d2d9f173bc0f5, type: 3}
   - {fileID: 8558560405232904939, guid: 32281036aaa18874f9ffaaa979e40cda, type: 3}
   - {fileID: 8558560405232904939, guid: fea83ecd7f2600a489a43456403fd5d6, type: 3}
+  AdditionamStructurePrefabs: []
   SkyBoxMat:
   - {fileID: 2100000, guid: 20292dc6d41b1384b917a3fc90b1c34f, type: 2}
   - {fileID: 2100000, guid: 20292dc6d41b1384b917a3fc90b1c34f, type: 2}
@@ -828,7 +832,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 20292dc6d41b1384b917a3fc90b1c34f, type: 2}
   CurrentLevelIndex: 0
   UI_HUD: {fileID: 0}
-  nextFloorname: Floor_5
+  nextFloorName: Floor_5
   OnLoadLevel:
     m_PersistentCalls:
       m_Calls: []
