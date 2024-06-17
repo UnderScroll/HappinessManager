@@ -115,6 +115,7 @@ namespace Simulation
                 if (cellData == null) continue;
 
                 GameObject blockInstance = _instances[cellData.Position.x, cellData.Position.y, cellData.Position.z];
+                if (blockInstance == null) continue;
 
                 //Add north connection
                 ConnectionType connectionType = cellData.GetConnectionType(CellData.Face.North);
