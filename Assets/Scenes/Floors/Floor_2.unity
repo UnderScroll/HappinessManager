@@ -1194,6 +1194,9 @@ MonoBehaviour:
   RuleManager: {fileID: 0}
   SoundManager: {fileID: 0}
   UI_HUD: {fileID: 0}
+  OnLastLevelSucces:
+    m_PersistentCalls:
+      m_Calls: []
   CurrentStage: 1
   Playing: 0
   FloorName: Floor_2
@@ -1249,11 +1252,12 @@ MonoBehaviour:
   - {fileID: 5079184815430864552, guid: d01492411be918a4fa1b745f88234374, type: 3}
   - {fileID: 5079184815430864552, guid: d01492411be918a4fa1b745f88234374, type: 3}
   - {fileID: 4840319724555756287, guid: 7d4542e1a9480fb498411aa1f8bd7bef, type: 3}
+  AdditionamStructurePrefabs: []
   SkyBoxMat:
   - {fileID: 2100000, guid: 7f4a37f1e1dccf24c9f01d5cfcabf9d7, type: 2}
   CurrentLevelIndex: 0
   UI_HUD: {fileID: 0}
-  nextFloorname: Floor_3
+  nextFloorName: Floor_3
   OnLoadLevel:
     m_PersistentCalls:
       m_Calls: []
@@ -1686,9 +1690,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
         type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
+        type: 3}
       propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
+        type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
+        type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 737254371}
     - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
         type: 3}
       propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1721,6 +1740,16 @@ PrefabInstance:
       objectReference: {fileID: 1632231152}
     - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
         type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
+        type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadAdditionalPrefabs
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
+        type: 3}
       propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -1751,6 +1780,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
         type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelLoader.LevelLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
+        type: 3}
       propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: LevelLoader.LevelLoader, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -1768,6 +1802,11 @@ PrefabInstance:
         type: 3}
       propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
       value: System_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
+        type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
         type: 3}

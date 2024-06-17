@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.8979489, g: 1.0800778, b: 1.0566409, a: 1}
+  m_IndirectSpecularColor: {r: 0.67382735, g: 0.99121004, b: 0.9379881, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1025,6 +1025,9 @@ MonoBehaviour:
   RuleManager: {fileID: 0}
   SoundManager: {fileID: 0}
   UI_HUD: {fileID: 0}
+  OnLastLevelSucces:
+    m_PersistentCalls:
+      m_Calls: []
   CurrentStage: 0
   Playing: 0
   FloorName: Floor_1
@@ -1080,11 +1083,12 @@ MonoBehaviour:
   - {fileID: 1436279987352481631, guid: 6afdbdd08c0232647a69c34b0871a62a, type: 3}
   - {fileID: 1436279987352481631, guid: 6afdbdd08c0232647a69c34b0871a62a, type: 3}
   - {fileID: 3673806027231941178, guid: 79d52581a8a86fa4c8842b8fd51fe03d, type: 3}
+  AdditionamStructurePrefabs: []
   SkyBoxMat:
   - {fileID: 2100000, guid: 1a5d3f83d028fb642ba572e2a990c839, type: 2}
   CurrentLevelIndex: 0
   UI_HUD: {fileID: 0}
-  nextFloorname: Floor_2
+  nextFloorName: Floor_2
   OnLoadLevel:
     m_PersistentCalls:
       m_Calls: []
@@ -2078,6 +2082,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
         type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
+        type: 3}
       propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -2086,6 +2095,16 @@ PrefabInstance:
       propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1921211649}
+    - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
+        type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
+        type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 737254371}
     - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
         type: 3}
       propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -2123,6 +2142,16 @@ PrefabInstance:
       objectReference: {fileID: 106595770}
     - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
         type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
+        type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadAdditionalPrefabs
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
+        type: 3}
       propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -2158,6 +2187,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
         type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelLoader.LevelLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
+        type: 3}
       propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: LevelLoader.LevelLoader, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -2179,6 +2213,11 @@ PrefabInstance:
     - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
         type: 3}
       propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
+        type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,

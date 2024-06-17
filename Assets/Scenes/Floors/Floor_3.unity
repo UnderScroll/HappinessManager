@@ -218,9 +218,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
         type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
+        type: 3}
       propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
+        type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
+        type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 737254371}
     - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
         type: 3}
       propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -253,6 +268,16 @@ PrefabInstance:
       objectReference: {fileID: 1143857878}
     - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
         type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
+        type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadAdditionalPrefabs
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
+        type: 3}
       propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -283,6 +308,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
         type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelLoader.LevelLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
+        type: 3}
       propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: LevelLoader.LevelLoader, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -300,6 +330,11 @@ PrefabInstance:
         type: 3}
       propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
       value: System_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
+        type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4408550122434379649, guid: 752338969b7a5174685434f406ed8981,
         type: 3}
@@ -598,6 +633,9 @@ MonoBehaviour:
   RuleManager: {fileID: 0}
   SoundManager: {fileID: 0}
   UI_HUD: {fileID: 0}
+  OnLastLevelSucces:
+    m_PersistentCalls:
+      m_Calls: []
   CurrentStage: 2
   Playing: 0
   FloorName: Floor_3
@@ -653,6 +691,7 @@ MonoBehaviour:
   - {fileID: 3232789942285496902, guid: 0e40e8209adf896478231a5a43e6f7a7, type: 3}
   - {fileID: 3232789942285496902, guid: 0e40e8209adf896478231a5a43e6f7a7, type: 3}
   - {fileID: 8078355706009399255, guid: fb27c3408d0654f4fb46006a8c848233, type: 3}
+  AdditionamStructurePrefabs: []
   SkyBoxMat:
   - {fileID: 2100000, guid: de6cec549a698bf41b1764fdcc513eba, type: 2}
   - {fileID: 2100000, guid: de6cec549a698bf41b1764fdcc513eba, type: 2}
@@ -660,7 +699,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: de6cec549a698bf41b1764fdcc513eba, type: 2}
   CurrentLevelIndex: 0
   UI_HUD: {fileID: 0}
-  nextFloorname: Floor_4
+  nextFloorName: Floor_4
   OnLoadLevel:
     m_PersistentCalls:
       m_Calls: []
