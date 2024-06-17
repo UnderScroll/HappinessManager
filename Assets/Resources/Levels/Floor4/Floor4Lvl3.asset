@@ -1040,7 +1040,8 @@ MonoBehaviour:
   IsWindEnabled: 1
   WindDirection: {x: 0, y: 0, z: -1}
   WindStrength: 4.6
-  Rules: []
+  Rules:
+  - {fileID: 11400000, guid: 047a2e648b2bb4c0c86111a4c0574c8c, type: 2}
   references:
     version: 2
     RefIds:

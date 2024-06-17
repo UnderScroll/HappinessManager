@@ -1034,7 +1034,8 @@ MonoBehaviour:
   IsWindEnabled: 0
   WindDirection: {x: 0, y: 0, z: 0}
   WindStrength: 0
-  Rules: []
+  Rules:
+  - {fileID: 11400000, guid: a35432ef59220418ebf5c505d36a12ea, type: 2}
   references:
     version: 2
     RefIds:
