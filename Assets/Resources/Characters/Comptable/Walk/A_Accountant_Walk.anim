@@ -76,6 +76,8 @@ AnimationClip:
       value: {fileID: -165783219, guid: e9ddef8ce40eba8469b7460b52baee80, type: 3}
     - time: 0.95
       value: {fileID: 2140805464, guid: e9ddef8ce40eba8469b7460b52baee80, type: 3}
+    - time: 0.96666664
+      value: {fileID: 2140805464, guid: e9ddef8ce40eba8469b7460b52baee80, type: 3}
     - time: 1
       value: {fileID: 989982342, guid: e9ddef8ce40eba8469b7460b52baee80, type: 3}
     - time: 1.0166667
@@ -190,6 +192,7 @@ AnimationClip:
     - {fileID: 42484695, guid: e9ddef8ce40eba8469b7460b52baee80, type: 3}
     - {fileID: -165783219, guid: e9ddef8ce40eba8469b7460b52baee80, type: 3}
     - {fileID: 2140805464, guid: e9ddef8ce40eba8469b7460b52baee80, type: 3}
+    - {fileID: 2140805464, guid: e9ddef8ce40eba8469b7460b52baee80, type: 3}
     - {fileID: 989982342, guid: e9ddef8ce40eba8469b7460b52baee80, type: 3}
     - {fileID: -870547211, guid: e9ddef8ce40eba8469b7460b52baee80, type: 3}
     - {fileID: -1153186966, guid: e9ddef8ce40eba8469b7460b52baee80, type: 3}
@@ -246,4 +249,67 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.21666667
+    functionName: ClothComptable
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.4
+    functionName: StepComptable
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.7
+    functionName: ClothComptable
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.8833333
+    functionName: StepComptable
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.9166667
+    functionName: KikiComptable
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.1333333
+    functionName: ClothComptable
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.35
+    functionName: StepComptable
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.6166667
+    functionName: ClothComptable
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.95
+    functionName: StepComptable
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

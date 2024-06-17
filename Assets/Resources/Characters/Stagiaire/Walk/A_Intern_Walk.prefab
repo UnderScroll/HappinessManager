@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4489037674463849926}
   - component: {fileID: 5599276451206971922}
   - component: {fileID: 9072798724551270776}
+  - component: {fileID: -2426329416194764356}
   m_Layer: 0
   m_Name: A_Intern_Walk
   m_TagString: Untagged
@@ -106,3 +107,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-2426329416194764356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2920745337336855861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca5fe3680bea984cb2b6b050a2d0664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
