@@ -115,6 +115,7 @@ namespace Simulation
                 if (cellData == null) continue;
 
                 GameObject blockInstance = _instances[cellData.Position.x, cellData.Position.y, cellData.Position.z];
+                if (blockInstance == null) continue;
 
                 //Add north connection
                 ConnectionType connectionType = cellData.GetConnectionType(CellData.Face.North);
@@ -225,9 +226,12 @@ namespace Simulation
 
         public void OnEmployeeGroundCollision()
         {
-            OnValidationFailed?.Invoke();
-            _isSimulationFailed = true;
-            _isSimulationRunning = false;
+            if (_isSimulationRunning)
+            {
+                OnValidationFailed?.Invoke();
+                _isSimulationFailed = true;
+                _isSimulationRunning = false;
+            }
         }
 
         private void LevelFailed()

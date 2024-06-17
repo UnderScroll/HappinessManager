@@ -14,8 +14,11 @@ public class IntroDialogues : MonoBehaviour
     }
     public void PlaySound()
     {
-        IEnumerable<string> tags = _dRunner.GetTagsForNode(_dRunner.CurrentNodeName);
-        if (tags.Any())
-            AkSoundEngine.PostEvent(tags.First(), gameObject);
+        if (_dRunner == null)
+            _dRunner = GetComponent<DialogueRunner>();
+
+        IEnumerable<string> _tags = _dRunner.GetTagsForNode(_dRunner.CurrentNodeName);
+        if (_tags.Any())
+            AkSoundEngine.PostEvent(_tags.First(), gameObject);
     }
 }
