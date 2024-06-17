@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Diagnostics.CodeAnalysis;
 using LevelLoader;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class GameManager : MonoBehaviour
     public SoundManager SoundManager;
     [HideInInspector]
     public UI_HUD UI_HUD;
+
+    public UnityEvent OnLastLevelSucces;
 
     public enum Stage { Stage1, Stage2, Stage3, Stage4, Stage5 };
 
@@ -67,6 +70,7 @@ public class GameManager : MonoBehaviour
     void OnLoadNextLevel(InputValue _)
     {
         Debug.Log("LoadingNextLevel");
+
         LevelLoader.LoadNextLevel();
         SoundManager.PlayOnBuilding();
 
@@ -123,5 +127,10 @@ public class GameManager : MonoBehaviour
         SoundManager.PlayOnBuilding();
 
         Playing = false;
+    }
+
+    public void TestCallback()
+    {
+        Debug.Log("TestCallback");
     }
 }

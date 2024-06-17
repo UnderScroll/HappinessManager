@@ -9,6 +9,7 @@ namespace LevelLoader
     {
         public List<Level> Levels;
         public List<GameObject> AdditionamPrefabs;
+        public List<GameObject> AdditionamStructurePrefabs;
         public List<Material> SkyBoxMat;
 
         private GameManager _gameManager;
@@ -17,9 +18,10 @@ namespace LevelLoader
         [HideInInspector]
         public UI_HUD UI_HUD;
 
-        public string nextFloorname;
+        public string nextFloorName;
 
         private GameObject _additionalPrefabInstance;
+        private GameObject _additionalStructurePrefabInstance;
 
         public UnityEvent<string> OnLoadLevel;
 
@@ -45,11 +47,13 @@ namespace LevelLoader
             if (!(nextLevelIndex < Levels.Count))
             {
                 Debug.LogWarning($"Tried to load level {nextLevelIndex} but there is no such level, trying to load next scene");
-                if (nextFloorname == null || nextFloorname is "")
+                if (nextFloorName == null || nextFloorName is "")
                 {
-                    Debug.LogWarning($"Tried to load next Floot but there is none");
+                    Debug.LogWarning($"Tried to load next Floor but there is none");
                     return;
                 }
+                if (nextFloorName == "MainMenu")
+                    _gameManager.OnLastLevelSucces.Invoke();
                 UI_HUD.DisplayNextFloorUI?.Invoke();
                 return;
             }
@@ -115,8 +119,14 @@ namespace LevelLoader
             if (_additionalPrefabInstance != null)
                 Destroy(_additionalPrefabInstance);
 
+            if (_additionalStructurePrefabInstance != null)
+                Destroy(_additionalStructurePrefabInstance);
+
             if (AdditionamPrefabs.Count > (int)CurrentLevelIndex && AdditionamPrefabs[(int)CurrentLevelIndex] != null)
                 _additionalPrefabInstance = Instantiate(AdditionamPrefabs[(int)CurrentLevelIndex], Camera.main.transform);
+
+            if (AdditionamStructurePrefabs.Count > (int)CurrentLevelIndex && AdditionamStructurePrefabs[(int)CurrentLevelIndex] != null)
+                _additionalStructurePrefabInstance = Instantiate(AdditionamStructurePrefabs[(int)CurrentLevelIndex], _gameManager.StructureOrigin);
 
             if (SkyBoxMat.Count > (int)CurrentLevelIndex && SkyBoxMat[(int)CurrentLevelIndex] != null)
             {
@@ -135,7 +145,7 @@ namespace LevelLoader
         }
         private void LoadNextFloor()
         {
-            SceneManager.LoadScene(nextFloorname, LoadSceneMode.Single);
+            SceneManager.LoadScene(nextFloorName, LoadSceneMode.Single);
         }
     }
 }
