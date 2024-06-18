@@ -118,6 +118,7 @@ namespace AK
         static const AkUniqueID PLAY_COMPTABLESTEP = 733008735U;
         static const AkUniqueID PLAY_DIRCRECLOTH = 1491209843U;
         static const AkUniqueID PLAY_DIRCRESTEP = 570825895U;
+        static const AkUniqueID PLAY_EASY_TOGGLE = 207720071U;
         static const AkUniqueID PLAY_ELEVATORDING_BOSS = 2309087724U;
         static const AkUniqueID PLAY_ELEVATORDING_CAFETERIA = 3473637879U;
         static const AkUniqueID PLAY_ELEVATORDING_COWORKING = 2422508594U;
@@ -224,12 +225,14 @@ namespace AK
         static const AkUniqueID PLAY_UI_MONEY_SPENT = 681896400U;
         static const AkUniqueID PLAY_UI_RESTART_LEVEL = 3917633987U;
         static const AkUniqueID PLAY_WIND_GUST = 563870990U;
+        static const AkUniqueID PLAY_WIND_WHISTLE_CONTINUOUS = 2235628515U;
         static const AkUniqueID RESET_RTPC_TAPESTOP = 3587632891U;
         static const AkUniqueID SETRTPC_SENSITITITY_FILTER_0 = 3886903300U;
         static const AkUniqueID SETRTPC_SENSITITITY_FILTER_1 = 3886903301U;
         static const AkUniqueID STOP_AMB_GLOBAL = 1375364434U;
         static const AkUniqueID STOP_MUSIC_GLOBAL = 177767409U;
         static const AkUniqueID STOP_MUSIC_GLOBAL_ELEVATOR = 3458393874U;
+        static const AkUniqueID STOP_WIND_WHISTLE = 3087663401U;
     } // namespace EVENTS
 
     namespace STATES
@@ -283,8 +286,8 @@ namespace AK
         static const AkUniqueID BUILD_IN_ELEVATION = 3180815027U;
         static const AkUniqueID BUILT_IN_DISTANCE = 1399990923U;
         static const AkUniqueID COLLISION_VELOCITY = 1951144523U;
+        static const AkUniqueID INTERN_SPEED = 468703853U;
         static const AkUniqueID MUSIC_TAPESTOP = 1693237381U;
-        static const AkUniqueID PLAYBACKSPEEDTEST = 2940890671U;
         static const AkUniqueID RTPC_DIALOGUE_BUS = 3182657878U;
         static const AkUniqueID RTPC_MUSIC_BUS = 3432596327U;
         static const AkUniqueID RTPC_SENSITIVITY_FILTER = 1561184313U;

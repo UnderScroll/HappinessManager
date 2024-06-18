@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
@@ -7,6 +9,8 @@ public class SoundManager : MonoBehaviour
     private GameManager _gameManager;
 
     private string _floorWwiseName = "";
+    [SerializeField]
+    private AK.Wwise.RTPC RTPC_INTERN_VARISPEED = null;
 
     private void Start()
     {
@@ -54,6 +58,22 @@ public class SoundManager : MonoBehaviour
     {
         AkSoundEngine.PostEvent($"Play_Music_SetSwitch_build", gameObject);
         AkSoundEngine.PostEvent("Play_UI_Restart_Level", gameObject);
+
+        if (_floorWwiseName == "intern")
+        {
+
+            System.Random random = new System.Random();
+            int internRandom = random.Next(5,100);
+            RTPC_INTERN_VARISPEED.SetGlobalValue(internRandom);
+            //AkSoundEngine.SetRTPCValue("Intern_Speed", internRandom, null);
+            Debug.Log(internRandom);
+        }
+
+    }
+
+    private int Random(int v)
+    {
+        throw new NotImplementedException();
     }
 
     public void PlayOnLevelFailed()
@@ -72,5 +92,17 @@ public class SoundManager : MonoBehaviour
     public void PlayOnElevatorEnter()
     {
         AkSoundEngine.PostEvent($"Play_ElevatorFrom_{_floorWwiseName}", gameObject);
+    }
+    public void PlayEasyModeToggle()
+    {
+        AkSoundEngine.PostEvent("Play_Easy_Toggle",gameObject);
+    }
+    public void PlayMenuSettingstoggleIn()
+    {
+        AkSoundEngine.PostEvent("Play_Menu_Settings_toggleIn", gameObject);
+    }
+    public void PlayMenuSettingstoggleOut()
+    {
+        AkSoundEngine.PostEvent("Play_Menu_Settings_toggleOut", gameObject);
     }
 }
