@@ -19,9 +19,9 @@ public class UI_SelectableBlock : MonoBehaviour
     public string UIBlockWwiseEventName;
     public void Init()
     {
-        //blockImg.sprite = blockInfo.BlockIcon;
+        blockImg.sprite = blockInfo.BlockIcon;
         price.text = blockInfo.Price + " $";
-        //basePosition = gameObject.transform.position;
+        basePosition = gameObject.transform.position;
     }
     public void OnClick()
     {
