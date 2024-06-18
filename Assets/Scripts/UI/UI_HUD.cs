@@ -84,10 +84,17 @@ public class UI_HUD : MonoBehaviour
     #region Money
     public void UpdateMoneyText()
     {
+        if (EasyMode.Enabled)
+        {
+            text_money.text = "<b>\u221e</b> $";
+            return;
+        }
+
         float limit = GetBudgetLimit();
         if (limit != -1f)
         {
             money = (int) (limit - GetSpentMoney());
+            text_money.color = money < 0.0f ? Color.red : Color.white;
             text_money.text = money.ToString() + " $";
             AkSoundEngine.PostEvent("Play_UI_money_spent", gameObject);
         }
@@ -124,9 +131,12 @@ public class UI_HUD : MonoBehaviour
             foreach (CellType cellType in blocks)
             {
                 GameObject _go = Instantiate(PrefabItem, actualMenu.transform);
+                UI_SelectableBlock _goSelectableBlock = _go.GetComponent<UI_SelectableBlock>();
+
                 _go.name = cellType.Name;
-                _go.GetComponent<UI_SelectableBlock>().ui_hud = this;
-                _go.GetComponent<UI_SelectableBlock>().blockInfo = cellType;
+                _goSelectableBlock.ui_hud = this;
+                _goSelectableBlock.blockInfo = cellType;
+                _goSelectableBlock.Init();
             }
 
             if (selected != null)

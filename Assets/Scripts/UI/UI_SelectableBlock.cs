@@ -21,7 +21,7 @@ public class UI_SelectableBlock : MonoBehaviour
     {
         blockImg.sprite = blockInfo.BlockIcon;
         price.text = blockInfo.Price + " $";
-        basePosition = this.gameObject.transform.position;
+        basePosition = gameObject.transform.position;
     }
     public void OnClick()
     {
@@ -39,7 +39,7 @@ public class UI_SelectableBlock : MonoBehaviour
     {
         if (!ui_hud.IsThisBlockSelected(blockInfo))
         {
-            this.gameObject.transform.DOBlendableLocalMoveBy(new Vector3(0, decalOverValue, 0), 0.7f);
+            gameObject.transform.DOBlendableLocalMoveBy(new Vector3(0, decalOverValue, 0), 0.7f);
             ui_hud.TemporaryDescription(blockInfo, true);
 
             string getUIBlockName = blockInfo.name;
@@ -51,7 +51,7 @@ public class UI_SelectableBlock : MonoBehaviour
     {
         if (!ui_hud.IsThisBlockSelected(blockInfo))
         {
-            this.gameObject.transform.DOBlendableLocalMoveBy(new Vector3(0, -decalOverValue, 0), 0.5f);
+            gameObject.transform.DOBlendableLocalMoveBy(new Vector3(0, -decalOverValue, 0), 0.5f);
             ui_hud.TemporaryDescription(blockInfo, false);
             AkSoundEngine.PostEvent("Play_UI_item_offTabHover", gameObject);
         }
