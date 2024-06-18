@@ -46,9 +46,12 @@ namespace Simulation
             InstantiateBlocks();
             CreateConnections();
 
-            List<IRule> unvalidatedRules = _gameManager.RuleManager.ValidateAllRules();
-            if (unvalidatedRules.Count > 0)
-                OnValidationFailed?.Invoke();
+            if (!EasyMode.Enabled)
+            {
+                List<IRule> unvalidatedRules = _gameManager.RuleManager.ValidateAllRules();
+                if (unvalidatedRules.Count > 0)
+                    OnValidationFailed?.Invoke();
+            }
 
             Launch();
         }
@@ -211,7 +214,7 @@ namespace Simulation
             configurableJoint.connectedBody = to.GetComponent<Rigidbody>();
         }
 
-            public void Launch()
+        public void Launch()
         {
             _isSimulationRunning = true;
         }
