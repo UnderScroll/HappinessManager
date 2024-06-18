@@ -1,13 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.Events;
-using UnityEngine.Timeline;
-using System.Threading;
-using Unity.VisualScripting;
+using UnityEngine.UI;
 
 public class UI_HUD : MonoBehaviour
 {
@@ -47,6 +43,10 @@ public class UI_HUD : MonoBehaviour
 
     public UnityAction DisplayNextFloorUI;
     public UnityAction GoToNextFloor;
+
+    public RawImage playIconRef;
+    public Texture2D playIconA;
+    public Texture2D playIconB;
 
     private bool flag = false;
     private float timer = 4f;
@@ -287,6 +287,8 @@ public class UI_HUD : MonoBehaviour
         //TMP FOR PLAYTESTING
         _gameManager.UI_HUD.UpdateLevelName(_gameManager.Builder.Level.name);
         CloseEndLevelPanel();
+
+        OnPlayToggle(false);
     }
     public void RestartLevel()
     {
@@ -294,6 +296,8 @@ public class UI_HUD : MonoBehaviour
         // _gameManager.LevelLoader.ReloadLevel();
         _gameManager.OnToggleMode();
         _gameManager.SoundManager.PlayOnBuilding();
+
+        OnPlayToggle(false);
     }
     #endregion
 
@@ -310,4 +314,9 @@ public class UI_HUD : MonoBehaviour
         AkSoundEngine.PostEvent("Play_Menu_Settings_onMenuOut", gameObject);
     }
     #endregion
+
+    public void OnPlayToggle(bool _)
+    {
+        playIconRef.texture = _gameManager.Playing ? playIconA : playIconB;
+    }
 }

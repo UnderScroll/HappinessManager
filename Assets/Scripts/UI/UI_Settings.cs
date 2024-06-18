@@ -41,9 +41,10 @@ public class UI_Settings : MonoBehaviour
         else
             Screen.SetResolution(1920, 1080, false);
     }
-    public void HighContrastMode(bool _on)
+    public void SetHighContrastMode(bool _on)
     {
-        // set up high contrast mode
+        HighContrastMode.SetEnable(_on);
+        Debug.Log($"Highcontrast is now {(HighContrastMode.Enabled ? "Enabled" : "Disabled")}");
     }
     #endregion
     #region Sound

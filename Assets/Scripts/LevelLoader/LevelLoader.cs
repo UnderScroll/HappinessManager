@@ -120,11 +120,12 @@ namespace LevelLoader
             LoadAdditionalPrefabs();
 
             //Load mats
-            if (SkyBoxMat.Count > (int)CurrentLevelIndex && SkyBoxMat[(int)CurrentLevelIndex] != null)
-            {
+            if (HighContrastMode.Enabled)
+                RenderSettings.skybox = HighContrastMode.BackgroundMaterial;
+            else
+                if (SkyBoxMat.Count > (int)CurrentLevelIndex && SkyBoxMat[(int)CurrentLevelIndex] != null)
                 RenderSettings.skybox = SkyBoxMat[(int)CurrentLevelIndex];
-                DynamicGI.UpdateEnvironment();
-            }
+            DynamicGI.UpdateEnvironment();
 
             //Load Placeableblocks in HUD
             if (UI_HUD != null)
@@ -139,8 +140,11 @@ namespace LevelLoader
             if (_additionalStructurePrefabInstance != null)
                 Destroy(_additionalStructurePrefabInstance);
 
-            if (AdditionamPrefabs.Count > (int)CurrentLevelIndex && AdditionamPrefabs[(int)CurrentLevelIndex] != null)
-                _additionalPrefabInstance = Instantiate(AdditionamPrefabs[(int)CurrentLevelIndex], Camera.main.transform);
+            if (!HighContrastMode.Enabled)
+            {
+                if (AdditionamPrefabs.Count > (int)CurrentLevelIndex && AdditionamPrefabs[(int)CurrentLevelIndex] != null)
+                    _additionalPrefabInstance = Instantiate(AdditionamPrefabs[(int)CurrentLevelIndex], Camera.main.transform);
+            }
 
             if (AdditionamStructurePrefabs.Count > (int)CurrentLevelIndex && AdditionamStructurePrefabs[(int)CurrentLevelIndex] != null)
                 _additionalStructurePrefabInstance = Instantiate(AdditionamStructurePrefabs[(int)CurrentLevelIndex], _gameManager.StructureOrigin);
