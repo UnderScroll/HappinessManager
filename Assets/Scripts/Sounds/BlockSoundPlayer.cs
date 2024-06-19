@@ -14,13 +14,13 @@ public class BlockSoundPlayer : MonoBehaviour
         string blockName = "";
         switch (BlockName)
         {
-            case "BasicBlock": //Scriptable object name (Resources/Blocks)
+            case "Basic Block": //Scriptable object name (Resources/Blocks)
                 blockName = "basic_block"; //Name in Wwise event
                 break;
-            case "ConcreteBlock":
+            case "Concrete Block":
                 blockName = "concrete_block";
                 break;
-            case "SoapBlock":
+            case "Soap Block":
                 blockName = "soap_block";
                 break;
             case "Decoration": //Scriptable object name (Resources/Blocks)
