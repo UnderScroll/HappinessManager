@@ -1062,6 +1062,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbf5e2a0798a2ae4bbc0a0621de6a9d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RTPC_INTERN_VARISPEED:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &779546197
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,11 +2283,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
-    - target: {fileID: 6286892612364738822, guid: 3c0a7a40ef127a640b8da97718f55eaa,
+    - target: {fileID: 5501188639106465029, guid: 3c0a7a40ef127a640b8da97718f55eaa,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 2f4e568b8b9d7a2489447e3db9d3fc9f, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -1142,11 +1142,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
-    - target: {fileID: 6286892612364738822, guid: 3c0a7a40ef127a640b8da97718f55eaa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8677ad129579d7b48bb6b432f3eaee31, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1422,6 +1417,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbf5e2a0798a2ae4bbc0a0621de6a9d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RTPC_INTERN_VARISPEED:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &757942635
 GameObject:
   m_ObjectHideFlags: 0
