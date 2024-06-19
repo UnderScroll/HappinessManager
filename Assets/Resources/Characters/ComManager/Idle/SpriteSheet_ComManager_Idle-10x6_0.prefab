@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 610945973931056188}
   - component: {fileID: 5515286403277729196}
   - component: {fileID: 7633307480367790536}
+  - component: {fileID: 1567698005686142050}
   m_Layer: 0
   m_Name: SpriteSheet_ComManager_Idle-10x6_0
   m_TagString: Untagged
@@ -106,3 +107,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1567698005686142050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085516763808779627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca5fe3680bea984cb2b6b050a2d0664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
