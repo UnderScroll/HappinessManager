@@ -102,7 +102,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{D8B6C00E-F2D4-8EA3-F60C-BC978BA4FA67}">
+		<SoundBank Id="3066519842" Type="User" Language="SFX" Hash="{56A4355D-8863-57FD-3B4C-B8C39678ECA2}">
 			<ShortName>HM_Global_SB</ShortName>
 			<Path>HM_Global_SB.bnk</Path>
 			<Media>
@@ -1546,6 +1546,10 @@
 					<ShortName>Boss Déterminé 3.wav</ShortName>
 					<CachePath>SFX/Boss Déterminé 3_FD4DF9DE.wem</CachePath>
 				</File>
+				<File Id="790530497" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ending mel step1 120 [2024-06-17 113754].wav</ShortName>
+					<CachePath>SFX/ending mel step1 120 [2024-06-17 113754]_B02CE968.wem</CachePath>
+				</File>
 				<File Id="790607317" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108.wav</ShortName>
 					<CachePath>SFX/Footsteps, Human, Wood, Walking, Slow SND89279 - Pitch 108_9E993766.wem</CachePath>
@@ -2037,6 +2041,10 @@
 				<File Id="1045455280" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dir Créa Confus.wav</ShortName>
 					<CachePath>SFX/Dir Créa Confus_FD4DF9DE.wem</CachePath>
+				</File>
+				<File Id="1046959826" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ending bass step1 120 [2024-06-17 113750].wav</ShortName>
+					<CachePath>SFX/ending bass step1 120 [2024-06-17 113750]_B02CE968.wem</CachePath>
 				</File>
 				<File Id="1047103891" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>elevator to cafeteria.wav</ShortName>
@@ -3308,6 +3316,12 @@
 						<ActionPostEventEntry Id="3458393874" Name="Stop_Music_global_elevator"/>
 					</ActionPostEvent>
 				</Event>
+				<Event Id="2472290785" Name="Play_End" DurationType="OneShot" DurationMin="64" DurationMax="64">
+					<MediaRefs>
+						<MediaRef Id="790530497"/>
+						<MediaRef Id="1046959826"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3149711587" Name="Play_ETCloth" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.74847525" DurationMax="1.2810441">
 					<MediaRefs>
 						<MediaRef Id="18866702"/>
@@ -3732,6 +3746,8 @@
 				<Event Id="1121121824" Name="Play_Music_title" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="173590557"/>
+						<MediaRef Id="790530497"/>
+						<MediaRef Id="1046959826"/>
 					</MediaRefs>
 					<ActionPostEvent>
 						<ActionPostEventEntry Id="177767409" Name="Stop_Music_global"/>
@@ -4512,5 +4528,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B7B8FD30-FCCA-5C92-DB88-5614384A3426}</FileHash>
+	<FileHash>{32B4B8B3-9530-255E-D1B4-78E325F70430}</FileHash>
 </SoundBanksInfo>

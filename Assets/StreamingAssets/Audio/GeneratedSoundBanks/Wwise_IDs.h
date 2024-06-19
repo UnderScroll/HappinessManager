@@ -128,6 +128,7 @@ namespace AK
         static const AkUniqueID PLAY_ELEVATORFROM_CAFETERIA = 821832571U;
         static const AkUniqueID PLAY_ELEVATORFROM_COWORKING = 2400032206U;
         static const AkUniqueID PLAY_ELEVATORFROM_TEAMBUILDING = 2577528824U;
+        static const AkUniqueID PLAY_END = 2472290785U;
         static const AkUniqueID PLAY_ETCLOTH = 3149711587U;
         static const AkUniqueID PLAY_ETSTEP = 3221138295U;
         static const AkUniqueID PLAY_INTROCINEMATIC = 2953314807U;
