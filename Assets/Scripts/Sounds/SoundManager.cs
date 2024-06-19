@@ -105,4 +105,8 @@ public class SoundManager : MonoBehaviour
     {
         AkSoundEngine.PostEvent("Play_Menu_Settings_toggleOut", gameObject);
     }
+    public void PlayDialSkip()
+    {
+        AkSoundEngine.PostEvent("Play_Menu_UI_Dialogue_Skip", gameObject);
+    }
 }
