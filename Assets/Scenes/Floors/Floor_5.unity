@@ -728,6 +728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endImg: {fileID: 1283395209}
   ui: {fileID: 1330829197}
+  structureOrigin: {fileID: 732280267}
   IsEndAnimRunning: 0
   GameManager: {fileID: 737254368}
 --- !u!1001 &751144225
@@ -885,7 +886,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1230}
+  m_AnchoredPosition: {x: 5, y: -1230}
   m_SizeDelta: {x: 100, y: 243.59375}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1283395209
