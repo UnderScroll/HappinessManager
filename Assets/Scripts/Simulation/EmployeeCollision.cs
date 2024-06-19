@@ -29,6 +29,18 @@ public class EmployeeCollision : MonoBehaviour
                 AkSoundEngine.PostEvent("Play_Physics_employeeCollision", gameObject);
                 Debug.Log(collisionForce);
             }
+
+            Animator animator = GetComponentInChildren<Animator>();
+            animator.SetBool("IsDead", true);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            collisionEvent.Invoke();
+            GetComponentInChildren<Animator>().SetBool("IsDead", true);
         }
     }
 }

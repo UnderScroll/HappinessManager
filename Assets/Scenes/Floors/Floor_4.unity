@@ -852,8 +852,8 @@ MonoBehaviour:
   Levels:
   - {fileID: 11400000, guid: 727dc18a479970d4fa5a7944bd47eeb0, type: 2}
   - {fileID: 11400000, guid: e435f79ae17dcce478881dbb5bf7d3f1, type: 2}
-  - {fileID: 11400000, guid: 6ff238002c95ee046abd3e9858e34f34, type: 2}
   - {fileID: 11400000, guid: 2a094a276d299d941bed824ff93782b8, type: 2}
+  - {fileID: 11400000, guid: 6ff238002c95ee046abd3e9858e34f34, type: 2}
   AdditionamPrefabs:
   - {fileID: 8558560405232904939, guid: 1f66f826b89108e4798f96be56f8ccd8, type: 3}
   - {fileID: 8558560405232904939, guid: d7ebb63046aeeb54d90d2d9f173bc0f5, type: 3}
@@ -947,7 +947,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1287,6 +1287,7 @@ GameObject:
   - component: {fileID: 1516857612}
   - component: {fileID: 1516857611}
   - component: {fileID: 1516857610}
+  - component: {fileID: 1516857613}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1359,6 +1360,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1516857613
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516857608}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1552454421 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 567286530638031782, guid: 81a404ace7aa8f84a893a28f442a3915,
