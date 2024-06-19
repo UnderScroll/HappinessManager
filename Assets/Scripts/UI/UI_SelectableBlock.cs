@@ -42,7 +42,7 @@ public class UI_SelectableBlock : MonoBehaviour
             gameObject.transform.DOBlendableLocalMoveBy(new Vector3(0, decalOverValue, 0), 0.7f);
             ui_hud.TemporaryDescription(blockInfo, true);
 
-            string getUIBlockName = blockInfo.name;
+            string getUIBlockName = blockInfo.Name;
             UIBlockWwiseEventName = $"Play_UI_item_onTabHover_{getUIBlockName}";
             PlaySelectedBlockHoverSound();
         }
