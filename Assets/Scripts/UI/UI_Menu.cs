@@ -69,8 +69,6 @@ public class UI_Menu : MonoBehaviour
     [SerializeField] private float _secondsFadeOutDurationWwiseLogo = 1.0f;
     [SerializeField] private Ease _easeFadeInWwiseLogo = Ease.Linear;
     [SerializeField] private Ease _easeFadeOutWwiseLogo = Ease.Linear;
-
-
     private IEnumerator Start()
     {
         Debug.developerConsoleVisible = true;
@@ -142,6 +140,7 @@ public class UI_Menu : MonoBehaviour
         AkSoundEngine.PostEvent("Play_Menu_select", gameObject);
         // son vidéo
         vPlayer.Play();
+        AkSoundEngine.PostEvent("Play_IntroCinematic", gameObject);
     }
     private void Play(VideoPlayer vp)
     { 
