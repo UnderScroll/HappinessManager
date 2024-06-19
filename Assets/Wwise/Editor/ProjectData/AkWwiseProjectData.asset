@@ -190,7 +190,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\WU_HM_SoundBanks
     guid: d527a65720db2546b7a23303c255c21b
     GuidInternal: 
-    m_lastTime: -8584828955973675819
+    m_lastTime: -8584827944514928533
     List:
     - name: HM_Global_SB
       guid: e1c12577d86f0c41a82a7bdcdb4ef626
@@ -218,7 +218,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a2847257a7000f4e81d18dd3626acf80
     GuidInternal: 
-    m_lastTime: -8584828956172392039
+    m_lastTime: -8584827950741667929
     List:
     - name: Play_Easy_Toggle
       guid: 9675a2e5cfe83c42ad744fb1e2d293a5
@@ -237,6 +237,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.2840834
       minDuration: 1.0310199
+    - name: Play_End
+      guid: 0b4bf61f7b0fef45bb1d9cb7af6d83a8
+      id: 2472290785
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a2847257a7000f4e81d18dd3626acf80
+      - ElementName: Play_End
+        ObjectType: 3
+        guid: 0b4bf61f7b0fef45bb1d9cb7af6d83a8
+      Path: Events\Default Work Unit\Play_End
+      maxAttenuation: 0
+      maxDuration: 64
+      minDuration: 64
     - name: Play_Wind_Whistle_Continuous
       guid: b729fff4ae5a04448a2d57f2e7e31a65
       id: 2235628515
@@ -282,7 +299,7 @@ MonoBehaviour:
     ParentPath: Events\WU_HM_Events
     guid: a44afb18422e3e4bbc589ac1581aef04
     GuidInternal: 
-    m_lastTime: -8584828933671381236
+    m_lastTime: -8584827949186745589
     List:
     - name: Amb
       guid: 45ce627f733a4f4d90717e8757beb9ba
