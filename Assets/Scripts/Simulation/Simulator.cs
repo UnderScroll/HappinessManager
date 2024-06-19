@@ -105,6 +105,8 @@ namespace Simulation
                     instance.TryGetComponent(out employeeMovement.AlignToCamera);
                     employeeMovement.TryGetComponent(out employeeMovement.ForceStand);
                     employeeMovement.TryGetComponent(out employeeMovement.FollowPath);
+
+                    instance.GetComponentInChildren<Animator>().SetBool("IsWalking", true);
                 }
             }
 
