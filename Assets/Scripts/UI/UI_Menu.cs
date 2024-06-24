@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Video;
@@ -69,6 +70,8 @@ public class UI_Menu : MonoBehaviour
     [SerializeField] private float _secondsFadeOutDurationWwiseLogo = 1.0f;
     [SerializeField] private Ease _easeFadeInWwiseLogo = Ease.Linear;
     [SerializeField] private Ease _easeFadeOutWwiseLogo = Ease.Linear;
+
+    private bool _skipIntro = false;
     private IEnumerator Start()
     {
         Debug.developerConsoleVisible = true;
@@ -139,12 +142,25 @@ public class UI_Menu : MonoBehaviour
         AkSoundEngine.PostEvent("Stop_Music_Global", gameObject);
         AkSoundEngine.PostEvent("Play_Menu_select", gameObject);
         // son vidéo
-        vPlayer.Play();
-        AkSoundEngine.PostEvent("Play_IntroCinematic", gameObject);
+        if (!_skipIntro)
+        {
+            vPlayer.Play();
+            AkSoundEngine.PostEvent("Play_IntroCinematic", gameObject);
+        }
+        else
+        {
+            SceneManager.LoadScene("Floor_1");
+        }
     }
     private void Play(VideoPlayer vp)
-    { 
+    {
         SceneManager.LoadScene("Floor_1", LoadSceneMode.Single);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F8))
+            _skipIntro = true;
     }
 
     public void QuitGame()

@@ -50,7 +50,11 @@ namespace Simulation
             {
                 List<IRule> unvalidatedRules = _gameManager.RuleManager.ValidateAllRules();
                 if (unvalidatedRules.Count > 0)
+                {
                     OnValidationFailed?.Invoke();
+                    _isSimulationFailed = true;
+                    _isSimulationRunning = false;
+                }
             }
 
             Launch();
